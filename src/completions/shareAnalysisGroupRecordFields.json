@@ -1,0 +1,32 @@
+[
+  {
+    "label": "ACCOUNTNUMBER",
+    "insertText": "ACCOUNTNUMBER",
+    "description": "This field stores the linked share account number.",
+    "isSnippet": false
+  },
+  {
+    "label": "ID",
+    "insertText": "ID",
+    "description": "This field stores the ID of the linked share.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMMENT1",
+    "insertText": "COMMENT1",
+    "description": "This field stores 40 characters of comment information.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "The system stores the system date in this field when you create, change, or save the Share Analysis Group record.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "The system automatically assigns the Locator value when the record is created, and it cannot be changed.",
+    "isSnippet": false
+  }
+]

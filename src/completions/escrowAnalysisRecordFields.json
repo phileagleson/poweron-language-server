@@ -1,0 +1,416 @@
+[
+  {
+    "label": "NEXTANALYSISDATE",
+    "insertText": "NEXTANALYSISDATE",
+    "description": "This field contains the date the next analysis is to be generated.",
+    "isSnippet": false
+  },
+  {
+    "label": "FINALANALYSISDATE",
+    "insertText": "FINALANALYSISDATE",
+    "description": "The system generates a final escrow disclosure for all escrowed loans where this date (final analysis date) falls within the date range entered at the Analysis Selection prompt, when you run a (2) Final Escrow Disclosure analysis type.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRIORANALYSISSOURCE",
+    "insertText": "PRIORANALYSISSOURCE",
+    "description": "This field indicates whether there is a previous analysis available.",
+    "isSnippet": false
+  },
+  {
+    "label": "INITIALDISCLTHIRD",
+    "insertText": "INITIALDISCLTHIRD",
+    "description": "This field indicates whether a third party has already provided the Initial Escrow Disclosure statement to the member.",
+    "isSnippet": false
+  },
+  {
+    "label": "DATEINITDISCLNEED",
+    "insertText": "DATEINITDISCLNEED",
+    "description": "This field is used by the Escrow Reports batch program to determine when to create an Initial Escrow Disclosure statement and report for this escrow account.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACTUALINITIALDISCL",
+    "insertText": "ACTUALINITIALDISCL",
+    "description": "This field stores the date the initial escrow disclosure was created to be provided to the member.",
+    "isSnippet": false
+  },
+  {
+    "label": "DATEANALYSISCALC",
+    "insertText": "DATEANALYSISCALC",
+    "description": "This field stores the date the last escrow analysis was calculated with the results in the Escrow Analysis record.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTANALYSISPROCESSED",
+    "insertText": "LASTANALYSISPROCESSED",
+    "description": "This field indicates the most recent analysis process generated on an escrowed loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURRENTPAYMENTFREQ",
+    "insertText": "CURRENTPAYMENTFREQ",
+    "description": "This field contains the Payment Frequency field value copied from the Loan record when the escrow analysis was performed.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURRENTDUEDAY1",
+    "insertText": "CURRENTDUEDAY1",
+    "description": "During escrow analysis, the value in the Due Day 1 field in the Loan record is copied to this field. This field contains the first payment due date for semi-monthly payment loans or the day of the month on which all loan payments are due for annual, semi-annual, quarterly, or monthly loans.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURRENTDUEDAY2",
+    "insertText": "CURRENTDUEDAY2",
+    "description": "During escrow analysis, the value in the Due Day 2 field in the Loan record is copied to this field. This field is not used for annual, semi-annual, quarterly, monthly, or biweekly loans.",
+    "isSnippet": false
+  },
+  {
+    "label": "NEXTPAYMENTDUEDATE",
+    "insertText": "NEXTPAYMENTDUEDATE",
+    "description": "This field stores the next payment due date for the loan when the escrow analysis was performed. This value is copied from the Loan record Due Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "FORECASTBEGSTMTBAL",
+    "insertText": "FORECASTBEGSTMTBAL",
+    "description": "This field is calculated during the analysis and is typically used as the starting balance in the Estimate of Activity trial balance section. This trial balance is also part of the member escrow analysis statement.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXPECTEDBEGSTMTBAL",
+    "insertText": "EXPECTEDBEGSTMTBAL",
+    "description": "This field is calculated during the analysis and is used as the starting balance in the Adj Trial Balance section. T",
+    "isSnippet": false
+  },
+  {
+    "label": "SHORTAGE",
+    "insertText": "SHORTAGE",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, any calculated shortage is stored in this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEFICIENCY",
+    "insertText": "DEFICIENCY",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, any deficiency is stored in this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "OVERAGE",
+    "insertText": "OVERAGE",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, any calculated overage amount is stored in this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "OVERAGEREFUNDED",
+    "insertText": "OVERAGEREFUNDED",
+    "description": "The value in this field represents the amount of any escrowed funds that are being refunded to the borrower as a result of the escrow account analysis.",
+    "isSnippet": false
+  },
+  {
+    "label": "CUSHION",
+    "insertText": "CUSHION",
+    "description": "This is the amount of cushion that was used in the latest escrow analysis. It is a total of all required cushions for the escrow types represented in the Loan Escrow records under the Loan record.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACTIONSHORTAGE",
+    "insertText": "ACTIONSHORTAGE",
+    "description": "Based on the Escrow Analysis parameter settings and the actual analysis of the escrow account, this field contains the code that links to verbiage describing the action taken by the credit union relating to the shortage.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACTIONDEFICIENCY",
+    "insertText": "ACTIONDEFICIENCY",
+    "description": "Based on the Escrow Analysis parameter settings and the actual analysis of the escrow account, this field contains the code that links to verbiage describing the action taken by the credit union relating to the deficiency.",
+    "isSnippet": false
+  },
+  {
+    "label": "ANALYSISTHRUDATE",
+    "insertText": "ANALYSISTHRUDATE",
+    "description": "This field stores the date that the analysis is projected through. It determines the last month that is reflected in the Projections for Coming Year section of the member analysis statement, as well as in the three trial balances that are calculated as part of the analysis.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURRENTPAYMENT",
+    "insertText": "CURRENTPAYMENT",
+    "description": "This field stores the current total escrow payment for the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURRENTBALANCE",
+    "insertText": "CURRENTBALANCE",
+    "description": "This field contains the balance in the escrow share account that is identified in the Loan record Escrow ID field.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "The system stores the system date in this field when you create, change, or save this record if the change is made from this record.",
+    "isSnippet": false
+  },
+  {
+    "label": "REQUIREDNEWPAYMENT",
+    "insertText": "REQUIREDNEWPAYMENT",
+    "description": "This field reflects the calculated escrow payment amount before adding an amount to cover any shortage or deficiency. It represents the total estimated escrow disbursement divided by 12 months if the payments are payable monthly, and divided by 24 months if the payments are payable semi-monthly.",
+    "isSnippet": false
+  },
+  {
+    "label": "AMTCOVERSHORTAGE",
+    "insertText": "AMTCOVERSHORTAGE",
+    "description": "This field contains the amount added to the Required New Escrow Payment field to cover any shortage spread over the number of months specified in the Escrow Analysis parameters. This is the amount per escrow payment needed to cover the shortage.",
+    "isSnippet": false
+  },
+  {
+    "label": "AMTCOVERDEFICIENCY",
+    "insertText": "AMTCOVERDEFICIENCY",
+    "description": "This field contains the amount added to the Required New Escrow Payment field to cover any deficiency spread over the number of months specified at the Escrow Analysis parameters. This is the amount per escrow payment needed to cover the deficiency.",
+    "isSnippet": false
+  },
+  {
+    "label": "PMTREDUCEDOVERAGE",
+    "insertText": "PMTREDUCEDOVERAGE",
+    "description": "When an overage does not meet the refund threshold, the amount of the overage is divided by 12 if the loan payments are monthly and divided by 24 if the loan payments are semi-monthly; the resulting value is stored in this field. This amount is used to reduce each escrow payment.",
+    "isSnippet": false
+  },
+  {
+    "label": "AMTADDEDROUNDING",
+    "insertText": "AMTADDEDROUNDING",
+    "description": "This is the amount added, if any, to round the entire loan payment (principal, interest, and escrow amount) to an even dollar amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "NEWESCROWPAYMENT:1",
+    "insertText": "NEWESCROWPAYMENT:1",
+    "description": "The New Escrow Payment 1 field stores a history of escrow payment amount changes resulting from the latest escrow analysis run by selecting either (1) New Period Analysis Statements or (2) Replacement Analysis Statements at the Analysis Method prompt.",
+    "isSnippet": false
+  },
+  {
+    "label": "NEWESCROWPAYMENT:2",
+    "insertText": "NEWESCROWPAYMENT:2",
+    "description": "The New Escrow Payment 1 field stores a history of escrow payment amount changes resulting from the latest escrow analysis run by selecting either (1) New Period Analysis Statements or (2) Replacement Analysis Statements at the Analysis Method prompt.",
+    "isSnippet": false
+  },
+  {
+    "label": "NEWPAYMENTDATE:1",
+    "insertText": "NEWPAYMENTDATE:1",
+    "description": "This field contains the date that the New Escrow Payment 1 field becomes effective. When running an analysis, you must respond to the Payment Effective Date prompt, which determines the value in this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "NEWPAYMENTDATE:2",
+    "insertText": "NEWPAYMENTDATE:2",
+    "description": "This field contains the date that the New Escrow Payment 1 field becomes effective. When running an analysis, you must respond to the Payment Effective Date prompt, which determines the value in this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHANGEESCROWPMT",
+    "insertText": "CHANGEESCROWPMT",
+    "description": "This field contains the net change in the escrow payment due to the latest escrow analysis.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVANALYSISDATE",
+    "insertText": "PREVANALYSISDATE",
+    "description": "When an analysis is completed using the (1) New Period Analysis Statements option in the Escrow Reports batch program, the system takes the value from the Next Analysis Date field and moves it to this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVDATEANALYCALC",
+    "insertText": "PREVDATEANALYCALC",
+    "description": "This field stores the date the previous escrow analysis was calculated.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVPAYMENTFREQ",
+    "insertText": "PREVPAYMENTFREQ",
+    "description": "This field contains the Payment Frequency field value copied from the Loan record at the time the previous escrow analysis was performed. When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, the system moves the payment frequency in the Current Payment Frequency field to this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVDUEDAY1",
+    "insertText": "PREVDUEDAY1",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, the system moves the value in the Current Due Day 1 field to this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVDUEDAY2",
+    "insertText": "PREVDUEDAY2",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, the system moves the value in the Current Due Day 2 field to this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVPAYMENTDUEDATE",
+    "insertText": "PREVPAYMENTDUEDATE",
+    "description": "This field displays the next payment due date for the loan at the time the previous escrow analysis was performed.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVFCASTBEGSTMTBL",
+    "insertText": "PREVFCASTBEGSTMTBL",
+    "description": "The value in this field is used as the Starting Balance in the Estimate of Activity trial balance that is created as part of the escrow analysis process. This trial balance is part of the member escrow analysis statement.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVEXPBEGSTMTBL",
+    "insertText": "PREVEXPBEGSTMTBL",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, the system moves the value in the Expected Beg Statement Bal field to this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVSHORTAGE",
+    "insertText": "PREVSHORTAGE",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, the system moves the value in the Shortage field to this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVDEFICIENCY",
+    "insertText": "PREVDEFICIENCY",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, the system moves the value in the Deficiency field to this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVOVERAGE",
+    "insertText": "PREVOVERAGE",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, the system moves the value in the Overage field to this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVOVERAGEREFUNDED",
+    "insertText": "PREVOVERAGEREFUNDED",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, the system moves the value in the Overage Refunded field to this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVCUSHION",
+    "insertText": "PREVCUSHION",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, the system moves the value in the Cushion field to this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVACTIONSHORTAGE",
+    "insertText": "PREVACTIONSHORTAGE",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, the system moves the value in the Action Taken for Shortage field to this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVACTIONDEFIC",
+    "insertText": "PREVACTIONDEFIC",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, the system moves the value in the Action Taken for Deficiency field to this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVANALYTHRUDATE",
+    "insertText": "PREVANALYTHRUDATE",
+    "description": "This field stores the date the previous escrow analysis was calculated through.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVPAYMENT",
+    "insertText": "PREVPAYMENT",
+    "description": "This is the total escrow payment for the loan based on a previous escrow analysis. When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, the system moves the value in the Current Escrow Payment Amount field to this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVBALANCE",
+    "insertText": "PREVBALANCE",
+    "description": "This field equals the balance in the escrow share account that is identified in the Loan record Escrow ID field at the time of a previous analysis.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVREQUIREDPMT",
+    "insertText": "PREVREQUIREDPMT",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, the system moves the value in the Required New Escrow Payment field to this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVAMTCOVERSHORT",
+    "insertText": "PREVAMTCOVERSHORT",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, the system moves the value in the Amt Added to Cover Shortage field to this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVAMTCOVERDEF",
+    "insertText": "PREVAMTCOVERDEF",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, the system moves the value in the Amt Added to Cover Deficiency field to this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVPMTREDUCEDOVER",
+    "insertText": "PREVPMTREDUCEDOVER",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, the system moves the value in the Payment Reduced for Overage field to this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVAMTADDEDROUND",
+    "insertText": "PREVAMTADDEDROUND",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, the system moves the value in the Amt Added for Rounding field to this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVNEWESCROWPMT:1",
+    "insertText": "PREVNEWESCROWPMT:1",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, the system moves the value in the New Escrow Payment 1 field to the Prev New Escrow Payment 1 field. Likewise, the system moves the amount in the New Escrow Payment 2 field to the Prev New Escrow Payment 2 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVNEWESCROWPMT:2",
+    "insertText": "PREVNEWESCROWPMT:2",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, the system moves the value in the New Escrow Payment 1 field to the Prev New Escrow Payment 1 field. Likewise, the system moves the amount in the New Escrow Payment 2 field to the Prev New Escrow Payment 2 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVNEWPMTDATE:1",
+    "insertText": "PREVNEWPMTDATE:1",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, the system moves the value in the New Escrow Payment Date 1 field to the Prev New Escrow Pmt Date 1 field. Likewise, the system moves the amount in the New Escrow Payment Date 2 field to the Prev New Escrow Pmt Date 2 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVNEWPMTDATE:2",
+    "insertText": "PREVNEWPMTDATE:2",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, the system moves the value in the New Escrow Payment Date 1 field to the Prev New Escrow Pmt Date 1 field. Likewise, the system moves the amount in the New Escrow Payment Date 2 field to the Prev New Escrow Pmt Date 2 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVCHGESCROWPMT",
+    "insertText": "PREVCHGESCROWPMT",
+    "description": "When an analysis is completed using either the (1) New Period Analysis Statements or (2) Replacement Analysis Statements option in the Escrow Reports batch program, the system moves the value in the Change in Escrow Payment field to this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "CLOSINGREQUEST",
+    "insertText": "CLOSINGREQUEST",
+    "description": "This field tracks the entity that requested to close the escrow account and to generate the Escrow Closing Notice.",
+    "isSnippet": false
+  },
+  {
+    "label": "REMAINOPENOPTION",
+    "insertText": "REMAINOPENOPTION",
+    "description": "This field specifies whether the credit union offers members the option to keep their escrow account open.",
+    "isSnippet": false
+  },
+  {
+    "label": "NOTICEDATE",
+    "insertText": "NOTICEDATE",
+    "description": "This field stores the date when the Escrow Reports batch program generates the Escrow Closing Notice.",
+    "isSnippet": false
+  },
+  {
+    "label": "NOTICECLOSINGDATE",
+    "insertText": "NOTICECLOSINGDATE",
+    "description": "This field specifies the date that the credit union can close the escrow account.",
+    "isSnippet": false
+  },
+  {
+    "label": "NOTICECLOSINGFEE",
+    "insertText": "NOTICECLOSINGFEE",
+    "description": "This field stores the fee amount in the Escrow Closing Fee Amount prompt in the Escrow Reports batch program.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "The system stores a unique number within each member account in this field that can be used as a unique identification of this record.",
+    "isSnippet": false
+  }
+]

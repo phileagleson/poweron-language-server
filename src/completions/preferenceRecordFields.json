@@ -1,0 +1,770 @@
+[
+  {
+    "label": "TYPE",
+    "insertText": "TYPE",
+    "description": "This field stores a credit union-defined code identifying this kind of Preference record.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUDIOACCESS",
+    "insertText": "AUDIOACCESS",
+    "description": "This field stores the full audio access code if it is in clear text or hashed with an MD5 hashing method. If using advanced hashing, this field stores the first part of the hashed audio access code.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUDIOACCESS2",
+    "insertText": "AUDIOACCESS2",
+    "description": "This field stores the full member's secondary audio access code if it is in clear text or hashed with an MD5 hashing method. If using advanced hashing, this field stores the first part of the hashed secondary audio access code.",
+    "isSnippet": false
+  },
+  {
+    "label": "LANGUAGE",
+    "insertText": "LANGUAGE",
+    "description": "This field stores a code that indicates the language the member wants the audio response system to use for messages.",
+    "isSnippet": false
+  },
+  {
+    "label": "REFERENCE",
+    "insertText": "REFERENCE",
+    "description": "This field stores any reference information for this Preference record.",
+    "isSnippet": false
+  },
+  {
+    "label": "EMAILADDRESS",
+    "insertText": "EMAILADDRESS",
+    "description": "This field stores the email address used for online password reset.",
+    "isSnippet": false
+  },
+  {
+    "label": "EMAILADDRCHGDATE",
+    "insertText": "EMAILADDRCHGDATE",
+    "description": "This field stores the date the credit union received the document.",
+    "isSnippet": false
+  },
+  {
+    "label": "EMAILADDRCHGTIME",
+    "insertText": "EMAILADDRCHGTIME",
+    "description": "This field stores the time (in HHMM format) that the credit union received the document.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTACCESSCHANGEDATE",
+    "insertText": "LASTACCESSCHANGEDATE",
+    "description": "This field stores the last date the access code for this Preference record was changed, either by the member (through audio response or home banking) or by the credit union (through account file maintenance).",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTLOGONDATE",
+    "insertText": "LASTLOGONDATE",
+    "description": "This field stores the most recent date that someone successfully logged on to this account through audio response or home banking with the access code specified in this Preference record.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTLOGONTIME",
+    "insertText": "LASTLOGONTIME",
+    "description": "This field stores the most recent time (in HHMM format) someone successfully logged on to this account through audio response or home banking with the access code in this Preference record.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "This field stores the system date in this field when you create, change, or save the Preference record. Sometimes the system updates this field because the record was saved, even though there may not be any actual changes in the record.",
+    "isSnippet": false
+  },
+  {
+    "label": "LISTTRANSACTIONS",
+    "insertText": "LISTTRANSACTIONS",
+    "description": "This field stores the number of transactions the member can hear in a history inquiry.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTERACTMODE",
+    "insertText": "INTERACTMODE",
+    "description": "This field stores a code that indicates how the member interacts with the audio response system.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUDIOENABLE",
+    "insertText": "AUDIOENABLE",
+    "description": "This field stores a code that indicates the level of access the member has to the audio response system.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUDIOCALLCOUNT",
+    "insertText": "AUDIOCALLCOUNT",
+    "description": "This field stores the number of times the member called since the last time the Daily Posting batch program cleared this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUDIOCALLMINUTES",
+    "insertText": "AUDIOCALLMINUTES",
+    "description": "This field stores the number of minutes (rounded to the nearest minute) the member used the audio response system since you last cleared the call minutes log.",
+    "isSnippet": false
+  },
+  {
+    "label": "TRANCODES",
+    "insertText": "TRANCODES",
+    "description": "This field can store the transaction code (also called a service code) for the member's preferred transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "HOMEFAX",
+    "insertText": "HOMEFAX",
+    "description": "This field stores the member's home fax number.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUSINESSFAX",
+    "insertText": "BUSINESSFAX",
+    "description": "This field stores the member's business fax number.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUDLASTLOGONDATE",
+    "insertText": "AUDLASTLOGONDATE",
+    "description": "This field stores the most recent date a member successfully logged on to an account through the audio response system with the access code specified in the Preference record.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUDLASTLOGONTIME",
+    "insertText": "AUDLASTLOGONTIME",
+    "description": "This field stores the most recent time (in HHMM format) a member successfully logged on to an account through the audio response system with the access code in the Preference record.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE",
+    "insertText": "USERCODE",
+    "description": "This field stores a code you can use to uniquely identify a particular Preference record when many members have access to a single account, such as a corporate account. This field is used only for home banking.",
+    "isSnippet": false
+  },
+  {
+    "label": "HBUSERNAME",
+    "insertText": "HBUSERNAME",
+    "description": "This field stores a home banking username that is used with the home banking password to let members access their accounts through the home banking system.",
+    "isSnippet": false
+  },
+  {
+    "label": "HBMODE",
+    "insertText": "HBMODE",
+    "description": "This field stores a code that controls the member's access to NetTeller and, if using SymConnect, access to the audio response system.",
+    "isSnippet": false
+  },
+  {
+    "label": "HBENABLE",
+    "insertText": "HBENABLE",
+    "description": "This field stores a code that control the member's level of access to NetTeller and, if using SymConnect, the level of access to the audio response system.",
+    "isSnippet": false
+  },
+  {
+    "label": "HBPASSWORD",
+    "insertText": "HBPASSWORD",
+    "description": "This field stores the full home banking password if it is in clear text or hashed with an MD5 hashing method. If using advanced hashing, this field stores the first part of the hashed home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "HBPASSWORD2",
+    "insertText": "HBPASSWORD2",
+    "description": "This field stores the full member's secondary home banking password if it is in clear text or hashed with an MD5 hashing method. If using advanced hashing, this field stores the first part of the hashed secondary home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTHBPWCHANGEDATE",
+    "insertText": "LASTHBPWCHANGEDATE",
+    "description": "This field stores the date of the last change to the home banking password, if used.",
+    "isSnippet": false
+  },
+  {
+    "label": "HBCALLCOUNT",
+    "insertText": "HBCALLCOUNT",
+    "description": "This field stores the number of times the member used home banking since the last time you cleared the count.",
+    "isSnippet": false
+  },
+  {
+    "label": "HBCALLMINUTES",
+    "insertText": "HBCALLMINUTES",
+    "description": "For credit unions using the older dial-up MemberConnect PC software, this field stores the total number of minutes the member used home banking since the last time you cleared the log.",
+    "isSnippet": false
+  },
+  {
+    "label": "HBLASTLOGONDATE",
+    "insertText": "HBLASTLOGONDATE",
+    "description": "This field stores the most recent date that a member successfully logged on to an account through NetTeller online banking or goDough mobile banking solutions with the access code specified in the Preference record.",
+    "isSnippet": false
+  },
+  {
+    "label": "HBLASTLOGONTIME",
+    "insertText": "HBLASTLOGONTIME",
+    "description": "This field stores the most recent time a member successfully logged on to an account through NetTeller online banking or goDough mobile banking solutions with the access code specified in the Preference record.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECURITYQUESTION",
+    "insertText": "SECURITYQUESTION",
+    "description": "This field stores the security question used to validate the member's identity for a password reset feature.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECURITYANSWER",
+    "insertText": "SECURITYANSWER",
+    "description": "This field stores the security answer for a password reset feature.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCKCOUNT",
+    "insertText": "LOCKCOUNT",
+    "description": "This field stores the number of times the member has entered an incorrect security answer during password reset.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCKED",
+    "insertText": "LOCKED",
+    "description": "This field stores a code indicates whether the Preference record is locked.",
+    "isSnippet": false
+  },
+  {
+    "label": "PWDRESETRQSTDATE",
+    "insertText": "PWDRESETRQSTDATE",
+    "description": "This field stores the system date when the member resets their password in an applicable home banking system.",
+    "isSnippet": false
+  },
+  {
+    "label": "PWDRESETRQSTTIME",
+    "insertText": "PWDRESETRQSTTIME",
+    "description": "This field stores the time (in HHMM format) when the member resets their password in an applicable home banking system.",
+    "isSnippet": false
+  },
+  {
+    "label": "PWDRESETRQSTNOTICE",
+    "insertText": "PWDRESETRQSTNOTICE",
+    "description": "This field stores a code indicates when the member successfully resets their password in an applicable home banking system.",
+    "isSnippet": false
+  },
+  {
+    "label": "PWDRESETDATE",
+    "insertText": "PWDRESETDATE",
+    "description": "This field stores the system date when the member successfully logs on to an applicable home banking system using the temporary password and changes it.",
+    "isSnippet": false
+  },
+  {
+    "label": "PWDRESETIME",
+    "insertText": "PWDRESETIME",
+    "description": "This field stores the time (in HHMM format) when the member successfully logs in to an applicable home banking system using the temporary password and changes it.",
+    "isSnippet": false
+  },
+  {
+    "label": "PWDRESETPROBATION",
+    "insertText": "PWDRESETPROBATION",
+    "description": "This field stores a code indicates the account probation status.",
+    "isSnippet": false
+  },
+  {
+    "label": "INVALIDPWDATTMPTS",
+    "insertText": "INVALIDPWDATTMPTS",
+    "description": "This field stores the number of times a member enters an invalid password.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTTRANDATE",
+    "insertText": "LASTTRANDATE",
+    "description": "This field stores the date of the last successful transaction that was subjected to limiting.",
+    "isSnippet": false
+  },
+  {
+    "label": "WDCASHMAX",
+    "insertText": "WDCASHMAX",
+    "description": "This field stores the maximum amount allowed in a single cash withdrawal.",
+    "isSnippet": false
+  },
+  {
+    "label": "WDCASHLIMIT",
+    "insertText": "WDCASHLIMIT",
+    "description": "This field stores the daily cash withdrawal limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "WDCASHCOUNTLIMIT",
+    "insertText": "WDCASHCOUNTLIMIT",
+    "description": "This field stores the maximum number of cash withdrawals allowed per day.",
+    "isSnippet": false
+  },
+  {
+    "label": "WDCASHAMOUNT",
+    "insertText": "WDCASHAMOUNT",
+    "description": "This field stores the total cash withdrawal amount on the date in the Last Transaction Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "WDCASHCOUNT",
+    "insertText": "WDCASHCOUNT",
+    "description": "This field stores the number of cash withdrawals performed on the date in the Last Transaction Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "WDCHECKMAX",
+    "insertText": "WDCHECKMAX",
+    "description": "This field stores the maximum amount allowed in a single withdrawal by check.",
+    "isSnippet": false
+  },
+  {
+    "label": "WDCHECKLIMIT",
+    "insertText": "WDCHECKLIMIT",
+    "description": "This field stores the daily amount that can be withdrawn each day by check.",
+    "isSnippet": false
+  },
+  {
+    "label": "WDCHECKCOUNTLIMIT",
+    "insertText": "WDCHECKCOUNTLIMIT",
+    "description": "This field stores the maximum number of withdrawals by check allowed per day.",
+    "isSnippet": false
+  },
+  {
+    "label": "WDCHECKAMOUNT",
+    "insertText": "WDCHECKAMOUNT",
+    "description": "This field stores the total cash withdrawals by check on the date in the Last Transaction Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "WDCHECKCOUNT",
+    "insertText": "WDCHECKCOUNT",
+    "description": "This field stores the number of check withdrawals performed on the date in the Last Transaction Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "XFERMAX",
+    "insertText": "XFERMAX",
+    "description": "This field stores the maximum amount allowed in a single transfer.",
+    "isSnippet": false
+  },
+  {
+    "label": "XFERLIMIT",
+    "insertText": "XFERLIMIT",
+    "description": "This field stores the maximum amount that can be transferred daily.",
+    "isSnippet": false
+  },
+  {
+    "label": "XFERCOUNTLIMIT",
+    "insertText": "XFERCOUNTLIMIT",
+    "description": "This field stores the maximum number of transfers allowed per day.",
+    "isSnippet": false
+  },
+  {
+    "label": "XFERAMOUNT",
+    "insertText": "XFERAMOUNT",
+    "description": "This field stores the total transfer amount on the date in the Last Transaction Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "XFERCOUNT",
+    "insertText": "XFERCOUNT",
+    "description": "This field stores the number of transfers performed on the date in the Last Transaction Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "BILLPAYMAX",
+    "insertText": "BILLPAYMAX",
+    "description": "This field stores the maximum allowable amount for a single bill payment.",
+    "isSnippet": false
+  },
+  {
+    "label": "BILLPAYLIMIT",
+    "insertText": "BILLPAYLIMIT",
+    "description": "This field stores the daily bill payment limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "BILLPAYCOUNTLIMIT",
+    "insertText": "BILLPAYCOUNTLIMIT",
+    "description": "This field stores the maximum number of bill payments allowed per day.",
+    "isSnippet": false
+  },
+  {
+    "label": "BILLPAYAMOUNT",
+    "insertText": "BILLPAYAMOUNT",
+    "description": "This field stores the total amount of bill payments on the date in the Last Transaction Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "BILLPAYCOUNT",
+    "insertText": "BILLPAYCOUNT",
+    "description": "This field stores the number of bill payments performed on the date in the Last Transaction Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPMAX",
+    "insertText": "DEPMAX",
+    "description": "This field stores the maximum amount allowed in a single deposit.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPLIMIT",
+    "insertText": "DEPLIMIT",
+    "description": "This field stores the maximum amount of total deposits allowed per day.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPCOUNTLIMIT",
+    "insertText": "DEPCOUNTLIMIT",
+    "description": "This field stores the maximum number of deposits allowed per day.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPAMOUNT",
+    "insertText": "DEPAMOUNT",
+    "description": "This field stores the total deposit amount on the date in the Last Transaction Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPCOUNT",
+    "insertText": "DEPCOUNT",
+    "description": "This field stores the number of deposits performed on the date in the Last Transaction Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "N/A",
+    "insertText": "N/A",
+    "description": "These fields store the second, third, and fourth hash parts of a member's audio access code if you use the advance password hashing option.",
+    "isSnippet": false
+  },
+  {
+    "label": "N/A",
+    "insertText": "N/A",
+    "description": "These fields store the second, third, and fourth hash parts of a member's home banking password if you use the advance password hashing option.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "This field stores a unique number within each Preference record set that can be used as a unique identification of this record.",
+    "isSnippet": false
+  },
+  {
+    "label": "N/A",
+    "insertText": "N/A",
+    "description": "These fields store the second, third, and fourth hash parts of a member's second home banking password if you use the advance password hashing option.",
+    "isSnippet": false
+  },
+  {
+    "label": "N/A",
+    "insertText": "N/A",
+    "description": "These fields store the second, third, and fourth hash parts of a member's second audio access code if you use the advance password hashing option.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:1",
+    "insertText": "PREVHBPASSWORD:1",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:2",
+    "insertText": "PREVHBPASSWORD:2",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:3",
+    "insertText": "PREVHBPASSWORD:3",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:4",
+    "insertText": "PREVHBPASSWORD:4",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:5",
+    "insertText": "PREVHBPASSWORD:5",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:6",
+    "insertText": "PREVHBPASSWORD:6",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:7",
+    "insertText": "PREVHBPASSWORD:7",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:8",
+    "insertText": "PREVHBPASSWORD:8",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:9",
+    "insertText": "PREVHBPASSWORD:9",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:10",
+    "insertText": "PREVHBPASSWORD:10",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:11",
+    "insertText": "PREVHBPASSWORD:11",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:12",
+    "insertText": "PREVHBPASSWORD:12",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:13",
+    "insertText": "PREVHBPASSWORD:13",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:14",
+    "insertText": "PREVHBPASSWORD:14",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:15",
+    "insertText": "PREVHBPASSWORD:15",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:16",
+    "insertText": "PREVHBPASSWORD:16",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:17",
+    "insertText": "PREVHBPASSWORD:17",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:18",
+    "insertText": "PREVHBPASSWORD:18",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:19",
+    "insertText": "PREVHBPASSWORD:19",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:20",
+    "insertText": "PREVHBPASSWORD:20",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:21",
+    "insertText": "PREVHBPASSWORD:21",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:22",
+    "insertText": "PREVHBPASSWORD:22",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:23",
+    "insertText": "PREVHBPASSWORD:23",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORD:24",
+    "insertText": "PREVHBPASSWORD:24",
+    "description": "These fields store the past 24 HB Password and Second HB Password field values. Each field stores the full password if it is in clear text or hashed with an MD5 hashing method.",
+    "isSnippet": false
+  },
+  {
+    "label": "HBPASSWORDMODE",
+    "insertText": "HBPASSWORDMODE",
+    "description": "This field stores a code that indicates the format the system uses to store a member's password.",
+    "isSnippet": false
+  },
+  {
+    "label": "HBPASSWORDMODE2",
+    "insertText": "HBPASSWORDMODE2",
+    "description": "This field stores a code that indicates the format the system uses to store a member's second password.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUDIOACCESSMODE",
+    "insertText": "AUDIOACCESSMODE",
+    "description": "This field stores a code that indicates the format the system uses to store a member's audio access code.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUDIOACCESSMODE2",
+    "insertText": "AUDIOACCESSMODE2",
+    "description": "This field stores a code that indicates the format the system uses to store a member's second audio access code.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:1",
+    "insertText": "PREVHBPASSWORDMODE:1",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:2",
+    "insertText": "PREVHBPASSWORDMODE:2",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:3",
+    "insertText": "PREVHBPASSWORDMODE:3",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:4",
+    "insertText": "PREVHBPASSWORDMODE:4",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:5",
+    "insertText": "PREVHBPASSWORDMODE:5",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:6",
+    "insertText": "PREVHBPASSWORDMODE:6",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:7",
+    "insertText": "PREVHBPASSWORDMODE:7",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:8",
+    "insertText": "PREVHBPASSWORDMODE:8",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:9",
+    "insertText": "PREVHBPASSWORDMODE:9",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:10",
+    "insertText": "PREVHBPASSWORDMODE:10",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:11",
+    "insertText": "PREVHBPASSWORDMODE:11",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:12",
+    "insertText": "PREVHBPASSWORDMODE:12",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:13",
+    "insertText": "PREVHBPASSWORDMODE:13",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:14",
+    "insertText": "PREVHBPASSWORDMODE:14",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:15",
+    "insertText": "PREVHBPASSWORDMODE:15",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:16",
+    "insertText": "PREVHBPASSWORDMODE:16",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:17",
+    "insertText": "PREVHBPASSWORDMODE:17",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:18",
+    "insertText": "PREVHBPASSWORDMODE:18",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:19",
+    "insertText": "PREVHBPASSWORDMODE:19",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:20",
+    "insertText": "PREVHBPASSWORDMODE:20",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:21",
+    "insertText": "PREVHBPASSWORDMODE:21",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:22",
+    "insertText": "PREVHBPASSWORDMODE:22",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:23",
+    "insertText": "PREVHBPASSWORDMODE:23",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVHBPASSWORDMODE:24",
+    "insertText": "PREVHBPASSWORDMODE:24",
+    "description": "These fields store a code for the past 24 HB Password Mode and Second HB Password Mode field values that indicate the format the system used to store each past home banking password.",
+    "isSnippet": false
+  },
+  {
+    "label": "N/A",
+    "insertText": "N/A",
+    "description": "These fields store the second, third, and fourth hash parts of the past 24 HB Password and Second HB Password field values if you use the advance password hashing option.",
+    "isSnippet": false
+  }
+]

@@ -1,0 +1,1724 @@
+[
+  {
+    "label": "DESCRIPTION",
+    "insertText": "DESCRIPTION",
+    "description": "This field stores a share description that displays in inquiries and on statements.",
+    "isSnippet": false
+  },
+  {
+    "label": "TYPE",
+    "insertText": "TYPE",
+    "description": "This field stores a credit union-defined code to identify the type of share.",
+    "isSnippet": false
+  },
+  {
+    "label": "ID",
+    "insertText": "ID",
+    "description": "This field stores a unique two- or four-character ID that identifies the Share record.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACTIVITYDATE",
+    "insertText": "ACTIVITYDATE",
+    "description": "This field store the date of the previous monetary transaction that affected the Share record.",
+    "isSnippet": false
+  },
+  {
+    "label": "SHARECODE",
+    "insertText": "SHARECODE",
+    "description": "This field stores a code that defines the share type description for this record.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHECKDIGITS",
+    "insertText": "CHECKDIGITS",
+    "description": "This field stores check digits that your financial institution may use to help the system verify account numbers when processing drafts, ATM transactions, or outside processor transactions. Both the account number and the check digits must be valid, or the system reports the transaction as an exception.",
+    "isSnippet": false
+  },
+  {
+    "label": "IRSCODE",
+    "insertText": "IRSCODE",
+    "description": "This field stores a code that defines how this share should be reported to the IRS.",
+    "isSnippet": false
+  },
+  {
+    "label": "IRSPLAN",
+    "insertText": "IRSPLAN",
+    "description": "This field specifies a code that the system uses, along with the IRS Code field in this record and the SSN/TIN field in the related Member record, to connect specific Share records to a specific IRS record.",
+    "isSnippet": false
+  },
+  {
+    "label": "CERTIFICATENUMBER",
+    "insertText": "CERTIFICATENUMBER",
+    "description": "This field stores a specific number to identify a certificate or the last unique certificate number used in a series.",
+    "isSnippet": false
+  },
+  {
+    "label": "ORIGINALDEPOSITDATE",
+    "insertText": "ORIGINALDEPOSITDATE",
+    "description": "This field stores the date of the first deposit to this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "ORIGINALDEPOSIT",
+    "insertText": "ORIGINALDEPOSIT",
+    "description": "This field stores the amount of the first deposit to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "MATURITYPOSTCODE",
+    "insertText": "MATURITYPOSTCODE",
+    "description": "This field is used only for shares with a Share record that has the Share Code field set to (2) Certificate or (3) Club. This field stores a code that determines how the balance of the certificate or club share is paid at maturity.",
+    "isSnippet": false
+  },
+  {
+    "label": "MATURITYDATE",
+    "insertText": "MATURITYDATE",
+    "description": "This field stores the date the certificate or club share matures.",
+    "isSnippet": false
+  },
+  {
+    "label": "TERMFREQUENCY",
+    "insertText": "TERMFREQUENCY",
+    "description": "This field stores a code that determines how the term of the certificate or club share is calculated.",
+    "isSnippet": false
+  },
+  {
+    "label": "TERMPERIOD",
+    "insertText": "TERMPERIOD",
+    "description": "This field stores the period for the term of a certificate or club share.",
+    "isSnippet": false
+  },
+  {
+    "label": "RENEWSHARETYPE",
+    "insertText": "RENEWSHARETYPE",
+    "description": "When a user begins to update share defaults for the first time, the initial value for this field is 00 or 0000. However, when the default value in the Share Type field is changed, the system automatically populates this field with the same value. The user can then change that value as desired.",
+    "isSnippet": false
+  },
+  {
+    "label": "RENEWTERMFREQ",
+    "insertText": "RENEWTERMFREQ",
+    "description": "When a user begins to update share defaults for the first time, the initial value for this field is (0) Months. You can also select (1) Days. If the Term Frequency field is populated in the share type defaults, the system automatically also populates this field, perform file maintenance on the field if a different renew value should be used.",
+    "isSnippet": false
+  },
+  {
+    "label": "RENEWTERMPERIOD",
+    "insertText": "RENEWTERMPERIOD",
+    "description": "When a user begins to update share defaults for the first time, the initial value for this field is 0000. If the Term Period field is populated in the share defaults, the system automatically also populates this field with the same value, and this field requires file maintenance if a different renew value should be used.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREATEDBYUSER",
+    "insertText": "CREATEDBYUSER",
+    "description": "The user ID is stored in this field, and it is populated when this Share record is created.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREATEDATBRANCH",
+    "insertText": "CREATEDATBRANCH",
+    "description": "This field stores the branch ID of the branch where the Share record is created.",
+    "isSnippet": false
+  },
+  {
+    "label": "BALANCE",
+    "insertText": "BALANCE",
+    "description": "The current balance of the share is stored in this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "AVAILABLEBALANCE",
+    "insertText": "AVAILABLEBALANCE",
+    "description": "This field displays the currently available share balance.",
+    "isSnippet": false
+  },
+  {
+    "label": "ORIGINALBALANCE",
+    "insertText": "ORIGINALBALANCE",
+    "description": "This field stores the amount deposited during the first Share Deposit (SD) teller transaction to this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "YEARENDBALANCE",
+    "insertText": "YEARENDBALANCE",
+    "description": "This field stores the year-end balance of the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "MINIMUMBALANCE",
+    "insertText": "MINIMUMBALANCE",
+    "description": "This field stores the minimum balance required for this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "MINIMUMDEPOSIT",
+    "insertText": "MINIMUMDEPOSIT",
+    "description": "This field stores the minimum amount that can be deposited to the share in a single transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "MINIMUMWITHDRAWAL",
+    "insertText": "MINIMUMWITHDRAWAL",
+    "description": "This field stores the minimum amount that can be withdrawn from the share in a single transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "OVERDRAFTTOLERANCE",
+    "insertText": "OVERDRAFTTOLERANCE",
+    "description": "This field specifies the dollar limit a share can go negative beyond the existing overdraft options.",
+    "isSnippet": false
+  },
+  {
+    "label": "MICRACCTNUMBER",
+    "insertText": "MICRACCTNUMBER",
+    "description": "This field stores the account number portion of a draft's MICR line.",
+    "isSnippet": false
+  },
+  {
+    "label": "BRANCH",
+    "insertText": "BRANCH",
+    "description": "This field stores the number of the branch that \"owns\" the share. When you create a Share record, the default is the branch at which you create the Share record.",
+    "isSnippet": false
+  },
+  {
+    "label": "OPENDATE",
+    "insertText": "OPENDATE",
+    "description": "This field stores the date the share was opened.",
+    "isSnippet": false
+  },
+  {
+    "label": "CLOSEDATE",
+    "insertText": "CLOSEDATE",
+    "description": "This field stores the date the Share record was closed.",
+    "isSnippet": false
+  },
+  {
+    "label": "REFERENCE",
+    "insertText": "REFERENCE",
+    "description": "This field stores any share-related reference information, such as an employment date.",
+    "isSnippet": false
+  },
+  {
+    "label": "NICKNAME",
+    "insertText": "NICKNAME",
+    "description": "This field stores a nickname for a share.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTFMDATE",
+    "insertText": "LASTFMDATE",
+    "description": "This field stores the date of the last file maintenance of this Share record or a child record of this Share record.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "This field stores the system date when you create, change, or save the Share record. Sometimes the system updates this field because the record was saved, even though there may not be any actual changes in the record.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTTRANDATE",
+    "insertText": "LASTTRANDATE",
+    "description": "This field stores the posting date of the last monetary transaction that affected this Share record.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTPURGEDATE",
+    "insertText": "LASTPURGEDATE",
+    "description": "This field stores the date of the last share history purge for this Share record.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTDIRECTDEPDATE",
+    "insertText": "LASTDIRECTDEPDATE",
+    "description": "This field stores the date the last direct deposit transaction occurred for an account.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTDIRECTDEPAMT",
+    "insertText": "LASTDIRECTDEPAMT",
+    "description": "This field stores the amount of the last deposit transaction posted to an account.",
+    "isSnippet": false
+  },
+  {
+    "label": "DIVPOSTCODE",
+    "insertText": "DIVPOSTCODE",
+    "description": "This field stores a code that determines how earned dividends are paid.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTDIVDATE",
+    "insertText": "LASTDIVDATE",
+    "description": "This field stores the date dividends were last posted for this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTDIVAMOUNT",
+    "insertText": "LASTDIVAMOUNT",
+    "description": "This field stores the amount of the last dividend posted for this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "DIVYTD",
+    "insertText": "DIVYTD",
+    "description": "This field stores the total amount of all dividends posted for the share during the current year with the SV transaction code and the Dividend Posting batch program.",
+    "isSnippet": false
+  },
+  {
+    "label": "DIVLASTYEAR",
+    "insertText": "DIVLASTYEAR",
+    "description": "This field stores the total amount of all dividends posted for the share during the previous year.",
+    "isSnippet": false
+  },
+  {
+    "label": "DIVFROMOPEN",
+    "insertText": "DIVFROMOPEN",
+    "description": "This field stores the total amount of all dividends posted for the share since it was opened.",
+    "isSnippet": false
+  },
+  {
+    "label": "DIVTYPE",
+    "insertText": "DIVTYPE",
+    "description": "This field stores a credit union-defined code (defined with the Dividend Type Definitions parameters) to identify the type of dividend calculation performed for this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "DIVRATE",
+    "insertText": "DIVRATE",
+    "description": "This field stores the rate used to calculate dividends for this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "DIVACCRUALDATE",
+    "insertText": "DIVACCRUALDATE",
+    "description": "This field stores the date that dividends were last accrued for this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "DIVACCRUAL",
+    "insertText": "DIVACCRUAL",
+    "description": "This field stores the total amount of any dividends accrued for this share, but not posted to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "DIVPERIODSTART",
+    "insertText": "DIVPERIODSTART",
+    "description": "This field stores the starting date for the dividend period.",
+    "isSnippet": false
+  },
+  {
+    "label": "DIVPERIODBALDAYS",
+    "insertText": "DIVPERIODBALDAYS",
+    "description": "This field stores the sum of the balances for each day between the values in the Dividend Period Start and the Dividend Accrual Date fields if you perform a rate change in the middle of the dividend period.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUMPRATE",
+    "insertText": "BUMPRATE",
+    "description": "This field stores the percentage to add to the \"normal\" rate during dividend calculations for the period specified between the values in the Bump Effective Date and the Bump Expiration Date fields. The \"normal\" rate is the rate that would otherwise be used for dividend purposes.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUMPEFFECTIVEDATE",
+    "insertText": "BUMPEFFECTIVEDATE",
+    "description": "This field stores the date on which the value in the Bump Rate field becomes effective.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUMPEXPIRATIONDATE",
+    "insertText": "BUMPEXPIRATIONDATE",
+    "description": "This field stores the date on which the value in the Bump Rate field expires.",
+    "isSnippet": false
+  },
+  {
+    "label": "DIVIDENDRATEMARGIN",
+    "insertText": "DIVIDENDRATEMARGIN",
+    "description": "This field stores the rate margin that, when added to the base rate, produces a variable dividend rate for the current date.",
+    "isSnippet": false
+  },
+  {
+    "label": "DIVIDENDRATEMARGINSIGN",
+    "insertText": "DIVIDENDRATEMARGINSIGN",
+    "description": "This field specifies a positive (+) or negative (-) sign to be associated with the value in the Dividend Rate Margin field.",
+    "isSnippet": false
+  },
+  {
+    "label": "DIVIDENDRATEMAX",
+    "insertText": "DIVIDENDRATEMAX",
+    "description": "This field stores a maximum dividend rate for variable rate dividend calculations.",
+    "isSnippet": false
+  },
+  {
+    "label": "DIVIDENDRATEMIN",
+    "insertText": "DIVIDENDRATEMIN",
+    "description": "This field stores a minimum dividend rate for variable rate dividend calculations.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERIODICCAP",
+    "insertText": "PERIODICCAP",
+    "description": "This field affects only shares with variable dividend rates and contains the maximum dividend rate change allowed.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERIODICSTARTRATE",
+    "insertText": "PERIODICSTARTRATE",
+    "description": "This field stores the dividend rate as of the Periodic Cap Start Date field value.",
+    "isSnippet": false
+  },
+  {
+    "label": "DIVIDENDRATEPERIODDATE",
+    "insertText": "DIVIDENDRATEPERIODDATE",
+    "description": "This field stores the last anniversary date, or semi-annual anniversary date, for the cap (depending on your periodic cap frequency).",
+    "isSnippet": false
+  },
+  {
+    "label": "DIVIDENDRATEPERIODFREQ",
+    "insertText": "DIVIDENDRATEPERIODFREQ",
+    "description": "This field stores a code indicating the frequency associated with the Periodic Cap field.",
+    "isSnippet": false
+  },
+  {
+    "label": "LEDGERACCRUAL",
+    "insertText": "LEDGERACCRUAL",
+    "description": "This field stores the ledger accrual amount for this share. The accrual batch process updates this field. This is a protected field, but not a required one.",
+    "isSnippet": false
+  },
+  {
+    "label": "LEDGERACCRUALDATE",
+    "insertText": "LEDGERACCRUALDATE",
+    "description": "This field stores the date on which the accrual batch process updates the ledger accrual for this share during daily accruals. This is a protected field, but not a required one.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURRDIVPAYABLE",
+    "insertText": "CURRDIVPAYABLE",
+    "description": "This field stores the total of all outstanding dividends that have been accrued, but unpaid, regardless of the month from which they are outstanding (the accrued dividends from the value in the Last Dividend Date field).",
+    "isSnippet": false
+  },
+  {
+    "label": "CURRMONTHPAIDDIV",
+    "insertText": "CURRMONTHPAIDDIV",
+    "description": "This field stores the total of all dividends earned and paid in the current month.",
+    "isSnippet": false
+  },
+  {
+    "label": "MTDPAIDDIVS",
+    "insertText": "MTDPAIDDIVS",
+    "description": "This field stores the total of all dividends paid in the current month, regardless of when the dividend was earned.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREMTHDIVPAID:1",
+    "insertText": "PREMTHDIVPAID:1",
+    "description": "These three fields store the total of all dividends paid in three previous months.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREMTHDIVPAID:2",
+    "insertText": "PREMTHDIVPAID:2",
+    "description": "These three fields store the total of all dividends paid in three previous months.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREMTHDIVPAID:3",
+    "insertText": "PREMTHDIVPAID:3",
+    "description": "These three fields store the total of all dividends paid in three previous months.",
+    "isSnippet": false
+  },
+  {
+    "label": "MTDACCRUEDDIVS",
+    "insertText": "MTDACCRUEDDIVS",
+    "description": "This field stores the total outstanding accrued unpaid dividends for the current calendar month.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREMTHDIVACCRUED:1",
+    "insertText": "PREMTHDIVACCRUED:1",
+    "description": "These three fields store the total of all outstanding accrued unpaid dividends in three previous months.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREMTHDIVACCRUED:2",
+    "insertText": "PREMTHDIVACCRUED:2",
+    "description": "These three fields store the total of all outstanding accrued unpaid dividends in three previous months.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREMTHDIVACCRUED:3",
+    "insertText": "PREMTHDIVACCRUED:3",
+    "description": "These three fields store the total of all outstanding accrued unpaid dividends in three previous months.",
+    "isSnippet": false
+  },
+  {
+    "label": "MTDEARNEDDIVS",
+    "insertText": "MTDEARNEDDIVS",
+    "description": "This field stores the total of all dividends earned (both unpaid and paid) for the current calendar month, regardless of dividend payment or accrual.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREMTHDIVEARNED:1",
+    "insertText": "PREMTHDIVEARNED:1",
+    "description": "These fields store the total of all dividends earned, unpaid and paid, for 12 previous calendar months, regardless of dividend payment or accrual.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREMTHDIVEARNED:2",
+    "insertText": "PREMTHDIVEARNED:2",
+    "description": "These fields store the total of all dividends earned, unpaid and paid, for 12 previous calendar months, regardless of dividend payment or accrual.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREMTHDIVEARNED:3",
+    "insertText": "PREMTHDIVEARNED:3",
+    "description": "These fields store the total of all dividends earned, unpaid and paid, for 12 previous calendar months, regardless of dividend payment or accrual.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREMTHDIVEARNED:4",
+    "insertText": "PREMTHDIVEARNED:4",
+    "description": "These fields store the total of all dividends earned, unpaid and paid, for 12 previous calendar months, regardless of dividend payment or accrual.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREMTHDIVEARNED:5",
+    "insertText": "PREMTHDIVEARNED:5",
+    "description": "These fields store the total of all dividends earned, unpaid and paid, for 12 previous calendar months, regardless of dividend payment or accrual.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREMTHDIVEARNED:6",
+    "insertText": "PREMTHDIVEARNED:6",
+    "description": "These fields store the total of all dividends earned, unpaid and paid, for 12 previous calendar months, regardless of dividend payment or accrual.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREMTHDIVEARNED:7",
+    "insertText": "PREMTHDIVEARNED:7",
+    "description": "These fields store the total of all dividends earned, unpaid and paid, for 12 previous calendar months, regardless of dividend payment or accrual.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREMTHDIVEARNED:8",
+    "insertText": "PREMTHDIVEARNED:8",
+    "description": "These fields store the total of all dividends earned, unpaid and paid, for 12 previous calendar months, regardless of dividend payment or accrual.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREMTHDIVEARNED:9",
+    "insertText": "PREMTHDIVEARNED:9",
+    "description": "These fields store the total of all dividends earned, unpaid and paid, for 12 previous calendar months, regardless of dividend payment or accrual.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREMTHDIVEARNED:10",
+    "insertText": "PREMTHDIVEARNED:10",
+    "description": "These fields store the total of all dividends earned, unpaid and paid, for 12 previous calendar months, regardless of dividend payment or accrual.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREMTHDIVEARNED:11",
+    "insertText": "PREMTHDIVEARNED:11",
+    "description": "These fields store the total of all dividends earned, unpaid and paid, for 12 previous calendar months, regardless of dividend payment or accrual.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREMTHDIVEARNED:12",
+    "insertText": "PREMTHDIVEARNED:12",
+    "description": "These fields store the total of all dividends earned, unpaid and paid, for 12 previous calendar months, regardless of dividend payment or accrual.",
+    "isSnippet": false
+  },
+  {
+    "label": "MTDPRIORRATEACCRUAL",
+    "insertText": "MTDPRIORRATEACCRUAL",
+    "description": "This field stores the dividend accrual for the current calendar month.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTACCRUALUPDATEDATE",
+    "insertText": "LASTACCRUALUPDATEDATE",
+    "description": "This field stores the last date on which the accruals for the Share record were updated. You cannot access this field for file maintenance.",
+    "isSnippet": false
+  },
+  {
+    "label": "DIVDISBUPDTACTVTYD",
+    "insertText": "DIVDISBUPDTACTVTYD",
+    "description": "This field stores a code to indicate whether Dividend Posting or Daily Posting batch programs should update the Activity Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "CDDIVACCRYTD",
+    "insertText": "CDDIVACCRYTD",
+    "description": "This field stores the certificate dividend accrued during the current year.",
+    "isSnippet": false
+  },
+  {
+    "label": "CDDIVACCRLASTYR",
+    "insertText": "CDDIVACCRLASTYR",
+    "description": "This field stores the certificate dividend accrued during the last year.",
+    "isSnippet": false
+  },
+  {
+    "label": "MCDIVYTD",
+    "insertText": "MCDIVYTD",
+    "description": "This field stores the year-to-date dividends for a certificate share. It is only populated for mature certificates.",
+    "isSnippet": false
+  },
+  {
+    "label": "MCDIVLASTYEAR",
+    "insertText": "MCDIVLASTYEAR",
+    "description": "This field stores the dividends accrued in the previous year for a certificate share. It is only populated for matured certificates.",
+    "isSnippet": false
+  },
+  {
+    "label": "DIVIDENDDUE",
+    "insertText": "DIVIDENDDUE",
+    "description": "This field contains the calculation of a closing dividend. This field displays only the calculation of the dividend due for a closing dividend type.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHTODATE",
+    "insertText": "NSFMONTHTODATE",
+    "description": "This field stores the number of times during the current month that this share had insufficient funds for a requested transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFYTD",
+    "insertText": "NSFYTD",
+    "description": "This field stores the number of times during the current year that this share had insufficient funds for a requested transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFLASTYEAR",
+    "insertText": "NSFLASTYEAR",
+    "description": "This field stores the number of times during the previous year that this share had insufficient funds for a requested transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFFEEMTD",
+    "insertText": "NSFFEEMTD",
+    "description": "This field stores the number of times during the current month that a fee was charged for insufficient funds for a requested transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFFEEYTD",
+    "insertText": "NSFFEEYTD",
+    "description": "This field stores the number of times during the current year that a fee was charged for insufficient funds for a requested transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFFEELY",
+    "insertText": "NSFFEELY",
+    "description": "This field stores the number of times during the previous year that a fee was charged for insufficient funds for a requested transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "COURTESYPAYMONTHTODATE",
+    "insertText": "COURTESYPAYMONTHTODATE",
+    "description": "This field stores the number of courtesy pays charged during the current month.",
+    "isSnippet": false
+  },
+  {
+    "label": "COURTESYPAYYTD",
+    "insertText": "COURTESYPAYYTD",
+    "description": "This field stores the number of courtesy pays and alternate courtesy pays charged during the current year.",
+    "isSnippet": false
+  },
+  {
+    "label": "COURTESYPAYLASTYEAR",
+    "insertText": "COURTESYPAYLASTYEAR",
+    "description": "This field stores the number of courtesy pays charged during the previous year.",
+    "isSnippet": false
+  },
+  {
+    "label": "COURTESYFEEMTD",
+    "insertText": "COURTESYFEEMTD",
+    "description": "This field stores the number of times during the current month that a courtesy pay fee was charged for a requested transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "COURTESYFEEYTD",
+    "insertText": "COURTESYFEEYTD",
+    "description": "This field stores the number of times during the current calendar year that a courtesy pay fee was charged for a requested transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "COURTESYFEELY",
+    "insertText": "COURTESYFEELY",
+    "description": "This field stores the number of times during the previous calendar year that a courtesy pay fee was charged for a requested transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "XFRMONTHTODATE",
+    "insertText": "XFRMONTHTODATE",
+    "description": "This field stores the number of transfers to this share during the current month.",
+    "isSnippet": false
+  },
+  {
+    "label": "XFRYTD",
+    "insertText": "XFRYTD",
+    "description": "This field stores the number of transfers to this share during the current year.",
+    "isSnippet": false
+  },
+  {
+    "label": "XFRLASTYEAR",
+    "insertText": "XFRLASTYEAR",
+    "description": "This field stores the number of transfers to this share during the previous year.",
+    "isSnippet": false
+  },
+  {
+    "label": "NEGATIVEBALANCEDATE",
+    "insertText": "NEGATIVEBALANCEDATE",
+    "description": "This field stores the first date when the share balance went into its current negative state.",
+    "isSnippet": false
+  },
+  {
+    "label": "NEGATIVEBALANCENOTICETYPE",
+    "insertText": "NEGATIVEBALANCENOTICETYPE",
+    "description": "This field stores the negative balance notice type code defined in the Negative Balance Notice Messages parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "NEGATIVEBALANCENOTICENUMBER",
+    "insertText": "NEGATIVEBALANCENOTICENUMBER",
+    "description": "This field stores the total number of negative balance notices generated for this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "NEGATIVEBALANCENOTICEDATE",
+    "insertText": "NEGATIVEBALANCENOTICEDATE",
+    "description": "This field stores the last date a negative balance notice was generated for this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WITHHOLDINGCODE",
+    "insertText": "WITHHOLDINGCODE",
+    "description": "This field stores a code that indicates whether the system takes federal backup withholding from dividends.",
+    "isSnippet": false
+  },
+  {
+    "label": "WITHHOLDINGYTD",
+    "insertText": "WITHHOLDINGYTD",
+    "description": "This field stores the combined total of the amounts withheld for federal taxes during the current year from dividend payments and distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "WITHHOLDINGLASTYEAR",
+    "insertText": "WITHHOLDINGLASTYEAR",
+    "description": "This field stores the combined total of the amounts withheld from dividend payments and distributions of IRA shares for federal taxes during the previous year.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHAPTER4WITHHOLDINGCODE",
+    "insertText": "CHAPTER4WITHHOLDINGCODE",
+    "description": "This field stores a code that determines whether the system withholds Chapter 4 tax withholding from paid dividends.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHAPTER4WITHHELDYTD",
+    "insertText": "CHAPTER4WITHHELDYTD",
+    "description": "This field stores the total amount of Chapter 4 withholding during the current year.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHAPTER4WITHHELDLSTYR",
+    "insertText": "CHAPTER4WITHHELDLSTYR",
+    "description": "This field stores the total amount of Chapter 4 withholding from the previous year.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATEWITHHOLDINGCODE",
+    "insertText": "STATEWITHHOLDINGCODE",
+    "description": "This field stores a code that indicates whether the system takes state backup withholding from dividends. This field affects teller transactions only and has no effect on batch transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATEWITHHOLDINGYTD",
+    "insertText": "STATEWITHHOLDINGYTD",
+    "description": "This field stores the combined total of all amounts withheld for state taxes from distributions of a tax-deferred share during the current year.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATEWITHHOLDINGLASTYEAR",
+    "insertText": "STATEWITHHOLDINGLASTYEAR",
+    "description": "This field stores the combined total of all amounts withheld for state taxes from distributions from a tax-deferred share during the previous year.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATEWITHHOLDINGQTD",
+    "insertText": "STATEWITHHOLDINGQTD",
+    "description": "This field stores the total amount withheld for state taxes from distributions of tax-deferred shares during the current quarter.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATEWITHHOLDINGLASTQTR",
+    "insertText": "STATEWITHHOLDINGLASTQTR",
+    "description": "This field stores the total amount withheld for state taxes from distributions of tax-deferred shares during the previous quarter.",
+    "isSnippet": false
+  },
+  {
+    "label": "BONDINTYTD",
+    "insertText": "BONDINTYTD",
+    "description": "This field stores the amount of interest earned on bonds during the current year.",
+    "isSnippet": false
+  },
+  {
+    "label": "BONDINTLASTYEAR",
+    "insertText": "BONDINTLASTYEAR",
+    "description": "This field stores the amount of interest earned on bonds during the previous year.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOANPAYMENTHOLD",
+    "insertText": "LOANPAYMENTHOLD",
+    "description": "This field stores the total amount held in reserve to cover pledged loan payments for loans in the account that reference this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "PENALTYTYPE",
+    "insertText": "PENALTYTYPE",
+    "description": "This field stores a code to specifies how penalties should be assessed for early withdrawal of a certificate. It provides ceilings on the penalty period.",
+    "isSnippet": false
+  },
+  {
+    "label": "PENALTYYTD",
+    "insertText": "PENALTYYTD",
+    "description": "This field stores the total amount of penalties assessed for early withdrawal of certificates during the current year.",
+    "isSnippet": false
+  },
+  {
+    "label": "PENALTYLASTYEAR",
+    "insertText": "PENALTYLASTYEAR",
+    "description": "This field stores the total amount of penalties assessed for early withdrawal of certificates during the previous year.",
+    "isSnippet": false
+  },
+  {
+    "label": "WITHDRAWALLIMIT",
+    "insertText": "WITHDRAWALLIMIT",
+    "description": "This field stores the maximum number of withdrawals allowed from the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WITHDRAWALCOUNT",
+    "insertText": "WITHDRAWALCOUNT",
+    "description": "This field stores the number of withdrawals to date from this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WITHDRAWNFROMOPEN",
+    "insertText": "WITHDRAWNFROMOPEN",
+    "description": "This field stores the total amount withdrawn from the share since it was opened except in the case when a share certificate is renewed by the Daily Posting batch program.",
+    "isSnippet": false
+  },
+  {
+    "label": "WITHDRAWALFEETYPE",
+    "insertText": "WITHDRAWALFEETYPE",
+    "description": "This field stores a credit union-defined code that specified how the system assesses withdrawal fees.",
+    "isSnippet": false
+  },
+  {
+    "label": "WITHDRAWALFEECOUNT",
+    "insertText": "WITHDRAWALFEECOUNT",
+    "description": "This field stores the number of lobby visits, teller uses, or withdrawals that have been made by a member that qualify under the Withdrawal Fee Type parameters for a fee.",
+    "isSnippet": false
+  },
+  {
+    "label": "FEECOUNT:1 - FEECOUNT:4",
+    "insertText": "FEECOUNT:1 - FEECOUNT:4",
+    "description": "These fields store the number of times a specific fee has been assessed for this share, or the number of times a specified transaction has occurred (for calculating or charging a fee).",
+    "isSnippet": false
+  },
+  {
+    "label": "INSURANCETYPE",
+    "insertText": "INSURANCETYPE",
+    "description": "This field stores a credit union-defined code that identifies the type of insurance.",
+    "isSnippet": false
+  },
+  {
+    "label": "INSURANCEMAXIMUM",
+    "insertText": "INSURANCEMAXIMUM",
+    "description": "This field stores the maximum share balance covered by insurance.",
+    "isSnippet": false
+  },
+  {
+    "label": "INSURANCEBALANCEAGE:1",
+    "insertText": "INSURANCEBALANCEAGE:1",
+    "description": "This field stores the amount of the highest share balance less than or equal to the value in the Insurance Maximum field left in the share since the member reached age 55.",
+    "isSnippet": false
+  },
+  {
+    "label": "INSURANCEBALANCEAGE:2",
+    "insertText": "INSURANCEBALANCEAGE:2",
+    "description": "This field stores the amount of the highest share balance less than or equal to the value in the Insurance Maximum field left in the share since the member reached age 60.",
+    "isSnippet": false
+  },
+  {
+    "label": "INSURANCEBALANCEAGE:3",
+    "insertText": "INSURANCEBALANCEAGE:3",
+    "description": "This field stores the amount of the highest share balance less than or equal to the value in the Insurance Maximum field left in the share since the member reached age 65.",
+    "isSnippet": false
+  },
+  {
+    "label": "INSURANCEBALANCEAGE:4",
+    "insertText": "INSURANCEBALANCEAGE:4",
+    "description": "This field stores the amount of the highest share balance less than or equal to the value in the Insurance Maximum field left in the share since the member reached age 70.",
+    "isSnippet": false
+  },
+  {
+    "label": "CUTOTALSUSECODE",
+    "insertText": "CUTOTALSUSECODE",
+    "description": "This field stores a code that specifies if the share balance is included in credit union totals calculations.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGEOFFDATE",
+    "insertText": "CHARGEOFFDATE",
+    "description": "This field stores the date the share was charged off.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGEOFFTYPE",
+    "insertText": "CHARGEOFFTYPE",
+    "description": "This field stores the credit union-defined code indicating why this share was charged off or the type of share that was charged off.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGEOFFAMOUNT",
+    "insertText": "CHARGEOFFAMOUNT",
+    "description": "This field stores the amount charged off.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTCRREPORTDATE",
+    "insertText": "LASTCRREPORTDATE",
+    "description": "This field is for informational use only and may be used in the future.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDITREPORTINGCODE",
+    "insertText": "CREDITREPORTINGCODE",
+    "description": "This field stores a code that specifies how the share should be reported to credit bureaus.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDITREPORTCOMMENT",
+    "insertText": "CREDITREPORTCOMMENT",
+    "description": "This field stores a character code that indicates information reported to credit reporting agencies in the Metro Credit Reporting Special Comments field.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDITREPORTNUMBER",
+    "insertText": "CREDITREPORTNUMBER",
+    "description": "This field stores the number used for reporting about this share to the credit bureaus. You cannot access this field for file maintenance.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDITREPORTLASTSTATUS",
+    "insertText": "CREDITREPORTLASTSTATUS",
+    "description": "This field stores the last Metro credit reporting status code reported to the credit bureau.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDITREPORTOCCURDATE",
+    "insertText": "CREDITREPORTOCCURDATE",
+    "description": "This field stores the last Metro Credit Reporting date of occurrence reported to the credit bureau.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDITREPORTCONSUMERINFO",
+    "insertText": "CREDITREPORTCONSUMERINFO",
+    "description": "This field stores a character code that provides consumer information for the Metro 2® Format for credit reports.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDITREPORTCOMPLIANCE",
+    "insertText": "CREDITREPORTCOMPLIANCE",
+    "description": "This field stores a character code that provides compliance information for the Metro 2® Format for credit reports.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDITREPORTCONSUMERINFODATE",
+    "insertText": "CREDITREPORTCONSUMERINFODATE",
+    "description": "This field stores the date of the last file maintenance to the Credit Report Consumer Info field.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDITREPORTORIGINALAMOUNTRPTD",
+    "insertText": "CREDITREPORTORIGINALAMOUNTRPTD",
+    "description": "This field stores the amount the share is overdrawn at the time of initial reporting to the bureaus for the current delinquency.",
+    "isSnippet": false
+  },
+  {
+    "label": "IRS1042SUFID",
+    "insertText": "IRS1042SUFID",
+    "description": "This field stores a unique form identifier that specifies which form the withholding agent is correcting or amending when filing multiple returned forms for the same recipient.",
+    "isSnippet": false
+  },
+  {
+    "label": "AMORTIZATIONSCHD",
+    "insertText": "AMORTIZATIONSCHD",
+    "description": "Primarily for users of the corporate interface: This field stores the numeric value of the set of Amortization Schedules parameters (Amortization Global Schedules or Amortization Local Schedules defined in the Parameter Manager).",
+    "isSnippet": false
+  },
+  {
+    "label": "AMORTIZATIONSCHDTYPE",
+    "insertText": "AMORTIZATIONSCHDTYPE",
+    "description": "Primarily for users of the corporate interface: This field stores a code that indicates the nature of the set of Amortization Schedules parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "CALLITEMSCHD",
+    "insertText": "CALLITEMSCHD",
+    "description": "Primarily for users of the corporate interface: This field stores the numeric value of the set of Call Item Schedules parameters (Call/Put Item Global Schedules or Call/Put Item Local Schedules defined in the Parameter Manager).",
+    "isSnippet": false
+  },
+  {
+    "label": "CALLITEMSCHDTYPE",
+    "insertText": "CALLITEMSCHDTYPE",
+    "description": "Primarily for users of the corporate interface: This field stores a code that indicates the nature of the set of Call Item Schedules parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "PUTITEMSCHD",
+    "insertText": "PUTITEMSCHD",
+    "description": "Primarily for users of the corporate interface: This field stores the numeric value of the set of Put Item Schedules parameters used to put items (Call/Put Item Global Schedules or Call/Put Item Local Schedules defined in the Parameter Manager).",
+    "isSnippet": false
+  },
+  {
+    "label": "PUTITEMSCHDTYPE",
+    "insertText": "PUTITEMSCHDTYPE",
+    "description": "Primarily for users of the corporate interface: This field stores a code that indicates the nature of the set of Put Item Schedules parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "UNPAIDFEEYTD",
+    "insertText": "UNPAIDFEEYTD",
+    "description": "This field stores the total amount of unpaid item fees assessed during the current year.",
+    "isSnippet": false
+  },
+  {
+    "label": "UNPAIDFEELASTYEAR",
+    "insertText": "UNPAIDFEELASTYEAR",
+    "description": "This field stores the total amount of unpaid item fees assessed during the previous year.",
+    "isSnippet": false
+  },
+  {
+    "label": "OVERDRAFTFEEYTD",
+    "insertText": "OVERDRAFTFEEYTD",
+    "description": "This field stores the total amount of overdraft item fees assessed during the current year.",
+    "isSnippet": false
+  },
+  {
+    "label": "OVERDRAFTFEELASTYR",
+    "insertText": "OVERDRAFTFEELASTYR",
+    "description": "This field stores the total amount of overdraft item fees assessed during the previous year.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXTACHXFRDAILYLIMITIN",
+    "insertText": "EXTACHXFRDAILYLIMITIN",
+    "description": "This field stores the maximum daily dollar limit for home banking account-to-account transfers into this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXTACHXFRDAILYLIMITOUT",
+    "insertText": "EXTACHXFRDAILYLIMITOUT",
+    "description": "This field stores the maximum daily dollar limit for home banking account-to-account transfers out of this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "MEMBERUSERTRANSFERCODE",
+    "insertText": "MEMBERUSERTRANSFERCODE",
+    "description": "For users of the corporate interface only: This field stores a code that indicates which type of Corporate Transfer Parameters applies to this share when a member user is making a transfer using the corporate interface. This type number is the rule set for this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "CORPORATEUSERTRANSFERCODE",
+    "insertText": "CORPORATEUSERTRANSFERCODE",
+    "description": "For users of the corporate interface only: This field stores a code that indicates which type of Corporate Transfer Parameters applies to this share when a corporate user is making a transfer using the corporate interface on behalf of a member user. This type number is the rule set for this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "MEMBERBRANCHSUPPORT",
+    "insertText": "MEMBERBRANCHSUPPORT",
+    "description": "For users of the corporate interface only: If we have configured your institution as a corporate credit union, this field stores a code that indicates if you want member branch support for this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "ESCROWEDLOANID",
+    "insertText": "ESCROWEDLOANID",
+    "description": "This field stores the ID of the Loan record to which the escrow portion of the share relates.",
+    "isSnippet": false
+  },
+  {
+    "label": "ESCROWYTD",
+    "insertText": "ESCROWYTD",
+    "description": "This field stores the total amount of escrow paid to this share during the current year.",
+    "isSnippet": false
+  },
+  {
+    "label": "ESCROWLASTYEAR",
+    "insertText": "ESCROWLASTYEAR",
+    "description": "This field stores the total amount of escrow paid to this share during the previous year.",
+    "isSnippet": false
+  },
+  {
+    "label": "POSITIVEPAYDRAFT",
+    "insertText": "POSITIVEPAYDRAFT",
+    "description": "This field allows the user to add the share to the Positive Pay Draft module.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATEMENTGROUP",
+    "insertText": "STATEMENTGROUP",
+    "description": "This field stores a credit union-defined statement group number that can be used to specify groups to be processed in batch programs.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATEMENTMAILCODE",
+    "insertText": "STATEMENTMAILCODE",
+    "description": "This field stores a code that indicates if statements for this share should be mailed to the member or, if not, why not.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATEMENTDATE",
+    "insertText": "STATEMENTDATE",
+    "description": "This field stores the most recent date statements were produced for this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATEMENTPREVDATE",
+    "insertText": "STATEMENTPREVDATE",
+    "description": "This field stores the previous date statements were produced for this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "REGECOUNT",
+    "insertText": "REGECOUNT",
+    "description": "This field stores the number of Regulation E transactions posted to this share since the last statement cutoff date.",
+    "isSnippet": false
+  },
+  {
+    "label": "REGDCHECKCOUNT",
+    "insertText": "REGDCHECKCOUNT",
+    "description": "This field stores the number of Regulation D automatic transfers posted to this share during the current month.",
+    "isSnippet": false
+  },
+  {
+    "label": "REGDTRANSFERCOUNT",
+    "insertText": "REGDTRANSFERCOUNT",
+    "description": "This field stores the number of Regulation D telephone transfers for this share during the current month.",
+    "isSnippet": false
+  },
+  {
+    "label": "REGDCTRSTARTDAY",
+    "insertText": "REGDCTRSTARTDAY",
+    "description": "This field stores a code that resets the Reg D Check Count and Reg D Transfer Count fields in the Share record to a day of the month, as determined by your credit union's policies and procedures.",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICE:1",
+    "insertText": "SERVICE:1",
+    "description": "The eight service number fields can each contain a code that identifies a different credit union-defined credit union services offered with a share (for example, an ATM card, a debit card, or access to the audio response system).",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICE:2",
+    "insertText": "SERVICE:2",
+    "description": "The eight service number fields can each contain a code that identifies a different credit union-defined credit union services offered with a share (for example, an ATM card, a debit card, or access to the audio response system).",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICE:3",
+    "insertText": "SERVICE:3",
+    "description": "The eight service number fields can each contain a code that identifies a different credit union-defined credit union services offered with a share (for example, an ATM card, a debit card, or access to the audio response system).",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICE:4",
+    "insertText": "SERVICE:4",
+    "description": "The eight service number fields can each contain a code that identifies a different credit union-defined credit union services offered with a share (for example, an ATM card, a debit card, or access to the audio response system).",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICE:5",
+    "insertText": "SERVICE:5",
+    "description": "The eight service number fields can each contain a code that identifies a different credit union-defined credit union services offered with a share (for example, an ATM card, a debit card, or access to the audio response system).",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICE:6",
+    "insertText": "SERVICE:6",
+    "description": "The eight service number fields can each contain a code that identifies a different credit union-defined credit union services offered with a share (for example, an ATM card, a debit card, or access to the audio response system).",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICE:7",
+    "insertText": "SERVICE:7",
+    "description": "The eight service number fields can each contain a code that identifies a different credit union-defined credit union services offered with a share (for example, an ATM card, a debit card, or access to the audio response system).",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICE:8",
+    "insertText": "SERVICE:8",
+    "description": "The eight service number fields can each contain a code that identifies a different credit union-defined credit union services offered with a share (for example, an ATM card, a debit card, or access to the audio response system).",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:1",
+    "insertText": "WARNINGCODE:1",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:2",
+    "insertText": "WARNINGCODE:2",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:3",
+    "insertText": "WARNINGCODE:3",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:4",
+    "insertText": "WARNINGCODE:4",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:5",
+    "insertText": "WARNINGCODE:5",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:6",
+    "insertText": "WARNINGCODE:6",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:7",
+    "insertText": "WARNINGCODE:7",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:8",
+    "insertText": "WARNINGCODE:8",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:9",
+    "insertText": "WARNINGCODE:9",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:10",
+    "insertText": "WARNINGCODE:10",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:11",
+    "insertText": "WARNINGCODE:11",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:12",
+    "insertText": "WARNINGCODE:12",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:13",
+    "insertText": "WARNINGCODE:13",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:14",
+    "insertText": "WARNINGCODE:14",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:15",
+    "insertText": "WARNINGCODE:15",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:16",
+    "insertText": "WARNINGCODE:16",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:17",
+    "insertText": "WARNINGCODE:17",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:18",
+    "insertText": "WARNINGCODE:18",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:19",
+    "insertText": "WARNINGCODE:19",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:20",
+    "insertText": "WARNINGCODE:20",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:1",
+    "insertText": "WARNINGEXPIRATION:1",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:2",
+    "insertText": "WARNINGEXPIRATION:2",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:3",
+    "insertText": "WARNINGEXPIRATION:3",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:4",
+    "insertText": "WARNINGEXPIRATION:4",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:5",
+    "insertText": "WARNINGEXPIRATION:5",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:6",
+    "insertText": "WARNINGEXPIRATION:6",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:7",
+    "insertText": "WARNINGEXPIRATION:7",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:8",
+    "insertText": "WARNINGEXPIRATION:8",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:9",
+    "insertText": "WARNINGEXPIRATION:9",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:10",
+    "insertText": "WARNINGEXPIRATION:10",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:11",
+    "insertText": "WARNINGEXPIRATION:11",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:12",
+    "insertText": "WARNINGEXPIRATION:12",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:13",
+    "insertText": "WARNINGEXPIRATION:13",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:14",
+    "insertText": "WARNINGEXPIRATION:14",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:15",
+    "insertText": "WARNINGEXPIRATION:15",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:16",
+    "insertText": "WARNINGEXPIRATION:16",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:17",
+    "insertText": "WARNINGEXPIRATION:17",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:18",
+    "insertText": "WARNINGEXPIRATION:18",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:19",
+    "insertText": "WARNINGEXPIRATION:19",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:20",
+    "insertText": "WARNINGEXPIRATION:20",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "ANALYSISGROUPPRIMARYACCT",
+    "insertText": "ANALYSISGROUPPRIMARYACCT",
+    "description": "Used with the MBS Account Analysis module. This field stores the primary account number in this field, which links all the shares to the account number entered.",
+    "isSnippet": false
+  },
+  {
+    "label": "ANALYSISGROUPPRIMARYID",
+    "insertText": "ANALYSISGROUPPRIMARYID",
+    "description": "Used with the MBS Account Analysis module. This field stores the primary ID in this field, which links all the shares to the ID entered.",
+    "isSnippet": false
+  },
+  {
+    "label": "ANALYSISPMTACCT",
+    "insertText": "ANALYSISPMTACCT",
+    "description": "Used with the MBS Account Analysis module. This field stores the number of the account to be charged the monthly Account Analysis fee.",
+    "isSnippet": false
+  },
+  {
+    "label": "ANALYSISPMTSLID",
+    "insertText": "ANALYSISPMTSLID",
+    "description": "Used with the MBS Account Analysis module. This field stores the share ID to charge the monthly Account Analysis fee.",
+    "isSnippet": false
+  },
+  {
+    "label": "ANALYSISPMTIDTYPE",
+    "insertText": "ANALYSISPMTIDTYPE",
+    "description": "Used with the MBS Account Analysis module. This field stores a code that identifies whether a share or loan is to be charged the monthly Account Analysis fee.",
+    "isSnippet": false
+  },
+  {
+    "label": "SWEEPPRIORITY",
+    "insertText": "SWEEPPRIORITY",
+    "description": "Used with MBS Share Sweeps. This field stores a code that identifies the order in which share sweep transfers should be reviewed for processing. For example, one share requires funds, and the share from which the system is taking funds does not have enough funds, so that share looks to a third share for the required funds.",
+    "isSnippet": false
+  },
+  {
+    "label": "SWEEPBALANCETYPE",
+    "insertText": "SWEEPBALANCETYPE",
+    "description": "Used with MBS Share Sweeps. This field stores a code that identifies whether the available or ledger balance for a share will be used to calculate the balance for the shares involved in the sweep relationship.",
+    "isSnippet": false
+  },
+  {
+    "label": "SWEEPTARGETMINIMUM",
+    "insertText": "SWEEPTARGETMINIMUM",
+    "description": "Used with MBS Share Sweeps. This field stores the minimum balance for shares involved in a sweep transfer.",
+    "isSnippet": false
+  },
+  {
+    "label": "SWEEPTARGETMAXIMUM",
+    "insertText": "SWEEPTARGETMAXIMUM",
+    "description": "Used with MBS Share Sweeps. This field stores the maximum balance for shares involved in a sweep transfer.",
+    "isSnippet": false
+  },
+  {
+    "label": "CAPPEDFEESAMOUNTCAP",
+    "insertText": "CAPPEDFEESAMOUNTCAP",
+    "description": "This field stores the dollar amount your credit union sets for its capped fees amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "CAPPEDFEESCOUNTCAP",
+    "insertText": "CAPPEDFEESCOUNTCAP",
+    "description": "This field stores the number of fee occurrences at which your credit union stops charging capped fees for the share during a time period you specify.",
+    "isSnippet": false
+  },
+  {
+    "label": "CAPPEDFEESAMTPERIOD",
+    "insertText": "CAPPEDFEESAMTPERIOD",
+    "description": "This field stores the sum of the capped fees charged by batch programs, teller transactions, and online transaction processing to the share during a time period you specify.",
+    "isSnippet": false
+  },
+  {
+    "label": "CAPPEDFEESCNTPERIOD",
+    "insertText": "CAPPEDFEESCNTPERIOD",
+    "description": "This field stores the number of occurrences of capped fees, incrementing by one, each time a capped fee is charged to the share.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTHFEEOPTION:1",
+    "insertText": "AUTHFEEOPTION:1",
+    "description": "These fields each contain a code that determines whether to authorize ODT funds, assess a courtesy pay fee, or assess an NSF fee for all overdrawn transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTHFEEOPTION:2",
+    "insertText": "AUTHFEEOPTION:2",
+    "description": "These fields each contain a code that determines whether to authorize ODT funds, assess a courtesy pay fee, or assess an NSF fee for all overdrawn transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTHFEEOPTION:3",
+    "insertText": "AUTHFEEOPTION:3",
+    "description": "These fields each contain a code that determines whether to authorize ODT funds, assess a courtesy pay fee, or assess an NSF fee for all overdrawn transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTHFEEOPTION:4",
+    "insertText": "AUTHFEEOPTION:4",
+    "description": "These fields each contain a code that determines whether to authorize ODT funds, assess a courtesy pay fee, or assess an NSF fee for all overdrawn transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTHFEEOPTION:5",
+    "insertText": "AUTHFEEOPTION:5",
+    "description": "This field is used to determine whether to authorize ODT funds, assess a courtesy pay fee, or assess an NSF fee for all overdrawn transactions that are identified as recurring (based on an indicator provided by the Network/Merchant) but not specified in the ODT Source Code List 1-4 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "FEEEXEMPTCRTSYBAL",
+    "insertText": "FEEEXEMPTCRTSYBAL",
+    "description": "This field stores the sum of all courtesy amounts applied minus deposits with a value in the Share Transaction record's Source Code field designated to not charge a courtesy pay fee.",
+    "isSnippet": false
+  },
+  {
+    "label": "ODTAUTHFEESRCCODELIST:1",
+    "insertText": "ODTAUTHFEESRCCODELIST:1",
+    "description": "This field is used to enter the transaction source codes, or credit union-defined source codes used for other types of Share withdrawal transactions, that corresponds to the setting in the ODT Auth/Fee Option 1–ODT Auth/Fee Option 4 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "ODTAUTHFEESRCCODELIST:2",
+    "insertText": "ODTAUTHFEESRCCODELIST:2",
+    "description": "This field is used to enter the transaction source codes, or credit union-defined source codes used for other types of Share withdrawal transactions, that corresponds to the setting in the ODT Auth/Fee Option 1–ODT Auth/Fee Option 4 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "ODTAUTHFEESRCCODELIST:3",
+    "insertText": "ODTAUTHFEESRCCODELIST:3",
+    "description": "This field is used to enter the transaction source codes, or credit union-defined source codes used for other types of Share withdrawal transactions, that corresponds to the setting in the ODT Auth/Fee Option 1–ODT Auth/Fee Option 4 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "ODTAUTHFEESRCCODELIST:4",
+    "insertText": "ODTAUTHFEESRCCODELIST:4",
+    "description": "This field is used to enter the transaction source codes, or credit union-defined source codes used for other types of Share withdrawal transactions, that corresponds to the setting in the ODT Auth/Fee Option 1–ODT Auth/Fee Option 4 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR1",
+    "insertText": "USERCHAR1",
+    "description": "These four custom fields can store any credit union-defined character data.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR2",
+    "insertText": "USERCHAR2",
+    "description": "These four custom fields can store any credit union-defined character data.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR3",
+    "insertText": "USERCHAR3",
+    "description": "These four custom fields can store any credit union-defined character data.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR4",
+    "insertText": "USERCHAR4",
+    "description": "These four custom fields can store any credit union-defined character data.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT1",
+    "insertText": "USERAMOUNT1",
+    "description": "These two custom fields can store any credit union-defined cash amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT2",
+    "insertText": "USERAMOUNT2",
+    "description": "These two custom fields can store any credit union-defined cash amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE1",
+    "insertText": "USERDATE1",
+    "description": "These two custom fields can store any credit union-defined date.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE2",
+    "insertText": "USERDATE2",
+    "description": "These two custom fields can store any credit union-defined date.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEELINE:1",
+    "insertText": "PAYEELINE:1",
+    "description": "These six calculated fields contain a member's address information from the Name records at the share level.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEELINE:2",
+    "insertText": "PAYEELINE:2",
+    "description": "These six calculated fields contain a member's address information from the Name records at the share level.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEELINE:3",
+    "insertText": "PAYEELINE:3",
+    "description": "These six calculated fields contain a member's address information from the Name records at the share level.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEELINE:4",
+    "insertText": "PAYEELINE:4",
+    "description": "These six calculated fields contain a member's address information from the Name records at the share level.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEELINE:5",
+    "insertText": "PAYEELINE:5",
+    "description": "These six calculated fields contain a member's address information from the Name records at the share level.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEELINE:6",
+    "insertText": "PAYEELINE:6",
+    "description": "These six calculated fields contain a member's address information from the Name records at the share level.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTERNATEADDRESS:1",
+    "insertText": "ALTERNATEADDRESS:1",
+    "description": "These six calculated fields contain a member's alternate address information from the Name records at the share level.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTERNATEADDRESS:2",
+    "insertText": "ALTERNATEADDRESS:2",
+    "description": "These six calculated fields contain a member's alternate address information from the Name records at the share level.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTERNATEADDRESS:3",
+    "insertText": "ALTERNATEADDRESS:3",
+    "description": "These six calculated fields contain a member's alternate address information from the Name records at the share level.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTERNATEADDRESS:4",
+    "insertText": "ALTERNATEADDRESS:4",
+    "description": "These six calculated fields contain a member's alternate address information from the Name records at the share level.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTERNATEADDRESS:5",
+    "insertText": "ALTERNATEADDRESS:5",
+    "description": "These six calculated fields contain a member's alternate address information from the Name records at the share level.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTERNATEADDRESS:6",
+    "insertText": "ALTERNATEADDRESS:6",
+    "description": "These six calculated fields contain a member's alternate address information from the Name records at the share level.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEEPHONE:1",
+    "insertText": "PAYEEPHONE:1",
+    "description": "These three calculated fields contain a member's phone number information from the Name records at the share level.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEEPHONE:2",
+    "insertText": "PAYEEPHONE:2",
+    "description": "These three calculated fields contain a member's phone number information from the Name records at the share level.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEEPHONE:3",
+    "insertText": "PAYEEPHONE:3",
+    "description": "These three calculated fields contain a member's phone number information from the Name records at the share level.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTERNATEPHONE:1",
+    "insertText": "ALTERNATEPHONE:1",
+    "description": "These three calculated fields contain a member's alternate phone number information from the Name records at the share level.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTERNATEPHONE:2",
+    "insertText": "ALTERNATEPHONE:2",
+    "description": "These three calculated fields contain a member's alternate phone number information from the Name records at the share level.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTERNATEPHONE:3",
+    "insertText": "ALTERNATEPHONE:3",
+    "description": "These three calculated fields contain a member's alternate phone number information from the Name records at the share level.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTERNATENAMETYPE",
+    "insertText": "ALTERNATENAMETYPE",
+    "description": "This calculated field contains the value from the Name Type field of the first Share Name record that it finds that is set to 03 Alternate mailing or that has a value in the Mail Override field set to 1 Overrides primary mailing address.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTERNATENAMELOCATOR",
+    "insertText": "ALTERNATENAMELOCATOR",
+    "description": "This calculated field contains the value from the Locator field of the first Share Name record that it finds that has a value in the Name Type field set to 03 Alternate mailing or that has a value in the Mail Override field set to 1 Overrides primary mailing address.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEENAMETYPE",
+    "insertText": "PAYEENAMETYPE",
+    "description": "This calculated field contains the value from the Name Type field of the first Share Name record that it finds that has a Mail Override field set to 1 Overrides primary mailing address.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEENAMELOCATOR",
+    "insertText": "PAYEENAMELOCATOR",
+    "description": "This calculated field contains the value from the Locator field of the first Share Name record that it finds that has a value in the Name Type field set to 03 Alternate mailing or that has a value in the Mail Override field set to 1 Overrides primary mailing address.",
+    "isSnippet": false
+  }
+]

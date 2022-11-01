@@ -1,0 +1,110 @@
+[
+  {
+    "label": "TYPE",
+    "insertText": "TYPE",
+    "description": "This field stores a code that categorizes the contents of this Finance record.",
+    "isSnippet": false
+  },
+  {
+    "label": "DESCRIPTION",
+    "insertText": "DESCRIPTION",
+    "description": "This field stores the description of the finance item or the name of the creditor.",
+    "isSnippet": false
+  },
+  {
+    "label": "ADDRESS",
+    "insertText": "ADDRESS",
+    "description": "This field stores the address of the creditor.",
+    "isSnippet": false
+  },
+  {
+    "label": "REFERENCE",
+    "insertText": "REFERENCE",
+    "description": "This field stores any reference information about this Finance record.",
+    "isSnippet": false
+  },
+  {
+    "label": "ASSETVALUE",
+    "insertText": "ASSETVALUE",
+    "description": "This field stores the dollar value of an asset outside the credit union.",
+    "isSnippet": false
+  },
+  {
+    "label": "MONTHLYINCOME",
+    "insertText": "MONTHLYINCOME",
+    "description": "This field stores the monthly income of an income outside the credit union.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIABILITYBALANCE",
+    "insertText": "LIABILITYBALANCE",
+    "description": "This field stores the total liability balance of a liability outside the credit union.",
+    "isSnippet": false
+  },
+  {
+    "label": "MONTHLYEXPENSE",
+    "insertText": "MONTHLYEXPENSE",
+    "description": "This field stores the monthly expense amount of an expense outside the credit union.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDITLIMIT",
+    "insertText": "CREDITLIMIT",
+    "description": "This field stores the amount of the credit limit of a credit card or a line of credit outside the credit union.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTERESTRATE",
+    "insertText": "INTERESTRATE",
+    "description": "This field stores the interest rate that is currently being applied to the item in this record.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "This field stores the date when you create, change, or save the Application Finance record.",
+    "isSnippet": false
+  },
+  {
+    "label": "OWNERCODE",
+    "insertText": "OWNERCODE",
+    "description": "This field stores a code that identifies the owner of the asset, liability, or expense in this Finance record.",
+    "isSnippet": false
+  },
+  {
+    "label": "ITEMTYPE",
+    "insertText": "ITEMTYPE",
+    "description": "This field stores the kind of asset, income, or liability item in this Finance record.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEBTRATIOUSECODE",
+    "insertText": "DEBTRATIOUSECODE",
+    "description": "This field stores a code that specifies whether the system should include this Finance record in debt ratio calculations.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIABILITYSTATUS",
+    "insertText": "LIABILITYSTATUS",
+    "description": "This field stores a code that represents the status of a liability.",
+    "isSnippet": false
+  },
+  {
+    "label": "ASSETSTATUS",
+    "insertText": "ASSETSTATUS",
+    "description": "This field stores a code that represents the status of an asset.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERPLEDGECODE",
+    "insertText": "USERPLEDGECODE",
+    "description": "This field stores a code that provides information about whether an item is pledged for another purpose.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "This field stores a unique number within each member account that can be used as a unique identification of this record.",
+    "isSnippet": false
+  }
+]

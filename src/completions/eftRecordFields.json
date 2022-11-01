@@ -1,0 +1,332 @@
+[
+  {
+    "label": "TYPE",
+    "insertText": "TYPE",
+    "description": "This field identifies the purpose of the EFT record.",
+    "isSnippet": false
+  },
+  {
+    "label": "GROUPNUMBER",
+    "insertText": "GROUPNUMBER",
+    "description": "This field stores the credit union-defined number (up to six digits) of the payroll group or bill payment group referenced by the EFT record.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDTYPE",
+    "insertText": "IDTYPE",
+    "description": "This field determines whether the share, loan, or GL account is affected.",
+    "isSnippet": false
+  },
+  {
+    "label": "ID",
+    "insertText": "ID",
+    "description": "This field stores the share or loan ID from which the funds will be withdrawn.",
+    "isSnippet": false
+  },
+  {
+    "label": "GLCODE",
+    "insertText": "GLCODE",
+    "description": "This field specifies the GL code you are performing an ACH origination for when the ID Type field is set to GL Account.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUDIOID",
+    "insertText": "AUDIOID",
+    "description": "This field controls audio response access for on-demand bill payment EFT records only.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEE",
+    "insertText": "PAYEE",
+    "description": "This field identifies the payee ID, payee name, or a portion of the payee name for this EFT record.",
+    "isSnippet": false
+  },
+  {
+    "label": "REFERENCE",
+    "insertText": "REFERENCE",
+    "description": "This field stores the external account number from the EFT record.",
+    "isSnippet": false
+  },
+  {
+    "label": "REFERENCE2",
+    "insertText": "REFERENCE2",
+    "description": "This field is used only when the EFT Type field is set to (3) ACH Origination. During the ACH origination process, for applicable SEC entries this information is in the ACH file as the individual identification number.",
+    "isSnippet": false
+  },
+  {
+    "label": "AMOUNTCODE",
+    "insertText": "AMOUNTCODE",
+    "description": "This field stores an optional credit-union defined code to indicate how bill payments should be calculated.",
+    "isSnippet": false
+  },
+  {
+    "label": "BATCHACHORIGNUM",
+    "insertText": "BATCHACHORIGNUM",
+    "description": "Each time NetTeller creates a new Batch ACH Origination number, this field stores a system-generated number for all EFT records that are related to the Batch ACH Origination record.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREQUENCY",
+    "insertText": "FREQUENCY",
+    "description": "This field is used for scheduled bill payment EFT records (the EFT Type field is set to 1) posted by Bill Payment Posting or for ACH origination (the EFT Type field is set to 3) handled by ACH Reports.",
+    "isSnippet": false
+  },
+  {
+    "label": "DAY1",
+    "insertText": "DAY1",
+    "description": "This field stores the day of the month (1-31) on which the first scheduled bill payment or ACH origination should occur for annual, semiannual, quarterly, monthly, or semimonthly payments (the Frequency field is set to 1, 2, 3, 4, or 5).",
+    "isSnippet": false
+  },
+  {
+    "label": "DAY2",
+    "insertText": "DAY2",
+    "description": "This field stores the day of the month (1-31) on which the second scheduled bill payment or ACH origination should occur for semimonthly payments (the Frequency field is set to 5).",
+    "isSnippet": false
+  },
+  {
+    "label": "NEXTDATE",
+    "insertText": "NEXTDATE",
+    "description": "This field is used for scheduled bill payment EFT records (the EFT Type field is set to 1) posted by the Bill Payment Posting batch program or for ACH origination records (the EFT Type field is set to 3) handled by ACH Reports.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEFERDATE",
+    "insertText": "DEFERDATE",
+    "description": "This field stores the first date that scheduled bill payments or ACH origination should occur.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRENOTESENTDATE",
+    "insertText": "PRENOTESENTDATE",
+    "description": "This field stores the date that the pre-note or micro transaction amount is sent to the external financial institution (for ACH origination).",
+    "isSnippet": false
+  },
+  {
+    "label": "STATUS",
+    "insertText": "STATUS",
+    "description": "This field stores a credit union-defined character that indicates the status of the EFT record.",
+    "isSnippet": false
+  },
+  {
+    "label": "STANDARDAMOUNT",
+    "insertText": "STANDARDAMOUNT",
+    "description": "This field stores the standard dollar amount of the deposit, deduction, or distribution and is used for inquiries only.",
+    "isSnippet": false
+  },
+  {
+    "label": "POSTAMOUNT",
+    "insertText": "POSTAMOUNT",
+    "description": "This field indicates the amount posted to the member's account.",
+    "isSnippet": false
+  },
+  {
+    "label": "EFFECTIVEDATE",
+    "insertText": "EFFECTIVEDATE",
+    "description": "This field indicates the date the funds transfers should start.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXPIRATIONDATE",
+    "insertText": "EXPIRATIONDATE",
+    "description": "This field stores the date after which the funds transfers should no longer occur.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "This field stores the system date when you create, change, or save the EFT record.",
+    "isSnippet": false
+  },
+  {
+    "label": "MATCHCODE1",
+    "insertText": "MATCHCODE1",
+    "description": "This field contains a code that specifies the ACH field to be matched with the information entered in the Match ID 1 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "MATCHCODE2",
+    "insertText": "MATCHCODE2",
+    "description": "This field contains a code that specifies the ACH field to be matched with the information entered in Match ID 2 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "MATCHCODE3",
+    "insertText": "MATCHCODE3",
+    "description": "This field contains a code that specifies the ACH field to be matched with the information entered in Match ID 3 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "MATCHCODE4",
+    "insertText": "MATCHCODE4",
+    "description": "This field stores a code that specifies the ACH field to be matched with the information entered in Match ID 4 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "MATCHCODE5",
+    "insertText": "MATCHCODE5",
+    "description": "This field stores a code that specifies the ACH field to be matched with the information entered in Match ID 5 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "MATCHCODE6",
+    "insertText": "MATCHCODE6",
+    "description": "This field stores a code that specifies the ACH field to be matched with the information entered in Match ID 6 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "MATCHID1",
+    "insertText": "MATCHID1",
+    "description": "This field stores the information to be matched to the ACH field that is specified in the Match Code 1 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "MATCHID2",
+    "insertText": "MATCHID2",
+    "description": "This field specifies the information to be matched to the ACH field that is specified in the Match Code 2 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "MATCHID3",
+    "insertText": "MATCHID3",
+    "description": "This field specifies the information to be matched to the ACH field that is specified in the Match Code 3 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "MATCHID4",
+    "insertText": "MATCHID4",
+    "description": "This field specifies the information to be matched to the ACH field that is specified in the Match Code 4 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "MATCHID5",
+    "insertText": "MATCHID5",
+    "description": "This field specifies the information to be matched to the ACH field that is specified in the Match Code 5 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "MATCHID6",
+    "insertText": "MATCHID6",
+    "description": "This field specifies the information to be matched to the ACH field that is specified in the Match Code 6 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "SPECIFICAMOUNT",
+    "insertText": "SPECIFICAMOUNT",
+    "description": "This field stores the specific dollar amount for bill payments and is useful to change the bill payment amount temporarily.",
+    "isSnippet": false
+  },
+  {
+    "label": "BALANCE",
+    "insertText": "BALANCE",
+    "description": "For bill payment records only, this field stores the balance owed by the payee.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDITLIMIT",
+    "insertText": "CREDITLIMIT",
+    "description": "This field stores the member's credit limit with the bill payment processor.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATEWITHHOLDING",
+    "insertText": "STATEWITHHOLDING",
+    "description": "This field indicates the amount that should be withheld for state taxes from an automated distribution of a tax-deferred share that has the IRS Code field set to (01) IRA, (02) Deferred Comp, (03) SEP, (04) Keogh, or (05) 401K.",
+    "isSnippet": false
+  },
+  {
+    "label": "FEDERALWITHHOLDING",
+    "insertText": "FEDERALWITHHOLDING",
+    "description": "This field indicates the amount that should be withheld for federal taxes from an automated distribution of a tax-deferred share that has the IRS Code field set to (01) IRA, (02) Deferred Comp, (03) SEP, (04) Keogh, or (05) 401K.",
+    "isSnippet": false
+  },
+  {
+    "label": "DQCOUNT",
+    "insertText": "DQCOUNT",
+    "description": "For bill payment EFT records only, this field indicates the total number of times the member has been delinquent with bill payments.",
+    "isSnippet": false
+  },
+  {
+    "label": "POSTFREQ",
+    "insertText": "POSTFREQ",
+    "description": "This field is for information purposes only; it indicates the posting frequency of payrolls for inquiry purposes.",
+    "isSnippet": false
+  },
+  {
+    "label": "DISTRIBUTIONRATIO",
+    "insertText": "DISTRIBUTIONRATIO",
+    "description": "This field indicates the amount to post.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTTRANDATE",
+    "insertText": "LASTTRANDATE",
+    "description": "This field stores the date of the last transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTTRANAMOUNT",
+    "insertText": "LASTTRANAMOUNT",
+    "description": "This field stores the amount of the last transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTYTD",
+    "insertText": "COUNTYTD",
+    "description": "This field stores the total number of funds transfers during the current year.",
+    "isSnippet": false
+  },
+  {
+    "label": "AMOUNTYTD",
+    "insertText": "AMOUNTYTD",
+    "description": "This field stores the total amount of all funds transferred during the current year.",
+    "isSnippet": false
+  },
+  {
+    "label": "REGDCODE",
+    "insertText": "REGDCODE",
+    "description": "This field indicates whether this EFT record is used to post a withdrawal that is subject to Regulation D limiting.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "This field value in each record is unique for each member account.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEENAME",
+    "insertText": "PAYEENAME",
+    "description": "This field stores the payee's name.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEEEXTRAADDRESS",
+    "insertText": "PAYEEEXTRAADDRESS",
+    "description": "This field stores the payee's extra address information.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEESTREET",
+    "insertText": "PAYEESTREET",
+    "description": "This field stores the name of the payee's street address.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEECITY",
+    "insertText": "PAYEECITY",
+    "description": "This field stores the name of the payee's city.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEESTATE",
+    "insertText": "PAYEESTATE",
+    "description": "This field stores the name of the payee's state.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEEZIPCODE",
+    "insertText": "PAYEEZIPCODE",
+    "description": "This field stores the payee's ZIP Code.",
+    "isSnippet": false
+  }
+]

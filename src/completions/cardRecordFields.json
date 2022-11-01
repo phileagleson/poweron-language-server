@@ -1,0 +1,1118 @@
+[
+  {
+    "label": "TYPE",
+    "insertText": "TYPE",
+    "description": "This field stores a credit union-defined code to identify the type of card.",
+    "isSnippet": false
+  },
+  {
+    "label": "DESCRIPTION",
+    "insertText": "DESCRIPTION",
+    "description": "This field stores a card description that displays in card inquiries and on card FM screens when all fields display.",
+    "isSnippet": false
+  },
+  {
+    "label": "NUMBER",
+    "insertText": "NUMBER",
+    "description": "This field stores the card number based on the type of card and your credit union-defined procedures.",
+    "isSnippet": false
+  },
+  {
+    "label": "SUFFIX",
+    "insertText": "SUFFIX",
+    "description": "This field stores the two-digit suffix to the card number, if any.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATUS",
+    "insertText": "STATUS",
+    "description": "This field stores a code that identifies the current status of the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATUSREASON",
+    "insertText": "STATUSREASON",
+    "description": "This field stores a code that indicates why a card was set to (2) Capture status.",
+    "isSnippet": false
+  },
+  {
+    "label": "FILEUPDATEMANAGEREXCEPTION",
+    "insertText": "FILEUPDATEMANAGEREXCEPTION",
+    "description": "This field stores a code that indicates whether the ATM File Update Manager software encounters an exception associated with the card data that it sent or received from the network and gives a general idea (status) about the reason. This indication applies to both high priority messages and messages sent in regular processing.",
+    "isSnippet": false
+  },
+  {
+    "label": "NAMETYPE",
+    "insertText": "NAMETYPE",
+    "description": "This field stores a code that Symitar uses to determine the name and address for mailing and embossing instructions.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREATEDBYUSER",
+    "insertText": "CREATEDBYUSER",
+    "description": "Symitar stores the user ID and is populated when this Card record is created in this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREATEDATBRANCH",
+    "insertText": "CREATEDATBRANCH",
+    "description": "This field stores the branch ID of the branch where the Card record is created.",
+    "isSnippet": false
+  },
+  {
+    "label": "ISSUECODE",
+    "insertText": "ISSUECODE",
+    "description": "This field stores a credit union-defined code to identify any other information about the card or about issuing the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "REISSUECODE",
+    "insertText": "REISSUECODE",
+    "description": "This field stores a code that determines how to reissue a card.",
+    "isSnippet": false
+  },
+  {
+    "label": "REISSUEMONTHS",
+    "insertText": "REISSUEMONTHS",
+    "description": "This field stores a code that indicates the number of months for which Symitar should reissue the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "INSTANTISSUE",
+    "insertText": "INSTANTISSUE",
+    "description": "This field stores a code that indicates whether the card was an instant issue or not.",
+    "isSnippet": false
+  },
+  {
+    "label": "DIGITALISSUESTATUS",
+    "insertText": "DIGITALISSUESTATUS",
+    "description": "This field stores a code that indicates whether the card was digitally issued or whether the request for digital issuance was successful",
+    "isSnippet": false
+  },
+  {
+    "label": "DIGITALISSUEEXCEPT",
+    "insertText": "DIGITALISSUEEXCEPT",
+    "description": "This field stores the reason for an exception associated with a digital issuance request. Symitar outputs unique text for the exceptions that appear in this field based on invalid or missing information in a corresponding user-defined Account Tracking record or the value in the Response Code message field that it receives from the online network.",
+    "isSnippet": false
+  },
+  {
+    "label": "EMVCHIPPROFILE",
+    "insertText": "EMVCHIPPROFILE",
+    "description": "This field stores the EMV chip profile (network processing options) associated with the card. If this field is non-blank, the card is using the EMV chip.",
+    "isSnippet": false
+  },
+  {
+    "label": "BLOCKCODE",
+    "insertText": "BLOCKCODE",
+    "description": "This field stores a processor-defined block code, if any.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECLASSCODE",
+    "insertText": "RECLASSCODE",
+    "description": "This field stores a processor-defined reclass code, if any.",
+    "isSnippet": false
+  },
+  {
+    "label": "SAVID",
+    "insertText": "SAVID",
+    "description": "This field stores the ID of any Share record in the same account that can be accessed through the online environment with this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHKID",
+    "insertText": "CHKID",
+    "description": "This field stores the ID of any share draft record in the same account that can be accessed through the online environment with this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCID",
+    "insertText": "LOCID",
+    "description": "This field stores the ID of any line of credit Loan record in the same account that can be accessed through the online environment with this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDITCARDID",
+    "insertText": "CREDITCARDID",
+    "description": "This field stores the ID of any credit card Loan record in the same account that can be accessed through the online environment with this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "MISCID:1",
+    "insertText": "MISCID:1",
+    "description": "These three fields can each store the ID of any Share record or Loan record in the same account that can be accessed through the online environment with this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "MISCID:2",
+    "insertText": "MISCID:2",
+    "description": "These three fields can each store the ID of any Share record or Loan record in the same account that can be accessed through the online environment with this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "MISCID:3",
+    "insertText": "MISCID:3",
+    "description": "These three fields can each store the ID of any Share record or Loan record in the same account that can be accessed through the online environment with this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "ISSUEDATE",
+    "insertText": "ISSUEDATE",
+    "description": "This field stores the date the card was first issued or, in some instances, when the Card record was created.",
+    "isSnippet": false
+  },
+  {
+    "label": "EFFECTIVEDATE",
+    "insertText": "EFFECTIVEDATE",
+    "description": "This field stores the date the card was last issued or reissued.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXPIRATIONDATE",
+    "insertText": "EXPIRATIONDATE",
+    "description": "This field stores the actual date the card expires.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACTIVEDATE",
+    "insertText": "ACTIVEDATE",
+    "description": "This field stores the date the card is considered active.",
+    "isSnippet": false
+  },
+  {
+    "label": "CLOSEDATE",
+    "insertText": "CLOSEDATE",
+    "description": "This field stores the date the Card record was closed.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXTRAEMBOSS",
+    "insertText": "EXTRAEMBOSS",
+    "description": "This field stores a second emboss line on a card order.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTADDRCHGDATE",
+    "insertText": "LASTADDRCHGDATE",
+    "description": "This field stores the date of the last file maintenance only when the value in the Name Type field changes.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "Symitar stores the system date in this field when you create, change, or save the Card record. Sometimes Symitar updates this field because the record was saved, even though there may not be any actual changes in the record.",
+    "isSnippet": false
+  },
+  {
+    "label": "PINACTUAL",
+    "insertText": "PINACTUAL",
+    "description": "This field can store the actual PIN (Personal Identification Number) used by the processor for this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "PINENCRYPTED",
+    "insertText": "PINENCRYPTED",
+    "description": "This field stores the encrypted value for a PIN (Personal Identification Number). This value depends on the encryption method you use, which can come from the ATM network or a third party.",
+    "isSnippet": false
+  },
+  {
+    "label": "PINOFFSET",
+    "insertText": "PINOFFSET",
+    "description": "This field can store a PIN (Personal Identification Number) offset for this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "PINRETRIES",
+    "insertText": "PINRETRIES",
+    "description": "This field can store the number of times someone attempted to enter an invalid PIN (Personal Identification Number) for this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "PINORDERDATE",
+    "insertText": "PINORDERDATE",
+    "description": "This field stores the date the last time a Personal Identification Number (PIN) was ordered.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMAGEREFNUMBER",
+    "insertText": "IMAGEREFNUMBER",
+    "description": "This field stores the value of a photo reference number for members who create an imaged card background.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMAGEREFDATE",
+    "insertText": "IMAGEREFDATE",
+    "description": "This field stores the date that an imaged card background was created online.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMAGEREFISSUECOUNT",
+    "insertText": "IMAGEREFISSUECOUNT",
+    "description": "This field stores the number of times that a card with an imaged background has been issued before the card expiration.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVNUMBER",
+    "insertText": "PREVNUMBER",
+    "description": "This field can store the previous value from the Card Number field of a card when you reissue that card.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVSUFFIX",
+    "insertText": "PREVSUFFIX",
+    "description": "This field can store the previous value from the Card Suffix field of a card when you reissue that card.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVEXPIRATIONDATE",
+    "insertText": "PREVEXPIRATIONDATE",
+    "description": "This field can store the previous expiration date from the Expiration Date field of a card when you reissue that card.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVACTIVATIONDATE",
+    "insertText": "PREVACTIVATIONDATE",
+    "description": "This field stores the previous activation date for a card with a matching value from the Prev Expiration Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVPINACTUAL",
+    "insertText": "PREVPINACTUAL",
+    "description": "This field can store the previous value from the PIN Actual field for a card when you reissue that card.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVPINOFFSET",
+    "insertText": "PREVPINOFFSET",
+    "description": "This field can store the previous value from the PIN Offset field for a card when you reissue that card.",
+    "isSnippet": false
+  },
+  {
+    "label": "FEECOUNT:1",
+    "insertText": "FEECOUNT:1",
+    "description": "Each of these four fields can store the current number of a fees for a different type of fee.",
+    "isSnippet": false
+  },
+  {
+    "label": "FEECOUNT:2",
+    "insertText": "FEECOUNT:2",
+    "description": "Each of these four fields can store the current number of a fees for a different type of fee.",
+    "isSnippet": false
+  },
+  {
+    "label": "FEECOUNT:3",
+    "insertText": "FEECOUNT:3",
+    "description": "Each of these four fields can store the current number of a fees for a different type of fee.",
+    "isSnippet": false
+  },
+  {
+    "label": "FEECOUNT:4",
+    "insertText": "FEECOUNT:4",
+    "description": "Each of these four fields can store the current number of a fees for a different type of fee.",
+    "isSnippet": false
+  },
+  {
+    "label": "USAGEDATE",
+    "insertText": "USAGEDATE",
+    "description": "This field stores the last date when the card was used in an online environment, except for when an online cash deposit is made.",
+    "isSnippet": false
+  },
+  {
+    "label": "SINGLEUSAGEMAX",
+    "insertText": "SINGLEUSAGEMAX",
+    "description": "This field stores the maximum amount allowed for a single cash withdrawal.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEMPLIMITSTARTDATE",
+    "insertText": "TEMPLIMITSTARTDATE",
+    "description": "This field stores the date at which a temporary limit begins for ATM, POS, or authorization transactions. The date in this field is used in conjunction with the date in the Temporary Limit End Date field to specify a date range for which the temporary limits are in effect.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEMPLIMITENDDATE",
+    "insertText": "TEMPLIMITENDDATE",
+    "description": "This field stores the date at which a temporary limit expires for ATM, POS, or authorization transactions. The date in this field is used in conjunction with the date in the Temporary Limit Start Date field to specify a date range for which the temporary limits are in effect.",
+    "isSnippet": false
+  },
+  {
+    "label": "USAGELIMIT",
+    "insertText": "USAGELIMIT",
+    "description": "This field stores the maximum amount that can be withdrawn from an online ATM each day.",
+    "isSnippet": false
+  },
+  {
+    "label": "USAGEAMOUNT",
+    "insertText": "USAGEAMOUNT",
+    "description": "This field stores the total amount of all withdrawals based on the value in the Usage Date field from an online ATM.",
+    "isSnippet": false
+  },
+  {
+    "label": "ATMCOUNTLIMIT",
+    "insertText": "ATMCOUNTLIMIT",
+    "description": "This field stores the maximum number of online ATM transactions your credit union allows each day.",
+    "isSnippet": false
+  },
+  {
+    "label": "ATMCOUNT",
+    "insertText": "ATMCOUNT",
+    "description": "This field stores the number of daily ATM transactions, based on the value in the Usage Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "ATMTEMPUSAGELIMIT",
+    "insertText": "ATMTEMPUSAGELIMIT",
+    "description": "This field stores the maximum amount that can be withdrawn from an online ATM each day during the date range specified in the Temporary Limit Start Date and Temporary Limit End Date fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTHLIMIT",
+    "insertText": "AUTHLIMIT",
+    "description": "This field stores the maximum amount that can be authorized for online credit or debit card merchant (signature-based) transactions each day.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTHAMOUNT",
+    "insertText": "AUTHAMOUNT",
+    "description": "This field stores the daily amount of authorizations performed for an online credit or debit card merchant (signature-based) transactions, based on the value in the Usage Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTHCOUNTLIMIT",
+    "insertText": "AUTHCOUNTLIMIT",
+    "description": "This field stores the maximum number of authorizations allowed for an online credit or debit card merchant (signature-based) transactions per day.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTHCOUNT",
+    "insertText": "AUTHCOUNT",
+    "description": "This field stores the number of daily authorizations performed for an online credit or debit card merchant (signature-based) transactions, based on the value in the Usage Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTHTEMPLIMIT",
+    "insertText": "AUTHTEMPLIMIT",
+    "description": "This field stores the maximum amount that can be authorized for online credit or debit card merchant (signature-based) transactions each day during the date range specified in the Temporary Limit Start Date and Temporary Limit End Date fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "MISCLIMIT",
+    "insertText": "MISCLIMIT",
+    "description": "This field stores the maximum amount that can be withdrawn from an online environment in miscellaneous transactions each day.",
+    "isSnippet": false
+  },
+  {
+    "label": "MISCAMOUNT",
+    "insertText": "MISCAMOUNT",
+    "description": "This field stores the daily amount of all miscellaneous withdrawals, based on the value in the Usage Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "MISCCOUNTLIMIT",
+    "insertText": "MISCCOUNTLIMIT",
+    "description": "This field stores the maximum number of miscellaneous transactions per day that your credit union allows.",
+    "isSnippet": false
+  },
+  {
+    "label": "MISCCOUNT",
+    "insertText": "MISCCOUNT",
+    "description": "This field stores the number of daily miscellaneous transactions, based on the value in the Usage Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "WDCHECKMAX",
+    "insertText": "WDCHECKMAX",
+    "description": "This field stores the maximum amount allowed for a single withdrawal by check per day.",
+    "isSnippet": false
+  },
+  {
+    "label": "WDCHECKLIMIT",
+    "insertText": "WDCHECKLIMIT",
+    "description": "This field stores the limit for withdrawals by check per day.",
+    "isSnippet": false
+  },
+  {
+    "label": "WDCHECKAMOUNT",
+    "insertText": "WDCHECKAMOUNT",
+    "description": "This field stores the total amount of withdrawals by check (greater than $0.00), based on the value in the Usage Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "WDCHECKCOUNTLIMIT",
+    "insertText": "WDCHECKCOUNTLIMIT",
+    "description": "This field stores the maximum number of withdrawals by check allowed per day.",
+    "isSnippet": false
+  },
+  {
+    "label": "WDCHECKCOUNT",
+    "insertText": "WDCHECKCOUNT",
+    "description": "This field stores the number of withdrawals by check performed, based on the value in the Usage Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "XFERMAX",
+    "insertText": "XFERMAX",
+    "description": "This field stores the maximum amount for a single transfer that your credit union allows.",
+    "isSnippet": false
+  },
+  {
+    "label": "XFERLIMIT",
+    "insertText": "XFERLIMIT",
+    "description": "This field stores the maximum amount that can be transferred each day.",
+    "isSnippet": false
+  },
+  {
+    "label": "XFERAMOUNT",
+    "insertText": "XFERAMOUNT",
+    "description": "This field stores the total transfer amount (greater than $0.00), based on the value in the Usage Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "XFERCOUNTLIMIT",
+    "insertText": "XFERCOUNTLIMIT",
+    "description": "This field stores the maximum number of transfers allowed per day.",
+    "isSnippet": false
+  },
+  {
+    "label": "XFERCOUNT",
+    "insertText": "XFERCOUNT",
+    "description": "This field stores the number of transfers performed, based on the value in the Usage Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITAMOUNT",
+    "insertText": "LIMITAMOUNT",
+    "description": "This field stores the maximum amount that can be withdrawn from an offline ATM within the period specified in the Limit Days field.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITDAYS",
+    "insertText": "LIMITDAYS",
+    "description": "This field stores the number of days required between withdrawals of the value in the Limit Amount field at an offline ATM.",
+    "isSnippet": false
+  },
+  {
+    "label": "POSLIMIT",
+    "insertText": "POSLIMIT",
+    "description": "This field stores the maximum amount that can be withdrawn for online, point-of-sale (PIN-based merchant) transactions each day.",
+    "isSnippet": false
+  },
+  {
+    "label": "POSAMOUNT",
+    "insertText": "POSAMOUNT",
+    "description": "This field stores the total amount of all point-of-sale withdrawals, based on the value in the Usage Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "POSCOUNTLIMIT",
+    "insertText": "POSCOUNTLIMIT",
+    "description": "This field stores the maximum number of point-of-sale (PIN-based merchant) transactions per day that your credit union allows.",
+    "isSnippet": false
+  },
+  {
+    "label": "POSCOUNT",
+    "insertText": "POSCOUNT",
+    "description": "This field stores the number of daily (Close Day Processing to Close Day Processing) point-of-sale transactions, based on the value in the Usage Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "POSTEMPLIMIT",
+    "insertText": "POSTEMPLIMIT",
+    "description": "This field stores the maximum amount that can be withdrawn for online point-of-sale (PIN-based merchant) transactions each day during the date range specified in the Temporary Limit Star Date and Temporary Limit End Date fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDDEBLIMIT",
+    "insertText": "CREDDEBLIMIT",
+    "description": "This field stores the monetary completion transaction limit per day for an online debit or credit card.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDDEBAMOUNT",
+    "insertText": "CREDDEBAMOUNT",
+    "description": "This field stores the daily amount of monetary completion transactions for an online debit or credit card.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDDEBCOUNTLIMIT",
+    "insertText": "CREDDEBCOUNTLIMIT",
+    "description": "This field stores the maximum number of monetary completion transactions your credit union allows per day for an online debit or credit card.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDDEBCOUNT",
+    "insertText": "CREDDEBCOUNT",
+    "description": "This field stores the number of daily transactions for an online debit or credit card, based on the value in the Usage Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "BILLPAYMAX",
+    "insertText": "BILLPAYMAX",
+    "description": "This field stores the Maximum amount (greater than $0.00) for a single bill payment.",
+    "isSnippet": false
+  },
+  {
+    "label": "BILLPAYLIMIT",
+    "insertText": "BILLPAYLIMIT",
+    "description": "This field stores the daily bill payment limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "BILLPAYAMOUNT",
+    "insertText": "BILLPAYAMOUNT",
+    "description": "This field stores the total bill payment amount (greater than $0.00), based on the value in the Usage Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "BILLPAYCOUNTLIMIT",
+    "insertText": "BILLPAYCOUNTLIMIT",
+    "description": "This field stores the maximum number of bill payments allowed per day.",
+    "isSnippet": false
+  },
+  {
+    "label": "BILLPAYCOUNT",
+    "insertText": "BILLPAYCOUNT",
+    "description": "This field stores the number of bill payments performed, based on the value in the Usage Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPMAX",
+    "insertText": "DEPMAX",
+    "description": "This field stores the maximum amount allowed in a single deposit.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPLIMIT",
+    "insertText": "DEPLIMIT",
+    "description": "This field stores the aggregate deposit amount per day that is not subject to holds.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPAMOUNT",
+    "insertText": "DEPAMOUNT",
+    "description": "This field stores the total amount of all online ATM deposits made, based on the value in the Usage Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPCOUNTLIMIT",
+    "insertText": "DEPCOUNTLIMIT",
+    "description": "This field stores the maximum number of deposits allowed per day.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPCOUNT",
+    "insertText": "DEPCOUNT",
+    "description": "This field stores the number of deposits performed, based on the value in the Usage Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITDESCRIPTION:1",
+    "insertText": "LIMITDESCRIPTION:1",
+    "description": "These fields display a description of each limit, taken from the Limit 1–6 Description parameters, which are defined in Online Card Parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITDESCRIPTION:2",
+    "insertText": "LIMITDESCRIPTION:2",
+    "description": "These fields display a description of each limit, taken from the Limit 1–6 Description parameters, which are defined in Online Card Parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITDESCRIPTION:3",
+    "insertText": "LIMITDESCRIPTION:3",
+    "description": "These fields display a description of each limit, taken from the Limit 1–6 Description parameters, which are defined in Online Card Parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITDESCRIPTION:4",
+    "insertText": "LIMITDESCRIPTION:4",
+    "description": "These fields display a description of each limit, taken from the Limit 1–6 Description parameters, which are defined in Online Card Parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITDESCRIPTION:5",
+    "insertText": "LIMITDESCRIPTION:5",
+    "description": "These fields display a description of each limit, taken from the Limit 1–6 Description parameters, which are defined in Online Card Parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITDESCRIPTION:6",
+    "insertText": "LIMITDESCRIPTION:6",
+    "description": "These fields display a description of each limit, taken from the Limit 1–6 Description parameters, which are defined in Online Card Parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMIT:1",
+    "insertText": "LIMIT:1",
+    "description": "These fields store a daily limit amount, which is the total transaction amount allowed for the day, for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMIT:2",
+    "insertText": "LIMIT:2",
+    "description": "These fields store a daily limit amount, which is the total transaction amount allowed for the day, for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMIT:3",
+    "insertText": "LIMIT:3",
+    "description": "These fields store a daily limit amount, which is the total transaction amount allowed for the day, for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMIT:4",
+    "insertText": "LIMIT:4",
+    "description": "These fields store a daily limit amount, which is the total transaction amount allowed for the day, for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMIT:5",
+    "insertText": "LIMIT:5",
+    "description": "These fields store a daily limit amount, which is the total transaction amount allowed for the day, for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMIT:6",
+    "insertText": "LIMIT:6",
+    "description": "These fields store a daily limit amount, which is the total transaction amount allowed for the day, for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITUSAGEAMOUNT:1",
+    "insertText": "LIMITUSAGEAMOUNT:1",
+    "description": "These fields store the current total transaction amount approved for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITUSAGEAMOUNT:2",
+    "insertText": "LIMITUSAGEAMOUNT:2",
+    "description": "These fields store the current total transaction amount approved for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITUSAGEAMOUNT:3",
+    "insertText": "LIMITUSAGEAMOUNT:3",
+    "description": "These fields store the current total transaction amount approved for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITUSAGEAMOUNT:4",
+    "insertText": "LIMITUSAGEAMOUNT:4",
+    "description": "These fields store the current total transaction amount approved for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITUSAGEAMOUNT:5",
+    "insertText": "LIMITUSAGEAMOUNT:5",
+    "description": "These fields store the current total transaction amount approved for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITUSAGEAMOUNT:6",
+    "insertText": "LIMITUSAGEAMOUNT:6",
+    "description": "These fields store the current total transaction amount approved for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTLIMIT:1",
+    "insertText": "COUNTLIMIT:1",
+    "description": "These fields store the number of daily transactions allowed for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTLIMIT:2",
+    "insertText": "COUNTLIMIT:2",
+    "description": "These fields store the number of daily transactions allowed for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTLIMIT:3",
+    "insertText": "COUNTLIMIT:3",
+    "description": "These fields store the number of daily transactions allowed for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTLIMIT:4",
+    "insertText": "COUNTLIMIT:4",
+    "description": "These fields store the number of daily transactions allowed for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTLIMIT:5",
+    "insertText": "COUNTLIMIT:5",
+    "description": "These fields store the number of daily transactions allowed for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTLIMIT:6",
+    "insertText": "COUNTLIMIT:6",
+    "description": "These fields store the number of daily transactions allowed for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITCOUNT:1",
+    "insertText": "LIMITCOUNT:1",
+    "description": "These fields store the current number of transactions for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITCOUNT:2",
+    "insertText": "LIMITCOUNT:2",
+    "description": "These fields store the current number of transactions for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITCOUNT:3",
+    "insertText": "LIMITCOUNT:3",
+    "description": "These fields store the current number of transactions for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITCOUNT:4",
+    "insertText": "LIMITCOUNT:4",
+    "description": "These fields store the current number of transactions for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITCOUNT:5",
+    "insertText": "LIMITCOUNT:5",
+    "description": "These fields store the current number of transactions for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITCOUNT:6",
+    "insertText": "LIMITCOUNT:6",
+    "description": "These fields store the current number of transactions for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERITEMLIMIT:1",
+    "insertText": "PERITEMLIMIT:1",
+    "description": "These fields store the maximum amount allowed for a single transaction for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERITEMLIMIT:2",
+    "insertText": "PERITEMLIMIT:2",
+    "description": "These fields store the maximum amount allowed for a single transaction for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERITEMLIMIT:3",
+    "insertText": "PERITEMLIMIT:3",
+    "description": "These fields store the maximum amount allowed for a single transaction for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERITEMLIMIT:4",
+    "insertText": "PERITEMLIMIT:4",
+    "description": "These fields store the maximum amount allowed for a single transaction for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERITEMLIMIT:5",
+    "insertText": "PERITEMLIMIT:5",
+    "description": "These fields store the maximum amount allowed for a single transaction for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERITEMLIMIT:6",
+    "insertText": "PERITEMLIMIT:6",
+    "description": "These fields store the maximum amount allowed for a single transaction for each limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:1",
+    "insertText": "WARNINGCODE:1",
+    "description": "These 20 fields can each store a code that identifies a different credit union-defined warning to apply to this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:2",
+    "insertText": "WARNINGCODE:2",
+    "description": "These 20 fields can each store a code that identifies a different credit union-defined warning to apply to this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:3",
+    "insertText": "WARNINGCODE:3",
+    "description": "These 20 fields can each store a code that identifies a different credit union-defined warning to apply to this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:4",
+    "insertText": "WARNINGCODE:4",
+    "description": "These 20 fields can each store a code that identifies a different credit union-defined warning to apply to this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:5",
+    "insertText": "WARNINGCODE:5",
+    "description": "These 20 fields can each store a code that identifies a different credit union-defined warning to apply to this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:6",
+    "insertText": "WARNINGCODE:6",
+    "description": "These 20 fields can each store a code that identifies a different credit union-defined warning to apply to this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:7",
+    "insertText": "WARNINGCODE:7",
+    "description": "These 20 fields can each store a code that identifies a different credit union-defined warning to apply to this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:8",
+    "insertText": "WARNINGCODE:8",
+    "description": "These 20 fields can each store a code that identifies a different credit union-defined warning to apply to this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:9",
+    "insertText": "WARNINGCODE:9",
+    "description": "These 20 fields can each store a code that identifies a different credit union-defined warning to apply to this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:10",
+    "insertText": "WARNINGCODE:10",
+    "description": "These 20 fields can each store a code that identifies a different credit union-defined warning to apply to this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:11",
+    "insertText": "WARNINGCODE:11",
+    "description": "These 20 fields can each store a code that identifies a different credit union-defined warning to apply to this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:12",
+    "insertText": "WARNINGCODE:12",
+    "description": "These 20 fields can each store a code that identifies a different credit union-defined warning to apply to this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:13",
+    "insertText": "WARNINGCODE:13",
+    "description": "These 20 fields can each store a code that identifies a different credit union-defined warning to apply to this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:14",
+    "insertText": "WARNINGCODE:14",
+    "description": "These 20 fields can each store a code that identifies a different credit union-defined warning to apply to this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:15",
+    "insertText": "WARNINGCODE:15",
+    "description": "These 20 fields can each store a code that identifies a different credit union-defined warning to apply to this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:16",
+    "insertText": "WARNINGCODE:16",
+    "description": "These 20 fields can each store a code that identifies a different credit union-defined warning to apply to this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:17",
+    "insertText": "WARNINGCODE:17",
+    "description": "These 20 fields can each store a code that identifies a different credit union-defined warning to apply to this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:18",
+    "insertText": "WARNINGCODE:18",
+    "description": "These 20 fields can each store a code that identifies a different credit union-defined warning to apply to this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:19",
+    "insertText": "WARNINGCODE:19",
+    "description": "These 20 fields can each store a code that identifies a different credit union-defined warning to apply to this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:20",
+    "insertText": "WARNINGCODE:20",
+    "description": "These 20 fields can each store a code that identifies a different credit union-defined warning to apply to this card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:1",
+    "insertText": "WARNINGEXPIRATION:1",
+    "description": "These 20 fields can each store a date after which the corresponding warning should no longer apply to the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:2",
+    "insertText": "WARNINGEXPIRATION:2",
+    "description": "These 20 fields can each store a date after which the corresponding warning should no longer apply to the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:3",
+    "insertText": "WARNINGEXPIRATION:3",
+    "description": "These 20 fields can each store a date after which the corresponding warning should no longer apply to the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:4",
+    "insertText": "WARNINGEXPIRATION:4",
+    "description": "These 20 fields can each store a date after which the corresponding warning should no longer apply to the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:5",
+    "insertText": "WARNINGEXPIRATION:5",
+    "description": "These 20 fields can each store a date after which the corresponding warning should no longer apply to the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:6",
+    "insertText": "WARNINGEXPIRATION:6",
+    "description": "These 20 fields can each store a date after which the corresponding warning should no longer apply to the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:7",
+    "insertText": "WARNINGEXPIRATION:7",
+    "description": "These 20 fields can each store a date after which the corresponding warning should no longer apply to the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:8",
+    "insertText": "WARNINGEXPIRATION:8",
+    "description": "These 20 fields can each store a date after which the corresponding warning should no longer apply to the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:9",
+    "insertText": "WARNINGEXPIRATION:9",
+    "description": "These 20 fields can each store a date after which the corresponding warning should no longer apply to the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:10",
+    "insertText": "WARNINGEXPIRATION:10",
+    "description": "These 20 fields can each store a date after which the corresponding warning should no longer apply to the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:11",
+    "insertText": "WARNINGEXPIRATION:11",
+    "description": "These 20 fields can each store a date after which the corresponding warning should no longer apply to the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:12",
+    "insertText": "WARNINGEXPIRATION:12",
+    "description": "These 20 fields can each store a date after which the corresponding warning should no longer apply to the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:13",
+    "insertText": "WARNINGEXPIRATION:13",
+    "description": "These 20 fields can each store a date after which the corresponding warning should no longer apply to the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:14",
+    "insertText": "WARNINGEXPIRATION:14",
+    "description": "These 20 fields can each store a date after which the corresponding warning should no longer apply to the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:15",
+    "insertText": "WARNINGEXPIRATION:15",
+    "description": "These 20 fields can each store a date after which the corresponding warning should no longer apply to the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:16",
+    "insertText": "WARNINGEXPIRATION:16",
+    "description": "These 20 fields can each store a date after which the corresponding warning should no longer apply to the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:17",
+    "insertText": "WARNINGEXPIRATION:17",
+    "description": "These 20 fields can each store a date after which the corresponding warning should no longer apply to the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:18",
+    "insertText": "WARNINGEXPIRATION:18",
+    "description": "These 20 fields can each store a date after which the corresponding warning should no longer apply to the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:19",
+    "insertText": "WARNINGEXPIRATION:19",
+    "description": "These 20 fields can each store a date after which the corresponding warning should no longer apply to the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:20",
+    "insertText": "WARNINGEXPIRATION:20",
+    "description": "These 20 fields can each store a date after which the corresponding warning should no longer apply to the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICE:1",
+    "insertText": "SERVICE:1",
+    "description": "These eight fields can each store a code that identifies a different credit union-defined credit union service offered with the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICE:2",
+    "insertText": "SERVICE:2",
+    "description": "These eight fields can each store a code that identifies a different credit union-defined credit union service offered with the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICE:3",
+    "insertText": "SERVICE:3",
+    "description": "These eight fields can each store a code that identifies a different credit union-defined credit union service offered with the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICE:4",
+    "insertText": "SERVICE:4",
+    "description": "These eight fields can each store a code that identifies a different credit union-defined credit union service offered with the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICE:5",
+    "insertText": "SERVICE:5",
+    "description": "These eight fields can each store a code that identifies a different credit union-defined credit union service offered with the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICE:6",
+    "insertText": "SERVICE:6",
+    "description": "These eight fields can each store a code that identifies a different credit union-defined credit union service offered with the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICE:7",
+    "insertText": "SERVICE:7",
+    "description": "These eight fields can each store a code that identifies a different credit union-defined credit union service offered with the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICE:8",
+    "insertText": "SERVICE:8",
+    "description": "These eight fields can each store a code that identifies a different credit union-defined credit union service offered with the card.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "This field stores a unique number within each member account that can be used as a unique identification of this record.",
+    "isSnippet": false
+  }
+]

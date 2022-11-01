@@ -1,0 +1,566 @@
+[
+  {
+    "label": "PROCESSOR",
+    "insertText": "PROCESSOR",
+    "description": "This field identifies the check order processor.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "This field stores the system date when you create, change, or save the Check Order record.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERID",
+    "insertText": "USERID",
+    "description": "This field stores the user number of the person who creates the Check Order record.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATUS",
+    "insertText": "STATUS",
+    "description": "This field indicates the current status of the check order.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATUSDATE",
+    "insertText": "STATUSDATE",
+    "description": "This field stores the date when you changed the value in the Status field.",
+    "isSnippet": false
+  },
+  {
+    "label": "OPENDATE",
+    "insertText": "OPENDATE",
+    "description": "This field stores the date the Check Order record was created.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTORDERDATE",
+    "insertText": "LASTORDERDATE",
+    "description": "This field stores the date a check order was last sent to the processor.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTFREEORDER",
+    "insertText": "LASTFREEORDER",
+    "description": "This field records the date for a free or promotional check order.",
+    "isSnippet": false
+  },
+  {
+    "label": "MICRLINE",
+    "insertText": "MICRLINE",
+    "description": "This field stores the information to be imprinted magnetically on the MICR line at the bottom of the check.",
+    "isSnippet": false
+  },
+  {
+    "label": "STARTNUMBER",
+    "insertText": "STARTNUMBER",
+    "description": "This fields stores either the starting check number for new orders or the starting reorder number.",
+    "isSnippet": false
+  },
+  {
+    "label": "QUANTITY",
+    "insertText": "QUANTITY",
+    "description": "This field specifies the number of checks being ordered.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHECKTYPE",
+    "insertText": "CHECKTYPE",
+    "description": "This field specifies the type of checks being ordered",
+    "isSnippet": false
+  },
+  {
+    "label": "CHECKSTYLE",
+    "insertText": "CHECKSTYLE",
+    "description": "This field specifies the style of checks being ordered.",
+    "isSnippet": false
+  },
+  {
+    "label": "COVERSTYLE",
+    "insertText": "COVERSTYLE",
+    "description": "This field specifies the style of the checkbook cover.",
+    "isSnippet": false
+  },
+  {
+    "label": "CUTNUMBER",
+    "insertText": "CUTNUMBER",
+    "description": "This field is used by Clarke American, Harland, and Deluxe only, and it specifies the style of the cut (insignia) on the checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "COVERINITIALS",
+    "insertText": "COVERINITIALS",
+    "description": "This field is used by Clarke American and Harland only, and it specifies the initials, if any, to be imprinted on the checkbook cover.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHECKINITIALS",
+    "insertText": "CHECKINITIALS",
+    "description": "This field is used by Clarke American only, and it specifies the initials, if any, to be imprinted on the checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "BRANCH",
+    "insertText": "BRANCH",
+    "description": "This field stores a processor-assigned code that identifies your credit union.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTLINE:1",
+    "insertText": "IMPRINTLINE:1",
+    "description": "This field specifies the first line of name or address information to be imprinted on the checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTLINE:2",
+    "insertText": "IMPRINTLINE:2",
+    "description": "This field specifies the second line of name or address information to be imprinted on the checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTLINE:3",
+    "insertText": "IMPRINTLINE:3",
+    "description": "This field specifies the third line of name or address information to be imprinted on the checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTLINE:4",
+    "insertText": "IMPRINTLINE:4",
+    "description": "This field specifies the fourth line of name or address information to be imprinted on the checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTLINE:5",
+    "insertText": "IMPRINTLINE:5",
+    "description": "This field specifies the fifth line of name or address information to be imprinted on the checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTLINE:6",
+    "insertText": "IMPRINTLINE:6",
+    "description": "This field specifies the sixth line of name or address information to be imprinted on the checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTCITY",
+    "insertText": "IMPRINTCITY",
+    "description": "This field is used by Clarke American only, and it specifies the name of the city to be imprinted on the checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTSTATE",
+    "insertText": "IMPRINTSTATE",
+    "description": "This field is used by Clarke American only, and it specifies the two-character U.S. Postal Service state code to be imprinted on the checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTZIPCODE",
+    "insertText": "IMPRINTZIPCODE",
+    "description": "This field is used by Clarke American and Deluxe only, and it specifies the ZIP Code to be imprinted on the checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTPHONE",
+    "insertText": "IMPRINTPHONE",
+    "description": "This field is used by Clarke American and Deluxe only, and it specifies the telephone number to be imprinted on the checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTFONT",
+    "insertText": "IMPRINTFONT",
+    "description": "This field specifies the font for the imprint lines.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTJUSTIFY",
+    "insertText": "IMPRINTJUSTIFY",
+    "description": "This field is used by Clarke American, Harland, and Liberty only, and it specifies the justification (alignment) of the imprint lines.",
+    "isSnippet": false
+  },
+  {
+    "label": "MAILADDRESS:1–MAILADDRESS:5",
+    "insertText": "MAILADDRESS:1–MAILADDRESS:5",
+    "description": "These fields specify the mailing address for the check order.",
+    "isSnippet": false
+  },
+  {
+    "label": "MAILCITY",
+    "insertText": "MAILCITY",
+    "description": "This field is used by Clarke American only, and it specifies the name of the city to which the check order should be mailed.",
+    "isSnippet": false
+  },
+  {
+    "label": "MAILSTATE",
+    "insertText": "MAILSTATE",
+    "description": "This field is used by Clarke American only, and it specifies the two-character U.S. Postal Code for the state to which the check order should be mailed.",
+    "isSnippet": false
+  },
+  {
+    "label": "MAILZIPCODE",
+    "insertText": "MAILZIPCODE",
+    "description": "This field is used by Clarke American and Harland only, and it specifies the ZIP Code the check order should be mailed to.",
+    "isSnippet": false
+  },
+  {
+    "label": "BILLINGCODE",
+    "insertText": "BILLINGCODE",
+    "description": "This field specifies how the check order should be billed.",
+    "isSnippet": false
+  },
+  {
+    "label": "SHIPMETHOD",
+    "insertText": "SHIPMETHOD",
+    "description": "This field specifies how the check order should be shipped.",
+    "isSnippet": false
+  },
+  {
+    "label": "SHIPTO",
+    "insertText": "SHIPTO",
+    "description": "This field is used by Clarke American, Deluxe, and Liberty only, and it specifies to whom the check order should be shipped.",
+    "isSnippet": false
+  },
+  {
+    "label": "OVERSIGFONT",
+    "insertText": "OVERSIGFONT",
+    "description": "This field is used by Clarke American, Harland, and Liberty only, and it specifies the font style for the Over Signature Line 1 and Over Signature Line 2 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "OVERSIGJUSTIFY",
+    "insertText": "OVERSIGJUSTIFY",
+    "description": "This field is used by Clarke American and Harland only, and it specifies the alignment for the over signature lines.",
+    "isSnippet": false
+  },
+  {
+    "label": "OVERSIGLINESIZE",
+    "insertText": "OVERSIGLINESIZE",
+    "description": "This field is used by Harland only, and it specifies the font size for the over signature lines.",
+    "isSnippet": false
+  },
+  {
+    "label": "OVERSIGLINE:1",
+    "insertText": "OVERSIGLINE:1",
+    "description": "This field specifies the information to be imprinted on the first line of text, over the signature line (or signature lines).",
+    "isSnippet": false
+  },
+  {
+    "label": "OVERSIGLINE:2",
+    "insertText": "OVERSIGLINE:2",
+    "description": "This field specifies the information to be imprinted on the second line of text, over the signature line (or signature lines).",
+    "isSnippet": false
+  },
+  {
+    "label": "SPECIALINSTR:1",
+    "insertText": "SPECIALINSTR:1",
+    "description": "This field stores a line of special instructions for the processor.",
+    "isSnippet": false
+  },
+  {
+    "label": "SPECIALINSTR:2",
+    "insertText": "SPECIALINSTR:2",
+    "description": "This field is used by Clarke American, Deluxe, and Liberty only, and it stores a second line of special instructions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SPECIALINSTR:3",
+    "insertText": "SPECIALINSTR:3",
+    "description": "These fields are used by Deluxe only, and they store the third through eighth lines of special instructions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SPECIALINSTR:4",
+    "insertText": "SPECIALINSTR:4",
+    "description": "These fields are used by Deluxe only, and they store the third through eighth lines of special instructions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SPECIALINSTR:5",
+    "insertText": "SPECIALINSTR:5",
+    "description": "These fields are used by Deluxe only, and they store the third through eighth lines of special instructions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SPECIALINSTR:6",
+    "insertText": "SPECIALINSTR:6",
+    "description": "These fields are used by Deluxe only, and they store the third through eighth lines of special instructions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SPECIALINSTR:7",
+    "insertText": "SPECIALINSTR:7",
+    "description": "These fields are used by Deluxe only, and they store the third through eighth lines of special instructions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SPECIALINSTR:8",
+    "insertText": "SPECIALINSTR:8",
+    "description": "These fields are used by Deluxe only, and they store the third through eighth lines of special instructions.",
+    "isSnippet": false
+  },
+  {
+    "label": "PROMONUMBER",
+    "insertText": "PROMONUMBER",
+    "description": "This field is used by Clarke America, Harland, and Deluxe only, and it stores a promo number.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTFMDATE",
+    "insertText": "LASTFMDATE",
+    "description": "This field stores the date of the last file maintenance of this Check Order record.",
+    "isSnippet": false
+  },
+  {
+    "label": "NUMBERSIGLINES",
+    "insertText": "NUMBERSIGLINES",
+    "description": "This field specifies the number of signature lines to be included on the checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "SSN:1",
+    "insertText": "SSN:1",
+    "description": "This field is used by Deluxe only, and it specifies the Social Security Number or individual Taxpayer Identification Number to be imprinted on checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "SSN:2",
+    "insertText": "SSN:2",
+    "description": "This field is used by Deluxe only, and it specifies the second Social Security Number or individual Taxpayer Identification Number to be imprinted on checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "LICENSE:1",
+    "insertText": "LICENSE:1",
+    "description": "This field is used by Deluxe only, and it specifies the license number to imprint on the checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "LICENSE:2",
+    "insertText": "LICENSE:2",
+    "description": "This field is used by Deluxe only, and it specifies a second license number to be imprinted on the checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "BINDING",
+    "insertText": "BINDING",
+    "description": "This field is not currently used.",
+    "isSnippet": false
+  },
+  {
+    "label": "DESIGN",
+    "insertText": "DESIGN",
+    "description": "This field is not currently used.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUSINESSSERIAL",
+    "insertText": "BUSINESSSERIAL",
+    "description": "This field is used by Deluxe only, and it specifies the serial letters to be imprinted after the check number on the business checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUSNUMCOPIES",
+    "insertText": "BUSNUMCOPIES",
+    "description": "This field is used by Deluxe only, and it indicates the number of carbonless check copies required (in addition to the original check) for business checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUSBINDINGSTYLE",
+    "insertText": "BUSBINDINGSTYLE",
+    "description": "This field is used by Deluxe only, and it specifies the binding style of the checkbook for business checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUSVOUCHERNUMBER",
+    "insertText": "BUSVOUCHERNUMBER",
+    "description": "This field is used by Deluxe only, and it indicates the voucher number that designates the purpose of the checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUSCAPTIONS:1",
+    "insertText": "BUSCAPTIONS:1",
+    "description": "These fields are used by Deluxe only, and they specify a deduction caption to be imprinted on business checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUSCAPTIONS:2",
+    "insertText": "BUSCAPTIONS:2",
+    "description": "These fields are used by Deluxe only, and they specify a deduction caption to be imprinted on business checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUSCAPTIONS:3",
+    "insertText": "BUSCAPTIONS:3",
+    "description": "These fields are used by Deluxe only, and they specify a deduction caption to be imprinted on business checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUSCAPTIONS:4",
+    "insertText": "BUSCAPTIONS:4",
+    "description": "These fields are used by Deluxe only, and they specify a deduction caption to be imprinted on business checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUSCAPTIONS:5",
+    "insertText": "BUSCAPTIONS:5",
+    "description": "These fields are used by Deluxe only, and they specify a deduction caption to be imprinted on business checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUSCAPTIONS:6",
+    "insertText": "BUSCAPTIONS:6",
+    "description": "These fields are used by Deluxe only, and they specify a deduction caption to be imprinted on business checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUSCAPTIONS:7",
+    "insertText": "BUSCAPTIONS:7",
+    "description": "These fields are used by Deluxe only, and they specify a deduction caption to be imprinted on business checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUSCAPTIONS:8",
+    "insertText": "BUSCAPTIONS:8",
+    "description": "These fields are used by Deluxe only, and they specify a deduction caption to be imprinted on business checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACCTADDRINKCOLOR",
+    "insertText": "ACCTADDRINKCOLOR",
+    "description": "This field is used by Deluxe only, and it specifies the ink color for the account and address information imprinted on the business checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "TITLEINKCOLOR",
+    "insertText": "TITLEINKCOLOR",
+    "description": "This field is used by Deluxe only, and it specifies the ink color used for the title plate for business checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "CUTINKCOLOR",
+    "insertText": "CUTINKCOLOR",
+    "description": "This field is used by Deluxe only, and it specifies the ink color used for the cut (insignia) for business checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "TAXEXEMPTCODE",
+    "insertText": "TAXEXEMPTCODE",
+    "description": "This field is used by Harland only, and it specifies whether the check order is tax-exempt.",
+    "isSnippet": false
+  },
+  {
+    "label": "RERUNREASON",
+    "insertText": "RERUNREASON",
+    "description": "This field is used by Harland only, and it specifies the reason a check order must be rerun.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTLINESIZE:1",
+    "insertText": "IMPRINTLINESIZE:1",
+    "description": "These fields are used by Harland only, and they specify the font size for each imprint line.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTLINESIZE:2",
+    "insertText": "IMPRINTLINESIZE:2",
+    "description": "These fields are used by Harland only, and they specify the font size for each imprint line.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTLINESIZE:3",
+    "insertText": "IMPRINTLINESIZE:3",
+    "description": "These fields are used by Harland only, and they specify the font size for each imprint line.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTLINESIZE:4",
+    "insertText": "IMPRINTLINESIZE:4",
+    "description": "These fields are used by Harland only, and they specify the font size for each imprint line.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTLINESIZE:5",
+    "insertText": "IMPRINTLINESIZE:5",
+    "description": "These fields are used by Harland only, and they specify the font size for each imprint line.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTLINESIZE:6",
+    "insertText": "IMPRINTLINESIZE:6",
+    "description": "These fields are used by Harland only, and they specify the font size for each imprint line.",
+    "isSnippet": false
+  },
+  {
+    "label": "PONUMBER",
+    "insertText": "PONUMBER",
+    "description": "This field is used by Harland only, and it stores the purchase number for the check order.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGESHIPPING",
+    "insertText": "CHARGESHIPPING",
+    "description": "This field is used by Liberty only, and it specifies whom to charge the shipping costs to.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTUSAGE:1",
+    "insertText": "IMPRINTUSAGE:1",
+    "description": "These fields are used by Liberty only, and they specifies how each imprint line is used.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTUSAGE:2",
+    "insertText": "IMPRINTUSAGE:2",
+    "description": "These fields are used by Liberty only, and they specifies how each imprint line is used.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTUSAGE:3",
+    "insertText": "IMPRINTUSAGE:3",
+    "description": "These fields are used by Liberty only, and they specifies how each imprint line is used.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTUSAGE:4",
+    "insertText": "IMPRINTUSAGE:4",
+    "description": "These fields are used by Liberty only, and they specifies how each imprint line is used.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTUSAGE:5",
+    "insertText": "IMPRINTUSAGE:5",
+    "description": "These fields are used by Liberty only, and they specifies how each imprint line is used.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPRINTUSAGE:6",
+    "insertText": "IMPRINTUSAGE:6",
+    "description": "These fields are used by Liberty only, and they specifies how each imprint line is used.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACCENT",
+    "insertText": "ACCENT",
+    "description": "This field is used by Liberty only, and it specifies the accent figure printed to the left of the name.",
+    "isSnippet": false
+  },
+  {
+    "label": "PHANTOM",
+    "insertText": "PHANTOM",
+    "description": "This field is used by Liberty only, and it specifies the phantom figure printed in the center of the checks.",
+    "isSnippet": false
+  },
+  {
+    "label": "SIGFIGURE",
+    "insertText": "SIGFIGURE",
+    "description": "This field is used by Liberty only, and it specifies the signature figure printed next to the signature line.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "This field value in each record is unique for each member account.",
+    "isSnippet": false
+  }
+]

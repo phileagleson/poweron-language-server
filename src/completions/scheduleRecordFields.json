@@ -1,0 +1,86 @@
+[
+  {
+    "label": "ID",
+    "insertText": "ID",
+    "description": "The system uses this field to keep the Schedule records in order visually. The order of the Schedule records imported into the Loan record is actually based on the Beginning Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "BEGINNINGDATE",
+    "insertText": "BEGINNINGDATE",
+    "description": "This field stores the date when this particular Schedule record becomes effective.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXPIRATION",
+    "insertText": "EXPIRATION",
+    "description": "This field stores the date when this particular Schedule record should expire.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENTCALCTYPE",
+    "insertText": "PAYMENTCALCTYPE",
+    "description": "This field is used to determine the calculation method for the loan. This replaces the Payment Calc Type field in the Loan or Application record when this schedule is activated.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENT",
+    "insertText": "PAYMENT",
+    "description": "When you set the Schedule record's Use Rate Change Processing field to Yes, this field is updated with the calculated payment amount from the Rate Change Processing batch program. In this case, the system does not update the Loan record Pmt Bucket Amt 1 field or the Loan record Pmt Bucket Due Date 1 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENTTYPE",
+    "insertText": "PAYMENTTYPE",
+    "description": "This field stores the method for calculating the payment. This replaces the Payment Type field in the Loan or Application record when this schedule is activated.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENTDESCRIPTION",
+    "insertText": "PAYMENTDESCRIPTION",
+    "description": "This field stores the payment description of the combination of fields that make the loan either Principal and Interest, Interest Only, Calculated or No Payment (this is used if the payments within this schedule should be skipped). This field is not used for any calculations.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERATECHANGEPROCESSING",
+    "insertText": "USERATECHANGEPROCESSING",
+    "description": "When you run the Rate Change Processing batch program, the value in this field determines whether the system updates the Payment field value for this Schedule record.",
+    "isSnippet": false
+  },
+  {
+    "label": "REPEATCODE",
+    "insertText": "REPEATCODE",
+    "description": "This field stores the code indicating how often you want the system to import the Schedule record.",
+    "isSnippet": false
+  },
+  {
+    "label": "DQCALCULATIONMETHOD",
+    "insertText": "DQCALCULATIONMETHOD",
+    "description": "This field stores the method used to calculate delinquency for interest-only Schedule records. This replaces the DQ Calculation Method field in the Loan or Application record when this schedule is activated.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTERESTTYPE",
+    "insertText": "INTERESTTYPE",
+    "description": "This field stores the method for calculating loan interest that can be different for each Schedule record. This replaces the Interest Type field in the Loan or Application record when this schedule is activated.",
+    "isSnippet": false
+  },
+  {
+    "label": "DUEDAY1",
+    "insertText": "DUEDAY1",
+    "description": "This stores the day of the month (1–31) on which the first payment is due for semimonthly loans, or the day of the month on which all loan payments are due for annual, semiannual, quarterly, or monthly loans.",
+    "isSnippet": false
+  },
+  {
+    "label": "DUEDAY2",
+    "insertText": "DUEDAY2",
+    "description": "This stores the day of the month (2–31) on which the second payment is due for semimonthly payment loans. This field is not used for annual, semiannual, quarterly, monthly, or biweekly loans.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGE",
+    "insertText": "RECORDCHANGE",
+    "description": "This field contains the system date from the last time any changes were made to this record. When a record is first created, this field carries the system date on which the record is created.",
+    "isSnippet": false
+  }
+]

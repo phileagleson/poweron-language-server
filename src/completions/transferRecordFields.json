@@ -1,0 +1,164 @@
+[
+  {
+    "label": "TYPE",
+    "insertText": "TYPE",
+    "description": "This field indicates the type of transfer performed.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACCOUNTNUMBER",
+    "insertText": "ACCOUNTNUMBER",
+    "description": "This field indicates the account to or from which the funds are transferred.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDTYPE",
+    "insertText": "IDTYPE",
+    "description": "This field indicates which type of account is affected.",
+    "isSnippet": false
+  },
+  {
+    "label": "ID",
+    "insertText": "ID",
+    "description": "This field indicates the ID of the account to or from which the funds are transferred.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXTLOANACCOUNT",
+    "insertText": "EXTLOANACCOUNT",
+    "description": "This field stores the number of the external loan account.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERCENT",
+    "insertText": "PERCENT",
+    "description": "This field indicates the percentage of the dividend to be transferred.",
+    "isSnippet": false
+  },
+  {
+    "label": "AMOUNT",
+    "insertText": "AMOUNT",
+    "description": "This field indicates the amount that should be transferred.",
+    "isSnippet": false
+  },
+  {
+    "label": "AMOUNTOPTION",
+    "insertText": "AMOUNTOPTION",
+    "description": "This field is used only for Loan Transfer records to credit card loans that have the Transfer Type field set to (3) Automatic Payment.",
+    "isSnippet": false
+  },
+  {
+    "label": "MINIMUMBALANCE",
+    "insertText": "MINIMUMBALANCE",
+    "description": "This field is used for share sweeps; it stores the minimum balance the share can reach.",
+    "isSnippet": false
+  },
+  {
+    "label": "MAXIMUMBALANCE",
+    "insertText": "MAXIMUMBALANCE",
+    "description": "This field is used for share sweeps; it stores the maximum balance the share can reach.",
+    "isSnippet": false
+  },
+  {
+    "label": "SWEEPMINIMUM",
+    "insertText": "SWEEPMINIMUM",
+    "description": "This field stores the minimum amount to transfer in a share sweep.",
+    "isSnippet": false
+  },
+  {
+    "label": "SWEEPFEE",
+    "insertText": "SWEEPFEE",
+    "description": "This field is used for MBS sweeps; it stores the amount you want to charge for sweeps.",
+    "isSnippet": false
+  },
+  {
+    "label": "SWEEPFEEIDTYPE",
+    "insertText": "SWEEPFEEIDTYPE",
+    "description": "This field is used for MBS sweeps; it determines whether the sweep will be charged to a share or loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "SWEEPFEEID",
+    "insertText": "SWEEPFEEID",
+    "description": "This field is used for MBS sweeps; it specified the ID of the Share or Loan record that will be charged for the sweep.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "This field stores the system date when you create, change or save the Transfer record.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREQUENCY",
+    "insertText": "FREQUENCY",
+    "description": "This field determines the frequency of the transfer.",
+    "isSnippet": false
+  },
+  {
+    "label": "DAY1",
+    "insertText": "DAY1",
+    "description": "This fields determines the date on which automatic transfers should occur for annual, semiannual, quarterly, monthly, semimonthly, or bimonthly transfers.",
+    "isSnippet": false
+  },
+  {
+    "label": "DAY2",
+    "insertText": "DAY2",
+    "description": "This fields determines the date on which automatic transfers should occur for semi-monthly transfers.",
+    "isSnippet": false
+  },
+  {
+    "label": "NEXTDATE",
+    "insertText": "NEXTDATE",
+    "description": "This field stores the date of the next automatic share transfer.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTDATE",
+    "insertText": "LASTDATE",
+    "description": "This field indicated the date on which you want the final transfer to be made.",
+    "isSnippet": false
+  },
+  {
+    "label": "EFFECTIVEDATE",
+    "insertText": "EFFECTIVEDATE",
+    "description": "This field stores the date on which the transfer record should take effect.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXPIRATIONDATE",
+    "insertText": "EXPIRATIONDATE",
+    "description": "This field stores the date on which the Transfer record is no longer valid.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENTTYPE",
+    "insertText": "PAYMENTTYPE",
+    "description": "This field indicates how a payment should be handled when transferring funds from a share to a loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "MATURITYCHECK",
+    "insertText": "MATURITYCHECK",
+    "description": "Used for Share records, this field indicates whether the system should issue a check when the certificate matures.",
+    "isSnippet": false
+  },
+  {
+    "label": "MATURITYCHECK",
+    "insertText": "MATURITYCHECK",
+    "description": "Used for Share records, this field indicates whether the system should issue a check when the certificate matures.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "This field value in each record is unique for each member account.",
+    "isSnippet": false
+  },
+  {
+    "label": "REGE",
+    "insertText": "REGE",
+    "description": "This field indicates whether automatic share transfers and payroll EFT transfers are designated as governed by Reg E.",
+    "isSnippet": false
+  }
+]

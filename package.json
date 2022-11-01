@@ -1,0 +1,51 @@
+{
+	"name": "poweron-language-server",
+	"description": "PowerOn Language Server",
+	"displayName": "PowerOn Language Server",
+	"version": "0.5.0",
+	"author": "Phil Eagleson",
+	"publisher": "phileagleson",
+	"license": "MIT",
+	"keywords": [
+		"language-sever",
+		"language-server-protocol",
+		"lsp",
+		"poweron"
+	],
+	"engines": {
+		"node": ">=14.18.2"
+	},
+	"bin": {
+		"poweron-language-server": "./out/main.js"
+	},
+	"main": "./out/main.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/phileagleson/poweron-language-server"
+	},
+	"dependencies": {
+		"minimist": "^1.2.7",
+		"vscode-languageserver": "^7.0.0",
+		"vscode-languageserver-textdocument": "^1.0.4",
+		"web-tree-sitter": "git+https://github.com/phileagleson/web-tree-sitter.git"
+	},
+	"scripts": {
+		"esbuild:build": "npm run esbuild-base -- --minify",
+		"esbuild-base": "esbuild ./src/server.ts --bundle --outfile=out/main.js --format=cjs --platform=node",
+		"esbuild": "npm run esbuild-base -- --sourcemap",
+		"esbuild-watch": "npm run esbuild-base -- --sourcemap --watch",
+		"clean": "rm -rfv ./out/*",
+		"build": "tsc -b tsconfig.json",
+		"build:force": "npm run clean && npm run build --verbose --force",
+		"postinstall": "npm run clean && npm run esbuild:build && cp ./src/tree-sitter.wasm ./out/"
+	},
+	"devDependencies": {
+		"@types/minimist": "^1.2.2",
+		"esbuild": "^0.15.12",
+		"eslint": "^8.13.0",
+		"@types/node": "^16.11.7",
+		"@typescript-eslint/eslint-plugin": "^5.30.0",
+		"@typescript-eslint/parser": "^5.30.0",
+		"typescript": "^4.8.4"
+	}
+}

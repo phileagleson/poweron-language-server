@@ -1,0 +1,146 @@
+[
+  {
+    "label": "TYPE",
+    "insertText": "TYPE",
+    "description": "This field identifies the purpose of the Hold record.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACHRECURRINGSTOP",
+    "insertText": "ACHRECURRINGSTOP",
+    "description": "This field indicates whether the Hold record is used to stop multiple ACH items.",
+    "isSnippet": false
+  },
+  {
+    "label": "EFFECTIVEDATE",
+    "insertText": "EFFECTIVEDATE",
+    "description": "this field stores the date the hold should take effect or the date the hold was created for hold types 1–12 and 14–21, and for hold type (13) Loan Draft, it stores the date a preapproved loan draft form was issued to the member.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXPIRATIONDATE",
+    "insertText": "EXPIRATIONDATE",
+    "description": "This field stores the expiration date of the hold.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXPIRATIONTIME",
+    "insertText": "EXPIRATIONTIME",
+    "description": "This field stores the time when a hold should be released.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "This field stores the system date when you create, change or save the Hold record.",
+    "isSnippet": false
+  },
+  {
+    "label": "HOLDCREATIONDATE",
+    "insertText": "HOLDCREATIONDATE",
+    "description": "This field stores the AIX date (mm/dd/yyyy) that you created the hold record.",
+    "isSnippet": false
+  },
+  {
+    "label": "HOLDCREATIONTIME",
+    "insertText": "HOLDCREATIONTIME",
+    "description": "This field stores the AIX time (hh:mm:ss) that you created the hold record.",
+    "isSnippet": false
+  },
+  {
+    "label": "MATCHDATE",
+    "insertText": "MATCHDATE",
+    "description": "This field stores the date of an authorization hold.",
+    "isSnippet": false
+  },
+  {
+    "label": "MATCHTIME",
+    "insertText": "MATCHTIME",
+    "description": "This field stores the time of an authorization hold.",
+    "isSnippet": false
+  },
+  {
+    "label": "TRANSACTIONTYPE",
+    "insertText": "TRANSACTIONTYPE",
+    "description": "This field identifies the transaction type for ATM and PIN authorization transactions for preauthorized Loan holds only.",
+    "isSnippet": false
+  },
+  {
+    "label": "FEECODE",
+    "insertText": "FEECODE",
+    "description": "This field stores the code that determines the fee placed on the transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "AMOUNT",
+    "insertText": "AMOUNT",
+    "description": "This field stores the amount of money held.",
+    "isSnippet": false
+  },
+  {
+    "label": "LEDGERBALANCE",
+    "insertText": "LEDGERBALANCE",
+    "description": "This field stores the balance that the ATM software uses when it creates a PIN authorization or signature authorization Hold record.",
+    "isSnippet": false
+  },
+  {
+    "label": "AVAILABLEBALANCE",
+    "insertText": "AVAILABLEBALANCE",
+    "description": "This field stores the value calculated by an ATM to authorize a transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "REFERENCE1",
+    "insertText": "REFERENCE1",
+    "description": "All the Reference # fields, store reference information that is related to the hold.",
+    "isSnippet": false
+  },
+  {
+    "label": "REFERENCE2",
+    "insertText": "REFERENCE2",
+    "description": "All the Reference # fields, store reference information that is related to the hold.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEENAME",
+    "insertText": "PAYEENAME",
+    "description": "The value in this field varies depending on the hold type.",
+    "isSnippet": false
+  },
+  {
+    "label": "MEMBERBRANCH",
+    "insertText": "MEMBERBRANCH",
+    "description": "This field is used by corporate credit unions only and it stores the branch number if available.",
+    "isSnippet": false
+  },
+  {
+    "label": "STOPPAYCODE",
+    "insertText": "STOPPAYCODE",
+    "description": "This field stores the reason given for a stop.",
+    "isSnippet": false
+  },
+  {
+    "label": "REFERENCE3",
+    "insertText": "REFERENCE3",
+    "description": "All the Reference # fields, store reference information that is related to the hold.",
+    "isSnippet": false
+  },
+  {
+    "label": "REFERENCE4",
+    "insertText": "REFERENCE4",
+    "description": "All the Reference # fields, store reference information that is related to the hold.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "This field value in each record is unique for each member account.",
+    "isSnippet": false
+  },
+  {
+    "label": "FEEDESCRIPTION",
+    "insertText": "FEEDESCRIPTION",
+    "description": "This field stores the description in the Fee Code field.",
+    "isSnippet": false
+  }
+]

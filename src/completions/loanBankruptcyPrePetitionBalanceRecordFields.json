@@ -1,0 +1,74 @@
+[
+  {
+    "label": "ID",
+    "insertText": "ID",
+    "description": "This field stores the four-character ID that identifies the PrePetition Bal record.",
+    "isSnippet": false
+  },
+  {
+    "label": "OPENDATE",
+    "insertText": "OPENDATE",
+    "description": "The system updates this field with the system date when the PrePetition Bal record is created.",
+    "isSnippet": false
+  },
+  {
+    "label": "CLOSEDATE",
+    "insertText": "CLOSEDATE",
+    "description": "This field stores the date a PrePetition Bal record is closed.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "This field stores the system date when you create, change, or save the PrePetition Bal record.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTPAYMENTDATE",
+    "insertText": "LASTPAYMENTDATE",
+    "description": "This field stores the date of the last pre-petition balance payment.",
+    "isSnippet": false
+  },
+  {
+    "label": "AMOUNTCODE",
+    "insertText": "AMOUNTCODE",
+    "description": "The amount code defines the amount in the PrePetition Bal record, and how the system processes loan balance transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "BALANCE",
+    "insertText": "BALANCE",
+    "description": "This field stores the current balance for the record.",
+    "isSnippet": false
+  },
+  {
+    "label": "BALANCEYTD",
+    "insertText": "BALANCEYTD",
+    "description": "This field stores the total of all monies paid on the balance during the current year (to date).",
+    "isSnippet": false
+  },
+  {
+    "label": "BALANCELASTYEAR",
+    "insertText": "BALANCELASTYEAR",
+    "description": "This field stores the total of all monies paid on the balance during the previous year.",
+    "isSnippet": false
+  },
+  {
+    "label": "ORIGINALBALANCE",
+    "insertText": "ORIGINALBALANCE",
+    "description": "Functionality for this field will be available in a future release.",
+    "isSnippet": false
+  },
+  {
+    "label": "INCLUDEINLOANBAL",
+    "insertText": "INCLUDEINLOANBAL",
+    "description": "Functionality for this field will be available in a future release.",
+    "isSnippet": false
+  },
+  {
+    "label": "INCLUDEINCREDITRPT",
+    "insertText": "INCLUDEINCREDITRPT",
+    "description": "Functionality for this field will be available in a future release.",
+    "isSnippet": false
+  }
+]

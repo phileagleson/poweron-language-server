@@ -1,0 +1,26 @@
+[
+  {
+    "label": "TYPE",
+    "insertText": "TYPE",
+    "description": "This field stores a credit union-defined code that identifies the type of Household record.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACCOUNTNUMBER",
+    "insertText": "ACCOUNTNUMBER",
+    "description": "This field stores the account number of a family member's account.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "The system stores the system date in this field when you create, change, or save the Household record. Sometimes the system updates this field because the record was saved, even though there may not be any actual changes in the record.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "This field stores a unique number within each member account that can be used as a unique identification of this record.",
+    "isSnippet": false
+  }
+]

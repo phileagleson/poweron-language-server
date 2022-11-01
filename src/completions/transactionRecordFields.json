@@ -1,0 +1,411 @@
+[
+  {
+    "label": "ACCOUNTNUMBER",
+    "insertText": "ACCOUNTNUMBER",
+    "description": "This field identifies the account affected by the transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "ID",
+    "insertText": "ID",
+    "description": "This field stores the ID of the Share record (if the ID Type field is set to 0) or the Loan record (if the ID Type field is set to 1) affected by the transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDTYPE",
+    "insertText": "IDTYPE",
+    "description": "This field indicates whether the transaction affected a Share or Loan record.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMMENTCODE",
+    "insertText": "COMMENTCODE",
+    "description": "This field indicates whether the transaction includes a comment.",
+    "isSnippet": false
+  },
+  {
+    "label": "TRANSFERCODE",
+    "insertText": "TRANSFERCODE",
+    "description": "This field stores a code that indicates whether the transaction includes a transfer.",
+    "isSnippet": false
+  },
+  {
+    "label": "ADJUSTMENTCODE",
+    "insertText": "ADJUSTMENTCODE",
+    "description": "This field stores a code that indicates whether the transaction includes an adjustment.",
+    "isSnippet": false
+  },
+  {
+    "label": "REGECODE",
+    "insertText": "REGECODE",
+    "description": "This field stores a code that indicates if the transaction was a Reg E transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "REGDCHECKCODE",
+    "insertText": "REGDCHECKCODE",
+    "description": "This field indicates whether Reg D transactions have occurred on an account.",
+    "isSnippet": false
+  },
+  {
+    "label": "REGDTRANSFERCODE",
+    "insertText": "REGDTRANSFERCODE",
+    "description": "This field indicates whether a Reg D transfer transaction occurred on an account.",
+    "isSnippet": false
+  },
+  {
+    "label": "VOIDCODE",
+    "insertText": "VOIDCODE",
+    "description": "This field indicates whether the transaction included a void.",
+    "isSnippet": false
+  },
+  {
+    "label": "SUBACTIONCODE",
+    "insertText": "SUBACTIONCODE",
+    "description": "This field stores a code that indicates the type of transaction that occurred.",
+    "isSnippet": false
+  },
+  {
+    "label": "SEQUENCENUMBER",
+    "insertText": "SEQUENCENUMBER",
+    "description": "This field stores a number that the system assigns in sequence to each transaction posted on a specific day.",
+    "isSnippet": false
+  },
+  {
+    "label": "EFFECTIVEDATE",
+    "insertText": "EFFECTIVEDATE",
+    "description": "This field stores the effective date of the transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "POSTDATE",
+    "insertText": "POSTDATE",
+    "description": "This field stores the current system date when the transaction is completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "POSTTIME",
+    "insertText": "POSTTIME",
+    "description": "This field stores the current system time when the transaction is completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER",
+    "insertText": "USERNUMBER",
+    "description": "This field stores the user number of the person who or the batch ID of the batch program that initiated the transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "USEROVERRIDE",
+    "insertText": "USEROVERRIDE",
+    "description": "This field stores the user number of the person who provided the override for the transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECURITYLEVELS",
+    "insertText": "SECURITYLEVELS",
+    "description": "This field stores the Security Parameters security level assigned to this type of transaction",
+    "isSnippet": false
+  },
+  {
+    "label": "DESCRIPTION",
+    "insertText": "DESCRIPTION",
+    "description": "This field stores a description of the transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACTIONCODE",
+    "insertText": "ACTIONCODE",
+    "description": "This field identifies the action performed by the transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "SOURCECODE",
+    "insertText": "SOURCECODE",
+    "description": "This field identifies the source of the transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "BALANCECHANGE",
+    "insertText": "BALANCECHANGE",
+    "description": "This field stores the amount of the transaction the teller designates as principal.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTEREST",
+    "insertText": "INTEREST",
+    "description": "This field stores the amount of the transaction the teller designates as interest (if the transaction affects a Loan record) or penalty (if the transaction affects a Share record).",
+    "isSnippet": false
+  },
+  {
+    "label": "NEWBALANCE",
+    "insertText": "NEWBALANCE",
+    "description": "This field stores the sum of the Balance Change field and the Balance field from the Share record.",
+    "isSnippet": false
+  },
+  {
+    "label": "FEEAMOUNT",
+    "insertText": "FEEAMOUNT",
+    "description": "This field stores late charges and lease termination fees on Loan Payment (LP) transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "ESCROWAMOUNT",
+    "insertText": "ESCROWAMOUNT",
+    "description": "This field stores the amount of a payment that the teller applies to an escrow Share record.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTTRANDATE",
+    "insertText": "LASTTRANDATE",
+    "description": "This field stores the value from the Share or Loan record Last Transaction Date field before this transaction posts to the Share or Loan record.",
+    "isSnippet": false
+  },
+  {
+    "label": "MATURITYLOANDUEDATE",
+    "insertText": "MATURITYLOANDUEDATE",
+    "description": "This field stores the value from the Share record Maturity Date field if this is a share transaction, or it stores the value from the Loan record Due Date field if this is a loan transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMMENT",
+    "insertText": "COMMENT",
+    "description": "This field stores the text of a comment transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "BRANCH",
+    "insertText": "BRANCH",
+    "description": "This field stores the branch number associated with the console that initiated the transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "CONSOLENUMBER",
+    "insertText": "CONSOLENUMBER",
+    "description": "This field stores the console number (0–8999) if the transaction is performed from a console; otherwise, it stores 9999",
+    "isSnippet": false
+  },
+  {
+    "label": "BATCHSEQUENCE",
+    "insertText": "BATCHSEQUENCE",
+    "description": "This field stores a number that the system assigns in sequence to each batch job that runs throughout the day, to uniquely identify each transaction with a specific batch job.",
+    "isSnippet": false
+  },
+  {
+    "label": "SALESTAXAMOUNT",
+    "insertText": "SALESTAXAMOUNT",
+    "description": "The amount of sales tax is stored in this field when a payment is applied that includes sales tax, such as for lease loans.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACTIVITYDATE",
+    "insertText": "ACTIVITYDATE",
+    "description": "This field stores the value from the Activity Date field in the Share or Loan record, depending on the type of transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "BILLEDFEEAMOUNT",
+    "insertText": "BILLEDFEEAMOUNT",
+    "description": "This field stores the amount of a partial payment the system applies against the billed fee when a loan has an amount in the Billed Fee Unpaid field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PROCESSORUSER",
+    "insertText": "PROCESSORUSER",
+    "description": "This field stores information saved from the SymXchange Processor User field or from the optional SymConnect User field in the SymConnect message.",
+    "isSnippet": false
+  },
+  {
+    "label": "MEMBERBRANCH",
+    "insertText": "MEMBERBRANCH",
+    "description": "This field is only used by corporate credit unions; it can be blank to indicate that a transaction does not have a member branch number, or you can enter a four-digit number to indicate the branch where the transaction took place.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVAVAILCREDIT",
+    "insertText": "PREVAVAILCREDIT",
+    "description": "This field stores the available credit as calculated at the time the transaction was processed, before it was posted.",
+    "isSnippet": false
+  },
+  {
+    "label": "SUBSOURCE",
+    "insertText": "SUBSOURCE",
+    "description": "This field stores a code that specifies the transaction fee.",
+    "isSnippet": false
+  },
+  {
+    "label": "CONFIRMATIONSEQ",
+    "insertText": "CONFIRMATIONSEQ",
+    "description": "This field stores a number that is generated during posting or memo mode posting to be provided to SymConnect when requested.",
+    "isSnippet": false
+  },
+  {
+    "label": "MICRACCTNUM",
+    "insertText": "MICRACCTNUM",
+    "description": "This field stores the value in the Exception Item record Processor Account field when the draft is an exception, unless custom coding requires it to store a different value.",
+    "isSnippet": false
+  },
+  {
+    "label": "MICRRT",
+    "insertText": "MICRRT",
+    "description": "This field stores the routing and transit (R&T) number when a transaction within a share draft file becomes an exception.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECURRINGTRAN",
+    "insertText": "RECURRINGTRAN",
+    "description": "This field indicates whether the transaction is recurring (based on indicators provided by the network or merchant).",
+    "isSnippet": false
+  },
+  {
+    "label": "FEEEXMTCRTSYAMT",
+    "insertText": "FEEEXMTCRTSYAMT",
+    "description": "This field stores the courtesy pay amount applied at the time as an overdrawn transaction if the ODT Auth/Fee Option field for the source code of the transaction is set to 2, 3, 6, or 7 on the Share record.",
+    "isSnippet": false
+  },
+  {
+    "label": "ESCROWUNPAIDBALCHG",
+    "insertText": "ESCROWUNPAIDBALCHG",
+    "description": "This field displays the amount that the Loan record Escrow Unpaid field has changed.",
+    "isSnippet": false
+  },
+  {
+    "label": "ESCROWAPPLIEDBALCHG",
+    "insertText": "ESCROWAPPLIEDBALCHG",
+    "description": "This field displays the amount that the Loan record Escrow Applied field has changed during a single loan payment. If the amount decreases, the transaction history shows this as a negative amount and an increase shows as a positive amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "UNAPPLIEDPARTIALPMTCHG",
+    "insertText": "UNAPPLIEDPARTIALPMTCHG",
+    "description": "This field stores the transaction activity for each loan payment affecting the Unapplied Partial Payment field and displays the amount in the expanded Transaction record field.",
+    "isSnippet": false
+  },
+  {
+    "label": "FEECOUNTBY",
+    "insertText": "FEECOUNTBY",
+    "description": "The system advances this counter field for NSF or Courtesy Pay fees.",
+    "isSnippet": false
+  },
+  {
+    "label": "FEECOUNTBY",
+    "insertText": "FEECOUNTBY",
+    "description": "The system advances this counter field for NSF or Courtesy Pay fees.",
+    "isSnippet": false
+  },
+  {
+    "label": "LATECHGWAIVEDAMT",
+    "insertText": "LATECHGWAIVEDAMT",
+    "description": "This field tracks the amount of uncollected late charges that have been waived during a loan payment transaction. It lets the system handle adjustments to late charge activity when a previously waived late charge transaction is voided or reversed.",
+    "isSnippet": false
+  },
+  {
+    "label": "LATECHGUNPAIDCHGAMT",
+    "insertText": "LATECHGUNPAIDCHGAMT",
+    "description": "This field stores the amount that the Loan record Late Charge Unpaid field has changed during a single loan payment transaction submitted through teller transactions, batch posting, or an online transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVLATECHGDATE",
+    "insertText": "PREVLATECHGDATE",
+    "description": "The system updates this field with the value of the Loan record's Late Charge Date field when a loan transaction occurs.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVLATECHGACCRUED",
+    "insertText": "PREVLATECHGACCRUED",
+    "description": "This field only applies to a Loan record with the Late Charge Formula parameter set to (5) Wisconsin, and it displays the amount in the Loan record Late Charge Accrued field in before a loan payment transaction takes place.",
+    "isSnippet": false
+  },
+  {
+    "label": "LATECHGFIELDSVALID",
+    "insertText": "LATECHGFIELDSVALID",
+    "description": "This field determines whether to display late charge transaction fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "BALSEGID:1",
+    "insertText": "BALSEGID:1",
+    "description": "This field stores the segment record ID associated with the Loan Segment Transfer (LG), Loan Advance (LA), or New Loan (LN) transaction performed through Teller Transactions for a SymChoice loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "BALSEGPMTCHANGEDATE:1",
+    "insertText": "BALSEGPMTCHANGEDATE:1",
+    "description": "This field stores the payment change date for the segment ID when a Loan Segment Transfer (LG), Loan Advance (LA), or New Loan (LN) transaction is performed through Teller Transactions for a SymChoice loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTEFFECTDATE",
+    "insertText": "INTEFFECTDATE",
+    "description": "This field stores the date to which interest is calculated when processing a transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "BALSEGPREVFIRSTPMTDATE:1",
+    "insertText": "BALSEGPREVFIRSTPMTDATE:1",
+    "description": "This field stores the value of the Segment record’s First Payment Date field at time of transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "DRAFTNUMBER",
+    "insertText": "DRAFTNUMBER",
+    "description": "This field stores the draft number.",
+    "isSnippet": false
+  },
+  {
+    "label": "TRACERNUMBER",
+    "insertText": "TRACERNUMBER",
+    "description": "This field stores the tracer number.",
+    "isSnippet": false
+  },
+  {
+    "label": "DISPOSITIONFEE",
+    "insertText": "DISPOSITIONFEE",
+    "description": "This field stores the disposition fee when you apply a payment that includes a disposition fee for lease loans.",
+    "isSnippet": false
+  },
+  {
+    "label": "TERMINATIONFEE",
+    "insertText": "TERMINATIONFEE",
+    "description": "This field stores the termination fee when you apply a payment that includes a termination fee for lease loans.",
+    "isSnippet": false
+  },
+  {
+    "label": "MISCEXPENSEAMOUNT",
+    "insertText": "MISCEXPENSEAMOUNT",
+    "description": "This field records the transaction activity for each Loan Balance Payment (LB) or Loan Balance Transfer (BG) transaction that affects a Loan Bankruptcy PrePetition Bal record with the Amount Code field set to (6) Misc Expense.",
+    "isSnippet": false
+  },
+  {
+    "label": "SUBSOURCEDESCR",
+    "insertText": "SUBSOURCEDESCR",
+    "description": "This field returns descriptions for each transaction, based on the Source Code and Sub Source Code field values.",
+    "isSnippet": false
+  },
+  {
+    "label": "TRANAMOUNT",
+    "insertText": "TRANAMOUNT",
+    "description": "This field stores the sum of the absolute values of the Balance Change, Interest/Penalty, and Fee Amount fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "CONFIRMATIONNUMBER",
+    "insertText": "CONFIRMATIONNUMBER",
+    "description": "This field displays the four-digit value in the User Number field and the 10-digit value in the Confirmation Sequence field.",
+    "isSnippet": false
+  },
+  {
+    "label": "STMTDESC:1–STMTDESC:4",
+    "insertText": "STMTDESC:1–STMTDESC:4",
+    "description": "These fields store the same information that is on the statement in the description column with possible minor differences in the internal spacing and where the fields or lines are broken for continuation of the description.",
+    "isSnippet": false
+  },
+  {
+    "label": "CALCMICRRT",
+    "insertText": "CALCMICRRT",
+    "description": "This field stores the routing and transit (R&T) number when the MICR R&T Number field stores exactly eight characters.",
+    "isSnippet": false
+  }
+]
+ 

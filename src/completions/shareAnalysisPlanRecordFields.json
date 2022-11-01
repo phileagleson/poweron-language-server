@@ -1,0 +1,728 @@
+[
+  {
+    "label": "DESCRIPTION",
+    "insertText": "DESCRIPTION",
+    "description": "This field specifies the description of this analysis plan.",
+    "isSnippet": false
+  },
+  {
+    "label": "MINIMUMCHARGE",
+    "insertText": "MINIMUMCHARGE",
+    "description": "This field specifies the minimum charge for account analysis.",
+    "isSnippet": false
+  },
+  {
+    "label": "MAXIMUMCHARGE",
+    "insertText": "MAXIMUMCHARGE",
+    "description": "This field specifies the maximum charge for account analysis.",
+    "isSnippet": false
+  },
+  {
+    "label": "MAINTENANCECHARGE",
+    "insertText": "MAINTENANCECHARGE",
+    "description": "This field specifies the maintenance charge for account analysis.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEFINEDCODE",
+    "insertText": "DEFINEDCODE",
+    "description": "This field stores the status of this analysis plan.",
+    "isSnippet": false
+  },
+  {
+    "label": "EFFECTIVEDATE",
+    "insertText": "EFFECTIVEDATE",
+    "description": "This field stores the date the Analysis Plan record takes effect.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXPIRATIONDATE",
+    "insertText": "EXPIRATIONDATE",
+    "description": "This field stores the date the Analysis Plan record expires.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "Symitar Quest stores the system date in this field when you create, change, or save the Share Analysis Plan record.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHAMOUNTFREE",
+    "insertText": "CASHAMOUNTFREE",
+    "description": "This field determines the amount of accumulated cash transactions that are free of charge.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHRATE",
+    "insertText": "CASHRATE",
+    "description": "This field specifies the rate to apply to the Cash Amount Total field to calculate the monthly cash fee.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHATMTOTALS",
+    "insertText": "CASHATMTOTALS",
+    "description": "This field specifies whether ATM transactions should be included in the monthly cash amount totals.",
+    "isSnippet": false
+  },
+  {
+    "label": "EARNRATEMETHOD",
+    "insertText": "EARNRATEMETHOD",
+    "description": "This field specifies how to calculate earnings credit based on the tiered balances and rates.",
+    "isSnippet": false
+  },
+  {
+    "label": "TIER1BALANCE",
+    "insertText": "TIER1BALANCE",
+    "description": "This field specifies the minimum investable balance for using the associated earning rate field: Tier 1 Earn Rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "TIER2BALANCE",
+    "insertText": "TIER2BALANCE",
+    "description": "This field specifies the minimum investable balance for using the associated earning rate field: Tier 2 Earn Rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "TIER3BALANCE",
+    "insertText": "TIER3BALANCE",
+    "description": "This field specifies the minimum investable balance for using the associated earning rate field: Tier 3 Earn Rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "TIER4BALANCE",
+    "insertText": "TIER4BALANCE",
+    "description": "This field specifies the minimum investable balance for using the associated earning rate field: Tier 4 Earn Rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "TIER1EARNRATE",
+    "insertText": "TIER1EARNRATE",
+    "description": "This field specifies the earning rate for accounts that have the minimum investable balance defined in the associated tier balance field: Tier 1 Balance.",
+    "isSnippet": false
+  },
+  {
+    "label": "TIER2EARNRATE",
+    "insertText": "TIER2EARNRATE",
+    "description": "This field specifies the earning rate for accounts that have the minimum investable balance defined in the associated tier balance field: Tier 2 Balance.",
+    "isSnippet": false
+  },
+  {
+    "label": "TIER3EARNRATE",
+    "insertText": "TIER3EARNRATE",
+    "description": "This field specifies the earning rate for accounts that have the minimum investable balance defined in the associated tier balance field: Tier 3 Balance.",
+    "isSnippet": false
+  },
+  {
+    "label": "TIER4EARNRATE",
+    "insertText": "TIER4EARNRATE",
+    "description": "This field specifies the earning rate for accounts that have the minimum investable balance defined in the associated tier balance field: Tier 4 Balance.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:1",
+    "insertText": "CHARGE:1",
+    "description": "This field specifies the amount charged for deposits.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:1",
+    "insertText": "CHARGETYPE:1",
+    "description": "This field specifies the amount charged for deposits.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:2",
+    "insertText": "CHARGE:2",
+    "description": "This field specifies the amount charged for deposit corrections.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:2",
+    "insertText": "CHARGETYPE:2",
+    "description": "This field specifies the amount charged for deposit corrections.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:3",
+    "insertText": "CHARGE:3",
+    "description": "This field specifies the amount charged for returned deposits.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:3",
+    "insertText": "CHARGETYPE:3",
+    "description": "This field specifies the amount charged for returned deposits.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:4",
+    "insertText": "CHARGE:4",
+    "description": "This field specifies the amount charged for drafts.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:4",
+    "insertText": "CHARGETYPE:4",
+    "description": "This field specifies the amount charged for drafts.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:5",
+    "insertText": "CHARGE:5",
+    "description": "This field specifies the amount charged for bulk transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:5",
+    "insertText": "CHARGETYPE:5",
+    "description": "This field specifies the amount charged for bulk transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:6",
+    "insertText": "CHARGE:6",
+    "description": "This field specifies the amount charged for change orders.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:6",
+    "insertText": "CHARGETYPE:6",
+    "description": "This field specifies the amount charged for change orders.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:7",
+    "insertText": "CHARGE:7",
+    "description": "This field specifies the amount charged for NSF items.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:7",
+    "insertText": "CHARGETYPE:7",
+    "description": "This field specifies the amount charged for NSF items.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:8",
+    "insertText": "CHARGE:8",
+    "description": "This field specifies the amount charged for sweeps.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:8",
+    "insertText": "CHARGETYPE:8",
+    "description": "This field specifies the amount charged for sweeps.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:9",
+    "insertText": "CHARGE:9",
+    "description": "This field specifies the amount charged for stop payments.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:9",
+    "insertText": "CHARGETYPE:9",
+    "description": "This field specifies the amount charged for stop payments.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:10",
+    "insertText": "CHARGE:10",
+    "description": "This field specifies the amount charged for account printouts.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:10",
+    "insertText": "CHARGETYPE:10",
+    "description": "This field specifies the amount charged for account printouts.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:11",
+    "insertText": "CHARGE:11",
+    "description": "This field specifies the amount charged for statement balancing.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:11",
+    "insertText": "CHARGETYPE:11",
+    "description": "This field specifies the amount charged for statement balancing.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:12",
+    "insertText": "CHARGE:12",
+    "description": "This field specifies the amount charged for statement copies.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:12",
+    "insertText": "CHARGETYPE:12",
+    "description": "This field specifies the amount charged for statement copies.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:13",
+    "insertText": "CHARGE:13",
+    "description": "This field specifies the amount charged for check copies.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:13",
+    "insertText": "CHARGETYPE:13",
+    "description": "This field specifies the amount charged for check copies.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:14",
+    "insertText": "CHARGE:14",
+    "description": "This field specifies the amount charged for primary check items.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:14",
+    "insertText": "CHARGETYPE:14",
+    "description": "This field specifies the amount charged for primary check items.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:15",
+    "insertText": "CHARGE:15",
+    "description": "This field specifies the amount charged for secondary check items.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:15",
+    "insertText": "CHARGETYPE:15",
+    "description": "This field specifies the amount charged for secondary check items.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:16",
+    "insertText": "CHARGE:16",
+    "description": "This field specifies the amount charged for money orders.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:16",
+    "insertText": "CHARGETYPE:16",
+    "description": "This field specifies the amount charged for money orders.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:17",
+    "insertText": "CHARGE:17",
+    "description": "This field specifies the amount charged for wire transfers coming in.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:17",
+    "insertText": "CHARGETYPE:17",
+    "description": "This field specifies the amount charged for wire transfers coming in.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:18",
+    "insertText": "CHARGE:18",
+    "description": "This field specifies the amount charged for wire transfers going out.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:18",
+    "insertText": "CHARGETYPE:18",
+    "description": "This field specifies the amount charged for wire transfers going out.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:19",
+    "insertText": "CHARGE:19",
+    "description": "This field specifies the amount charged for overdraft transfers.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:19",
+    "insertText": "CHARGETYPE:19",
+    "description": "This field specifies the amount charged for overdraft transfers.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:20",
+    "insertText": "CHARGE:20",
+    "description": "This field specifies the amount charged for courtesy payments.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:20",
+    "insertText": "CHARGETYPE:20",
+    "description": "This field specifies the amount charged for courtesy payments.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:21",
+    "insertText": "CHARGE:21",
+    "description": "This field specifies the number of ACH debit items the account can have before a charge is applied.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:21",
+    "insertText": "CHARGETYPE:21",
+    "description": "This field specifies the number of ACH debit items the account can have before a charge is applied.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:22",
+    "insertText": "CHARGE:22",
+    "description": "This field specifies the amount charged for ACH credit items.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:22",
+    "insertText": "CHARGETYPE:22",
+    "description": "This field specifies the amount charged for ACH credit items.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:23",
+    "insertText": "CHARGE:23",
+    "description": "This field specifies the amount charged for ACH origination debit items.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:23",
+    "insertText": "CHARGETYPE:23",
+    "description": "This field specifies the amount charged for ACH origination debit items.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:24",
+    "insertText": "CHARGE:24",
+    "description": "This field specifies the amount charged for ACH origination credit items.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:24",
+    "insertText": "CHARGETYPE:24",
+    "description": "This field specifies the amount charged for ACH origination credit items.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:25",
+    "insertText": "CHARGE:25",
+    "description": "This field specifies the amount charged for checks received.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:25",
+    "insertText": "CHARGETYPE:25",
+    "description": "This field specifies the amount charged for checks received.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:26",
+    "insertText": "CHARGE:26",
+    "description": "This field specifies the amount charged for disbursed on-us items.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:26",
+    "insertText": "CHARGETYPE:26",
+    "description": "This field specifies the amount charged for disbursed on-us items.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:27",
+    "insertText": "CHARGE:27",
+    "description": "This field specifies the amount charged for lobby visits.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:27",
+    "insertText": "CHARGETYPE:27",
+    "description": "This field specifies the amount charged for lobby visits.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:28",
+    "insertText": "CHARGE:28",
+    "description": "This field specifies the amount charged for loose coin transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:28",
+    "insertText": "CHARGETYPE:28",
+    "description": "This field specifies the amount charged for loose coin transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:29",
+    "insertText": "CHARGE:29",
+    "description": "This field specifies the amount charged for rolled coin transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:29",
+    "insertText": "CHARGETYPE:29",
+    "description": "This field specifies the amount charged for rolled coin transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:30",
+    "insertText": "CHARGE:30",
+    "description": "This field specifies the amount charged for loose currency transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:30",
+    "insertText": "CHARGETYPE:30",
+    "description": "This field specifies the amount charged for loose currency transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:31",
+    "insertText": "CHARGE:31",
+    "description": "This field specifies the amount charged for strap currency.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:31",
+    "insertText": "CHARGETYPE:31",
+    "description": "This field specifies the amount charged for strap currency.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:32",
+    "insertText": "CHARGE:32",
+    "description": "This field specifies the amount charged for deposited on-us items.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:32",
+    "insertText": "CHARGETYPE:32",
+    "description": "This field specifies the amount charged for deposited on-us items.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:1",
+    "insertText": "FREE:1",
+    "description": "This field specifies the amount charged for deposits.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:2",
+    "insertText": "FREE:2",
+    "description": "This field specifies the amount charged for deposit corrections.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:3",
+    "insertText": "FREE:3",
+    "description": "This field specifies the amount charged for returned deposits.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:4",
+    "insertText": "FREE:4",
+    "description": "This field specifies the amount charged for drafts.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:5",
+    "insertText": "FREE:5",
+    "description": "This field specifies the amount charged for bulk transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:6",
+    "insertText": "FREE:6",
+    "description": "This field specifies the amount charged for change orders.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:7",
+    "insertText": "FREE:7",
+    "description": "This field specifies the amount charged for NSF items.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:8",
+    "insertText": "FREE:8",
+    "description": "This field specifies the amount charged for sweeps.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:9",
+    "insertText": "FREE:9",
+    "description": "This field specifies the amount charged for stop payments.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:10",
+    "insertText": "FREE:10",
+    "description": "This field specifies the amount charged for account printouts.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:11",
+    "insertText": "FREE:11",
+    "description": "This field specifies the amount charged for statement balancing.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:12",
+    "insertText": "FREE:12",
+    "description": "This field specifies the amount charged for statement copies.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:13",
+    "insertText": "FREE:13",
+    "description": "This field specifies the amount charged for check copies.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:14",
+    "insertText": "FREE:14",
+    "description": "This field specifies the amount charged for primary check items.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:15",
+    "insertText": "FREE:15",
+    "description": "This field specifies the amount charged for secondary check items.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:16",
+    "insertText": "FREE:16",
+    "description": "This field specifies the amount charged for money orders.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:17",
+    "insertText": "FREE:17",
+    "description": "This field specifies the amount charged for wire transfers coming in.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:18",
+    "insertText": "FREE:18",
+    "description": "This field specifies the amount charged for wire transfers going out.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:19",
+    "insertText": "FREE:19",
+    "description": "This field specifies the amount charged for overdraft transfers.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:20",
+    "insertText": "FREE:20",
+    "description": "This field specifies the amount charged for courtesy payments.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:21",
+    "insertText": "FREE:21",
+    "description": "This field specifies the number of ACH debit items the account can have before a charge is applied.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:22",
+    "insertText": "FREE:22",
+    "description": "This field specifies the amount charged for ACH credit items.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:23",
+    "insertText": "FREE:23",
+    "description": "This field specifies the amount charged for ACH origination debit items.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:24",
+    "insertText": "FREE:24",
+    "description": "This field specifies the amount charged for ACH origination credit items.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:25",
+    "insertText": "FREE:25",
+    "description": "This field specifies the amount charged for checks received.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:26",
+    "insertText": "FREE:26",
+    "description": "This field specifies the amount charged for disbursed on-us items.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:27",
+    "insertText": "FREE:27",
+    "description": "This field specifies the amount charged for lobby visits.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:28",
+    "insertText": "FREE:28",
+    "description": "This field specifies the amount charged for loose coin transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:29",
+    "insertText": "FREE:29",
+    "description": "This field specifies the amount charged for rolled coin transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:30",
+    "insertText": "FREE:30",
+    "description": "This field specifies the amount charged for loose currency transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:31",
+    "insertText": "FREE:31",
+    "description": "This field specifies the amount charged for strap currency.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:32",
+    "insertText": "FREE:32",
+    "description": "This field specifies the amount charged for deposited on-us items.",
+    "isSnippet": false
+  },
+  {
+    "label": "PLAN",
+    "insertText": "PLAN",
+    "description": "This field stores the credit union-defined analysis plan type code (0-99) that you enter when you create the Analysis Plan record.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGE:33 - CHARGE:100",
+    "insertText": "CHARGE:33 - CHARGE:100",
+    "description": "These fields specify the amount charged for defined items.",
+    "isSnippet": false
+  },
+  {
+    "label": "FREE:33 - FREE:100",
+    "insertText": "FREE:33 - FREE:100",
+    "description": "These fields specify the amount charged for defined items.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHARGETYPE:33 - CHARGETYPE:100",
+    "insertText": "CHARGETYPE:33 - CHARGETYPE:100",
+    "description": "These fields specify the amount charged for defined items.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "This value in this field can be used as a unique identification of a specific record.",
+    "isSnippet": false
+  }
+]

@@ -1,0 +1,2012 @@
+[
+  {
+    "label": "REQUESTNUMBER",
+    "insertText": "REQUESTNUMBER",
+    "description": "This field is used for all credit bureaus. The system assigns this number when you create a credit report request. You cannot perform file maintenance on this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "USER",
+    "insertText": "USER",
+    "description": "This field is used for all credit bureaus. The system updates this field with the user number of the person who creates a credit report request. You cannot perform file maintenance on this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "REQUESTDATE",
+    "insertText": "REQUESTDATE",
+    "description": "This field is used for all credit bureaus. The system updates this field with the current AIX system date when you create a credit report request. You cannot perform file maintenance on this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "REQUESTTIME",
+    "insertText": "REQUESTTIME",
+    "description": "This field is used for all credit bureaus. The system updates this field with the current system time when you create a credit report request. You cannot perform file maintenance on this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "QUEUECODE",
+    "insertText": "QUEUECODE",
+    "description": "This field is used for all credit bureaus. This field lets you specify when a credit report request should be queued and sent to a credit bureau.",
+    "isSnippet": false
+  },
+  {
+    "label": "QUEUEAFTERDATE",
+    "insertText": "QUEUEAFTERDATE",
+    "description": "This field is used for all credit bureaus. If you specify (1) After at the Queue Code field, you can enter the date on which or after which the system should queue the credit report request to be sent to the credit bureau. You cannot access this field if you specify (0) Immediate at the Queue Code field.",
+    "isSnippet": false
+  },
+  {
+    "label": "QUEUEAFTERTIME",
+    "insertText": "QUEUEAFTERTIME",
+    "description": "This field is used for all credit bureaus. If you specify (1) After at the Queue Code field, you can enter the time of day after which the system should queue the credit report request to be sent to the credit bureau. You cannot access this field if you specify (0) Immediate at the Queue Code field.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETIONCODE",
+    "insertText": "COMPLETIONCODE",
+    "description": "This field is used for all credit bureaus. The system updates this field with the current status of the credit report request:",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETIONDATE",
+    "insertText": "COMPLETIONDATE",
+    "description": "This field is used for all credit bureaus. The system updates this field with the current system date when the credit bureau responds to the credit report request. You cannot perform file maintenance on this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETIONTIME",
+    "insertText": "COMPLETIONTIME",
+    "description": "This field is used for all credit bureaus. The system updates this field with the current system time when the credit bureau responds to the credit report request. You cannot perform file maintenance on this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUREAU",
+    "insertText": "BUREAU",
+    "description": "This field is used for all credit bureaus. This field identifies the credit bureau from which you request the credit report. Choose one of the following:",
+    "isSnippet": false
+  },
+  {
+    "label": "BIRTHDATE",
+    "insertText": "BIRTHDATE",
+    "description": "This field is used for all credit bureaus. Enter the subject's birth date.",
+    "isSnippet": false
+  },
+  {
+    "label": "SPOUSEBIRTHDATE",
+    "insertText": "SPOUSEBIRTHDATE",
+    "description": "Enter the subject spouse's birth date.",
+    "isSnippet": false
+  },
+  {
+    "label": "INCOME",
+    "insertText": "INCOME",
+    "description": "This field is used only for TransUnion. For field values for TransUnion, see Income in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "MULTIPLEFILE",
+    "insertText": "MULTIPLEFILE",
+    "description": "This field is used for all credit bureaus. The system updates this field with 0 if the credit report request does not include multiple files, or 1 if the credit report request includes multiple files. You cannot perform file maintenance on this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOANTERMS",
+    "insertText": "LOANTERMS",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For field values for Experian, see Loan Terms in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOANAMOUNT",
+    "insertText": "LOANAMOUNT",
+    "description": "This field is used only for Experian and TransUnion. Enter the amount of the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "INQUIRYTYPE",
+    "insertText": "INQUIRYTYPE",
+    "description": "Only Experian, TransUnion, and ChexSystems use this field. Equifax does not use this field. For field values for Experian, see Inquiry Type in Credit Report Record Fields: Experian. For field values for TransUnion, see Inquiry Type in Credit Report Record Fields: TransUnion. For field values for ChexSystems, see Inquiry Type in Credit Report Record Fields: ChexSystems.",
+    "isSnippet": false
+  },
+  {
+    "label": "OPERATORCODE",
+    "insertText": "OPERATORCODE",
+    "description": "This field is a required entry for Experian. It is not used for Equifax or TransUnion. For field values, see Operator Code in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "ADDRVERIFYACCT",
+    "insertText": "ADDRVERIFYACCT",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For field values, see Addr Verification in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "MONTHSCOUNTINQ",
+    "insertText": "MONTHSCOUNTINQ",
+    "description": "This field is used only for Equifax. It is not used for Experian or TransUnion. For field values, see Months Count Inq in Credit Report Record Fields: Equifax.",
+    "isSnippet": false
+  },
+  {
+    "label": "MONTHSCOUNTMAXDQ",
+    "insertText": "MONTHSCOUNTMAXDQ",
+    "description": "This field is used only for Equifax. It is not used for Experian or TransUnion. For field values, see Months Count Max Delinq in Credit Report Record Fields: Equifax.",
+    "isSnippet": false
+  },
+  {
+    "label": "JOINTFILEACCESS",
+    "insertText": "JOINTFILEACCESS",
+    "description": "Important: This field was used in a version of Equifax (prior to version 5.0) that has been retired.",
+    "isSnippet": false
+  },
+  {
+    "label": "MEMNUMPLAINDESC",
+    "insertText": "MEMNUMPLAINDESC",
+    "description": "Important: This field was used in a version of Equifax (prior to version 5.0) that has been retired.",
+    "isSnippet": false
+  },
+  {
+    "label": "HAWKINDICATOR",
+    "insertText": "HAWKINDICATOR",
+    "description": "This field is used only for TransUnion. It is not used for Equifax or Experian. For field values, see Inquiry Type in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALIAS:1",
+    "insertText": "ALIAS:1",
+    "description": "This field is used only for TransUnion. It is not used for Equifax or Experian. For field values, see Alias 1 in Credit Report Record Fields: TransUnion",
+    "isSnippet": false
+  },
+  {
+    "label": "ALIAS:2",
+    "insertText": "ALIAS:2",
+    "description": "This field is used only for TransUnion. It is not used for Equifax or Experian. For field values, see Alias 2 in Credit Report Record Fields: TransUnion",
+    "isSnippet": false
+  },
+  {
+    "label": "ALIAS:3",
+    "insertText": "ALIAS:3",
+    "description": "This field is used only for TransUnion. It is not used for Equifax or Experian. For field values, see Alias 3 in Credit Report Record Fields: TransUnion",
+    "isSnippet": false
+  },
+  {
+    "label": "OPTFEATURECODE",
+    "insertText": "OPTFEATURECODE",
+    "description": "This field is used for all credit bureaus. For field values for Equifax, see Optional Feature Code in Credit Report Record Fields: Equifax. For field values for Experian, see Optional Feature Code in Credit Report Record Fields: Experian. For field values for TransUnion, see Optional Feature Code in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "ECOAINQTYPE",
+    "insertText": "ECOAINQTYPE",
+    "description": "This field is used for all credit bureaus. For field values for Equifax, see ECOA Inquiry Type in Credit Report Record Fields: Equifax. For field values for Experian, see ECOA Inquiry Type in Credit Report Record Fields: Experian. For field values for TransUnion, see ECOA Inquiry Type in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "FIRSTNAME",
+    "insertText": "FIRSTNAME",
+    "description": "All credit bureaus use this field. It is required for the consumer ChexSystems suite and consumer Address Analysis inquiries; it is optional, though recommended, for all other types of inquiries. Choose one of the following:",
+    "isSnippet": false
+  },
+  {
+    "label": "MIDDLENAME",
+    "insertText": "MIDDLENAME",
+    "description": "All credit bureaus use this field. It is optional for all ChexSystems (FIS) consumer inquiries. Enter the subject's middle name (up to 10 characters).",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTNAME",
+    "insertText": "LASTNAME",
+    "description": "This field is a required entry for all credit bureaus with one exception. While FIS requires it for the consumer ChexSystems suite and consumer Address Analysis inquiries, it is optional, though recommended, for all other types of FIS inquiries. Enter the subject's last name (up to 20 characters).",
+    "isSnippet": false
+  },
+  {
+    "label": "NAMESUFFIX",
+    "insertText": "NAMESUFFIX",
+    "description": "This field is used for all credit bureaus. For entry options for Equifax, see Name Suffix in Credit Report Record Fields: Equifax. For entry options for Experian, see Name Suffix in Credit Report Record Fields: Experian. For entry options for TransUnion, see Name Suffix in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "SSN",
+    "insertText": "SSN",
+    "description": "This field is used for all credit bureaus. Enter the subject's Social Security Number or individual Taxpayer Identification Number.",
+    "isSnippet": false
+  },
+  {
+    "label": "EMPNAME",
+    "insertText": "EMPNAME",
+    "description": "This field is used for all credit bureaus. Choose one of the following:",
+    "isSnippet": false
+  },
+  {
+    "label": "EMPHOUSENUMBER",
+    "insertText": "EMPHOUSENUMBER",
+    "description": "This field is used only for TransUnion. It is not used for Equifax or Experian. For entry options, see Employer House Number in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "EMPSTREET",
+    "insertText": "EMPSTREET",
+    "description": "This field is used only for Experian and TransUnion. It is not used for Equifax. For entry options for Experian, see Employer Street in Credit Report Record Fields: Experian. For entry options for TransUnion, see Employer Street in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "EMPCITY",
+    "insertText": "EMPCITY",
+    "description": "This field is used only for Experian and TransUnion. It is not used for Equifax. Enter the city of the subject's employer (up to 20 characters).",
+    "isSnippet": false
+  },
+  {
+    "label": "EMPSTATE",
+    "insertText": "EMPSTATE",
+    "description": "This field is used only for Experian and TransUnion. It is not used for Equifax. Enter the 2-character U.S. Postal Service code for the state in the employer's address.",
+    "isSnippet": false
+  },
+  {
+    "label": "EMPZIPCODE",
+    "insertText": "EMPZIPCODE",
+    "description": "This field is used only for Experian and TransUnion. It is not used for Equifax. Enter the ZIP Code for the subject's employer.",
+    "isSnippet": false
+  },
+  {
+    "label": "OCCUPATION",
+    "insertText": "OCCUPATION",
+    "description": "This field is used only for Equifax and TransUnion. It is not used for Experian. Enter the subject's occupation (up to 20 characters).",
+    "isSnippet": false
+  },
+  {
+    "label": "DATEHIRED",
+    "insertText": "DATEHIRED",
+    "description": "This field is used only for TransUnion. It is not used for Equifax or Experian. Enter the date the applicant was hired by the employer (YYMM).",
+    "isSnippet": false
+  },
+  {
+    "label": "DATESEPARATED",
+    "insertText": "DATESEPARATED",
+    "description": "This field is used only for TransUnion. It is not used for Equifax or Experian. If applicable, enter the date the applicant was separated from the employer (YYMM).",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYBASIS",
+    "insertText": "PAYBASIS",
+    "description": "This field is used only for TransUnion. It is not used for Equifax or Experian. For entry options, see Pay Basis in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "SPOUSEFIRST",
+    "insertText": "SPOUSEFIRST",
+    "description": "This field is used for all credit bureaus. Choose one of the following:",
+    "isSnippet": false
+  },
+  {
+    "label": "SPOUSEMIDDLE",
+    "insertText": "SPOUSEMIDDLE",
+    "description": "This field is used only for Experian and TransUnion. It is not used for Equifax. Enter the subject spouse's middle name (up to 10 characters).",
+    "isSnippet": false
+  },
+  {
+    "label": "SPOUSELAST",
+    "insertText": "SPOUSELAST",
+    "description": "This field is used only for Equifax and TransUnion. It is not used for Experian. Enter the subject spouse's last name (up to 20 characters).",
+    "isSnippet": false
+  },
+  {
+    "label": "SPOUSESUFFIX",
+    "insertText": "SPOUSESUFFIX",
+    "description": "This field is used only for Experian and TransUnion. It is not used for Equifax. For entry options, see Spouse Suffix in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "SPOUSESSN",
+    "insertText": "SPOUSESSN",
+    "description": "This field is used for all credit bureaus. Enter the subject spouse's Social Security Number or individual Taxpayer Identification Number.",
+    "isSnippet": false
+  },
+  {
+    "label": "SPOUSEEMPNAME",
+    "insertText": "SPOUSEEMPNAME",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. Choose one of the following:",
+    "isSnippet": false
+  },
+  {
+    "label": "SPOUSEEMPSTREET",
+    "insertText": "SPOUSEEMPSTREET",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. Enter the street address of the subject spouse's employer (up to 30 characters).",
+    "isSnippet": false
+  },
+  {
+    "label": "EMPCITY",
+    "insertText": "EMPCITY",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. Enter the city of the subject spouse's employer (up to 20 characters).",
+    "isSnippet": false
+  },
+  {
+    "label": "SPOUSEEMPSTATE",
+    "insertText": "SPOUSEEMPSTATE",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. Enter the two-character U.S. Postal Service code for the state of the subject spouse's employer.",
+    "isSnippet": false
+  },
+  {
+    "label": "SPOUSEEMPZIPCODE",
+    "insertText": "SPOUSEEMPZIPCODE",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. Enter the ZIP Code for the subject spouse's employer.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURRADDRHOUSENUMBER",
+    "insertText": "CURRADDRHOUSENUMBER",
+    "description": "This field is used only for Equifax and TransUnion. It is not used for Experian. For entry options for Equifax, see Curr Address House Number in Credit Report Record Fields: Equifax. For entry options for TransUnion, see Curr Address House Number in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURRADDRDIRECTIONAL",
+    "insertText": "CURRADDRDIRECTIONAL",
+    "description": "This field is used only for TransUnion. It is not used for Equifax or Experian. For entry options, see Curr Address Directional in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURRADDRSTREETNAME",
+    "insertText": "CURRADDRSTREETNAME",
+    "description": "FIS requires this field for all Consumer Chex Systems suite requests and ignores it for all Business requests. For entry options for Equifax, see Curr Address Street Name in Credit Report Record Fields: Equifax. For entry options for Experian, see Curr Address Street Name in Credit Report Record Fields: Experian. For entry options for TransUnion, see Curr Address Street Name in Credit Report Record Fields: TransUnion. For entry options see Curr Address Street Name in Credit Report Record Fields: ChexSystems.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURRADDRSTREETTYPE",
+    "insertText": "CURRADDRSTREETTYPE",
+    "description": "This field is used only for Equifax and TransUnion. It is not used for Experian. For entry options for Equifax, see Curr Address Street Type in Credit Report Record Fields: Equifax. For entry options for TransUnion, see Curr Address Street Type in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURRADDRQUADRANT",
+    "insertText": "CURRADDRQUADRANT",
+    "description": "This field is used only for Equifax and TransUnion. It is not used for Experian. For entry options for Equifax, see Curr Address Quadrant in Credit Report Record Fields: Equifax. For entry options for TransUnion, see Curr Address Quadrant in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURRADDRUNITTYPE",
+    "insertText": "CURRADDRUNITTYPE",
+    "description": "This field is used only for Equifax and TransUnion. It is not used for Experian. Enter the type of unit in the subject's current address (APT, BUILDING, or SUITE, for example).",
+    "isSnippet": false
+  },
+  {
+    "label": "CURRADDRUNITNUMBER",
+    "insertText": "CURRADDRUNITNUMBER",
+    "description": "This field is used only for Equifax and TransUnion. It is not used for Experian. Enter the unit number (apartment, building, or suite number) in the subject's current address (up to 10 characters).",
+    "isSnippet": false
+  },
+  {
+    "label": "CURRADDRCITY",
+    "insertText": "CURRADDRCITY",
+    "description": "This field is a required entry for Equifax, TransUnion, and all Consumer ChexSystems suite requests. It is also used for Experian. Enter the city in the subject's current address (up to 20 characters).",
+    "isSnippet": false
+  },
+  {
+    "label": "CURRADDRSTATE",
+    "insertText": "CURRADDRSTATE",
+    "description": "This field is a required entry for Equifax, TransUnion, and all Consumer ChexSystems suite requests. Experian also uses this field, but it is not required. Enter the two-character U.S. Postal Service code for the state in the subject's current address. If copying from a Name record where the state name is spelled out, the system translates the state name into the two-character code.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURRADDRZIPCODE",
+    "insertText": "CURRADDRZIPCODE",
+    "description": "This field is a required entry for Equifax, TransUnion, and all Consumer ChexSystems suite requests. Experian also uses this field, but does not require its use. Enter the ZIP Code in the subject's current address (xxxxx or xxxxx-xxxx). The Credit Retrieval System removes the hyphen if you use the 9-digit format.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURRADDRHOMEPHONE",
+    "insertText": "CURRADDRHOMEPHONE",
+    "description": "Equifax, Transunion, and ChexSystems requests use this field. Experian does not use this field. Enter the phone number at the subject's current address (xxx-xxxx or xxxxxxx or xxx-xxx-xxxx or xxxxxxxxxx). If you enter the number with a hyphen or hyphens, the CRS removesthe hyphen or hyphens whatever format you use",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVADDR1HOUSENUMBER",
+    "insertText": "PREVADDR1HOUSENUMBER",
+    "description": "This field is used only for Equifax and TransUnion. It is not used for Experian. For entry options for Equifax, see Prev Addr 1 House Number in Credit Report Record Fields: Equifax. For entry options for TransUnion, see Prev Addr 1 House Number in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVADDR1DIRECTIONAL",
+    "insertText": "PREVADDR1DIRECTIONAL",
+    "description": "This field is used only for TransUnion. It is not used for Equifax or Experian. For entry options, see Prev Addr 1 Directional in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVADDR1STREETNAME",
+    "insertText": "PREVADDR1STREETNAME",
+    "description": "This field is used for all credit bureaus. For entry options for Equifax, see Prev Addr 1 Street Name in Credit Report Record Fields: Equifax. For entry options for Experian, see Prev Addr 1 Street Name in Credit Report Record Fields: Experian. For entry options for TransUnion, see Prev Addr 1 Street Name in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVADDR1STREETTYPE",
+    "insertText": "PREVADDR1STREETTYPE",
+    "description": "This field is used only for Equifax and TransUnion. It is not used for Experian. For entry options for Equifax, see Prev Addr 1 Street Type in Credit Report Record Fields: Equifax. For entry options for TransUnion, see Prev Addr 1 Street Type in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVADDR1QUADRANT",
+    "insertText": "PREVADDR1QUADRANT",
+    "description": "This field is used only for Equifax and TransUnion. It is not used for Experian. For entry options for Equifax, see Prev Addr 1 Quadrant in Credit Report Record Fields: Equifax. For entry options for TransUnion, see Prev Addr 1 Quadrant in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVADDR1UNITTYPE",
+    "insertText": "PREVADDR1UNITTYPE",
+    "description": "This field is used only for Equifax and TransUnion. It is not used for Experian. Enter the type of unit in the subject's previous address (APT, BUILDING, or SUITE, for example).",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVADDR1UNITNUMBER",
+    "insertText": "PREVADDR1UNITNUMBER",
+    "description": "This field is used only for Equifax and TransUnion. It is not used for Experian. Enter the unit number (apartment, building, or suite number) in the subject's previous address (up to 10 characters).",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVADDR1CITY",
+    "insertText": "PREVADDR1CITY",
+    "description": "This field is used for all credit bureaus. Enter the city in the subject's previous address (up to 20 characters).",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVADDR1STATE",
+    "insertText": "PREVADDR1STATE",
+    "description": "This field is used for all credit bureaus. Enter the two-character U.S. Postal Service code for the state in the subject's previous address.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVADDR1ZIPCODE",
+    "insertText": "PREVADDR1ZIPCODE",
+    "description": "This field is used for all credit bureaus. Enter the ZIP Code in the subject's previous address (xxxxx or xxxxx-xxxx).",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVADDR2HOUSENUMBER",
+    "insertText": "PREVADDR2HOUSENUMBER",
+    "description": "This field is not currently used.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVADDR2DIRECTIONAL",
+    "insertText": "PREVADDR2DIRECTIONAL",
+    "description": "This field is not currently used.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVADDR2STREETNAME",
+    "insertText": "PREVADDR2STREETNAME",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. Choose one of the following:",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVADDR2STREETTYPE",
+    "insertText": "PREVADDR2STREETTYPE",
+    "description": "This field is not currently used.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVADDR2QUADRANT",
+    "insertText": "PREVADDR2QUADRANT",
+    "description": "This field is not currently used.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVADDR2UNITTYPE",
+    "insertText": "PREVADDR2UNITTYPE",
+    "description": "This field is not currently used.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVADDR2UNITNUMBER",
+    "insertText": "PREVADDR2UNITNUMBER",
+    "description": "This field is not currently used.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVADDR2CITY",
+    "insertText": "PREVADDR2CITY",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. Enter the city in a second previous address for the subject (up to 20 characters).",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVADDR2STATE",
+    "insertText": "PREVADDR2STATE",
+    "description": "This field is used only for Experian and ChexSystems. It is not used for Equifax or TransUnion. Enter the two-character U.S. Postal Service code for the state in a second previous address for the subject.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVADDR2ZIPCODE",
+    "insertText": "PREVADDR2ZIPCODE",
+    "description": "This field is used for Experian and ChexSystems. It is not used for Equifax or TransUnion. Enter the ZIP Code in a second previous address for the subject (xxxxx or xxxxx-xxxx).",
+    "isSnippet": false
+  },
+  {
+    "label": "SUBSCRIBERCODE",
+    "insertText": "SUBSCRIBERCODE",
+    "description": "This field is used for all credit bureaus. This field specifies your credit union's subscriber code for the credit bureau.",
+    "isSnippet": false
+  },
+  {
+    "label": "PASSWORD",
+    "insertText": "PASSWORD",
+    "description": "All credit bureaus use this field. It specifies your credit union's password for the credit bureau. We hardcode your password into the system, which uses it as the default. An asterisk (*) displays in place of each character of the password.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUREAUINFO",
+    "insertText": "BUREAUINFO",
+    "description": "This field is used for all credit bureaus. For entry options for Equifax, see Bureau Info in Credit Report Record Fields: Equifax. For entry options for Experian, see Bureau Info in Credit Report Record Fields: Experian. For entry options for TransUnion, see Bureau Info in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "SSNSEARCH:1",
+    "insertText": "SSNSEARCH:1",
+    "description": "This field is used for Equifax and Experian. It is not used for TransUnion. For entry options for Equifax, see SSN/TIN Search 1 in Credit Report Record Fields: Equifax. For entry options for Experian, see SSN/TIN Search 1 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "SSNSEARCH:2",
+    "insertText": "SSNSEARCH:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see SSN/TIN Search 2 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "SSNSEARCH:3",
+    "insertText": "SSNSEARCH:3",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see SSN/TIN Search 3 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "SSNSEARCHFACS",
+    "insertText": "SSNSEARCHFACS",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see SSN/TIN Search Facs+ Flag in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "RISKMODEL:1",
+    "insertText": "RISKMODEL:1",
+    "description": "These fields are used only for Experian. They are not used for Equifax or TransUnion. For entry options, see Risk Model 1 - Risk Model 5 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "RISKMODEL:2",
+    "insertText": "RISKMODEL:2",
+    "description": "These fields are used only for Experian. They are not used for Equifax or TransUnion. For entry options, see Risk Model 1 - Risk Model 5 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "RISKMODEL:3",
+    "insertText": "RISKMODEL:3",
+    "description": "These fields are used only for Experian. They are not used for Equifax or TransUnion. For entry options, see Risk Model 1 - Risk Model 5 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "RISKMODEL:4",
+    "insertText": "RISKMODEL:4",
+    "description": "These fields are used only for Experian. They are not used for Equifax or TransUnion. For entry options, see Risk Model 1 - Risk Model 5 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "RISKMODEL:5",
+    "insertText": "RISKMODEL:5",
+    "description": "These fields are used only for Experian. They are not used for Equifax or TransUnion. For entry options, see Risk Model 1 - Risk Model 5 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "DECODE:1",
+    "insertText": "DECODE:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Decode 01 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "DECODE:2",
+    "insertText": "DECODE:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Decode 02 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "DECODE:3",
+    "insertText": "DECODE:3",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Decode 03 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "DECODE:4",
+    "insertText": "DECODE:4",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Decode 04 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "DECODE:5",
+    "insertText": "DECODE:5",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Decode 05 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "DECODE:6",
+    "insertText": "DECODE:6",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Decode 06 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "DECODE:7",
+    "insertText": "DECODE:7",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Decode 07 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "DECODE:8",
+    "insertText": "DECODE:8",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Decode 08 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "DECODE:9",
+    "insertText": "DECODE:9",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Decode 09 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "DECODE:10",
+    "insertText": "DECODE:10",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Decode 10 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "DECODE:11",
+    "insertText": "DECODE:11",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Decode 11 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "DECODE:12",
+    "insertText": "DECODE:12",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Decode 12 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "DECODE:13",
+    "insertText": "DECODE:13",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Decode 13 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "DECODE:14",
+    "insertText": "DECODE:14",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Decode 14 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "DECODE:15",
+    "insertText": "DECODE:15",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Decode 15 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "DECODE:16",
+    "insertText": "DECODE:16",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Decode 16 in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "BULLSEYEACCT",
+    "insertText": "BULLSEYEACCT",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Bullseye Acct in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "DATEOPENED",
+    "insertText": "DATEOPENED",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Date Opened in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "DATEOCCURRENCE",
+    "insertText": "DATEOCCURRENCE",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Date of Occurrence in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "SPECIALCOMMENT",
+    "insertText": "SPECIALCOMMENT",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Special Comment in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "ASSOCIATIONCODE",
+    "insertText": "ASSOCIATIONCODE",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Association Code in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "INSTANTUPDATEACCT",
+    "insertText": "INSTANTUPDATEACCT",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Instant Update Acct in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATUSCODE",
+    "insertText": "STATUSCODE",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Status Code in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "SELECTCHECKCODE",
+    "insertText": "SELECTCHECKCODE",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Select Check Code in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "ORIGINALCREDITOR",
+    "insertText": "ORIGINALCREDITOR",
+    "description": "This field is not currently used.",
+    "isSnippet": false
+  },
+  {
+    "label": "EMPCOPY",
+    "insertText": "EMPCOPY",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion. For entry options, see Send Consumer Copy in Credit Report Record Fields: Experian.",
+    "isSnippet": false
+  },
+  {
+    "label": "EQDECODE:1",
+    "insertText": "EQDECODE:1",
+    "description": "This field is used only for Equifax. It is not used for Experian or TransUnion. For entry options, see Decode 01 in Credit Report Record Fields: Equifax.",
+    "isSnippet": false
+  },
+  {
+    "label": "EQDECODE:2",
+    "insertText": "EQDECODE:2",
+    "description": "This field is used only for Equifax. It is not used for Experian or TransUnion. For entry options, see Decode 02 in Credit Report Record Fields: Equifax.",
+    "isSnippet": false
+  },
+  {
+    "label": "EQDECODE:3",
+    "insertText": "EQDECODE:3",
+    "description": "This field is used only for Equifax. It is not used for Experian or TransUnion. For entry options, see Decode 03 in Credit Report Record Fields: Equifax.",
+    "isSnippet": false
+  },
+  {
+    "label": "EQDECODE:4",
+    "insertText": "EQDECODE:4",
+    "description": "This field is used only for Equifax. It is not used for Experian or TransUnion. For entry options, see Decode 04 in Credit Report Record Fields: Equifax.",
+    "isSnippet": false
+  },
+  {
+    "label": "EQDECODE:5",
+    "insertText": "EQDECODE:5",
+    "description": "This field is used only for Equifax. It is not used for Experian or TransUnion. For entry options, see Decode 05 in Credit Report Record Fields: Equifax.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOOKTYPE",
+    "insertText": "LOOKTYPE",
+    "description": "This field is used only for TransUnion. It is not used for Equifax or Experian. For entry options, see Look Type in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOOKUPSEGMENTIND",
+    "insertText": "LOOKUPSEGMENTIND",
+    "description": "This field is used only for TransUnion. It is not used for Equifax or Experian. For entry options, see Lookup Segment Indicator in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOOKUPBM",
+    "insertText": "LOOKUPBM",
+    "description": "This field is used only for TransUnion. It is not used for Equifax or Experian. For entry options, see Lookup Bureau Market in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOOKUPBSM",
+    "insertText": "LOOKUPBSM",
+    "description": "This field is used only for TransUnion. It is not used for Equifax or Experian. For entry options, see Lookup Bureau Sub Market in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOOKUPINDCODE",
+    "insertText": "LOOKUPINDCODE",
+    "description": "This field is used only for TransUnion. It is not used for Equifax or Experian. For entry options, see Industry code to be decoded in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOOKUPMEMBERCODE",
+    "insertText": "LOOKUPMEMBERCODE",
+    "description": "This field is used only for TransUnion. It is not used for Equifax or Experian. For entry options, see Member code to be decoded in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECONDARYNAME",
+    "insertText": "SECONDARYNAME",
+    "description": "This field is used only for TransUnion. It is not used for Equifax or Experian. For entry options, see Secondary Name in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOANTYPECHR",
+    "insertText": "LOANTYPECHR",
+    "description": "This field is used for TransUnion and Experian. It is not used for Equifax. For entry options, see Loan Type in Credit Report Record Fields: TransUnion or Loan Type in Credit Report Record Fields: Experian. The valid data type is alphanumeric.",
+    "isSnippet": false
+  },
+  {
+    "label": "DPOWER:1",
+    "insertText": "DPOWER:1",
+    "description": "Decision Power is a tool from Equifax for determining cross-sale eligibility. This field is used only in conjunction with the Equifax Decision Power product. It is not used for Experian or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "DPOWER:2",
+    "insertText": "DPOWER:2",
+    "description": "Decision Power is a tool from Equifax for determining cross-sale eligibility. This field is used only in conjunction with the Equifax Decision Power product. It is not used for Experian or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "DPOWER:3",
+    "insertText": "DPOWER:3",
+    "description": "Decision Power is a tool from Equifax for determining cross-sale eligibility. This field is used only in conjunction with the Equifax Decision Power product. It is not used for Experian or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "The Locator field value in each record is unique within each member account. This means that the Locator can be used as a unique identification of a specific record. The system automatically assigns the Locator value when the record is created, and you cannot change it. The value is a positive number greater than zero and up to about two billion.",
+    "isSnippet": false
+  },
+  {
+    "label": "BRANCH",
+    "insertText": "BRANCH",
+    "description": "This field contains the branch number at the time the credit request was queued. You cannot modify the value in this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "VERSION",
+    "insertText": "VERSION",
+    "description": "This field contains the credit bureau version number at the time the credit request was queued. This field is not visible and you cannot modify the value in this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "SOURCE",
+    "insertText": "SOURCE",
+    "description": "This field is set by the system and indicates the source of the credit report when it was pulled:",
+    "isSnippet": false
+  },
+  {
+    "label": "DEAPPID",
+    "insertText": "DEAPPID",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPRODUCTCODE",
+    "insertText": "DEPRODUCTCODE",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "DERATEREQUESTED",
+    "insertText": "DERATEREQUESTED",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEVEHAGE",
+    "insertText": "DEVEHAGE",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEVEHSTATUS",
+    "insertText": "DEVEHSTATUS",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEVEHCASHPRICE",
+    "insertText": "DEVEHCASHPRICE",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEVEHDOWNPMT",
+    "insertText": "DEVEHDOWNPMT",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEVEHTRADEIN",
+    "insertText": "DEVEHTRADEIN",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEVEHNEWPAYMENTAMT",
+    "insertText": "DEVEHNEWPAYMENTAMT",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEVEHOLDPAYMENTAMT",
+    "insertText": "DEVEHOLDPAYMENTAMT",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOANUSE",
+    "insertText": "LOANUSE",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "OVERRIDECAT",
+    "insertText": "OVERRIDECAT",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "OVERRIDE",
+    "insertText": "OVERRIDE",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "REFERENCEID",
+    "insertText": "REFERENCEID",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "DECISIONOVERRIDE",
+    "insertText": "DECISIONOVERRIDE",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "OVERRIDEAMOUNT",
+    "insertText": "OVERRIDEAMOUNT",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "JOB1EMPTYPE:1",
+    "insertText": "JOB1EMPTYPE:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "JOB2EMPTYPE:2",
+    "insertText": "JOB2EMPTYPE:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "JOB1EMPPREVTYPE:1",
+    "insertText": "JOB1EMPPREVTYPE:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "JOB2EMPPREVTYPE:2",
+    "insertText": "JOB2EMPPREVTYPE:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "JOB1YEARS:1",
+    "insertText": "JOB1YEARS:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "JOB2YEARS:2",
+    "insertText": "JOB2YEARS:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "JOB1MONTHS:1",
+    "insertText": "JOB1MONTHS:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "JOB2MONTHS:2",
+    "insertText": "JOB2MONTHS:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "JOB1PREVYEARS:1",
+    "insertText": "JOB1PREVYEARS:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "JOB2PREVYEARS:2",
+    "insertText": "JOB2PREVYEARS:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "JOB1PREVMONTHS:1",
+    "insertText": "JOB1PREVMONTHS:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "JOB2PREVMONTHS:2",
+    "insertText": "JOB2PREVMONTHS:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "RES1TYPE:1",
+    "insertText": "RES1TYPE:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "RES2TYPE:2",
+    "insertText": "RES2TYPE:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "RES1YEARS:1",
+    "insertText": "RES1YEARS:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "RES2YEARS:2",
+    "insertText": "RES2YEARS:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "RES1MONTHS:1",
+    "insertText": "RES1MONTHS:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "RES2MONTHS:2",
+    "insertText": "RES2MONTHS:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "RES1PREVTYPE:1",
+    "insertText": "RES1PREVTYPE:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "RES2PREVTYPE:2",
+    "insertText": "RES2PREVTYPE:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "RES1PREVYEARS:1",
+    "insertText": "RES1PREVYEARS:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "RES2PREVYEARS:2",
+    "insertText": "RES2PREVYEARS:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "RES1PREVMONTHS:1",
+    "insertText": "RES1PREVMONTHS:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "RES2PREVMONTHS:2",
+    "insertText": "RES2PREVMONTHS:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "INC1TOTALFREQ:1",
+    "insertText": "INC1TOTALFREQ:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "INC2TOTALFREQ:2",
+    "insertText": "INC2TOTALFREQ:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "INC1SALARYFREQ:1",
+    "insertText": "INC1SALARYFREQ:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "INC2SALARYFREQ:2",
+    "insertText": "INC2SALARYFREQ:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "INC1OTHERFREQ:1",
+    "insertText": "INC1OTHERFREQ:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "INC2OTHERFREQ:2",
+    "insertText": "INC2OTHERFREQ:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "INC1TOTALAMOUNT:1",
+    "insertText": "INC1TOTALAMOUNT:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "INC2TOTALAMOUNT:2",
+    "insertText": "INC2TOTALAMOUNT:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "INC1SALARYAMOUNT:1",
+    "insertText": "INC1SALARYAMOUNT:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "INC2SALARYAMOUNT:2",
+    "insertText": "INC2SALARYAMOUNT:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "INC1OTHERAMOUNT:1",
+    "insertText": "INC1OTHERAMOUNT:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "INC2OTHERAMOUNT:2",
+    "insertText": "INC2OTHERAMOUNT:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "BRE1RELATION:1",
+    "insertText": "BRE1RELATION:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "BRE2RELATION:2",
+    "insertText": "BRE2RELATION:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEP1DEPENDANTS:1",
+    "insertText": "DEP1DEPENDANTS:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEP2DEPENDANTS:2",
+    "insertText": "DEP2DEPENDANTS:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXP1FREQ:1",
+    "insertText": "EXP1FREQ:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXP2FREQ:2",
+    "insertText": "EXP2FREQ:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXP1RESIDENCETYPE:1",
+    "insertText": "EXP1RESIDENCETYPE:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXP2RESIDENCETYPE:2",
+    "insertText": "EXP2RESIDENCETYPE:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXP1RESIDENCEFREQ:1",
+    "insertText": "EXP1RESIDENCEFREQ:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXP2RESIDENCEFREQ:2",
+    "insertText": "EXP2RESIDENCEFREQ:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXP1OTHERFREQ:1",
+    "insertText": "EXP1OTHERFREQ:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXP2OTHERFREQ:2",
+    "insertText": "EXP2OTHERFREQ:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXP1AMOUNT:1",
+    "insertText": "EXP1AMOUNT:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXP2AMOUNT:2",
+    "insertText": "EXP2AMOUNT:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXP1RESIDENCEAMOUNT:1",
+    "insertText": "EXP1RESIDENCEAMOUNT:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXP2RESIDENCEAMOUNT:2",
+    "insertText": "EXP2RESIDENCEAMOUNT:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXP1OTHERAMOUNT:1",
+    "insertText": "EXP1OTHERAMOUNT:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXP2OTHERAMOUNT:2",
+    "insertText": "EXP2OTHERAMOUNT:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTOLOANTYPE",
+    "insertText": "AUTOLOANTYPE",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTOSTATUS",
+    "insertText": "AUTOSTATUS",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTOYEAR",
+    "insertText": "AUTOYEAR",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTOMAKE",
+    "insertText": "AUTOMAKE",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTOMODEL",
+    "insertText": "AUTOMODEL",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTORESIDUALFACTOR",
+    "insertText": "AUTORESIDUALFACTOR",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTOMONEYFACTOR",
+    "insertText": "AUTOMONEYFACTOR",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTOMSRP",
+    "insertText": "AUTOMSRP",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTOSALEPRICE",
+    "insertText": "AUTOSALEPRICE",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTODOWNPAYMENT",
+    "insertText": "AUTODOWNPAYMENT",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTOREBATE",
+    "insertText": "AUTOREBATE",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTOTRADEBALANCE",
+    "insertText": "AUTOTRADEBALANCE",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTOTRADEALLOWANCE",
+    "insertText": "AUTOTRADEALLOWANCE",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTOCAPCOST",
+    "insertText": "AUTOCAPCOST",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTORESIDUALVALUE",
+    "insertText": "AUTORESIDUALVALUE",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "AUTOLEASETERM",
+    "insertText": "AUTOLEASETERM",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRDPRODUCTCODE01:1",
+    "insertText": "PRDPRODUCTCODE01:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRDPRODUCTCODE02:2",
+    "insertText": "PRDPRODUCTCODE02:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRDPRODUCTCODE03:3",
+    "insertText": "PRDPRODUCTCODE03:3",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRDPRODUCTCODE04:4",
+    "insertText": "PRDPRODUCTCODE04:4",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRDPRODUCTCODE05:5",
+    "insertText": "PRDPRODUCTCODE05:5",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRDPRODUCTCODE06:6",
+    "insertText": "PRDPRODUCTCODE06:6",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRDPRODUCTCODE07:7",
+    "insertText": "PRDPRODUCTCODE07:7",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRDPRODUCTCODE08:8",
+    "insertText": "PRDPRODUCTCODE08:8",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRDPRODUCTCODE09:9",
+    "insertText": "PRDPRODUCTCODE09:9",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRDPRODUCTCODE10:10",
+    "insertText": "PRDPRODUCTCODE10:10",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRDDECTYPE01:1",
+    "insertText": "PRDDECTYPE01:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRDDECTYPE02:2",
+    "insertText": "PRDDECTYPE02:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRDDECTYPE03:3",
+    "insertText": "PRDDECTYPE03:3",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRDDECTYPE04:4",
+    "insertText": "PRDDECTYPE04:4",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRDDECTYPE05:5",
+    "insertText": "PRDDECTYPE05:5",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRDDECTYPE06:6",
+    "insertText": "PRDDECTYPE06:6",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRDDECTYPE07:7",
+    "insertText": "PRDDECTYPE07:7",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRDDECTYPE08:8",
+    "insertText": "PRDDECTYPE08:8",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRDDECTYPE09:9",
+    "insertText": "PRDDECTYPE09:9",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRDDECTYPE10:10",
+    "insertText": "PRDDECTYPE10:10",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "REFNUMBER1:1",
+    "insertText": "REFNUMBER1:1",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "REFNUMBER2:2",
+    "insertText": "REFNUMBER2:2",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "REFNUMBER3:3",
+    "insertText": "REFNUMBER3:3",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOANAPPID",
+    "insertText": "LOANAPPID",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "OLDMNTHLYPMT",
+    "insertText": "OLDMNTHLYPMT",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "NEWMNTHLYPMT",
+    "insertText": "NEWMNTHLYPMT",
+    "description": "This field is used only for Experian. It is not used for Equifax or TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACCESSPIN",
+    "insertText": "ACCESSPIN",
+    "description": "With the passing of California Senate Bill 168, residents of California can freeze their credit reports, thereby not allowing clients to pull reports. This field is used if a member would like to have the freeze overridden. To pull an Equifax report for an account frozen by a member, you must enter the value in this field. For Equifax, the member specifies this field. Please contact Experian to ensure that you have an up-to-date list of freeze override Reason Codes (also known as Account Purpose Type Codes).",
+    "isSnippet": false
+  },
+  {
+    "label": "PHONEAPPEND",
+    "insertText": "PHONEAPPEND",
+    "description": "Phone Append is a TransUnion add-on product that searches an additional source, Permlink, for a consumer's current personal phone number and area code. If you include Phone Append in the product request, Phone Append performs the search for all subjects returned for that product.",
+    "isSnippet": false
+  },
+  {
+    "label": "SCOREMODEL:1",
+    "insertText": "SCOREMODEL:1",
+    "description": "Score models are online empirical scoring systems that analyze information about an individual to derive a numeric score that is predictive of certain behavior. Score models are TransUnion add-on products.",
+    "isSnippet": false
+  },
+  {
+    "label": "SCOREMODEL:2",
+    "insertText": "SCOREMODEL:2",
+    "description": "Score models are online empirical scoring systems that analyze information about an individual to derive a numeric score that is predictive of certain behavior. Score models are TransUnion add-on products.",
+    "isSnippet": false
+  },
+  {
+    "label": "SCOREMODEL:3",
+    "insertText": "SCOREMODEL:3",
+    "description": "Score models are online empirical scoring systems that analyze information about an individual to derive a numeric score that is predictive of certain behavior. Score models are TransUnion add-on products.",
+    "isSnippet": false
+  },
+  {
+    "label": "SCOREMODEL:4",
+    "insertText": "SCOREMODEL:4",
+    "description": "Score models are online empirical scoring systems that analyze information about an individual to derive a numeric score that is predictive of certain behavior. Score models are TransUnion add-on products.",
+    "isSnippet": false
+  },
+  {
+    "label": "SCOREMODEL:5",
+    "insertText": "SCOREMODEL:5",
+    "description": "Score models are online empirical scoring systems that analyze information about an individual to derive a numeric score that is predictive of certain behavior. Score models are TransUnion add-on products.",
+    "isSnippet": false
+  },
+  {
+    "label": "SCOREMODEL:6",
+    "insertText": "SCOREMODEL:6",
+    "description": "Score models are online empirical scoring systems that analyze information about an individual to derive a numeric score that is predictive of certain behavior. Score models are TransUnion add-on products.",
+    "isSnippet": false
+  },
+  {
+    "label": "SCOREMODEL:7",
+    "insertText": "SCOREMODEL:7",
+    "description": "Score models are online empirical scoring systems that analyze information about an individual to derive a numeric score that is predictive of certain behavior. Score models are TransUnion add-on products.",
+    "isSnippet": false
+  },
+  {
+    "label": "SCOREMODEL:8",
+    "insertText": "SCOREMODEL:8",
+    "description": "Score models are online empirical scoring systems that analyze information about an individual to derive a numeric score that is predictive of certain behavior. Score models are TransUnion add-on products.",
+    "isSnippet": false
+  },
+  {
+    "label": "SCOREMODEL:9",
+    "insertText": "SCOREMODEL:9",
+    "description": "Score models are online empirical scoring systems that analyze information about an individual to derive a numeric score that is predictive of certain behavior. Score models are TransUnion add-on products.",
+    "isSnippet": false
+  },
+  {
+    "label": "SCOREMODEL:10",
+    "insertText": "SCOREMODEL:10",
+    "description": "Score models are online empirical scoring systems that analyze information about an individual to derive a numeric score that is predictive of certain behavior. Score models are TransUnion add-on products.",
+    "isSnippet": false
+  },
+  {
+    "label": "SCOREMODEL:11",
+    "insertText": "SCOREMODEL:11",
+    "description": "Score models are online empirical scoring systems that analyze information about an individual to derive a numeric score that is predictive of certain behavior. Score models are TransUnion add-on products.",
+    "isSnippet": false
+  },
+  {
+    "label": "SCOREMODEL:12",
+    "insertText": "SCOREMODEL:12",
+    "description": "Score models are online empirical scoring systems that analyze information about an individual to derive a numeric score that is predictive of certain behavior. Score models are TransUnion add-on products.",
+    "isSnippet": false
+  },
+  {
+    "label": "USETYPE",
+    "insertText": "USETYPE",
+    "description": "This field is used only for TransUnion. It is not used for Equifax or Experian. For TransUnion Version 4, you can access this field only if you enter (01) Credit, (03) TracePlus, or (06) Peer at the Inquiry Type field. TransUnion does not use this field for any version before Version 4.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMMERCIALCODE",
+    "insertText": "COMMERCIALCODE",
+    "description": "This field stores (0) Consumer for making a ChexSystems inquiry for a consumer or (1) Business if the inquiry is for a business.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDNUMBER:1",
+    "insertText": "IDNUMBER:1",
+    "description": "This field stores the identification number (such as a driver's license number) for making a ChexSystems inquiry (see ChexSystems Interface).",
+    "isSnippet": false
+  },
+  {
+    "label": "IDNUMBER:2",
+    "insertText": "IDNUMBER:2",
+    "description": "Enter the identification number (such as a driver's license number) for the spouse of the subject of the inquiry.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDSTATE:1",
+    "insertText": "IDSTATE:1",
+    "description": "This field stores the two-character code for the state of residence for making a ChexSystems inquiry (see ChexSystems Interface).",
+    "isSnippet": false
+  },
+  {
+    "label": "IDSTATE:2",
+    "insertText": "IDSTATE:2",
+    "description": "Enter the two-character code for the state of residence for the spouse of the subject of the inquiry.",
+    "isSnippet": false
+  },
+  {
+    "label": "STRATEGYTYPE",
+    "insertText": "STRATEGYTYPE",
+    "description": "This field is used to send the Strategy Type Identifier for a ChexSystems QualiFile credit report to eFunds.",
+    "isSnippet": false
+  },
+  {
+    "label": "SPOUSEACCESSPIN",
+    "insertText": "SPOUSEACCESSPIN",
+    "description": "This field has different values for Equifax, Experian, and Transunion.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTERNETUSERID",
+    "insertText": "INTERNETUSERID",
+    "description": "Enter the user ID (up to 10 characters) your credit union uses with your Internet Password.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTERNETPASSWD",
+    "insertText": "INTERNETPASSWD",
+    "description": "Enter the password (up to 40 characters) your credit union uses with your Internet User ID.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERID",
+    "insertText": "USERID",
+    "description": "Enter the generic ChexSystems User ID that eFunds gives credit unions who use their third-party add-on.",
+    "isSnippet": false
+  },
+  {
+    "label": "IPADDRESS",
+    "insertText": "IPADDRESS",
+    "description": "Enter your credit union's external firewall IP (Internet Protocol) address for use with ChexSystems (if your credit union uses this third-party add-on).",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICEBUREAU",
+    "insertText": "SERVICEBUREAU",
+    "description": "This field, formerly used with ChexSystems, is now suppressed.",
+    "isSnippet": false
+  },
+  {
+    "label": "TESTENVIRONMENT",
+    "insertText": "TESTENVIRONMENT",
+    "description": "Select one of the following:",
+    "isSnippet": false
+  },
+  {
+    "label": "OFACINQUIRY",
+    "insertText": "OFACINQUIRY",
+    "description": "Select one of the following for use with Experian credit reports:",
+    "isSnippet": false
+  },
+  {
+    "label": "ARMALERT",
+    "insertText": "ARMALERT",
+    "description": "The Adjustable Rate Mortgage (ARM) Alert field is available when you select TransUnion at the Bureau field drop-down menu. This alert is an add-on service available when requested with a TransUnion credit inquiry. Enter Y (yes) to request ARM alerts be returned with the credit inquiry request results sent from the bureau. You can only enter Y when the credit inquiry Type field is set to Credit. Enter N (no) if you do not want the alerts; this is the default. If the credit inquiry Type is not set to Credit, then you cannot edit the ARM Alert field.",
+    "isSnippet": false
+  },
+  {
+    "label": " INCLUDEQUALIFILE",
+    "insertText": " INCLUDEQUALIFILE",
+    "description": "This field is used only for ChexSystems.",
+    "isSnippet": false
+  },
+  {
+    "label": "INCLUDEIDVERIFICATION",
+    "insertText": "INCLUDEIDVERIFICATION",
+    "description": "This field is used only for ChexSystems.",
+    "isSnippet": false
+  },
+  {
+    "label": " INCLUDEOFAC",
+    "insertText": " INCLUDEOFAC",
+    "description": "This field is used only for ChexSystems.",
+    "isSnippet": false
+  },
+  {
+    "label": " INQUIRYID",
+    "insertText": " INQUIRYID",
+    "description": "This field is used only for ChexSystems.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACTIONTEXT",
+    "insertText": "ACTIONTEXT",
+    "description": "Use this free-form field to post \"Additional Action\" comments to the record along with the request or use this field after sending the request using an Inquiry Type of Add IDV Action.",
+    "isSnippet": false
+  },
+  {
+    "label": " RECORDTEXT",
+    "insertText": " RECORDTEXT",
+    "description": "Enter a unique value to identify the consumer account. FIS displays this field, returning the Record Text as the account number attribute in the response object. You can search this field on FIS's website for reporting.",
+    "isSnippet": false
+  },
+  {
+    "label": " IDVERIFICATIONOID",
+    "insertText": " IDVERIFICATIONOID",
+    "description": "Only ChexSystems Uses this field. FIS requires it for consumer and business Add IDV Action (Inquiry Type = 2) and Add IDV Override (Inquiry Type = 3) requests. It is optional for consumer and business Address Analysis (Inquiry Type = 5) and Consumer Red Flag Checklist (Inquiry Type = 6) requests.",
+    "isSnippet": false
+  },
+  {
+    "label": " OVERRIDETEXT",
+    "insertText": " OVERRIDETEXT",
+    "description": "Enter a reason for overriding failed response for the ID Verification product.",
+    "isSnippet": false
+  },
+  {
+    "label": " OFACOID",
+    "insertText": " OFACOID",
+    "description": "Only ChexSystems uses this field. You must include it in consumer and business Add OFAC Override requests (Inquiry Type = 4).",
+    "isSnippet": false
+  },
+  {
+    "label": "CHEXACCTNUMBER",
+    "insertText": "CHEXACCTNUMBER",
+    "description": "Only ChexSystems uses this field. It is an optional field, but you must fill it in with the member's account number if you fill in the R&T Number field.",
+    "isSnippet": false
+  },
+  {
+    "label": "RTNUMBER",
+    "insertText": "RTNUMBER",
+    "description": "Only ChexSystems business requests (Commercial Code = 1) use this field.",
+    "isSnippet": false
+  },
+  {
+    "label": " BUSINESSNAME",
+    "insertText": " BUSINESSNAME",
+    "description": "FIS requires this field for ChexSystems suite reports and Address Analysis reports (Inquiry Type = 1 or 5). It is optional for Add IDV Actions, Add IDV Override, and Add OFAC Override (Inquiry Type = 2, 3, or 4).",
+    "isSnippet": false
+  },
+  {
+    "label": " BUSINESSTYPECODE",
+    "insertText": " BUSINESSTYPECODE",
+    "description": "This field is used only for ChexSystems. This is an optional field. You can only update it when you answer the Include QualiFile Report field with Yes.",
+    "isSnippet": false
+  },
+  {
+    "label": " BUSINESSSTREET",
+    "insertText": " BUSINESSSTREET",
+    "description": "Only ChexSystems uses this field. FIS requires it for business ChexSystems suite and Address Analysis inquiries.",
+    "isSnippet": false
+  },
+  {
+    "label": " BUSINESSCITY",
+    "insertText": " BUSINESSCITY",
+    "description": "Only ChexSystems uses this field. FIS requires it for business ChexSystems suite and Address Analysis inquiries.",
+    "isSnippet": false
+  },
+  {
+    "label": " BUSINESSSTATE",
+    "insertText": " BUSINESSSTATE",
+    "description": "Only ChexSystems uses this field. FIS requires it for business ChexSystems suite and Address Analysis inquiries.",
+    "isSnippet": false
+  },
+  {
+    "label": " BUSINESSZIP",
+    "insertText": " BUSINESSZIP",
+    "description": "Only ChexSystems uses this field. FIS requires it for business ChexSystems suite and Address Analysis inquiries.",
+    "isSnippet": false
+  },
+  {
+    "label": " BUSINESSPHONE",
+    "insertText": " BUSINESSPHONE",
+    "description": "Only ChexSystems uses this field. FIS requires it for business ChexSystems suite and Address Analysis inquiries.",
+    "isSnippet": false
+  },
+  {
+    "label": " BUSINESSPREVSTREET",
+    "insertText": " BUSINESSPREVSTREET",
+    "description": "Only ChexSystems uses this field. FIS requires it for business ChexSystems Suite inquiries.",
+    "isSnippet": false
+  },
+  {
+    "label": " BUSINESSPREVCITY",
+    "insertText": " BUSINESSPREVCITY",
+    "description": "Only ChexSystems uses this field. FIS requires it for business Address Analysis inquiries.",
+    "isSnippet": false
+  },
+  {
+    "label": " BUSINESSPREVSTATE",
+    "insertText": " BUSINESSPREVSTATE",
+    "description": "Only ChexSystems uses this field. FIS requires it for business Address Analysis inquiries.",
+    "isSnippet": false
+  },
+  {
+    "label": " BUSINESSPREVZIP",
+    "insertText": " BUSINESSPREVZIP",
+    "description": "Only ChexSystems uses this field.",
+    "isSnippet": false
+  },
+  {
+    "label": " DEPOSITAMT",
+    "insertText": " DEPOSITAMT",
+    "description": "Only ChexSystems uses this field.",
+    "isSnippet": false
+  },
+  {
+    "label": " ADDRANALYSISOID",
+    "insertText": " ADDRANALYSISOID",
+    "description": "Only ChexSystems uses this field.",
+    "isSnippet": false
+  },
+  {
+    "label": " CHEXTRANSID:1 - CHEXTRANSID:3 ",
+    "insertText": " CHEXTRANSID:1 - CHEXTRANSID:3 ",
+    "description": "Only the FIS QualiFile product uses these fields.",
+    "isSnippet": false
+  },
+  {
+    "label": " REDFLAGALERTLOGID",
+    "insertText": " REDFLAGALERTLOGID",
+    "description": "Only ChexSystems uses this field. It is optional for Red Flag Checklist inquiries (Inquiry Type = 6) and required for Red Flag Update inquiries (Inquiry Type = 7).",
+    "isSnippet": false
+  },
+  {
+    "label": "DOCALTEREDFORGED",
+    "insertText": "DOCALTEREDFORGED",
+    "description": "Only ChexSystems uses this required field.",
+    "isSnippet": false
+  },
+  {
+    "label": " APPEARANCEINCONSISTENT",
+    "insertText": " APPEARANCEINCONSISTENT",
+    "description": "Only ChexSytems uses this required field.",
+    "isSnippet": false
+  },
+  {
+    "label": " INFOINCONSISTENT",
+    "insertText": " INFOINCONSISTENT",
+    "description": "Only ChexSystems uses this required field.",
+    "isSnippet": false
+  },
+  {
+    "label": " SIGINCONSISTENT",
+    "insertText": " SIGINCONSISTENT",
+    "description": "Only ChexSystems uses this required field.",
+    "isSnippet": false
+  },
+  {
+    "label": " APPALTEREDFORGED",
+    "insertText": " APPALTEREDFORGED",
+    "description": "Only ChexSystems uses this required field.",
+    "isSnippet": false
+  },
+  {
+    "label": " REDFLAGACTIONTYPEID",
+    "insertText": " REDFLAGACTIONTYPEID",
+    "description": "This required field is used only for ChexSystems.",
+    "isSnippet": false
+  },
+  {
+    "label": " REDFLAGSTATUS",
+    "insertText": " REDFLAGSTATUS",
+    "description": "This field is used only for ChexSystems.",
+    "isSnippet": false
+  },
+  {
+    "label": " RECOMMENDEDACTIONTYPEID",
+    "insertText": " RECOMMENDEDACTIONTYPEID",
+    "description": "Only ChexSystems uses this required field.",
+    "isSnippet": false
+  },
+  {
+    "label": " REDFLAGCOMMENTS:1 - REDFLAGCOMMENTS:10 ",
+    "insertText": " REDFLAGCOMMENTS:1 - REDFLAGCOMMENTS:10 ",
+    "description": "Only RedFlag Analysis uses these fields.",
+    "isSnippet": false
+  },
+  {
+    "label": " REDFLAGFACTID",
+    "insertText": " REDFLAGFACTID",
+    "description": "This field holds the ID number of the Red Flag response item. The Red Flag analysis is only for consumer accounts. FIS should return the values in this field in response to a Red Flag query or a Red Flag disposition. If the field requires more than 40 characters, you can find the remainder of the field on the FIS website.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUSMONTHSCURRADDRESS",
+    "insertText": "BUSMONTHSCURRADDRESS",
+    "description": "Business Address Analysis requires this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUSYEARSCURRADDRESS",
+    "insertText": "BUSYEARSCURRADDRESS",
+    "description": "Business Address Analysis requires this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACTUALPAYMENTAMT",
+    "insertText": "ACTUALPAYMENTAMT",
+    "description": "Specify Yes or No to indicate whether to request the actual payment amount data from the credit report.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXPANDEDHISTORY",
+    "insertText": "EXPANDEDHISTORY",
+    "description": "Specify Yes or No to indicate whether to request the expanded history data from the credit report.",
+    "isSnippet": false
+  },
+  {
+    "label": "RESPONSEFORMAT",
+    "insertText": "RESPONSEFORMAT",
+    "description": "This field is used only for TransUnion. For field values for TransUnion, see Response Format in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "STARTEMPDATE",
+    "insertText": "STARTEMPDATE",
+    "description": "This field is used only for TransUnion 4.1.",
+    "isSnippet": false
+  },
+  {
+    "label": "ENDEMPDATE",
+    "insertText": "ENDEMPDATE",
+    "description": "This field is used only for TransUnion 4.1.",
+    "isSnippet": false
+  },
+  {
+    "label": "SPOUSEOCCUPATION",
+    "insertText": "SPOUSEOCCUPATION",
+    "description": "This field is used only for TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "SPOUSESTARTEMPDATE",
+    "insertText": "SPOUSESTARTEMPDATE",
+    "description": "This field is used only for TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "SPOUSEENDEMPDATE",
+    "insertText": "SPOUSEENDEMPDATE",
+    "description": "This field is used only for TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "SPOUSEPAYBASIS",
+    "insertText": "SPOUSEPAYBASIS",
+    "description": "This field is used only for TransUnion. For field values for TransUnion, see Spouse Pay Basis in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "SPOUSEINCOME",
+    "insertText": "SPOUSEINCOME",
+    "description": "This field is used only for TransUnion. For field values for TransUnion, see Spouse Income in Credit Report Record Fields: TransUnion.",
+    "isSnippet": false
+  },
+  {
+    "label": "SPOUSESECONDARYNM",
+    "insertText": "SPOUSESECONDARYNM",
+    "description": "This field is used only for TransUnion.",
+    "isSnippet": false
+  }
+]

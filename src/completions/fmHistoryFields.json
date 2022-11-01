@@ -1,0 +1,200 @@
+[
+  {
+    "label": "ACCOUNTNUMBER",
+    "insertText": "ACCOUNTNUMBER",
+    "description": "The field contains the unique identifier of the changed record (which is not always the account number). This field identifies the account affected by file maintenance to the Account record; it identifies the member affected by file maintenance to the Member record, etc.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDTYPE",
+    "insertText": "IDTYPE",
+    "description": "This field identifies the type of record affected by the file maintenance.",
+    "isSnippet": false
+  },
+  {
+    "label": "ID",
+    "insertText": "ID",
+    "description": "This field stores the two or four-character ID of the following record types (see ID Type) affected by the transaction:",
+    "isSnippet": false
+  },
+  {
+    "label": "SEQUENCENUMBER",
+    "insertText": "SEQUENCENUMBER",
+    "description": "The system assigns this number in sequence to each file maintenance transaction posted on a specific day.",
+    "isSnippet": false
+  },
+  {
+    "label": "POSTDATE",
+    "insertText": "POSTDATE",
+    "description": "The system updates this field with the current system date when you accept the file maintenance transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "POSTTIME",
+    "insertText": "POSTTIME",
+    "description": "The system updates this field with the system time when you accept the file maintenance transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER",
+    "insertText": "USERNUMBER",
+    "description": "The system updates this field with the number of the user or the ID of the batch program that initiated the file maintenance transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "USEROVERRIDE",
+    "insertText": "USEROVERRIDE",
+    "description": "The system updates this field with the number of the user who provided an override for the transaction, if an override was necessary. If no override was necessary, this field contains 0999.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECURITYLEVELS",
+    "insertText": "SECURITYLEVELS",
+    "description": "The system updates this field with the security level assigned to this type of transaction in the Security Parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "BRANCH",
+    "insertText": "BRANCH",
+    "description": "The system updates this field with the number of the branch where the file maintenance occurred, not necessarily the account branch.",
+    "isSnippet": false
+  },
+  {
+    "label": "FMTYPE",
+    "insertText": "FMTYPE",
+    "description": "This field identifies the type of file maintenance:",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTFMDATE",
+    "insertText": "LASTFMDATE",
+    "description": "This field stores the previous most recent transaction or FM date.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDTYPE",
+    "insertText": "RECORDTYPE",
+    "description": "This field contains the type of record affected by file maintenance.",
+    "isSnippet": false
+  },
+  {
+    "label": "FIELDNUMBER",
+    "insertText": "FIELDNUMBER",
+    "description": "The system updates this field with number of the field affected by the file maintenance.",
+    "isSnippet": false
+  },
+  {
+    "label": "SUBFIELDNUMBER",
+    "insertText": "SUBFIELDNUMBER",
+    "description": "The system updates this field with the subfield number (if any) of the field affected by the file maintenance.",
+    "isSnippet": false
+  },
+  {
+    "label": "DATATYPE",
+    "insertText": "DATATYPE",
+    "description": "This field contains the type of data stored in the field identified by the Field Number field value, and if appropriate, by Sub Field Number:",
+    "isSnippet": false
+  },
+  {
+    "label": "OLDNUMBER",
+    "insertText": "OLDNUMBER",
+    "description": "If the Data Type field is set to 4 (Number), 5 (Code), or 8 (Yes/No), the system updates this field with the old value of the field before the file maintenance was performed.",
+    "isSnippet": false
+  },
+  {
+    "label": "NEWNUMBER",
+    "insertText": "NEWNUMBER",
+    "description": "If the Data Type field is set to 4 (Number), 5 (Code), or 8 (Yes/No), the system updates this field with the new value of the field after the file maintenance is performed.",
+    "isSnippet": false
+  },
+  {
+    "label": "OLDCHARACTER",
+    "insertText": "OLDCHARACTER",
+    "description": "If the Data Type field is set to 0 (Character) or 1 (Character), the system updates this field with the old value of the field before the file maintenance was performed.",
+    "isSnippet": false
+  },
+  {
+    "label": "NEWCHARACTER",
+    "insertText": "NEWCHARACTER",
+    "description": "If the Data Type field is set to 0 (Character) or 1 (Character), the system updates this field with the new value of the field after the file maintenance is performed.",
+    "isSnippet": false
+  },
+  {
+    "label": "OLDMONEY",
+    "insertText": "OLDMONEY",
+    "description": "If the Data Type is set to 6 (Money) or 7 (Money), the system updates this field with the old value of the field before the file maintenance was performed.",
+    "isSnippet": false
+  },
+  {
+    "label": "NEWMONEY",
+    "insertText": "NEWMONEY",
+    "description": "If the Data Type field is set to 6 (Money) or 7 (Money), the system updates this field with the new value of the field after the file maintenance is performed.",
+    "isSnippet": false
+  },
+  {
+    "label": "OLDDATE",
+    "insertText": "OLDDATE",
+    "description": "If the Data Type field is set to 3 (Date), the system updates this field with the old value of the field before the file maintenance was performed.",
+    "isSnippet": false
+  },
+  {
+    "label": "NEWDATE",
+    "insertText": "NEWDATE",
+    "description": "If the Data Type field is set to 3 (Date), the system updates this field with the new value of the field after the file maintenance is performed.",
+    "isSnippet": false
+  },
+  {
+    "label": "OLDRATE",
+    "insertText": "OLDRATE",
+    "description": "If the Data Type field is set to 2 (Rate), the system updates this field with the old value of the field before the file maintenance was performed.",
+    "isSnippet": false
+  },
+  {
+    "label": "NEWRATE",
+    "insertText": "NEWRATE",
+    "description": "If the Data Type field is set to 2 (Rate), the system updates this field with the new value of the field after the file maintenance is performed.",
+    "isSnippet": false
+  },
+  {
+    "label": "CONSOLENUMBER",
+    "insertText": "CONSOLENUMBER",
+    "description": "If the file maintenance is performed from a console, the system stores the console number (0–8999) in this field. Otherwise, the system stores 9999 in this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "BATCHSEQUENCE",
+    "insertText": "BATCHSEQUENCE",
+    "description": "If a record was created by a batch job, this field contains the sequence number of the batch job that created it, similar to the batch sequence field in the Transaction record. If a record was not created by a batch job, the system stores 0 in this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PROCESSORUSER",
+    "insertText": "PROCESSORUSER",
+    "description": "This field contains information saved from the optional SymConnect User field in the SymConnect message. The SymConnect message creator can provide specific user information in this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "CONFIRMATIONSEQ",
+    "insertText": "CONFIRMATIONSEQ",
+    "description": "This number is system-generated during posting or memo posting and provided to any SymConnect transaction requesting it.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDNAME",
+    "insertText": "RECORDNAME",
+    "description": "This field contains a description of the record affected by the file maintenance; the system derives this field value from the value of the Record Type field.",
+    "isSnippet": false
+  },
+  {
+    "label": "FIELDNAME",
+    "insertText": "FIELDNAME",
+    "description": "This field contains a description of the field affected by the file maintenance; the system derives this field value from the values of the following fields: Record Type, Field Number, and Sub Field Number.",
+    "isSnippet": false
+  },
+  {
+    "label": "CONFIRMATIONNUMBER",
+    "insertText": "CONFIRMATIONNUMBER",
+    "description": "Displays the 4-digit User Number and the 10-digit Confirmation Sequence number.",
+    "isSnippet": false
+  }
+]

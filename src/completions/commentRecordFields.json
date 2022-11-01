@@ -1,0 +1,38 @@
+[
+  {
+    "label": "TYPE",
+    "insertText": "TYPE",
+    "description": "This field stores a code that indicates how and when the system should display the comment.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMMENT",
+    "insertText": "COMMENT",
+    "description": "This field stores up to 40 characters comment text.",
+    "isSnippet": false
+  },
+  {
+    "label": "EFFECTIVEDATE",
+    "insertText": "EFFECTIVEDATE",
+    "description": "This field stores the date that the system should begin to display the comment.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXPIRATIONDATE",
+    "insertText": "EXPIRATIONDATE",
+    "description": "This field stores the date after which the system should no longer display the comment.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "The system stores the system date in this field when you create, change, or save the Comment record. Sometimes the system updates this field because the record was saved, even though there may not be any actual changes in the record.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "This field stores a unique number within each member account that can be used as a unique identification of this record.",
+    "isSnippet": false
+  }
+]

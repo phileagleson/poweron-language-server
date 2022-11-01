@@ -1,0 +1,332 @@
+[
+  {
+    "label": "CASHORDERTYPENAME",
+    "insertText": "CASHORDERTYPENAME",
+    "description": "This field stores the descriptive name for the cash order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "VENDORNUMBER",
+    "insertText": "VENDORNUMBER",
+    "description": "This field stores the credit union defined number of the vendor from the Cash Order Vendor Parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "ORDERLIMITING",
+    "insertText": "ORDERLIMITING",
+    "description": "This field stores a code that indicates the maximum number of non-cancelled orders allowed per delivery date for this order type for a site.",
+    "isSnippet": false
+  },
+  {
+    "label": "DELFREQUENCY",
+    "insertText": "DELFREQUENCY",
+    "description": "This field stores a code that defines how often a site receives delivery for this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATIONCODE",
+    "insertText": "LOCATIONCODE",
+    "description": "This field stores special vendor-specific information that identifies the site's location to this vendor.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPEMINORDER",
+    "insertText": "CASHORDERTYPEMINORDER",
+    "description": "This field stores the minimum amount required for this order.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPEMAXORDER",
+    "insertText": "CASHORDERTYPEMAXORDER",
+    "description": "This field stores the maximum amount required for this order.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPEDELCHARGE",
+    "insertText": "CASHORDERTYPEDELCHARGE",
+    "description": "This field stores the amount the vendor charges for this order type for a normal delivery.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPESPECDELCHARGE",
+    "insertText": "CASHORDERTYPESPECDELCHARGE",
+    "description": "This field stores the amount the vendor charges for this order type for a special delivery.",
+    "isSnippet": false
+  },
+  {
+    "label": "APPLYHANDLINGFEE",
+    "insertText": "APPLYHANDLINGFEE",
+    "description": "This field stores a code that indicates whether this order type incurs a special handling fee (using the amount from the Special Handling Fee parameter in the Cash Order Vendor Parameters).",
+    "isSnippet": false
+  },
+  {
+    "label": "SPECIALHANDLINGFEE",
+    "insertText": "SPECIALHANDLINGFEE",
+    "description": "This field contains the amount of special handling fee.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECOMMENT:1",
+    "insertText": "CASHORDERTYPECOMMENT:1",
+    "description": "These fields each store a default comment line on this cash order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECOMMENT:2",
+    "insertText": "CASHORDERTYPECOMMENT:2",
+    "description": "These fields each store a default comment line on this cash order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECOMMENT:3",
+    "insertText": "CASHORDERTYPECOMMENT:3",
+    "description": "These fields each store a default comment line on this cash order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECOMMENT:4",
+    "insertText": "CASHORDERTYPECOMMENT:4",
+    "description": "These fields each store a default comment line on this cash order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACTIVEFLAG",
+    "insertText": "ACTIVEFLAG",
+    "description": "This field stores a code that indicates the state of this cash order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CLOSEDATE",
+    "insertText": "CLOSEDATE",
+    "description": "This field stores the date you closed this Cash Order Type record.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "This field stores the system date in this field when you create, change, or save the Cash Order Type record. Sometimes Symitar Quest updates this field because the record was saved, even though there may not be any actual changes in the record.",
+    "isSnippet": false
+  },
+  {
+    "label": "DELIVERYDAYS:1",
+    "insertText": "DELIVERYDAYS:1",
+    "description": "This field stores a code that specifies whether the vendor delivers to this site on Sunday.",
+    "isSnippet": false
+  },
+  {
+    "label": "DELIVERYDAYS:2",
+    "insertText": "DELIVERYDAYS:2",
+    "description": "This field stores a code that specifies whether the vendor delivers to this site on Monday.",
+    "isSnippet": false
+  },
+  {
+    "label": "DELIVERYDAYS:3",
+    "insertText": "DELIVERYDAYS:3",
+    "description": "This field stores a code that specifies whether the vendor delivers to this site on Tuesday.",
+    "isSnippet": false
+  },
+  {
+    "label": "DELIVERYDAYS:4",
+    "insertText": "DELIVERYDAYS:4",
+    "description": "This field stores a code that specifies whether the vendor delivers to this site on Wednesday.",
+    "isSnippet": false
+  },
+  {
+    "label": "DELIVERYDAYS:5",
+    "insertText": "DELIVERYDAYS:5",
+    "description": "This field stores a code that specifies whether the vendor delivers to this site on Thursday.",
+    "isSnippet": false
+  },
+  {
+    "label": "DELIVERYDAYS:6",
+    "insertText": "DELIVERYDAYS:6",
+    "description": "This field stores a code that specifies whether the vendor delivers to this site on Friday.",
+    "isSnippet": false
+  },
+  {
+    "label": "DELIVERYDAYS:7",
+    "insertText": "DELIVERYDAYS:7",
+    "description": "This field stores a code that specifies whether the vendor delivers to this site on Saturday.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECURRFIT:1",
+    "insertText": "CASHORDERTYPECURRFIT:1",
+    "description": "This field stores the cash value of used hundred-dollar bills (fit for circulation) in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECURRFIT:2",
+    "insertText": "CASHORDERTYPECURRFIT:2",
+    "description": "This field stores the cash value of used fifty-dollar bills (fit for circulation) in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECURRFIT:3",
+    "insertText": "CASHORDERTYPECURRFIT:3",
+    "description": "This field stores the cash value of used twenty-dollar bills (fit for circulation) in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECURRFIT:4",
+    "insertText": "CASHORDERTYPECURRFIT:4",
+    "description": "This field stores the cash value of used ten-dollar bills (fit for circulation) in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECURRFIT:5",
+    "insertText": "CASHORDERTYPECURRFIT:5",
+    "description": "This field stores the cash value of used five-dollar bills (fit for circulation) in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECURRFIT:6",
+    "insertText": "CASHORDERTYPECURRFIT:6",
+    "description": "This field stores the cash value of used two-dollar bills (fit for circulation) in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECURRFIT:7",
+    "insertText": "CASHORDERTYPECURRFIT:7",
+    "description": "This field stores the cash value of used one-dollar bills (fit for circulation) in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECURRNEW:1",
+    "insertText": "CASHORDERTYPECURRNEW:1",
+    "description": "This field stores the cash value of new hundred-dollar bills (uncirculated) in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECURRNEW:2",
+    "insertText": "CASHORDERTYPECURRNEW:2",
+    "description": "This field stores the cash value of new fifty-dollar bills (uncirculated) in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECURRNEW:3",
+    "insertText": "CASHORDERTYPECURRNEW:3",
+    "description": "This field stores the cash value of new twenty-dollar bills (uncirculated) in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECURRNEW:4",
+    "insertText": "CASHORDERTYPECURRNEW:4",
+    "description": "This field stores the cash value of new ten-dollar bills (uncirculated) in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECURRNEW:5",
+    "insertText": "CASHORDERTYPECURRNEW:5",
+    "description": "This field stores the cash value of new five-dollar bills (uncirculated) in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECURRNEW:6",
+    "insertText": "CASHORDERTYPECURRNEW:6",
+    "description": "This field stores the cash value of new two-dollar bills (uncirculated) in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECURRNEW:7",
+    "insertText": "CASHORDERTYPECURRNEW:7",
+    "description": "This field stores the cash value of new one-dollar bills (uncirculated) in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECOINROLL:1",
+    "insertText": "CASHORDERTYPECOINROLL:1",
+    "description": "This field stores the cash value of rolled (Sacagawea) one-dollar coins in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECOINROLL:2",
+    "insertText": "CASHORDERTYPECOINROLL:2",
+    "description": "This field stores the cash value of rolled Susan B. Anthony one-dollar coins in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECOINROLL:3",
+    "insertText": "CASHORDERTYPECOINROLL:3",
+    "description": "This field stores the cash value of rolled half-dollar coins in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECOINROLL:4",
+    "insertText": "CASHORDERTYPECOINROLL:4",
+    "description": "This field stores the cash value of rolled standard quarters in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECOINROLL:8",
+    "insertText": "CASHORDERTYPECOINROLL:8",
+    "description": "This field stores the cash value of rolled state commemorative quarters in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECOINROLL:5",
+    "insertText": "CASHORDERTYPECOINROLL:5",
+    "description": "This field stores the cash value of rolled dimes in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECOINROLL:6",
+    "insertText": "CASHORDERTYPECOINROLL:6",
+    "description": "This field stores the cash value of rolled nickels in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECOINROLL:7",
+    "insertText": "CASHORDERTYPECOINROLL:7",
+    "description": "This field stores the cash value of rolled pennies in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECOINBAG:1",
+    "insertText": "CASHORDERTYPECOINBAG:1",
+    "description": "This field stores the cash value of bagged (Sacagawea) one-dollar coins in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECOINBAG:2",
+    "insertText": "CASHORDERTYPECOINBAG:2",
+    "description": "This field stores the cash value of bagged Susan B. Anthony one-dollar coins in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECOINBAG:3",
+    "insertText": "CASHORDERTYPECOINBAG:3",
+    "description": "This field stores the cash value of bagged half-dollar coins in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECOINBAG:4",
+    "insertText": "CASHORDERTYPECOINBAG:4",
+    "description": "This field stores the cash value of bagged quarters in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECOINBAG:5",
+    "insertText": "CASHORDERTYPECOINBAG:5",
+    "description": "This field stores the cash value of bagged dimes in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECOINBAG:6",
+    "insertText": "CASHORDERTYPECOINBAG:6",
+    "description": "This field stores the cash value of bagged nickels in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHORDERTYPECOINBAG:7",
+    "insertText": "CASHORDERTYPECOINBAG:7",
+    "description": "This field stores the cash value of bagged pennies in this order type.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "This field stores a unique number within each Cash Order Type record set that can be used as a unique identification of this record.",
+    "isSnippet": false
+  }
+]

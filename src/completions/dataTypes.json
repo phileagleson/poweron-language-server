@@ -1,0 +1,44 @@
+[
+  {
+    "label": "CHARACTER",
+    "insertText": "CHARACTER",
+    "description": "The CHARACTER data type identifies a type of data including upper and lowercase letters, digits, spaces, and certain symbols.",
+    "isSnippet": false
+  },
+  {
+    "label": "CODE",
+    "insertText": "CODE",
+    "description": "The CODE data type contains a system-specified number of digits.",
+    "isSnippet": false
+  },
+  {
+    "label": "DATE",
+    "insertText": "DATE",
+    "description": "The DATE data type stores and manipulates dates.",
+    "isSnippet": false
+  },
+  {
+    "label": "FLOAT",
+    "insertText": "FLOAT",
+    "description": "The FLOAT data type represents numbers expressed in scientific notation.",
+    "isSnippet": false
+  },
+  {
+    "label": "MONEY",
+    "insertText": "MONEY",
+    "description": "The MONEY data type identifies a dollar amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "NUMBER",
+    "insertText": "NUMBER",
+    "description": "The NUMBER data type identifies data that is numeric (a whole number), but is not a dollar amount or a rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "RATE",
+    "insertText": "RATE",
+    "description": "The RATE data type represents a percentage.",
+    "isSnippet": false
+  }
+]

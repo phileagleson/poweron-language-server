@@ -1,0 +1,902 @@
+[
+  {
+    "label": "TITLE",
+    "insertText": "TITLE",
+    "description": "This field stores the title that should precede the name of the person identified in this Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "FIRST",
+    "insertText": "FIRST",
+    "description": "This field stores the first name of the person identified in this Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "MIDDLE",
+    "insertText": "MIDDLE",
+    "description": "This field stores the middle name or middle initial of the person identified in the Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "LAST",
+    "insertText": "LAST",
+    "description": "This field stores the last name of the person or non-individual name identified in the Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "SUFFIX",
+    "insertText": "SUFFIX",
+    "description": "This field stores the suffix that should follow the name of the person identified in the Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "NAMEFORMAT",
+    "insertText": "NAMEFORMAT",
+    "description": "This field stores a code that specifies whether the name is for an individual or a not.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREFERREDCONTACT",
+    "insertText": "PREFERREDCONTACT",
+    "description": "This field contains the computed data that you selected in the Preferred Contact Method field.",
+    "isSnippet": false
+  },
+  {
+    "label": "HOMEPHONE",
+    "insertText": "HOMEPHONE",
+    "description": "This field stores the home telephone number of the person identified in the Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "WORKPHONE",
+    "insertText": "WORKPHONE",
+    "description": "This field stores the business telephone number of the person identified in the Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "WORKPHONEEXTENSION",
+    "insertText": "WORKPHONEEXTENSION",
+    "description": "This field stores the business telephone extension for the person identified in the Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "MOBILEPHONE",
+    "insertText": "MOBILEPHONE",
+    "description": "This field stores the number for the member's cell phone or other mobile phone device (if any).",
+    "isSnippet": false
+  },
+  {
+    "label": "PHONETYPE",
+    "insertText": "PHONETYPE",
+    "description": "This field stores a code that specifies whether the phone number field values are a domestic or foreign phone number type.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAGERNUMBER",
+    "insertText": "PAGERNUMBER",
+    "description": "This field stores the number for a member's pager (if any).",
+    "isSnippet": false
+  },
+  {
+    "label": "EMAIL",
+    "insertText": "EMAIL",
+    "description": "This field stores the email address of the person identified in this Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTEMAIL",
+    "insertText": "ALTEMAIL",
+    "description": "This field stores an alternate email address of the person identified in this Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREFERREDCONTACTMETHOD",
+    "insertText": "PREFERREDCONTACTMETHOD",
+    "description": "This field contains a code that indicates how the member wants to receive information from the credit union.",
+    "isSnippet": false
+  },
+  {
+    "label": "DBATITLE",
+    "insertText": "DBATITLE",
+    "description": "This field stores any title that should precede the name of the DBA (doing business as) person in the Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "DBAFIRST",
+    "insertText": "DBAFIRST",
+    "description": "This field stores the first name of the DBA (doing business as) person identified in the Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "DBAMIDDLE",
+    "insertText": "DBAMIDDLE",
+    "description": "This field stores the middle name or middle initial of the DBA (doing business as) person identified in the Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "DBALAST",
+    "insertText": "DBALAST",
+    "description": "This field stores the last name of the DBA (doing business as) information identified in the Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "DBASUFFIX",
+    "insertText": "DBASUFFIX",
+    "description": "This field stores any suffix that should follow the DBA (doing business as) person identified in the Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "DBANAMEFORMAT",
+    "insertText": "DBANAMEFORMAT",
+    "description": "This field stores a code that specifies whether the DBA (doing business as) name is for an individual or a not.",
+    "isSnippet": false
+  },
+  {
+    "label": "BIRTHDATE",
+    "insertText": "BIRTHDATE",
+    "description": "This field stores the birth date of the person identified in the Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEATHDATE",
+    "insertText": "DEATHDATE",
+    "description": "This field stores the date of death in the primary Name record, or in the Share Name record if the tax-deferred share is not owned by the primary member.",
+    "isSnippet": false
+  },
+  {
+    "label": "SEX",
+    "insertText": "SEX",
+    "description": "This field stores a character that identifies the sex of the person identified in the Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "MOTHERSMAIDENNAME",
+    "insertText": "MOTHERSMAIDENNAME",
+    "description": "This field stores the maiden name of the mother of the person identified in this Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "SSN",
+    "insertText": "SSN",
+    "description": "This field stores the individual SSN (Social Security Number), ITIN (Individual Taxpayer Identification Number), or the organizational EIN (Employer Identification Number) of the person identified in the Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "SSNTYPE",
+    "insertText": "SSNTYPE",
+    "description": "This field stores a code that identifies the type of number in the SSN/TIN field in the Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "USPERSONFLAG",
+    "insertText": "USPERSONFLAG",
+    "description": "This field specifies whether the person defined in this record is a citizen of the United States, or whether the business identified is established or organized under the laws of a state or the United States. Choose one of the following:",
+    "isSnippet": false
+  },
+  {
+    "label": "EMPLOYERNAME",
+    "insertText": "EMPLOYERNAME",
+    "description": "This field stores the name of the employer of the person identified in this Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "OCCUPATION",
+    "insertText": "OCCUPATION",
+    "description": "This field stores the current occupation of the person identified in this Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURRGROSSMONTHPAY",
+    "insertText": "CURRGROSSMONTHPAY",
+    "description": "This field stores the members' current monthly gross pay.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURRNETMONTHPAY",
+    "insertText": "CURRNETMONTHPAY",
+    "description": "This field stores the member's current monthly net pay.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURRMONTHPAYCHGDATE",
+    "insertText": "CURRMONTHPAYCHGDATE",
+    "description": "This field contains the computed date when you last performed file maintenance on the Curr Gross Mo Pay or Curr Net Mo Pay fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "RESTRICT",
+    "insertText": "RESTRICT",
+    "description": "This field stores a code that identifies the type of number in the SSN/TIN field in the Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "MBRSTATUS",
+    "insertText": "MBRSTATUS",
+    "description": "This field stores a code that determines the type of member represented in this Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "CTREXEMPT",
+    "insertText": "CTREXEMPT",
+    "description": "This field stores a code that specifies whether the account is to be exempt from reporting.",
+    "isSnippet": false
+  },
+  {
+    "label": "LEI",
+    "insertText": "LEI",
+    "description": "This field stores the unique alpha-numeric code associated with a single corporate entity for international financial market record keeping.",
+    "isSnippet": false
+  },
+  {
+    "label": "BENEFICIALOWNER",
+    "insertText": "BENEFICIALOWNER",
+    "description": "This field stores a code that identifies if this person is a beneficial owner of a legal entity.",
+    "isSnippet": false
+  },
+  {
+    "label": "BENEFICIALPERCENT",
+    "insertText": "BENEFICIALPERCENT",
+    "description": "This field stores the percentage of the equity interests of the legal entity customer that this person owns.",
+    "isSnippet": false
+  },
+  {
+    "label": "IRSCOUNTRYCODE",
+    "insertText": "IRSCOUNTRYCODE",
+    "description": "This field stores the two-character IRS country code for the member's country of residence.",
+    "isSnippet": false
+  },
+  {
+    "label": "NRATAXRATE",
+    "insertText": "NRATAXRATE",
+    "description": "This field stores the NRA tax rate that applies to a member's tax withholding.",
+    "isSnippet": false
+  },
+  {
+    "label": "NRAEXEMPTIONCODE",
+    "insertText": "NRAEXEMPTIONCODE",
+    "description": "This field stores the two-character code that indicates the reason income is exempt from tax withholding.",
+    "isSnippet": false
+  },
+  {
+    "label": "FORMW8ONFILE",
+    "insertText": "FORMW8ONFILE",
+    "description": "This field stores a code that indicates whether the credit union has a W-8 form on file for the member.",
+    "isSnippet": false
+  },
+  {
+    "label": "W8EXPIRATIONDATE",
+    "insertText": "W8EXPIRATIONDATE",
+    "description": "This field stores the expiration date of the W-8 form on file for a member that does not have a Social Security Number (SSN) or Individual Taxpayer Identification Number (ITIN).",
+    "isSnippet": false
+  },
+  {
+    "label": "FOREIGNTIN",
+    "insertText": "FOREIGNTIN",
+    "description": "This field stores the taxpayer identification number used in the country of residence for tax purposes.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHAPTER4STATUSCODE",
+    "insertText": "CHAPTER4STATUSCODE",
+    "description": "This field stores the 2-character code that indicates the type of recipient.",
+    "isSnippet": false
+  },
+  {
+    "label": "GIIN",
+    "insertText": "GIIN",
+    "description": "This field stores the recipient Global Intermediary Identification Number (GIIN).",
+    "isSnippet": false
+  },
+  {
+    "label": "SUBSTANTIALOWNER",
+    "insertText": "SUBSTANTIALOWNER",
+    "description": "This field stores a code that determines if an entity account holder has documentation as a Foreign Financial Institution (FFI) or Non-Financial Foreign Entity (NFFE).",
+    "isSnippet": false
+  },
+  {
+    "label": "LOB",
+    "insertText": "LOB",
+    "description": "This field stores the 2-character code that best describes the applicable limitation on benefits (LOB) category that qualifies the member for requested benefits.",
+    "isSnippet": false
+  },
+  {
+    "label": "ADDRESSTYPE",
+    "insertText": "ADDRESSTYPE",
+    "description": "This field stores a code that specifies whether the address of the person identified in the Name record is domestic or foreign.",
+    "isSnippet": false
+  },
+  {
+    "label": "STREET",
+    "insertText": "STREET",
+    "description": "This field stores the street address of the person identified in the Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "CITY",
+    "insertText": "CITY",
+    "description": "This field stores the name of the city where the person identified in the Name record resides.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATE",
+    "insertText": "STATE",
+    "description": "This field stores the name or postal abbreviation of the state where the person identified in the Name record resides.",
+    "isSnippet": false
+  },
+  {
+    "label": "ZIPCODE",
+    "insertText": "ZIPCODE",
+    "description": "This field stores the domestic ZIP code where the person identified in the Name record resides.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXTRAADDRESS",
+    "insertText": "EXTRAADDRESS",
+    "description": "This field stores extra address information to save with the mailing address of the person identified in the Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTRY",
+    "insertText": "COUNTRY",
+    "description": "This field stores the foreign country where the person identified in the Name record resides.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTRYCODE",
+    "insertText": "COUNTRYCODE",
+    "description": "This field stores the 2-character code that best describes the applicable limitation on benefits (LOB) category that qualifies the member for requested benefits.",
+    "isSnippet": false
+  },
+  {
+    "label": "CARRIERROUTE",
+    "insertText": "CARRIERROUTE",
+    "description": "This field stores the carrier route number for the person identified in the Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "MEMBERNUMLINK",
+    "insertText": "MEMBERNUMLINK",
+    "description": "The system stores a pointer in this field to the MBR Number field in the Member record linked with this Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "MEMBERNUMLINKCHGDATE",
+    "insertText": "MEMBERNUMLINKCHGDATE",
+    "description": "The system stores the current system date when the MBR Number Link field changes.",
+    "isSnippet": false
+  },
+  {
+    "label": "LICENSE",
+    "insertText": "LICENSE",
+    "description": "This field contains the state drivers license from one of the ID Number 1–ID Number 3 fields if it's associated ID Type 1–ID Type 3 field is set to (2) State Drivers License.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTADDRVERIFDATE",
+    "insertText": "LASTADDRVERIFDATE",
+    "description": "The system stores the date of the most recent address verification for the member.",
+    "isSnippet": false
+  },
+  {
+    "label": "MAILOVERRIDE",
+    "insertText": "MAILOVERRIDE",
+    "description": "This field stores a code that specifies whether the address in the Name record should override the mailing address in the primary Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "ECOACODE",
+    "insertText": "ECOACODE",
+    "description": "This field contains an Equal Credit Opportunity Act (ECOA) code that indicates how the system should report loans to credit bureaus.",
+    "isSnippet": false
+  },
+  {
+    "label": "BENEFICIARYPERCENT",
+    "insertText": "BENEFICIARYPERCENT",
+    "description": "This field stores the percentage of funds allocated to the beneficiary identified in the Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXTRAINFO",
+    "insertText": "EXTRAINFO",
+    "description": "This field stores a character string related to the beneficiary.",
+    "isSnippet": false
+  },
+  {
+    "label": "CRSSNCHGDATE",
+    "insertText": "CRSSNCHGDATE",
+    "description": "This field contains the computed date when you last performed file maintenance on the SSN/TIN field.",
+    "isSnippet": false
+  },
+  {
+    "label": "SSNOVERRIDE",
+    "insertText": "SSNOVERRIDE",
+    "description": "This field stores a code that determines if the Social Security Number (SSN) or Individual Taxpayer Identification Number (TIN) in this Name record should override the SSN or TIN in the primary Name record or not.",
+    "isSnippet": false
+  },
+  {
+    "label": "SSNCERTIFICATION",
+    "insertText": "SSNCERTIFICATION",
+    "description": "This field stores a code that helps ensure that your credit union handles dividend withholding correctly.",
+    "isSnippet": false
+  },
+  {
+    "label": "IRSCORRECTION",
+    "insertText": "IRSCORRECTION",
+    "description": "This field stores a code that identifies the IRS type of error being corrected.",
+    "isSnippet": false
+  },
+  {
+    "label": "IRS1042SAMENDNUM",
+    "insertText": "IRS1042SAMENDNUM",
+    "description": "This field stores a code that identifies the number of times you submitted a corrected 1042-S form.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDITREPORTCONSUMERINFO",
+    "insertText": "CREDITREPORTCONSUMERINFO",
+    "description": "This field stores a 2-character code that identifies the individual bankruptcy status used for the Metro 2® Format Credit Reporting system.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDITREPORTCONSUMERINFODATE",
+    "insertText": "CREDITREPORTCONSUMERINFODATE",
+    "description": "This field stores the date when you last performed file maintenance on the Credit Report Consumer Info field.",
+    "isSnippet": false
+  },
+  {
+    "label": "MARKETINGADDRESS",
+    "insertText": "MARKETINGADDRESS",
+    "description": "This field stores a code that specifies whether to use the address associated with this Name record for marketing a not.",
+    "isSnippet": false
+  },
+  {
+    "label": "MBRADDRNUMLINK",
+    "insertText": "MBRADDRNUMLINK",
+    "description": "The system stores a pointer in this field to the ADDR Number field in the Member Address record linked with this Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "MBRADDRNUMLINKCHGDATE",
+    "insertText": "MBRADDRNUMLINKCHGDATE",
+    "description": "The system stores the current system date when the ADDR Number Link field changes.",
+    "isSnippet": false
+  },
+  {
+    "label": "None",
+    "insertText": "None",
+    "description": "This action field indicates if you want to copy the field values from another Name record or Person record in the same account to save time and keystrokes.",
+    "isSnippet": false
+  },
+  {
+    "label": "TYPE",
+    "insertText": "TYPE",
+    "description": "This field stores a code that identifies the type of name of this Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "SUBTYPE",
+    "insertText": "SUBTYPE",
+    "description": "This field stores a credit union-defined code that further identifies the type of Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "CRNAMECHGDATE",
+    "insertText": "CRNAMECHGDATE",
+    "description": "This field contains the computed date when you last performed file maintenance on the First Name, Middle Name, or Last Name fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTADDRCHGDATE",
+    "insertText": "LASTADDRCHGDATE",
+    "description": "This field contains the computed date when you last performed file maintenance to specific name or address fields in the Account Name, Share Name, Loan Name, or Card records, including the First Name, Middle Name, Last Name, Street, Extra Address, City, State, and Country fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "CRADDRCHGDATE",
+    "insertText": "CRADDRCHGDATE",
+    "description": "This field contains the computed date when you last performed file maintenance on the Street, Extra Address, City, State, Country, or Zip Code address fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "EFFECTIVEDATE",
+    "insertText": "EFFECTIVEDATE",
+    "description": "This field stores the date that indicates when the information in this Name record should be used.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXPIRATIONDATE",
+    "insertText": "EXPIRATIONDATE",
+    "description": "This field stores the date that indicates when the information in this Name record should no longer be used.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTFMDATE",
+    "insertText": "LASTFMDATE",
+    "description": "The system stores the date in this field of the last file maintenance to the Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "MBRFMLASTDATE",
+    "insertText": "MBRFMLASTDATE",
+    "description": "The system stores the date in this field of the last file maintenance to the Member record.",
+    "isSnippet": false
+  },
+  {
+    "label": "ADDRFMLASTDATE",
+    "insertText": "ADDRFMLASTDATE",
+    "description": "The system stores the date in this field of the last file maintenance to the Member Address record.",
+    "isSnippet": false
+  },
+  {
+    "label": "CONFIDENTIAL",
+    "insertText": "CONFIDENTIAL",
+    "description": "This field stores a code that indicates a member has an Account that they wish to keep private or not.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDITREPORTADDRINDICATOR",
+    "insertText": "CREDITREPORTADDRINDICATOR",
+    "description": "This field stores a 1-character code that causes a Share or Loan Note record to be posted with information about the address reported in the Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDITREPORTADDRINDICATORDATE",
+    "insertText": "CREDITREPORTADDRINDICATORDATE",
+    "description": "This field stores the date when the Credit Rpt Address Indicator field is updated with an address indicator value or any non-blank value.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTDOCFLAG:1",
+    "insertText": "IDENTDOCFLAG:1",
+    "description": "These fields each store a code that indicates whether the first, second, or third form of identification was supported with documentary evidence.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTDOCFLAG:2",
+    "insertText": "IDENTDOCFLAG:2",
+    "description": "These fields each store a code that indicates whether the first, second, or third form of identification was supported with documentary evidence.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTDOCFLAG:3",
+    "insertText": "IDENTDOCFLAG:3",
+    "description": "These fields each store a code that indicates whether the first, second, or third form of identification was supported with documentary evidence.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDTYPE:1",
+    "insertText": "IDENTIDTYPE:1",
+    "description": "These fields each specify the type of documentation (if any) that was used to support the first, second, or third form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDTYPE:2",
+    "insertText": "IDENTIDTYPE:2",
+    "description": "These fields each specify the type of documentation (if any) that was used to support the first, second, or third form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDTYPE:3",
+    "insertText": "IDENTIDTYPE:3",
+    "description": "These fields each specify the type of documentation (if any) that was used to support the first, second, or third form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDDESCRIPTION:1",
+    "insertText": "IDENTIDDESCRIPTION:1",
+    "description": "These fields each store further detail about the corresponding first, second, or third form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDDESCRIPTION:2",
+    "insertText": "IDENTIDDESCRIPTION:2",
+    "description": "These fields each store further detail about the corresponding first, second, or third form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDDESCRIPTION:3",
+    "insertText": "IDENTIDDESCRIPTION:3",
+    "description": "These fields each store further detail about the corresponding first, second, or third form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDNUMBER:1",
+    "insertText": "IDENTIDNUMBER:1",
+    "description": "These fields each store the value of the type of identification specified by the corresponding first, second, or third form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDNUMBER:2",
+    "insertText": "IDENTIDNUMBER:2",
+    "description": "These fields each store the value of the type of identification specified by the corresponding first, second, or third form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDNUMBER:2",
+    "insertText": "IDENTIDNUMBER:2",
+    "description": "These fields each store the value of the type of identification specified by the corresponding first, second, or third form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDISSUEDATE:1",
+    "insertText": "IDENTIDISSUEDATE:1",
+    "description": "These fields each store the date the type of identification specified by the corresponding first, second, or third form of identification was issued, if known.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDISSUEDATE:2",
+    "insertText": "IDENTIDISSUEDATE:2",
+    "description": "These fields each store the date the type of identification specified by the corresponding first, second, or third form of identification was issued, if known.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDISSUEDATE:3",
+    "insertText": "IDENTIDISSUEDATE:3",
+    "description": "These fields each store the date the type of identification specified by the corresponding first, second, or third form of identification was issued, if known.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDEXPIREDATE:1",
+    "insertText": "IDENTIDEXPIREDATE:1",
+    "description": "These fields each store the date the type of identification specified by the corresponding first, second, or third form of identification expires, if known.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDEXPIREDATE:2",
+    "insertText": "IDENTIDEXPIREDATE:2",
+    "description": "These fields each store the date the type of identification specified by the corresponding first, second, or third form of identification expires, if known.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDEXPIREDATE:3",
+    "insertText": "IDENTIDEXPIREDATE:3",
+    "description": "These fields each store the date the type of identification specified by the corresponding first, second, or third form of identification expires, if known.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDVERIFYDATE:1",
+    "insertText": "IDENTIDVERIFYDATE:1",
+    "description": "These fields each store the date the type of identification specified by the corresponding first, second, or third form of identification was verified.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDVERIFYDATE:2",
+    "insertText": "IDENTIDVERIFYDATE:2",
+    "description": "These fields each store the date the type of identification specified by the corresponding first, second, or third form of identification was verified.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDVERIFYDATE:3",
+    "insertText": "IDENTIDVERIFYDATE:3",
+    "description": "These fields each store the date the type of identification specified by the corresponding first, second, or third form of identification was verified.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "The system stores a unique number within each member account in this field that can be used as a unique identification of this record.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR1",
+    "insertText": "USERCHAR1",
+    "description": "These four custom fields can store any credit union-defined character data.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR2",
+    "insertText": "USERCHAR2",
+    "description": "These four custom fields can store any credit union-defined character data.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR3",
+    "insertText": "USERCHAR3",
+    "description": "These four custom fields can store any credit union-defined character data.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR4",
+    "insertText": "USERCHAR4",
+    "description": "These four custom fields can store any credit union-defined character data.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT1",
+    "insertText": "USERAMOUNT1",
+    "description": "These two custom fields can store any credit union-defined cash amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT2",
+    "insertText": "USERAMOUNT2",
+    "description": "These two custom fields can store any credit union-defined cash amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE1",
+    "insertText": "USERDATE1",
+    "description": "These two custom fields can store any credit union-defined date.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE2",
+    "insertText": "USERDATE2",
+    "description": "These two custom fields can store any credit union-defined date.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXTENDEDNAME",
+    "insertText": "EXTENDEDNAME",
+    "description": "The system stores the characters over 40 entered in the Last Name/Non Indiv Name field in this field when the Name Format field value is set to (1) Non-Individual.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "The system stores the system date in this field when you create, change, or save this Name record if the change is made from this Name record. Sometimes the system updates this field because the record was saved, even though there may not be any actual changes in the record.",
+    "isSnippet": false
+  },
+  {
+    "label": "MEMBERNUMBER",
+    "insertText": "MEMBERNUMBER",
+    "description": "The system stores the unique value in this field assigned within each Member record when it is created.",
+    "isSnippet": false
+  },
+  {
+    "label": "MBRSTATUSFMDATE",
+    "insertText": "MBRSTATUSFMDATE",
+    "description": "The system stores the system date in this field when the MBR Status field is changed by the system or the user.",
+    "isSnippet": false
+  },
+  {
+    "label": "MBRCREATEDATE",
+    "insertText": "MBRCREATEDATE",
+    "description": "The system stores the system date in this field when you create the Member record.",
+    "isSnippet": false
+  },
+  {
+    "label": "MBREXPDATE",
+    "insertText": "MBREXPDATE",
+    "description": "The system stores an expiration date in this field for the Member record.",
+    "isSnippet": false
+  },
+  {
+    "label": "MBRACTIVITYDATE",
+    "insertText": "MBRACTIVITYDATE",
+    "description": "The system stores the system date in this field when any transaction activity occurs on the Member record.",
+    "isSnippet": false
+  },
+  {
+    "label": "MBRADDRNUMBER",
+    "insertText": "MBRADDRNUMBER",
+    "description": "The system stores the unique value in this field assigned within each Member Address record when it is created.",
+    "isSnippet": false
+  },
+  {
+    "label": "ADDRCREATEDATE",
+    "insertText": "ADDRCREATEDATE",
+    "description": "The system stores the system date in this field when you create the Member Address record.",
+    "isSnippet": false
+  },
+  {
+    "label": "ADDREXPDATE",
+    "insertText": "ADDREXPDATE",
+    "description": "The system stores an expiration date in this field for the Member Address record.",
+    "isSnippet": false
+  },
+  {
+    "label": "NONACCTNAMENUM",
+    "insertText": "NONACCTNAMENUM",
+    "description": "The system stores the unique value in this field assigned within each Non-Account Name record when it is created.",
+    "isSnippet": false
+  },
+  {
+    "label": "MBRFMLASTPURGEDATE",
+    "insertText": "MBRFMLASTPURGEDATE",
+    "description": "The system stores the date in this field through which file maintenance history for Member records was last purged by the Purge Transaction Processing batch program.",
+    "isSnippet": false
+  },
+  {
+    "label": "ADDRFMLASTPURGEDATE",
+    "insertText": "ADDRFMLASTPURGEDATE",
+    "description": "The system stores the date in this field through which file maintenance history for Member Address records was last purged by the Purge Transaction Processing batch program.",
+    "isSnippet": false
+  },
+  {
+    "label": "FMLASTPURGEDATE",
+    "insertText": "FMLASTPURGEDATE",
+    "description": "The system stores the date in this field through which file maintenance history for Name records was last purged by the Purge Transaction Processing batch program.",
+    "isSnippet": false
+  },
+  {
+    "label": "MBRRECORDCHANGEDATE",
+    "insertText": "MBRRECORDCHANGEDATE",
+    "description": "The system stores the system date in this field when a user changes a field value on the Member record.",
+    "isSnippet": false
+  },
+  {
+    "label": "MBRDISCONNECTDATE",
+    "insertText": "MBRDISCONNECTDATE",
+    "description": "The system stores the date in this field when a Member record is no longer linked with any Name or Non-account Name records due to a merge situation.",
+    "isSnippet": false
+  },
+  {
+    "label": "ADDRRECORDCHANGEDATE",
+    "insertText": "ADDRRECORDCHANGEDATE",
+    "description": "The system stores the system date in this field when a user changes a field value on the Member Address record.",
+    "isSnippet": false
+  },
+  {
+    "label": "ADDRDISCONNECTDATE",
+    "insertText": "ADDRDISCONNECTDATE",
+    "description": "The system stores the date in this field when a Member Address record is no longer linked with any Name records due to a merge situation.",
+    "isSnippet": false
+  },
+  {
+    "label": "MBRFILETYPE",
+    "insertText": "MBRFILETYPE",
+    "description": "This field stores a code that indicates whether the Member record is linked to a Name or Non-account Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "MBRADDRFILETYPE",
+    "insertText": "MBRADDRFILETYPE",
+    "description": "This field stores a code that indicates whether the Member Address record is linked to a Name or Non-account Name record.",
+    "isSnippet": false
+  },
+  {
+    "label": "DBAEXTENDEDNAME",
+    "insertText": "DBAEXTENDEDNAME",
+    "description": "The system stores the characters over 40 entered in the DBA Last Name/Non Indiv Name field in this field when the DBA Name Format field value is set to (1) Non-Individual.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACTIVEDUTY",
+    "insertText": "ACTIVEDUTY",
+    "description": "This field stores a code that indicates whether the member is on active duty with the military or a dependent of someone who is.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACTIVEDUTYVERIFICATIONDATE",
+    "insertText": "ACTIVEDUTYVERIFICATIONDATE",
+    "description": "This field stores the date on which the user verified the information that was entered in the Active Duty field.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACTIVEDUTYSTARTDATE",
+    "insertText": "ACTIVEDUTYSTARTDATE",
+    "description": "This field stores the date on which the member (or the person on whom the member is dependent) began active military duty.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACTIVEDUTYSEPARATIONDATE",
+    "insertText": "ACTIVEDUTYSEPARATIONDATE",
+    "description": "This field stores the date on which the member (or the person on whom the member is dependent) ended active military duty.",
+    "isSnippet": false
+  },
+  {
+    "label": "SHORTNAME",
+    "insertText": "SHORTNAME",
+    "description": "This field contains the computed short name of up to 16 characters to be used in displays and on reports.",
+    "isSnippet": false
+  },
+  {
+    "label": "LONGNAME",
+    "insertText": "LONGNAME",
+    "description": "This field contains the computed long name of up to 40 characters that can be accessed with PowerOn for displays and reports.",
+    "isSnippet": false
+  },
+  {
+    "label": "DBASHORTNAME",
+    "insertText": "DBASHORTNAME",
+    "description": "This field contains the computed short name of up to 16 characters to be used in displays and on reports as \"doing business as\" information.",
+    "isSnippet": false
+  },
+  {
+    "label": "DBALONGNAME",
+    "insertText": "DBALONGNAME",
+    "description": "This field contains the computed long name of up to 40 characters that can be accessed with PowerOn for displays and reports as \"doing business as\" information.",
+    "isSnippet": false
+  }
+]

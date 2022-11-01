@@ -1,0 +1,182 @@
+[
+  {
+    "label": "FMLASTDATE",
+    "insertText": "FMLASTDATE",
+    "description": "The system updates this field with the current system date whenever you perform file maintenance on this CP Work Card record. This field in the CP Work Card record is not updated when the file maintenance is performed by a batch process.",
+    "isSnippet": false
+  },
+  {
+    "label": "CLOSEDATE",
+    "insertText": "CLOSEDATE",
+    "description": "Enter a close date for the Work Card record following your credit union's policies. When Daily Posting runs after this date, the system sets the Active field to (0) Inactive.",
+    "isSnippet": false
+  },
+  {
+    "label": "NEXTWORKDATE",
+    "insertText": "NEXTWORKDATE",
+    "description": "Enter the next date you expect to work this Work Card record.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTWORKDATE",
+    "insertText": "LASTWORKDATE",
+    "description": "The system updates this field with the current system date whenever a collector creates a collection Note record, records a promise to pay, or generates a collection letter.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTWORKTIME",
+    "insertText": "LASTWORKTIME",
+    "description": "The system updates this field with the current system time whenever a collector creates a collection Note record, records a promise to pay, or generates a collection letter.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTCOLLECTORID",
+    "insertText": "LASTCOLLECTORID",
+    "description": "Whenever the Daily Posting batch program assigns a CP Work Card record to a collector, the system updates the Collector ID 0 field with the assigned collector's user number. You can change which collector is assigned to a CP Work Card record through file maintenance of this field. The system validates the field value against the Valid Collector List section in the Collection Work Card parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECCOLLECTORID:1",
+    "insertText": "SECCOLLECTORID:1",
+    "description": "We replaced the Secondary Collector ID List field with new Collector ID 1 – Collector ID 9 fields. These fields are used when a CP Work Card record is assigned to more than one collector.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECCOLLECTORID:2",
+    "insertText": "SECCOLLECTORID:2",
+    "description": "We replaced the Secondary Collector ID List field with new Collector ID 1 – Collector ID 9 fields. These fields are used when a CP Work Card record is assigned to more than one collector.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECCOLLECTORID:3",
+    "insertText": "SECCOLLECTORID:3",
+    "description": "We replaced the Secondary Collector ID List field with new Collector ID 1 – Collector ID 9 fields. These fields are used when a CP Work Card record is assigned to more than one collector.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECCOLLECTORID:4",
+    "insertText": "SECCOLLECTORID:4",
+    "description": "We replaced the Secondary Collector ID List field with new Collector ID 1 – Collector ID 9 fields. These fields are used when a CP Work Card record is assigned to more than one collector.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECCOLLECTORID:5",
+    "insertText": "SECCOLLECTORID:5",
+    "description": "We replaced the Secondary Collector ID List field with new Collector ID 1 – Collector ID 9 fields. These fields are used when a CP Work Card record is assigned to more than one collector.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECCOLLECTORID:6",
+    "insertText": "SECCOLLECTORID:6",
+    "description": "We replaced the Secondary Collector ID List field with new Collector ID 1 – Collector ID 9 fields. These fields are used when a CP Work Card record is assigned to more than one collector.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECCOLLECTORID:7",
+    "insertText": "SECCOLLECTORID:7",
+    "description": "We replaced the Secondary Collector ID List field with new Collector ID 1 – Collector ID 9 fields. These fields are used when a CP Work Card record is assigned to more than one collector.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECCOLLECTORID:8",
+    "insertText": "SECCOLLECTORID:8",
+    "description": "We replaced the Secondary Collector ID List field with new Collector ID 1 – Collector ID 9 fields. These fields are used when a CP Work Card record is assigned to more than one collector.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECCOLLECTORID:9",
+    "insertText": "SECCOLLECTORID:9",
+    "description": "We replaced the Secondary Collector ID List field with new Collector ID 1 – Collector ID 9 fields. These fields are used when a CP Work Card record is assigned to more than one collector.",
+    "isSnippet": false
+  },
+  {
+    "label": "TYPE",
+    "insertText": "TYPE",
+    "description": "This field identifies the kind of Work Card record. Only defined Work Card Types are displayed as options for this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACTIVE",
+    "insertText": "ACTIVE",
+    "description": "This field identifies the status of the Work Card record.",
+    "isSnippet": false
+  },
+  {
+    "label": "NOTEPURGEDATE",
+    "insertText": "NOTEPURGEDATE",
+    "description": "This field is not currently used.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "The system stores the system date in this field when you create, change, or save the Collection Work Card record. There are times when the system updates this field because the record was saved, even though there may not be any actual changes in the record.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRIORITY",
+    "insertText": "PRIORITY",
+    "description": "This field contains the Priority 0 field value you assigned with the Daily Posting batch program using the custom specfile you entered at the Collection Queue Specification File prompt. You can perform file maintenance on this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECPRIORITY:1",
+    "insertText": "SECPRIORITY:1",
+    "description": "These fields determine the order in which the work cards appear in the collection queue. They contain the priority you assigned with the Daily Posting Batch Program using the custom specfile you entered at the Collection Queue Specification File prompt.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECPRIORITY:2",
+    "insertText": "SECPRIORITY:2",
+    "description": "These fields determine the order in which the work cards appear in the collection queue. They contain the priority you assigned with the Daily Posting Batch Program using the custom specfile you entered at the Collection Queue Specification File prompt.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECPRIORITY:3",
+    "insertText": "SECPRIORITY:3",
+    "description": "These fields determine the order in which the work cards appear in the collection queue. They contain the priority you assigned with the Daily Posting Batch Program using the custom specfile you entered at the Collection Queue Specification File prompt.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECPRIORITY:4",
+    "insertText": "SECPRIORITY:4",
+    "description": "These fields determine the order in which the work cards appear in the collection queue. They contain the priority you assigned with the Daily Posting Batch Program using the custom specfile you entered at the Collection Queue Specification File prompt.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECPRIORITY:5",
+    "insertText": "SECPRIORITY:5",
+    "description": "These fields determine the order in which the work cards appear in the collection queue. They contain the priority you assigned with the Daily Posting Batch Program using the custom specfile you entered at the Collection Queue Specification File prompt.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECPRIORITY:6",
+    "insertText": "SECPRIORITY:6",
+    "description": "These fields determine the order in which the work cards appear in the collection queue. They contain the priority you assigned with the Daily Posting Batch Program using the custom specfile you entered at the Collection Queue Specification File prompt.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECPRIORITY:7",
+    "insertText": "SECPRIORITY:7",
+    "description": "These fields determine the order in which the work cards appear in the collection queue. They contain the priority you assigned with the Daily Posting Batch Program using the custom specfile you entered at the Collection Queue Specification File prompt.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECPRIORITY:8",
+    "insertText": "SECPRIORITY:8",
+    "description": "These fields determine the order in which the work cards appear in the collection queue. They contain the priority you assigned with the Daily Posting Batch Program using the custom specfile you entered at the Collection Queue Specification File prompt.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECPRIORITY:9",
+    "insertText": "SECPRIORITY:9",
+    "description": "These fields determine the order in which the work cards appear in the collection queue. They contain the priority you assigned with the Daily Posting Batch Program using the custom specfile you entered at the Collection Queue Specification File prompt.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "The system stores a unique number within each member account in this field that can be used as a unique identification of this record.",
+    "isSnippet": false
+  }
+]

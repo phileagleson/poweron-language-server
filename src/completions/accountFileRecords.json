@@ -1,0 +1,482 @@
+[
+	{
+		"label": "ACCOUNT",
+		"insertText": "ACCOUNT",
+		"description": "Account records store basic account information about your members",
+		"isSnippet": false
+	},
+	{
+		"label": "FMHISTORY",
+		"insertText": "FMHISTORY",
+		"description": "This FM History record stores updates to other records in the system when file maintenance occurs.",
+		"isSnippet": false
+	},
+	{
+		"label": "NAME",
+		"insertText": "NAME",
+		"description": "Name records store information about each person who has access to a member's account or to a child record family within the account.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOOKUP",
+		"insertText": "LOOKUP",
+		"description": "You can use Lookup records to cross-reference any identifying number to the Account record.",
+		"isSnippet": false
+	},
+	{
+		"label": "COMMENT",
+		"insertText": "COMMENT",
+		"description": "Comment records store comment text about the member's account.",
+		"isSnippet": false
+	},
+	{
+		"label": "HOUSEHOLD",
+		"insertText": "HOUSEHOLD",
+		"description": "Household records link accounts belonging to family members living at the same address to the head-of-household account.",
+		"isSnippet": false
+	},
+	{
+		"label": "PREFERENCE",
+		"insertText": "PREFERENCE",
+		"description": "The Preference record contains information about a member's preferences for interacting with the audio response or home banking system.",
+		"isSnippet": false
+	},
+	{
+		"label": "PREFERENCE ACCESS",
+		"insertText": "PREFERENCE ACCESS",
+		"description": "These fields store information about Card and Preference Access records.",
+		"isSnippet": false
+	},
+	{
+		"label": "TRACKING",
+		"insertText": "TRACKING",
+		"description": "Use Tracking records to store any miscellaneous information about the account or to store information about a child record family within the account. Some Tracking records are entered by the system and some are entered by the user.",
+		"isSnippet": false
+	},
+	{
+		"label": "NOTE",
+		"insertText": "NOTE",
+		"description": "Note records maintain a history of text information for an account, share, dealer, participation, etc. You can enter information in free form or use system-defined note codes or note codes defined by your financial institution to produce pre-formatt ...",
+		"isSnippet": false
+	},
+	{
+		"label": "SHARE",
+		"insertText": "SHARE",
+		"description": "Share records store information about savings, checking, IRA, club, or certificate shares. A member can have an unlimited number of Share records within the same account.",
+		"isSnippet": false
+	},
+	{
+		"label": "SHARE HOLD",
+		"insertText": "SHARE HOLD",
+		"description": "All Hold records contain the same fields, but Share Hold, Loan Hold, and Portfolio Hold records serve different functions.",
+		"isSnippet": false
+	},
+	{
+		"label": "SHARE NAME",
+		"insertText": "SHARE NAME",
+		"description": "Name records store information about each person who has access to a member's account or to a child record family within the account.",
+		"isSnippet": false
+	},
+	{
+		"label": "SHARE TRANSFER",
+		"insertText": "SHARE TRANSFER",
+		"description": "Transfer records store information about the transfer of information from one Share, Loan, EFT, or External Loan record to another.",
+		"isSnippet": false
+	},
+	{
+		"label": "SHARE CHECKORDER",
+		"insertText": "SHARE CHECKORDER",
+		"description": "You can create Check Order records for each member to enable you to order checks for that member's share and loan accounts whenever necessary. You can offer your members a wide variety of check and checkbook style choices, limited only by the option ...",
+		"isSnippet": false
+	},
+	{
+		"label": "SHARE TRACKING",
+		"insertText": "SHARE TRACKING",
+		"description": "Share Tracking records store user-defined information about a share.",
+		"isSnippet": false
+	},
+	{
+		"label": "SHARE NOTE",
+		"insertText": "SHARE NOTE",
+		"description": "Note records maintain a history of text information for an account, share, dealer, participation, etc. You can enter information in free form or use system-defined note codes or note codes defined by your financial institution to produce pre-formatt ...",
+		"isSnippet": false
+	},
+	{
+		"label": "SHARE TRANSACTION",
+		"insertText": "SHARE TRANSACTION",
+		"description": "The system updates the fields in the Transaction record whenever a transaction affects a Share or Loan record.",
+		"isSnippet": false
+	},
+	{
+		"label": "SHARE ANALYSISGROUP",
+		"insertText": "SHARE ANALYSISGROUP",
+		"description": "Share Analysis Group records give you the ability to combine several accounts together and analyze them as if they were one account. Accounts can be in multiple member records.",
+		"isSnippet": false
+	},
+	{
+		"label": "SHARE ANALYSISPLAN",
+		"insertText": "SHARE ANALYSISPLAN",
+		"description": "This record is used primarily with commercial accounts. You can create this record type on your system only if you purchase the Symitar Quest Member Business Services - Account Analysis module from Jack Henry.",
+		"isSnippet": false
+	},
+	{
+		"label": "SHARE ANALYSIS",
+		"insertText": "SHARE ANALYSIS",
+		"description": "This record is primarily used with commercial accounts; you can create this record type on your system only if you purchase the Member Business Services Account Analysis module from us.",
+		"isSnippet": false
+	},
+	{
+		"label": "IRS",
+		"insertText": "IRS",
+		"description": "Each IRS record stores the total of all contributions to and distributions from a specific type of tax-deferred share (such as IRA, Deferred Comp, SEP, Keogh, 401K) for one Social Security Number.",
+		"isSnippet": false
+	},
+	{
+		"label": "IRS NAME",
+		"insertText": "IRS NAME",
+		"description": "Name records store information about each person who has access to a member's account or to a child record family within the account.",
+		"isSnippet": false
+	},
+	{
+		"label": "IRS DISTRIBUTION",
+		"insertText": "IRS DISTRIBUTION",
+		"description": "The IRS Distribution record gives you a central place to designate the values for theDistribution Code, Federal Withholding, and State Withholding fields for IRS distributions.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOAN",
+		"insertText": "LOAN",
+		"description": "Loan records store information about each loan in the member's account.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOAN HOLD",
+		"insertText": "LOAN HOLD",
+		"description": "All Hold records contain the same fields, but Share Hold, Loan Hold, and Portfolio Hold records serve different functions.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOAN NAME",
+		"insertText": "LOAN NAME",
+		"description": "Name records store information about each person who has access to a member's account or to a child record family within the account.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOAN PLEDGE",
+		"insertText": "LOAN PLEDGE",
+		"description": "You can create Pledge records in Account Manager at the Loan record level (LOAN PLEDGE) by right-clicking the Loan record, at the Account record level (PLEDGE) by right-clicking the Account record, and at the Application record level (LOANAPP PLEDGE ...",
+		"isSnippet": false
+	},
+	{
+		"label": "LOAN PLEDGE NAME",
+		"insertText": "LOAN PLEDGE NAME",
+		"description": "Name records store information about each person who has access to a member's account or to a child record family within the account.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOAN TRANSFER",
+		"insertText": "LOAN TRANSFER",
+		"description": "Transfer records store information about the transfer of information from one Share, Loan, EFT, or External Loan record to another.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOAN ESCROWANALYSIS",
+		"insertText": "LOAN ESCROWANALYSIS",
+		"description": "Escrow Analysis records include previous, current, new payment, and overage information.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOAN ESCROW",
+		"insertText": "LOAN ESCROW",
+		"description": "Escrow records store information about payments, distribution, vendors, or balances.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOAN CHECKORDER",
+		"insertText": "LOAN CHECK ORDER",
+		"description": "You can create Check Order records for each member to enable you to order checks for that member's share and loan accounts whenever necessary. You can offer your members a wide variety of check and checkbook style choices, limited only by the option ...",
+		"isSnippet": false
+	},
+	{
+		"label": "LOAN TRACKING",
+		"insertText": "LOAN TRACKING",
+		"description": "The Loan Tracking record stores user-defined information regarding loans.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOAN NOTE",
+		"insertText": "LOAN NOTE",
+		"description": "Note records maintain a history of text information for an account, share, dealer, participation, etc. You can enter information in free form or use system-defined note codes or note codes defined by your financial institution to produce pre-formatt ...",
+		"isSnippet": false
+	},
+	{
+		"label": "LOAN TRANSACTION",
+		"insertText": "LOAN TRANSACTION",
+		"description": "The system updates the fields in the Transaction record whenever a transaction affects a Share or Loan record.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOAN SCHEDULE",
+		"insertText": "LOAN SCHEDULE",
+		"description": "Schedule records are used with the Member Business Services Multiple Repayment Programs Per Loan module.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOAN LNSEGMENT",
+		"insertText": "LOAN LNSEGMENT",
+		"description": "Segment records are child records you can add to a Loan or Application record that has the Loan Code field set to (6) LOC Combination when its Account record has a membership status of anything other than (1) Non-Member.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOAN RATECHANGE",
+		"insertText": "LOAN RATECHANGE",
+		"description": "The Rate Change record stores the details when you impose a new rate on a loan.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOAN BANKRUPTCY",
+		"insertText": "LOAN BANKRUPTCY",
+		"description": "Loan Bankruptcy records are child records that can be added to a Loan record with a Loan Code field value of (0) Closed End or (1) Open End.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOAN BANKRUPTCY PREPETITIONBAL",
+		"insertText": "LOAN BANKRUPTCY PREPETITIONBAL",
+		"description": "Loan Bankruptcy PrePetition Bal records are child records that can be added to a Loan Bankruptcy record.",
+		"isSnippet": false
+	},
+	{
+		"label": "EFT",
+		"insertText": "EFT",
+		"description": "Electronic Funds Transfer (EFT) records are used to process ACH (Automated Clearing House), distribution and origination, payroll, and bill payment. EFT records can have three child records: EFT Name record, EFT Transfer record, and EFT Addenda Info ...",
+		"isSnippet": false
+	},
+	{
+		"label": "PAYROLL",
+		"insertText": "PAYROLL",
+		"description": "Electronic Funds Transfer (EFT) records are used to process ACH (Automated Clearing House), distribution and origination, payroll, and bill payment. EFT records can have three child records: EFT Name record, EFT Transfer record, and EFT Addenda Info ...",
+		"isSnippet": false
+	},
+	{
+		"label": "BILL",
+		"insertText": "BILL",
+		"description": "Electronic Funds Transfer (EFT) records are used to process ACH (Automated Clearing House), distribution and origination, payroll, and bill payment. EFT records can have three child records: EFT Name record, EFT Transfer record, and EFT Addenda Info ...",
+		"isSnippet": false
+	},
+	{
+		"label": "EFT ADDENDAINFO",
+		"insertText": "EFT ADDENDA INFO",
+		"description": "You can use the EFT Addenda Info record to store further information on an EFT transaction. If the EFT item is posted successfully, the EFT Addenda Info child records will be posted as associated comment transactions.",
+		"isSnippet": false
+	},
+	{
+		"label": "EFT NAME",
+		"insertText": "EFT NAME",
+		"description": "Name records store information about each person who has access to a member's account or to a child record family within the account.",
+		"isSnippet": false
+	},
+	{
+		"label": "EFT TRANSFER",
+		"insertText": "EFT TRANSFER",
+		"description": "Transfer records store information about the transfer of information from one Share, Loan, EFT, or External Loan record to another.",
+		"isSnippet": false
+	},
+	{
+		"label": "EXTERNALLOAN",
+		"insertText": "EXTERNALLOAN",
+		"description": "External Loan records store information about each third-party loan that is being tracked in the member's Symitar account.",
+		"isSnippet": false
+	},
+	{
+		"label": "EXTERNALLOAN NAME",
+		"insertText": "EXTERNALLOAN NAME",
+		"description": "Name records store information about each person who has access to a member's account or to a child record family within the account.",
+		"isSnippet": false
+	},
+	{
+		"label": "EXTERNALLOAN TRANSFER",
+		"insertText": "EXTERNALLOAN TRANSFER",
+		"description": "Transfer records store information about the transfer of information from one Share, Loan, EFT, or External Loan record to another.",
+		"isSnippet": false
+	},
+	{
+		"label": "EXTERNALLOAN TRACKING",
+		"insertText": "EXTERNALLOAN TRACKING",
+		"description": "External Loan Tracking record fields are created in the member's account.",
+		"isSnippet": false
+	},
+	{
+		"label": "EXTERNALLOAN NOTE",
+		"insertText": "EXTERNALLOAN NOTE",
+		"description": "Note records maintain a history of text information for an account, share, dealer, participation, etc. You can enter information in free form or use system-defined note codes or note codes defined by your financial institution to produce pre-formatt ...",
+		"isSnippet": false
+	},
+	{
+		"label": "CARD",
+		"insertText": "CARD",
+		"description": "Card records contain information about plastic cards (ATM, debit, or credit cards) the credit union offers to members.",
+		"isSnippet": false
+	},
+	{
+		"label": "CARD NAME",
+		"insertText": "CARD NAME",
+		"description": "Name records store information about each person who has access to a member's account or to a child record family within the account.",
+		"isSnippet": false
+	},
+	{
+		"label": "CARD NOTE",
+		"insertText": "CARD NOTE",
+		"description": "Note records maintain a history of text information for an account, share, dealer, participation, etc. You can enter information in free form or use system-defined note codes or note codes defined by your financial institution to produce pre-formatt ...",
+		"isSnippet": false
+	},
+	{
+		"label": "CARD ACCESS",
+		"insertText": "CARD ACCESS",
+		"description": "These fields store information about Card and Preference Access records.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOANAPP",
+		"insertText": "LOANAPP",
+		"description": "The Application record fields store information to help determine an individual's eligibility for a loan or for credit union membership.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOANAPP PERSON",
+		"insertText": "LOANAPP PERSON",
+		"description": "The Application Person record fields store an applicant's name, address, and employment information.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOANAPP FINANCE",
+		"insertText": "LOANAPP FINANCE",
+		"description": "The Application Finance record stores information about income, assets, or liabilities an applicant has outside the credit union.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOANAPP TRACKING",
+		"insertText": "LOANAPP TRACKING",
+		"description": "The Application Tracking records store information about a member's loan or membership application.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOANAPP NOTE",
+		"insertText": "LOANAPP NOTE",
+		"description": "Note records maintain a history of text information for an account, share, dealer, participation, etc. You can enter information in free form or use system-defined note codes or note codes defined by your financial institution to produce pre-formatt ...",
+		"isSnippet": false
+	},
+	{
+		"label": "LOANAPP SCHEDULE",
+		"insertText": "LOANAPP SCHEDULE",
+		"description": "Schedule records are used with the Member Business Services Multiple Repayment Programs Per Loan module.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOANAPP LNSEGMENT",
+		"insertText": "LOANAPP LNSEGMENT",
+		"description": "Segment records are child records you can add to a Loan or Application record that has the Loan Code field set to (6) LOC Combination when its Account record has a membership status of anything other than (1) Non-Member.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOANAPP PLEDGE",
+		"insertText": "LOANAPP PLEDGE",
+		"description": "The Application Pledge records are necessary whenever a loan is secured by shares, a cosigner, collateral owned by another person, or stock.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOANAPP ESCROW",
+		"insertText": "LOANAPP ESCROW",
+		"description": "Escrow records store information about payments, distribution, vendors, or balances.",
+		"isSnippet": false
+	},
+	{
+		"label": "LOANAPP ESCROWANALYSIS",
+		"insertText": "LOANAPP ESCROWANALYSIS",
+		"description": "Escrow Analysis records include previous, current, new payment, and overage information.",
+		"isSnippet": false
+	},
+	{
+		"label": "CPWORKCARD",
+		"insertText": "CPWORKCARD",
+		"description": "The Collection Package automatically identifies delinquent loans, negative balance shares, and overlimit line of credit loans, then queues them according to your credit union's specifications. The system automatically creates Collection Work Card re ...",
+		"isSnippet": false
+	},
+	{
+		"label": "CPWORKCARD TRACKING",
+		"insertText": "CPWORKCARD TRACKING",
+		"description": "Collection Tracking records provide the collector with an electronic means of recording information regarding certain activities, such as bankruptcies, repossessions, or foreclosures.",
+		"isSnippet": false
+	},
+	{
+		"label": "CPWORKCARD NOTE",
+		"insertText": "CPWORKCARD NOTE",
+		"description": "Note records maintain a history of text information for an account, share, dealer, participation, etc. You can enter information in free form or use system-defined note codes or note codes defined by your financial institution to produce pre-formatt ...",
+		"isSnippet": false
+	},
+	{
+		"label": "CREDREP",
+		"insertText": "CREDREP",
+		"description": "Requests from Equifax, Experian, TransUnion, and ChexSystems use different fields in the Credit Report record. The fields in the Credit Report record accept different values for each of the credit bureaus and for ChexSystems.",
+		"isSnippet": false
+	},
+	{
+		"label": "CREDREP ITEM",
+		"insertText": "CREDREP ITEM",
+		"description": "The system updates the fields in the Credit Report Item record when a credit bureau returns a credit report. The use of each field in the Credit Report Item record depends on the credit bureau and the credit report segment.",
+		"isSnippet": false
+	},
+	{
+		"label": "PORTFOLIO",
+		"insertText": "PORTFOLIO",
+		"description": "The Portfolio record acts as a header record for all the individual stocks owned by the member.",
+		"isSnippet": false
+	},
+	{
+		"label": "PORTFOLIO HOLD",
+		"insertText": "PORTFOLIO HOLD",
+		"description": "All Hold records contain the same fields, but Share Hold, Loan Hold, and Portfolio Hold records serve different functions.",
+		"isSnippet": false
+	},
+	{
+		"label": "PORTFOLIO TRACKING",
+		"insertText": "PORTFOLIO TRACKING",
+		"description": "The fields in this record store the total value of the member's stocks, as well as the amount available for pledging.",
+		"isSnippet": false
+	},
+	{
+		"label": "PORTFOLIO NOTE",
+		"insertText": "PORTFOLIO NOTE",
+		"description": "Note records maintain a history of text information for an account, share, dealer, participation, etc. You can enter information in free form or use system-defined note codes or note codes defined by your financial institution to produce pre-formatt ...",
+		"isSnippet": false
+	},
+	{
+		"label": "SITE",
+		"insertText": "SITE",
+		"description": "The Site record holds information on sites (main or branch offices) to which a vendor delivers cash orders. You can have multiple sites per account.",
+		"isSnippet": false
+	},
+	{
+		"label": "SITE CASHORDERTYPE",
+		"insertText": "SITE CASHORDERTYPE",
+		"description": "The Cash Order Type record stores cash order template information. It is a child record of the Site record.",
+		"isSnippet": false
+	},
+	{
+		"label": "EXTERNALACCOUNT",
+		"insertText": "EXTERNALACCOUNT",
+		"description": "The External Account record establishes where the member transfers funds to or from.",
+		"isSnippet": false
+	},
+	{
+		"label": "PLEDGE",
+		"insertText": "PLEDGE",
+		"description": "You can create Pledge records in Account Manager at the Loan record level (LOAN PLEDGE) by right-clicking the Loan record, at the Account record level (PLEDGE) by right-clicking the Account record, and at the Application record level (LOANAPP PLEDGE ...",
+		"isSnippet": false
+	},
+	{
+		"label": "BATCHACHORIG",
+		"insertText": "BATCHACHORIG",
+		"description": "Batch ACH (Automated Clearing House) Origination records store the header record for the ACH batch.",
+		"isSnippet": false
+	}
+]

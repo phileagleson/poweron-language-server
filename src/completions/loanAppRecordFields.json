@@ -1,0 +1,2408 @@
+[
+  {
+    "label": "TYPE",
+    "insertText": "TYPE",
+    "description": "This field stores a credit union-defined code to identify the kind of application.",
+    "isSnippet": false
+  },
+  {
+    "label": "ID",
+    "insertText": "ID",
+    "description": "This field stores the ID you assign to the Application record when you create it.",
+    "isSnippet": false
+  },
+  {
+    "label": "SUBTYPE",
+    "insertText": "SUBTYPE",
+    "description": "This field stores a credit union-defined code that identifies the application type.",
+    "isSnippet": false
+  },
+  {
+    "label": "FORMTYPE",
+    "insertText": "FORMTYPE",
+    "description": "This field stores a credit union-defined code to identify the type of form used for the application.",
+    "isSnippet": false
+  },
+  {
+    "label": "EVENT",
+    "insertText": "EVENT",
+    "description": "This field stores the number of the current application workflow event for the application.",
+    "isSnippet": false
+  },
+  {
+    "label": "EVENTDATE",
+    "insertText": "EVENTDATE",
+    "description": "This field stores the date the application workflow value in the Event Number field last changed.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREATIONDATE",
+    "insertText": "CREATIONDATE",
+    "description": "This field stores the current system date when you create the Application record.",
+    "isSnippet": false
+  },
+  {
+    "label": "EFFECTIVEDATE",
+    "insertText": "EFFECTIVEDATE",
+    "description": "This field stores the effective date of the Application record.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXPIRATIONDATE",
+    "insertText": "EXPIRATIONDATE",
+    "description": "This field stores the date the Application record expires.",
+    "isSnippet": false
+  },
+  {
+    "label": "CLOSINGDATE",
+    "insertText": "CLOSINGDATE",
+    "description": "This field stores the date you close this Application record.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTFMDATE",
+    "insertText": "LASTFMDATE",
+    "description": "This field stores the current system date whenever there is any file maintenance of an Application record or child record field.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "This field stores the system date in this field when you create, change, or save the Application record. Sometimes the system updates this field because the record was saved, even though there may not be any actual changes in the record.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECONDAPPREQUEST",
+    "insertText": "SECONDAPPREQUEST",
+    "description": "This field stores a description of a second application, if applicable.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECONDAPPREQUESTAMT",
+    "insertText": "SECONDAPPREQUESTAMT",
+    "description": "This field stores the amount the member requests in a second application, if applicable.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECONDAPPPAYMENT",
+    "insertText": "SECONDAPPPAYMENT",
+    "description": "This field stores the payment amount associated with the second application, if applicable.",
+    "isSnippet": false
+  },
+  {
+    "label": "THIRDAPPREQUEST",
+    "insertText": "THIRDAPPREQUEST",
+    "description": "This field stores a description of a third application, if applicable.",
+    "isSnippet": false
+  },
+  {
+    "label": "THIRDAPPREQUESTAMT",
+    "insertText": "THIRDAPPREQUESTAMT",
+    "description": "This field stores the amount the member requests in a third application, if applicable.",
+    "isSnippet": false
+  },
+  {
+    "label": "THIRDAPPPAYMENT",
+    "insertText": "THIRDAPPPAYMENT",
+    "description": "This field stores the payment amount associated with the third application, if applicable.",
+    "isSnippet": false
+  },
+  {
+    "label": "CENSUSTRACT",
+    "insertText": "CENSUSTRACT",
+    "description": "This field stores the number of the census tract in which the applicant resides.",
+    "isSnippet": false
+  },
+  {
+    "label": "VIN",
+    "insertText": "VIN",
+    "description": "This field stores the vehicle identification number of any vehicle listed as collateral.",
+    "isSnippet": false
+  },
+  {
+    "label": "BRANCH",
+    "insertText": "BRANCH",
+    "description": "This field stores the number of the branch where the application originated.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDITBUREAU",
+    "insertText": "CREDITBUREAU",
+    "description": "This field stores a credit union-defined code to identify the credit bureau providing the credit report used to evaluate the application.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACCOUNTTYPE",
+    "insertText": "ACCOUNTTYPE",
+    "description": "This field stores a credit union-defined code to identify the type of account.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREATEDBYUSER",
+    "insertText": "CREATEDBYUSER",
+    "description": "This field stores the User ID and is populated when the record is created.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREATEDATBRANCH",
+    "insertText": "CREATEDATBRANCH",
+    "description": "This field stores the branch ID of the branch where the Application record is created.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERQUEUE",
+    "insertText": "USERQUEUE",
+    "description": "The field stores whose queue the application is residing in.",
+    "isSnippet": false
+  },
+  {
+    "label": "QUEUEPRIORITY",
+    "insertText": "QUEUEPRIORITY",
+    "description": "This field stores the level of importance given to this application.",
+    "isSnippet": false
+  },
+  {
+    "label": "QUEUEDATE",
+    "insertText": "QUEUEDATE",
+    "description": "The field stores either the date the application was forwarded to the user or the date the last decision was assigned to the application.",
+    "isSnippet": false
+  },
+  {
+    "label": "QUEUETIME",
+    "insertText": "QUEUETIME",
+    "description": "The field stores either the time of day the application was forwarded to the user or the time of day the last decision was assigned to the application.",
+    "isSnippet": false
+  },
+  {
+    "label": "DECISIONCODE",
+    "insertText": "DECISIONCODE",
+    "description": "This field stores a user number or a credit union-defined code to identify the person making the application decision.",
+    "isSnippet": false
+  },
+  {
+    "label": "DECISIONDATE",
+    "insertText": "DECISIONDATE",
+    "description": "This field stores the date of the decision to approve, deny, or cancel the application, make a counter offer, or place the application in pending mode.",
+    "isSnippet": false
+  },
+  {
+    "label": "APPROVALCODE",
+    "insertText": "APPROVALCODE",
+    "description": "This field stores a credit union-defined code or the user number of the person who approved the application.",
+    "isSnippet": false
+  },
+  {
+    "label": "APPROVALDATE",
+    "insertText": "APPROVALDATE",
+    "description": "This field stores the date the application was approved.",
+    "isSnippet": false
+  },
+  {
+    "label": "APPROVALAMOUNT",
+    "insertText": "APPROVALAMOUNT",
+    "description": "This field stores the approved loan amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "APPLICATIONDATE",
+    "insertText": "APPLICATIONDATE",
+    "description": "This field stores the current system date when you create the Application record.",
+    "isSnippet": false
+  },
+  {
+    "label": "CANCELLATIONDATE",
+    "insertText": "CANCELLATIONDATE",
+    "description": "This field stores the date you canceled the application.",
+    "isSnippet": false
+  },
+  {
+    "label": "PENDINGDATE",
+    "insertText": "PENDINGDATE",
+    "description": "This field stores the date you place an application in pending mode to await further action.",
+    "isSnippet": false
+  },
+  {
+    "label": "PROCESSORCODE",
+    "insertText": "PROCESSORCODE",
+    "description": "This field stores the user number of the person who creates the application.",
+    "isSnippet": false
+  },
+  {
+    "label": "INFOREQUESTDATE",
+    "insertText": "INFOREQUESTDATE",
+    "description": "This field stores the most recent date you sent the applicant a notice of incomplete application or a request for information.",
+    "isSnippet": false
+  },
+  {
+    "label": "DENIALDATE",
+    "insertText": "DENIALDATE",
+    "description": "This field stores the date you denied the application.",
+    "isSnippet": false
+  },
+  {
+    "label": "DENIALREASON:1",
+    "insertText": "DENIALREASON:1",
+    "description": "These fields each store a credit union-defined code to indicate the reason for denying or canceling the application or for making a counter offer.",
+    "isSnippet": false
+  },
+  {
+    "label": "DENIALREASON:2",
+    "insertText": "DENIALREASON:2",
+    "description": "These fields each store a credit union-defined code to indicate the reason for denying or canceling the application or for making a counter offer.",
+    "isSnippet": false
+  },
+  {
+    "label": "DENIALREASON:3",
+    "insertText": "DENIALREASON:3",
+    "description": "These fields each store a credit union-defined code to indicate the reason for denying or canceling the application or for making a counter offer.",
+    "isSnippet": false
+  },
+  {
+    "label": "DENIALREASON:4",
+    "insertText": "DENIALREASON:4",
+    "description": "These fields each store a credit union-defined code to indicate the reason for denying or canceling the application or for making a counter offer.",
+    "isSnippet": false
+  },
+  {
+    "label": "DENIALREASON:5",
+    "insertText": "DENIALREASON:5",
+    "description": "These fields each store a credit union-defined code to indicate the reason for denying or canceling the application or for making a counter offer.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTEREDORIGAMT",
+    "insertText": "COUNTEREDORIGAMT",
+    "description": "This field stores the original amount for which the member applied.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTEROFFEREXPIREDATE",
+    "insertText": "COUNTEROFFEREXPIREDATE",
+    "description": "This field stores the date the counter offer expires.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOANTYPE",
+    "insertText": "LOANTYPE",
+    "description": "This field stores a credit union-defined code to identify the kind of loan the applicant is applying for.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXISTINGLOANID",
+    "insertText": "EXISTINGLOANID",
+    "description": "If the member is applying for an add-on to an existing loan, this field stores the ID of the existing Loan record.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXISTINGLOANBALANCE",
+    "insertText": "EXISTINGLOANBALANCE",
+    "description": "This field stores the balance of the loan specified at the Existing Loan ID field.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOANCODE",
+    "insertText": "LOANCODE",
+    "description": "This field stores a code that defines certain characteristics of the loan and determines how the system processes the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "BORROWDATE",
+    "insertText": "BORROWDATE",
+    "description": "This field stores the date you disburse funds for the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "FIRSTDUEDATE",
+    "insertText": "FIRSTDUEDATE",
+    "description": "This field stores the date the first loan payment is due.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENT",
+    "insertText": "PAYMENT",
+    "description": "This field stores the amount of the loan payment.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOANAMOUNT",
+    "insertText": "LOANAMOUNT",
+    "description": "This field stores the total amount of the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "TERMMONTHS",
+    "insertText": "TERMMONTHS",
+    "description": "This field stores the number of months in the term of the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "MILITARYAPRLOAN",
+    "insertText": "MILITARYAPRLOAN",
+    "description": "This field stores a code that indicates whether the loan qualifies for the military APR program.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOANDESCRIPTION",
+    "insertText": "LOANDESCRIPTION",
+    "description": "This field stores a description of the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOANREFERENCE",
+    "insertText": "LOANREFERENCE",
+    "description": "This field stores any reference information about the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "ECOACODE",
+    "insertText": "ECOACODE",
+    "description": "This field stores a code that indicates how the system populates the ECOA Code field in the Loan record if the loan is created automatically using the Loan Creation workflow action in Application Processing.",
+    "isSnippet": false
+  },
+  {
+    "label": "PURPOSECODE",
+    "insertText": "PURPOSECODE",
+    "description": "This field stores a credit union-defined code to indicate the purpose of the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECUREDCODE",
+    "insertText": "SECUREDCODE",
+    "description": "This field stores a code that specifies the type of security, if any, for a loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "COLLATERALCODE",
+    "insertText": "COLLATERALCODE",
+    "description": "This field stores a code that indicates the collateral offered for the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "COLLATERALDATE",
+    "insertText": "COLLATERALDATE",
+    "description": "This field stores the date the member offered the collateral for the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "CALLITEMSCHD",
+    "insertText": "CALLITEMSCHD",
+    "description": "Primarily for users of the corporate interface: This field stores the numeric value of the set of Call/Put Item Schedules parameters used for call items.",
+    "isSnippet": false
+  },
+  {
+    "label": "CALLITEMSCHDTYPE",
+    "insertText": "CALLITEMSCHDTYPE",
+    "description": "Formerly for users of the corporate interface: This field indicated whether the set of Call/Put Item Schedules parameters specified in the Call Item Schedule field is local or global.",
+    "isSnippet": false
+  },
+  {
+    "label": "PUTITEMSCHD",
+    "insertText": "PUTITEMSCHD",
+    "description": "Primarily for users of the corporate interface: This field stores the numeric value of the set of Call/Put Item Schedules parameters used for put items.",
+    "isSnippet": false
+  },
+  {
+    "label": "PUTITEMSCHDTYPE",
+    "insertText": "PUTITEMSCHDTYPE",
+    "description": "Primarily for users of the corporate interface: This field indicated whether the set of Call/Put Item Schedules parameters specified in the Put Item Schedule field is local or global.",
+    "isSnippet": false
+  },
+  {
+    "label": "AMORTIZATIONSCHD",
+    "insertText": "AMORTIZATIONSCHD",
+    "description": "Primarily for users of the corporate interface: This field stores the numeric value of the set of Amortization Schedules parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "AMORTIZATIONSCHDTYPE",
+    "insertText": "AMORTIZATIONSCHDTYPE",
+    "description": "Primarily for users of the corporate interface: This field indicates whether the set of Amortization Schedules parameters specified in the Amortization Schedule field is local or global.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTERESTTYPE",
+    "insertText": "INTERESTTYPE",
+    "description": "This field stores a code that indicates the method for calculating loan interest that can be different for each Schedule record when using the MBS Multiple Repayment Programs Per Loan module.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTERESTRATE",
+    "insertText": "INTERESTRATE",
+    "description": "This field stores the interest rate of the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENTTYPE",
+    "insertText": "PAYMENTTYPE",
+    "description": "This field stores a code that indicates the method for calculating the payment.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENTCALCTYPE",
+    "insertText": "PAYMENTCALCTYPE",
+    "description": "This field stores a credit union-defined code used for determining the calculation method for the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENTMETHOD",
+    "insertText": "PAYMENTMETHOD",
+    "description": "This field stores a code that specifies the method of payment for a loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENTFREQUENCY",
+    "insertText": "PAYMENTFREQUENCY",
+    "description": "This field stores a code that specifies the frequency of loan payments.",
+    "isSnippet": false
+  },
+  {
+    "label": "DUEDATEADVANCECODE",
+    "insertText": "DUEDATEADVANCECODE",
+    "description": "This field stores a code that specifies how the system advances the due date when a payment is made to the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "MAXDUEDATEADVANCEPERIOD",
+    "insertText": "MAXDUEDATEADVANCEPERIOD",
+    "description": "This field stores the maximum number of periods the due date can be advanced into the future.",
+    "isSnippet": false
+  },
+  {
+    "label": "DUEDAY1",
+    "insertText": "DUEDAY1",
+    "description": "This field stores the day of the month on which the first payment is due for semimonthly loans, or the day of the month on which all payments are due for annual, semiannual, quarterly, bimonthly, or monthly loans.",
+    "isSnippet": false
+  },
+  {
+    "label": "DUEDAY2",
+    "insertText": "DUEDAY2",
+    "description": "This field stores the day of the month on which the second payment is due for semimonthly loans.",
+    "isSnippet": false
+  },
+  {
+    "label": "INITIALBCDSETTINGOPTION",
+    "insertText": "INITIALBCDSETTINGOPTION",
+    "description": "This field stores a code that determines how the beginning cycle date will be set for non-billed loans and loans with a Loan record Payment Method of (2) Auto transfer.",
+    "isSnippet": false
+  },
+  {
+    "label": "DQCALCULATIONMETHOD",
+    "insertText": "DQCALCULATIONMETHOD",
+    "description": "This field stores a code that defines the method used to calculate delinquency.",
+    "isSnippet": false
+  },
+  {
+    "label": "TRANSFERACCOUNTNUMBER",
+    "insertText": "TRANSFERACCOUNTNUMBER",
+    "description": "If loan payments are by automatic transfer of funds from another account, this field stores the number of the other account.",
+    "isSnippet": false
+  },
+  {
+    "label": "TRANSFERACCOUNTID",
+    "insertText": "TRANSFERACCOUNTID",
+    "description": "If loan payments are by automatic transfer of funds from another account, this field stores the ID of the Share record.",
+    "isSnippet": false
+  },
+  {
+    "label": "NOTEPURGEDATE",
+    "insertText": "NOTEPURGEDATE",
+    "description": "This field is currently unused.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENTSKIPS",
+    "insertText": "PAYMENTSKIPS",
+    "description": "This field stores the number of loan payments the member can skip.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENTSKIPSTARTDAY",
+    "insertText": "PAYMENTSKIPSTARTDAY",
+    "description": "This field stores a code that represents the due date of the first payment the member can skip.",
+    "isSnippet": false
+  },
+  {
+    "label": "BALLOONDATE",
+    "insertText": "BALLOONDATE",
+    "description": "This field stores the date the balloon loan payment is due, if applicable.",
+    "isSnippet": false
+  },
+  {
+    "label": "BALLOONAMOUNT",
+    "insertText": "BALLOONAMOUNT",
+    "description": "This field stores the amount of a balloon payment, if applicable.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDITLIMIT",
+    "insertText": "CREDITLIMIT",
+    "description": "This field stores the credit limit for line-of-credit or credit card loans.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITEXPIRATIONDATE",
+    "insertText": "LIMITEXPIRATIONDATE",
+    "description": "This field stores the expiration date of the loan's credit limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOANMATURITYDATE",
+    "insertText": "LOANMATURITYDATE",
+    "description": "This field stores the date the loan matures.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOANTOVALUERATIO",
+    "insertText": "LOANTOVALUERATIO",
+    "description": "This field contains the loan to value ratio (the ratio of the loan amount to the appraised home value).",
+    "isSnippet": false
+  },
+  {
+    "label": "APPRAISEDAMOUNT",
+    "insertText": "APPRAISEDAMOUNT",
+    "description": "This field stores the appraised amount of the collateral for the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "APPRAISALOFFSET",
+    "insertText": "APPRAISALOFFSET",
+    "description": "This field stores the offset value of the collateral for a second trust deed loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "ESCROWAMOUNT",
+    "insertText": "ESCROWAMOUNT",
+    "description": "This field stores the amount of the payment to post to the share identified by the value in the Escrow ID field.",
+    "isSnippet": false
+  },
+  {
+    "label": "ESCROWID",
+    "insertText": "ESCROWID",
+    "description": "This field stores the ID of the Share record to which the system should post the escrow amount whenever a member makes a loan payment.",
+    "isSnippet": false
+  },
+  {
+    "label": "UNAMORTIZEDFEES",
+    "insertText": "UNAMORTIZEDFEES",
+    "description": "This field stores the total amount of fees to be amortized over the loan term, according to FASB 91.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREPAIDFINANCECHG",
+    "insertText": "PREPAIDFINANCECHG",
+    "description": "This field stores additional amounts, that can be included in a loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "ORIGINALRATE",
+    "insertText": "ORIGINALRATE",
+    "description": "This field stores the original effective Annual Percentage Rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "RISKRATE",
+    "insertText": "RISKRATE",
+    "description": "This field stores a value that increases the calculated margin rate when the Rate Change Processing batch program calculates the new interest rate for non-credit card loans tied to an interest rate index.",
+    "isSnippet": false
+  },
+  {
+    "label": "DISCOUNTRATE",
+    "insertText": "DISCOUNTRATE",
+    "description": "This field stores a value that decreases the calculated margin rate when the Rate Change Processing batch program calculates the new interest rate for non-credit card loans tied to an interest rate index.",
+    "isSnippet": false
+  },
+  {
+    "label": "EFFECTIVEAPR",
+    "insertText": "EFFECTIVEAPR",
+    "description": "This field stores the current effective Annual Percentage Rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "APR",
+    "insertText": "APR",
+    "description": "This field stores the Annual Percentage Rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "FASB91CODE",
+    "insertText": "FASB91CODE",
+    "description": "This field stores the FASB 91 code used with loan type codes to create combinations that post to designated General Ledger accounts.",
+    "isSnippet": false
+  },
+  {
+    "label": "INSURANCETYPE",
+    "insertText": "INSURANCETYPE",
+    "description": "This field stores a credit union-defined code that indicates whether the member has elected to purchase insurance.",
+    "isSnippet": false
+  },
+  {
+    "label": "INSURANCEMAX",
+    "insertText": "INSURANCEMAX",
+    "description": "This field stores the maximum insurable balance for the insurance type selected.",
+    "isSnippet": false
+  },
+  {
+    "label": "SINGLEPREMIUMLIFE",
+    "insertText": "SINGLEPREMIUMLIFE",
+    "description": "This field stores the calculated amount of single premium life insurance.",
+    "isSnippet": false
+  },
+  {
+    "label": "SINGLEPREMIUMDISABILITY",
+    "insertText": "SINGLEPREMIUMDISABILITY",
+    "description": "This field stores the calculated amount of single premium disability insurance.",
+    "isSnippet": false
+  },
+  {
+    "label": "FIRSTINSBIRTHDATE",
+    "insertText": "FIRSTINSBIRTHDATE",
+    "description": "This field stores the first insurer's date of birth.",
+    "isSnippet": false
+  },
+  {
+    "label": "SECONDINSBIRTHDATE",
+    "insertText": "SECONDINSBIRTHDATE",
+    "description": "This field stores the second insurer's date of birth.",
+    "isSnippet": false
+  },
+  {
+    "label": "INSURABILITYCODE",
+    "insertText": "INSURABILITYCODE",
+    "description": "This field stores a credit union-defined code that indicates whether the loan applicant can be insured.",
+    "isSnippet": false
+  },
+  {
+    "label": "INSURANCE1CHOSEN",
+    "insertText": "INSURANCE1CHOSEN",
+    "description": "This field stores a code that indicates if the applicant has elected to purchase single credit life insurance.",
+    "isSnippet": false
+  },
+  {
+    "label": "INSURANCE2CHOSEN",
+    "insertText": "INSURANCE2CHOSEN",
+    "description": "This field stores a code that indicates if the applicant has elected to purchase joint credit life insurance.",
+    "isSnippet": false
+  },
+  {
+    "label": "INSURANCE3CHOSEN",
+    "insertText": "INSURANCE3CHOSEN",
+    "description": "This field stores a code that indicates if the applicant has elected to purchase credit disability insurance.",
+    "isSnippet": false
+  },
+  {
+    "label": "OVLOPTIN",
+    "insertText": "OVLOPTIN",
+    "description": "This field stores a code that indicates if the credit union prints the revocation statement.",
+    "isSnippet": false
+  },
+  {
+    "label": "OVLAUTHFEE",
+    "insertText": "OVLAUTHFEE",
+    "description": "This field stores a code that indicates whether to authorize or assess a fee for credit card over-the-limit transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "CUTOTALSACCTNUMBER:1",
+    "insertText": "CUTOTALSACCTNUMBER:1",
+    "description": "These fields each store the account number of another account to be included in the credit union totals.",
+    "isSnippet": false
+  },
+  {
+    "label": "CUTOTALSACCTNUMBER:2",
+    "insertText": "CUTOTALSACCTNUMBER:2",
+    "description": "These fields each store the account number of another account to be included in the credit union totals.",
+    "isSnippet": false
+  },
+  {
+    "label": "CUTOTALSACCTNUMBER:3",
+    "insertText": "CUTOTALSACCTNUMBER:3",
+    "description": "These fields each store the account number of another account to be included in the credit union totals.",
+    "isSnippet": false
+  },
+  {
+    "label": "CUTOTALSACCTNUMBER:4",
+    "insertText": "CUTOTALSACCTNUMBER:4",
+    "description": "These fields each store the account number of another account to be included in the credit union totals.",
+    "isSnippet": false
+  },
+  {
+    "label": "CUTOTALSACCTNUMBER:5",
+    "insertText": "CUTOTALSACCTNUMBER:5",
+    "description": "These fields each store the account number of another account to be included in the credit union totals.",
+    "isSnippet": false
+  },
+  {
+    "label": "ORIGRISKGRADE",
+    "insertText": "ORIGRISKGRADE",
+    "description": "This field stores the original risk grade assigned to the note when it was originated.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDITSCORETYPE",
+    "insertText": "CREDITSCORETYPE",
+    "description": "This field stores a credit union-defined code to specify the type of credit score to be calculated for the application.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDITSCORE",
+    "insertText": "CREDITSCORE",
+    "description": "This field stores the results of Symitar programmed credit score calculations.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUREAUSCORE:1",
+    "insertText": "BUREAUSCORE:1",
+    "description": "This field stores the most recent credit score from the Experian credit bureau for the main applicant for the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUREAUSCORE:2",
+    "insertText": "BUREAUSCORE:2",
+    "description": "This field stores the most recent credit score from the Equifax credit bureau for the main applicant for the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "BUREAUSCORE:3",
+    "insertText": "BUREAUSCORE:3",
+    "description": "This field stores the most recent credit score from the TransUnion® credit bureau for the main applicant for the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "CUTOTALOPENENDLOANS",
+    "insertText": "CUTOTALOPENENDLOANS",
+    "description": "This field stores the sum of all loan balances in Loan records in the member's account with a value in the Loan Code field of (1) Open End, a blank in the Close Date field, and a blank in the Charge-off Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "CUTOTALCLOSEDENDLOANS",
+    "insertText": "CUTOTALCLOSEDENDLOANS",
+    "description": "This field stores the sum of all loan balances in Loan records in the member's account with a value in the Loan Code field of (0) Closed End, a blank in the Close Date field, and a blank in the Charge-off Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "CUTOTALLOCLOANS",
+    "insertText": "CUTOTALLOCLOANS",
+    "description": "This field stores the sum of all loan balances in Loan records in the member's account with a value in the Loan Code field of (2) Line of Credit, a blank in the Close Date field, and a blank in the Charge-off Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "CUTOTALCREDITCARDLOANS",
+    "insertText": "CUTOTALCREDITCARDLOANS",
+    "description": "This field stores the sum of all loan balances, unpaid interest, and unpaid late charges in Loan records in the member's account with a value in the Loan Code field of (3) Credit Card, a blank in the Close Date field, and a blank in the Charge-off Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "CUTOTALCREDITLIMIT",
+    "insertText": "CUTOTALCREDITLIMIT",
+    "description": "This field stores the sum of all credit limits in all Loan records in the member's account with a blank in the Close Date field, and a blank in the Charge-off Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "CUTOTALOPENENDPAYMENTS",
+    "insertText": "CUTOTALOPENENDPAYMENTS",
+    "description": "This field stores the sum of all standard payments for all Loan records in the member's account with a value in the Loan Code field of (1) Open End, a blank in the Close Date field, and a blank in the Charge-off Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "CUTOTALCLOSEDENDPAYMENTS",
+    "insertText": "CUTOTALCLOSEDENDPAYMENTS",
+    "description": "This field stores the sum of all standard payments for all Loan records in the member's account with a value in the Loan Code field of (0) Closed End, a blank in the Close Date field, and a blank in the Charge-off Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "CUTOTALLOCPAYMENTS",
+    "insertText": "CUTOTALLOCPAYMENTS",
+    "description": "This field stores the sum of all standard payments for all Loan records in the member's account with a value in the Loan Code field of (2) Line of Credit, a blank in the Close Date field, and a blank in the Charge-off Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "CUTOTALCREDCARDPAYMENTS",
+    "insertText": "CUTOTALCREDCARDPAYMENTS",
+    "description": "This field stores the sum of all standard payments for all Loan records in the member's account with a value in the Loan Code field of (3) Credit Card, a blank in the Close Date field, and a blank in the Charge-off Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "CUTOTALSHARES",
+    "insertText": "CUTOTALSHARES",
+    "description": "This field stores the sum of all available balances in Share records in the member's account with a value in the Share Code field of (0) Share and a value in the IRS Code field of (0) Normal.",
+    "isSnippet": false
+  },
+  {
+    "label": "CUTOTALDRAFTS",
+    "insertText": "CUTOTALDRAFTS",
+    "description": "This field stores the sum of all available balances in Share records in the member's account with a value in the Share Code field of (1) Draft and a value in the IRS Code field of (0) Normal.",
+    "isSnippet": false
+  },
+  {
+    "label": "CUTOTALCERTIRAS",
+    "insertText": "CUTOTALCERTIRAS",
+    "description": "This field stores the sum of all available balances in Share records in the member's account with a value in the Share Code field of (2) Certificate or (3) Club, or any share with a non-zero value in the IRS Code field.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEBTRATIOTYPE:1",
+    "insertText": "DEBTRATIOTYPE:1",
+    "description": "These fields each store a credit union-defined code to specify a debt ratio calculation based on the definition of that Debt Ratio Type field.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEBTRATIOTYPE:2",
+    "insertText": "DEBTRATIOTYPE:2",
+    "description": "These fields each store a credit union-defined code to specify a debt ratio calculation based on the definition of that Debt Ratio Type field.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEBTRATIOTYPE:3",
+    "insertText": "DEBTRATIOTYPE:3",
+    "description": "These fields each store a credit union-defined code to specify a debt ratio calculation based on the definition of that Debt Ratio Type field.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEBTRATIOTYPE:4",
+    "insertText": "DEBTRATIOTYPE:4",
+    "description": "These fields each store a credit union-defined code to specify a debt ratio calculation based on the definition of that Debt Ratio Type field.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEBTRATIOTYPE:5",
+    "insertText": "DEBTRATIOTYPE:5",
+    "description": "These fields each store a credit union-defined code to specify a debt ratio calculation based on the definition of that Debt Ratio Type field.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEBTRATIO:1",
+    "insertText": "DEBTRATIO:1",
+    "description": "These fields each store a debt ratio calculated according to the credit union-defined debt ratio type in that Debt Ratio Type field.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEBTRATIO:2",
+    "insertText": "DEBTRATIO:2",
+    "description": "These fields each store a debt ratio calculated according to the credit union-defined debt ratio type in that Debt Ratio Type field.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEBTRATIO:3",
+    "insertText": "DEBTRATIO:3",
+    "description": "These fields each store a debt ratio calculated according to the credit union-defined debt ratio type in that Debt Ratio Type field.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEBTRATIO:4",
+    "insertText": "DEBTRATIO:4",
+    "description": "These fields each store a debt ratio calculated according to the credit union-defined debt ratio type in that Debt Ratio Type field.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEBTRATIO:5",
+    "insertText": "DEBTRATIO:5",
+    "description": "These fields each store a debt ratio calculated according to the credit union-defined debt ratio type in that Debt Ratio Type field.",
+    "isSnippet": false
+  },
+  {
+    "label": "INDIRECTDEALERNUM",
+    "insertText": "INDIRECTDEALERNUM",
+    "description": "If the Dealer Reserve Accounting module has been implemented, this field stores the indirect dealer number.",
+    "isSnippet": false
+  },
+  {
+    "label": "TOTALINCOME",
+    "insertText": "TOTALINCOME",
+    "description": "This field stores the combined total of the values in the Curr Gross Mo Pay fields in all Person records under the Application record and the values in the Monthly Income fields in all Finance records under the Application record.",
+    "isSnippet": false
+  },
+  {
+    "label": "TOTALEXPENSES",
+    "insertText": "TOTALEXPENSES",
+    "description": "This field stores the combined total of the values in the CU Open End Pmts, CU Closed End Pmts, CU LOC Pmts, CU Credit Card Pmts, and payment fields in the Application record and the values in the Monthly Expense fields in all Finance records under the Application record.",
+    "isSnippet": false
+  },
+  {
+    "label": "TOTALASSETS",
+    "insertText": "TOTALASSETS",
+    "description": "This field stores the combined total of the values in the CU Share Bal, CU Draft Bal, and CU Cert IRA Bal fields in the Application record and the values in the Asset Value fields in all Finance records under the Application record.",
+    "isSnippet": false
+  },
+  {
+    "label": "TOTALLIABILITIES",
+    "insertText": "TOTALLIABILITIES",
+    "description": "This field stores the combined total of the values in the CU Opn End Loan Bal, CU Cls End Loan Bal, CU LOC Loan Bal, CU Cred Card Ln Bal, and Loan Amount fields in the Application record and the values in the Liability Balance fields in all Finance records under the Application record.",
+    "isSnippet": false
+  },
+  {
+    "label": "TOTALCREDITLIMITS",
+    "insertText": "TOTALCREDITLIMITS",
+    "description": "This field stores the combined total of the value in the CU Total Credit Lim field in the Application record and the values in the Credit Limit fields in all Finance records under the Application record.",
+    "isSnippet": false
+  },
+  {
+    "label": "INDIRECTPLANID",
+    "insertText": "INDIRECTPLANID",
+    "description": "If the Dealer Reserve Accounting module has been implemented, this field stores the reserve plan ID associated with this indirect loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "GROSSMONTHLYPAY1",
+    "insertText": "GROSSMONTHLYPAY1",
+    "description": "This field stores the amount of the person's current monthly gross pay from the Curr Gross MO Pay field from the first Person record (record 00) under the Application record.",
+    "isSnippet": false
+  },
+  {
+    "label": "NETMONTHLYPAY1",
+    "insertText": "NETMONTHLYPAY1",
+    "description": "This field stores the amount of this person's current monthly net pay from the Curr Net MO Pay field from the first Person record (record 00) under the Application record.",
+    "isSnippet": false
+  },
+  {
+    "label": "GROSSMONTHLYPAY2",
+    "insertText": "GROSSMONTHLYPAY2",
+    "description": "This field stores the amount of the person's current monthly gross pay from the Curr Gross MO Pay field from the second Person record (record 00) under the Application record.",
+    "isSnippet": false
+  },
+  {
+    "label": "NETMONTHLYPAY2",
+    "insertText": "NETMONTHLYPAY2",
+    "description": "This field stores the amount of this person's current monthly net pay from the Curr Net MO Pay field from the second Person record (record 00) under the Application record.",
+    "isSnippet": false
+  },
+  {
+    "label": "CBILOCATOR:1",
+    "insertText": "CBILOCATOR:1",
+    "description": "These fields each store a unique credit bureau information (CBI) request identifier for that request.",
+    "isSnippet": false
+  },
+  {
+    "label": "CBILOCATOR:2",
+    "insertText": "CBILOCATOR:2",
+    "description": "These fields each store a unique credit bureau information (CBI) request identifier for that request.",
+    "isSnippet": false
+  },
+  {
+    "label": "CBILOCATOR:3",
+    "insertText": "CBILOCATOR:3",
+    "description": "These fields each store a unique credit bureau information (CBI) request identifier for that request.",
+    "isSnippet": false
+  },
+  {
+    "label": "CBILOCATOR:4",
+    "insertText": "CBILOCATOR:4",
+    "description": "These fields each store a unique credit bureau information (CBI) request identifier for that request.",
+    "isSnippet": false
+  },
+  {
+    "label": "CBILOCATOR:5",
+    "insertText": "CBILOCATOR:5",
+    "description": "These fields each store a unique credit bureau information (CBI) request identifier for that request.",
+    "isSnippet": false
+  },
+  {
+    "label": "CBILOCATOR:6",
+    "insertText": "CBILOCATOR:6",
+    "description": "These fields each store a unique credit bureau information (CBI) request identifier for that request.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREFLOCATOR",
+    "insertText": "PREFLOCATOR",
+    "description": "This field stores the system-defined locator number from the associated Preference record's Locator field.",
+    "isSnippet": false
+  },
+  {
+    "label": "INDIRECTPLANID",
+    "insertText": "INDIRECTPLANID",
+    "description": "If the Dealer Reserve Accounting module has been implemented, this field stores the reserve plan ID associated with this indirect loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "PROPERTYADDRESSTYPE",
+    "insertText": "PROPERTYADDRESSTYPE",
+    "description": "This field stores a code that indicates how the system stores the property address information that secures a mortgage loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "PROPERTYJURISDICTION",
+    "insertText": "PROPERTYJURISDICTION",
+    "description": "This field stores the property's jurisdiction (county and state).",
+    "isSnippet": false
+  },
+  {
+    "label": "ASSESSORPARCELNUMBER",
+    "insertText": "ASSESSORPARCELNUMBER",
+    "description": "This field stores the property's Assessor Parcel Number or Numbers (APN).",
+    "isSnippet": false
+  },
+  {
+    "label": "MTGNUMPROP",
+    "insertText": "MTGNUMPROP",
+    "description": "This field stores the number of properties that secure this mortgage loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "PMIORIGINALVALUE",
+    "insertText": "PMIORIGINALVALUE",
+    "description": "This field stores the original value of the collateral for the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "PMIPURCHASEPRICE",
+    "insertText": "PMIPURCHASEPRICE",
+    "description": "This field stores the purchase price or sales price of the property securing the mortgage, as reflected in the purchase contract.",
+    "isSnippet": false
+  },
+  {
+    "label": "PMIAPPRAISEDVALUE",
+    "insertText": "PMIAPPRAISEDVALUE",
+    "description": "This field stores the value at the time the subject residential mortgage transaction was completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "PMILTVRATIO",
+    "insertText": "PMILTVRATIO",
+    "description": "This field contains the loan amount divided by the lesser of the value in the Purchase Price field or the value in the PMI Appraised Value field at the time of loan completion.",
+    "isSnippet": false
+  },
+  {
+    "label": "HIGHRISKCODE",
+    "insertText": "HIGHRISKCODE",
+    "description": "This field stores a code that specifies whether a loan is considered high risk.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMBOLNSEGMENTMAX",
+    "insertText": "COMBOLNSEGMENTMAX",
+    "description": "This field stores a value to identify the maximum number of segments (including Segment 0) that can be added to a combination loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMBOPMTORDERMETH",
+    "insertText": "COMBOPMTORDERMETH",
+    "description": "This field stores a code that determines the order to pay segments for SymChoice Loans.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMBOSEG0PMTORDER",
+    "insertText": "COMBOSEG0PMTORDER",
+    "description": "This field stores a code that determines the order to set Segment 0 when used with the Combo Payment Order Method field for SymChoice Loans.",
+    "isSnippet": false
+  },
+  {
+    "label": "NEWSEGCUTOFFOPTION",
+    "insertText": "NEWSEGCUTOFFOPTION",
+    "description": "This field stores a code that controls how the system calculates the Due Date field in the projections screen of a Segment record.",
+    "isSnippet": false
+  },
+  {
+    "label": "NEWSEGCUTOFFDAYS",
+    "insertText": "NEWSEGCUTOFFDAYS",
+    "description": "This field stores the number of days to add to the Loan Date field in the projections screen to calculate the segment cutoff date.",
+    "isSnippet": false
+  },
+  {
+    "label": "SEG0DESCRIPTION",
+    "insertText": "SEG0DESCRIPTION",
+    "description": "This field stores the description of the segment for SymChoice Loans.",
+    "isSnippet": false
+  },
+  {
+    "label": "SEG0PAYMENTORDER",
+    "insertText": "SEG0PAYMENTORDER",
+    "description": "This field stores a code that indicates the order in which Segment 0 will be paid for a Loan Payment (LP) transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "SEG0PAYMENT",
+    "insertText": "SEG0PAYMENT",
+    "description": "This field contains the payment for Segment 0 for a SymChoice Loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "CAPERCENT",
+    "insertText": "CAPERCENT",
+    "description": "This field stores the percentage of the overall credit limit that can be allocated to cash advances.",
+    "isSnippet": false
+  },
+  {
+    "label": "CALIMITMAX",
+    "insertText": "CALIMITMAX",
+    "description": "This field stores the maximum amount that can be allocated to cash advances from the overall credit limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "BTPERCENT",
+    "insertText": "BTPERCENT",
+    "description": "This field stores the percentage of the overall credit limit that can be allocated to balance transfers.",
+    "isSnippet": false
+  },
+  {
+    "label": "BTLIMITMAX",
+    "insertText": "BTLIMITMAX",
+    "description": "This field stores the maximum amount that can be allocated to balance transfers from the overall credit limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMBINEDCABTPERCENT",
+    "insertText": "COMBINEDCABTPERCENT",
+    "description": "This field stores the percentage of the overall credit limit to be allocated to cash advances and balance transfers combined.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMBINEDCABTLIMITMAX",
+    "insertText": "COMBINEDCABTLIMITMAX",
+    "description": "This field stores the maximum amount that can be allocated to cash advances and balance transfers from the overall credit limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAUNIVERSALLOANIDENTIFIER1",
+    "insertText": "HMDAUNIVERSALLOANIDENTIFIER1",
+    "description": "This field stores the unique identifier of the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAUNIVERSALLOANIDENTIFIER2",
+    "insertText": "HMDAUNIVERSALLOANIDENTIFIER2",
+    "description": "This field stores up to five additional Universal Loan Identifier (ULI) characters if the ULI was previously established outside of the system.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDALOANTYPE",
+    "insertText": "HMDALOANTYPE",
+    "description": "This field stores a code that indicates the type of covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDALOANPURPOSE",
+    "insertText": "HMDALOANPURPOSE",
+    "description": "This field stores a code that indicates the purpose of the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAPREAPPROVAL",
+    "insertText": "HMDAPREAPPROVAL",
+    "description": "This field stores a code that indicates whether the covered loan or application involved a request for a preapproval of a home purchase loan under a preapproval program.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDACONSTRUCTIONMETHOD",
+    "insertText": "HMDACONSTRUCTIONMETHOD",
+    "description": "This field stores a code that indicates the construction method for the dwelling.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAOCCUPANCYTYPE",
+    "insertText": "HMDAOCCUPANCYTYPE",
+    "description": "This field stores a code that indicates the occupancy type of the residence.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAACTIONTAKEN",
+    "insertText": "HMDAACTIONTAKEN",
+    "description": "This field stores a code that indicates the action taken on the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAACTIONTAKENDATE",
+    "insertText": "HMDAACTIONTAKENDATE",
+    "description": "This field stores the date of action taken.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAPROPERTYSTREETADDRESS",
+    "insertText": "HMDAPROPERTYSTREETADDRESS",
+    "description": "This field stores the street address of the property.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAPROPERTYCITY",
+    "insertText": "HMDAPROPERTYCITY",
+    "description": "This field stores the city of the property.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAPROPERTYSTATE",
+    "insertText": "HMDAPROPERTYSTATE",
+    "description": "This field stores the two-letter state code of the property.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAPROPERTYZIPCODE",
+    "insertText": "HMDAPROPERTYZIPCODE",
+    "description": "This field stores the ZIP Code of the property.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAPROPERTYCOUNTY",
+    "insertText": "HMDAPROPERTYCOUNTY",
+    "description": "This field stores the Federal Information Processing Standards (FIPS) numerical code for the county.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDACENSUSTRACT",
+    "insertText": "HMDACENSUSTRACT",
+    "description": "This field stores the Federal Information Processing Standards (FIPS) numerical code and the census tract number as defined by the U.S. Census Bureau.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAANNUALINCOME",
+    "insertText": "HMDAANNUALINCOME",
+    "description": "This field stores the gross annual income (in dollars) used in making the credit decision.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAPURCHASERTYPE",
+    "insertText": "HMDAPURCHASERTYPE",
+    "description": "This field stores a code that indicates the type of entity purchasing a covered loan from your institution.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDARATESPREAD",
+    "insertText": "HMDARATESPREAD",
+    "description": "This field stores the difference between the covered loan's annual percentage rate (APR) and the average prime offer rate (APOR) for a comparable transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDARATESPREADSIGN",
+    "insertText": "HMDARATESPREADSIGN",
+    "description": "This field stores a code that specifies a positive or negative for the value in the Rate Spread field.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAHOEPASTATUS",
+    "insertText": "HMDAHOEPASTATUS",
+    "description": "This field stores a code that indicates whether to report the status of the covered loan for the Home Ownership and Equity Protection Act (HOEPA) as a high-cost mortgage.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDALIENSTATUS",
+    "insertText": "HMDALIENSTATUS",
+    "description": "This field stores a code that indicates the lien status of the property securing the covered loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDADENIALREASONOTHER:1",
+    "insertText": "HMDADENIALREASONOTHER:1",
+    "description": "These fields store text that defines the HMDA denial reason referred to when any of the Denial Reason 1–4 fields are set to (9) Other.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDADENIALREASONOTHER:2",
+    "insertText": "HMDADENIALREASONOTHER:2",
+    "description": "These fields store text that defines the HMDA denial reason referred to when any of the Denial Reason 1–4 fields are set to (9) Other.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDADENIALREASONOTHER:3",
+    "insertText": "HMDADENIALREASONOTHER:3",
+    "description": "These fields store text that defines the HMDA denial reason referred to when any of the Denial Reason 1–4 fields are set to (9) Other.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDADENIALREASONOTHER:4",
+    "insertText": "HMDADENIALREASONOTHER:4",
+    "description": "These fields store text that defines the HMDA denial reason referred to when any of the Denial Reason 1–4 fields are set to (9) Other.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDADENIALREASONOTHER:5",
+    "insertText": "HMDADENIALREASONOTHER:5",
+    "description": "These fields store text that defines the HMDA denial reason referred to when any of the Denial Reason 1–4 fields are set to (9) Other.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDADENIALREASONOTHER:6",
+    "insertText": "HMDADENIALREASONOTHER:6",
+    "description": "These fields store text that defines the HMDA denial reason referred to when any of the Denial Reason 1–4 fields are set to (9) Other.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDADENIALREASONOTHER:7",
+    "insertText": "HMDADENIALREASONOTHER:7",
+    "description": "These fields store text that defines the HMDA denial reason referred to when any of the Denial Reason 1–4 fields are set to (9) Other.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDATOTALLOANCOSTS",
+    "insertText": "HMDATOTALLOANCOSTS",
+    "description": "This field stores the total loan costs amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDATOTALPOINTSFEES",
+    "insertText": "HMDATOTALPOINTSFEES",
+    "description": "This field stores the total points and fees charged with the covered loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAORIGINATIONCHARGES",
+    "insertText": "HMDAORIGINATIONCHARGES",
+    "description": "This field stores the total of all itemized amounts that are designated borrower-paid at or before closing.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDADISCOUNTPOINTS",
+    "insertText": "HMDADISCOUNTPOINTS",
+    "description": "This field stores the points paid to the creditor to reduce the interest rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDALENDERCREDITS",
+    "insertText": "HMDALENDERCREDITS",
+    "description": "This field stores the amount of lender credits.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAPREPAYMENTPENALTYTERM",
+    "insertText": "HMDAPREPAYMENTPENALTYTERM",
+    "description": "This field stores the term in months of any prepayment penalty.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAINTRORATEPERIOD",
+    "insertText": "HMDAINTRORATEPERIOD",
+    "description": "This field stores the number of months, or proposed number of months in the case of an application, until the first date the interest rate may change after closing or account opening.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAINTONLYPMTIND",
+    "insertText": "HMDAINTONLYPMTIND",
+    "description": "This field stores a code that indicates whether the contractual terms include, or would have included, interest-only payments.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDANEGAMORTIND",
+    "insertText": "HMDANEGAMORTIND",
+    "description": "This field stores a code that indicates whether the contractual terms include, or would have included, a term that would cause the covered loan to be a negative amortization loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAOTHERNONAMORTFEATURES",
+    "insertText": "HMDAOTHERNONAMORTFEATURES",
+    "description": "This field stores a code that indicates whether the contractual terms include, or would have included, any term that would allow for payments other than fully amortizing payments during the loan term.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAPROPERTYVALUE",
+    "insertText": "HMDAPROPERTYVALUE",
+    "description": "This field stores the value of the property securing the covered loan or in the case of an application, proposed to secure the covered loan used in making the credit decision.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAMFDHOMESECPROPTYPE",
+    "insertText": "HMDAMFDHOMESECPROPTYPE",
+    "description": "This field stores a code that indicates whether the covered loan or application is, or would have been, secured by a manufactured home with land, or by just a manufactured home without land.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAMFDHOMELANDPROPINT",
+    "insertText": "HMDAMFDHOMELANDPROPINT",
+    "description": "This field stores a code that indicates the applicant's or borrower's property interest in the land on which a manufactured home is, or will be, located.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDATOTALUNITS",
+    "insertText": "HMDATOTALUNITS",
+    "description": "This field stores the number of individual dwelling units related to the property securing the covered loan, or proposed to secure the covered loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAMULTIFAMILYAFFORDUNITS",
+    "insertText": "HMDAMULTIFAMILYAFFORDUNITS",
+    "description": "This field stores the number of individual dwelling units related to any multifamily dwelling property securing the covered loan, that are income-restricted under federal, state, or local affordable housing programs.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDASUBMISSIONOFAPMETHOD",
+    "insertText": "HMDASUBMISSIONOFAPMETHOD",
+    "description": "This field stores a code that indicates whether the applicant or borrower submitted the application directly to your institution.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAINITPAYABLETOINST",
+    "insertText": "HMDAINITPAYABLETOINST",
+    "description": "This field stores a code that indicates whether the obligation arising from the covered loan was, or in the case of an application, would have been, initially payable to your institution.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDANMLSRID",
+    "insertText": "HMDANMLSRID",
+    "description": "This field stores the Nationwide Mortgage Licensing System and Registry unique identifier (NMLSR ID) for the mortgage loan originator.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAREVMORTIND",
+    "insertText": "HMDAREVMORTIND",
+    "description": "This field stores a code that indicates whether the obligation arising from the covered loan was, or in the case of an application, would have been, initially payable to your institution.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAOELOCIND",
+    "insertText": "HMDAOELOCIND",
+    "description": "This field stores a code that indicates whether the covered loan or the application is for an open-end line of credit.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDABUSORCOMMPURPOSEIND",
+    "insertText": "HMDABUSORCOMMPURPOSEIND",
+    "description": "This field stores a code that indicates whether the covered loan or the application is for a loan that will be made primarily for a business or commercial purpose.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGSYS:1",
+    "insertText": "HMDAAUTOUNDERWRITINGSYS:1",
+    "description": "These fields each store a code that indicates an automated underwriting system (AUS) you use to evaluate the application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGSYS:2",
+    "insertText": "HMDAAUTOUNDERWRITINGSYS:2",
+    "description": "These fields each store a code that indicates an automated underwriting system (AUS) you use to evaluate the application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGSYS:3",
+    "insertText": "HMDAAUTOUNDERWRITINGSYS:3",
+    "description": "These fields each store a code that indicates an automated underwriting system (AUS) you use to evaluate the application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGSYS:4",
+    "insertText": "HMDAAUTOUNDERWRITINGSYS:4",
+    "description": "These fields each store a code that indicates an automated underwriting system (AUS) you use to evaluate the application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGSYS:5",
+    "insertText": "HMDAAUTOUNDERWRITINGSYS:5",
+    "description": "These fields each store a code that indicates an automated underwriting system (AUS) you use to evaluate the application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGRESULT:1",
+    "insertText": "HMDAAUTOUNDERWRITINGRESULT:1",
+    "description": "These fields each store a code that indicates the results generated by the automated underwriting system (AUS) indicated in the related Auto Underwriting System 1-5 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGRESULT:2",
+    "insertText": "HMDAAUTOUNDERWRITINGRESULT:2",
+    "description": "These fields each store a code that indicates the results generated by the automated underwriting system (AUS) indicated in the related Auto Underwriting System 1-5 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGRESULT:3",
+    "insertText": "HMDAAUTOUNDERWRITINGRESULT:3",
+    "description": "These fields each store a code that indicates the results generated by the automated underwriting system (AUS) indicated in the related Auto Underwriting System 1-5 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGRESULT:4",
+    "insertText": "HMDAAUTOUNDERWRITINGRESULT:4",
+    "description": "These fields each store a code that indicates the results generated by the automated underwriting system (AUS) indicated in the related Auto Underwriting System 1-5 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGRESULT:5",
+    "insertText": "HMDAAUTOUNDERWRITINGRESULT:5",
+    "description": "These fields each store a code that indicates the results generated by the automated underwriting system (AUS) indicated in the related Auto Underwriting System 1-5 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGSYSOTHER:1",
+    "insertText": "HMDAAUTOUNDERWRITINGSYSOTHER:1",
+    "description": "These fields store text that defines the specific name of another automated underwriting system referred to when any of the Auto Underwriting System 1–5 fields are set to (5) Other.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGSYSOTHER:2",
+    "insertText": "HMDAAUTOUNDERWRITINGSYSOTHER:2",
+    "description": "These fields store text that defines the specific name of another automated underwriting system referred to when any of the Auto Underwriting System 1–5 fields are set to (5) Other.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGSYSOTHER:3",
+    "insertText": "HMDAAUTOUNDERWRITINGSYSOTHER:3",
+    "description": "These fields store text that defines the specific name of another automated underwriting system referred to when any of the Auto Underwriting System 1–5 fields are set to (5) Other.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGSYSOTHER:4",
+    "insertText": "HMDAAUTOUNDERWRITINGSYSOTHER:4",
+    "description": "These fields store text that defines the specific name of another automated underwriting system referred to when any of the Auto Underwriting System 1–5 fields are set to (5) Other.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGSYSOTHER:5",
+    "insertText": "HMDAAUTOUNDERWRITINGSYSOTHER:5",
+    "description": "These fields store text that defines the specific name of another automated underwriting system referred to when any of the Auto Underwriting System 1–5 fields are set to (5) Other.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGSYSOTHER:6",
+    "insertText": "HMDAAUTOUNDERWRITINGSYSOTHER:6",
+    "description": "These fields store text that defines the specific name of another automated underwriting system referred to when any of the Auto Underwriting System 1–5 fields are set to (5) Other.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGSYSOTHER:7",
+    "insertText": "HMDAAUTOUNDERWRITINGSYSOTHER:7",
+    "description": "These fields store text that defines the specific name of another automated underwriting system referred to when any of the Auto Underwriting System 1–5 fields are set to (5) Other.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGRESOTHER:1",
+    "insertText": "HMDAAUTOUNDERWRITINGRESOTHER:1",
+    "description": "These fields store text that defines other automated underwriting system results indicated when the related Auto Underwriting Results 1–5 field is set to (16) Other.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGRESOTHER:2",
+    "insertText": "HMDAAUTOUNDERWRITINGRESOTHER:2",
+    "description": "These fields store text that defines other automated underwriting system results indicated when the related Auto Underwriting Results 1–5 field is set to (16) Other.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGRESOTHER:3",
+    "insertText": "HMDAAUTOUNDERWRITINGRESOTHER:3",
+    "description": "These fields store text that defines other automated underwriting system results indicated when the related Auto Underwriting Results 1–5 field is set to (16) Other.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGRESOTHER:4",
+    "insertText": "HMDAAUTOUNDERWRITINGRESOTHER:4",
+    "description": "These fields store text that defines other automated underwriting system results indicated when the related Auto Underwriting Results 1–5 field is set to (16) Other.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGRESOTHER:5",
+    "insertText": "HMDAAUTOUNDERWRITINGRESOTHER:5",
+    "description": "These fields store text that defines other automated underwriting system results indicated when the related Auto Underwriting Results 1–5 field is set to (16) Other.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGRESOTHER:6",
+    "insertText": "HMDAAUTOUNDERWRITINGRESOTHER:6",
+    "description": "These fields store text that defines other automated underwriting system results indicated when the related Auto Underwriting Results 1–5 field is set to (16) Other.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAUTOUNDERWRITINGRESOTHER:7",
+    "insertText": "HMDAAUTOUNDERWRITINGRESOTHER:7",
+    "description": "These fields store text that defines other automated underwriting system results indicated when the related Auto Underwriting Results 1–5 field is set to (16) Other.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAPPLICATIONDATENA",
+    "insertText": "HMDAAPPLICATIONDATENA",
+    "description": "This field stores a code that indicates whether the requirement to report the application date applies to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDADEBTRATIONA",
+    "insertText": "HMDADEBTRATIONA",
+    "description": "This field stores a code that indicates whether the requirement to report the debt-to-income ratio applies to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDALOANTOVALUENA",
+    "insertText": "HMDALOANTOVALUENA",
+    "description": "This field stores a code that indicates whether the requirement to report the loan-to-value applies to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAPROPERTYSTREETADDRESSNA",
+    "insertText": "HMDAPROPERTYSTREETADDRESSNA",
+    "description": "This field stores a code that indicates whether the requirement to report the property street address is applicable to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAPROPERTYCITYNA",
+    "insertText": "HMDAPROPERTYCITYNA",
+    "description": "This field stores a code that indicates whether the requirement to report the property city is applicable to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAPROPERTYSTATENA",
+    "insertText": "HMDAPROPERTYSTATENA",
+    "description": "This field stores a code that indicates whether the requirement to report the property state is applicable to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAPROPERTYZIPCODENA",
+    "insertText": "HMDAPROPERTYZIPCODENA",
+    "description": "This field stores a code that indicates whether the requirement to report the property ZIP Code is applicable to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAPROPERTYCOUNTYNA",
+    "insertText": "HMDAPROPERTYCOUNTYNA",
+    "description": "This field stores a code that indicates whether the requirement to report the property county is applicable to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDACENSUSTRACTNA",
+    "insertText": "HMDACENSUSTRACTNA",
+    "description": "This field stores a code that indicates whether the requirement to report the property census tract is applicable to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAANNUALINCOMENA",
+    "insertText": "HMDAANNUALINCOMENA",
+    "description": "This field stores a code that indicates whether the requirement to report the gross annual income of the borrower applies to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDARATESPREADNA",
+    "insertText": "HMDARATESPREADNA",
+    "description": "This field stores a code that indicates whether the requirement to report the rate spread applies to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDALOANTERMNA",
+    "insertText": "HMDALOANTERMNA",
+    "description": "This field stores a code that indicates whether the requirement to report the loan term applies to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAINTERESTRATENA",
+    "insertText": "HMDAINTERESTRATENA",
+    "description": "This field stores a code that indicates whether the requirement to report the interest rate applies to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDATOTALLOANCOSTSNA",
+    "insertText": "HMDATOTALLOANCOSTSNA",
+    "description": "This field stores a code that indicates whether the requirement to report the total loan costs applies to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDATOTALPOINTSFEESNA",
+    "insertText": "HMDATOTALPOINTSFEESNA",
+    "description": "This field stores a code that indicates whether the requirement to report the total points and fees applies to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAORIGINATIONCHARGESNA",
+    "insertText": "HMDAORIGINATIONCHARGESNA",
+    "description": "This field stores a code that indicates whether the requirement to report the origination charges applies to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDADISCOUNTPOINTSNA",
+    "insertText": "HMDADISCOUNTPOINTSNA",
+    "description": "This field stores a code that indicates whether the requirement to report the discount points applies to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDALENDERCREDITSNA",
+    "insertText": "HMDALENDERCREDITSNA",
+    "description": "This field stores a code that indicates whether the requirement to report the lender credits applies to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAPREPAYMENTPENALTYTERMNA",
+    "insertText": "HMDAPREPAYMENTPENALTYTERMNA",
+    "description": "This field stores a code that indicates whether the requirement to report the prepayment penalty term applies to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAINTRORATEPERIODNA",
+    "insertText": "HMDAINTRORATEPERIODNA",
+    "description": "This field stores a code that indicates whether the requirement to report the introductory rate period applies to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAPROPERTYVALUENA",
+    "insertText": "HMDAPROPERTYVALUENA",
+    "description": "This field stores a code that indicates whether the requirement to report the property value applies to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAMULTIFAMILYAFFORDUNITSNA",
+    "insertText": "HMDAMULTIFAMILYAFFORDUNITSNA",
+    "description": "This field stores a code that indicates whether the requirement to report the multifamily affordable units applies to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDANMLSRIDNA",
+    "insertText": "HMDANMLSRIDNA",
+    "description": "This field stores a code that indicates whether the requirement to report the mortgage loan originator NMLSR ID is applicable to the covered loan or application.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEALERCODE",
+    "insertText": "DEALERCODE",
+    "description": "This field stores the dealer code for a lease loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEALERRESERVE",
+    "insertText": "DEALERRESERVE",
+    "description": "This field stores the amount of the dealer reserve for a lease loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "SALESTAXRATE",
+    "insertText": "SALESTAXRATE",
+    "description": "This field contains the current lease loan sales tax rate at the time of the inquiry.",
+    "isSnippet": false
+  },
+  {
+    "label": "SALESTAXSTATEINDICATOR",
+    "insertText": "SALESTAXSTATEINDICATOR",
+    "description": "This field stores a code that determines how state sales tax will be used as part of the information required to compute the sales tax.",
+    "isSnippet": false
+  },
+  {
+    "label": "SALESTAXCOUNTYINDICATOR",
+    "insertText": "SALESTAXCOUNTYINDICATOR",
+    "description": "This field stores a code that determines how county sales tax will be used as part of the information required to compute the sales tax.",
+    "isSnippet": false
+  },
+  {
+    "label": "SALESTAXCITYINDICATOR",
+    "insertText": "SALESTAXCITYINDICATOR",
+    "description": "This field stores a code that determines how city sales tax will be used as part of the information required to compute the sales tax.",
+    "isSnippet": false
+  },
+  {
+    "label": "LESSEESTATE",
+    "insertText": "LESSEESTATE",
+    "description": "This field stores the two-character state code where the car is registered as part of the information required to compute the sales tax.",
+    "isSnippet": false
+  },
+  {
+    "label": "LESSEECOUNTY",
+    "insertText": "LESSEECOUNTY",
+    "description": "This field stores the county where the car is registered as part of the information required to compute the sales tax.",
+    "isSnippet": false
+  },
+  {
+    "label": "LESSEECITY",
+    "insertText": "LESSEECITY",
+    "description": "This field stores the city where the car is registered as part of the information required to compute the sales tax.",
+    "isSnippet": false
+  },
+  {
+    "label": "FIXEDLESSEESTATETAXRATE",
+    "insertText": "FIXEDLESSEESTATETAXRATE",
+    "description": "This field stores a fixed state sales tax rate for the lessee state.",
+    "isSnippet": false
+  },
+  {
+    "label": "FIXEDLESSEECOUNTYTAXRATE",
+    "insertText": "FIXEDLESSEECOUNTYTAXRATE",
+    "description": "This field stores a fixed county sales tax rate for the lessee county.",
+    "isSnippet": false
+  },
+  {
+    "label": "FIXEDLESSEECITYTAXRATE",
+    "insertText": "FIXEDLESSEECITYTAXRATE",
+    "description": "This field stores a fixed city sales tax rate for the lessee city.",
+    "isSnippet": false
+  },
+  {
+    "label": "LEASETERMINATEDATE",
+    "insertText": "LEASETERMINATEDATE",
+    "description": "This field stores the date when the member terminates a lease loan by surrendering the vehicle.",
+    "isSnippet": false
+  },
+  {
+    "label": "LEASETERMINATEFEE",
+    "insertText": "LEASETERMINATEFEE",
+    "description": "This field stores the fee amount to be charged for a loan paid off before the balloon date.",
+    "isSnippet": false
+  },
+  {
+    "label": "LEASEDISPOSITIONDATE",
+    "insertText": "LEASEDISPOSITIONDATE",
+    "description": "This field stores the date when the disposition fee is charged when a vehicle is turned back in at the end of a lease.",
+    "isSnippet": false
+  },
+  {
+    "label": "LEASEDISPOSITIONFEE",
+    "insertText": "LEASEDISPOSITIONFEE",
+    "description": "This field stores the fee amount to be charged when a vehicle is turned back in at the end of a lease.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATESALESTAXRATE",
+    "insertText": "STATESALESTAXRATE",
+    "description": "This field contains the current lease loan state sales tax at the time of the inquiry.",
+    "isSnippet": false
+  },
+  {
+    "label": "CNTYSALESTAXRATE",
+    "insertText": "CNTYSALESTAXRATE",
+    "description": "This field contains the current lease loan county sales tax at the time of the inquiry.",
+    "isSnippet": false
+  },
+  {
+    "label": "CITYSALESTAXRATE",
+    "insertText": "CITYSALESTAXRATE",
+    "description": "This field contains the current lease loan city sales tax at the time of the inquiry.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEALERSTATE",
+    "insertText": "DEALERSTATE",
+    "description": "This field stores the two-character state code where the car was leased as part of the information required to compute the sales tax.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEALERCOUNTY",
+    "insertText": "DEALERCOUNTY",
+    "description": "This field stores the county where the car was leased as part of the information required to compute the sales tax.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEALERCITY",
+    "insertText": "DEALERCITY",
+    "description": "This field stores the city where the car was leased as part of the information required to compute the sales tax.",
+    "isSnippet": false
+  },
+  {
+    "label": "FIXEDDEALERSTATETAXRATE",
+    "insertText": "FIXEDDEALERSTATETAXRATE",
+    "description": "This field stores a fixed state sales tax rate for the dealer state.",
+    "isSnippet": false
+  },
+  {
+    "label": "FIXEDDEALERCOUNTYTAXRATE",
+    "insertText": "FIXEDDEALERCOUNTYTAXRATE",
+    "description": "This field stores a fixed county sales tax rate for the dealer county.",
+    "isSnippet": false
+  },
+  {
+    "label": "FIXEDDEALERCITYTAXRATE",
+    "insertText": "FIXEDDEALERCITYTAXRATE",
+    "description": "This field stores a fixed city sales tax rate for the dealer city.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER1",
+    "insertText": "USERNUMBER1",
+    "description": "In this case, this field stores a credit union-defined number that indicates the second application request type.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER2",
+    "insertText": "USERNUMBER2",
+    "description": "In this case, this field stores a credit union-defined number that indicates the interviewer or user ID.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERRATE1",
+    "insertText": "USERRATE1",
+    "description": "In this case, this field stores a credit union-defined rate approved.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERRATE2",
+    "insertText": "USERRATE2",
+    "description": "In this case, this field stores a credit union-defined debt ratio.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR1",
+    "insertText": "USERCHAR1",
+    "description": "In this case, this field stores a credit union-defined character indicating whether the current address is correct.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR2",
+    "insertText": "USERCHAR2",
+    "description": "In this case, this field stores a credit union-defined character indicating another source of income.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR3",
+    "insertText": "USERCHAR3",
+    "description": "In this case, this field stores a credit union-defined character indicating if there is a co-applicant.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR4",
+    "insertText": "USERCHAR4",
+    "description": "In this case, this field stores a credit union-defined character indicating the purpose of the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT1",
+    "insertText": "USERAMOUNT1",
+    "description": "In this case, this field stores a credit union-defined amount of the applicant's income from another source.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT2",
+    "insertText": "USERAMOUNT2",
+    "description": "In this case, this field stores a credit union-defined amount of the second loan application.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT3",
+    "insertText": "USERAMOUNT3",
+    "description": "In this case, this field stores a credit union-defined amount of the applicant's rent or mortgage.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT4",
+    "insertText": "USERAMOUNT4",
+    "description": "In this case, this field stores a credit union-defined amount of the applicant's new monthly payment for a new loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT5",
+    "insertText": "USERAMOUNT5",
+    "description": "In this case, this field stores a credit union-defined amount of the co-applicant's rent or mortgage, if different than applicant's.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT6",
+    "insertText": "USERAMOUNT6",
+    "description": "In this case, this field stores a credit union-defined amount of the co-applicant's other income from another source.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT7",
+    "insertText": "USERAMOUNT7",
+    "description": "In this case, this field stores a credit union-defined amount of the applicant's taxes.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT8",
+    "insertText": "USERAMOUNT8",
+    "description": "In this case, this field stores a credit union-defined amount of the applicant's insurance payments or home owners association payment.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT9",
+    "insertText": "USERAMOUNT9",
+    "description": "In this case, this field stores a credit union-defined amount of the property's value or sales price.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT10",
+    "insertText": "USERAMOUNT10",
+    "description": "In this case, this field stores a credit union-defined amount of the applicant's total income.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE1",
+    "insertText": "USERCODE1",
+    "description": "In this case, this field stores a credit union-defined code that indicates if there is any cross sell opportunities.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE2",
+    "insertText": "USERCODE2",
+    "description": "In this case, this field stores a credit union-defined code that indicates any payment skips.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE3",
+    "insertText": "USERCODE3",
+    "description": "In this case, this field stores a credit union-defined code that indicates the employee working with the applicant on a cross sell opportunity.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE4",
+    "insertText": "USERCODE4",
+    "description": "In this case, this field stores a credit union-defined code that indicates the time (HHMM) the application was received.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE5",
+    "insertText": "USERCODE5",
+    "description": "In this case, this field stores a credit union-defined code that indicates the time (HHMM) that the decision on the application was made.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE6",
+    "insertText": "USERCODE6",
+    "description": "In this case, this field stores a credit union-defined code that indicates if the applicant is self-employed.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE7",
+    "insertText": "USERCODE7",
+    "description": "In this case, this field stores a credit union-defined code that indicates the applicant's credit retrieval bureau score.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE8",
+    "insertText": "USERCODE8",
+    "description": "In this case, this field stores a credit union-defined code that indicates the rate tier for this loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE9",
+    "insertText": "USERCODE9",
+    "description": "In this case, this field stores a credit union-defined code that indicates if the housing for the co-applicant is the same as for the applicant.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE10",
+    "insertText": "USERCODE10",
+    "description": "This field is a custom field that is not displayed unless you define it with the Application User Field Names parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE1",
+    "insertText": "USERDATE1",
+    "description": "These fields are custom fields that are not displayed unless you define them with the Application User Field Names parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE2",
+    "insertText": "USERDATE2",
+    "description": "These fields are custom fields that are not displayed unless you define them with the Application User Field Names parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE3",
+    "insertText": "USERDATE3",
+    "description": "These fields are custom fields that are not displayed unless you define them with the Application User Field Names parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE4",
+    "insertText": "USERDATE4",
+    "description": "These fields are custom fields that are not displayed unless you define them with the Application User Field Names parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE5",
+    "insertText": "USERDATE5",
+    "description": "These fields are custom fields that are not displayed unless you define them with the Application User Field Names parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE6",
+    "insertText": "USERDATE6",
+    "description": "These fields are custom fields that are not displayed unless you define them with the Application User Field Names parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE7",
+    "insertText": "USERDATE7",
+    "description": "These fields are custom fields that are not displayed unless you define them with the Application User Field Names parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE8",
+    "insertText": "USERDATE8",
+    "description": "These fields are custom fields that are not displayed unless you define them with the Application User Field Names parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE9",
+    "insertText": "USERDATE9",
+    "description": "These fields are custom fields that are not displayed unless you define them with the Application User Field Names parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE10",
+    "insertText": "USERDATE10",
+    "description": "These fields are custom fields that are not displayed unless you define them with the Application User Field Names parameters.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:1",
+    "insertText": "COMPLETEDACTIONS:1",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:2",
+    "insertText": "COMPLETEDACTIONS:2",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:3",
+    "insertText": "COMPLETEDACTIONS:3",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:4",
+    "insertText": "COMPLETEDACTIONS:4",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:5",
+    "insertText": "COMPLETEDACTIONS:5",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:6",
+    "insertText": "COMPLETEDACTIONS:6",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:7",
+    "insertText": "COMPLETEDACTIONS:7",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:8",
+    "insertText": "COMPLETEDACTIONS:8",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:9",
+    "insertText": "COMPLETEDACTIONS:9",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:10",
+    "insertText": "COMPLETEDACTIONS:10",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:11",
+    "insertText": "COMPLETEDACTIONS:11",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:12",
+    "insertText": "COMPLETEDACTIONS:12",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:13",
+    "insertText": "COMPLETEDACTIONS:13",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:14",
+    "insertText": "COMPLETEDACTIONS:14",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:15",
+    "insertText": "COMPLETEDACTIONS:15",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:16",
+    "insertText": "COMPLETEDACTIONS:16",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:17",
+    "insertText": "COMPLETEDACTIONS:17",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:18",
+    "insertText": "COMPLETEDACTIONS:18",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:19",
+    "insertText": "COMPLETEDACTIONS:19",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:20",
+    "insertText": "COMPLETEDACTIONS:20",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:21",
+    "insertText": "COMPLETEDACTIONS:21",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:22",
+    "insertText": "COMPLETEDACTIONS:22",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:23",
+    "insertText": "COMPLETEDACTIONS:23",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:24",
+    "insertText": "COMPLETEDACTIONS:24",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:25",
+    "insertText": "COMPLETEDACTIONS:25",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:26",
+    "insertText": "COMPLETEDACTIONS:26",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:27",
+    "insertText": "COMPLETEDACTIONS:27",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:28",
+    "insertText": "COMPLETEDACTIONS:28",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:29",
+    "insertText": "COMPLETEDACTIONS:29",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:30",
+    "insertText": "COMPLETEDACTIONS:30",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:31",
+    "insertText": "COMPLETEDACTIONS:31",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:32",
+    "insertText": "COMPLETEDACTIONS:32",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:33",
+    "insertText": "COMPLETEDACTIONS:33",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:34",
+    "insertText": "COMPLETEDACTIONS:34",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:35",
+    "insertText": "COMPLETEDACTIONS:35",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:36",
+    "insertText": "COMPLETEDACTIONS:36",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:37",
+    "insertText": "COMPLETEDACTIONS:37",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:38",
+    "insertText": "COMPLETEDACTIONS:38",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:39",
+    "insertText": "COMPLETEDACTIONS:39",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:40",
+    "insertText": "COMPLETEDACTIONS:40",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:41",
+    "insertText": "COMPLETEDACTIONS:41",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:42",
+    "insertText": "COMPLETEDACTIONS:42",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:43",
+    "insertText": "COMPLETEDACTIONS:43",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:44",
+    "insertText": "COMPLETEDACTIONS:44",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:45",
+    "insertText": "COMPLETEDACTIONS:45",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:46",
+    "insertText": "COMPLETEDACTIONS:46",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:47",
+    "insertText": "COMPLETEDACTIONS:47",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:48",
+    "insertText": "COMPLETEDACTIONS:48",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:49",
+    "insertText": "COMPLETEDACTIONS:49",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPLETEDACTIONS:50",
+    "insertText": "COMPLETEDACTIONS:50",
+    "description": "These fields store a code that tracks whether the corresponding actions in the Application Processing workflow have been completed.",
+    "isSnippet": false
+  }
+]

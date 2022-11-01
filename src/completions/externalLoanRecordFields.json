@@ -1,0 +1,536 @@
+[
+  {
+    "label": "DESCRIPTION",
+    "insertText": "DESCRIPTION",
+    "description": "This field stores a description of the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "TYPE",
+    "insertText": "TYPE",
+    "description": "This field stores a credit union-defined code that the system bases the rules associated with the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACCOUNTNUMBER",
+    "insertText": "ACCOUNTNUMBER",
+    "description": "This field stores the account number of the external loan on the third-party system.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATUS",
+    "insertText": "STATUS",
+    "description": "This field stores a code that indicates if the external loan is active or inactive.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACTIVITYDATE",
+    "insertText": "ACTIVITYDATE",
+    "description": "This field stores the date of the previous monetary transaction that affected the External Loan record.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTADVDATE",
+    "insertText": "LASTADVDATE",
+    "description": "This field stores the last time an advance was taken against the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "CLOSEDATE",
+    "insertText": "CLOSEDATE",
+    "description": "This field stores the date a loan is closed.",
+    "isSnippet": false
+  },
+  {
+    "label": "LATECHARGEDUE",
+    "insertText": "LATECHARGEDUE",
+    "description": "This field stores the amount of any late charges the member must pay on the date entered in the Next Payment Due Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATEMENTGROUP",
+    "insertText": "STATEMENTGROUP",
+    "description": "This field stores the credit union-defined statement group for the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATEMENTMAILCODE",
+    "insertText": "STATEMENTMAILCODE",
+    "description": "This field stores a code that defines how the statement should be sent to the member.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATEMENTDATE",
+    "insertText": "STATEMENTDATE",
+    "description": "This field stores the statement cutoff date for the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATEMENTPREVDATE",
+    "insertText": "STATEMENTPREVDATE",
+    "description": "This field stores the date of the last statement for the external loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "BALANCE",
+    "insertText": "BALANCE",
+    "description": "This field stores the principal balance of the loan on the date it was last updated.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENTDUE",
+    "insertText": "PAYMENTDUE",
+    "description": "This field stores the total payment amount for the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "DUEDATE",
+    "insertText": "DUEDATE",
+    "description": "This field stores the due date for the total payment amount stored in the Payment Due field.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREDITLIMIT",
+    "insertText": "CREDITLIMIT",
+    "description": "This field stores the credit limit of the external loan. This field is for informational use only. It is up to the third-party processor to use this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "AVAILCREDIT",
+    "insertText": "AVAILCREDIT",
+    "description": "This field stores the available credit amount provided by the external loan provider.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHADVANCELIMIT",
+    "insertText": "CASHADVANCELIMIT",
+    "description": "This field stores the cash advance credit limit of the external loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "AVAILABLECASHADVANCE",
+    "insertText": "AVAILABLECASHADVANCE",
+    "description": "This field stores the available cash advance provided by the external loan provider.",
+    "isSnippet": false
+  },
+  {
+    "label": "ADVANCE",
+    "insertText": "ADVANCE",
+    "description": "This field stores the accumulated amount of all advances since the core FICS® server program last updated the status of the External Loan record.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTUPDATEDATE",
+    "insertText": "LASTUPDATEDATE",
+    "description": "This field stores the date on which the External Loan record was last updated by an edit run.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTFMDATE",
+    "insertText": "LASTFMDATE",
+    "description": "This field stores the date of the last file maintenance of this External Loan record.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "The system stores the system date in this field when you create, change, or save the record. Sometimes the system updates this field because the record was saved, even though there may not be any actual changes in the record.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTTRANDATE",
+    "insertText": "LASTTRANDATE",
+    "description": "This field stores the date of the last teller or batch transaction that affected the External Loan record.",
+    "isSnippet": false
+  },
+  {
+    "label": "IMPOUNDPAYMENT",
+    "insertText": "IMPOUNDPAYMENT",
+    "description": "This field stores the impound payment amount for the mortgage loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRINCINTPAYMENT",
+    "insertText": "PRINCINTPAYMENT",
+    "description": "This field stores the amount of the member’s scheduled principal and interest payment for the date entered in the Next Payment Due Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "ESCROWPAYMENT",
+    "insertText": "ESCROWPAYMENT",
+    "description": "This field stores the amount of the member's escrow payment for the date entered in the Next Payment Due Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:1",
+    "insertText": "WARNINGCODE:1 ",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:2",
+    "insertText": "WARNINGCODE:2 ",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:3",
+    "insertText": "WARNINGCODE:3 ",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:4",
+    "insertText": "WARNINGCODE:4 ",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:5",
+    "insertText": "WARNINGCODE:5 ",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:6",
+    "insertText": "WARNINGCODE:6 ",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:7",
+    "insertText": "WARNINGCODE:7 ",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:8",
+    "insertText": "WARNINGCODE:8 ",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:9",
+    "insertText": "WARNINGCODE:9 ",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:10",
+    "insertText": "WARNINGCODE:10 ",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:11",
+    "insertText": "WARNINGCODE:11 ",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:12",
+    "insertText": "WARNINGCODE:12 ",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:13",
+    "insertText": "WARNINGCODE:13 ",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:14",
+    "insertText": "WARNINGCODE:14 ",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:15",
+    "insertText": "WARNINGCODE:15 ",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:16",
+    "insertText": "WARNINGCODE:16 ",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:17",
+    "insertText": "WARNINGCODE:17 ",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:18",
+    "insertText": "WARNINGCODE:18 ",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:19",
+    "insertText": "WARNINGCODE:19 ",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:20",
+    "insertText": "WARNINGCODE:20 ",
+    "description": "These 20 fields can each contain a code that identifies a different credit union-defined warning to apply to this loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:1",
+    "insertText": "WARNINGEXPIRATION:1",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:2",
+    "insertText": "WARNINGEXPIRATION:2",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:3",
+    "insertText": "WARNINGEXPIRATION:3",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:4",
+    "insertText": "WARNINGEXPIRATION:4",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:5",
+    "insertText": "WARNINGEXPIRATION:5",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:6",
+    "insertText": "WARNINGEXPIRATION:6",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:7",
+    "insertText": "WARNINGEXPIRATION:7",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:8",
+    "insertText": "WARNINGEXPIRATION:8",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:9",
+    "insertText": "WARNINGEXPIRATION:9",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:10",
+    "insertText": "WARNINGEXPIRATION:10",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:11",
+    "insertText": "WARNINGEXPIRATION:11",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:12",
+    "insertText": "WARNINGEXPIRATION:12",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:13",
+    "insertText": "WARNINGEXPIRATION:13",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:14",
+    "insertText": "WARNINGEXPIRATION:14",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:15",
+    "insertText": "WARNINGEXPIRATION:15",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:16",
+    "insertText": "WARNINGEXPIRATION:16",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:17",
+    "insertText": "WARNINGEXPIRATION:17",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:18",
+    "insertText": "WARNINGEXPIRATION:18",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:19",
+    "insertText": "WARNINGEXPIRATION:19",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:20",
+    "insertText": "WARNINGEXPIRATION:20",
+    "description": "These 20 fields can each contain a date after which the corresponding warning should no longer apply to the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICE:1",
+    "insertText": "SERVICE:1",
+    "description": "The eight Service # fields can each contain a code that identifies a different credit union-defined credit union services offered with an external loan (for example, an ATM card, a debit card, or access to the audio response system).",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICE:2",
+    "insertText": "SERVICE:2",
+    "description": "The eight Service # fields can each contain a code that identifies a different credit union-defined credit union services offered with an external loan (for example, an ATM card, a debit card, or access to the audio response system).",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICE:3",
+    "insertText": "SERVICE:3",
+    "description": "The eight Service # fields can each contain a code that identifies a different credit union-defined credit union services offered with an external loan (for example, an ATM card, a debit card, or access to the audio response system).",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICE:4",
+    "insertText": "SERVICE:4",
+    "description": "The eight Service # fields can each contain a code that identifies a different credit union-defined credit union services offered with an external loan (for example, an ATM card, a debit card, or access to the audio response system).",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICE:5",
+    "insertText": "SERVICE:5",
+    "description": "The eight Service # fields can each contain a code that identifies a different credit union-defined credit union services offered with an external loan (for example, an ATM card, a debit card, or access to the audio response system).",
+    "isSnippet": false
+  },
+  {
+    "label": "SERVICE:6",
+    "insertText": "SERVICE:6",
+    "description": "The eight Service # fields can each contain a code that identifies a different credit union-defined credit union services offered with an external loan (for example, an ATM card, a debit card, or access to the audio response system).",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "This field stores a unique number within each member account that can be used as a unique identification of this record.",
+    "isSnippet": false
+  },
+  {
+    "label": "NRTBALANCE",
+    "insertText": "NRTBALANCE",
+    "description": "This field contains the principal balance of the loan on the date it was last updated from the external provider database.",
+    "isSnippet": false
+  },
+  {
+    "label": "NRTPRINCINTPAYMENT",
+    "insertText": "NRTPRINCINTPAYMENT",
+    "description": "This field contains the amount of the member’s scheduled principal and interest payment for the date entered in the Next Payment Due Date** field from the external provider database.",
+    "isSnippet": false
+  },
+  {
+    "label": "NRTESCROWPAYMENT",
+    "insertText": "NRTESCROWPAYMENT",
+    "description": "This field contains the amount of the member's escrow payment for the date entered in the Next Payment Due Date** field from the external provider database.",
+    "isSnippet": false
+  },
+  {
+    "label": "NRTIMPOUNDPAYMENT",
+    "insertText": "NRTIMPOUNDPAYMENT",
+    "description": "This field contains the impound payment amount for the mortgage loan from the external provider database.",
+    "isSnippet": false
+  },
+  {
+    "label": "NRTLATECHARGEDUE",
+    "insertText": "NRTLATECHARGEDUE",
+    "description": "This field contains the amount of any late charges the member must pay on the date entered in the Next Payment Due Date** field from the external provider database.",
+    "isSnippet": false
+  },
+  {
+    "label": "NRTPAYMENTDUE",
+    "insertText": "NRTPAYMENTDUE",
+    "description": "This field contains the total payment amount for the loan from the external provider database.",
+    "isSnippet": false
+  },
+  {
+    "label": "NRTDUEDATE",
+    "insertText": "NRTDUEDATE",
+    "description": "This field contains the due date for the total payment amount stored in the Payment Due** field from the external provider database.",
+    "isSnippet": false
+  },
+  {
+    "label": "NRTSTATEMENTDATE",
+    "insertText": "NRTSTATEMENTDATE",
+    "description": "This field contains the statement cutoff date for the loan from the external provider database.",
+    "isSnippet": false
+  },
+  {
+    "label": "NRTSTATEMENTPREVDATE",
+    "insertText": "NRTSTATEMENTPREVDATE",
+    "description": "This field contains the date of the last statement for the external loan from the external provider database.",
+    "isSnippet": false
+  },
+  {
+    "label": "NRTCLOSEDATE",
+    "insertText": "NRTCLOSEDATE",
+    "description": "This field contains the date a loan is closed from the external provider database.",
+    "isSnippet": false
+  },
+  {
+    "label": "NRTCREDITLIMIT",
+    "insertText": "NRTCREDITLIMIT",
+    "description": "This field contains the credit limit of the external loan from the external provider database.",
+    "isSnippet": false
+  },
+  {
+    "label": "NRTAVAILCREDIT",
+    "insertText": "NRTAVAILCREDIT",
+    "description": "This field contains the available credit amount from the external provider database.",
+    "isSnippet": false
+  },
+  {
+    "label": "NRTLASTADVDATE",
+    "insertText": "NRTLASTADVDATE",
+    "description": "This field contains the last time an advance was taken against the loan from the external provider database.",
+    "isSnippet": false
+  },
+  {
+    "label": "NRTCASHADVANCELIMIT",
+    "insertText": "NRTCASHADVANCELIMIT",
+    "description": "This field contains the cash advance credit limit of the external loan from the external provider database.",
+    "isSnippet": false
+  },
+  {
+    "label": "NRTAVAILABLECASHADVANCE",
+    "insertText": "NRTAVAILABLECASHADVANCE",
+    "description": "This field contains the available cash advance from the external provider database.",
+    "isSnippet": false
+  }
+]

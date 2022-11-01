@@ -1,0 +1,1196 @@
+[
+  {
+    "label": "NUMBER",
+    "insertText": "NUMBER",
+    "description": "This field stores the unique 10-digit account number assigned to the account when it was created.",
+    "isSnippet": false
+  },
+  {
+    "label": "BRANCH",
+    "insertText": "BRANCH",
+    "description": "This field stores the credit union-defined branch number where the account was opened or is currently housed.",
+    "isSnippet": false
+  },
+  {
+    "label": "TYPE",
+    "insertText": "TYPE",
+    "description": "This field stores the credit union-defined code to define the type of account.",
+    "isSnippet": false
+  },
+  {
+    "label": "MEMBERGROUP",
+    "insertText": "MEMBERGROUP",
+    "description": "This field stores the credit union-defined code to identify the group to which the member belongs.",
+    "isSnippet": false
+  },
+  {
+    "label": "RESTRICT",
+    "insertText": "RESTRICT",
+    "description": "This field stores a code that indicates the type of restriction if access is restricted on this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "OPENDATE",
+    "insertText": "OPENDATE",
+    "description": "This field stores the date the account was opened.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTFMDATE",
+    "insertText": "LASTFMDATE",
+    "description": "This field stores the date of the last file maintenance or teller transaction affecting this Account record.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "This field stores the system date when you create, change, or save the Account record. Sometimes the system updates this field because the record was saved, even though there may not be any actual changes in the record.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACTIVITYDATE",
+    "insertText": "ACTIVITYDATE",
+    "description": "This calculated field contains the most recent activity date of all shares and loans in the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRGDRECACTIVITYDT",
+    "insertText": "PRGDRECACTIVITYDT",
+    "description": "This field stores the most recent activity date from shares or loans that are purged.",
+    "isSnippet": false
+  },
+  {
+    "label": "CORRESPONDDATE",
+    "insertText": "CORRESPONDDATE",
+    "description": "This field stores the most recent escheatment correspondence from the member regarding this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "PROXYDATE",
+    "insertText": "PROXYDATE",
+    "description": "If your credit union allows members to assign their vote to a proxy, this field stores the expiration date or the effective date of the proxy.",
+    "isSnippet": false
+  },
+  {
+    "label": "CLOSEDATE",
+    "insertText": "CLOSEDATE",
+    "description": "This field stores the date the account was closed.",
+    "isSnippet": false
+  },
+  {
+    "label": "FMLASTPURGEDATE",
+    "insertText": "FMLASTPURGEDATE",
+    "description": "This field stores the date through which you last purged file maintenance history for the account type with the Purge Transaction Processing batch program.",
+    "isSnippet": false
+  },
+  {
+    "label": "REFERENCE",
+    "insertText": "REFERENCE",
+    "description": "You can use this field to store any account reference information, such as a mother's maiden name.",
+    "isSnippet": false
+  },
+  {
+    "label": "MEMBERSTATUS",
+    "insertText": "MEMBERSTATUS",
+    "description": "This field stores the membership status of an individual or organization.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMMERCIALCODE",
+    "insertText": "COMMERCIALCODE",
+    "description": "This field stores a code that indicates whether an account is a consumer account, small business account, or commercial account.",
+    "isSnippet": false
+  },
+  {
+    "label": "KRHOLDBASEAMOUNT",
+    "insertText": "KRHOLDBASEAMOUNT",
+    "description": "This field stores the check hold base amount for this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "KRTOTALAMOUNT",
+    "insertText": "KRTOTALAMOUNT",
+    "description": "This field stores a running total of any non-held portions of check deposits for the date stored in the Check Dep Total Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "KRTOTALDATE",
+    "insertText": "KRTOTALDATE",
+    "description": "This field stores the date of the last check deposit that affected the Account record Check Dep Total Amount field or the Non-Reg CC Check Dep Total Amt field.",
+    "isSnippet": false
+  },
+  {
+    "label": "NONREGCCCHECKHOLDBASEAMT",
+    "insertText": "NONREGCCCHECKHOLDBASEAMT",
+    "description": "This field stores the amount that is immediately available per day to the account holder when making a non-Reg CC check deposit. (Such deposits are usually made remotely through a PC or smartphone).",
+    "isSnippet": false
+  },
+  {
+    "label": "NONREGCCCHECKTOTALAMT",
+    "insertText": "NONREGCCCHECKTOTALAMT",
+    "description": "This field stores a running total of all the non-Reg CC check deposits for the date stored in the Check Dep Total Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "ENABLEFLOAT",
+    "insertText": "ENABLEFLOAT",
+    "description": "This field stores a code that indicates whether to activate credit union floats per account.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURRENTRELATIONSHIPCODE",
+    "insertText": "CURRENTRELATIONSHIPCODE",
+    "description": "This calculated field contains a code that specifies the member's current relationship to your credit union.",
+    "isSnippet": false
+  },
+  {
+    "label": "RELATIONSHIPCODE",
+    "insertText": "RELATIONSHIPCODE",
+    "description": "This field stores a code that specifies the member's base relationship to your credit union.",
+    "isSnippet": false
+  },
+  {
+    "label": "RELATIONSHIPOVERRIDE",
+    "insertText": "RELATIONSHIPOVERRIDE",
+    "description": "This field stores a code that specifies a relationship code that overrides the base relationship code until the relationship override expires.",
+    "isSnippet": false
+  },
+  {
+    "label": "RELATIONSHIPOVERRIDEEFFDATE",
+    "insertText": "RELATIONSHIPOVERRIDEEFFDATE",
+    "description": "This field stores the date that specifies when the Relationship Override field becomes effective.",
+    "isSnippet": false
+  },
+  {
+    "label": "RELATIONSHIPOVERRIDEEXPDATE",
+    "insertText": "RELATIONSHIPOVERRIDEEXPDATE",
+    "description": "This field specifies the date that the Relationship Override field expires.",
+    "isSnippet": false
+  },
+  {
+    "label": "HEADOFHOUSEHOLD",
+    "insertText": "HEADOFHOUSEHOLD",
+    "description": "This field stores a code that specifies whether this account is used as a head of household account to consolidate mailings or target marketing campaigns.",
+    "isSnippet": false
+  },
+  {
+    "label": "HOUSEHOLDACCOUNT",
+    "insertText": "HOUSEHOLDACCOUNT",
+    "description": "This field stores the related head of household account, if the value in the Head of Household field is set to (1) Other family member.",
+    "isSnippet": false
+  },
+  {
+    "label": "HOUSEHOLDSTATEMENT",
+    "insertText": "HOUSEHOLDSTATEMENT",
+    "description": "This field stores a code that indicates if you want to send multiple statements to one household in a single envelope.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATEMENTMAILCODE",
+    "insertText": "STATEMENTMAILCODE",
+    "description": "This field stores a code that indicates what mail code to use to for mailing statements.",
+    "isSnippet": false
+  },
+  {
+    "label": "ESTMTNOTIFY",
+    "insertText": "ESTMTNOTIFY",
+    "description": "This field stores a code that specifies whether the member would like to receive e-statements for home banking products.",
+    "isSnippet": false
+  },
+  {
+    "label": "ESTMTENABLE",
+    "insertText": "ESTMTENABLE",
+    "description": "This field stores a code that indicates if the member would like to receive e-statements for home banking products.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATEREPORTING",
+    "insertText": "STATEREPORTING",
+    "description": "This field stores the state code to report dividends to for this member.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREATEDBYUSER",
+    "insertText": "CREATEDBYUSER",
+    "description": "This field stores the user ID and is populated when the record is created.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREATEDATBRANCH",
+    "insertText": "CREATEDATBRANCH",
+    "description": "This field stores the branch ID of the branch where the Account record is created.",
+    "isSnippet": false
+  },
+  {
+    "label": "CRTOTALAMOUNT",
+    "insertText": "CRTOTALAMOUNT",
+    "description": "This field stores the total cash received from a Cash Received (CR) transaction, ATM deposit, or Shared Branch Issuer transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "CDTOTALAMOUNT",
+    "insertText": "CDTOTALAMOUNT",
+    "description": "This field stores the total cash distributed with a Cash Disbursed (CD) transaction, ATM withdrawals, or Shared Branch Issuer transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "FRCRTOTALAMOUNT",
+    "insertText": "FRCRTOTALAMOUNT",
+    "description": "This field stores the total cash received with a Foreign Received (FR) transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "FRCDTOTALAMOUNT",
+    "insertText": "FRCDTOTALAMOUNT",
+    "description": "This field stores the total cash received with a Foreign Disbursed (FD) transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "FRCRUNITS",
+    "insertText": "FRCRUNITS",
+    "description": "This field stores the aggregate of the foreign currency amount total for the day based on Foreign Received (FR) teller transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "FRCDUNITS",
+    "insertText": "FRCDUNITS",
+    "description": "This field stores the aggregate of the total in foreign currency for the day based on the Foreign Disbursed (FD) teller transactions during the day. The currency amount is reported in foreign currency, not converted to U.S. dollars.",
+    "isSnippet": false
+  },
+  {
+    "label": "WRTOTALAMOUNT",
+    "insertText": "WRTOTALAMOUNT",
+    "description": "This field stores the total amount of incoming wires posted in a wire received transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "WDTOTALAMOUNT",
+    "insertText": "WDTOTALAMOUNT",
+    "description": "This field stores the total amount of outgoing wires posted in a wire disbursed transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:1",
+    "insertText": "WARNINGCODE:1",
+    "description": "The 20 Warning # Code fields can each contain a code that identifies a different credit union-defined warning to apply to this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:2",
+    "insertText": "WARNINGCODE:2",
+    "description": "The 20 Warning # Code fields can each contain a code that identifies a different credit union-defined warning to apply to this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:3",
+    "insertText": "WARNINGCODE:3",
+    "description": "The 20 Warning # Code fields can each contain a code that identifies a different credit union-defined warning to apply to this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:4",
+    "insertText": "WARNINGCODE:4",
+    "description": "The 20 Warning # Code fields can each contain a code that identifies a different credit union-defined warning to apply to this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:5",
+    "insertText": "WARNINGCODE:5",
+    "description": "The 20 Warning # Code fields can each contain a code that identifies a different credit union-defined warning to apply to this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:6",
+    "insertText": "WARNINGCODE:6",
+    "description": "The 20 Warning # Code fields can each contain a code that identifies a different credit union-defined warning to apply to this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:7",
+    "insertText": "WARNINGCODE:7",
+    "description": "The 20 Warning # Code fields can each contain a code that identifies a different credit union-defined warning to apply to this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:8",
+    "insertText": "WARNINGCODE:8",
+    "description": "The 20 Warning # Code fields can each contain a code that identifies a different credit union-defined warning to apply to this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:9",
+    "insertText": "WARNINGCODE:9",
+    "description": "The 20 Warning # Code fields can each contain a code that identifies a different credit union-defined warning to apply to this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:10",
+    "insertText": "WARNINGCODE:10",
+    "description": "The 20 Warning # Code fields can each contain a code that identifies a different credit union-defined warning to apply to this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:11",
+    "insertText": "WARNINGCODE:11",
+    "description": "The 20 Warning # Code fields can each contain a code that identifies a different credit union-defined warning to apply to this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:12",
+    "insertText": "WARNINGCODE:12",
+    "description": "The 20 Warning # Code fields can each contain a code that identifies a different credit union-defined warning to apply to this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:13",
+    "insertText": "WARNINGCODE:13",
+    "description": "The 20 Warning # Code fields can each contain a code that identifies a different credit union-defined warning to apply to this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:14",
+    "insertText": "WARNINGCODE:14",
+    "description": "The 20 Warning # Code fields can each contain a code that identifies a different credit union-defined warning to apply to this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:15",
+    "insertText": "WARNINGCODE:15",
+    "description": "The 20 Warning # Code fields can each contain a code that identifies a different credit union-defined warning to apply to this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:16",
+    "insertText": "WARNINGCODE:16",
+    "description": "The 20 Warning # Code fields can each contain a code that identifies a different credit union-defined warning to apply to this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:17",
+    "insertText": "WARNINGCODE:17",
+    "description": "The 20 Warning # Code fields can each contain a code that identifies a different credit union-defined warning to apply to this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:18",
+    "insertText": "WARNINGCODE:18",
+    "description": "The 20 Warning # Code fields can each contain a code that identifies a different credit union-defined warning to apply to this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:19",
+    "insertText": "WARNINGCODE:19",
+    "description": "The 20 Warning # Code fields can each contain a code that identifies a different credit union-defined warning to apply to this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGCODE:20",
+    "insertText": "WARNINGCODE:20",
+    "description": "The 20 Warning # Code fields can each contain a code that identifies a different credit union-defined warning to apply to this account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:1",
+    "insertText": "WARNINGEXPIRATION:1",
+    "description": "The 20 Warning # Expiration fields can each contain a date after which the corresponding warning should no longer apply to the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:2",
+    "insertText": "WARNINGEXPIRATION:2",
+    "description": "The 20 Warning # Expiration fields can each contain a date after which the corresponding warning should no longer apply to the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:3",
+    "insertText": "WARNINGEXPIRATION:3",
+    "description": "The 20 Warning # Expiration fields can each contain a date after which the corresponding warning should no longer apply to the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:4",
+    "insertText": "WARNINGEXPIRATION:4",
+    "description": "The 20 Warning # Expiration fields can each contain a date after which the corresponding warning should no longer apply to the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:5",
+    "insertText": "WARNINGEXPIRATION:5",
+    "description": "The 20 Warning # Expiration fields can each contain a date after which the corresponding warning should no longer apply to the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:6",
+    "insertText": "WARNINGEXPIRATION:6",
+    "description": "The 20 Warning # Expiration fields can each contain a date after which the corresponding warning should no longer apply to the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:7",
+    "insertText": "WARNINGEXPIRATION:7",
+    "description": "The 20 Warning # Expiration fields can each contain a date after which the corresponding warning should no longer apply to the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:8",
+    "insertText": "WARNINGEXPIRATION:8",
+    "description": "The 20 Warning # Expiration fields can each contain a date after which the corresponding warning should no longer apply to the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:9",
+    "insertText": "WARNINGEXPIRATION:9",
+    "description": "The 20 Warning # Expiration fields can each contain a date after which the corresponding warning should no longer apply to the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:10",
+    "insertText": "WARNINGEXPIRATION:10",
+    "description": "The 20 Warning # Expiration fields can each contain a date after which the corresponding warning should no longer apply to the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:11",
+    "insertText": "WARNINGEXPIRATION:11",
+    "description": "The 20 Warning # Expiration fields can each contain a date after which the corresponding warning should no longer apply to the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:12",
+    "insertText": "WARNINGEXPIRATION:12",
+    "description": "The 20 Warning # Expiration fields can each contain a date after which the corresponding warning should no longer apply to the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:13",
+    "insertText": "WARNINGEXPIRATION:13",
+    "description": "The 20 Warning # Expiration fields can each contain a date after which the corresponding warning should no longer apply to the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:14",
+    "insertText": "WARNINGEXPIRATION:14",
+    "description": "The 20 Warning # Expiration fields can each contain a date after which the corresponding warning should no longer apply to the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:15",
+    "insertText": "WARNINGEXPIRATION:15",
+    "description": "The 20 Warning # Expiration fields can each contain a date after which the corresponding warning should no longer apply to the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:16",
+    "insertText": "WARNINGEXPIRATION:16",
+    "description": "The 20 Warning # Expiration fields can each contain a date after which the corresponding warning should no longer apply to the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:17",
+    "insertText": "WARNINGEXPIRATION:17",
+    "description": "The 20 Warning # Expiration fields can each contain a date after which the corresponding warning should no longer apply to the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:18",
+    "insertText": "WARNINGEXPIRATION:18",
+    "description": "The 20 Warning # Expiration fields can each contain a date after which the corresponding warning should no longer apply to the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:19",
+    "insertText": "WARNINGEXPIRATION:19",
+    "description": "The 20 Warning # Expiration fields can each contain a date after which the corresponding warning should no longer apply to the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "WARNINGEXPIRATION:20",
+    "insertText": "WARNINGEXPIRATION:20",
+    "description": "The 20 Warning # Expiration fields can each contain a date after which the corresponding warning should no longer apply to the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENTHISTORY:1",
+    "insertText": "PAYMENTHISTORY:1",
+    "description": "This field stores the number of loan payments the member has made to date for all loans in the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENTHISTORY:2",
+    "insertText": "PAYMENTHISTORY:2",
+    "description": "This field stores a count of all loan payments made 11–30 days after the due date.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENTHISTORY:3",
+    "insertText": "PAYMENTHISTORY:3",
+    "description": "This field stores a count of all loan payments made 31–60 days after the due date.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENTHISTORY:4",
+    "insertText": "PAYMENTHISTORY:4",
+    "description": "This field stores a count of all loan payments made 61–90 days after the due date.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENTHISTORY:5",
+    "insertText": "PAYMENTHISTORY:5",
+    "description": "This field stores a count of all loan payments made 91–120 days after the due date.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENTHISTORY:6",
+    "insertText": "PAYMENTHISTORY:6",
+    "description": "This field stores a count of all loan payments made 121 and up days after the due date.",
+    "isSnippet": false
+  },
+  {
+    "label": "FROZENMODE",
+    "insertText": "FROZENMODE",
+    "description": "This field stores a code that indicates the frozen condition of the Audio Response and home banking systems.",
+    "isSnippet": false
+  },
+  {
+    "label": "INVALIDATTEMPTCOUNT",
+    "insertText": "INVALIDATTEMPTCOUNT",
+    "description": "This field stores the number of times someone made an invalid attempt to access the account through the Audio Response or home banking system.",
+    "isSnippet": false
+  },
+  {
+    "label": "INVALIDATTEMPTDATE",
+    "insertText": "INVALIDATTEMPTDATE",
+    "description": "This field stores the last date when someone tried to access this account using an invalid access code.",
+    "isSnippet": false
+  },
+  {
+    "label": "INVALIDATTEMPTTIME",
+    "insertText": "INVALIDATTEMPTTIME",
+    "description": "This field stores the last time (in HHMM format) when someone tried to access this account using an invalid access code.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:1",
+    "insertText": "NSFMONTHLYCOUNT:1",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:2",
+    "insertText": "NSFMONTHLYCOUNT:2",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:3",
+    "insertText": "NSFMONTHLYCOUNT:3",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:4",
+    "insertText": "NSFMONTHLYCOUNT:4",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:5",
+    "insertText": "NSFMONTHLYCOUNT:5",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:6",
+    "insertText": "NSFMONTHLYCOUNT:6",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:7",
+    "insertText": "NSFMONTHLYCOUNT:7",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:8",
+    "insertText": "NSFMONTHLYCOUNT:8",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:9",
+    "insertText": "NSFMONTHLYCOUNT:9",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:10",
+    "insertText": "NSFMONTHLYCOUNT:10",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:11",
+    "insertText": "NSFMONTHLYCOUNT:11",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:12",
+    "insertText": "NSFMONTHLYCOUNT:12",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:13",
+    "insertText": "NSFMONTHLYCOUNT:13",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:14",
+    "insertText": "NSFMONTHLYCOUNT:14",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:15",
+    "insertText": "NSFMONTHLYCOUNT:15",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:16",
+    "insertText": "NSFMONTHLYCOUNT:16",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:17",
+    "insertText": "NSFMONTHLYCOUNT:17",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:18",
+    "insertText": "NSFMONTHLYCOUNT:18",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:19",
+    "insertText": "NSFMONTHLYCOUNT:19",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:20",
+    "insertText": "NSFMONTHLYCOUNT:20",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:21",
+    "insertText": "NSFMONTHLYCOUNT:21",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:22",
+    "insertText": "NSFMONTHLYCOUNT:22",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:23",
+    "insertText": "NSFMONTHLYCOUNT:23",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFMONTHLYCOUNT:24",
+    "insertText": "NSFMONTHLYCOUNT:24",
+    "description": "Each of these 24 fields stores the number of days the account had a negative balance for that month.",
+    "isSnippet": false
+  },
+  {
+    "label": "NSFTODAY",
+    "insertText": "NSFTODAY",
+    "description": "If you indicate at the Count NSFs prompt in your batch posting jobs that you want the system to count NSFs, this field stores the number of times during the current system date an NSF condition or negative balance occurred in the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "CAPPEDFEESAMOUNTCAP",
+    "insertText": "CAPPEDFEESAMOUNTCAP",
+    "description": "This field stores the dollar amount your credit union sets for its capped fees amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "CAPPEDFEESCOUNTCAP",
+    "insertText": "CAPPEDFEESCOUNTCAP",
+    "description": "This field stores the number of fee occurrences at which your credit union stops charging capped fees for the account during a time period you specified.",
+    "isSnippet": false
+  },
+  {
+    "label": "CAPPEDFEESAMTPERIOD",
+    "insertText": "CAPPEDFEESAMTPERIOD",
+    "description": "This calculated field contains the sum of the capped fees charged by batch programs and online transaction processing to the shares and loans under this account during a time period you specify.",
+    "isSnippet": false
+  },
+  {
+    "label": "CAPPEDFEESCNTPERIOD",
+    "insertText": "CAPPEDFEESCNTPERIOD",
+    "description": "This calculated field contains the number of occurrences of capped fees, incrementing by 1, charged to the shares and loans of the account.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITUSAGEDATE",
+    "insertText": "LIMITUSAGEDATE",
+    "description": "This field stores the last date that transactions were limited by fields in the Account record occurred.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITDESCRIPTION:1",
+    "insertText": "LIMITDESCRIPTION:1",
+    "description": "Each of these six calculated fields contains the description of the corresponding Limit 1 – Limit 6 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITDESCRIPTION:2",
+    "insertText": "LIMITDESCRIPTION:2",
+    "description": "Each of these six calculated fields contains the description of the corresponding Limit 1 – Limit 6 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITDESCRIPTION:3",
+    "insertText": "LIMITDESCRIPTION:3",
+    "description": "Each of these six calculated fields contains the description of the corresponding Limit 1 – Limit 6 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITDESCRIPTION:4",
+    "insertText": "LIMITDESCRIPTION:4",
+    "description": "Each of these six calculated fields contains the description of the corresponding Limit 1 – Limit 6 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITDESCRIPTION:5",
+    "insertText": "LIMITDESCRIPTION:5",
+    "description": "Each of these six calculated fields contains the description of the corresponding Limit 1 – Limit 6 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITDESCRIPTION:6",
+    "insertText": "LIMITDESCRIPTION:6",
+    "description": "Each of these six calculated fields contains the description of the corresponding Limit 1 – Limit 6 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMIT:1",
+    "insertText": "LIMIT:1",
+    "description": "Each of these six fields stores an amount that places a daily limit on certain types of transactions with particular source codes.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMIT:2",
+    "insertText": "LIMIT:2",
+    "description": "Each of these six fields stores an amount that places a daily limit on certain types of transactions with particular source codes.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMIT:3",
+    "insertText": "LIMIT:3",
+    "description": "Each of these six fields stores an amount that places a daily limit on certain types of transactions with particular source codes.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMIT:4",
+    "insertText": "LIMIT:4",
+    "description": "Each of these six fields stores an amount that places a daily limit on certain types of transactions with particular source codes.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMIT:5",
+    "insertText": "LIMIT:5",
+    "description": "Each of these six fields stores an amount that places a daily limit on certain types of transactions with particular source codes.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMIT:6",
+    "insertText": "LIMIT:6",
+    "description": "Each of these six fields stores an amount that places a daily limit on certain types of transactions with particular source codes.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITAMOUNT:1",
+    "insertText": "LIMITAMOUNT:1",
+    "description": "Each of these six fields stores the current total amount of transactions that apply to the corresponding limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITAMOUNT:2",
+    "insertText": "LIMITAMOUNT:2",
+    "description": "Each of these six fields stores the current total amount of transactions that apply to the corresponding limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITAMOUNT:3",
+    "insertText": "LIMITAMOUNT:3",
+    "description": "Each of these six fields stores the current total amount of transactions that apply to the corresponding limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITAMOUNT:4",
+    "insertText": "LIMITAMOUNT:4",
+    "description": "Each of these six fields stores the current total amount of transactions that apply to the corresponding limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITAMOUNT:5",
+    "insertText": "LIMITAMOUNT:5",
+    "description": "Each of these six fields stores the current total amount of transactions that apply to the corresponding limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITAMOUNT:6",
+    "insertText": "LIMITAMOUNT:6",
+    "description": "Each of these six fields stores the current total amount of transactions that apply to the corresponding limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTLIMIT:1",
+    "insertText": "COUNTLIMIT:1",
+    "description": "Each of these six fields stores a number that places a daily limit for the number of transactions of a particular type and for a particular source code.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTLIMIT:2",
+    "insertText": "COUNTLIMIT:2",
+    "description": "Each of these six fields stores a number that places a daily limit for the number of transactions of a particular type and for a particular source code.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTLIMIT:3",
+    "insertText": "COUNTLIMIT:3",
+    "description": "Each of these six fields stores a number that places a daily limit for the number of transactions of a particular type and for a particular source code.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTLIMIT:4",
+    "insertText": "COUNTLIMIT:4",
+    "description": "Each of these six fields stores a number that places a daily limit for the number of transactions of a particular type and for a particular source code.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTLIMIT:5",
+    "insertText": "COUNTLIMIT:5",
+    "description": "Each of these six fields stores a number that places a daily limit for the number of transactions of a particular type and for a particular source code.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTLIMIT:6",
+    "insertText": "COUNTLIMIT:6",
+    "description": "Each of these six fields stores a number that places a daily limit for the number of transactions of a particular type and for a particular source code.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITCOUNT:1",
+    "insertText": "LIMITCOUNT:1",
+    "description": "Each of these six fields stores the current total count of times each day that a member performs a transaction that is affected by this limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITCOUNT:2",
+    "insertText": "LIMITCOUNT:2",
+    "description": "Each of these six fields stores the current total count of times each day that a member performs a transaction that is affected by this limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITCOUNT:3",
+    "insertText": "LIMITCOUNT:3",
+    "description": "Each of these six fields stores the current total count of times each day that a member performs a transaction that is affected by this limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITCOUNT:4",
+    "insertText": "LIMITCOUNT:4",
+    "description": "Each of these six fields stores the current total count of times each day that a member performs a transaction that is affected by this limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITCOUNT:5",
+    "insertText": "LIMITCOUNT:5",
+    "description": "Each of these six fields stores the current total count of times each day that a member performs a transaction that is affected by this limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "LIMITCOUNT:6",
+    "insertText": "LIMITCOUNT:6",
+    "description": "Each of these six fields stores the current total count of times each day that a member performs a transaction that is affected by this limit.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERITEMLIMIT:1",
+    "insertText": "PERITEMLIMIT:1",
+    "description": "Each of these six fields stores an amount that places a per transaction limit on certain types of transactions with particular source codes.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERITEMLIMIT:2",
+    "insertText": "PERITEMLIMIT:2",
+    "description": "Each of these six fields stores an amount that places a per transaction limit on certain types of transactions with particular source codes.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERITEMLIMIT:3",
+    "insertText": "PERITEMLIMIT:3",
+    "description": "Each of these six fields stores an amount that places a per transaction limit on certain types of transactions with particular source codes.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERITEMLIMIT:4",
+    "insertText": "PERITEMLIMIT:4",
+    "description": "Each of these six fields stores an amount that places a per transaction limit on certain types of transactions with particular source codes.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERITEMLIMIT:5",
+    "insertText": "PERITEMLIMIT:5",
+    "description": "Each of these six fields stores an amount that places a per transaction limit on certain types of transactions with particular source codes.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERITEMLIMIT:6",
+    "insertText": "PERITEMLIMIT:6",
+    "description": "Each of these six fields stores an amount that places a per transaction limit on certain types of transactions with particular source codes.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR1",
+    "insertText": "USERCHAR1",
+    "description": "These four custom fields can store any credit union-defined character data.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR2",
+    "insertText": "USERCHAR2",
+    "description": "These four custom fields can store any credit union-defined character data.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR3",
+    "insertText": "USERCHAR3",
+    "description": "These four custom fields can store any credit union-defined character data.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR4",
+    "insertText": "USERCHAR4",
+    "description": "These four custom fields can store any credit union-defined character data.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT1",
+    "insertText": "USERAMOUNT1",
+    "description": "These two custom fields can store any credit union-defined cash amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT2",
+    "insertText": "USERAMOUNT2",
+    "description": "These two custom fields can store any credit union-defined cash amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE1",
+    "insertText": "USERDATE1",
+    "description": "These two custom fields can store any credit union-defined date.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE2",
+    "insertText": "USERDATE2",
+    "description": "These two custom fields can store any credit union-defined date.",
+    "isSnippet": false
+  },
+  {
+    "label": "DIVYTDTAX",
+    "insertText": "DIVYTDTAX",
+    "description": "This calculated field contains the total of all the taxable dividends for all regular shares (IRS Code = 00) in the account during the current year.",
+    "isSnippet": false
+  },
+  {
+    "label": "DIVYTDNONTAX",
+    "insertText": "DIVYTDNONTAX",
+    "description": "This calculated field contains the total of all the nontaxable dividends for all tax-deferred shares (IRS Code = 01–15) in the account during the current year.",
+    "isSnippet": false
+  },
+  {
+    "label": "DIVLASTYEARTAX",
+    "insertText": "DIVLASTYEARTAX",
+    "description": "This calculated field contains the total of all the taxable dividends for all regular shares (IRS Code = 00) in the account during the previous year.",
+    "isSnippet": false
+  },
+  {
+    "label": "DIVLASTYEARNONTAX",
+    "insertText": "DIVLASTYEARNONTAX",
+    "description": "This calculated field contains the total of all the nontaxable dividends for all tax-deferred shares (IRS Code = 01–15) in the account during the previous year.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTERESTYTD",
+    "insertText": "INTERESTYTD",
+    "description": "This calculated field contains the total of all the interest paid on all loans in this account during the current year.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTERESTLASTYEAR",
+    "insertText": "INTERESTLASTYEAR",
+    "description": "This calculated field contains the total of all the interest paid on all loans in this account during the previous year.",
+    "isSnippet": false
+  },
+  {
+    "label": "BONDINTYTD",
+    "insertText": "BONDINTYTD",
+    "description": "This calculated field contains the total of all the bond interest for the account during the current year.",
+    "isSnippet": false
+  },
+  {
+    "label": "BONDINTLASTYEAR",
+    "insertText": "BONDINTLASTYEAR",
+    "description": "This calculated field contains the total of all the bond interest for the account during the previous year.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEELINE:1",
+    "insertText": "PAYEELINE:1",
+    "description": "These six calculated fields contain a member's address information from the Name records at the account level.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEELINE:2",
+    "insertText": "PAYEELINE:2",
+    "description": "These six calculated fields contain a member's address information from the Name records at the account level.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEELINE:3",
+    "insertText": "PAYEELINE:3",
+    "description": "These six calculated fields contain a member's address information from the Name records at the account level.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEELINE:4",
+    "insertText": "PAYEELINE:4",
+    "description": "These six calculated fields contain a member's address information from the Name records at the account level.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEELINE:5",
+    "insertText": "PAYEELINE:5",
+    "description": "These six calculated fields contain a member's address information from the Name records at the account level.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEELINE:6",
+    "insertText": "PAYEELINE:6",
+    "description": "These six calculated fields contain a member's address information from the Name records at the account level.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTERNATEADDRESS:1",
+    "insertText": "ALTERNATEADDRESS:1",
+    "description": "These six calculated fields contain a member's alternate address information from the Name records at the account level.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTERNATEADDRESS:2",
+    "insertText": "ALTERNATEADDRESS:2",
+    "description": "These six calculated fields contain a member's alternate address information from the Name records at the account level.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTERNATEADDRESS:3",
+    "insertText": "ALTERNATEADDRESS:3",
+    "description": "These six calculated fields contain a member's alternate address information from the Name records at the account level.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTERNATEADDRESS:4",
+    "insertText": "ALTERNATEADDRESS:4",
+    "description": "These six calculated fields contain a member's alternate address information from the Name records at the account level.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTERNATEADDRESS:5",
+    "insertText": "ALTERNATEADDRESS:5",
+    "description": "These six calculated fields contain a member's alternate address information from the Name records at the account level.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTERNATEADDRESS:6",
+    "insertText": "ALTERNATEADDRESS:6",
+    "description": "These six calculated fields contain a member's alternate address information from the Name records at the account level.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEEPHONE:1",
+    "insertText": "PAYEEPHONE:1",
+    "description": "These three calculated fields contain a member's phone number information from the Name records at the account level.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEEPHONE:2",
+    "insertText": "PAYEEPHONE:2",
+    "description": "These three calculated fields contain a member's phone number information from the Name records at the account level.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEEPHONE:3",
+    "insertText": "PAYEEPHONE:3",
+    "description": "These three calculated fields contain a member's phone number information from the Name records at the account level.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTERNATEPHONE:1",
+    "insertText": "ALTERNATEPHONE:1",
+    "description": "These three calculated fields contain a member's alternate phone number information from the Name records at the account level.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTERNATEPHONE:2",
+    "insertText": "ALTERNATEPHONE:2",
+    "description": "These three calculated fields contain a member's alternate phone number information from the Name records at the account level.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTERNATEPHONE:3",
+    "insertText": "ALTERNATEPHONE:3",
+    "description": "These three calculated fields contain a member's alternate phone number information from the Name records at the account level.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTERNATENAMETYPE",
+    "insertText": "ALTERNATENAMETYPE",
+    "description": "This calculated field contains the value from the Name Type field of the first Account Name record that it finds that is set to 03 Alternate mailing or that has a value in the Mail Override field set to 1 Overrides primary mailing address.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTERNATENAMELOCATOR",
+    "insertText": "ALTERNATENAMELOCATOR",
+    "description": "This calculated field contains the value from the Locator field of the first Account Name record that it finds that has a value in the Name Type field set to 03 Alternate mailing or that has a value in the Mail Override field set to 1 Overrides primary mailing address.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEENAMETYPE",
+    "insertText": "PAYEENAMETYPE",
+    "description": "This calculated field contains the value from the Name Type field of the first Account Name record that it finds that has a Mail Override field set to 1 Overrides primary mailing address.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYEENAMELOCATOR",
+    "insertText": "PAYEENAMELOCATOR",
+    "description": "This calculated field contains the value from the Locator field of the first Account Name record that it finds that has a value in the Name Type field set to 03 Alternate mailing or that has a value in the Mail Override field set to 1 Overrides primary mailing address.",
+    "isSnippet": false
+  }
+]

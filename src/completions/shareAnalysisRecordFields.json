@@ -1,0 +1,350 @@
+[
+  {
+    "label": "PLAN",
+    "insertText": "PLAN",
+    "description": "This field indicates which Analysis Plan group in the Analysis Plan Parameters is associated with this record.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATEMENTDATE",
+    "insertText": "STATEMENTDATE",
+    "description": "The Statement Cutoff Processing batch program sets this field to the current system date then creates a new Share Analysis record for the selected group that has the counters set to 0.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATEMENTGROUP",
+    "insertText": "STATEMENTGROUP",
+    "description": "The information in this record can be used for fee posting and producing analysis statements for the specified statement groups.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATEMENTPREVDATE",
+    "insertText": "STATEMENTPREVDATE",
+    "description": "The information in this record can be used for fee posting and producing analysis statements for the specified statement group.",
+    "isSnippet": false
+  },
+  {
+    "label": "CASHAMTTOTAL",
+    "insertText": "CASHAMTTOTAL",
+    "description": "This field stores the monthly total of CD, CR, ATM, FR and FD transactions on analyzed accounts.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "This field stores the system date in the Record Change Date field when you create, change, or save the Share Analysis record.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "This field value in each record is unique for each member account.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:1",
+    "insertText": "COUNTER:1",
+    "description": "This counter is used to track teller deposit (transactions using the SD transaction code) and batch deposit transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:2",
+    "insertText": "COUNTER:2",
+    "description": "This counter is used to track teller deposit transactions with adjustments.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:3",
+    "insertText": "COUNTER:3",
+    "description": "This counter is used to track returned deposits.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:4",
+    "insertText": "COUNTER:4",
+    "description": "This counter is used to track draft transactions (transactions using the DR transaction code, DRAFTPOST, ACHPOST, ON US, etc.).",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:5",
+    "insertText": "COUNTER:5",
+    "description": "This counter is used to track bulk deposits (transactions using the BK transaction code).",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:6",
+    "insertText": "COUNTER:6",
+    "description": "This counter is used to track the number of change orders.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:7",
+    "insertText": "COUNTER:7",
+    "description": "This counter is used to track the number of NSF batch postings.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:8",
+    "insertText": "COUNTER:8",
+    "description": "This counter is used to track the number of sweep count transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:9",
+    "insertText": "COUNTER:9",
+    "description": "This counter is used to track the number of stop payment transactions (SP transaction code, audio, home banking).",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:10",
+    "insertText": "COUNTER:10",
+    "description": "This counter is used to track the number of account printouts.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:11",
+    "insertText": "COUNTER:11",
+    "description": "This counter is used to track the number of statement balances.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:12",
+    "insertText": "COUNTER:12",
+    "description": "This counter is used to track statement balances.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:13",
+    "insertText": "COUNTER:13",
+    "description": "This counter is used to track check copies.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:14",
+    "insertText": "COUNTER:14",
+    "description": "This counter is used to track checks disbursed from the primary printer (transactions using the KD and KS transaction codes).",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:15",
+    "insertText": "COUNTER:15",
+    "description": "This counter is used to track checks disbursed from the secondary printer (transactions using the KO and KS transaction codes).",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:16",
+    "insertText": "COUNTER:16",
+    "description": "This counter is used to track money order transactions (transactions using the MO transaction code).",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:17",
+    "insertText": "COUNTER:17",
+    "description": "This counter is used to track incoming wire transfers.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:18",
+    "insertText": "COUNTER:18",
+    "description": "This counter is used to track outgoing wire transfers.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:19",
+    "insertText": "COUNTER:19",
+    "description": "This counter is used to track transfers to cover overdrafts (batch postings).",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:20",
+    "insertText": "COUNTER:20",
+    "description": "This counter is used to track courtesy pay transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:21",
+    "insertText": "COUNTER:21",
+    "description": "This counter is used to track ACH debits when they post.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:22",
+    "insertText": "COUNTER:22",
+    "description": "This counter is used to track ACH credits when they post.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:23",
+    "insertText": "COUNTER:23",
+    "description": "This counter is used to track ACH debits when you run ACH Origination.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:24",
+    "insertText": "COUNTER:24",
+    "description": "This counter is used to track ACH credits when you run ACH Origination.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:25",
+    "insertText": "COUNTER:25",
+    "description": "This counter is used to track checks received and checks cashed (transactions using the KR and KC transaction codes).",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:26",
+    "insertText": "COUNTER:26",
+    "description": "This counter is used to track on-us items drawn on an analyzed share and disbursed from an account (transactions using the ON transaction code).",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:27",
+    "insertText": "COUNTER:27",
+    "description": "This counter is used to track lob visits (teller transactions).",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:28",
+    "insertText": "COUNTER:28",
+    "description": "This counter is used to track loose coin bulk deposits (transactions using the BK transaction code).",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:29",
+    "insertText": "COUNTER:29",
+    "description": "This counter is used to track rolled coin bulk deposits (transactions using the BK transaction code).",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:30",
+    "insertText": "COUNTER:30",
+    "description": "This counter is used to track loose currency bulk deposits (transactions using the BK transaction code).",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:31",
+    "insertText": "COUNTER:31",
+    "description": "This counter is used to track strapped currency bulk deposits (transactions using the BK transaction code).",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:32",
+    "insertText": "COUNTER:32",
+    "description": "This counter is used to track on-us items drawn on a different account and deposited to an analyzed share (transactions using the ON transaction code).",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:33",
+    "insertText": "COUNTER:33",
+    "description": "These counters are reserved for future use.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:34",
+    "insertText": "COUNTER:34",
+    "description": "These counters are reserved for future use.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:35",
+    "insertText": "COUNTER:35",
+    "description": "These counters are reserved for future use.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:36",
+    "insertText": "COUNTER:36",
+    "description": "These counters are reserved for future use.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:37",
+    "insertText": "COUNTER:37",
+    "description": "These counters are reserved for future use.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:38",
+    "insertText": "COUNTER:38",
+    "description": "These counters are reserved for future use.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:39",
+    "insertText": "COUNTER:39",
+    "description": "These counters are reserved for future use.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:40",
+    "insertText": "COUNTER:40",
+    "description": "These counters are reserved for future use.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:41",
+    "insertText": "COUNTER:41",
+    "description": "These counters are reserved for future use.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:42",
+    "insertText": "COUNTER:42",
+    "description": "These counters are reserved for future use.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:43",
+    "insertText": "COUNTER:43",
+    "description": "These counters are reserved for future use.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:44",
+    "insertText": "COUNTER:44",
+    "description": "These counters are reserved for future use.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:45",
+    "insertText": "COUNTER:45",
+    "description": "These counters are reserved for future use.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:46",
+    "insertText": "COUNTER:46",
+    "description": "These counters are reserved for future use.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:47",
+    "insertText": "COUNTER:47",
+    "description": "These counters are reserved for future use.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:48",
+    "insertText": "COUNTER:48",
+    "description": "These counters are reserved for future use.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:49",
+    "insertText": "COUNTER:49",
+    "description": "These counters are reserved for future use.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:50",
+    "insertText": "COUNTER:50",
+    "description": "These counters are reserved for future use.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTER:51–COUNTER:100",
+    "insertText": "COUNTER:51–COUNTER:100",
+    "description": "These counters are defined by the financial institution in the Analysis Global Parameters in the Parameter Manager.",
+    "isSnippet": false
+  }
+]

@@ -1,0 +1,374 @@
+[
+  {
+    "label": "ID",
+    "insertText": "ID",
+    "description": "This field stores the share or loan ID.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDTYPE",
+    "insertText": "IDTYPE",
+    "description": "This field determines which Note record type is affected.",
+    "isSnippet": false
+  },
+  {
+    "label": "CODE",
+    "insertText": "CODE",
+    "description": "This field indicates whether the Note record contains free-form text or predefined text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:1",
+    "insertText": "TEXT:1",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:2",
+    "insertText": "TEXT:2",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:3",
+    "insertText": "TEXT:3",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:4",
+    "insertText": "TEXT:4",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:5",
+    "insertText": "TEXT:5",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:6",
+    "insertText": "TEXT:6",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:7",
+    "insertText": "TEXT:7",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:8",
+    "insertText": "TEXT:8",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:9",
+    "insertText": "TEXT:9",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:10",
+    "insertText": "TEXT:10",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:11",
+    "insertText": "TEXT:11",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:12",
+    "insertText": "TEXT:12",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:13",
+    "insertText": "TEXT:13",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:14",
+    "insertText": "TEXT:14",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:15",
+    "insertText": "TEXT:15",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:16",
+    "insertText": "TEXT:16",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:17",
+    "insertText": "TEXT:17",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:18",
+    "insertText": "TEXT:18",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:19",
+    "insertText": "TEXT:19",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:20",
+    "insertText": "TEXT:20",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:21",
+    "insertText": "TEXT:21",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:22",
+    "insertText": "TEXT:22",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:23",
+    "insertText": "TEXT:23",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:24",
+    "insertText": "TEXT:24",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:25",
+    "insertText": "TEXT:25",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:26",
+    "insertText": "TEXT:26",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:27",
+    "insertText": "TEXT:27",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:28",
+    "insertText": "TEXT:28",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:29",
+    "insertText": "TEXT:29",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:30",
+    "insertText": "TEXT:30",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:31",
+    "insertText": "TEXT:31",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:32",
+    "insertText": "TEXT:32",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:33",
+    "insertText": "TEXT:33",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:34",
+    "insertText": "TEXT:34",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:35",
+    "insertText": "TEXT:35",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:36",
+    "insertText": "TEXT:36",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:37",
+    "insertText": "TEXT:37",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:38",
+    "insertText": "TEXT:38",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:39",
+    "insertText": "TEXT:39",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:40",
+    "insertText": "TEXT:40",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:41",
+    "insertText": "TEXT:41",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:42",
+    "insertText": "TEXT:42",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:43",
+    "insertText": "TEXT:43",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:44",
+    "insertText": "TEXT:44",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:45",
+    "insertText": "TEXT:45",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:46",
+    "insertText": "TEXT:46",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:47",
+    "insertText": "TEXT:47",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:48",
+    "insertText": "TEXT:48",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:49",
+    "insertText": "TEXT:49",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXT:50",
+    "insertText": "TEXT:50",
+    "description": "Each Text Line # field stores one line of note text.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERID",
+    "insertText": "USERID",
+    "description": "This field stores the user number of the user who created the Note record.",
+    "isSnippet": false
+  },
+  {
+    "label": "ENTERDATE",
+    "insertText": "ENTERDATE",
+    "description": "This field stores the date on which the Note record was created.",
+    "isSnippet": false
+  },
+  {
+    "label": "ENTERTIME",
+    "insertText": "ENTERTIME",
+    "description": "This field records the time the Note record was created (HHMM).",
+    "isSnippet": false
+  },
+  {
+    "label": "VOIDFLAG",
+    "insertText": "VOIDFLAG",
+    "description": "This field is set to 1 when you void a Collection Note record; otherwise, this field is set to 0.",
+    "isSnippet": false
+  },
+  {
+    "label": "VOIDEDBY",
+    "insertText": "VOIDEDBY",
+    "description": "This field stores the user ID of the person who voids the Collection Note record.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXPIRATIONDATE",
+    "insertText": "EXPIRATIONDATE",
+    "description": "This field stores an expiration date for the Note record.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "This field value in each record is unique for each member account.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "This field stores the system date when you create change, or save the Note record.",
+    "isSnippet": false
+  },
+  {
+    "label": "TEXTLINECOUNT",
+    "insertText": "TEXTLINECOUNT",
+    "description": "This field stores the total number of text lines in the Note record.",
+    "isSnippet": false
+  }
+]

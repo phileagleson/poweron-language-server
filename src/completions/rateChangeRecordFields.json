@@ -1,0 +1,68 @@
+[
+  {
+    "label": "RATECHANGEDATE",
+    "insertText":"RATECHANGEDATE",
+    "description":"This field stores the date a new interest rate goes into effect.",
+    "isSnippet": false
+  },
+  {
+    "label": "ID",
+    "insertText":"ID",
+    "description":"The ID field stores the value of the parent Loan record Loan ID field. The system updates the ID field automatically. You cannot perform file maintenance on this field. The field does not appear in the Rate Change record, but is accessible through PowerOn and EasyWriter.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText":"LOCATOR",
+    "description":"The value for the Locator field is unique within each Rate Change record. So, you can use the Locator field's value as a unique identification for that record. The system automatically assigns a value to the Locator field when you or the system creates a Rate Change record. The value is a positive number from 1 billion to about 2 billion. You cannot change this value.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREATIONDATE",
+    "insertText":"CREATIONDATE",
+    "description":"This field stores the creation date of the record",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText":"RECORDCHANGEDATE",
+    "description":"The system stores the system date in the Record Change Date field when you create, revise, or save the Rate Change record.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENTCHANGEDATE",
+    "insertText":"PAYMENTCHANGEDATE",
+    "description":"The Payment Change Date field stores the date the reamortized payment takes effect. The Rate Change Processing batch program calculates this date after you select Yes at the Perform Payment Reamortization prompt. If you select No at the Perform Payment Reamortization prompt, the batch program leaves the field blank.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTERESTRATE",
+    "insertText":"INTERESTRATE",
+    "description":"This field stores the interest rate in effect for the loan as of the date set in the Rate Change Date field as calculated by the Rate Change Processing batch program.",
+    "isSnippet": false
+  },
+  {
+    "label": "INDEXRATE",
+    "insertText":"INDEXRATE",
+    "description":"This field stores the index rate value that the system used to calculate the value set in the Rate Change record Interest Rate field.",
+    "isSnippet": false
+  },
+  {
+    "label": "REAMORTIZEDPAYMENT",
+    "insertText":"REAMORTIZEDPAYMENT",
+    "description":"The Reamortized Payment field stores the payment amount calculated by the Rate Processing batch program when you select Yes at the Perform Payment Reamortization prompt The amount represents one periodic payment of principal, interest, and escrow.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERIODICSTARTRATE",
+    "insertText":"PERIOIDCSTARTRATE",
+    "description":"The Periodic Cap Start Rate field stores the value that the system uses in the Loan record Periodic Cap Start Rate field when the rate change takes place.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERIODICSTARTDATE",
+    "insertText":"PERIODICSTARTDATE",
+    "description":"The Periodic Cap Start Date field stores the value the system uses in the Loan record Periodic Cap Start Date field when the rate change takes place.",
+    "isSnippet": false
+  }
+]

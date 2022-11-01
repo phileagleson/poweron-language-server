@@ -1,0 +1,350 @@
+[
+  {
+    "label": "ESCROWTYPE",
+    "insertText": "ESCROWTYPE",
+    "description": "This field stores a code defined by your financial institution in the Escrow Type parameters to indicate the type of funds being escrowed.",
+    "isSnippet": false
+  },
+  {
+    "label": "VENDORNUMBER",
+    "insertText": "VENDORNUMBER",
+    "description": "This field (from the Vendor record) stores the vendor identification that is used to pay recipients through the GL Posting batch program using the (2) Accounts Payable Posting option.",
+    "isSnippet": false
+  },
+  {
+    "label": "DISTRIBFREQUENCY",
+    "insertText": "DISTRIBFREQUENCY",
+    "description": "When an escrow disbursement is processed using the Daily Posting batch program, the value at this field is used to update the Next Distribution Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "DAY1",
+    "insertText": "DAY1",
+    "description": "This field stores the day of the month (1–31) on which the first escrow payment is due for semi-monthly escrow payments or the day of the month on which all escrow payments are due for annual, semi-annual, quarterly, or monthly escrow payments.",
+    "isSnippet": false
+  },
+  {
+    "label": "DAY2",
+    "insertText": "DAY2",
+    "description": "This field stores the day of the month (1–31) on which the second escrow payment is due for semi-monthly escrow payments. This field is not used for annual, semi-annual, quarterly, or monthly escrow payments.",
+    "isSnippet": false
+  },
+  {
+    "label": "NEXTDISTRIBDATE",
+    "insertText": "NEXTDISTRIBDATE",
+    "description": "This field contains the date of the next anticipated escrow distribution.",
+    "isSnippet": false
+  },
+  {
+    "label": "NEXTDISTRIBAMOUNT",
+    "insertText": "NEXTDISTRIBAMOUNT",
+    "description": "This field stores the amount of the next distribution for an Escrow record.",
+    "isSnippet": false
+  },
+  {
+    "label": "INVOICENUMBER",
+    "insertText": "INVOICENUMBER",
+    "description": "This field stores the invoice number as it appears on the vendor's invoice. This field can contain any characters, including blanks.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRINTDISTRIBNOTICE",
+    "insertText": "PRINTDISTRIBNOTICE",
+    "description": "This field indicates whether an escrow distribution notice should be printed each time funds relating to the Escrow record are disbursed.",
+    "isSnippet": false
+  },
+  {
+    "label": "FORCEDPLACEDINS",
+    "insertText": "FORCEDPLACEDINS",
+    "description": "This field indicates whether the credit union has had to acquire an insurance policy for a mortgaged property. Force-placed insurance is necessary when the borrower fails to provide the required insurance protection.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYDIVIDEND",
+    "insertText": "PAYDIVIDEND",
+    "description": "This field stores whether dividends are paid on the escrow type.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "Symitar Quest stores the system date in this field when you create, change, or save a record. There will be times when this field is updated because the record was saved, even though there may not be any actual changes in the record.",
+    "isSnippet": false
+  },
+  {
+    "label": "VENDORNAME",
+    "insertText": "VENDORNAME",
+    "description": "This field contains the name of the vendor from the Vendor record.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENTPORTION",
+    "insertText": "PAYMENTPORTION",
+    "description": "This field contains the part of the total escrow payment for one mortgage loan that applies to the Escrow Type field value in the Escrow record.",
+    "isSnippet": false
+  },
+  {
+    "label": "SAVEDADJUSTPAYMENT",
+    "insertText": "SAVEDADJUSTPAYMENT",
+    "description": "This field stores whether you have saved the value for the Adjust Payment Portion field from Escrow Type Parameters that was used during the last analysis.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXPIRATIONDATE",
+    "insertText": "EXPIRATIONDATE",
+    "description": "This field stores the date the Escrow record expires. Symitar Quest uses this field to determine whether the Escrow record is included in escrow projections and escrow disbursements. See Escrow Analysis Calculations for a detailed explanation.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTDISTRIBDATE",
+    "insertText": "LASTDISTRIBDATE",
+    "description": "This field stores the date of the last distribution made for the Escrow record. When new Loan Escrow records are created this field may remain blank.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTDISTRIBAMOUNT",
+    "insertText": "LASTDISTRIBAMOUNT",
+    "description": "This field stores the amount of the last distribution made for the Escrow record. When new Loan Escrow records are created this field may remain blank.",
+    "isSnippet": false
+  },
+  {
+    "label": "TRACKINGONLY",
+    "insertText": "TRACKINGONLY",
+    "description": "This field indicates whether you track items without collecting any escrow funds and without including the Loan Escrow record in escrow analysis.",
+    "isSnippet": false
+  },
+  {
+    "label": "FLOODINSTRACKING",
+    "insertText": "FLOODINSTRACKING",
+    "description": "This field enables you to track mortgage loans that require flood insurance",
+    "isSnippet": false
+  },
+  {
+    "label": "REALESTATEOWNER",
+    "insertText": "REALESTATEOWNER",
+    "description": "This field stores the name or names of the owners of the real estate held as collateral. The owners may also be the borrowers, but occasionally property owned by one person is pledged to the mortgage loan of another.",
+    "isSnippet": false
+  },
+  {
+    "label": "TAXREFNUMBER",
+    "insertText": "TAXREFNUMBER",
+    "description": "This field stores the real estate tax reference number or identification number issued by the taxing authority and used to help identify the real property being taxed.",
+    "isSnippet": false
+  },
+  {
+    "label": "PARCELNUMBER",
+    "insertText": "PARCELNUMBER",
+    "description": "This field stores the real estate parcel number issued by some taxing authorities that is used to help identify the real estate property being taxed.",
+    "isSnippet": false
+  },
+  {
+    "label": "LEGALDESCRIPTION",
+    "insertText": "LEGALDESCRIPTION",
+    "description": "This field stores the legal description of the real estate.",
+    "isSnippet": false
+  },
+  {
+    "label": "POLICYOWNER",
+    "insertText": "POLICYOWNER",
+    "description": "This field stores the name (or names) of the insurance policy owners.",
+    "isSnippet": false
+  },
+  {
+    "label": "POLICYNUMBER",
+    "insertText": "POLICYNUMBER",
+    "description": "This field stores the insurance policy number that the insurance premium is being paid on.",
+    "isSnippet": false
+  },
+  {
+    "label": "POLICYAMOUNT",
+    "insertText": "POLICYAMOUNT",
+    "description": "This field stores the amount of the insurance policy.",
+    "isSnippet": false
+  },
+  {
+    "label": "POLICYORIGDATE",
+    "insertText": "POLICYORIGDATE",
+    "description": "This field stores the date the insurance policy originated. This field must be populated with a date for the PMI notices and disclosures to function properly.",
+    "isSnippet": false
+  },
+  {
+    "label": "POLICYEXPIREDATE",
+    "insertText": "POLICYEXPIREDATE",
+    "description": "This field stores the date the insurance policy expires.",
+    "isSnippet": false
+  },
+  {
+    "label": "PMIDISCLOSUREDATE",
+    "insertText": "PMIDISCLOSUREDATE",
+    "description": "This field stores the date when the next annual PMI disclosure is to be generated for all residential mortgages.",
+    "isSnippet": false
+  },
+  {
+    "label": "PMICANCELNOTICE",
+    "insertText": "PMICANCELNOTICE",
+    "description": "This field indicates whether a PMI cancellation notice is generated for the corresponding loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "PMICANCELDATE",
+    "insertText": "PMICANCELDATE",
+    "description": "This field stores the date PMI was canceled on the loan. This date is manually entered when the PMI is canceled.",
+    "isSnippet": false
+  },
+  {
+    "label": "PMITERMDATE",
+    "insertText": "PMITERMDATE",
+    "description": "This field contains the date when the lender generally must terminate the PMI.",
+    "isSnippet": false
+  },
+  {
+    "label": "PMIMIDTERMDATE",
+    "insertText": "PMIMIDTERMDATE",
+    "description": "This field stores the date the loan is halfway through the period between the first day of the amortization period and the ending when the mortgage is scheduled to be amortized.",
+    "isSnippet": false
+  },
+  {
+    "label": "PMIELIGNOTICES",
+    "insertText": "PMIELIGNOTICES",
+    "description": "This field stores the type of eligibility notice assigned to the corresponding loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTDISBURSFREQ",
+    "insertText": "LASTDISBURSFREQ",
+    "description": "This field contains the value from the Distribution Frequency field in the same Loan Escrow record when the Loan Escrow record is used in the escrow analysis.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTDISBURSEDAY1",
+    "insertText": "LASTDISBURSEDAY1",
+    "description": "This field stores the value from the Day 1 field in the same Loan Escrow record when the Loan Escrow record is used in the escrow analysis.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTDISBURSEDAY2",
+    "insertText": "LASTDISBURSEDAY2",
+    "description": "This field stores the value from the Day 2 field in the same Loan Escrow record when the Loan Escrow record is used in the escrow analysis.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTDISBURSDATE",
+    "insertText": "LASTDISBURSDATE",
+    "description": "This field contains the value copied from the Loan Escrow record Next Distribution Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTDISBURSAMT",
+    "insertText": "LASTDISBURSAMT",
+    "description": "This field stores the value from the Next Distribution Amount field in the same Loan Escrow record if the Loan Escrow record is used in the escrow analysis.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTEXPIRATIONDATE",
+    "insertText": "LASTEXPIRATIONDATE",
+    "description": "This field stores the value from the Expiration Date field in the same Loan Escrow record when the Loan Escrow record is used in the escrow analysis.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTAMTNEEDEDPMT",
+    "insertText": "LASTAMTNEEDEDPMT",
+    "description": "This field contains the amount calculated based on the value of the Last Total Annual Disbursemnts field divided by the value at the Last Number Pmts Due in Period.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTNBRPMTSDUE",
+    "insertText": "LASTNBRPMTSDUE",
+    "description": "This field stores how many escrow payments are due, based on the value in the Current Payment Frequency field.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTTOTANNDISBURS",
+    "insertText": "LASTTOTANNDISBURS",
+    "description": "This field contains a value calculated by multiplying the Last Disbursement Amount in the Loan Escrow record by the frequency of the disbursement as defined by the Last Disbursement Frequency field.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTMONTHCUSHION",
+    "insertText": "LASTMONTHCUSHION",
+    "description": "This field contains the cushion amount needed to offset any shortages for the last month of escrow.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTANALYSISCALC",
+    "insertText": "LASTANALYSISCALC",
+    "description": "If values in a Loan Escrow record are used during escrow analysis, this field stores the system date the analysis was run. This date is used when the last escrow analysis is being recreated.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVDISBURSFREQ",
+    "insertText": "PREVDISBURSFREQ",
+    "description": "This field contains the value from the Last Disbursement Frequency field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVDISBURSEDAY1",
+    "insertText": "PREVDISBURSEDAY1",
+    "description": "This field stores the value from the Last Disbursement Day 1 field in the same Loan Escrow record when the Loan Escrow record is used in the escrow analysis.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVDISBURSEDAY2",
+    "insertText": "PREVDISBURSEDAY2",
+    "description": "This field stores the value from the Last Disbursement Day 2 field in the same Loan Escrow record when the Loan Escrow record is used in the escrow analysis.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVDISBURSDATE",
+    "insertText": "PREVDISBURSDATE",
+    "description": "This field contains the value copied from the Loan Escrow record Last Disbursement Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVDISBURSAMT",
+    "insertText": "PREVDISBURSAMT",
+    "description": "This field stores the amount from the Last Disbursement Amount field of the Loan Escrow record, during escrow analysis.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVEXPIRATIONDATE",
+    "insertText": "PREVEXPIRATIONDATE",
+    "description": "This field stores the value from the Last Expiration Date field in the same Loan Escrow record when the Loan Escrow record is used in the escrow analysis.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVAMTNEEDEDPMT",
+    "insertText": "PREVAMTNEEDEDPMT",
+    "description": "This field stores the amount from the Last Amt Needed From Each Pmt field of the Loan Escrow record, during escrow analysis.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVNBRPMTSDUE",
+    "insertText": "PREVNBRPMTSDUE",
+    "description": "This field stores the previous number of escrow payments due, based on the value in the Last Number Pmts Due in Period field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVTOTANNDISBURS",
+    "insertText": "PREVTOTANNDISBURS",
+    "description": "This field stores the amount from the Last Total Annual Disbursemnts field of the Loan Escrow record, during escrow analysis.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVMONTHCUSHION",
+    "insertText": "PREVMONTHCUSHION",
+    "description": "This field stores the amount from the Last Month of Cushion field of the Loan Escrow record, during escrow analysis.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVANALYSISCALC",
+    "insertText": "PREVANALYSISCALC",
+    "description": "This field stores the amount from the Last Date Analysis Calculated field of the Loan Escrow record, during escrow analysis.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "Symitar Quest stores a unique number within each member account in this field that can be used as a unique identification of this record.",
+    "isSnippet": false
+  }
+]

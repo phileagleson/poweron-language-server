@@ -1,0 +1,68 @@
+[
+  {
+    "label": "FINANCIALINSTITUTIONNAME",
+    "insertText": "FINANCIALINSTITUTIONNAME",
+    "description": "This field stores the name of the external financial institution.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRIMARYACCOUNTHOLDERNAME",
+    "insertText": "PRIMARYACCOUNTHOLDERNAME",
+    "description": "This field stores the primary name on the account held at the external financial institution.",
+    "isSnippet": false
+  },
+  {
+    "label": "NUMBER",
+    "insertText": "NUMBER",
+    "description": "This field stores the account number of the account held at the external financial institution.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACCTTYPE",
+    "insertText": "ACCTTYPE",
+    "description": "This field stores the type of account held at the external financial institution.",
+    "isSnippet": false
+  },
+  {
+    "label": "RT",
+    "insertText": "RT",
+    "description": "This field stores the external financial institution's routing number.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATUS",
+    "insertText": "STATUS",
+    "description": "This field stores the current status.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREATIONDATE",
+    "insertText": "CREATIONDATE",
+    "description": "This field stores the date the External Account record was created.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRENOTESENTDATE",
+    "insertText": "PRENOTESENTDATE",
+    "description": "This field stores the date the system sent the prenote or the micro transaction amount to the external financial institution.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXPIRATIONDATE",
+    "insertText": "EXPIRATIONDATE",
+    "description": "This field stores the date when the member deletes the external financial institution.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "The system stores the system date in this field when you create, change, or save the External Account record. Sometimes the system updates this field because the record was saved, even though there may not be any actual changes in the record.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "This field stores a unique number within each member account that can be used as a unique identification of this record.",
+    "isSnippet": false
+  }
+]

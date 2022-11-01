@@ -1,0 +1,80 @@
+[
+  {
+    "label": "TYPE",
+    "insertText": "TYPE",
+    "description": "This field identifies the purpose of the Pledge record.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACCOUNTNUMBER",
+    "insertText": "ACCOUNTNUMBER",
+    "description": "This field identifies the account pledging security for a loan. This field is not used if the Pledge Type field is set to (5) Collateral.",
+    "isSnippet": false
+  },
+  {
+    "label": "ID",
+    "insertText": "ID",
+    "description": "This optional field identifies a share or portfolio pledging security for a loan. This field is not used if the Pledge Type is (5) Collateral.",
+    "isSnippet": false
+  },
+  {
+    "label": "COLLATERALNUMBER",
+    "insertText": "COLLATERALNUMBER",
+    "description": "This field references the Collateral record associated with this Account Pledge record.",
+    "isSnippet": false
+  },
+  {
+    "label": "COLLATERALDESCRIPTION",
+    "insertText": "COLLATERALDESCRIPTION",
+    "description": "The system copies this field from the associated Collateral record's Description field. The first 20 characters are displayed in the Pledge record in both the Application Processing Tree and the Account Manager Tree.",
+    "isSnippet": false
+  },
+  {
+    "label": "EFFECTIVEDATE",
+    "insertText": "EFFECTIVEDATE",
+    "description": "This field stores the creation date of the Pledge record or, if entered manually, the date this Pledge record can be used.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXPIRATIONDATE",
+    "insertText": "EXPIRATIONDATE",
+    "description": "This field stores the date this Pledge record should expire.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "The system stores the system date in this field when you create, change, or save the Pledge record.",
+    "isSnippet": false
+  },
+  {
+    "label": "COLLATERALCODE",
+    "insertText": "COLLATERALCODE",
+    "description": "This field contains a user-defined code used to identify the collateral pledged for a loan. You can use this field to categorize types of collateral for reports and displays. This field is not used if the Pledge Type is (5) Collateral.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERCENT",
+    "insertText": "PERCENT",
+    "description": "Use this field to specify the percentage of a loan secured by a pledge; alternatively, you can use the Pledge Amount field to specify a dollar amount secured by a pledge.",
+    "isSnippet": false
+  },
+  {
+    "label": "AMOUNT",
+    "insertText": "AMOUNT",
+    "description": "Use this field to specify the dollar amount of a loan secured by a pledge; alternatively, you can use the Pledge Rate field to specify the percentage secured by a pledge.",
+    "isSnippet": false
+  },
+  {
+    "label": "PRIORITY",
+    "insertText": "PRIORITY",
+    "description": "This field indicates the priority of the collateral associated with this Pledge record. This field is used only if the Pledge Type is set to (5) Collateral.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "The system stores a unique number within each member account in this field that can be used as a unique identification of this record.",
+    "isSnippet": false
+  }
+]

@@ -1,0 +1,788 @@
+[
+  {
+    "label": "TYPE",
+    "insertText": "TYPE",
+    "description": "This field stores a code that indicates how you use the Collection Tracking record.",
+    "isSnippet": false
+  },
+  {
+    "label": "TRACKINGCODE",
+    "insertText": "TRACKINGCODE",
+    "description": "This field stores a credit union-defined code to further identify the purpose of the Collection Tracking record.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREATIONDATE",
+    "insertText": "CREATIONDATE",
+    "description": "This field stores the current system date when you create the Collection Tracking record.",
+    "isSnippet": false
+  },
+  {
+    "label": "CREATIONTIME",
+    "insertText": "CREATIONTIME",
+    "description": "This field stores the current system time (HHMM) when you create the Collection Tracking record.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERID",
+    "insertText": "USERID",
+    "description": "This field stores the user number of the user who created the Collection Tracking record.",
+    "isSnippet": false
+  },
+  {
+    "label": "ID",
+    "insertText": "ID",
+    "description": "This field stores the ID of a Share or Loan record (depending on the entry in the ID Type field) referenced by the Collection Tracking record.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDTYPE",
+    "insertText": "IDTYPE",
+    "description": "his field identifies the type of record specified by the ID field.",
+    "isSnippet": false
+  },
+  {
+    "label": "FMLASTDATE",
+    "insertText": "FMLASTDATE",
+    "description": "This field stores the date file maintenance was last performed on the Collection Tracking record.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "This field stores the system date when you create, change, or save a record.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXPIREDATE",
+    "insertText": "EXPIREDATE",
+    "description": "This field stores an expiration date for the Collection Tracking record.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER1",
+    "insertText": "USERNUMBER1",
+    "description": "These fields store any credit union-defined number.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER2",
+    "insertText": "USERNUMBER2",
+    "description": "These fields store any credit union-defined number.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER3",
+    "insertText": "USERNUMBER3",
+    "description": "These fields store any credit union-defined number.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER4",
+    "insertText": "USERNUMBER4",
+    "description": "These fields store any credit union-defined number.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER5",
+    "insertText": "USERNUMBER5",
+    "description": "These fields store any credit union-defined number.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER6",
+    "insertText": "USERNUMBER6",
+    "description": "These fields store any credit union-defined number.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER7",
+    "insertText": "USERNUMBER7",
+    "description": "These fields store any credit union-defined number.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER8",
+    "insertText": "USERNUMBER8",
+    "description": "These fields store any credit union-defined number.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER9",
+    "insertText": "USERNUMBER9",
+    "description": "These fields store any credit union-defined number.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER10",
+    "insertText": "USERNUMBER10",
+    "description": "These fields store any credit union-defined number.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER11",
+    "insertText": "USERNUMBER11",
+    "description": "These fields store any credit union-defined number for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER12",
+    "insertText": "USERNUMBER12",
+    "description": "These fields store any credit union-defined number for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER13",
+    "insertText": "USERNUMBER13",
+    "description": "These fields store any credit union-defined number for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER14",
+    "insertText": "USERNUMBER14",
+    "description": "These fields store any credit union-defined number for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER15",
+    "insertText": "USERNUMBER15",
+    "description": "These fields store any credit union-defined number for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER16",
+    "insertText": "USERNUMBER16",
+    "description": "These fields store any credit union-defined number for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER17",
+    "insertText": "USERNUMBER17",
+    "description": "These fields store any credit union-defined number for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER18",
+    "insertText": "USERNUMBER18",
+    "description": "These fields store any credit union-defined number for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER19",
+    "insertText": "USERNUMBER19",
+    "description": "These fields store any credit union-defined number for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERNUMBER20",
+    "insertText": "USERNUMBER20",
+    "description": "These fields store any credit union-defined number for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR1",
+    "insertText": "USERCHAR1",
+    "description": "These fields store any credit union-defined character data.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR2",
+    "insertText": "USERCHAR2",
+    "description": "These fields store any credit union-defined character data.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR3",
+    "insertText": "USERCHAR3",
+    "description": "These fields store any credit union-defined character data.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR4",
+    "insertText": "USERCHAR4",
+    "description": "These fields store any credit union-defined character data.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR5",
+    "insertText": "USERCHAR5",
+    "description": "These fields store any credit union-defined character data.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR6",
+    "insertText": "USERCHAR6",
+    "description": "These fields store any credit union-defined character data.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR7",
+    "insertText": "USERCHAR7",
+    "description": "These fields store any credit union-defined character data.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR8",
+    "insertText": "USERCHAR8",
+    "description": "These fields store any credit union-defined character data.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR9",
+    "insertText": "USERCHAR9",
+    "description": "These fields store any credit union-defined character data.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR10",
+    "insertText": "USERCHAR10",
+    "description": "These fields store any credit union-defined character data.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR11",
+    "insertText": "USERCHAR11",
+    "description": "These fields store any credit union-defined character data for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR12",
+    "insertText": "USERCHAR12",
+    "description": "These fields store any credit union-defined character data for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR13",
+    "insertText": "USERCHAR13",
+    "description": "These fields store any credit union-defined character data for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR14",
+    "insertText": "USERCHAR14",
+    "description": "These fields store any credit union-defined character data for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR15",
+    "insertText": "USERCHAR15",
+    "description": "These fields store any credit union-defined character data for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR16",
+    "insertText": "USERCHAR16",
+    "description": "These fields store any credit union-defined character data for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR17",
+    "insertText": "USERCHAR17",
+    "description": "These fields store any credit union-defined character data for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR18",
+    "insertText": "USERCHAR18",
+    "description": "These fields store any credit union-defined character data for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR19",
+    "insertText": "USERCHAR19",
+    "description": "These fields store any credit union-defined character data for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCHAR20",
+    "insertText": "USERCHAR20",
+    "description": "These fields store any credit union-defined character data for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT1",
+    "insertText": "USERAMOUNT1",
+    "description": "These fields store any credit union-defined amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT2",
+    "insertText": "USERAMOUNT2",
+    "description": "These fields store any credit union-defined amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT3",
+    "insertText": "USERAMOUNT3",
+    "description": "These fields store any credit union-defined amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT4",
+    "insertText": "USERAMOUNT4",
+    "description": "These fields store any credit union-defined amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT5",
+    "insertText": "USERAMOUNT5",
+    "description": "These fields store any credit union-defined amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT6",
+    "insertText": "USERAMOUNT6",
+    "description": "These fields store any credit union-defined amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT7",
+    "insertText": "USERAMOUNT7",
+    "description": "These fields store any credit union-defined amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT8",
+    "insertText": "USERAMOUNT8",
+    "description": "These fields store any credit union-defined amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT9",
+    "insertText": "USERAMOUNT9",
+    "description": "These fields store any credit union-defined amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT10",
+    "insertText": "USERAMOUNT10",
+    "description": "These fields store any credit union-defined amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT11",
+    "insertText": "USERAMOUNT11",
+    "description": "These fields store any credit union-defined amount for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT12",
+    "insertText": "USERAMOUNT12",
+    "description": "These fields store any credit union-defined amount for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT13",
+    "insertText": "USERAMOUNT13",
+    "description": "These fields store any credit union-defined amount for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT14",
+    "insertText": "USERAMOUNT14",
+    "description": "These fields store any credit union-defined amount for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT15",
+    "insertText": "USERAMOUNT15",
+    "description": "These fields store any credit union-defined amount for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT16",
+    "insertText": "USERAMOUNT16",
+    "description": "These fields store any credit union-defined amount for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT17",
+    "insertText": "USERAMOUNT17",
+    "description": "These fields store any credit union-defined amount for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT18",
+    "insertText": "USERAMOUNT18",
+    "description": "These fields store any credit union-defined amount for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT19",
+    "insertText": "USERAMOUNT19",
+    "description": "These fields store any credit union-defined amount for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERAMOUNT20",
+    "insertText": "USERAMOUNT20",
+    "description": "These fields store any credit union-defined amount for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE1",
+    "insertText": "USERCODE1",
+    "description": "These fields store any credit union-defined code.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE2",
+    "insertText": "USERCODE2",
+    "description": "These fields store any credit union-defined code.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE3",
+    "insertText": "USERCODE3",
+    "description": "These fields store any credit union-defined code.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE4",
+    "insertText": "USERCODE4",
+    "description": "These fields store any credit union-defined code.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE5",
+    "insertText": "USERCODE5",
+    "description": "These fields store any credit union-defined code.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE6",
+    "insertText": "USERCODE6",
+    "description": "These fields store any credit union-defined code.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE7",
+    "insertText": "USERCODE7",
+    "description": "These fields store any credit union-defined code.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE8",
+    "insertText": "USERCODE8",
+    "description": "These fields store any credit union-defined code.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE9",
+    "insertText": "USERCODE9",
+    "description": "These fields store any credit union-defined code.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE10",
+    "insertText": "USERCODE10",
+    "description": "These fields store any credit union-defined code.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE11",
+    "insertText": "USERCODE11",
+    "description": "These fields store any credit union-defined code for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE12",
+    "insertText": "USERCODE12",
+    "description": "These fields store any credit union-defined code for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE13",
+    "insertText": "USERCODE13",
+    "description": "These fields store any credit union-defined code for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE14",
+    "insertText": "USERCODE14",
+    "description": "These fields store any credit union-defined code for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE15",
+    "insertText": "USERCODE15",
+    "description": "These fields store any credit union-defined code for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE16",
+    "insertText": "USERCODE16",
+    "description": "These fields store any credit union-defined code for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE17",
+    "insertText": "USERCODE17",
+    "description": "These fields store any credit union-defined code for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE18",
+    "insertText": "USERCODE18",
+    "description": "These fields store any credit union-defined code for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE19",
+    "insertText": "USERCODE19",
+    "description": "These fields store any credit union-defined code for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERCODE20",
+    "insertText": "USERCODE20",
+    "description": "These fields store any credit union-defined code for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE1",
+    "insertText": "USERDATE1",
+    "description": "These fields store any credit union-defined date.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE2",
+    "insertText": "USERDATE2",
+    "description": "These fields store any credit union-defined date.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE3",
+    "insertText": "USERDATE3",
+    "description": "These fields store any credit union-defined date.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE4",
+    "insertText": "USERDATE4",
+    "description": "These fields store any credit union-defined date.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE5",
+    "insertText": "USERDATE5",
+    "description": "These fields store any credit union-defined date.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE6",
+    "insertText": "USERDATE6",
+    "description": "These fields store any credit union-defined date.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE7",
+    "insertText": "USERDATE7",
+    "description": "These fields store any credit union-defined date.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE8",
+    "insertText": "USERDATE8",
+    "description": "These fields store any credit union-defined date.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE9",
+    "insertText": "USERDATE9",
+    "description": "These fields store any credit union-defined date.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE10",
+    "insertText": "USERDATE10",
+    "description": "These fields store any credit union-defined date.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE11",
+    "insertText": "USERDATE11",
+    "description": "These fields store any credit union-defined date for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE12",
+    "insertText": "USERDATE12",
+    "description": "These fields store any credit union-defined date for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE13",
+    "insertText": "USERDATE13",
+    "description": "These fields store any credit union-defined date for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE14",
+    "insertText": "USERDATE14",
+    "description": "These fields store any credit union-defined date for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE15",
+    "insertText": "USERDATE15",
+    "description": "These fields store any credit union-defined date for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE16",
+    "insertText": "USERDATE16",
+    "description": "These fields store any credit union-defined date for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE17",
+    "insertText": "USERDATE17",
+    "description": "These fields store any credit union-defined date for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE18",
+    "insertText": "USERDATE18",
+    "description": "These fields store any credit union-defined date for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE19",
+    "insertText": "USERDATE19",
+    "description": "These fields store any credit union-defined date for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERDATE20",
+    "insertText": "USERDATE20",
+    "description": "These fields store any credit union-defined date for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERRATE1",
+    "insertText": "USERRATE1",
+    "description": "These fields store any credit union-defined rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERRATE2",
+    "insertText": "USERRATE2",
+    "description": "These fields store any credit union-defined rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERRATE3",
+    "insertText": "USERRATE3",
+    "description": "These fields store any credit union-defined rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERRATE4",
+    "insertText": "USERRATE4",
+    "description": "These fields store any credit union-defined rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERRATE5",
+    "insertText": "USERRATE5",
+    "description": "These fields store any credit union-defined rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERRATE6",
+    "insertText": "USERRATE6",
+    "description": "These fields store any credit union-defined rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERRATE7",
+    "insertText": "USERRATE7",
+    "description": "These fields store any credit union-defined rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERRATE8",
+    "insertText": "USERRATE8",
+    "description": "These fields store any credit union-defined rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERRATE9",
+    "insertText": "USERRATE9",
+    "description": "These fields store any credit union-defined rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERRATE10",
+    "insertText": "USERRATE10",
+    "description": "These fields store any credit union-defined rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERRATE11",
+    "insertText": "USERRATE11",
+    "description": "These fields store any credit union-defined rate for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERRATE12",
+    "insertText": "USERRATE12",
+    "description": "These fields store any credit union-defined rate for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERRATE13",
+    "insertText": "USERRATE13",
+    "description": "These fields store any credit union-defined rate for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERRATE14",
+    "insertText": "USERRATE14",
+    "description": "These fields store any credit union-defined rate for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERRATE15",
+    "insertText": "USERRATE15",
+    "description": "These fields store any credit union-defined rate for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERRATE16",
+    "insertText": "USERRATE16",
+    "description": "These fields store any credit union-defined rate for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERRATE17",
+    "insertText": "USERRATE17",
+    "description": "These fields store any credit union-defined rate for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERRATE18",
+    "insertText": "USERRATE18",
+    "description": "These fields store any credit union-defined rate for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERRATE19",
+    "insertText": "USERRATE19",
+    "description": "These fields store any credit union-defined rate for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "USERRATE20",
+    "insertText": "USERRATE20",
+    "description": "These fields store any credit union-defined rate for tracking types 30–99.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "This field value in each record is unique for each member account.",
+    "isSnippet": false
+  }
+]

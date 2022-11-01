@@ -1,0 +1,116 @@
+[
+  {
+    "label": "COMPANYNAME",
+    "insertText": "COMPANYNAME",
+    "description": "This field stores the source of the entry and provides a description for the receiver containing the originator's name.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPANTDISCRETIONARYDATA",
+    "insertText": "COMPANTDISCRETIONARYDATA",
+    "description": "This optional field stores significant codes used by originators.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPANYID",
+    "insertText": "COMPANYID",
+    "description": "This field stores the originator's unique identification number.",
+    "isSnippet": false
+  },
+  {
+    "label": "STANDARDENTRYCLASSCODE",
+    "insertText": "STANDARDENTRYCLASSCODE",
+    "description": "This field stores a character code that distinguishes the various types of ACH entries.",
+    "isSnippet": false
+  },
+  {
+    "label": "COMPANYENTRYDESCRIPTION",
+    "insertText": "COMPANYENTRYDESCRIPTION",
+    "description": "This field stores a description of the entry for the receiver.",
+    "isSnippet": false
+  },
+  {
+    "label": "EFECTIVEENTRYDATE",
+    "insertText": "EFECTIVEENTRYDATE",
+    "description": "This field stores the date specified by the originator as the day on which a batch of entries is to be settled.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPOSITSETTLEMENTDATE",
+    "insertText": "DEPOSITSETTLEMENTDATE",
+    "description": "This field stores the settlement date for all originated deposits.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYSETTLEMENTDATE",
+    "insertText": "PAYSETTLEMENTDATE",
+    "description": "This field stores the settlement date for all originated withdrawals.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDTYPE",
+    "insertText": "IDTYPE",
+    "description": "This field stores a code that specifies whether the record is used to deposit or withdraw funds by ACH Origination from the member's shares or loans.",
+    "isSnippet": false
+  },
+  {
+    "label": "ID",
+    "insertText": "ID",
+    "description": "This field stores the share or loan ID.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXPIRATION",
+    "insertText": "EXPIRATION",
+    "description": "This field stores the date used by the Purge Account Processing batch job to purge Batch ACH Origination records.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "The system stores the system date in this field when you create, change, or save the Batch ACH Origination record. Sometimes the system updates this field because the record was saved, even though there may not be any actual changes in the record.",
+    "isSnippet": false
+  },
+  {
+    "label": "ORIGAMOUNT",
+    "insertText": "ORIGAMOUNT",
+    "description": "This field stores the total dollar amount of the EFT items linked to the Batch ACH Origination record through the Batch ACH Origination Number field in the EFT record.",
+    "isSnippet": false
+  },
+  {
+    "label": "GROUPNUMBER",
+    "insertText": "GROUPNUMBER",
+    "description": "This field stores the credit union-defined number used by ACH Posting to identify what items to post.",
+    "isSnippet": false
+  },
+  {
+    "label": "POSTMETHOD",
+    "insertText": "POSTMETHOD",
+    "description": "This field store a code that specifies if the posting program should post all the ACH items together or separately.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATUS",
+    "insertText": "STATUS",
+    "description": "This field stores the status of the Batch ACH Origination record.",
+    "isSnippet": false
+  },
+  {
+    "label": "TOTALORIGINATIONCOUNT",
+    "insertText": "TOTALORIGINATIONCOUNT",
+    "description": "This field stores the total number of ACH items included in the ACH batch.",
+    "isSnippet": false
+  },
+  {
+    "label": "TOTALPOSTEDCOUNT",
+    "insertText": "TOTALPOSTEDCOUNT",
+    "description": "This field stores the total number of ACH items included in the batch posting.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "This field stores a unique number within each member account that can be used as a unique identification of this record.",
+    "isSnippet": false
+  }
+]

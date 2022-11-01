@@ -1,0 +1,50 @@
+[
+  {
+    "label": "ID",
+    "insertText": "ID",
+    "description": "This field stores the four-character ID that identifies the Bankruptcy record. The bankruptcy ID is assigned when creating the Bankruptcy record.",
+    "isSnippet": false
+  },
+  {
+    "label": "DESCRIPTION",
+    "insertText": "DESCRIPTION",
+    "description": "You cannot create a Bankruptcy record without entering a description. If you leave the field blank, an error message appears, and you cannot save the Bankruptcy record until you have entered a description.",
+    "isSnippet": false
+  },
+  {
+    "label": "TYPE",
+    "insertText": "TYPE",
+    "description": "This field stores the reason for the Bankruptcy record.",
+    "isSnippet": false
+  },
+  {
+    "label": "OPENDATE",
+    "insertText": "OPENDATE",
+    "description": "The system updates this field with the system date when the Bankruptcy record is created.",
+    "isSnippet": false
+  },
+  {
+    "label": "CLOSEDATE",
+    "insertText": "CLOSEDATE",
+    "description": "This field stores the date when the Bankruptcy record is closed.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "This field stores the system date when you create, change, or save the Bankruptcy record.",
+    "isSnippet": false
+  },
+  {
+    "label": "EFFECTDATE",
+    "insertText": "EFFECTDATE",
+    "description": "This field stores the date the bankruptcy begins, or takes effect.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXPIREDATE",
+    "insertText": "EXPIREDATE",
+    "description": "This field stores the date the bankruptcy expires, or is no longer in effect.",
+    "isSnippet": false
+  }
+]

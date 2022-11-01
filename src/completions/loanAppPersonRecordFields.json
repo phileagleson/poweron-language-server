@@ -1,0 +1,1058 @@
+[
+  {
+    "label": "TITLE",
+    "insertText": "TITLE",
+    "description": "This field stores the person's title.",
+    "isSnippet": false
+  },
+  {
+    "label": "FIRST",
+    "insertText": "FIRST",
+    "description": "This field stores the person's first name.",
+    "isSnippet": false
+  },
+  {
+    "label": "MIDDLE",
+    "insertText": "MIDDLE",
+    "description": "This field stores the person's middle name.",
+    "isSnippet": false
+  },
+  {
+    "label": "LAST",
+    "insertText": "LAST",
+    "description": "This field stores the person's last name or the non-individual description.",
+    "isSnippet": false
+  },
+  {
+    "label": "SUFFIX",
+    "insertText": "SUFFIX",
+    "description": "This field stores any suffix to the person's name.",
+    "isSnippet": false
+  },
+  {
+    "label": "LONGNAME",
+    "insertText": "LONGNAME",
+    "description": "This field contains the computed long name of up to 40 characters that can be accessed with PowerOn for displays and reports",
+    "isSnippet": false
+  },
+  {
+    "label": "SHORTNAME",
+    "insertText": "SHORTNAME",
+    "description": "This field contains the computed short name of up to 16 characters to be used in displays and on reports.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXTRAINFO",
+    "insertText": "EXTRAINFO",
+    "description": "This field stores a line of miscellaneous information.",
+    "isSnippet": false
+  },
+  {
+    "label": "HEADQUARTERS",
+    "insertText": "HEADQUARTERS",
+    "description": "This field indicates if the record pertains to the entity's main base of operations or headquarters. ",
+    "isSnippet": false
+  },
+  {
+    "label": "ADDRESSTYPE",
+    "insertText": "ADDRESSTYPE",
+    "description": "This field stores a code that indicates whether the address should be in the U.S. Postal Service standard format or a foreign format.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXTRAADDRESS",
+    "insertText": "EXTRAADDRESS",
+    "description": "This field stores an extra address line.",
+    "isSnippet": false
+  },
+  {
+    "label": "STREET",
+    "insertText": "STREET",
+    "description": "This field stores the person's street address.",
+    "isSnippet": false
+  },
+  {
+    "label": "CITY",
+    "insertText": "CITY",
+    "description": "This field stores the person's city.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATE",
+    "insertText": "STATE",
+    "description": "This field stores the person's state.",
+    "isSnippet": false
+  },
+  {
+    "label": "ZIPCODE",
+    "insertText": "ZIPCODE",
+    "description": "This field stores the person's city.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTY",
+    "insertText": "COUNTY",
+    "description": "This field stores the county in which the person resides.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTRY",
+    "insertText": "COUNTRY",
+    "description": "This field stores the country in which the person resides.",
+    "isSnippet": false
+  },
+  {
+    "label": "COUNTRYCODE",
+    "insertText": "COUNTRYCODE",
+    "description": "This field stores the two-character country code where the person resides.",
+    "isSnippet": false
+  },
+  {
+    "label": "PHONETYPE",
+    "insertText": "PHONETYPE",
+    "description": "This field stores a code that indicates a domestic or foreign phone number type.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREFERREDCONTACT",
+    "insertText": "PREFERREDCONTACT",
+    "description": "This field contains the preferred contact method.",
+    "isSnippet": false
+  },
+  {
+    "label": "HOMEPHONE",
+    "insertText": "HOMEPHONE",
+    "description": "This field stores the person's home telephone number.",
+    "isSnippet": false
+  },
+  {
+    "label": "WORKPHONE",
+    "insertText": "WORKPHONE",
+    "description": "This field stores the person's work telephone number.",
+    "isSnippet": false
+  },
+  {
+    "label": "WORKPHONEEXTENSION",
+    "insertText": "WORKPHONEEXTENSION",
+    "description": "This field stores the person's telephone extension number at work.",
+    "isSnippet": false
+  },
+  {
+    "label": "MOBILEPHONE",
+    "insertText": "MOBILEPHONE",
+    "description": "This field stores the number for the person's cell phone or other mobile phone device (if any).",
+    "isSnippet": false
+  },
+  {
+    "label": "PAGERNUMBER",
+    "insertText": "PAGERNUMBER",
+    "description": "This field stores the number for the person's pager (if any).",
+    "isSnippet": false
+  },
+  {
+    "label": "EMAIL",
+    "insertText": "EMAIL",
+    "description": "This field stores the person's email address.",
+    "isSnippet": false
+  },
+  {
+    "label": "ALTEMAIL",
+    "insertText": "ALTEMAIL",
+    "description": "This field stores the person's alternate email address.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREFERREDCONTACTMETHOD",
+    "insertText": "PREFERREDCONTACTMETHOD",
+    "description": "This field stores a code that indicates how the member wants to receive information from the credit union.",
+    "isSnippet": false
+  },
+  {
+    "label": "NAMEFORMAT",
+    "insertText": "NAMEFORMAT",
+    "description": "This field stores a code that indicates whether the name is an individual or not.",
+    "isSnippet": false
+  },
+  {
+    "label": "TYPE",
+    "insertText": "TYPE",
+    "description": "This field stores a code that identifies the kind of Person record.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERSONCODE",
+    "insertText": "PERSONCODE",
+    "description": "This field stores a code that indicates the relationship of this person to the application.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACCOUNTNUMBER",
+    "insertText": "ACCOUNTNUMBER",
+    "description": "This field stores the person's account number.",
+    "isSnippet": false
+  },
+  {
+    "label": "SSN",
+    "insertText": "SSN",
+    "description": "This field stores the person's account number.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "This field stores the system date in this field when you create, change, or save the Application Person record. Sometimes Symitar Quest updates this field because the record was saved, even though there may not be any actual changes in the record.",
+    "isSnippet": false
+  },
+  {
+    "label": "BIRTHDATE",
+    "insertText": "BIRTHDATE",
+    "description": "This field stores the person's date of birth.",
+    "isSnippet": false
+  },
+  {
+    "label": "MARITALSTATUS",
+    "insertText": "MARITALSTATUS",
+    "description": "This field stores a code that indicates the person's marital status.",
+    "isSnippet": false
+  },
+  {
+    "label": "EDUCATIONYEARS",
+    "insertText": "EDUCATIONYEARS",
+    "description": "This field stores the total number of years of education the person has completed.",
+    "isSnippet": false
+  },
+  {
+    "label": "SEX",
+    "insertText": "SEX",
+    "description": "This field stores a code that indicates the person's sex.",
+    "isSnippet": false
+  },
+  {
+    "label": "CITIZENSHIP",
+    "insertText": "CITIZENSHIP",
+    "description": "This field stores a code that indicates whether the individual is a U.S. citizen.",
+    "isSnippet": false
+  },
+  {
+    "label": "MOTHERSMAIDENNAME",
+    "insertText": "MOTHERSMAIDENNAME",
+    "description": "This field stores the maiden name of the person's mother.",
+    "isSnippet": false
+  },
+  {
+    "label": "OTHERCREDITNAME",
+    "insertText": "OTHERCREDITNAME",
+    "description": "This field stores any other name the person uses for credit accounts.",
+    "isSnippet": false
+  },
+  {
+    "label": "USPERSONFLAG",
+    "insertText": "USPERSONFLAG",
+    "description": "This field stores a code that specifies whether the person is a citizen of the United States, or whether the business identified is established or organized under the laws of a state or the United States.",
+    "isSnippet": false
+  },
+  {
+    "label": "LEI",
+    "insertText": "LEI",
+    "description": "This field stores the unique alpha-numeric code associated with a single corporate entity for international financial market record keeping.",
+    "isSnippet": false
+  },
+  {
+    "label": "BENEFICIALOWNER",
+    "insertText": "BENEFICIALOWNER",
+    "description": "This field stores a code that specifies whether the person directly or indirectly owns 25% or more of the equity interests or has significant responsibility to control, manage, or direct the legal entity customer.",
+    "isSnippet": false
+  },
+  {
+    "label": "BENEFICIALPERCENT",
+    "insertText": "BENEFICIALPERCENT",
+    "description": "This field stores the percentage of the equity interests of the legal entity customer that this person owns.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACTIVEDUTY",
+    "insertText": "ACTIVEDUTY",
+    "description": "This field stores a code that identifies whether the borrower, or a family member, is in active military service.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACTIVEDUTYVERIFICATIONDATE",
+    "insertText": "ACTIVEDUTYVERIFICATIONDATE",
+    "description": "This field stores the date when you verify that the borrower is on active duty or is the dependent of someone on active duty.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACTIVEDUTYSTARTDATE",
+    "insertText": "ACTIVEDUTYSTARTDATE",
+    "description": "This field stores the date when the borrower begins active duty or is the dependent of someone who begins active duty.",
+    "isSnippet": false
+  },
+  {
+    "label": "ACTIVEDUTYSEPARATIONDATE",
+    "insertText": "ACTIVEDUTYSEPARATIONDATE",
+    "description": "This field stores the date when the borrower is no longer on active duty or is the dependent of someone no longer on active duty.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTDOCFLAG:1",
+    "insertText": "IDENTDOCFLAG:1",
+    "description": "This field stores a code that specifies whether the first form of identification was supported with documentary evidence.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDTYPE:1",
+    "insertText": "IDENTIDTYPE:1",
+    "description": "This field stores a code that specifies the type of documentation (if any) that was used to support the first form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDDESCRIPTION:1",
+    "insertText": "IDENTIDDESCRIPTION:1",
+    "description": "This field stores further detail about the corresponding ID type to support the first form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDNUMBER:1",
+    "insertText": "IDENTIDNUMBER:1",
+    "description": "This field stores the value of the type of identification specified by the corresponding ID type to support the first form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDISSUEDATE:1",
+    "insertText": "IDENTIDISSUEDATE:1",
+    "description": "This field stores the date the type of identification specified by the corresponding ID type was issued, if known, to support the first form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDEXPIREDATE:1",
+    "insertText": "IDENTIDEXPIREDATE:1",
+    "description": "This field stores the date the type of identification specified by the corresponding ID type expires, if known, to support the first form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDVERIFYDATE:1",
+    "insertText": "IDENTIDVERIFYDATE:1",
+    "description": "This field stores the date the type of identification specified by the corresponding ID type was verified to support the first form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTDOCFLAG:2",
+    "insertText": "IDENTDOCFLAG:2",
+    "description": "This field stores a code that specifies whether the second form of identification was supported with documentary evidence.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDTYPE:2",
+    "insertText": "IDENTIDTYPE:2",
+    "description": "This field stores a code that specifies the type of documentation (if any) that was used to support the second form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDDESCRIPTION:2",
+    "insertText": "IDENTIDDESCRIPTION:2",
+    "description": "This field stores further detail about the corresponding ID type to support the second form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDNUMBER:2",
+    "insertText": "IDENTIDNUMBER:2",
+    "description": "This field stores the value of the type of identification specified by the corresponding ID type to support the second form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDISSUEDATE:2",
+    "insertText": "IDENTIDISSUEDATE:2",
+    "description": "This field stores the date the type of identification specified by the corresponding ID type was issued, if known, to support the second form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDEXPIREDATE:2",
+    "insertText": "IDENTIDEXPIREDATE:2",
+    "description": "This field stores the date the type of identification specified by the corresponding ID type expires, if known, to support the second form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDVERIFYDATE:2",
+    "insertText": "IDENTIDVERIFYDATE:2",
+    "description": "This field stores the date the type of identification specified by the corresponding ID type was verified to support the second form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTDOCFLAG:3",
+    "insertText": "IDENTDOCFLAG:3",
+    "description": "This field stores a code that specifies whether the third form of identification was supported with documentary evidence.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDTYPE:3",
+    "insertText": "IDENTIDTYPE:3",
+    "description": "This field stores a code that specifies the type of documentation (if any) that was used to support the third form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDDESCRIPTION:3",
+    "insertText": "IDENTIDDESCRIPTION:3",
+    "description": "This field stores further detail about the corresponding ID type to support the third form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDNUMBER:3",
+    "insertText": "IDENTIDNUMBER:3",
+    "description": "This field stores the value of the type of identification specified by the corresponding ID type to support the third form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDISSUEDATE:3",
+    "insertText": "IDENTIDISSUEDATE:3",
+    "description": "This field stores the date the type of identification specified by the corresponding ID type was issued, if known, to support the third form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDEXPIREDATE:3",
+    "insertText": "IDENTIDEXPIREDATE:3",
+    "description": "This field stores the date the type of identification specified by the corresponding ID type expires, if known, to support the third form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "IDENTIDVERIFYDATE:3",
+    "insertText": "IDENTIDVERIFYDATE:3",
+    "description": "This field stores the date the type of identification specified by the corresponding ID type was verified to support the third form of identification.",
+    "isSnippet": false
+  },
+  {
+    "label": "OWNRENTCURRADDRESS",
+    "insertText": "OWNRENTCURRADDRESS",
+    "description": "This field stores a code that specifies whether the person owns or rents the residence at the current address.",
+    "isSnippet": false
+  },
+  {
+    "label": "OWNRENTPREVADDRESS",
+    "insertText": "OWNRENTPREVADDRESS",
+    "description": "This field stores a code that specifies whether the person owns or rents the residence at the previous address.",
+    "isSnippet": false
+  },
+  {
+    "label": "MONTHSCURRADDRESS",
+    "insertText": "MONTHSCURRADDRESS",
+    "description": "This field stores the number of months the person has resided at the current address.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVIOUSADDRESS",
+    "insertText": "PREVIOUSADDRESS",
+    "description": "This field stores the person's previous address.",
+    "isSnippet": false
+  },
+  {
+    "label": "MONTHSPREVADDRESS",
+    "insertText": "MONTHSPREVADDRESS",
+    "description": "This field stores the number of months the person resided at the previous address.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEROGSTATUS:1",
+    "insertText": "DEROGSTATUS:1",
+    "description": "These fields each store a credit union-defined code to indicate a derogatory status.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEROGSTATUS:2",
+    "insertText": "DEROGSTATUS:2",
+    "description": "These fields each store a credit union-defined code to indicate a derogatory status.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEROGSTATUS:3",
+    "insertText": "DEROGSTATUS:3",
+    "description": "These fields each store a credit union-defined code to indicate a derogatory status.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEROGSTATUS:4",
+    "insertText": "DEROGSTATUS:4",
+    "description": "These fields each store a credit union-defined code to indicate a derogatory status.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEROGSTATUS:5",
+    "insertText": "DEROGSTATUS:5",
+    "description": "These fields each store a credit union-defined code to indicate a derogatory status.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEROGSTATUS:6",
+    "insertText": "DEROGSTATUS:6",
+    "description": "These fields each store a credit union-defined code to indicate a derogatory status.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEROGEXPLANATION",
+    "insertText": "DEROGEXPLANATION",
+    "description": "This field stores any additional derogatory information or the name of a member for whom this person is a cosigner.",
+    "isSnippet": false
+  },
+  {
+    "label": "JUDGEMENT",
+    "insertText": "JUDGEMENT",
+    "description": "This field stores a code that identifies a judgement status.",
+    "isSnippet": false
+  },
+  {
+    "label": "BANKRUPTCY",
+    "insertText": "BANKRUPTCY",
+    "description": "This field stores a code that identifies a bankruptcy status.",
+    "isSnippet": false
+  },
+  {
+    "label": "PARTYINLAWSUIT",
+    "insertText": "PARTYINLAWSUIT",
+    "description": "This field stores a code that identifies a party in a lawsuit status.",
+    "isSnippet": false
+  },
+  {
+    "label": "PASTFORECLOSURE",
+    "insertText": "PASTFORECLOSURE",
+    "description": "This field stores a code that identifies a past foreclosure status.",
+    "isSnippet": false
+  },
+  {
+    "label": "PASTREPOSSESSION",
+    "insertText": "PASTREPOSSESSION",
+    "description": "This field stores a code that identifies a past repossession status.",
+    "isSnippet": false
+  },
+  {
+    "label": "INCOMEMAYDECLINE",
+    "insertText": "INCOMEMAYDECLINE",
+    "description": "This field stores a code that identifies an income likely to decline status.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPENDENTAGE:1",
+    "insertText": "DEPENDENTAGE:1",
+    "description": "These fields each store the age of one of this person's dependents.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPENDENTAGE:2",
+    "insertText": "DEPENDENTAGE:2",
+    "description": "These fields each store the age of one of this person's dependents.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPENDENTAGE:3",
+    "insertText": "DEPENDENTAGE:3",
+    "description": "These fields each store the age of one of this person's dependents.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPENDENTAGE:4",
+    "insertText": "DEPENDENTAGE:4",
+    "description": "These fields each store the age of one of this person's dependents.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPENDENTAGE:5",
+    "insertText": "DEPENDENTAGE:5",
+    "description": "These fields each store the age of one of this person's dependents.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPENDENTAGE:6",
+    "insertText": "DEPENDENTAGE:6",
+    "description": "These fields each store the age of one of this person's dependents.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPENDENTAGE:7",
+    "insertText": "DEPENDENTAGE:7",
+    "description": "These fields each store the age of one of this person's dependents.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPENDENTAGE:8",
+    "insertText": "DEPENDENTAGE:8",
+    "description": "These fields each store the age of one of this person's dependents.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPENDENTAGE:9",
+    "insertText": "DEPENDENTAGE:9",
+    "description": "These fields each store the age of one of this person's dependents.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPENDENTAGE:10",
+    "insertText": "DEPENDENTAGE:10",
+    "description": "These fields each store the age of one of this person's dependents.",
+    "isSnippet": false
+  },
+  {
+    "label": "DEPENDENTCOUNT",
+    "insertText": "DEPENDENTCOUNT",
+    "description": "This field stores the number of dependents this person claims.",
+    "isSnippet": false
+  },
+  {
+    "label": "COSIGNOTHERLOAN",
+    "insertText": "COSIGNOTHERLOAN",
+    "description": "This field stores a code that identifies a cosigner on another loan status.",
+    "isSnippet": false
+  },
+  {
+    "label": "COSIGNFORWHOM",
+    "insertText": "COSIGNFORWHOM",
+    "description": "This field can store the name of the individual for whom this person is a cosigner.",
+    "isSnippet": false
+  },
+  {
+    "label": "COSIGNTOWHOM",
+    "insertText": "COSIGNTOWHOM",
+    "description": "This field can store the name of the creditor to whom this person is a cosigner.",
+    "isSnippet": false
+  },
+  {
+    "label": "EMPLOYMENTSTATUS",
+    "insertText": "EMPLOYMENTSTATUS",
+    "description": "This field stores a code that indicates the person's employment status.",
+    "isSnippet": false
+  },
+  {
+    "label": "EMPLOYMENTRETURNDATE",
+    "insertText": "EMPLOYMENTRETURNDATE",
+    "description": "This field stores the date you expect the person to return to work if not currently employed.",
+    "isSnippet": false
+  },
+  {
+    "label": "EMPHOURSPERWEEK",
+    "insertText": "EMPHOURSPERWEEK",
+    "description": "This field stores the number of hours the person works per week.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURREMPSTARTDATE",
+    "insertText": "CURREMPSTARTDATE",
+    "description": "This field stores the date this person's current employment began.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURREMPENDDATE",
+    "insertText": "CURREMPENDDATE",
+    "description": "This field stores the date this person's current employment is expected to end.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURREMPYEARSEMP",
+    "insertText": "CURREMPYEARSEMP",
+    "description": "This field stores the number of years the person has been employed at their current job.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURREMPMONTHSEMP",
+    "insertText": "CURREMPMONTHSEMP",
+    "description": "This field stores the number of months the person has been employed at their current job.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURREMPGROSSMONTHLYPAY",
+    "insertText": "CURREMPGROSSMONTHLYPAY",
+    "description": "This field stores the amount of this person's current monthly gross pay.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURREMPNETMONTHLYPAY",
+    "insertText": "CURREMPNETMONTHLYPAY",
+    "description": "This field stores the amount of this person's current monthly net pay.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURREMPNAME",
+    "insertText": "CURREMPNAME",
+    "description": "This field stores the name of this person's current employer.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURREMPADDRESS",
+    "insertText": "CURREMPADDRESS",
+    "description": "This field stores the address of this person's current employer.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURREMPOCCUPATION",
+    "insertText": "CURREMPOCCUPATION",
+    "description": "This field stores a description of this person's current occupation.",
+    "isSnippet": false
+  },
+  {
+    "label": "CURREMPSUPERVISOR",
+    "insertText": "CURREMPSUPERVISOR",
+    "description": "This field stores the name of this person's current supervisor.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVEMPSTARTDATE",
+    "insertText": "PREVEMPSTARTDATE",
+    "description": "This field stores the date this person's previous employment began.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVEMPENDDATE",
+    "insertText": "PREVEMPENDDATE",
+    "description": "This field stores the date this person's previous employment ended.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVEMPYEARSEMP",
+    "insertText": "PREVEMPYEARSEMP",
+    "description": "This field stores the number of years the person was employed at their previous job.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVEMPMONTHSEMP",
+    "insertText": "PREVEMPMONTHSEMP",
+    "description": "This field stores the number of months the person was employed at their previous job.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVEMPGROSSMONTHLYPAY",
+    "insertText": "PREVEMPGROSSMONTHLYPAY",
+    "description": "This field stores the amount of this person's previous monthly gross pay.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVEMPNAME",
+    "insertText": "PREVEMPNAME",
+    "description": "This field stores the name of this person's previous employer.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVEMPADDRESS",
+    "insertText": "PREVEMPADDRESS",
+    "description": "This field stores the address of this person's previous employer.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVEMPOCCUPATION",
+    "insertText": "PREVEMPOCCUPATION",
+    "description": "This field stores a description of this person's previous occupation.",
+    "isSnippet": false
+  },
+  {
+    "label": "PREVEMPSUPERVISOR",
+    "insertText": "PREVEMPSUPERVISOR",
+    "description": "This field stores the name of this person's previous supervisor.",
+    "isSnippet": false
+  },
+  {
+    "label": "REF1CODE",
+    "insertText": "REF1CODE",
+    "description": "This field stores a code that specifies the relationship of this first reference to the person.",
+    "isSnippet": false
+  },
+  {
+    "label": "REF1NAME",
+    "insertText": "REF1NAME",
+    "description": "This field stores the name of this first reference.",
+    "isSnippet": false
+  },
+  {
+    "label": "REF1ADDRESSTYPE",
+    "insertText": "REF1ADDRESSTYPE",
+    "description": "This field stores a code that determines the format of the corresponding Ref 1 Address field for the person defined in Ref 1 Name.",
+    "isSnippet": false
+  },
+  {
+    "label": "REF1ADDRESS",
+    "insertText": "REF1ADDRESS",
+    "description": "This field stores the address of this first reference.",
+    "isSnippet": false
+  },
+  {
+    "label": "REF1PHONE",
+    "insertText": "REF1PHONE",
+    "description": "This field stores the telephone number of this first reference.",
+    "isSnippet": false
+  },
+  {
+    "label": "REF1RELATIONSHIP",
+    "insertText": "REF1RELATIONSHIP",
+    "description": "This field stores a description of the relationship of this first reference to the person.",
+    "isSnippet": false
+  },
+  {
+    "label": "REF2CODE",
+    "insertText": "REF2CODE",
+    "description": "This field stores a code that specifies the relationship of this second reference to the person.",
+    "isSnippet": false
+  },
+  {
+    "label": "REF2NAME",
+    "insertText": "REF2NAME",
+    "description": "This field stores the name of this second reference.",
+    "isSnippet": false
+  },
+  {
+    "label": "REF2ADDRESSTYPE",
+    "insertText": "REF2ADDRESSTYPE",
+    "description": "This field stores a code that determines the format of the corresponding Ref 2 Address field for the person defined in Ref 2 Name.",
+    "isSnippet": false
+  },
+  {
+    "label": "REF2ADDRESS",
+    "insertText": "REF2ADDRESS",
+    "description": "This field stores the address of this second reference.",
+    "isSnippet": false
+  },
+  {
+    "label": "REF2PHONE",
+    "insertText": "REF2PHONE",
+    "description": "This field stores the telephone number of this second reference.",
+    "isSnippet": false
+  },
+  {
+    "label": "REF2RELATIONSHIP",
+    "insertText": "REF2RELATIONSHIP",
+    "description": "This field stores a description of the relationship of this second reference to the person.",
+    "isSnippet": false
+  },
+  {
+    "label": "REF3CODE",
+    "insertText": "REF3CODE",
+    "description": "This field stores a code that specifies the relationship of this third reference to the person.",
+    "isSnippet": false
+  },
+  {
+    "label": "REF3NAME",
+    "insertText": "REF3NAME",
+    "description": "This field stores the name of this third reference.",
+    "isSnippet": false
+  },
+  {
+    "label": "REF3ADDRESSTYPE",
+    "insertText": "REF3ADDRESSTYPE",
+    "description": "This field stores a code that determines the format of the corresponding Ref 3 Address field for the person defined in Ref 3 Name.",
+    "isSnippet": false
+  },
+  {
+    "label": "REF3ADDRESS",
+    "insertText": "REF3ADDRESS",
+    "description": "This field stores the address of this third reference.",
+    "isSnippet": false
+  },
+  {
+    "label": "REF3PHONE",
+    "insertText": "REF3PHONE",
+    "description": "This field stores the telephone number of this third reference.",
+    "isSnippet": false
+  },
+  {
+    "label": "REF3RELATIONSHIP",
+    "insertText": "REF3RELATIONSHIP",
+    "description": "This field stores a description of the relationship of this third reference to the person.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAETHNICITY:1",
+    "insertText": "HMDAETHNICITY:1",
+    "description": "These fields each store a code that indicates the ethnicity of the applicant or borrower.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAETHNICITY:2",
+    "insertText": "HMDAETHNICITY:2",
+    "description": "These fields each store a code that indicates the ethnicity of the applicant or borrower.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAETHNICITY:3",
+    "insertText": "HMDAETHNICITY:3",
+    "description": "These fields each store a code that indicates the ethnicity of the applicant or borrower.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAETHNICITY:4",
+    "insertText": "HMDAETHNICITY:4",
+    "description": "These fields each store a code that indicates the ethnicity of the applicant or borrower.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAETHNICITY:5",
+    "insertText": "HMDAETHNICITY:5",
+    "description": "These fields each store a code that indicates the ethnicity of the applicant or borrower.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAETHNICITYOTHER:1",
+    "insertText": "HMDAETHNICITYOTHER:1",
+    "description": "These fields each store the specific other Hispanic or Latino ethnicity not listed in the Ethnicity of Applicant 1–5 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAETHNICITYOTHER:2",
+    "insertText": "HMDAETHNICITYOTHER:2",
+    "description": "These fields each store the specific other Hispanic or Latino ethnicity not listed in the Ethnicity of Applicant 1–5 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAETHNICITYOTHER:3",
+    "insertText": "HMDAETHNICITYOTHER:3",
+    "description": "These fields each store the specific other Hispanic or Latino ethnicity not listed in the Ethnicity of Applicant 1–5 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAETHNICITYVISIND",
+    "insertText": "HMDAETHNICITYVISIND",
+    "description": "This field stores a code that indicates whether the ethnicity of the applicant or borrower was collected based on visual observation or surname.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDARACE:1",
+    "insertText": "HMDARACE:1",
+    "description": "These fields each store a code that indicates the race of the applicant or borrower.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDARACE:2",
+    "insertText": "HMDARACE:2",
+    "description": "These fields each store a code that indicates the race of the applicant or borrower.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDARACE:3",
+    "insertText": "HMDARACE:3",
+    "description": "These fields each store a code that indicates the race of the applicant or borrower.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDARACE:4",
+    "insertText": "HMDARACE:4",
+    "description": "These fields each store a code that indicates the race of the applicant or borrower.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDARACE:5",
+    "insertText": "HMDARACE:5",
+    "description": "These fields each store a code that indicates the race of the applicant or borrower.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDARACEOTHER1:1",
+    "insertText": "HMDARACEOTHER1:1",
+    "description": "These fields each store the specific American Indian or Alaska Native enrolled, or principal tribes if option (1) American Indian or Alaska Native was selected at any of the Race of Applicant 1–5 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDARACEOTHER1:2",
+    "insertText": "HMDARACEOTHER1:2",
+    "description": "These fields each store the specific American Indian or Alaska Native enrolled, or principal tribes if option (1) American Indian or Alaska Native was selected at any of the Race of Applicant 1–5 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDARACEOTHER1:3",
+    "insertText": "HMDARACEOTHER1:3",
+    "description": "These fields each store the specific American Indian or Alaska Native enrolled, or principal tribes if option (1) American Indian or Alaska Native was selected at any of the Race of Applicant 1–5 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDARACEOTHER27:1",
+    "insertText": "HMDARACEOTHER27:1",
+    "description": "These fields each store the specific other Asian races if option (27) Other Asian was selected at any of the Race of Applicant 1–5 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDARACEOTHER27:2",
+    "insertText": "HMDARACEOTHER27:2",
+    "description": "These fields each store the specific other Asian races if option (27) Other Asian was selected at any of the Race of Applicant 1–5 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDARACEOTHER27:3",
+    "insertText": "HMDARACEOTHER27:3",
+    "description": "These fields each store the specific other Asian races if option (27) Other Asian was selected at any of the Race of Applicant 1–5 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDARACEOTHER44:1",
+    "insertText": "HMDARACEOTHER44:1",
+    "description": "These fields each store the specific other Pacific Islander races if option (44) Other Pacific Islander was selected at any of the Race of Applicant 1–5 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDARACEOTHER44:2",
+    "insertText": "HMDARACEOTHER44:2",
+    "description": "These fields each store the specific other Pacific Islander races if option (44) Other Pacific Islander was selected at any of the Race of Applicant 1–5 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDARACEOTHER44:3",
+    "insertText": "HMDARACEOTHER44:3",
+    "description": "These fields each store the specific other Pacific Islander races if option (44) Other Pacific Islander was selected at any of the Race of Applicant 1–5 fields.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDARACEVISIND",
+    "insertText": "HMDARACEVISIND",
+    "description": "This field stores a code that indicates whether the race of the applicant or borrower was collected based on visual observation or surname.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDASEXIND",
+    "insertText": "HMDASEXIND",
+    "description": "This field stores a code that indicates the sex of the applicant or borrower.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDASEXVISIND",
+    "insertText": "HMDASEXVISIND",
+    "description": "This field stores a code that indicates whether the sex of the applicant was collected based on visual observation or surname.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAGE",
+    "insertText": "HMDAAGE",
+    "description": "This field stores, in numeral form, the age of the applicant.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDACREDITSCORE",
+    "insertText": "HMDACREDITSCORE",
+    "description": "This field stores, in numeral form, the credit score, or scores used in making the credit decision.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAPPSCORINGMODEL",
+    "insertText": "HMDAAPPSCORINGMODEL",
+    "description": "This field stores a code that indicates the name and version of the credit scoring model used to generate the credit score, or scores, relied on in making the credit decision.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAPPSCORINGMODELOTHER:1",
+    "insertText": "HMDAAPPSCORINGMODELOTHER:1",
+    "description": "These fields each store the specific other credit scoring model if option (8) Other credit scoring model was selected at the Applicant Scoring Model field.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAPPSCORINGMODELOTHER:2",
+    "insertText": "HMDAAPPSCORINGMODELOTHER:2",
+    "description": "These fields each store the specific other credit scoring model if option (8) Other credit scoring model was selected at the Applicant Scoring Model field.",
+    "isSnippet": false
+  },
+  {
+    "label": "HMDAAPPSCORINGMODELOTHER:3",
+    "insertText": "HMDAAPPSCORINGMODELOTHER:3",
+    "description": "These fields each store the specific other credit scoring model if option (8) Other credit scoring model was selected at the Applicant Scoring Model field.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "This field stores a unique number within each member account that can be used as a unique identification of this record.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXTENDEDNAME",
+    "insertText": "EXTENDEDNAME",
+    "description": "If you enter more than 40 characters (up to 80 characters) in the Last Name/Non Indiv Name field, Symitar Quest stores the second 40 characters in this field.",
+    "isSnippet": false
+  }
+]

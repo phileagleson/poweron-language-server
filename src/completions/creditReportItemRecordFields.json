@@ -1,0 +1,278 @@
+[
+  {
+    "label": "SEGMENTTYPE",
+    "insertText": "SEGMENTTYPE",
+    "description": "This field stores a credit bureau-defined code that identifies the type of credit report segment returned.",
+    "isSnippet": false
+  },
+  {
+    "label": "SUBSEGMENTTYPE",
+    "insertText": "SUBSEGMENTTYPE",
+    "description": "This field stores a credit bureau-defined code that identifies the type of credit report subsegment returned.",
+    "isSnippet": false
+  },
+  {
+    "label": "SEGEXTENDED",
+    "insertText": "SEGEXTENDED",
+    "description": "This field stores a credit bureau-defined code that specifies whether or not the credit report segment has related subsegments.",
+    "isSnippet": false
+  },
+  {
+    "label": "AMOUNT:1",
+    "insertText": "AMOUNT:1",
+    "description": "These fields store amounts returned from the credit bureaus.",
+    "isSnippet": false
+  },
+  {
+    "label": "AMOUNT:2",
+    "insertText": "AMOUNT:2",
+    "description": "These fields store amounts returned from the credit bureaus.",
+    "isSnippet": false
+  },
+  {
+    "label": "AMOUNT:3",
+    "insertText": "AMOUNT:3",
+    "description": "These fields store amounts returned from the credit bureaus.",
+    "isSnippet": false
+  },
+  {
+    "label": "AMOUNT:4",
+    "insertText": "AMOUNT:4",
+    "description": "These fields store amounts returned from the credit bureaus.",
+    "isSnippet": false
+  },
+  {
+    "label": "CODE:1",
+    "insertText": "CODE:1",
+    "description": "These fields store codes returned from the credit bureaus (0–9999).",
+    "isSnippet": false
+  },
+  {
+    "label": "CODE:2",
+    "insertText": "CODE:2",
+    "description": "These fields store codes returned from the credit bureaus (0–9999).",
+    "isSnippet": false
+  },
+  {
+    "label": "CODE:3",
+    "insertText": "CODE:3",
+    "description": "These fields store codes returned from the credit bureaus (0–9999).",
+    "isSnippet": false
+  },
+  {
+    "label": "CODE:5",
+    "insertText": "CODE:5",
+    "description": "These fields store codes returned from the credit bureaus (0–9999).",
+    "isSnippet": false
+  },
+  {
+    "label": "DATE:1",
+    "insertText": "DATE:1",
+    "description": "These fields store dates returned from the credit bureaus.",
+    "isSnippet": false
+  },
+  {
+    "label": "DATE:2",
+    "insertText": "DATE:2",
+    "description": "These fields store dates returned from the credit bureaus.",
+    "isSnippet": false
+  },
+  {
+    "label": "DATE:3",
+    "insertText": "DATE:3",
+    "description": "These fields store dates returned from the credit bureaus.",
+    "isSnippet": false
+  },
+  {
+    "label": "DATE:4",
+    "insertText": "DATE:4",
+    "description": "These fields store dates returned from the credit bureaus.",
+    "isSnippet": false
+  },
+  {
+    "label": "DATE:5",
+    "insertText": "DATE:5",
+    "description": "These fields store dates returned from the credit bureaus.",
+    "isSnippet": false
+  },
+  {
+    "label": "DATE:6",
+    "insertText": "DATE:6",
+    "description": "These fields store dates returned from the credit bureaus.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH1:1",
+    "insertText": "CH1:1",
+    "description": "Each of these fields can store one character of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH1:2",
+    "insertText": "CH1:2",
+    "description": "Each of these fields can store one character of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH1:3",
+    "insertText": "CH1:3",
+    "description": "Each of these fields can store one character of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH1:4",
+    "insertText": "CH1:4",
+    "description": "Each of these fields can store one character of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH1:5",
+    "insertText": "CH1:5",
+    "description": "Each of these fields can store one character of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH1:6",
+    "insertText": "CH1:6",
+    "description": "Each of these fields can store one character of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH1:7",
+    "insertText": "CH1:7",
+    "description": "Each of these fields can store one character of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH1:8",
+    "insertText": "CH1:8",
+    "description": "Each of these fields can store one character of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH1:9",
+    "insertText": "CH1:9",
+    "description": "Each of these fields can store one character of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH1:10",
+    "insertText": "CH1:10",
+    "description": "Each of these fields can store one character of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH2:1",
+    "insertText": "CH2:1",
+    "description": "Each of these fields can store up to two characters of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH2:2",
+    "insertText": "CH2:2",
+    "description": "Each of these fields can store up to two characters of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH2:3",
+    "insertText": "CH2:3",
+    "description": "Each of these fields can store up to two characters of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH4:1",
+    "insertText": "CH4:1",
+    "description": "Each of these fields can store up to four characters of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH4:2",
+    "insertText": "CH4:2",
+    "description": "Each of these fields can store up to four characters of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH4:3",
+    "insertText": "CH4:3",
+    "description": "Each of these fields can store up to four characters of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH4:4",
+    "insertText": "CH4:4",
+    "description": "Each of these fields can store up to four characters of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH10:1",
+    "insertText": "CH10:1",
+    "description": "Each of these fields can store up to 10 characters of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH10:2",
+    "insertText": "CH10:2",
+    "description": "Each of these fields can store up to 10 characters of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH10:3",
+    "insertText": "CH10:3",
+    "description": "Each of these fields can store up to 10 characters of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH15:1",
+    "insertText": "CH15:1",
+    "description": "Each of these fields can store up to 15 characters of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH15:2",
+    "insertText": "CH15:2",
+    "description": "Each of these fields can store up to 15 characters of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH26:1",
+    "insertText": "CH26:1",
+    "description": "Each of these fields can store up to 26 characters of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH26:2",
+    "insertText": "CH26:2",
+    "description": "Each of these fields can store up to 26 characters of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CH26:3",
+    "insertText": "CH26:3",
+    "description": "Each of these fields can store up to 26 characters of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHLONG:1",
+    "insertText": "CHLONG:1",
+    "description": "Each of these fields can store up to 132 characters of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHLONG:2",
+    "insertText": "CHLONG:2",
+    "description": "Each of these fields can store up to 132 characters of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHLONG:3",
+    "insertText": "CHLONG:3",
+    "description": "Each of these fields can store up to 132 characters of data.",
+    "isSnippet": false
+  },
+  {
+    "label": "CHLONG:4",
+    "insertText": "CHLONG:4",
+    "description": "Each of these fields can store up to 132 characters of data.",
+    "isSnippet": false
+  }
+]

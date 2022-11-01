@@ -1,0 +1,308 @@
+[
+  {
+    "label": "ID",
+    "insertText": "ID",
+    "description": "This field stores the four-character ID that identifies the Segment record.",
+    "isSnippet": false
+  },
+  {
+    "label": "DESCRIPTION",
+    "insertText": "DESCRIPTION",
+    "description": "This field stores a description of the Segment record. You cannot create a Segment record without entering a description in this field. If you do not enter a description, the system displays an error message and does not let you save the Segment record until you have entered a description.",
+    "isSnippet": false
+  },
+  {
+    "label": "TYPE",
+    "insertText": "TYPE",
+    "description": "This field stores a credit union-defined code to identify the type of loan segment.",
+    "isSnippet": false
+  },
+  {
+    "label": "OPENDATE",
+    "insertText": "OPENDATE",
+    "description": "The system updates this field with the system date when the Segment record is created. Under normal circumstances, you should not revise this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "CLOSEDATE",
+    "insertText": "CLOSEDATE",
+    "description": "This field stores the date a segment is closed. The system updates this field with the effective date of any Loan Payment (LP) teller transaction that pays off a closed-end segment (all segments in the Segment records are closed-end).",
+    "isSnippet": false
+  },
+  {
+    "label": "ORIGINALDATE",
+    "insertText": "ORIGINALDATE",
+    "description": "This field stores the date the segment was originally disbursed. The system updates this field with the effective date of the most recent Loan Segment Transfer (LG) teller transaction to the segment. Under normal circumstances, you should not revise this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "This field stores the system date in this field when you create, change, or save the Loan Segment record. Sometimes the system updates this field because the record was saved, even though there may not be any actual changes in the record.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENTORDER",
+    "insertText": "PAYMENTORDER",
+    "description": "The field contains a number from 0-9999 to indicate the order in which this segment will be paid for a Loan Payment (LP) transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENTTYPE",
+    "insertText": "PAYMENTTYPE",
+    "description": "This field stores the payment type the system should use to calculate segment payments.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTPAYMENTDATE",
+    "insertText": "LASTPAYMENTDATE",
+    "description": "This field stores the date of the last segment payment. The system updates this field with the effective date of each Loan Payment (LP) teller transaction posted to the segment.",
+    "isSnippet": false
+  },
+  {
+    "label": "BALLOONDATE",
+    "insertText": "BALLOONDATE",
+    "description": "This field contains the date a balloon segment payment comes due. Once the system date reaches this date, the system resets the Payment field to the remaining segment balance and resets the Payment Type field to (1) Level Principal.",
+    "isSnippet": false
+  },
+  {
+    "label": "MATURITYDATE",
+    "insertText": "MATURITYDATE",
+    "description": "This field contains the date the segment will be paid off.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTERESTTYPE",
+    "insertText": "INTERESTTYPE",
+    "description": "This field contains the interest type used to calculate the loan segment interest.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTERESTRATE",
+    "insertText": "INTERESTRATE",
+    "description": "This field contains the interest rate charged for the segment. If you pull this value from a loan calculation, the system updates this field with the value in the Interest Rate field of the Loan Calc screen.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTYTD",
+    "insertText": "INTYTD",
+    "description": "This field stores the total of all interest paid on the loan during the current year to date. Whenever a loan payment is posted to the segment, the system adds the interest amount to the value in this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTERESTLASTYEAR",
+    "insertText": "INTERESTLASTYEAR",
+    "description": "This field stores the total of all interest paid on the segment during the previous year. The first time you run the Close Day Processing batch program in a new calendar year, the system transfers the amount in the Interest Paid YTD field to this field.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTERESTUNPAID",
+    "insertText": "INTERESTUNPAID",
+    "description": "This field stores the amount of unpaid interest charged to the segment.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTUNPAIDBILLED",
+    "insertText": "INTUNPAIDBILLED",
+    "description": "This field stores the total amount of unpaid interest billed daily to the segment.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTERESTRATEINDEX",
+    "insertText": "INTERESTRATEINDEX",
+    "description": "The drop-down list for this field initially offers a value of (00) Fixed Rate. The other options in the list show the Description settings for each of the Interest Rate Index Parameters that has a Defined Code field set to (1) Defined Interest Rate Index.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTERESTRATEMARGINSIGN",
+    "insertText": "INTERESTRATEMARGINSIGN",
+    "description": "This field specifies whether a segment interest rate is a specific percentage above or below the index rate. The value stored in this field affects the Rate Change Processing batch program if you change rates based on a segment's interest rate index.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTERESTRATEMARGIN",
+    "insertText": "INTERESTRATEMARGIN",
+    "description": "This field and the Interest Rate Index field work together to control how the system determines variable interest rates based on a credit union-defined index. This field contains the points to be added to the base rate in the rate index to determine the variable interest rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTERESTRATEMAX",
+    "insertText": "INTERESTRATEMAX",
+    "description": "This field contains the maximum interest rate that can be used for variable rate interest calculations.",
+    "isSnippet": false
+  },
+  {
+    "label": "INTERESTRATEMIN",
+    "insertText": "INTERESTRATEMIN",
+    "description": "This field contains the minimum interest rate that can be used for variable rate interest calculations.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERIODICCAP",
+    "insertText": "PERIODICCAP",
+    "description": "This field indicates whether this segment has a periodic cap, and if so, how much it is. This field affects variable rate segments only.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERIODICSTARTRATE",
+    "insertText": "PERIODICSTARTRATE",
+    "description": "This field contains the interest rate as of the date in the Periodic Cap Start Date field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERIODICSTARTDATE",
+    "insertText": "PERIODICSTARTDATE",
+    "description": "This field stores the last anniversary date for the cap. The system maintains this field for loans with a periodic cap.",
+    "isSnippet": false
+  },
+  {
+    "label": "PERIODICFREQUENCY",
+    "insertText": "PERIODICFREQUENCY",
+    "description": "This field stores the frequency associated with the Periodic Cap field.",
+    "isSnippet": false
+  },
+  {
+    "label": "RISKRATE",
+    "insertText": "RISKRATE",
+    "description": "This value increases the margin rate when the Rate Change Processing batch program calculates the new interest rate for segments tied to an interest rate index.",
+    "isSnippet": false
+  },
+  {
+    "label": "DISCOUNTRATE",
+    "insertText": "DISCOUNTRATE",
+    "description": "This value decreases the margin rate when the Rate Change Processing batch program calculates the new interest rate for non-credit card loans tied to an interest rate index.",
+    "isSnippet": false
+  },
+  {
+    "label": "FIRSTPAYMENTDATE",
+    "insertText": "FIRSTPAYMENTDATE",
+    "description": "This field contains the first scheduled payment date for a segment.",
+    "isSnippet": false
+  },
+  {
+    "label": "SCHDRATECHANGEDATE",
+    "insertText": "SCHDRATECHANGEDATE",
+    "description": "This field contains the date a future rate change has been scheduled for this segment. See the Future Loan Rate Changes topic for more information.",
+    "isSnippet": false
+  },
+  {
+    "label": "SCHDRATE",
+    "insertText": "SCHDRATE",
+    "description": "This field contains the value of the rate to be used when a scheduled future rate change is implemented. See the Future Loan Rate Changes topic for more information.",
+    "isSnippet": false
+  },
+  {
+    "label": "SCHDPERIODSTARTRATE",
+    "insertText": "SCHDPERIODSTARTRATE",
+    "description": "This field contains the value from the Periodic Cap Start Rate field to be used when a scheduled future rate change is implemented. See Future Loan Rate Changes for more information.",
+    "isSnippet": false
+  },
+  {
+    "label": "SCHDPERIODSTARTDATE",
+    "insertText": "SCHDPERIODSTARTDATE",
+    "description": "This field contains the value from the Periodic Cap Start Date field, which the system uses as a starting point for determining when to implement a scheduled future rate change. See Future Loan Rate Changes for more information.",
+    "isSnippet": false
+  },
+  {
+    "label": "BALANCE",
+    "insertText": "BALANCE",
+    "description": "This field stores the current principal balance of the segment. The system updates this field with the current principal balance whenever a Loan Payment (LP), New Loan (LN), Loan Addon (LA), or Loan Segment Transfer (LG) teller transaction affects the loan.",
+    "isSnippet": false
+  },
+  {
+    "label": "ORIGINALBALANCE",
+    "insertText": "ORIGINALBALANCE",
+    "description": "This field stores the original balance of the segment or the balance after a balance transfer to the segment.",
+    "isSnippet": false
+  },
+  {
+    "label": "BALLOONAMOUNT",
+    "insertText": "BALLOONAMOUNT",
+    "description": "This field contains the balloon amount for a loan segment.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENT",
+    "insertText": "PAYMENT",
+    "description": "This field stores the amount of the standard segment payment.",
+    "isSnippet": false
+  },
+  {
+    "label": "PARTIALPAYMENT",
+    "insertText": "PARTIALPAYMENT",
+    "description": "This field contains the partial payment amount that applies to the segment.",
+    "isSnippet": false
+  },
+  {
+    "label": "PMTBUCKETAMOUNT:1",
+    "insertText": "PMTBUCKETAMOUNT:1",
+    "description": "The eight Pmt Bucket Amt fields store a history of payment amounts for the segment, each due on the effective date specified in the corresponding Pmt Bucket Due Date field in the Loan record. The system stores payment amounts in reverse chronological order, with the most recent payment in the Pmt Bucket Amt 1 field and the oldest payment in the Pmt Bucket Amt 8 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PMTBUCKETAMOUNT:2",
+    "insertText": "PMTBUCKETAMOUNT:2",
+    "description": "The eight Pmt Bucket Amt fields store a history of payment amounts for the segment, each due on the effective date specified in the corresponding Pmt Bucket Due Date field in the Loan record. The system stores payment amounts in reverse chronological order, with the most recent payment in the Pmt Bucket Amt 1 field and the oldest payment in the Pmt Bucket Amt 8 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PMTBUCKETAMOUNT:3",
+    "insertText": "PMTBUCKETAMOUNT:3",
+    "description": "The eight Pmt Bucket Amt fields store a history of payment amounts for the segment, each due on the effective date specified in the corresponding Pmt Bucket Due Date field in the Loan record. The system stores payment amounts in reverse chronological order, with the most recent payment in the Pmt Bucket Amt 1 field and the oldest payment in the Pmt Bucket Amt 8 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PMTBUCKETAMOUNT:4",
+    "insertText": "PMTBUCKETAMOUNT:4",
+    "description": "The eight Pmt Bucket Amt fields store a history of payment amounts for the segment, each due on the effective date specified in the corresponding Pmt Bucket Due Date field in the Loan record. The system stores payment amounts in reverse chronological order, with the most recent payment in the Pmt Bucket Amt 1 field and the oldest payment in the Pmt Bucket Amt 8 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PMTBUCKETAMOUNT:5",
+    "insertText": "PMTBUCKETAMOUNT:5",
+    "description": "The eight Pmt Bucket Amt fields store a history of payment amounts for the segment, each due on the effective date specified in the corresponding Pmt Bucket Due Date field in the Loan record. The system stores payment amounts in reverse chronological order, with the most recent payment in the Pmt Bucket Amt 1 field and the oldest payment in the Pmt Bucket Amt 8 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PMTBUCKETAMOUNT:6",
+    "insertText": "PMTBUCKETAMOUNT:6",
+    "description": "The eight Pmt Bucket Amt fields store a history of payment amounts for the segment, each due on the effective date specified in the corresponding Pmt Bucket Due Date field in the Loan record. The system stores payment amounts in reverse chronological order, with the most recent payment in the Pmt Bucket Amt 1 field and the oldest payment in the Pmt Bucket Amt 8 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PMTBUCKETAMOUNT:7",
+    "insertText": "PMTBUCKETAMOUNT:7",
+    "description": "The eight Pmt Bucket Amt fields store a history of payment amounts for the segment, each due on the effective date specified in the corresponding Pmt Bucket Due Date field in the Loan record. The system stores payment amounts in reverse chronological order, with the most recent payment in the Pmt Bucket Amt 1 field and the oldest payment in the Pmt Bucket Amt 8 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "PMTBUCKETAMOUNT:8",
+    "insertText": "PMTBUCKETAMOUNT:8",
+    "description": "The eight Pmt Bucket Amt fields store a history of payment amounts for the segment, each due on the effective date specified in the corresponding Pmt Bucket Due Date field in the Loan record. The system stores payment amounts in reverse chronological order, with the most recent payment in the Pmt Bucket Amt 1 field and the oldest payment in the Pmt Bucket Amt 8 field.",
+    "isSnippet": false
+  },
+  {
+    "label": "VARIABLERATEINDICATOR",
+    "insertText": "VARIABLERATEINDICATOR",
+    "description": "This field stores a code to identify variable rate loans with an Interest Typefield value of 0–9 in the interest rate calculation box on member statements.",
+    "isSnippet": false
+  },
+  {
+    "label": "BEGINNINGCYCLEDATE",
+    "insertText": "BEGINNINGCYCLEDATE",
+    "description": "This field is updated by the Statement Cutoff or Daily Posting batch program and contains the beginning cycle date for the current payment period due.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYMENTDUE",
+    "insertText": "PAYMENTDUE",
+    "description": "This field, used for inquiries only, contains the system-calculated payment due on the segment (including past due amounts) at the time of the inquiry.",
+    "isSnippet": false
+  },
+  {
+    "label": "PAYOFFAMOUNT",
+    "insertText": "PAYOFFAMOUNT",
+    "description": "This field, used for inquiries only, contains the system-calculated current segment payoff amount at the time of the inquiry.",
+    "isSnippet": false
+  }
+]

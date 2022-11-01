@@ -1,0 +1,260 @@
+[
+  {
+    "label": "TYPE",
+    "insertText": "TYPE",
+    "description": "This field stores a code that determines how the system uses the IRS Distribution record for dividends, maturity, or teller transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "EFFECTIVEDATE",
+    "insertText": "EFFECTIVEDATE",
+    "description": "This field stores the date on which the IRS Distribution record should take effect.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXPIRATIONDATE",
+    "insertText": "EXPIRATIONDATE",
+    "description": "This field stores the date to expire this IRS Distribution record.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "The system stores the system date in this field when you create, change, or save the IRS Distribution record. Sometimes the system updates this field because the record was saved, even though there may not be any actual changes in the record.",
+    "isSnippet": false
+  },
+  {
+    "label": "AMOUNT",
+    "insertText": "AMOUNT",
+    "description": "This field stores the required distribution amount based on the IRA Required Minimum Distribution (RMD) edit run calculation.",
+    "isSnippet": false
+  },
+  {
+    "label": "DISTRIBUTIONCODE",
+    "insertText": "DISTRIBUTIONCODE",
+    "description": "This field stores a code that identifies the distribution code to use for the withdrawal.",
+    "isSnippet": false
+  },
+  {
+    "label": "FEDWHOLDCODE",
+    "insertText": "FEDWHOLDCODE",
+    "description": "This field stores a code that determines how the system handles federal withholding for this distribution.",
+    "isSnippet": false
+  },
+  {
+    "label": "FEDWHOLDPERCENT",
+    "insertText": "FEDWHOLDPERCENT",
+    "description": "This field stores the percentage the system should withhold for federal withholding.",
+    "isSnippet": false
+  },
+  {
+    "label": "FEDWHOLDAMOUNT",
+    "insertText": "FEDWHOLDAMOUNT",
+    "description": "This field stores a dollar amount for how much the system should withhold federal withholding.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATEWHOLDCODE",
+    "insertText": "STATEWHOLDCODE",
+    "description": "This field stores a code that determines how the system handles state withholding for this distribution.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATEWHOLDPERCENT",
+    "insertText": "STATEWHOLDPERCENT",
+    "description": "This field stores the percentage the system should withhold for state withholding.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATEWHOLDAMOUNT",
+    "insertText": "STATEWHOLDAMOUNT",
+    "description": "This field stores a dollar amount for how much the system should withhold state withholding.",
+    "isSnippet": false
+  },
+  {
+    "label": "DISTRIBUTIONMETHOD",
+    "insertText": "DISTRIBUTIONMETHOD",
+    "description": "This field is used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. This field stores a code that indicates how the distribution should be handled.",
+    "isSnippet": false
+  },
+  {
+    "label": "DESTINATIONACCOUNT",
+    "insertText": "DESTINATIONACCOUNT",
+    "description": "This field is used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution and a value in the Distribution Method field of (1) Transfer. This field stores the account number associated with the share to which you are transferring funds.",
+    "isSnippet": false
+  },
+  {
+    "label": "DESTINATIONID",
+    "insertText": "DESTINATIONID",
+    "description": "This field is used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution and a value in the Distribution Method field of (1) Transfer. This field stores the share ID to which you are transferring funds.",
+    "isSnippet": false
+  },
+  {
+    "label": "DISTRIBUTIONFREQ",
+    "insertText": "DISTRIBUTIONFREQ",
+    "description": "This field is used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. This field stores a code that defines how often the distribution should occur.",
+    "isSnippet": false
+  },
+  {
+    "label": "DISTRIBUTIONDAY1",
+    "insertText": "DISTRIBUTIONDAY1",
+    "description": "This field is used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. This field stores the day of the month on which you want the automatic distribution to take place for annual, semiannual, quarterly, monthly, or semimonthly transfers.",
+    "isSnippet": false
+  },
+  {
+    "label": "DISTRIBUTIONDAY2",
+    "insertText": "DISTRIBUTIONDAY2",
+    "description": "This field is used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. This field stores the day of the month on which you want a second distribution day within a month for semimonthly transfers.",
+    "isSnippet": false
+  },
+  {
+    "label": "REGE",
+    "insertText": "REGE",
+    "description": "This field is used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution and a value in the Distribution Method field of (1) Transfer. This field stores a code that indicates if the transfer be flagged as Reg E or not.",
+    "isSnippet": false
+  },
+  {
+    "label": "NEXTDISTRIBUTNDATE",
+    "insertText": "NEXTDISTRIBUTNDATE",
+    "description": "This field is used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. This field stores the date of the next automatic share distribution.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTDISTRIBUTNAMT",
+    "insertText": "LASTDISTRIBUTNAMT",
+    "description": "This field stores the total amount of the distribution whenever the system performs certain distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "LASTDISTRIBUTNDATE",
+    "insertText": "LASTDISTRIBUTNDATE",
+    "description": "This field stores the transaction posting date of the distribution whenever the system performs certain distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SOURCEID:1",
+    "insertText": "SOURCEID:1",
+    "description": "These fields are used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. These fields store share IDs in the same account that you can use as source shares for IRS distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SOURCEID:2",
+    "insertText": "SOURCEID:2",
+    "description": "These fields are used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. These fields store share IDs in the same account that you can use as source shares for IRS distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SOURCEID:3",
+    "insertText": "SOURCEID:3",
+    "description": "These fields are used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. These fields store share IDs in the same account that you can use as source shares for IRS distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SOURCEID:4",
+    "insertText": "SOURCEID:4",
+    "description": "These fields are used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. These fields store share IDs in the same account that you can use as source shares for IRS distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SOURCEID:5",
+    "insertText": "SOURCEID:5",
+    "description": "These fields are used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. These fields store share IDs in the same account that you can use as source shares for IRS distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SOURCEID:6",
+    "insertText": "SOURCEID:6",
+    "description": "These fields are used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. These fields store share IDs in the same account that you can use as source shares for IRS distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SOURCEID:7",
+    "insertText": "SOURCEID:7",
+    "description": "These fields are used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. These fields store share IDs in the same account that you can use as source shares for IRS distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SOURCEID:8",
+    "insertText": "SOURCEID:8",
+    "description": "These fields are used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. These fields store share IDs in the same account that you can use as source shares for IRS distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SOURCEID:9",
+    "insertText": "SOURCEID:9",
+    "description": "These fields are used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. These fields store share IDs in the same account that you can use as source shares for IRS distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SOURCEID:10",
+    "insertText": "SOURCEID:10",
+    "description": "These fields are used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. These fields store share IDs in the same account that you can use as source shares for IRS distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SOURCEID:11",
+    "insertText": "SOURCEID:11",
+    "description": "These fields are used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. These fields store share IDs in the same account that you can use as source shares for IRS distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SOURCEID:12",
+    "insertText": "SOURCEID:12",
+    "description": "These fields are used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. These fields store share IDs in the same account that you can use as source shares for IRS distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SOURCEID:13",
+    "insertText": "SOURCEID:13",
+    "description": "These fields are used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. These fields store share IDs in the same account that you can use as source shares for IRS distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SOURCEID:14",
+    "insertText": "SOURCEID:14",
+    "description": "These fields are used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. These fields store share IDs in the same account that you can use as source shares for IRS distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SOURCEID:15",
+    "insertText": "SOURCEID:15",
+    "description": "These fields are used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. These fields store share IDs in the same account that you can use as source shares for IRS distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SOURCEID:16",
+    "insertText": "SOURCEID:16",
+    "description": "These fields are used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. These fields store share IDs in the same account that you can use as source shares for IRS distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SOURCEID:17",
+    "insertText": "SOURCEID:17",
+    "description": "These fields are used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. These fields store share IDs in the same account that you can use as source shares for IRS distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SOURCEID:18",
+    "insertText": "SOURCEID:18",
+    "description": "These fields are used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. These fields store share IDs in the same account that you can use as source shares for IRS distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SOURCEID:19",
+    "insertText": "SOURCEID:19",
+    "description": "These fields are used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. These fields store share IDs in the same account that you can use as source shares for IRS distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "SOURCEID:20",
+    "insertText": "SOURCEID:20",
+    "description": "These fields are used only for IRS Distribution records with a value in the IRS Distribution Type field of (0) Auto Distribution. These fields store share IDs in the same account that you can use as source shares for IRS distributions.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "This field stores a unique number within each member account that can be used as a unique identification of this record.",
+    "isSnippet": false
+  }
+]

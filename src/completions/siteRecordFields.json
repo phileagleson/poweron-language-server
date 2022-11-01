@@ -1,0 +1,92 @@
+[
+  {
+    "label": "SITENUMBER",
+    "insertText": "SITENUMBER",
+    "description": "This field stores a credit union-defined code identifying a site to which a vendor delivers cash orders.",
+    "isSnippet": false
+  },
+  {
+    "label": "SITENAME",
+    "insertText": "SITENAME",
+    "description": "This field stores a descriptive name for the site.",
+    "isSnippet": false
+  },
+  {
+    "label": "EXTRAADDRESS",
+    "insertText": "EXTRAADDRESS",
+    "description": "This field stores an extra address line for the site's deliveries.",
+    "isSnippet": false
+  },
+  {
+    "label": "STREET",
+    "insertText": "STREET",
+    "description": "This field stores the street address for the site's deliveries.",
+    "isSnippet": false
+  },
+  {
+    "label": "CITY",
+    "insertText": "CITY",
+    "description": "This field stores the city for the site's delivery address.",
+    "isSnippet": false
+  },
+  {
+    "label": "STATE",
+    "insertText": "STATE",
+    "description": "This field stores the state for the site's delivery address.",
+    "isSnippet": false
+  },
+  {
+    "label": "ZIPCODE",
+    "insertText": "ZIPCODE",
+    "description": "This field stores the ZIP Code for the site's delivery address.",
+    "isSnippet": false
+  },
+  {
+    "label": "FAXPHONE",
+    "insertText": "FAXPHONE",
+    "description": "This field stores the phone number for the site's fax machine.",
+    "isSnippet": false
+  },
+  {
+    "label": "SITECONTACTNAME",
+    "insertText": "SITECONTACTNAME",
+    "description": "This field stores the name of the contact person for this site.",
+    "isSnippet": false
+  },
+  {
+    "label": "CONTACTPHONE",
+    "insertText": "CONTACTPHONE",
+    "description": "This field stores the phone number of the site's contact person.",
+    "isSnippet": false
+  },
+  {
+    "label": "SITEID",
+    "insertText": "SITEID",
+    "description": "This field stores the identifier the BillMe system uses to uniquely identify a site.",
+    "isSnippet": false
+  },
+  {
+    "label": "SITESETTLESHAREID",
+    "insertText": "SITESETTLESHAREID",
+    "description": "This field stores the ID of the share that the corporate interface debits for the total amount of the cash order.",
+    "isSnippet": false
+  },
+  {
+    "label": "CLOSEDATE",
+    "insertText": "CLOSEDATE",
+    "description": "This field stores the date the site was closed.",
+    "isSnippet": false
+  },
+  {
+    "label": "RECORDCHANGEDATE",
+    "insertText": "RECORDCHANGEDATE",
+    "description": "This field stores the system date in this field when you create, change, or save the Site record. Sometimes the system updates this field because the record was saved, even though there may not be any actual changes in the record.",
+    "isSnippet": false
+  },
+  {
+    "label": "LOCATOR",
+    "insertText": "LOCATOR",
+    "description": "This field stores a unique number within each Preference record set that can be used as a unique identification of this record.",
+    "isSnippet": false
+  }
+]
