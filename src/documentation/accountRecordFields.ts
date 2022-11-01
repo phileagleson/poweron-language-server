@@ -85,25 +85,25 @@ acctRecordFields.set("restrict", `
 \n   The account is restricted. The user's Acct Restricted privileges determine whether the user can access restricted accounts.##### (2) Sensitive
 \n   The account is sensitive. The system automatically records any attempted access to a sensitive account on the File Maintenance Journal. The user's Acct Sensitive privileges determine whether the user can access sensitive accounts for inquiries, file maintenance, and transactions.##### (3) Employee
 \n   The account belongs to a credit union employee.
-\n       - If an employee account does not appear in a user's Restricted Accounts list, the user's Employee Acct Other privileges determine whether the user can access the account for inquiries, file maintenance, and transactions.
-\n       - If an employee account appears in a user's Restricted Accounts list, the user's Employee Acct Restricted privileges determine whether the user can access the account for inquiries, file maintenance, and transactions.
+\n       * If an employee account does not appear in a user's Restricted Accounts list, the user's Employee Acct Other privileges determine whether the user can access the account for inquiries, file maintenance, and transactions.
+\n       * If an employee account appears in a user's Restricted Accounts list, the user's Employee Acct Restricted privileges determine whether the user can access the account for inquiries, file maintenance, and transactions.
 \n##### (4) Employee Family
 \n   The account belongs to the family of a credit union employee.
-\n       - If an employee family account does not appear in a user's Restricted Accounts list, the user's Employee Acct Family privileges determine whether the user can access the account for inquiries, file maintenance, and transactions.
-\n       - If an employee family account appears in a user's Restricted Accounts list, the user's Employee Acct Restricted privileges determine whether the user can access the account for inquiries, file maintenance, and transactions.
+\n       * If an employee family account does not appear in a user's Restricted Accounts list, the user's Employee Acct Family privileges determine whether the user can access the account for inquiries, file maintenance, and transactions.
+\n       * If an employee family account appears in a user's Restricted Accounts list, the user's Employee Acct Restricted privileges determine whether the user can access the account for inquiries, file maintenance, and transactions.
 \n##### (5) Employee Sensitive
 \n   The account is a sensitive account belonging to a credit union employee. The system automatically records any attempted access to an employee sensitive account on the File Maintenance Journal.
-\n       - If an employee sensitive account does not appear in a user's Restricted Accounts list, the user's Employee Acct Sensitive privileges determine whether the user can access the account for inquiries, file maintenance, and transactions.
-\n       - If an employee sensitive account appears in a user's Restricted Accounts list, the user's Employee Acct Restricted privileges determine whether the user can access the account for inquiries, file maintenance, and transactions.
+\n       * If an employee sensitive account does not appear in a user's Restricted Accounts list, the user's Employee Acct Sensitive privileges determine whether the user can access the account for inquiries, file maintenance, and transactions.
+\n       * If an employee sensitive account appears in a user's Restricted Accounts list, the user's Employee Acct Restricted privileges determine whether the user can access the account for inquiries, file maintenance, and transactions.
 \n##### (6) Employee Sensitive Family
 \n   The account is a sensitive account belonging to the family of a credit union employee. The system automatically records any attempted access to an employee sensitive family account on the File Maintenance Journal.
-\n       - If an employee sensitive family account does not appear in a user's Restricted Accounts list, the user's Employee Acct Sens Family privileges determine whether the user can access the account for inquiries, file maintenance, and transactions.
-\n       - If an employee sensitive family account appears in a user's Restricted Accounts list, the user's Employee Acct Restricted privileges determine whether the user can access the account for inquiries, file maintenance, and transactions.
+\n       * If an employee sensitive family account does not appear in a user's Restricted Accounts list, the user's Employee Acct Sens Family privileges determine whether the user can access the account for inquiries, file maintenance, and transactions.
+\n       * If an employee sensitive family account appears in a user's Restricted Accounts list, the user's Employee Acct Restricted privileges determine whether the user can access the account for inquiries, file maintenance, and transactions.
 \nIf an account has a Restricted Access code of 1-6, you can suppress the display of account balances and payroll amounts during transactions and file maintenance by setting the appropriate Inq privilege for the user to No. For example, if you do not want your tellers to see the balances of other employees' accounts, but want to allow them to view their own account balances, set up the accounts and user privileges as follows:
-\n   - Set the Restricted Access field in all employee accounts to (3) Employee.
-\n   - Enter each teller's own account number in the Restricted Accounts list in user privileges.
-\n   - Set each user's Employee Acct Other Inq privilege to No.
-\n   - Set each user's Employee Acct Restricted Inq privilege to Yes.
+\n   * Set the Restricted Access field in all employee accounts to (3) Employee.
+\n   * Enter each teller's own account number in the Restricted Accounts list in user privileges.
+\n   * Set each user's Employee Acct Other Inq privilege to No.
+\n   * Set each user's Employee Acct Restricted Inq privilege to Yes.
 \n
 \nFor more information about this field, see Restricted Account Access.
 `)

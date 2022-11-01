@@ -13,6 +13,9 @@ import { preferenceRecordFields } from "../documentation/preferenceRecordFields"
 import { trackingRecordFields } from "../documentation/trackingRecordFields"
 import { noteRecordFields } from "../documentation/noteRecordFields"
 import { Context } from "../interfaces"
+import { shareRecordFields } from "../documentation/shareRecordFields"
+import { holdRecordFields } from "../documentation/shareHoldRecordFields"
+import { transferRecordFields } from "../documentation/transferRecordFields"
 
 
 export function getHoverHandler(context: Context) {
@@ -129,6 +132,20 @@ function getHoverInfo(fieldName: string, recordType: string, node: SyntaxNode): 
     case 'participationloan note':
     case 'agreement note':
       mdContent = noteRecordFields.get(fieldName)
+      break
+    case 'share':
+      mdContent = shareRecordFields.get(fieldName)
+      break
+    case 'share hold':
+    case 'loan hold':
+    case 'portfolio hold':
+      mdContent = holdRecordFields.get(fieldName)
+      break
+    case 'share transfer':
+    case 'eft transfer':
+    case 'loan transfer':
+    case 'externalloan transfer':
+      mdContent = transferRecordFields.get(fieldName)
       break
     default:
       return null
