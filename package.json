@@ -37,7 +37,7 @@
 		"clean": "rm -rfv ./out/*",
 		"build": "tsc -b tsconfig.json",
 		"build:force": "npm run clean && npm run build --verbose --force",
-		"postinstall": "npm run clean && npm run esbuild:build && cp ./src/tree-sitter.wasm ./out/"
+		"prepublishOnly": "npm run clean && npm run esbuild:build && cp ./src/tree-sitter.wasm ./out/"
 	},
 	"devDependencies": {
 		"@types/minimist": "^1.2.2",
