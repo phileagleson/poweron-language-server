@@ -47,7 +47,6 @@ export function getHoverHandler(context: Context) {
       }
     } else if (node.type.toString() === 'field_name' ||
       node.type.toString() === 'record_type') {
-      context.connection.console.log(`node.type: ${node.type.toString()}`)
       let recordType = ''
       let fieldName = ''
       let targetNode = node

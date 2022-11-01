@@ -127,8 +127,6 @@ export function getCompletionHandler(context: Context) {
 
       if (word) {
         word = word.split(':')[0]
-        context.connection.console.log(`word: ${word}`)
-
         switch (word.toLowerCase()) {
           case 'account':
             return acctFields
@@ -266,7 +264,6 @@ export function getCompletionHandler(context: Context) {
     } else if (triggerCharacter == '=') {
       const node = nodeAtPoint(params.position.line, params.position.character, params.textDocument.uri, context)
       if (node) {
-        context.connection.console.log(`node.type: ${node.type.toString()}`)
         if (node.type.toString().toLowerCase() === 'source_file') {
           return acctFileRecords
         }
@@ -278,7 +275,6 @@ export function getCompletionHandler(context: Context) {
       let word = wordAtPoint(params.position.line, params.position.character, params.textDocument.uri, context)
       if (word) {
         word = word.split('=')[0]
-        context.connection.console.log(`word: ${word}`)
         switch (word.toLowerCase()) {
           case 'target':
             return acctFileRecords
