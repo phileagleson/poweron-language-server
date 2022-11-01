@@ -16,6 +16,7 @@ import { Context } from "../interfaces"
 import { shareRecordFields } from "../documentation/shareRecordFields"
 import { holdRecordFields } from "../documentation/shareHoldRecordFields"
 import { transferRecordFields } from "../documentation/transferRecordFields"
+import { checkOrderRecordFields } from "../documentation/checkOrderRecordFields"
 
 
 export function getHoverHandler(context: Context) {
@@ -146,6 +147,10 @@ function getHoverInfo(fieldName: string, recordType: string, node: SyntaxNode): 
     case 'loan transfer':
     case 'externalloan transfer':
       mdContent = transferRecordFields.get(fieldName)
+      break
+    case 'loan checkorder':
+    case 'share checkorder':
+      mdContent = checkOrderRecordFields.get(fieldName)
       break
     default:
       return null
