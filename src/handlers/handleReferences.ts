@@ -22,21 +22,21 @@ export function getReferenceHandler(context: Context) {
 
     if (node.type.toString() === 'identifier') {
       if (refToFind) {
-        result = findReferences(queryString, refToFind, params.textDocument.uri, type, context)
+        return findReferences(queryString, refToFind, params.textDocument.uri, type, context)
       }
     } else if (node.type.toString() === 'variable_declaration') {
       type = IDENT_TYPE
       node = node.child(0)
       refToFind = node?.text
       if (refToFind) {
-        result = findReferences(queryString, refToFind, params.textDocument.uri, type, context)
+        return findReferences(queryString, refToFind, params.textDocument.uri, type, context)
       }
     } else if (node.type.toString() == 'procedure_call') {
       type = PROC_TYPE
       node = node.child(0)
       refToFind = node?.text
       if (refToFind) {
-        result = findReferences(queryString, refToFind, params.textDocument.uri, type, context)
+        return findReferences(queryString, refToFind, params.textDocument.uri, type, context)
       }
     }
     return result
@@ -58,14 +58,12 @@ function findReferences(queryString: string, refToFind: string, curUri: string, 
     if ((!hasDefineDiv) || (hasDefineDiv && uri === curUri) || (type === PROC_TYPE)) {
       const poweron = tree.getLanguage()
       const query = poweron.query(queryString)
-      let matches = 0
       query.captures(tree.rootNode).forEach(cap => {
         if (cap.node.text.toLowerCase() == refToFind.toLowerCase()) {
           let modifier = 0
           if (isDefFile(uri, context)) {
             modifier = -1
           }
-          matches += 1
           const foundRef = {
             uri,
             range: {
@@ -79,7 +77,9 @@ function findReferences(queryString: string, refToFind: string, curUri: string, 
               }
             }
           }
-          foundReferences.push(foundRef)
+          if (!foundReferences.includes(foundRef)) {
+            foundReferences.push(foundRef)
+          }
         }
       })
 
@@ -108,8 +108,10 @@ function getDefInCurrentFile(decToFind: string, curUri: string, context: Context
           }
         }
       }
-      result.push(foundDec)
+      if (!result.includes(foundDec))
+        result.push(foundDec)
     }
   })
   return result
 }
+

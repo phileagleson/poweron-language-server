@@ -17,6 +17,17 @@ import { shareRecordFields } from "../documentation/shareRecordFields"
 import { holdRecordFields } from "../documentation/shareHoldRecordFields"
 import { transferRecordFields } from "../documentation/transferRecordFields"
 import { checkOrderRecordFields } from "../documentation/checkOrderRecordFields"
+import { transactionRecordFields } from "../documentation/transactionRecordFields"
+import { shareAnalysisGroupRecordFields } from "../documentation/shareAnalysisGroupRecordFields"
+import { shareAnalysisFields } from "../documentation/shareAnalysisRecordFields"
+import { shareAnalysisPlanRecordFields } from "../documentation/shareAnalysisPlanRecordFields"
+import { irsRecordFields } from "../documentation/irsRecordFields"
+import { irsDistributionRecordFields } from "../documentation/irsDistributionRecordFields"
+import { loanRecordFields } from "../documentation/loanRecordFields"
+import { pledgeRecordFields } from "../documentation/pledgeRecordFields"
+import { escrowAnalysisRecordFields } from "../documentation/escrowAnalysisRecordFields"
+import { escrowRecordFields } from "../documentation/escrowRecordFields"
+import { scheduleRecordFields } from "../documentation/scheduleRecordFields"
 
 
 export function getHoverHandler(context: Context) {
@@ -150,6 +161,46 @@ function getHoverInfo(fieldName: string, recordType: string, node: SyntaxNode): 
     case 'loan checkorder':
     case 'share checkorder':
       mdContent = checkOrderRecordFields.get(fieldName)
+      break
+    case 'loan transaction':
+    case 'share transaction':
+      mdContent = transactionRecordFields.get(fieldName)
+      break
+    case 'share analysisgroup':
+      mdContent = shareAnalysisGroupRecordFields.get(fieldName)
+      break
+    case 'share analysisplan':
+      mdContent = shareAnalysisPlanRecordFields.get(fieldName)
+      break
+    case 'share analysis':
+      mdContent = shareAnalysisFields.get(fieldName)
+      break
+    case 'irs':
+    case 'ira':
+      mdContent = irsRecordFields.get(fieldName)
+      break
+    case 'irs distribution':
+      mdContent = irsDistributionRecordFields.get(fieldName)
+      break
+    case 'loan':
+      mdContent = loanRecordFields.get(fieldName)
+      break
+    case 'pledge':
+    case 'loan pledge':
+    case 'loanapp pledge':
+      mdContent = pledgeRecordFields.get(fieldName)
+      break
+    case 'loan escrowanalysis':
+    case 'loanapp escrowanalysis':
+      mdContent = escrowAnalysisRecordFields.get(fieldName)
+      break
+    case 'loan escrow':
+    case 'loanapp escrow':
+      mdContent = escrowRecordFields.get(fieldName)
+      break
+    case 'loan schedule':
+    case 'loanapp schedule':
+      mdContent = scheduleRecordFields.get(fieldName)
       break
     default:
       return null

@@ -123,10 +123,21 @@ export function getCompletionHandler(context: Context) {
     }
 
     if (triggerCharacter == ':') {
-      let word = wordAtPoint(params.position.line, params.position.character, params.textDocument.uri, context)
+      let word: string | null = ''
+      let node = nodeAtPoint(params.position.line, params.position.character - 1, params.textDocument.uri, context)
+      if (node && node.type.toString() === 'database_field') {
+        if (node.firstChild && node.firstChild.type.toString() === 'record_type') {
+          node = node.firstChild
+          word = node.text
+        }
+      } else {
+        word = wordAtPoint(params.position.line, params.position.character, params.textDocument.uri, context)
+      }
 
       if (word) {
+        context.connection.console.log(`word: ${word}`)
         word = word.split(':')[0]
+        context.connection.console.log(`word0: ${word}`)
         switch (word.toLowerCase()) {
           case 'account':
             return acctFields

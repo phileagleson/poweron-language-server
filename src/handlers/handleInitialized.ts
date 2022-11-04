@@ -4,7 +4,7 @@ import { Context } from "../interfaces"
 import { getPoweronFilesInDir, readDocumentFromUrl } from "../io"
 
 const COMMONFILES = 'commonFilesDirectory'
-const section = 'indexoutofbounds.poweron-vscode'
+const section = 'phileagleson.poweron-vscode'
 
 export function getInitializedHandler(context: Context) {
   const { trees, } = context

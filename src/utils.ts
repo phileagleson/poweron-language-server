@@ -64,6 +64,6 @@ export function hasDefineDivision(uri: URI | string, context: Context): boolean 
   }
   return hasDefineDiv
 }
-
 export const CODESTART = "```poweron"
 export const CODEEND = "```"
+
