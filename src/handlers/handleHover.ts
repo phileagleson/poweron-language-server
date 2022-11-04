@@ -28,6 +28,11 @@ import { pledgeRecordFields } from "../documentation/pledgeRecordFields"
 import { escrowAnalysisRecordFields } from "../documentation/escrowAnalysisRecordFields"
 import { escrowRecordFields } from "../documentation/escrowRecordFields"
 import { scheduleRecordFields } from "../documentation/scheduleRecordFields"
+import { segmentRecordFields } from "../documentation/segmentRecordFields"
+import { rateChangeRecordFields } from "../documentation/rateChangeRecordFields"
+import { loanBankruptcyRecordFields } from "../documentation/loanBankruptcyRecordFields"
+import { loanBankruptcyPrepetitionBalanceRecordFields } from "../documentation/loanBankruptcyPrepetitionBalanceRecordFields"
+import { eftRecordFields } from "../documentation/eftRecordFields"
 
 
 export function getHoverHandler(context: Context) {
@@ -201,6 +206,24 @@ function getHoverInfo(fieldName: string, recordType: string, node: SyntaxNode): 
     case 'loan schedule':
     case 'loanapp schedule':
       mdContent = scheduleRecordFields.get(fieldName)
+      break
+    case 'loan lnsegment':
+    case 'loanapp lnsegment':
+      mdContent = segmentRecordFields.get(fieldName)
+      break
+    case 'loan ratechange':
+      mdContent = rateChangeRecordFields.get(fieldName)
+      break
+    case 'loan bankruptcy':
+      mdContent = loanBankruptcyRecordFields.get(fieldName)
+      break
+    case 'loan bankruptcy prepetitionbal':
+      mdContent = loanBankruptcyPrepetitionBalanceRecordFields.get(fieldName)
+      break
+    case 'eft':
+    case 'bill':
+    case 'payroll':
+      mdContent = eftRecordFields.get(fieldName)
       break
     default:
       return null
