@@ -47,9 +47,11 @@ import siteRecordFieldsJson = require('../completions/siteRecordFields.json')
 import siteCashOrderTypeRecordFieldsJson = require('../completions/siteCashOrderTypeRecordFields.json')
 import externalAccountRecordFieldsJson = require('../completions/externalAccountRecordFields.json')
 import batchACHOriginationRecordFieldsJson = require('../completions/batchACHOriginationRecordFields.json')
+import loanRecordFieldsJson = require('../completions/loanRecordFields.json')
 
 import snippetJson = require('../completions/snippets.json')
 import { nodeAtPoint, wordAtPoint } from "../analyze"
+import { loanRecordFields } from "../documentation/loanRecordFields"
 
 interface JSONData {
   label: string
@@ -105,6 +107,7 @@ export function getCompletionHandler(context: Context) {
   const siteCashOrderTypeRecordFields = loadCompletionItems(siteCashOrderTypeRecordFieldsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
   const externalAccountRecordFields = loadCompletionItems(externalAccountRecordFieldsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
   const batchACHOriginationRecordFields = loadCompletionItems(batchACHOriginationRecordFieldsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
+  const loanRecordFields = loadCompletionItems(loanRecordFieldsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
 
   const snippets = loadCompletionItems(snippetJson, CompletionItemKind.Snippet, InsertTextFormat.Snippet)
 
@@ -266,6 +269,8 @@ export function getCompletionHandler(context: Context) {
             return externalAccountRecordFields
           case 'batchachorig':
             return batchACHOriginationRecordFields
+          case 'loan':
+            return loanRecordFields
           default:
             return defaultCompletions
         }

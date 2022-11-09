@@ -1,0 +1,2511 @@
+[{
+	"label": "DESCRIPTION",
+	"insertText": "DESCRIPTION",
+	"description": "This field stores a loan description that displays in inquiries and on statements.",
+	"isSnippet": false
+}, {
+	"label": "TYPE",
+	"insertText": "TYPE",
+	"description": "This field stores a credit union-defined code to identify the type of loan.",
+	"isSnippet": false
+}, {
+	"label": "ID",
+	"insertText": "ID",
+	"description": "This field stores a unique two or four-character ID that identifies the Loan record.",
+	"isSnippet": false
+}, {
+	"label": "LOANCODE",
+	"insertText": "LOANCODE",
+	"description": "This field stores a code that defines certain characteristics of the loan and determines how Symitar Quest processes the loan.",
+	"isSnippet": false
+}, {
+	"label": "ACTIVITYDATE",
+	"insertText": "ACTIVITYDATE",
+	"description": "Symitar Quest stores the date of the previous monetary transaction that affected the Loan record in this field.",
+	"isSnippet": false
+}, {
+	"label": "CHECKDIGITS",
+	"insertText": "CHECKDIGITS",
+	"description": "This field stores check digits that you may use to help Symitar Quest verify account numbers when processing drafts, ATM transactions, or outside processor transactions. Both the account number and the check digits must be valid, or Symitar Quest reports the transaction as an exception.",
+	"isSnippet": false
+}, {
+	"label": "REFERENCE",
+	"insertText": "REFERENCE",
+	"description": "This field stores any loan-related reference information for an auto loan.",
+	"isSnippet": false
+}, {
+	"label": "NICKNAME",
+	"insertText": "NICKNAME",
+	"description": "This field stores a nickname for a loan.",
+	"isSnippet": false
+}, {
+	"label": "BRANCH",
+	"insertText": "BRANCH",
+	"description": "This field stores the number of the branch that \"owns\" the loan. When you create a loan record, the default is the branch at which you create the Loan record.",
+	"isSnippet": false
+}, {
+	"label": "CREATEDBYUSER",
+	"insertText": "CREATEDBYUSER",
+	"description": "Symitar Quest stores the user ID in this field and is populated when this Loan record is created.",
+	"isSnippet": false
+}, {
+	"label": "CREATEDATBRANCH",
+	"insertText": "CREATEDATBRANCH",
+	"description": "Symitar Quest stores the branch ID in this field of the branch where the Loan record is created.",
+	"isSnippet": false
+}, {
+	"label": "PURPOSECODE",
+	"insertText": "PURPOSECODE",
+	"description": "This field stores the credit union-defined code to indicate the purpose of the loan.",
+	"isSnippet": false
+}, {
+	"label": "COUPONCODE",
+	"insertText": "COUPONCODE",
+	"description": "This field stores a code that specifies how Symitar Quest handles loans with the Payment Method field set to (1) Coupon.",
+	"isSnippet": false
+}, {
+	"label": "VIN",
+	"insertText": "VIN",
+	"description": "Symitar Quest stores a member's Vehicle Identification Number.",
+	"isSnippet": false
+}, {
+	"label": "MFOELID",
+	"insertText": "MFOELID",
+	"description": "This field stores the credit union-defined code to identify a loan that is part of a Multi-Featured, Open-End Lending (MFOEL) plan.",
+	"isSnippet": false
+}, {
+	"label": "NOTENUMBER",
+	"insertText": "NOTENUMBER",
+	"description": "This field stores a credit union-defined number associated with this loan.",
+	"isSnippet": false
+}, {
+	"label": "MICRACCTNUMBER",
+	"insertText": "MICRACCTNUMBER",
+	"description": "This field stores the account number portion of a draft's MICR line.",
+	"isSnippet": false
+}, {
+	"label": "LASTPAYMENTDATE",
+	"insertText": "LASTPAYMENTDATE",
+	"description": "The system stores the date of the last loan payment in this field.",
+	"isSnippet": false
+}, {
+	"label": "FIRSTPAYMENTDATE",
+	"insertText": "FIRSTPAYMENTDATE",
+	"description": "The system stores the date of the first scheduled payment date for this loan.",
+	"isSnippet": false
+}, {
+	"label": "PAYMENTTYPE",
+	"insertText": "PAYMENTTYPE",
+	"description": "This field stores a code to indicate how the system should calculate loan payments.",
+	"isSnippet": false
+}, {
+	"label": "PAYMENTMETHOD",
+	"insertText": "PAYMENTMETHOD",
+	"description": "This field stores a code that specifies how loan payments are to be made.",
+	"isSnippet": false
+}, {
+	"label": "PAYMENTFREQUENCY",
+	"insertText": "PAYMENTFREQUENCY",
+	"description": "This field stores a code that specifies when the member makes a payment.",
+	"isSnippet": false
+}, {
+	"label": "ORIGINALDATE",
+	"insertText": "ORIGINALDATE",
+	"description": "This field stores the date the loan was originally disbursed.",
+	"isSnippet": false
+}, {
+	"label": "OPENDATE",
+	"insertText": "OPENDATE",
+	"description": "This field stores the date when the Loan record is created.",
+	"isSnippet": false
+}, {
+	"label": "CLOSEDATE",
+	"insertText": "CLOSEDATE",
+	"description": "This field stores the date the loan is closed.",
+	"isSnippet": false
+}, {
+	"label": "DUEDAY1",
+	"insertText": "DUEDAY1",
+	"description": "This field stores the day of the month on which the first payment is due for semimonthly loans, or the day of the month on which all payments are due for annual, semiannual, quarterly, bimonthly, or monthly loans.",
+	"isSnippet": false
+}, {
+	"label": "DUEDAY2",
+	"insertText": "DUEDAY2",
+	"description": "This field stores the day of the month on which the second payment is due for semimonthly payment loans.",
+	"isSnippet": false
+}, {
+	"label": "DUEDATE",
+	"insertText": "DUEDATE",
+	"description": "Symitar Quest stores the date the next loan payment is due.",
+	"isSnippet": false
+}, {
+	"label": "MAXLOANDUEDATE",
+	"insertText": "MAXLOANDUEDATE",
+	"description": "This field contains the calculation of how far the loan’s due date is allowed to advance into the future.",
+	"isSnippet": false
+}, {
+	"label": "NEWLOANDUEDATECODE",
+	"insertText": "NEWLOANDUEDATECODE",
+	"description": "This field stores a code that specifies how Symitar Quest advances the due date for an add-on to a zero-balance loan.",
+	"isSnippet": false
+}, {
+	"label": "DUEDATEADVANCECODE",
+	"insertText": "DUEDATEADVANCECODE",
+	"description": "This field stores a code that specifies how Symitar Quest advances the Due Date field when a payment is made to the loan.",
+	"isSnippet": false
+}, {
+	"label": "MAXDUEDATEADVANCEPERIOD",
+	"insertText": "MAXDUEDATEADVANCEPERIOD",
+	"description": "This field stores a code that defines the maximum number of periods the due date can be advanced into the future.",
+	"isSnippet": false
+}, {
+	"label": "INITIALBCDSETTINGOPTION",
+	"insertText": "INITIALBCDSETTINGOPTION",
+	"description": "This field stores a code that determines how the beginning cycle date will be set for non-billed loans and loans that use the (1) Use Loan Due Date (One when due) option.",
+	"isSnippet": false
+}, {
+	"label": "BCDDAY1",
+	"insertText": "BCDDAY1",
+	"description": "This field stores the day that each billing cycle starts for a loan.",
+	"isSnippet": false
+}, {
+	"label": "BCDDAY2",
+	"insertText": "BCDDAY2",
+	"description": "This field stores the loan's beginning cycle date only for loans that have the Payment Frequency field value set to (5) Semimonthly.",
+	"isSnippet": false
+}, {
+	"label": "BEGINNINGCYCLEDATE",
+	"insertText": "BEGINNINGCYCLEDATE",
+	"description": "This field contains the calculation of when a loan payment can advance the loan’s due date and, in combination with the Max Due Date Advance Period field, how far into the future the total amount of multiple payments can advance the loan due date.",
+	"isSnippet": false
+}, {
+	"label": "BALLOONDATE",
+	"insertText": "BALLOONDATE",
+	"description": "This field stores the date any balloon loan payment comes due.",
+	"isSnippet": false
+}, {
+	"label": "BALLOONAMOUNT",
+	"insertText": "BALLOONAMOUNT",
+	"description": "This field stores the amount of the final payment (including principal and interest) of a loan.",
+	"isSnippet": false
+}, {
+	"label": "MATURITYDATE",
+	"insertText": "MATURITYDATE",
+	"description": "This field stores the date the loan will be paid off.",
+	"isSnippet": false
+}, {
+	"label": "BALANCE",
+	"insertText": "BALANCE",
+	"description": "This field stores the current principal balance of the loan.",
+	"isSnippet": false
+}, {
+	"label": "ORIGINALBALANCE",
+	"insertText": "ORIGINALBALANCE",
+	"description": "This field stores the original balance of the loan or the balance after an add-on to the loan.",
+	"isSnippet": false
+}, {
+	"label": "CREDITLIMIT",
+	"insertText": "CREDITLIMIT",
+	"description": "This field stores the credit limit for line of credit or credit card loans.",
+	"isSnippet": false
+}, {
+	"label": "AVAILABLECREDIT",
+	"insertText": "AVAILABLECREDIT",
+	"description": "This field contains the computed available credit.",
+	"isSnippet": false
+}, {
+	"label": "CASHADVANCELIMIT",
+	"insertText": "CASHADVANCELIMIT",
+	"description": "This field contains the computed maximum cash advance limit at the time of inquiry.",
+	"isSnippet": false
+}, {
+	"label": "AVAILABLECASHADVANCE",
+	"insertText": "AVAILABLECASHADVANCE",
+	"description": "This field contains the computed amount of cash advance available at the time of inquiry.",
+	"isSnippet": false
+}, {
+	"label": "BALANCETRANSFERLIMIT",
+	"insertText": "BALANCETRANSFERLIMIT",
+	"description": "This field contains the computed maximum balance transfer limit at time of inquiry.",
+	"isSnippet": false
+}, {
+	"label": "AVAILABLEBALANCETRANSFER",
+	"insertText": "AVAILABLEBALANCETRANSFER",
+	"description": "This field contains the computed amount of balance transfer available at the time of inquiry.",
+	"isSnippet": false
+}, {
+	"label": "COMBINEDCABTLIMIT",
+	"insertText": "COMBINEDCABTLIMIT",
+	"description": "This field contains the computed maximum combined cash advance and balance transfer limit at time of inquiry.",
+	"isSnippet": false
+}, {
+	"label": "AVAILABLECOMBINEDCABT",
+	"insertText": "AVAILABLECOMBINEDCABT",
+	"description": "This field contains the computed combined cash advance and balance transfer amount available at the time of inquiry.",
+	"isSnippet": false
+}, {
+	"label": "CREDLIMITEXPIRATION",
+	"insertText": "CREDLIMITEXPIRATION",
+	"description": "This field stores the expiration date of the credit limit for line of credit or credit card loans.",
+	"isSnippet": false
+}, {
+	"label": "AVAILCREDITCALC",
+	"insertText": "AVAILCREDITCALC",
+	"description": "This field stores a code that determines how available credit is calculated only for line of credit loans.",
+	"isSnippet": false
+}, {
+	"label": "CREDITLIMITGROUP",
+	"insertText": "CREDITLIMITGROUP",
+	"description": "This field stores a code that identifies the credit limit group with which this Loan record is associated.",
+	"isSnippet": false
+}, {
+	"label": "ADVANCEAMOUNT",
+	"insertText": "ADVANCEAMOUNT",
+	"description": "Symitar Quest stores the total amount of advances against the loan in this field.",
+	"isSnippet": false
+}, {
+	"label": "LASTADVANCEDATE",
+	"insertText": "LASTADVANCEDATE",
+	"description": "Symitar Quest stores the last date an advance was taken against the loan.",
+	"isSnippet": false
+}, {
+	"label": "ORIGINATIONBALANCE",
+	"insertText": "ORIGINATIONBALANCE",
+	"description": "Symitar Quest stores the opening day balance of the loan. This information is used on IRS form 1098 for the Outstanding Mortgage Principal (box 2).",
+	"isSnippet": false
+}, {
+	"label": "BEGINNINGYEARBALANCE",
+	"insertText": "BEGINNINGYEARBALANCE",
+	"description": "Symitar Quest stores the balance of the loan at the start of the current calendar year in this field.",
+	"isSnippet": false
+}, {
+	"label": "PREVBEGINNINGYEARBALANCE",
+	"insertText": "PREVBEGINNINGYEARBALANCE",
+	"description": "Symitar Quest stores the balance of the loan at the start of the previous calendar year in this field.",
+	"isSnippet": false
+}, {
+	"label": "PAYMENT",
+	"insertText": "PAYMENT",
+	"description": "This field stores the amount of the standard loan payment.",
+	"isSnippet": false
+}, {
+	"label": "ALTERNATEPAYMENT",
+	"insertText": "ALTERNATEPAYMENT",
+	"description": "This field stores an amount greater than the standard payment that the member would like to pay between the dates in the Alternate Pmt Effective and the Alternate Pmt Expiration fields.",
+	"isSnippet": false
+}, {
+	"label": "ALTPMTEFFECTIVE",
+	"insertText": "ALTPMTEFFECTIVE",
+	"description": "This field stores the date on which the value in the Alternate Payment field becomes effective.",
+	"isSnippet": false
+}, {
+	"label": "ALTPMTEXPIRATION",
+	"insertText": "ALTPMTEXPIRATION",
+	"description": "This field stores the date on which the value in the Alternate Payment field expires.",
+	"isSnippet": false
+}, {
+	"label": "PARTIALPAYMENT",
+	"insertText": "PARTIALPAYMENT",
+	"description": "Symitar Quest stores the amount of any partial payments made to the loan in this field.",
+	"isSnippet": false
+}, {
+	"label": "UNAPPLIEDPARTIALPMT",
+	"insertText": "UNAPPLIEDPARTIALPMT",
+	"description": "Symitar Quest stores and accumulates the unapplied partial payments made to loans with the Interest Type field value set to (1) Monthly 360 day or (8) Scheduled/364, through loan payment and Loan Payment Adjustment (LPZ) transactions until a full payment can be posted to the loan.",
+	"isSnippet": false
+}, {
+	"label": "STMTUNAPPLIEDPARTIALPMT",
+	"insertText": "STMTUNAPPLIEDPARTIALPMT",
+	"description": "Symitar Quest stores the loan balance in this field from the Unapplied Partial Payment field as of the Statement Date field value.",
+	"isSnippet": false
+}, {
+	"label": "ALLOWUNAPPLIEDPMT",
+	"insertText": "ALLOWUNAPPLIEDPMT",
+	"description": "This field stores a code that specifies if unapplied partial payments are allowed to accumulate in the Unapplied Partial Payment field for loans with the Interest Type field value set to (1) Monthly 360 day or (8) Scheduled/364.",
+	"isSnippet": false
+}, {
+	"label": "LASTFMDATE",
+	"insertText": "LASTFMDATE",
+	"description": "Symitar Quest stores the date of the last file maintenance of this Loan record or a child record of this Loan record in this field.",
+	"isSnippet": false
+}, {
+	"label": "RECORDCHANGEDATE",
+	"insertText": "RECORDCHANGEDATE",
+	"description": "Symitar Quest stores the system date in this field when you create, change, or save the Loan record. Sometimes Symitar Quest updates this field because the record was saved, even though there may not be any actual changes in the record.",
+	"isSnippet": false
+}, {
+	"label": "LASTTRANDATE",
+	"insertText": "LASTTRANDATE",
+	"description": "Symitar Quest stores the date of the last teller or batch transaction that affected this Loan record in this field.",
+	"isSnippet": false
+}, {
+	"label": "LASTPURGEDATE",
+	"insertText": "LASTPURGEDATE",
+	"description": "Symitar Quest stores the date in this field of the last loan history purge for this loan type.",
+	"isSnippet": false
+}, {
+	"label": "COLLATERALCODE",
+	"insertText": "COLLATERALCODE",
+	"description": "This field stores the credit union-defined code to identify the collateral, if any, for the loan.",
+	"isSnippet": false
+}, {
+	"label": "COLLATERALDATE",
+	"insertText": "COLLATERALDATE",
+	"description": "This field stores the date the collateral, if any, was pledged for the loan.",
+	"isSnippet": false
+}, {
+	"label": "APPROVALCODE",
+	"insertText": "APPROVALCODE",
+	"description": "This field stores a user number or a credit union-defined code to indicate who approved the loan, depending on credit union policy.",
+	"isSnippet": false
+}, {
+	"label": "APPROVALDATE",
+	"insertText": "APPROVALDATE",
+	"description": "This field stores the date the loan was approved.",
+	"isSnippet": false
+}, {
+	"label": "MILITARYAPRLOAN",
+	"insertText": "MILITARYAPRLOAN",
+	"description": "This field stores a code that indicates whether the loan qualifies for the military APR program.",
+	"isSnippet": false
+}, {
+	"label": "HMDAUNIVERSALLOANIDENTIFIER1",
+	"insertText": "HMDAUNIVERSALLOANIDENTIFIER1",
+	"description": "This field is used for HMDA reporting; it stores the unique loan identifier (ULI) of the covered loan.",
+	"isSnippet": false
+}, {
+	"label": "HMDAUNIVERSALLOANIDENTIFIER2",
+	"insertText": "HMDAUNIVERSALLOANIDENTIFIER2",
+	"description": "This field is used for HMDA reporting; it stores up to five additional universal loan identifier (ULI) characters, if the ULI was previously established outside of Symitar Quest and is more than the 40 characters allowed in the Universal Loan Identifier 1 field.",
+	"isSnippet": false
+}, {
+	"label": "N/A",
+	"insertText": "N/A",
+	"description": "This field is an action button that allows Symitar Quest to populate the Universal Loan Identifier 1 field on the Loan record.",
+	"isSnippet": false
+}, {
+	"label": "STATEMENTGROUP",
+	"insertText": "STATEMENTGROUP",
+	"description": "This field stores a credit union-defined statement group number that can be used to specify groups to categorize loans for reports, displays, and statement printing.",
+	"isSnippet": false
+}, {
+	"label": "STATEMENTMAILCODE",
+	"insertText": "STATEMENTMAILCODE",
+	"description": "This field stores a credit union-defined non-mail codes to categorize reasons for not mailing statements.",
+	"isSnippet": false
+}, {
+	"label": "STATEMENTDATE",
+	"insertText": "STATEMENTDATE",
+	"description": "Symitar Quest stores the date of the most recent statement cutoff for this loan in this field.",
+	"isSnippet": false
+}, {
+	"label": "STATEMENTPREVDATE",
+	"insertText": "STATEMENTPREVDATE",
+	"description": "Symitar Quest stores the date the previous statement was produced for this loan in this field.",
+	"isSnippet": false
+}, {
+	"label": "PAYMENTCALCTYPE",
+	"insertText": "PAYMENTCALCTYPE",
+	"description": "This field stores a credit union-defined payment calculation type that defines how Symitar Quest should calculate the loan payment.",
+	"isSnippet": false
+}, {
+	"label": "PAYMENTSKIPS",
+	"insertText": "PAYMENTSKIPS",
+	"description": "This field specifies a code that specifies the number of loan payments the member is allowed to skip.",
+	"isSnippet": false
+}, {
+	"label": "PAYMENTSKIPSTARTDAY",
+	"insertText": "PAYMENTSKIPSTARTDAY",
+	"description": "This field stores a code that represents the due date of the first payment the member can skip.",
+	"isSnippet": false
+}, {
+	"label": "PAYMENTAPPLICATIONMETHOD",
+	"insertText": "PAYMENTAPPLICATIONMETHOD",
+	"description": "This field stores a system or credit union-defined code that defines how Symitar Quest should apply loan payments for this loan.",
+	"isSnippet": false
+}, {
+	"label": "PAYMENTCOUNT",
+	"insertText": "PAYMENTCOUNT",
+	"description": "Symitar Quest stores the total number of payments in the term of the loan in this field.",
+	"isSnippet": false
+}, {
+	"label": "PAYMENTHISTORY:1",
+	"insertText": "PAYMENTHISTORY:1",
+	"description": "Symitar Quest stores the number of payments made during the term of the loan in this field.",
+	"isSnippet": false
+}, {
+	"label": "FASB91ALTERNATETERM",
+	"insertText": "FASB91ALTERNATETERM",
+	"description": "This field stores a credit union-determined term that is shorter than the term of the loan calculated for the Payment Count field.",
+	"isSnippet": false
+}, {
+	"label": "PAYMENTHISTORY:2",
+	"insertText": "PAYMENTHISTORY:2",
+	"description": "Symitar Quest stores the number of times loan payments have been late by the number of days specified in the Payment History Day Cutoff 1 parameter defined in the Miscellaneous Parameters.",
+	"isSnippet": false
+}, {
+	"label": "PAYMENTHISTORY:3",
+	"insertText": "PAYMENTHISTORY:3",
+	"description": "Symitar Quest stores the number of times loan payments have been late by the number of days specified in the Payment History Day Cutoff 2 parameter defined in the Miscellaneous Parameters.",
+	"isSnippet": false
+}, {
+	"label": "PAYMENTHISTORY:4",
+	"insertText": "PAYMENTHISTORY:4",
+	"description": "Symitar Quest stores the number of times loan payments have been late by the number of days specified in the Payment History Day Cutoff 3 parameter defined in the Miscellaneous Parameters.",
+	"isSnippet": false
+}, {
+	"label": "PAYMENTHISTORY:5",
+	"insertText": "PAYMENTHISTORY:5",
+	"description": "Symitar Quest stores the number of times loan payments have been late by the number of days specified in the Payment History Day Cutoff 4 parameter defined in the Miscellaneous Parameters.",
+	"isSnippet": false
+}, {
+	"label": "PAYMENTHISTORY:6",
+	"insertText": "PAYMENTHISTORY:6",
+	"description": "Symitar Quest stores the number of times loan payments have been late by the number of days specified in the Payment History Day Cutoff 5 parameter defined in the Miscellaneous Parameters.",
+	"isSnippet": false
+}, {
+	"label": "FEESCHARGESPOSTINGOPTION",
+	"insertText": "FEESCHARGESPOSTINGOPTION",
+	"description": "This field stores a code that determines how billed fees and late charges are collected after a loan payment is applied.",
+	"isSnippet": false
+}, {
+	"label": "STMTFEESYTD",
+	"insertText": "STMTFEESYTD",
+	"description": "Symitar Quest stores the amount in this field to be printed on statements of total fees charged to this loan this year.",
+	"isSnippet": false
+}, {
+	"label": "STMTFEESLASTYEAR",
+	"insertText": "STMTFEESLASTYEAR",
+	"description": "Symitar Quest stores the sum of all fields that make up the Stmt Fees YTD field for this loan during the previous year in this field.",
+	"isSnippet": false
+}, {
+	"label": "FEESYTD",
+	"insertText": "FEESYTD",
+	"description": "Symitar Quest stores the amount in this field of total fees charged to this loan this year.",
+	"isSnippet": false
+}, {
+	"label": "FEESYTDNOADJ",
+	"insertText": "FEESYTDNOADJ",
+	"description": "Symitar Quest stores the total amount in this field of transaction fees charged to a loan during the current year, not including adjustments.",
+	"isSnippet": false
+}, {
+	"label": "FEESLASTYEAR",
+	"insertText": "FEESLASTYEAR",
+	"description": "Symitar Quest stores the amount in this field of total fees charged to this loan during the previous year.",
+	"isSnippet": false
+}, {
+	"label": "FEESLASTYRNOADJ",
+	"insertText": "FEESLASTYRNOADJ",
+	"description": "Symitar Quest stores the amount in this field of fees assessed on the loan the previous year, not including adjustments.",
+	"isSnippet": false
+}, {
+	"label": "STMTMAXLATEFEE",
+	"insertText": "STMTMAXLATEFEE",
+	"description": "This field stores value of the maximum late fee to be printed in the Late Payment Warning disclosure on member statements for credit card loans.",
+	"isSnippet": false
+}, {
+	"label": "STMTMAXPENALTYAPR",
+	"insertText": "STMTMAXPENALTYAPR",
+	"description": "Symitar Quest stores the maximum penalty Annual Percentage Rate (APR) on a loan in this field to print in the Late Payment Warning section on statements.",
+	"isSnippet": false
+}, {
+	"label": "CURRSTMTFEES",
+	"insertText": "CURRSTMTFEES",
+	"description": "Symitar Quest stores the accrued amounts of fees paid on the loan in this field for the current statement period.",
+	"isSnippet": false
+}, {
+	"label": "PREVSTMTFEES",
+	"insertText": "PREVSTMTFEES",
+	"description": "Symitar Quest stores the accrued amounts of fees paid on the loan in this field for the previous statement period.",
+	"isSnippet": false
+}, {
+	"label": "CURRSTMTINTACCRD",
+	"insertText": "CURRSTMTINTACCRD",
+	"description": "Symitar Quest stores the total interest charged or accrued for the current statement period in this field.",
+	"isSnippet": false
+}, {
+	"label": "PREVSTMTINTACCRD",
+	"insertText": "PREVSTMTINTACCRD",
+	"description": "Symitar Quest stores the total interest charged or accrued for the previous statement period in this field.",
+	"isSnippet": false
+}, {
+	"label": "MAPRCURRSTMTINTACCRD",
+	"insertText": "MAPRCURRSTMTINTACCRD",
+	"description": "Symitar Quest stores the total interest charged or accrued for the current statement period in this field, beginning on the day following the date in the Statement Date field.",
+	"isSnippet": false
+}, {
+	"label": "STMTESCROWUNPAID",
+	"insertText": "STMTESCROWUNPAID",
+	"description": "Symitar Quest stores the balance in the Escrow Unpaid field in this field as of the date in the Statement Date field.",
+	"isSnippet": false
+}, {
+	"label": "DQNOTICETYPE",
+	"insertText": "DQNOTICETYPE",
+	"description": "This field stores a code that identifies which set of delinquency notices are to be used for the loan.",
+	"isSnippet": false
+}, {
+	"label": "DQNOTICENUMBER",
+	"insertText": "DQNOTICENUMBER",
+	"description": "This field stores the total number of delinquent notices generated for this loan. The field can also indicate if Symitar Quest should not generate delinquent notices for this loan.",
+	"isSnippet": false
+}, {
+	"label": "DQNOTICEDATE",
+	"insertText": "DQNOTICEDATE",
+	"description": "Symitar Quest stores the last date a delinquent notice was generated for this loan in this field.",
+	"isSnippet": false
+}, {
+	"label": "DQCARDDATE",
+	"insertText": "DQCARDDATE",
+	"description": "Symitar Quest stores the last date a delinquent card was generated for this loan in this field.",
+	"isSnippet": false
+}, {
+	"label": "DQCALCULATIONMETHOD",
+	"insertText": "DQCALCULATIONMETHOD",
+	"description": "This field stores a code that indicates if Symitar Quest should calculate the values for the payment buckets each month.",
+	"isSnippet": false
+}, {
+	"label": "EARLYINTERVNTNNOTICEDATE",
+	"insertText": "EARLYINTERVNTNNOTICEDATE",
+	"description": "This field stores the last date that you sent an Early Intervention Notice to the member.",
+	"isSnippet": false
+}, {
+	"label": "CHARGEOFFDATE",
+	"insertText": "CHARGEOFFDATE",
+	"description": "This field stores the date that the loan was charged off.",
+	"isSnippet": false
+}, {
+	"label": "CHARGEOFFTYPE",
+	"insertText": "CHARGEOFFTYPE",
+	"description": "This field stores a credit union-defined code to indicate why this loan was charged off or what type of loan was charged off.",
+	"isSnippet": false
+}, {
+	"label": "CHARGEOFFAMOUNT",
+	"insertText": "CHARGEOFFAMOUNT",
+	"description": "This field stores the amount charged-off.",
+	"isSnippet": false
+}, {
+	"label": "REFUNDPOSTCODE",
+	"insertText": "REFUNDPOSTCODE",
+	"description": "This field stores how portions of the interest payments may be refunded, used mainly for real estate loans.",
+	"isSnippet": false
+}, {
+	"label": "REFUNDYTD",
+	"insertText": "REFUNDYTD",
+	"description": "Symitar Quest stores the total of all interest refunds in this field during the current year to date.",
+	"isSnippet": false
+}, {
+	"label": "REFUNDLASTYEAR",
+	"insertText": "REFUNDLASTYEAR",
+	"description": "Symitar Quest stores the total amount of all interest refunded to the member in this field during the previous year.",
+	"isSnippet": false
+}, {
+	"label": "PRINCIPALYTD",
+	"insertText": "PRINCIPALYTD",
+	"description": "Symitar Quest stores the total amount applied to the principal of this loan during the current year to date.",
+	"isSnippet": false
+}, {
+	"label": "PRINCIPALLASTYEAR",
+	"insertText": "PRINCIPALLASTYEAR",
+	"description": "Symitar Quest stores the total amount applied to the principal of this loan in this field during the previous year.",
+	"isSnippet": false
+}, {
+	"label": "PRINPAIDFROMOPEN",
+	"insertText": "PRINPAIDFROMOPEN",
+	"description": "Symitar Quest stores the total amount of principal paid on a loan in this field.",
+	"isSnippet": false
+}, {
+	"label": "STMTPRINCIPALYTD",
+	"insertText": "STMTPRINCIPALYTD",
+	"description": "Symitar Quest stores the amount in the Principal YTD field in this field at the time of statement cutoff.",
+	"isSnippet": false
+}, {
+	"label": "STMTPRINCIPALLASTYEAR",
+	"insertText": "STMTPRINCIPALLASTYEAR",
+	"description": "Symitar Quest stores the amount contained in the Principal Last Year field in this field at the time of statement cutoff.",
+	"isSnippet": false
+}, {
+	"label": "STMTPRINPDFROMOPEN",
+	"insertText": "STMTPRINPDFROMOPEN",
+	"description": "Symitar Quest stores the amount in the Principal Paid From Open field in this field at the time of statement cutoff.",
+	"isSnippet": false
+}, {
+	"label": "MINBALANCE",
+	"insertText": "MINBALANCE",
+	"description": "This field stores the minimum balance for the loan.",
+	"isSnippet": false
+}, {
+	"label": "MINADVANCE",
+	"insertText": "MINADVANCE",
+	"description": "This field stores the minimum advance amount for line of credit or credit card loans.",
+	"isSnippet": false
+}, {
+	"label": "REGECOUNT",
+	"insertText": "REGECOUNT",
+	"description": "Symitar Quest stores the total number of Regulation E transactions in this field that affected this loan during the current statement period.",
+	"isSnippet": false
+}, {
+	"label": "SECUREDCODE",
+	"insertText": "SECUREDCODE",
+	"description": "This field stores a code that indicates how this loan is secured.",
+	"isSnippet": false
+}, {
+	"label": "SECUREDAMOUNT",
+	"insertText": "SECUREDAMOUNT",
+	"description": "This field stores the total amount secured for this loan.",
+	"isSnippet": false
+}, {
+	"label": "FASB91CODE",
+	"insertText": "FASB91CODE",
+	"description": "This field stores a credit union-defined code used in conjunction with loan type codes to create combinations that post to designated General Ledger accounts.",
+	"isSnippet": false
+}, {
+	"label": "REFINANCEBALANCE",
+	"insertText": "REFINANCEBALANCE",
+	"description": "Symitar Quest stores the balance of the refinance when the next Loan Refinance (LR) transaction is processed.",
+	"isSnippet": false
+}, {
+	"label": "REFINANCEDATE",
+	"insertText": "REFINANCEDATE",
+	"description": "Symitar Quest stores the date of the refinance when the next Loan Refinance (LR) transaction is processed.",
+	"isSnippet": false
+}, {
+	"label": "REFINANCECOUNTER",
+	"insertText": "REFINANCECOUNTER",
+	"description": "This field stores the number of Loan Refinance (LR) transactions that occurred.",
+	"isSnippet": false
+}, {
+	"label": "INTPAYOFFCALC",
+	"insertText": "INTPAYOFFCALC",
+	"description": "This field stores a code that determines how payoff interest is calculated when a payoff inquiry is performed or when the loan payment amount received is sufficient to pay the loan in full.",
+	"isSnippet": false
+}, {
+	"label": "INTERESTTYPE",
+	"insertText": "INTERESTTYPE",
+	"description": "This field stores either a system-defined or a credit union-defined code that indicates the method Symitar Quest uses to calculate interest on the loan.",
+	"isSnippet": false
+}, {
+	"label": "INTERESTRATE",
+	"insertText": "INTERESTRATE",
+	"description": "This field stores the interest rate charged for the loan.",
+	"isSnippet": false
+}, {
+	"label": "INTERESTDATE",
+	"insertText": "INTERESTDATE",
+	"description": "Symitar Quest stores the most recent date from which interest accrues in this field, which means interest has been calculated on this loan through the previous day (but not including today).",
+	"isSnippet": false
+}, {
+	"label": "INTERESTUNPAID",
+	"insertText": "INTERESTUNPAID",
+	"description": "Symitar Quest stores the amount of unpaid interest due on the loan in this field as of the day before the loan's Interest Date field value.",
+	"isSnippet": false
+}, {
+	"label": "INTUNPAIDBILLED",
+	"insertText": "INTUNPAIDBILLED",
+	"description": "Symitar Quest stores the total amount of unpaid interest in this field for which the member has been billed.",
+	"isSnippet": false
+}, {
+	"label": "INTERESTYTD",
+	"insertText": "INTERESTYTD",
+	"description": "Symitar Quest stores the total of all interest paid on the loan in this field during the current year to date.",
+	"isSnippet": false
+}, {
+	"label": "INTERESTLASTYEAR",
+	"insertText": "INTERESTLASTYEAR",
+	"description": "Symitar Quest stores the total of all interest paid on the loan in this field during the previous year.",
+	"isSnippet": false
+}, {
+	"label": "INTERESTFROMOPEN",
+	"insertText": "INTERESTFROMOPEN",
+	"description": "Symitar Quest stores the total of all interest paid on the loan in this field since the loan was opened.",
+	"isSnippet": false
+}, {
+	"label": "STMTINTFROMOPEN",
+	"insertText": "STMTINTFROMOPEN",
+	"description": "Symitar Quest stores the amount in the Interest From Open field at the time of statement cutoff.",
+	"isSnippet": false
+}, {
+	"label": "SPLITRATE",
+	"insertText": "SPLITRATE",
+	"description": "To encourage members to carry a higher loan balance, some credit unions charge a lower interest rate once the loan balance reaches or exceeds a specified amount. This field stores that lower interest rate.",
+	"isSnippet": false
+}, {
+	"label": "SPLITRATEBALANCE",
+	"insertText": "SPLITRATEBALANCE",
+	"description": "To encourage members to carry a higher loan balance, some credit unions charge a lower interest rate once the loan balance reaches or exceeds a specified amount. This field stores the loan balance that triggers the lower interest rate.",
+	"isSnippet": false
+}, {
+	"label": "VARIABLERATEINDICATOR",
+	"insertText": "VARIABLERATEINDICATOR",
+	"description": "This field stores a code to identify variable rate loans with an interest type of 0-9 in the interest rate calculation section on member statements.",
+	"isSnippet": false
+}, {
+	"label": "INTERESTRATEINDEX",
+	"insertText": "INTERESTRATEINDEX",
+	"description": "This field stores a code that identifies the rate index to specify the base rate and frequency of changes.",
+	"isSnippet": false
+}, {
+	"label": "INTERESTRATEMARGIN",
+	"insertText": "INTERESTRATEMARGIN",
+	"description": "This field stores the points to be added to the base rate in the rate index to determine the value in the Interest Rate field.",
+	"isSnippet": false
+}, {
+	"label": "INTERESTRATEMARGINSIGN",
+	"insertText": "INTERESTRATEMARGINSIGN",
+	"description": "This field stores a code that specifies that a loan interest rate is a specific percentage above or below the index rate.",
+	"isSnippet": false
+}, {
+	"label": "INTERESTRATEMIN",
+	"insertText": "INTERESTRATEMIN",
+	"description": "This field indicates the minimum interest rate that Symitar Quest uses to calculate the loan.",
+	"isSnippet": false
+}, {
+	"label": "INTERESTRATEMAX",
+	"insertText": "INTERESTRATEMAX",
+	"description": "This field stores the maximum rate Symitar Quest should use to calculate interest for this loan.",
+	"isSnippet": false
+}, {
+	"label": "RISKRATE",
+	"insertText": "RISKRATE",
+	"description": "This field stores a value that increases the calculated margin rate when the Rate Change Processing batch program calculates the new interest rate for non-credit card loans tied to an interest rate index.",
+	"isSnippet": false
+}, {
+	"label": "INTPAIDTODATE",
+	"insertText": "INTPAIDTODATE",
+	"description": "Symitar Quest stores the date in this field that interest was paid for the most recently collected interest payment.",
+	"isSnippet": false
+}, {
+	"label": "INTPAIDPARTIALDAYAMT",
+	"insertText": "INTPAIDPARTIALDAYAMT",
+	"description": "Symitar Quest stores the amount of any partial day's interest, relating to the entire principal balance of the loan that has been collected and reported to SBA as of the last date an interest payment was received.",
+	"isSnippet": false
+}, {
+	"label": "DISCOUNTRATE",
+	"insertText": "DISCOUNTRATE",
+	"description": "This field stores a value that decreases the calculated margin rate when the Rate Change Processing batch program calculates the new interest rate for non-credit card loans tied to an interest rate index.",
+	"isSnippet": false
+}, {
+	"label": "PERIODICCAP",
+	"insertText": "PERIODICCAP",
+	"description": "This field stores a limit on changes for variable rate loans.",
+	"isSnippet": false
+}, {
+	"label": "PERIODICSTARTRATE",
+	"insertText": "PERIODICSTARTRATE",
+	"description": "Symitar Quest stores the interest rate in this field as of the value in the Periodic Cap Start Date field.",
+	"isSnippet": false
+}, {
+	"label": "PERIODICSTARTDATE",
+	"insertText": "PERIODICSTARTDATE",
+	"description": "Symitar Quest stores the starting date in this field from which the current period cap starts.",
+	"isSnippet": false
+}, {
+	"label": "PERIODICFREQUENCY",
+	"insertText": "PERIODICFREQUENCY",
+	"description": "This field stores the frequency associated with the Periodic Cap field.",
+	"isSnippet": false
+}, {
+	"label": "ROUNDRATETO",
+	"insertText": "ROUNDRATETO",
+	"description": "This field stores a value between 0.000 and 999.999 that you want to round the interest rate when Symitar Quest calculates a new interest.",
+	"isSnippet": false
+}, {
+	"label": "RATEROUNDINGMETHOD",
+	"insertText": "RATEROUNDINGMETHOD",
+	"description": "This field stores a code that indicates how Symitar Quest performs rate-rounding when your entry at the Round Rate To field requires the calculation of a new interest rate for this loan.",
+	"isSnippet": false
+}, {
+	"label": "AMORTIZATIONTERM",
+	"insertText": "AMORTIZATIONTERM",
+	"description": "This field stores the number of months for which the credit union amortized this loan.",
+	"isSnippet": false
+}, {
+	"label": "ORIGINALRATE",
+	"insertText": "ORIGINALRATE",
+	"description": "This field stores the original effective APR (Annual Percentage Rate) when the loan was opened.",
+	"isSnippet": false
+}, {
+	"label": "APR",
+	"insertText": "APR",
+	"description": "Symitar Quest stores the calculated APR (Annual Percentage Rate) for the loan.",
+	"isSnippet": false
+}, {
+	"label": "EFFECTIVEAPR",
+	"insertText": "EFFECTIVEAPR",
+	"description": "This field stores the current effective APR (Annual Percentage Rate) for the loan.",
+	"isSnippet": false
+}, {
+	"label": "PREPAIDFINANCECHG",
+	"insertText": "PREPAIDFINANCECHG",
+	"description": "This field stores any additional amounts included in a loan.",
+	"isSnippet": false
+}, {
+	"label": "ORIGUNAMORTIZEDFEES",
+	"insertText": "ORIGUNAMORTIZEDFEES",
+	"description": "This field stores the original amount of unamortized fees.",
+	"isSnippet": false
+}, {
+	"label": "UNAMORTIZEDFEES",
+	"insertText": "UNAMORTIZEDFEES",
+	"description": "This field stores the total amount of fees to be amortized over the term of the loan, according to FASB 91.",
+	"isSnippet": false
+}, {
+	"label": "POINTSYTD",
+	"insertText": "POINTSYTD",
+	"description": "This field stores the total number of points the borrower paid for this loan during the current year.",
+	"isSnippet": false
+}, {
+	"label": "POINTSLASTYEAR",
+	"insertText": "POINTSLASTYEAR",
+	"description": "Symitar Quest stores the total number of points the borrower paid for this loan during the previous year.",
+	"isSnippet": false
+}, {
+	"label": "PREPAYMENTPENALTY",
+	"insertText": "PREPAYMENTPENALTY",
+	"description": "This field stores a code that indicates whether information displays on periodic mortgage statements or mortgage coupons.",
+	"isSnippet": false
+}, {
+	"label": "PREPAYMENTPENALTYEXPDATE",
+	"insertText": "PREPAYMENTPENALTYEXPDATE",
+	"description": "This field stores the date on which the prepayment penalty expires.",
+	"isSnippet": false
+}, {
+	"label": "NEXTRATECHANGEDATE",
+	"insertText": "NEXTRATECHANGEDATE",
+	"description": "This field stores the date when the rate may next change.",
+	"isSnippet": false
+}, {
+	"label": "RATECHANGECYCLEMONTHS",
+	"insertText": "RATECHANGECYCLEMONTHS",
+	"description": "This field stores the number of months before the rate can change.",
+	"isSnippet": false
+}, {
+	"label": "SCHDRATECHANGEDATE",
+	"insertText": "SCHDRATECHANGEDATE",
+	"description": "This field stores the date for a future effective rate change from the Future Effective Date prompt in Rate Change Processing.",
+	"isSnippet": false
+}, {
+	"label": "SCHDRATE",
+	"insertText": "SCHDRATE",
+	"description": "This field stores the rate to be used when a scheduled future rate change is implemented.",
+	"isSnippet": false
+}, {
+	"label": "SCHDSPLITBALANCE",
+	"insertText": "SCHDSPLITBALANCE",
+	"description": "This field stores the new split balance to be used when a scheduled future rate change is implemented.",
+	"isSnippet": false
+}, {
+	"label": "SCHDSPLITRATE",
+	"insertText": "SCHDSPLITRATE",
+	"description": "This field stores the new split rate to be used when a scheduled future rate change is implemented.",
+	"isSnippet": false
+}, {
+	"label": "SCHDPERIODSTARTRATE",
+	"insertText": "SCHDPERIODSTARTRATE",
+	"description": "This field stores the value in the Periodic Cap Start Rate field to be used when a scheduled future rate change is implemented.",
+	"isSnippet": false
+}, {
+	"label": "SCHDPERIODSTARTDATE",
+	"insertText": "SCHDPERIODSTARTDATE",
+	"description": "This field stores the date in the Periodic Cap Start Date field which Symitar Quest uses as a starting point for determining when to implement a scheduled future rate change.",
+	"isSnippet": false
+}, {
+	"label": "AMORTIZATIONSCHD",
+	"insertText": "AMORTIZATIONSCHD",
+	"description": "This field stores the numeric value of the set of Amortization Schedules parameters.",
+	"isSnippet": false
+}, {
+	"label": "AMORTIZATIONSCHDTYPE",
+	"insertText": "AMORTIZATIONSCHDTYPE",
+	"description": "This field stores a code that indicates whether the set of Amortization Schedules parameters is global or local.",
+	"isSnippet": false
+}, {
+	"label": "CALLITEMSCHD",
+	"insertText": "CALLITEMSCHD",
+	"description": "Primarily for users of the corporate interface: This field stores the numeric value of the set of Call/Put Item Schedules parameters used for call items.",
+	"isSnippet": false
+}, {
+	"label": "CALLITEMSCHDTYPE",
+	"insertText": "CALLITEMSCHDTYPE",
+	"description": "Primarily for users of the corporate interface: This field stores a code that indicates whether the set of Call Item Schedules parameters specified in the Call Item Schedule field is global or local.",
+	"isSnippet": false
+}, {
+	"label": "PUTITEMSCHD",
+	"insertText": "PUTITEMSCHD",
+	"description": "Primarily for users of the corporate interface: This field stores the numeric value of the set of Call/Put Item Schedules parameters used for put items.",
+	"isSnippet": false
+}, {
+	"label": "PUTITEMSCHDTYPE",
+	"insertText": "PUTITEMSCHDTYPE",
+	"description": "Primarily for users of the corporate interface: This field stores a code that indicates whether the set of Call/Put Item Schedules parameters specified in the Put Item Schedule field is global or local.",
+	"isSnippet": false
+}, {
+	"label": "CURRINTPAYABLE",
+	"insertText": "CURRINTPAYABLE",
+	"description": "Symitar Quest stores the total in this field of all outstanding interest that has been accrued, but unpaid, regardless of month from which it is outstanding.",
+	"isSnippet": false
+}, {
+	"label": "CURRMONTHPAIDINT",
+	"insertText": "CURRMONTHPAIDINT",
+	"description": "Symitar Quest stores the total interest paid in this field on the loan during the current calendar month.",
+	"isSnippet": false
+}, {
+	"label": "MTDPAIDINT",
+	"insertText": "MTDPAIDINT",
+	"description": "Symitar Quest stores the total in this field of all interest paid in the current month.",
+	"isSnippet": false
+}, {
+	"label": "PREMTHINTPAID:1 - PREMTHINTPAID:3",
+	"insertText": "PREMTHINTPAID:1 - PREMTHINTPAID:3",
+	"description": "Symitar Quest stores the total in each of these fields of all interest paid in each of the indicated previous months.",
+	"isSnippet": false
+}, {
+	"label": "MTDACCRUEDINT",
+	"insertText": "MTDACCRUEDINT",
+	"description": "Symitar Quest stores the total in this field of all outstanding interest (for the current calendar month) that has accrued, but has not been paid, since the last date interest was paid.",
+	"isSnippet": false
+}, {
+	"label": "PREMTHINTACCRUED:1 - PREMTHINTACCRUED:3",
+	"insertText": "PREMTHINTACCRUED:1 - PREMTHINTACCRUED:3",
+	"description": "Symitar Quest stores the total in each of these fields of all outstanding accrued unpaid interest in each of the indicated previous months.",
+	"isSnippet": false
+}, {
+	"label": "MTDACCUMULATEDINT",
+	"insertText": "MTDACCUMULATEDINT",
+	"description": "Symitar Quest stores the total of all accumulated interest for the current calendar month, regardless of payment of the interest or accrual.",
+	"isSnippet": false
+}, {
+	"label": "PREMTHINTACCUMLTD:1 - PREMTHINTACCUMLTD:12",
+	"insertText": "PREMTHINTACCUMLTD:1 - PREMTHINTACCUMLTD:12",
+	"description": "Symitar Quest stores the total in each of these fields of all accumulated interest, unpaid and paid, for the previous calendar month indicated, regardless of payment of the interest or accrual in each of the indicated previous months.",
+	"isSnippet": false
+}, {
+	"label": "MTDPRIORRATEACCRUAL",
+	"insertText": "MTDPRIORRATEACCRUAL",
+	"description": "This field stores the dividend accrual in this field for the current calendar month.",
+	"isSnippet": false
+}, {
+	"label": "LASTACCRUPDATEDATE",
+	"insertText": "LASTACCRUPDATEDATE",
+	"description": "Symitar Quest stores the last date in this field on which the accruals for the Loan record were updated.",
+	"isSnippet": false
+}, {
+	"label": "LATECHARGETYPE",
+	"insertText": "LATECHARGETYPE",
+	"description": "This field stores a credit union-defined code that indicates which late charge type definition Symitar Quest should use to calculate late charges for this loan.",
+	"isSnippet": false
+}, {
+	"label": "LATECHARGEDATE",
+	"insertText": "LATECHARGEDATE",
+	"description": "Symitar Quest stores a date in this field related to late charges. The meaning of that date differs depending on the late charge calculation formula referenced by the Late Charge Type field.",
+	"isSnippet": false
+}, {
+	"label": "LATECHARGEACCRUED",
+	"insertText": "LATECHARGEACCRUED",
+	"description": "Symitar Quest stores an amount in this field related to late charges. The meaning of that amount differs depending on the late charge calculation formula referenced by the Late Charge Type field.",
+	"isSnippet": false
+}, {
+	"label": "LATECHARGEUNPAID",
+	"insertText": "LATECHARGEUNPAID",
+	"description": "Symitar Quest stores the total amount in this field of all unpaid late charges for this loan.",
+	"isSnippet": false
+}, {
+	"label": "LATECHARGEYTD",
+	"insertText": "LATECHARGEYTD",
+	"description": "Symitar Quest stores the total amount in this field of late charges assessed for this loan during the current year.",
+	"isSnippet": false
+}, {
+	"label": "LATECHGYTDNOADJ",
+	"insertText": "LATECHGYTDNOADJ",
+	"description": "Symitar Quest stores the total amount in this field of late charges billed to the loan during the current year, not including adjustments.",
+	"isSnippet": false
+}, {
+	"label": "LATECHARGELASTYEAR",
+	"insertText": "LATECHARGELASTYEAR",
+	"description": "Symitar Quest stores the total amount in this field of late charges assessed for this loan during the previous year.",
+	"isSnippet": false
+}, {
+	"label": "LATECHGLASTYRNOADJ",
+	"insertText": "LATECHGLASTYRNOADJ",
+	"description": "Symitar Quest stores the total amount in this field of late charges billed to the loan during the previous year, not including adjustments.",
+	"isSnippet": false
+}, {
+	"label": "LATECHGPDFROMOPEN",
+	"insertText": "LATECHGPDFROMOPEN",
+	"description": "Symitar Quest stores the amount in this field of total late charges paid on the loan.",
+	"isSnippet": false
+}, {
+	"label": "LATECHGWAIVEDYTD",
+	"insertText": "LATECHGWAIVEDYTD",
+	"description": "Symitar Quest stores the total amount in this field of waived late charges for this loan during the current year.",
+	"isSnippet": false
+}, {
+	"label": "LATECHGWAIVEDLASTYEAR",
+	"insertText": "LATECHGWAIVEDLASTYEAR",
+	"description": "Symitar Quest stores the total amount in this field of waived late charges for this loan during the previous year.",
+	"isSnippet": false
+}, {
+	"label": "LATECHGWAIVEDFROMOPEN",
+	"insertText": "LATECHGWAIVEDFROMOPEN",
+	"description": "Symitar Quest stores the total of all waived late charges in this field on the loan since the loan was opened.",
+	"isSnippet": false
+}, {
+	"label": "STMTLATECHARGEYTD",
+	"insertText": "STMTLATECHARGEYTD",
+	"description": "Symitar Quest stores the amount in the Late Charge YTD field in this field at the time of statement cutoff.",
+	"isSnippet": false
+}, {
+	"label": "STMTLATECHARGELASTYEAR",
+	"insertText": "STMTLATECHARGELASTYEAR",
+	"description": "Symitar Quest stores the amount in the Late Charge Last Yr field in this field at the time of statement cutoff.",
+	"isSnippet": false
+}, {
+	"label": "STMTLTCHGPDFRMOPN",
+	"insertText": "STMTLTCHGPDFRMOPN",
+	"description": "Symitar Quest stores the amount in the Late Charge Paid from Open field in this field at the time of statement cutoff.",
+	"isSnippet": false
+}, {
+	"label": "STMTLATECHGUNPAID",
+	"insertText": "STMTLATECHGUNPAID",
+	"description": "Symitar Quest stores the balance in the Late Charge Unpaid field in this field as of the date in the Statement Date field.",
+	"isSnippet": false
+}, {
+	"label": "NSFMONTHTODATE",
+	"insertText": "NSFMONTHTODATE",
+	"description": "Symitar Quest stores the total number of times an NSF condition affected this loan in this field during the current month.",
+	"isSnippet": false
+}, {
+	"label": "NSFYTD",
+	"insertText": "NSFYTD",
+	"description": "Symitar Quest stores the total number of times an NSF condition affected this loan in this field during the current year.",
+	"isSnippet": false
+}, {
+	"label": "NSFLASTYEAR",
+	"insertText": "NSFLASTYEAR",
+	"description": "Symitar Quest stores the total number of times an NSF condition affected this loan in this field during the previous year.",
+	"isSnippet": false
+}, {
+	"label": "FEECOUNT:1 - FEECOUNT:4",
+	"insertText": "FEECOUNT:1 - FEECOUNT:4",
+	"description": "These fields store the number of times in each of these fields that a specific fee has been assessed for this loan, or the number of times a specified transaction has occurred (for the purpose of calculating or charging a fee).",
+	"isSnippet": false
+}, {
+	"label": "LEDGERACCRUAL",
+	"insertText": "LEDGERACCRUAL",
+	"description": "Symitar Quest stores the ledger accrual amount for this loan in this field.",
+	"isSnippet": false
+}, {
+	"label": "LEDGERACCRUALDATE",
+	"insertText": "LEDGERACCRUALDATE",
+	"description": "Symitar Quest stores the date in this field on which the accrual batch process updates the ledger accrual for this loan during daily accruals.",
+	"isSnippet": false
+}, {
+	"label": "ACCRUALSTATUS",
+	"insertText": "ACCRUALSTATUS",
+	"description": "Symitar Quest stores a code in this field that specifies the current accrual status of the loan.",
+	"isSnippet": false
+}, {
+	"label": "GLACCRUALSTATUSOPTION",
+	"insertText": "GLACCRUALSTATUSOPTION",
+	"description": "This field stores a code that is used by the Dividend/Interest Accrual Report batch program to determine whether a loan should have GL interest accrued.",
+	"isSnippet": false
+}, {
+	"label": "LASTACCRUALREVERSAL",
+	"insertText": "LASTACCRUALREVERSAL",
+	"description": "Symitar Quest stores the amount in this field of accrued income that was reversed the last time this loan went to nonaccrual status.",
+	"isSnippet": false
+}, {
+	"label": "LASTACCRREVERSALDATE",
+	"insertText": "LASTACCRREVERSALDATE",
+	"description": "Symitar Quest stores the date in this field of the most recent reversal of accrued interest because of delinquency.",
+	"isSnippet": false
+}, {
+	"label": "TOTALACCRUALREVERSAL",
+	"insertText": "TOTALACCRUALREVERSAL",
+	"description": "Symitar Quest stores the total amount in this field of accrued interest that was reversed on this loan.",
+	"isSnippet": false
+}, {
+	"label": "ACCRREINSTATEMENTDATE",
+	"insertText": "ACCRREINSTATEMENTDATE",
+	"description": "This field stores the date when the loan returns to accrual status.",
+	"isSnippet": false
+}, {
+	"label": "INSURANCETYPE",
+	"insertText": "INSURANCETYPE",
+	"description": "This field stores a credit union-defined code that identifies the type of insurance.",
+	"isSnippet": false
+}, {
+	"label": "INSURANCEMAX",
+	"insertText": "INSURANCEMAX",
+	"description": "This field stores the maximum insurable loan balance.",
+	"isSnippet": false
+}, {
+	"label": "INSURANCEBALANCE",
+	"insertText": "INSURANCEBALANCE",
+	"description": "Symitar Quest stores the loan balance in this field currently insured for this loan.",
+	"isSnippet": false
+}, {
+	"label": "INSURANCEYTD",
+	"insertText": "INSURANCEYTD",
+	"description": "This field stores the amount of total insurance added to the principal loan balance this year.",
+	"isSnippet": false
+}, {
+	"label": "INSURANCEYTDNOADJ",
+	"insertText": "INSURANCEYTDNOADJ",
+	"description": "Symitar Quest stores the total amount in this field of insurance billed to the principal loan balance during the current year, not including adjustments.",
+	"isSnippet": false
+}, {
+	"label": "INSURANCELASTYEAR",
+	"insertText": "INSURANCELASTYEAR",
+	"description": "Symitar Quest stores the amount in this field of total insurance added to the principal loan balance during the previous year.",
+	"isSnippet": false
+}, {
+	"label": "INSURANCELSTYRNOADJ",
+	"insertText": "INSURANCELSTYRNOADJ",
+	"description": "Symitar Quest stores the total amount in this field of insurance billed to the principal loan balance during the previous year, not including adjustments.",
+	"isSnippet": false
+}, {
+	"label": "SINGLEPREMIUMLIFE",
+	"insertText": "SINGLEPREMIUMLIFE",
+	"description": "Symitar Quest stores the amount in this field of the single premium for any credit life insurance calculated for the loan.",
+	"isSnippet": false
+}, {
+	"label": "SINGLEPREMIUMDISABILITY",
+	"insertText": "SINGLEPREMIUMDISABILITY",
+	"description": "Symitar Quest stores the amount in this field of the single premium for any credit disability insurance calculated for the loan.",
+	"isSnippet": false
+}, {
+	"label": "ORIGINSURANCETYPE",
+	"insertText": "ORIGINSURANCETYPE",
+	"description": "Symitar Quest stores the original insurance type in this field on a loan.",
+	"isSnippet": false
+}, {
+	"label": "FIRSTINSBIRTHDATE",
+	"insertText": "FIRSTINSBIRTHDATE",
+	"description": "Symitar Quest stores the first insured's date of birth in this field.",
+	"isSnippet": false
+}, {
+	"label": "SECONDINSBIRTHDATE",
+	"insertText": "SECONDINSBIRTHDATE",
+	"description": "Symitar Quest stores the second insured's date of birth in this field.",
+	"isSnippet": false
+}, {
+	"label": "ARMNOTICE",
+	"insertText": "ARMNOTICE",
+	"description": "This field stores a code that determines whether the Rate Change Processing batch program creates ARM notices for this loan.",
+	"isSnippet": false
+}, {
+	"label": "INITIALARMNOTICE",
+	"insertText": "INITIALARMNOTICE",
+	"description": "This field stores a code that determines whether the Rate Change Processing batch program creates a one-time initial ARM notice for this loan.",
+	"isSnippet": false
+}, {
+	"label": "INITARMNOTICECREATIONDATE",
+	"insertText": "INITARMNOTICECREATIONDATE",
+	"description": "Symitar Quest stores the date in this field on which the Rate Change Processing batch program created the initial ARM notice.",
+	"isSnippet": false
+}, {
+	"label": "LASTARMNOTICECREATIONDATE",
+	"insertText": "LASTARMNOTICECREATIONDATE",
+	"description": "Symitar Quest stores the most recent date in this field on which Symitar Quest sent out a payment disclosure ARM notice.",
+	"isSnippet": false
+}, {
+	"label": "PMIORIGINALVALUE",
+	"insertText": "PMIORIGINALVALUE",
+	"description": "This field stores the original value of the collateral for the loan.",
+	"isSnippet": false
+}, {
+	"label": "PMIPURCHASEPRICE",
+	"insertText": "PMIPURCHASEPRICE",
+	"description": "This field stores the purchase price or sales price of the property securing the mortgage, as reflected in the purchase contract.",
+	"isSnippet": false
+}, {
+	"label": "PMIAPPRAISEDVALUE",
+	"insertText": "PMIAPPRAISEDVALUE",
+	"description": "This field stores the value of the residence when it was appraised during a mortgage application.",
+	"isSnippet": false
+}, {
+	"label": "PMILTVRATIO",
+	"insertText": "PMILTVRATIO",
+	"description": "This field contains the calculated loan amount divided by the lesser of the values in the Purchase Price or PMI Appraised Value fields at the time of loan completion.",
+	"isSnippet": false
+}, {
+	"label": "HIGHRISKCODE",
+	"insertText": "HIGHRISKCODE",
+	"description": "This field stores a code that specifies whether a loan is to be considered high risk.",
+	"isSnippet": false
+}, {
+	"label": "MORTGINSCOLLYTD",
+	"insertText": "MORTGINSCOLLYTD",
+	"description": "This field stores the total dollar amount collected during the current calendar year to pay mortgage insurance.",
+	"isSnippet": false
+}, {
+	"label": "MORTGINSCOLLLASTYR",
+	"insertText": "MORTGINSCOLLLASTYR",
+	"description": "Symitar Quest stores the total dollar amount in this field collected during the current calendar year to pay mortgage insurance.",
+	"isSnippet": false
+}, {
+	"label": "PMIYTD",
+	"insertText": "PMIYTD",
+	"description": "This field stores the year-to-date totals for private mortgage insurance (PMI).",
+	"isSnippet": false
+}, {
+	"label": "PMILASTYEAR",
+	"insertText": "PMILASTYEAR",
+	"description": "Symitar Quest stores the previous year's totals in this field for private mortgage insurance (PMI).",
+	"isSnippet": false
+}, {
+	"label": "ESCROWID",
+	"insertText": "ESCROWID",
+	"description": "This field stores the ID of the Share record to which the escrow amount should be posted whenever the member makes a loan payment.",
+	"isSnippet": false
+}, {
+	"label": "ESCROWAMOUNT",
+	"insertText": "ESCROWAMOUNT",
+	"description": "This field stores the periodic escrow amount for the loan.",
+	"isSnippet": false
+}, {
+	"label": "ESCROWUNPAID",
+	"insertText": "ESCROWUNPAID",
+	"description": "Symitar Quest stores the total amount in this field of all unpaid escrow that was deferred from payments applied to this loan once the due date advanced.",
+	"isSnippet": false
+}, {
+	"label": "ESCROWAPPLIED",
+	"insertText": "ESCROWAPPLIED",
+	"description": "Symitar Quest stores the portion of the loan payment in this field that applies to escrow without the due date advancing.",
+	"isSnippet": false
+}, {
+	"label": "OCCUPANCYTYPE",
+	"insertText": "OCCUPANCYTYPE",
+	"description": "This field stores a code that specifies the occupancy status of the property the borrower purchased with this loan.",
+	"isSnippet": false
+}, {
+	"label": "PROPERTYADDRESSTYPE",
+	"insertText": "PROPERTYADDRESSTYPE",
+	"description": "This field stores a code that indicates how Symitar Quest stores the property address information that secures a mortgage loan.",
+	"isSnippet": false
+}, {
+	"label": "PROPERTYJURISDICTION",
+	"insertText": "PROPERTYJURISDICTION",
+	"description": "This field stores the property's jurisdiction.",
+	"isSnippet": false
+}, {
+	"label": "ASSESSORPARCELNUMBER",
+	"insertText": "ASSESSORPARCELNUMBER",
+	"description": "This field stores the property's Assessor Parcel Number (APN).",
+	"isSnippet": false
+}, {
+	"label": "MTGNUMPROP",
+	"insertText": "MTGNUMPROP",
+	"description": "This field stores the number of properties that secure this mortgage loan.",
+	"isSnippet": false
+}, {
+	"label": "PMTBUCKETAMOUNT:1 - PMTBUCKETAMOUNT:8",
+	"insertText": "PMTBUCKETAMOUNT:1 - PMTBUCKETAMOUNT:8",
+	"description": "Each of these eight fields stores a history of payment amounts, each due on the effective date specified in the corresponding Pmt Bucket Due Date x field.",
+	"isSnippet": false
+}, {
+	"label": "PMTBUCKETDUEDATE:1 - PMTBUCKETDUEDATE:8",
+	"insertText": "PMTBUCKETDUEDATE:1 - PMTBUCKETDUEDATE:8",
+	"description": "Symitar Quest stores a payment date in each of these eight fields for the payments in the corresponding Pmt Bucket Amt x fields.",
+	"isSnippet": false
+}, {
+	"label": "BILLEDFEEBUCKETAMOUNT:1 - BILLEDFEEBUCKETAMOUNT:8",
+	"insertText": "BILLEDFEEBUCKETAMOUNT:1 - BILLEDFEEBUCKETAMOUNT:8",
+	"description": "Symitar Quest stores a history of billed fee amounts in each of these eight fields in parallel with the Pmt Bucket Amt x and Pmt Bucket Due Date x fields.",
+	"isSnippet": false
+}, {
+	"label": "ESCROWBUCKETAMOUNT:1 - ESCROWBUCKETAMOUNT:8",
+	"insertText": "ESCROWBUCKETAMOUNT:1 - ESCROWBUCKETAMOUNT:8",
+	"description": "Symitar Quest stores a history of escrow amounts in each of these eight fields, each due on the effective date specified in the corresponding Pmt Bucket Due Date x field.",
+	"isSnippet": false
+}, {
+	"label": "FEEBILLINGDATE",
+	"insertText": "FEEBILLINGDATE",
+	"description": "This field stores the billing date in this field for the value in the Fee Billing Amount field.",
+	"isSnippet": false
+}, {
+	"label": "FEEBILLINGAMOUNT",
+	"insertText": "FEEBILLINGAMOUNT",
+	"description": "This field stores the fee amount billed on the date in the Fee Billing Date field.",
+	"isSnippet": false
+}, {
+	"label": "BILLEDFEEUNPAID",
+	"insertText": "BILLEDFEEUNPAID",
+	"description": "Symitar Quest stores billed fees in this field that are currently unpaid on this loan.",
+	"isSnippet": false
+}, {
+	"label": "BILLEDFEEYTD",
+	"insertText": "BILLEDFEEYTD",
+	"description": "Symitar Quest stores the amount in this field of billed fees collected during payment processing this year.",
+	"isSnippet": false
+}, {
+	"label": "BILLEDFEEYTDNOADJ",
+	"insertText": "BILLEDFEEYTDNOADJ",
+	"description": "Symitar Quest stores the amount in this field of billed fees collected during payment processing during the current year, not including adjustments.",
+	"isSnippet": false
+}, {
+	"label": "BILLEDFEELASTYEAR",
+	"insertText": "BILLEDFEELASTYEAR",
+	"description": "Symitar Quest stores the amount in this field of billed fees collected during payment processing last year.",
+	"isSnippet": false
+}, {
+	"label": "BILLEDFEELSTYRNOADJ",
+	"insertText": "BILLEDFEELSTYRNOADJ",
+	"description": "Symitar Quest stores the amount in this field of billed fees billed to the loan during payment processing for the previous year, not including adjustments.",
+	"isSnippet": false
+}, {
+	"label": "ECOACODE",
+	"insertText": "ECOACODE",
+	"description": "This field stores an Equal Credit Opportunity Act (ECOA) code that indicates how Symitar Quest should report the loan to credit bureaus.",
+	"isSnippet": false
+}, {
+	"label": "CREDITREPORTINGCODE",
+	"insertText": "CREDITREPORTINGCODE",
+	"description": "This field stores a code that specifies how the loan should be reported to credit bureaus.",
+	"isSnippet": false
+}, {
+	"label": "CREDITREPORTCOMMENT",
+	"insertText": "CREDITREPORTCOMMENT",
+	"description": "This field stores the comment code reported to credit reporting agencies in the Metro Credit Reporting Special Comments field.",
+	"isSnippet": false
+}, {
+	"label": "CREDITREPORTNUMBER",
+	"insertText": "CREDITREPORTNUMBER",
+	"description": "This account number in this field is sent to the credit bureaus the last time that the credit reporting tape runs.",
+	"isSnippet": false
+}, {
+	"label": "CREDITREPORTLASTSTATUS",
+	"insertText": "CREDITREPORTLASTSTATUS",
+	"description": "Symitar Quest stores the last Metro Credit Reporting Status Code reported to the credit bureau in this field.",
+	"isSnippet": false
+}, {
+	"label": "CREDITREPORTOCCURDATE",
+	"insertText": "CREDITREPORTOCCURDATE",
+	"description": "Symitar Quest stores the last Metro Credit Reporting date in this field of occurrence reported to the credit bureau.",
+	"isSnippet": false
+}, {
+	"label": "CREDITREPORTCONSUMERINFO",
+	"insertText": "CREDITREPORTCONSUMERINFO",
+	"description": "This field stores consumer information indicators (CII) for the Metro 2® Format for credit reports.",
+	"isSnippet": false
+}, {
+	"label": "CREDITREPORTCONSUMERINFODATE",
+	"insertText": "CREDITREPORTCONSUMERINFODATE",
+	"description": "This field stores the date you last performed file maintenance on the Credit Report Consumer Info field.",
+	"isSnippet": false
+}, {
+	"label": "CREDITRPTDEFERREDPMTSTART",
+	"insertText": "CREDITRPTDEFERREDPMTSTART",
+	"description": "This field stores the date when the first payment is due for a deferred loan (usually a student loan).",
+	"isSnippet": false
+}, {
+	"label": "CREDITREPORTCOMPLIANCE",
+	"insertText": "CREDITREPORTCOMPLIANCE",
+	"description": "This field stores consumer information for the Metro 2® Format for credit reports.",
+	"isSnippet": false
+}, {
+	"label": "CREDITSCORETYPE",
+	"insertText": "CREDITSCORETYPE",
+	"description": "This field stores a credit union-defined code that specifies the type of credit score to be calculated.",
+	"isSnippet": false
+}, {
+	"label": "CREDITSCORE",
+	"insertText": "CREDITSCORE",
+	"description": "This field stores the results of credit score calculations.",
+	"isSnippet": false
+}, {
+	"label": "BUREAUSCORE:1",
+	"insertText": "BUREAUSCORE:1",
+	"description": "This field stores the most recent credit score received from the Experian credit bureau for the main applicant for the loan.",
+	"isSnippet": false
+}, {
+	"label": "BUREAUSCORE:2",
+	"insertText": "BUREAUSCORE:2",
+	"description": "This field stores the most recent credit score received from the Equifax credit bureau for the main applicant for the loan.",
+	"isSnippet": false
+}, {
+	"label": "BUREAUSCORE:3",
+	"insertText": "BUREAUSCORE:3",
+	"description": "This field stores the most recent credit score received from the Transunion® credit bureau for the main applicant for the loan.",
+	"isSnippet": false
+}, {
+	"label": "ORIGRISKGRADE",
+	"insertText": "ORIGRISKGRADE",
+	"description": "This field stores the original risk grade assigned to the note when it was originated.",
+	"isSnippet": false
+}, {
+	"label": "CRINTTYPEIND",
+	"insertText": "CRINTTYPEIND",
+	"description": "This field stores the interest rate indicator reported to the credit reporting bureaus using the Metro 2® Format (Symitar v.2).",
+	"isSnippet": false
+}, {
+	"label": "LASTCRREPORTDATE",
+	"insertText": "LASTCRREPORTDATE",
+	"description": "Symitar Quest stores the date in this field when the first payment is due for a deferred loan (usually a student loan).",
+	"isSnippet": false
+}, {
+	"label": "CRHIGHBAL",
+	"insertText": "CRHIGHBAL",
+	"description": "Symitar Quest stores the highest balance ever attained on a loan in this field.",
+	"isSnippet": false
+}, {
+	"label": "CREDITREPORTTRANSFERINDICATOR",
+	"insertText": "CREDITREPORTTRANSFERINDICATOR",
+	"description": "This field stores a code indicating whether the CR Transfer Name field contains the name of the company from which the loan was purchased or to which it was sold.",
+	"isSnippet": false
+}, {
+	"label": "CREDITREPORTTRANSFERNAME",
+	"insertText": "CREDITREPORTTRANSFERNAME",
+	"description": "This field stores the name of the company from which the portfolio or partial portfolio was purchased or to which the portfolio was sold.",
+	"isSnippet": false
+}, {
+	"label": "CREDITREPORTTRANSFERDATE",
+	"insertText": "CREDITREPORTTRANSFERDATE",
+	"description": "This field stores either the date the loan was transferred (purchased or sold) or the date the credit union decided to send the removal code.",
+	"isSnippet": false
+}, {
+	"label": "CRPMTCURRENT",
+	"insertText": "CRPMTCURRENT",
+	"description": "Symitar Quest stores the payment status in this field for the current month when you run the Trial Balance Reports batch program.",
+	"isSnippet": false
+}, {
+	"label": "CRPMTHISTORY:1 - CRPMTHISTORY:24",
+	"insertText": "CRPMTHISTORY:1 - CRPMTHISTORY:24",
+	"description": "Symitar Quest stores values in these fields that represents the payment status from one month to 24 months before the current calendar month.",
+	"isSnippet": false
+}, {
+	"label": "MORTGAGEIDNUMBER",
+	"insertText": "MORTGAGEIDNUMBER",
+	"description": "This field stores the mortgage identification number assigned to a mortgage loan and remains with that loan regardless of the lender that currently owns it.",
+	"isSnippet": false
+}, {
+	"label": "AGENCYIDENTIFIER",
+	"insertText": "AGENCYIDENTIFIER",
+	"description": "This field stores a code that indicates if a secondary agency is identified.",
+	"isSnippet": false
+}, {
+	"label": "AGENCYACCTNUMBER",
+	"insertText": "AGENCYACCTNUMBER",
+	"description": "This field stores a unique identifier issued by one of the secondary agencies: Fannie Mae® or Freddie Mac®.",
+	"isSnippet": false
+}, {
+	"label": "ACQUISITIONDATE",
+	"insertText": "ACQUISITIONDATE",
+	"description": "This field stores the date the loan was acquired from a third party.",
+	"isSnippet": false
+}, {
+	"label": "ACQUISITIONBALANCE",
+	"insertText": "ACQUISITIONBALANCE",
+	"description": "This field stores the outstanding loan principal balance as of the date of acquisition from a third party.",
+	"isSnippet": false
+}, {
+	"label": "ACCELERATIONGOODTHRUDATE",
+	"insertText": "ACCELERATIONGOODTHRUDATE",
+	"description": "This field stores the final date (called the \"good-through date\") after which the value that you entered in the Acceleration Amount field is no longer valid.",
+	"isSnippet": false
+}, {
+	"label": "ACCELERATIONAMT",
+	"insertText": "ACCELERATIONAMT",
+	"description": "This field stores the payment amount that a borrower must pay by a specified date.",
+	"isSnippet": false
+}, {
+	"label": "ACCELERATIONSTMTMSGCODE",
+	"insertText": "ACCELERATIONSTMTMSGCODE",
+	"description": "This field stores the acceleration statement message code that you defined in Statement Messages parameters.",
+	"isSnippet": false
+}, {
+	"label": "REINSTATEMENTGOODTHRUDATE",
+	"insertText": "REINSTATEMENTGOODTHRUDATE",
+	"description": "This field stores the final date (called the \"good-through date\") after which a payment in the Reinstatement Amount field no longer reinstates the loan.",
+	"isSnippet": false
+}, {
+	"label": "REINSTATEMENTAMT",
+	"insertText": "REINSTATEMENTAMT",
+	"description": "This field stores the amount that your borrower must pay to reinstate their loan by a specified date.",
+	"isSnippet": false
+}, {
+	"label": "REINSTATEMENTSTMTMSGCODE",
+	"insertText": "REINSTATEMENTSTMTMSGCODE",
+	"description": "This field stores the reinstatement statement message code that you defined in Statement Messages parameters.",
+	"isSnippet": false
+}, {
+	"label": "SENDFINALCHGOFFSTMT",
+	"insertText": "SENDFINALCHGOFFSTMT",
+	"description": "This field stores a code that indicates whether you want Symitar Quest to produce a periodic mortgage statement for a final charge-off the next time you run the Statement Generation batch program.",
+	"isSnippet": false
+}, {
+	"label": "FINALCHGOFFSTMTDATE",
+	"insertText": "FINALCHGOFFSTMTDATE",
+	"description": "Symitar Quest stores the system date in this field when you run the Statement Cutoff Processing batch program for the periodic mortgage statement.",
+	"isSnippet": false
+}, {
+	"label": "FINALCHGOFFSTMTMSGCODE",
+	"insertText": "FINALCHGOFFSTMTMSGCODE",
+	"description": "This field stores a code for the charge-off statement message based on your entry in the Statement Messages parameters in Parameter Manager.",
+	"isSnippet": false
+}, {
+	"label": "FORECLOSUREEFFECTDATE",
+	"insertText": "FORECLOSUREEFFECTDATE",
+	"description": "This field stores the effective date on which your credit union made the first notice or filing required for foreclosure.",
+	"isSnippet": false
+}, {
+	"label": "FORECLOSUREEXPIREDATE",
+	"insertText": "FORECLOSUREEXPIREDATE",
+	"description": "This field stores the date that the loan is no longer in foreclosure.",
+	"isSnippet": false
+}, {
+	"label": "FORECLOSURESTMTMSGCODE",
+	"insertText": "FORECLOSURESTMTMSGCODE",
+	"description": "This field stores a code for the foreclosure statement message code that you set up in the Statement Messages parameters in Parameter Manager.",
+	"isSnippet": false
+}, {
+	"label": "LOSSMITEFFECTDATE",
+	"insertText": "LOSSMITEFFECTDATE",
+	"description": "This field stores the effective date on which you add the loan to a loss mitigation program.",
+	"isSnippet": false
+}, {
+	"label": "LOSSMITEXPIREDATE",
+	"insertText": "LOSSMITEXPIREDATE",
+	"description": "This field stores the date on and after which the loan is no longer included in a loss mitigation program.",
+	"isSnippet": false
+}, {
+	"label": "LOSSMITSTMTMSGCODE",
+	"insertText": "LOSSMITSTMTMSGCODE",
+	"description": "This field stores a code for the mitigation statement message code that you set up in the Statement Messages parameters in Parameter Manager.",
+	"isSnippet": false
+}, {
+	"label": "LOSSMITPAYMENT",
+	"insertText": "LOSSMITPAYMENT",
+	"description": "This field stores the temporary loss mitigation payment amount that the member agreed to for the loan.",
+	"isSnippet": false
+}, {
+	"label": "LOSSMITPMTSTMTMSGCODE",
+	"insertText": "LOSSMITPMTSTMTMSGCODE",
+	"description": "This field stores a code for the mitigation payment statement message code that you set up in the Statement Messages parameters in Parameter Manager.",
+	"isSnippet": false
+}, {
+	"label": "REGPAYMENTSTMTMSGCODE",
+	"insertText": "REGPAYMENTSTMTMSGCODE",
+	"description": "This field stores a code for the regular statement message code that you set up in the Statement Messages parameters in Parameter Manager.",
+	"isSnippet": false
+}, {
+	"label": "CURRSTMTLOSSMITAMTDUE",
+	"insertText": "CURRSTMTLOSSMITAMTDUE",
+	"description": "Symitar Quest stores the total amount due in this field for an active temporary loss mitigation plan as of the most recent statement cutoff for this loan.",
+	"isSnippet": false
+}, {
+	"label": "PREVSTMTLOSSMITAMTDUE",
+	"insertText": "PREVSTMTLOSSMITAMTDUE",
+	"description": "Symitar Quest stores the total amount due in this field for the temporary loss mitigation plan from the previous statement produced for this loan.",
+	"isSnippet": false
+}, {
+	"label": "STMTNOTESTARTDATE",
+	"insertText": "STMTNOTESTARTDATE",
+	"description": "Symitar Quest stores the value of the Enter Date field of the oldest active Statement Note record in this field that appears on the periodic mortgage statement as of the system date you run the Statement Cutoff Processing batch program.",
+	"isSnippet": false
+}, {
+	"label": "BKCHAPTERREPORTED",
+	"insertText": "BKCHAPTERREPORTED",
+	"description": "This field stores a code that identifies the Bankruptcy Chapter reported.",
+	"isSnippet": false
+}, {
+	"label": "WARNINGCODE:1 - WARNINGCODE:20",
+	"insertText": "WARNINGCODE:1 - WARNINGCODE:20",
+	"description": "These fields each store a warning code to apply that warning to a loan.",
+	"isSnippet": false
+}, {
+	"label": "WARNINGEXPIRATION:1 - WARNINGEXPIRATION:20",
+	"insertText": "WARNINGEXPIRATION:1 - WARNINGEXPIRATION:20",
+	"description": "These fields each store a date after which the corresponding warning code should no longer apply to the loan.",
+	"isSnippet": false
+}, {
+	"label": "SERVICE:1 - SERVICE:8",
+	"insertText": "SERVICE:1 - SERVICE:8",
+	"description": "These fields each store a credit union-defined credit union services offered with a loan.",
+	"isSnippet": false
+}, {
+	"label": "STUDENTLOANCODE",
+	"insertText": "STUDENTLOANCODE",
+	"description": "This field stores a code that identifies whether this loan is a student loan.",
+	"isSnippet": false
+}, {
+	"label": "STUDENTCOVEREDPERIODEND",
+	"insertText": "STUDENTCOVEREDPERIODEND",
+	"description": "This field stores the date the \"covered period\" ends for the student loan.",
+	"isSnippet": false
+}, {
+	"label": "STUDENTLOANORIGFEEYTD",
+	"insertText": "STUDENTLOANORIGFEEYTD",
+	"description": "This field stores the loan origination fee in this field for the current year, if any, for a student loan.",
+	"isSnippet": false
+}, {
+	"label": "STUDENTLOANORIGFEELASTYEAR",
+	"insertText": "STUDENTLOANORIGFEELASTYEAR",
+	"description": "Symitar Quest stores the loan origination fee in this field for last year for a student loan.",
+	"isSnippet": false
+}, {
+	"label": "STUDENTLOANCAPINTYTD",
+	"insertText": "STUDENTLOANCAPINTYTD",
+	"description": "This field stores the loan capitalized interest, if any, for a student loan.",
+	"isSnippet": false
+}, {
+	"label": "STUDENTLOANCAPINTLASTYEAR",
+	"insertText": "STUDENTLOANCAPINTLASTYEAR",
+	"description": "Symitar Quest stores the loan capitalized interest in this field for last year for a student loan.",
+	"isSnippet": false
+}, {
+	"label": "None",
+	"insertText": "None",
+	"description": "This action field indicates if you want to update Loan record fields with the values from corresponding fields in a specified Application record.",
+	"isSnippet": false
+}, {
+	"label": "None",
+	"insertText": "None",
+	"description": "This field determines whether you want to display the loan calculation screen.",
+	"isSnippet": false
+}, {
+	"label": "CUTOTALSUSECODE",
+	"insertText": "CUTOTALSUSECODE",
+	"description": "This field stores a code that identifies whether include the loan balance in the credit union totals calculations or not.",
+	"isSnippet": false
+}, {
+	"label": "APPLICATIONID",
+	"insertText": "APPLICATIONID",
+	"description": "This field stores the ID of the loan application used when granting this loan.",
+	"isSnippet": false
+}, {
+	"label": "DEALERCODE",
+	"insertText": "DEALERCODE",
+	"description": "This field stores the dealer code for a lease loan.",
+	"isSnippet": false
+}, {
+	"label": "DEALERRESERVE",
+	"insertText": "DEALERRESERVE",
+	"description": "This field stores the amount of the dealer reserve for a lease loan.",
+	"isSnippet": false
+}, {
+	"label": "SALESTAXRATE",
+	"insertText": "SALESTAXRATE",
+	"description": "This field contains the system-computed current lease loan sales tax rate at the time of the inquiry.",
+	"isSnippet": false
+}, {
+	"label": "SALESTAXSTATEINDICATOR",
+	"insertText": "SALESTAXSTATEINDICATOR",
+	"description": "This field stores a code that determines how state sales tax will be used as part of the information required to compute the sales tax.",
+	"isSnippet": false
+}, {
+	"label": "SALESTAXCOUNTYINDICATOR",
+	"insertText": "SALESTAXCOUNTYINDICATOR",
+	"description": "This field stores a code that determines how county sales tax will be used as part of the information required to compute the sales tax.",
+	"isSnippet": false
+}, {
+	"label": "SALESTAXCITYINDICATOR",
+	"insertText": "SALESTAXCITYINDICATOR",
+	"description": "This field stores a code that determines how city sales tax will be used as part of the information required to compute the sales tax.",
+	"isSnippet": false
+}, {
+	"label": "LESSEESTATE",
+	"insertText": "LESSEESTATE",
+	"description": "This field stores the 2-character state code where the car is registered as part of the information required to compute the sales tax.",
+	"isSnippet": false
+}, {
+	"label": "LESSEECOUNTY",
+	"insertText": "LESSEECOUNTY",
+	"description": "This field stores the county where the car is registered as part of the information required to compute the sales tax.",
+	"isSnippet": false
+}, {
+	"label": "LESSEECITY",
+	"insertText": "LESSEECITY",
+	"description": "This field stores the city where the car is registered as part of the information required to compute the sales tax.",
+	"isSnippet": false
+}, {
+	"label": "FIXEDLESSEESTATETAXRATE",
+	"insertText": "FIXEDLESSEESTATETAXRATE",
+	"description": "This field stores a fixed state sales tax rate for the lessee state.",
+	"isSnippet": false
+}, {
+	"label": "FIXEDLESSEECOUNTYTAXRATE",
+	"insertText": "FIXEDLESSEECOUNTYTAXRATE",
+	"description": "This field stores a fixed county sales tax rate for the lessee county.",
+	"isSnippet": false
+}, {
+	"label": "FIXEDLESSEECITYTAXRATE",
+	"insertText": "FIXEDLESSEECITYTAXRATE",
+	"description": "This field stores a fixed city sales tax rate for the lessee city.",
+	"isSnippet": false
+}, {
+	"label": "LEASETERMINATEDATE",
+	"insertText": "LEASETERMINATEDATE",
+	"description": "This field stores the date when the member terminates a lease loan by surrendering the vehicle.",
+	"isSnippet": false
+}, {
+	"label": "LEASETERMINATEFEE",
+	"insertText": "LEASETERMINATEFEE",
+	"description": "This field stores the fee amount to be charged if a lease loan is paid off before the balloon date.",
+	"isSnippet": false
+}, {
+	"label": "LEASEDISPOSITIONDATE",
+	"insertText": "LEASEDISPOSITIONDATE",
+	"description": "This field stores the date when the disposition fee is charged when a vehicle is turned back in at the end of a lease.",
+	"isSnippet": false
+}, {
+	"label": "LEASEDISPOSITIONFEE",
+	"insertText": "LEASEDISPOSITIONFEE",
+	"description": "This field stores the fee amount to be charged when a vehicle is turned back in at the end of a lease.",
+	"isSnippet": false
+}, {
+	"label": "STATESALESTAXRATE",
+	"insertText": "STATESALESTAXRATE",
+	"description": "This field contains the system-computed current lease loan state sales tax rate at the time of the inquiry.",
+	"isSnippet": false
+}, {
+	"label": "CNTYSALESTAXRATE",
+	"insertText": "CNTYSALESTAXRATE",
+	"description": "This field contains the system-calculated current lease loan county sales tax rate at the time of the inquiry.",
+	"isSnippet": false
+}, {
+	"label": "CITYSALESTAXRATE",
+	"insertText": "CITYSALESTAXRATE",
+	"description": "This field contains the system-calculated current lease loan city sales tax rate at the time of the inquiry.",
+	"isSnippet": false
+}, {
+	"label": "DEALERSTATE",
+	"insertText": "DEALERSTATE",
+	"description": "This field stores the 2-character state code where the car was leased as part of the information required to compute the sales tax.",
+	"isSnippet": false
+}, {
+	"label": "DEALERCOUNTY",
+	"insertText": "DEALERCOUNTY",
+	"description": "This field stores the county where the car was leased as part of the information required to compute the sales tax.",
+	"isSnippet": false
+}, {
+	"label": "DEALERCITY",
+	"insertText": "DEALERCITY",
+	"description": "This field stores the city where the car was leased as part of the information required to compute the sales tax.",
+	"isSnippet": false
+}, {
+	"label": "FIXEDDEALERSTATETAXRATE",
+	"insertText": "FIXEDDEALERSTATETAXRATE",
+	"description": "This field stores a fixed state sales tax rate for the dealer state.",
+	"isSnippet": false
+}, {
+	"label": "FIXEDDEALERCOUNTYTAXRATE",
+	"insertText": "FIXEDDEALERCOUNTYTAXRATE",
+	"description": "This field stores a fixed county sales tax rate for the dealer county.",
+	"isSnippet": false
+}, {
+	"label": "FIXEDDEALERCITYTAXRATE",
+	"insertText": "FIXEDDEALERCITYTAXRATE",
+	"description": "This field stores a fixed city sales tax rate for the dealer city.",
+	"isSnippet": false
+}, {
+	"label": "PROMOTYPE:1 - PROMOTYPE:2",
+	"insertText": "PROMOTYPE:1 - PROMOTYPE:2",
+	"description": "These fields each store a credit union-defined code that identifies a promotion type for this loan.",
+	"isSnippet": false
+}, {
+	"label": "PROMOEFFECTDATE:1 - PROMOEFFECTDATE:2",
+	"insertText": "PROMOEFFECTDATE:1 - PROMOEFFECTDATE:2",
+	"description": "These fields each store a date when the corresponding promotion is effective for advances taken on or after that date and before the date in the corresponding Promo # Expiration Date field.",
+	"isSnippet": false
+}, {
+	"label": "PROMOEXPIREDATE:1 - PROMOEXPIREDATE:2",
+	"insertText": "PROMOEXPIREDATE:1 - PROMOEXPIREDATE:2",
+	"description": "These fields each store a date when the corresponding promotion should end.",
+	"isSnippet": false
+}, {
+	"label": "PROMORATETYPE:1 - PROMORATETYPE:2",
+	"insertText": "PROMORATETYPE:1 - PROMORATETYPE:2",
+	"description": "These fields each store a code that indicates if the corresponding promotion uses a fixed or variable rate.",
+	"isSnippet": false
+}, {
+	"label": "PROMORATE:1 - PROMORATE:2",
+	"insertText": "PROMORATE:1 - PROMORATE:2",
+	"description": "Symitar Quest stores in each of these fields the actual interest rate for the corresponding promotion.",
+	"isSnippet": false
+}, {
+	"label": "PROMORATEOFFSET:1 - PROMORATEOFFSET:2",
+	"insertText": "PROMORATEOFFSET:1 - PROMORATEOFFSET:2",
+	"description": "These fields each store an offset rate for the corresponding promotion.",
+	"isSnippet": false
+}, {
+	"label": "PROMORATEMIN:1 - PROMORATEMIN:2",
+	"insertText": "PROMORATEMIN:1 - PROMORATEMIN:2",
+	"description": "These fields each store a minimum rate for the corresponding promotion.",
+	"isSnippet": false
+}, {
+	"label": "PROMORATEMAX:1 - PROMORATEMAX:2",
+	"insertText": "PROMORATEMAX:1 - PROMORATEMAX:2",
+	"description": "These fields each store a maximum rate for the corresponding promotion.",
+	"isSnippet": false
+}, {
+	"label": "PROMOTOTALADVANCES:1 - PROMOTOTALADVANCES:2",
+	"insertText": "PROMOTOTALADVANCES:1 - PROMOTOTALADVANCES:2",
+	"description": "These fields each store the total amount of advances on this loan during the corresponding promotion, not including insurance or fees.",
+	"isSnippet": false
+}, {
+	"label": "PROMOADVANCECUTOFF:1 - PROMOADVANCECUTOFF:2",
+	"insertText": "PROMOADVANCECUTOFF:1 - PROMOADVANCECUTOFF:2",
+	"description": "These fields each store the total amount of advances that must be taken during the corresponding promotion before the corresponding promotion \"kicks in\".",
+	"isSnippet": false
+}, {
+	"label": "PROMOBALANCE:1 - PROMOBALANCE:2",
+	"insertText": "PROMOBALANCE:1 - PROMOBALANCE:2",
+	"description": "Symitar Quest stores in each of these fields that portion of the total loan Balance field value subject to the corresponding promotion.",
+	"isSnippet": false
+}, {
+	"label": "MEMBERUSERTRANSFERCODE",
+	"insertText": "MEMBERUSERTRANSFERCODE",
+	"description": "For users of the corporate interface: This field stores a code that indicates which type of Corporate Transfer Parameters apply to this loan when a member user is making a transfer using the corporate interface.",
+	"isSnippet": false
+}, {
+	"label": "CORPORATEUSERTRANSFERCODE",
+	"insertText": "CORPORATEUSERTRANSFERCODE",
+	"description": "For users of the corporate interface: This field indicates which type of Corporate Transfer Parameters apply to this loan when a corporate user is making a transfer using the corporate interface on behalf of a member user.",
+	"isSnippet": false
+}, {
+	"label": "INDIRECTDEALERNUM",
+	"insertText": "INDIRECTDEALERNUM",
+	"description": "This field stores the dealer number.",
+	"isSnippet": false
+}, {
+	"label": "PARTICIPATIONNUMBER",
+	"insertText": "PARTICIPATIONNUMBER",
+	"description": "Symitar Quest stores the participation number from the associated Participation record in this field.",
+	"isSnippet": false
+}, {
+	"label": "SBAGPNUMBER",
+	"insertText": "SBAGPNUMBER",
+	"description": "This field stores the SBA-assigned loan identification number.",
+	"isSnippet": false
+}, {
+	"label": "INDIRECTPLANID",
+	"insertText": "INDIRECTPLANID",
+	"description": "This field stores the reserve plan ID associated with this indirect loan.",
+	"isSnippet": false
+}, {
+	"label": "AVGWEIGHTEDINTRATE",
+	"insertText": "AVGWEIGHTEDINTRATE",
+	"description": "This field contains the interest rate or, for SymChoice Loans, the calculated average weighted interest rate for the loan as a whole, based on the balance of each segment.",
+	"isSnippet": false
+}, {
+	"label": "COMBOLNSEGMENTMAX",
+	"insertText": "COMBOLNSEGMENTMAX",
+	"description": "This field stores the maximum number of segments (including Segment 0) that can be added to a SymChoice Loan.",
+	"isSnippet": false
+}, {
+	"label": "COMBOPMTORDERMETH",
+	"insertText": "COMBOPMTORDERMETH",
+	"description": "This field stores a code that determines the order in which to pay segments for SymChoice Loans.",
+	"isSnippet": false
+}, {
+	"label": "COMBOSEG0PMTORDER",
+	"insertText": "COMBOSEG0PMTORDER",
+	"description": "This field stores a code that indicates if Segment 0 is to be paid first or last when used with the Combo Payment Order Method field for SymChoice Loans.",
+	"isSnippet": false
+}, {
+	"label": "NEWSEGCUTOFFOPTION",
+	"insertText": "NEWSEGCUTOFFOPTION",
+	"description": "This field stores a code that identifies how Symitar Quest calculates the Due Date field in the projections screen of a Segment record.",
+	"isSnippet": false
+}, {
+	"label": "NEWSEGCUTOFFDAYS",
+	"insertText": "NEWSEGCUTOFFDAYS",
+	"description": "This field stores the number of days used to calculate the segment cutoff date.",
+	"isSnippet": false
+}, {
+	"label": "SEG0DESCRIPTION",
+	"insertText": "SEG0DESCRIPTION",
+	"description": "This field stores a description of the segment for SymChoice Loans.",
+	"isSnippet": false
+}, {
+	"label": "SEG0BALANCE",
+	"insertText": "SEG0BALANCE",
+	"description": "This field contains the balance for Segment 0 for SymChoice Loans.",
+	"isSnippet": false
+}, {
+	"label": "SEG0INTUNPAID",
+	"insertText": "SEG0INTUNPAID",
+	"description": "This field contains the amount of unpaid interest accrued to the Interest Date field value for Segment 0 for SymChoice Loans.",
+	"isSnippet": false
+}, {
+	"label": "SEG0INTUNPAIDBILLED",
+	"insertText": "SEG0INTUNPAIDBILLED",
+	"description": "This field contains the amount of unpaid billed interest accrued to the Interest Date for Segment 0 for SymChoice Loans.",
+	"isSnippet": false
+}, {
+	"label": "SEG0INTERESTYTD",
+	"insertText": "SEG0INTERESTYTD",
+	"description": "This field contains the total of all interest paid on Segment 0 during the current year for SymChoice Loans.",
+	"isSnippet": false
+}, {
+	"label": "SEG0INTERESTLASTYEAR",
+	"insertText": "SEG0INTERESTLASTYEAR",
+	"description": "This field contains the total of all interest paid on Segment 0 during the previous year for SymChoice Loans.",
+	"isSnippet": false
+}, {
+	"label": "SEG0PAYMENT",
+	"insertText": "SEG0PAYMENT",
+	"description": "This field contains the payment for Segment 0 for SymChoice Loans.",
+	"isSnippet": false
+}, {
+	"label": "SEG0PARTIALPMT",
+	"insertText": "SEG0PARTIALPMT",
+	"description": "This field contains the partial payment for Segment 0 for SymChoice Loans.",
+	"isSnippet": false
+}, {
+	"label": "SEG0LEVELPRINPMT",
+	"insertText": "SEG0LEVELPRINPMT",
+	"description": "This field stores the amount of principal to apply to each payment for Segment 0 if the Payment Type field value is set to (1) Level Principal for SymChoice Loans.",
+	"isSnippet": false
+}, {
+	"label": "SEG0PAYMENTORDER",
+	"insertText": "SEG0PAYMENTORDER",
+	"description": "This field stores a number to indicate the order in which Segment 0 will be paid for a SymChoice Loan Payment (LP) transaction.",
+	"isSnippet": false
+}, {
+	"label": "SEG0BEGINNINGCYCLEDATE",
+	"insertText": "SEG0BEGINNINGCYCLEDATE",
+	"description": "This field stores the beginning cycle date for the current payment period for a SymChoice Loan.",
+	"isSnippet": false
+}, {
+	"label": "SEG0PMTBUCKETAMT:1 - SEG0PMTBUCKETAMT:8",
+	"insertText": "SEG0PMTBUCKETAMT:1 - SEG0PMTBUCKETAMT:8",
+	"description": "These fields contain a history of payment amounts for Segment 0, each due on the effective date specified in the corresponding Pmt Bucket Due Date x field.",
+	"isSnippet": false
+}, {
+	"label": "SEG0CURRSTMTINTACCRD",
+	"insertText": "SEG0CURRSTMTINTACCRD",
+	"description": "This field stores the total interest paid in the current statement period for Segment 0 of a SymChoice Loan.",
+	"isSnippet": false
+}, {
+	"label": "SEG0PREVSTMTINTACCRD",
+	"insertText": "SEG0PREVSTMTINTACCRD",
+	"description": "This field stores the total interest paid in the previous statement period for Segment 0 of a SymChoice Loan.",
+	"isSnippet": false
+}, {
+	"label": "CAPPEDFEESAMOUNTCAP",
+	"insertText": "CAPPEDFEESAMOUNTCAP",
+	"description": "This field stores the dollar amount your credit union sets for its capped fees amount.",
+	"isSnippet": false
+}, {
+	"label": "CAPPEDFEESCOUNTCAP",
+	"insertText": "CAPPEDFEESCOUNTCAP",
+	"description": "This field stores the number of fee occurrences at which your credit union stops charging capped fees for the loan during a time period you specify.",
+	"isSnippet": false
+}, {
+	"label": "CAPPEDFEESAMTPERIOD",
+	"insertText": "CAPPEDFEESAMTPERIOD",
+	"description": "This field stores the sum of the capped fees charged by batch programs, online transaction processing, and teller transactions to the loan during a time period you specify.",
+	"isSnippet": false
+}, {
+	"label": "CAPPEDFEESCNTPERIOD",
+	"insertText": "CAPPEDFEESCNTPERIOD",
+	"description": "This field stores the number of occurrences of capped fees, incrementing by one each time a capped fee is charged to the loan.",
+	"isSnippet": false
+}, {
+	"label": "CARDACTOVERLIMITFEEEVENTDATE",
+	"insertText": "CARDACTOVERLIMITFEEEVENTDATE",
+	"description": "This field stores the date Fee Posting or Miscellaneous Posting batch programs post the first overlimit fee for the loan.",
+	"isSnippet": false
+}, {
+	"label": "CARDACTLATEFEEEVENTDATE",
+	"insertText": "CARDACTLATEFEEEVENTDATE",
+	"description": "This field stores the date Fee Posting or Miscellaneous Posting batch programs post the first late fee for the loan.",
+	"isSnippet": false
+}, {
+	"label": "CARDACTDECLCHKAXSFEEEVENTDATE",
+	"insertText": "CARDACTDECLCHKAXSFEEEVENTDATE",
+	"description": "This field stores the date Fee Posting, Miscellaneous Posting, or Check posting batch programs post the first declined access check fee for the loan.",
+	"isSnippet": false
+}, {
+	"label": "CARDACTRETURNITEMFEEEVENTDATE",
+	"insertText": "CARDACTRETURNITEMFEEEVENTDATE",
+	"description": "This field stores the date Fee Posting or Miscellaneous Posting batch programs post the first return payment fee for the loan.",
+	"isSnippet": false
+}, {
+	"label": "STMTCCINTBILLEDYTD",
+	"insertText": "STMTCCINTBILLEDYTD",
+	"description": "Symitar Quest stores the amount in this field to be printed on statements of total interest billed to this credit card loan this year.",
+	"isSnippet": false
+}, {
+	"label": "CCINTBILLEDYTD",
+	"insertText": "CCINTBILLEDYTD",
+	"description": "Symitar Quest stores the amount in this field of total interest charged to this credit card loan this calendar year.",
+	"isSnippet": false
+}, {
+	"label": "CABTTRANSINTCHARGEBILLEDYTD",
+	"insertText": "CABTTRANSINTCHARGEBILLEDYTD",
+	"description": "Symitar Quest stores the amount in this field of total cash advance and balance transfer transaction interest charges billed to the loan this year.",
+	"isSnippet": false
+}, {
+	"label": "CCINTBILLEDLASTYEAR",
+	"insertText": "CCINTBILLEDLASTYEAR",
+	"description": "Symitar Quest stores the amount in this field of total interest charged to this credit card loan during the previous year.",
+	"isSnippet": false
+}, {
+	"label": "CCPROMOEFFECTDATE:2 - CCPROMOEFFECTDATE:9",
+	"insertText": "CCPROMOEFFECTDATE:2 - CCPROMOEFFECTDATE:9",
+	"description": "These fields each store a date when the corresponding credit card promotion is effective for purchases, cash advances, and balance transfers taken on or before the date in the Promo # Expiration Date parameter (or before the number of days in the Promo # Expiration Days parameter have passed).",
+	"isSnippet": false
+}, {
+	"label": "PUINTCHARGE",
+	"insertText": "PUINTCHARGE",
+	"description": "Symitar Quest stores the amount in this field of interest calculated on purchases at the end of the statement period just completed.",
+	"isSnippet": false
+}, {
+	"label": "PUOLDINTUNPAID",
+	"insertText": "PUOLDINTUNPAID",
+	"description": "Symitar Quest stores the total amount in this field of interest due on current purchases at the end of the previous statement period.",
+	"isSnippet": false
+}, {
+	"label": "PUNEWINTUNPAID",
+	"insertText": "PUNEWINTUNPAID",
+	"description": "Symitar Quest stores the total amount in this field of interest due on current purchases at the end of the statement period just completed.",
+	"isSnippet": false
+}, {
+	"label": "PURCHOLDBALANCE:1",
+	"insertText": "PURCHOLDBALANCE:1",
+	"description": "Symitar Quest stores the principal balance in this field for current purchases at the end of the previous statement period.",
+	"isSnippet": false
+}, {
+	"label": "PURCHAVGBALANCE:1",
+	"insertText": "PURCHAVGBALANCE:1",
+	"description": "Symitar Quest stores the average daily principal balance in this field of current purchases for the statement period just completed.",
+	"isSnippet": false
+}, {
+	"label": "PURCHNEWBALANCE:1",
+	"insertText": "PURCHNEWBALANCE:1",
+	"description": "Symitar Quest stores the current purchase principal balance in this field at the end of the statement period just completed.",
+	"isSnippet": false
+}, {
+	"label": "PUPMTSINCELASTSTMT:1",
+	"insertText": "PUPMTSINCELASTSTMT:1",
+	"description": "Symitar Quest stores loan payment transactions in this field that have occurred since the last statement cutoff processing date and that apply to the credit card loan’s purchase balance at the standard rate.",
+	"isSnippet": false
+}, {
+	"label": "PUADDONSINCELASTSTMT:1",
+	"insertText": "PUADDONSINCELASTSTMT:1",
+	"description": "Symitar Quest stores loan add-on transactions in this field that have occurred since the last statement cutoff processing date and that are being charged as a credit card purchase at the standard rate.",
+	"isSnippet": false
+}, {
+	"label": "STATEMENTNEWBALANCE",
+	"insertText": "STATEMENTNEWBALANCE",
+	"description": "This field contains the total amount of card balances and the total amount of interest due at the end of the statement period just completed.",
+	"isSnippet": false
+}, {
+	"label": "STATEMENTOLDBALANCE",
+	"insertText": "STATEMENTOLDBALANCE",
+	"description": "This field contains the total amount of card balances and the total amount of interest due at the end of the previous statement period.",
+	"isSnippet": false
+}, {
+	"label": "FEEOLDBALANCE",
+	"insertText": "FEEOLDBALANCE",
+	"description": "Symitar Quest stores the fee balance in this field at the end of the previous statement period.",
+	"isSnippet": false
+}, {
+	"label": "FEENEWBALANCE",
+	"insertText": "FEENEWBALANCE",
+	"description": "Symitar Quest stores the ending fee balance in this field for the statement period just completed.",
+	"isSnippet": false
+}, {
+	"label": "FEEPMTSINCELASTSTMT",
+	"insertText": "FEEPMTSINCELASTSTMT",
+	"description": "Symitar Quest stores loan payment transactions in this field that have occurred since the last statement cutoff processing date and that apply to the credit card loan’s fee balance.",
+	"isSnippet": false
+}, {
+	"label": "FEEADDONSINCELASTSTMT",
+	"insertText": "FEEADDONSINCELASTSTMT",
+	"description": "Symitar Quest stores loan add-on transactions in this field that have occurred since the last statement cutoff processing date and that are being charged as a credit card fee.",
+	"isSnippet": false
+}, {
+	"label": "CAINTCHARGE",
+	"insertText": "CAINTCHARGE",
+	"description": "Symitar Quest stores the amount in this field of interest calculated on cash advances at the end of the statement period just completed.",
+	"isSnippet": false
+}, {
+	"label": "CAOLDINTUNPAID",
+	"insertText": "CAOLDINTUNPAID",
+	"description": "Symitar Quest stores the total amount in this field of interest due on cash advances at the end of the previous statement period.",
+	"isSnippet": false
+}, {
+	"label": "CANEWINTUNPAID",
+	"insertText": "CANEWINTUNPAID",
+	"description": "Symitar Quest stores the total amount in this field of interest due on cash advances at the end of the statement period just completed.",
+	"isSnippet": false
+}, {
+	"label": "CATRANSINTCHARGE",
+	"insertText": "CATRANSINTCHARGE",
+	"description": "Symitar Quest stores the amount in this field of the cash advances transaction finance charges for the statement period just completed.",
+	"isSnippet": false
+}, {
+	"label": "CASHADVOLDBALANCE:1",
+	"insertText": "CASHADVOLDBALANCE:1",
+	"description": "Symitar Quest stores the principal balance in this field for current cash advances at the end of the previous statement period.",
+	"isSnippet": false
+}, {
+	"label": "CASHADVAVGBALANCE:1",
+	"insertText": "CASHADVAVGBALANCE:1",
+	"description": "Symitar Quest stores the average daily principal balance in this field of current cash advances for the statement period just completed.",
+	"isSnippet": false
+}, {
+	"label": "CASHADVNEWBALANCE:1",
+	"insertText": "CASHADVNEWBALANCE:1",
+	"description": "Symitar Quest stores the cash advance principal balance in this field at the end of the statement period just completed. Under normal circumstances, you should not revise this field.",
+	"isSnippet": false
+}, {
+	"label": "CAPMTSINCELASTSTMT:1",
+	"insertText": "CAPMTSINCELASTSTMT:1",
+	"description": "Symitar Quest stores loan payment transactions in this field that have occurred since the last statement cutoff processing date and that apply to the credit card loan’s cash advance balance at the standard rate.",
+	"isSnippet": false
+}, {
+	"label": "CAADDONSINCELASTSTMT:1",
+	"insertText": "CAADDONSINCELASTSTMT:1",
+	"description": "Symitar Quest stores loan add-on transactions in this field that have occurred since the last statement cutoff processing date and that are being charged as a credit card cash advance at the standard rate.",
+	"isSnippet": false
+}, {
+	"label": "BTINTCHARGE",
+	"insertText": "BTINTCHARGE",
+	"description": "Symitar Quest stores the amount in this field of interest calculated on balance transfers at the end of the statement period just completed.",
+	"isSnippet": false
+}, {
+	"label": "BTOLDINTUNPAID",
+	"insertText": "BTOLDINTUNPAID",
+	"description": "Symitar Quest stores the total amount in this field of interest due on balance transfers at the end of the previous statement period.",
+	"isSnippet": false
+}, {
+	"label": "BTNEWINTUNPAID",
+	"insertText": "BTNEWINTUNPAID",
+	"description": "Symitar Quest stores the total amount in this field of interest due on balance transfers at the end of the statement period just completed.",
+	"isSnippet": false
+}, {
+	"label": "BTTRANSINTCHARGE",
+	"insertText": "BTTRANSINTCHARGE",
+	"description": "Symitar Quest stores the amount in this field of the balance transfer transaction finance charges for the statement period just completed.",
+	"isSnippet": false
+}, {
+	"label": "BALXFROLDBALANCE:1",
+	"insertText": "BALXFROLDBALANCE:1",
+	"description": "Symitar Quest stores the principal balance in this field for current balance transfers at the end of the previous statement period.",
+	"isSnippet": false
+}, {
+	"label": "BALXFRAVGBALANCE:1",
+	"insertText": "BALXFRAVGBALANCE:1",
+	"description": "Symitar Quest stores the average daily principal balance in this field of current balance transfers for the statement period just completed. Under normal circumstances.",
+	"isSnippet": false
+}, {
+	"label": "BALXFRNEWBALANCE:1",
+	"insertText": "BALXFRNEWBALANCE:1",
+	"description": "Symitar Quest stores the balance transfer principal balance in this field at the end of the statement period just completed. Under normal circumstances, you should not revise this field.",
+	"isSnippet": false
+}, {
+	"label": "BTPMTSINCELASTSTMT:1",
+	"insertText": "BTPMTSINCELASTSTMT:1",
+	"description": "Symitar Quest stores loan payment transactions in this field that have occurred since the last statement cutoff processing date and that apply to the credit card loan’s balance transfer balance at the standard rate.",
+	"isSnippet": false
+}, {
+	"label": "BTADDONSINCELASTSTMT:1",
+	"insertText": "BTADDONSINCELASTSTMT:1",
+	"description": "Symitar Quest stores loan add-on transactions in this field that have occurred since the last statement cutoff processing date and that are being charged as a credit card balance transfer at the standard rate.",
+	"isSnippet": false
+}, {
+	"label": "PURCHOLDBALANCE:2 - PURCHOLDBALANCE:9",
+	"insertText": "PURCHOLDBALANCE:2 - PURCHOLDBALANCE:9",
+	"description": "Symitar Quest stores the principal purchase balance in each of these fields made at an old interest rate in these fields. Current purchases do not affect this field.",
+	"isSnippet": false
+}, {
+	"label": "PURCHAVGBALANCE:2 - PURCHAVGBALANCE:9",
+	"insertText": "PURCHAVGBALANCE:2 - PURCHAVGBALANCE:9",
+	"description": "Symitar Quest stores the average daily principal balance in these fields of current purchases of promotion # for the statement period just completed.",
+	"isSnippet": false
+}, {
+	"label": "PURCHNEWBALANCE:2 - PURCHNEWBALANCE:9",
+	"insertText": "PURCHNEWBALANCE:2 - PURCHNEWBALANCE:9",
+	"description": "Symitar Quest stores the purchase principal balance in each of these fields related to the alternate interest rate at the end of the statement period just completed. Current purchases do not affect this field.",
+	"isSnippet": false
+}, {
+	"label": "PUPMTSINCELASTSTMT:2 - PUPMTSINCELASTSTMT:9",
+	"insertText": "PUPMTSINCELASTSTMT:2 - PUPMTSINCELASTSTMT:9",
+	"description": "Symitar Quest stores loan payment transactions for each field that have occurred since the last statement cutoff processing date and that apply to the credit card loan’s purchase balance at an alternate interest rate from the standard rate.",
+	"isSnippet": false
+}, {
+	"label": "PUADDONSINCELASTSTMT:2 - PUADDONSINCELASTSTMT:9",
+	"insertText": "PUADDONSINCELASTSTMT:2 - PUADDONSINCELASTSTMT:9",
+	"description": "Symitar Quest stores loan add-on transactions in these fields that have occurred since the last statement cutoff processing date and that are being charged as a credit card purchase at an alternate interest rate from the standard rate.",
+	"isSnippet": false
+}, {
+	"label": "CASHADVOLDBALANCE:2 - CASHADVOLDBALANCE:9",
+	"insertText": "CASHADVOLDBALANCE:2 - CASHADVOLDBALANCE:9",
+	"description": "Symitar Quest stores the cash advances in these fields made at an old rate. Current cash advances do not affect this field.",
+	"isSnippet": false
+}, {
+	"label": "CASHADVAVGBALANCE:2 - CASHADVAVGBALANCE:9",
+	"insertText": "CASHADVAVGBALANCE:2 - CASHADVAVGBALANCE:9",
+	"description": "Symitar Quest stores the average daily principal balance in these fields of current cash advances of promotion # for the statement period just completed.",
+	"isSnippet": false
+}, {
+	"label": "CASHADVNEWBALANCE:2 - CASHADVNEWBALANCE:9",
+	"insertText": "CASHADVNEWBALANCE:2 - CASHADVNEWBALANCE:9",
+	"description": "Symitar Quest stores the cash advance principal balance in these fields related to the alternate interest rate at the end of the statement period just completed. Current cash advances do not affect this field.",
+	"isSnippet": false
+}, {
+	"label": "CAPMTSINCELASTSTMT:2 - CAPMTSINCELASTSTMT:9",
+	"insertText": "CAPMTSINCELASTSTMT:2 - CAPMTSINCELASTSTMT:9",
+	"description": "Symitar Quest stores loan payment transactions for each field that have occurred since the last statement cutoff processing date and that apply to the credit card loan’s cash advance balance at an alternate interest rate from the standard rate.",
+	"isSnippet": false
+}, {
+	"label": "CAADDONSINCELASTSTMT:2 - CAADDONSINCELASTSTMT:9",
+	"insertText": "CAADDONSINCELASTSTMT:2 - CAADDONSINCELASTSTMT:9",
+	"description": "Symitar Quest stores loan add-on transactions in these fields that have occurred since the last statement cutoff processing date and that are being charged as a credit card cash advance at an alternate interest rate from the standard rate.",
+	"isSnippet": false
+}, {
+	"label": "BALXFROLDBALANCE:2 - BALXFROLDBALANCE:9",
+	"insertText": "BALXFROLDBALANCE:2 - BALXFROLDBALANCE:9",
+	"description": "Symitar Quest stores the balance transfers in these fields made at an old rate. Current balance transfers do not affect this field.",
+	"isSnippet": false
+}, {
+	"label": "BALXFRAVGBALANCE:2 - BALXFRAVGBALANCE:9",
+	"insertText": "BALXFRAVGBALANCE:2 - BALXFRAVGBALANCE:9",
+	"description": "Symitar Quest stores the average daily principal balance in these fields of current balance transfers of promotion # for the statement period just completed.",
+	"isSnippet": false
+}, {
+	"label": "BALXFRNEWBALANCE:2 - BALXFRNEWBALANCE:9",
+	"insertText": "BALXFRNEWBALANCE:2 - BALXFRNEWBALANCE:9",
+	"description": "Symitar Quest stores the balance transfer principal balance in these fields related to the alternate interest rate at the end of the statement period just completed. Current balance transfers do not affect this field.",
+	"isSnippet": false
+}, {
+	"label": "BTPMTSINCELASTSTMT:2 - BTPMTSINCELASTSTMT:9",
+	"insertText": "BTPMTSINCELASTSTMT:2 - BTPMTSINCELASTSTMT:9",
+	"description": "Symitar Quest stores loan payment transactions for these fields that have occurred since the last statement cutoff processing date and that apply to the credit card loan’s balance transfer balance at an alternate interest rate from the standard rate.",
+	"isSnippet": false
+}, {
+	"label": "BTADDONSINCELASTSTMT:2 - BTADDONSINCELASTSTMT:9",
+	"insertText": "BTADDONSINCELASTSTMT:2 - BTADDONSINCELASTSTMT:9",
+	"description": "Symitar Quest stores loan add-on transactions in these fields that have occurred since the last statement cutoff processing date and that are being charged as a credit card balance transfer at an alternate interest rate from the standard rate.",
+	"isSnippet": false
+}, {
+	"label": "CAPERCENT",
+	"insertText": "CAPERCENT",
+	"description": "This field stores the percentage of the overall credit limit that can be allocated to cash advances by multiplying the percent value in this field by the Credit Limit field value.",
+	"isSnippet": false
+}, {
+	"label": "CALIMITMAX",
+	"insertText": "CALIMITMAX",
+	"description": "This field stores the maximum amount that can be allocated to cash advances from the overall credit limit.",
+	"isSnippet": false
+}, {
+	"label": "BTPERCENT",
+	"insertText": "BTPERCENT",
+	"description": "When balance transfers are allowed, this field stores the percentage of the overall credit limit to be allocated to balance transfers by multiplying the percent value in this field by the Credit Limit field value.",
+	"isSnippet": false
+}, {
+	"label": "BTLIMITMAX",
+	"insertText": "BTLIMITMAX",
+	"description": "This field stores the maximum amount that can be allocated to balance transfers from the overall credit limit.",
+	"isSnippet": false
+}, {
+	"label": "COMBINEDCABTPERCENT",
+	"insertText": "COMBINEDCABTPERCENT",
+	"description": "When balance transfers are allowed, this field stores the percentage of the overall credit limit to be allocated to cash advances and balance transfers combined by multiplying the percent value in this field by the Credit Limit field value.",
+	"isSnippet": false
+}, {
+	"label": "COMBINEDCABTLIMITMAX",
+	"insertText": "COMBINEDCABTLIMITMAX",
+	"description": "This field stores the maximum amount that can be allocated to combined cash advances and balance transfers from the overall credit limit.",
+	"isSnippet": false
+}, {
+	"label": "TOTALFEEBALANCETODATE",
+	"insertText": "TOTALFEEBALANCETODATE",
+	"description": "This field contains the fee balance to date; it adds the last statement cutoff processing balance and any related loan add-ons and loan payments that have occurred during the statement cycle.",
+	"isSnippet": false
+}, {
+	"label": "TOTALPUBALANCETODATE",
+	"insertText": "TOTALPUBALANCETODATE",
+	"description": "This field contains the total purchase balance to date; it adds the last statement cutoff processing purchase balances and any related loan add-ons and loan payments that have occurred during the statement cycle.",
+	"isSnippet": false
+}, {
+	"label": "TOTALCABALANCETODATE",
+	"insertText": "TOTALCABALANCETODATE",
+	"description": "This field contains the cash advance balance to date; it adds the last statement cutoff processing cash advance balances and any related loan add-ons and loan payments that have occurred during the statement cycle.",
+	"isSnippet": false
+}, {
+	"label": "TOTALBTBALANCETODATE",
+	"insertText": "TOTALBTBALANCETODATE",
+	"description": "This field contains the balance transfer balance to date; it adds the last statement cutoff processing balance transfer balances and any related loan add-ons and loan payments that have occurred during the statement cycle.",
+	"isSnippet": false
+}, {
+	"label": "OVLOPTIN",
+	"insertText": "OVLOPTIN",
+	"description": "This field stores a code to indicate whether the member has chosen (opted-in) to use the OVL service.",
+	"isSnippet": false
+}, {
+	"label": "OVLAUTHFEE",
+	"insertText": "OVLAUTHFEE",
+	"description": "This field stores a code that determines whether to authorize or assess a fee for credit card over-the-limit transactions.",
+	"isSnippet": false
+}, {
+	"label": "OVLAUTHFEEEFFDATE",
+	"insertText": "OVLAUTHFEEEFFDATE",
+	"description": "This field stores the effective date of the OVL Auth/Fee Option field setting.",
+	"isSnippet": false
+}, {
+	"label": "OVLPREVAUTHFEE",
+	"insertText": "OVLPREVAUTHFEE",
+	"description": "Symitar Quest stores a code in this field that specifies the previous setting of the OVL Auth/Fee Option field.",
+	"isSnippet": false
+}, {
+	"label": "OVLSTMTDISCLFEE",
+	"insertText": "OVLSTMTDISCLFEE",
+	"description": "This field stores the fee amount that the Statement Generation batch program reads and prints on the revocation disclosure expressing the member’s right to revoke any consent for opting into the over-the-limit transaction services for credit card loans.",
+	"isSnippet": false
+}, {
+	"label": "OVLCYCLECOUNT:1 - OVLCYCLECOUNT:3",
+	"insertText": "OVLCYCLECOUNT:1 - OVLCYCLECOUNT:3",
+	"description": "Symitar Quest stores the count in these fields of over-the-limit transactions that occurred during each of the last three billing cycles.",
+	"isSnippet": false
+}, {
+	"label": "USERCHAR1 - USERCHAR4",
+	"insertText": "USERCHAR1 - USERCHAR4",
+	"description": "These four custom fields can store any credit union-defined character data.",
+	"isSnippet": false
+}, {
+	"label": "USERAMOUNT1 - USERAMOUNT2",
+	"insertText": "USERAMOUNT1 - USERAMOUNT2",
+	"description": "These two custom fields can store any credit union-defined cash amount.",
+	"isSnippet": false
+}, {
+	"label": "USERDATE1 - USERDATE2",
+	"insertText": "USERDATE1 - USERDATE2",
+	"description": "These two custom fields can store any credit union-defined date.",
+	"isSnippet": false
+}, {
+	"label": "BUREAUSCORE:4",
+	"insertText": "BUREAUSCORE:4",
+	"description": "This field stores the most recent credit score received from the ChexSystems® credit bureau for the main applicant for the loan.",
+	"isSnippet": false
+}, {
+	"label": "POSITIVEPAYDRAFT",
+	"insertText": "POSITIVEPAYDRAFT",
+	"description": "This field stores a code that allows the user to add the loan to the Positive Pay Draft module using PowerOn specfiles or SymConnect.",
+	"isSnippet": false
+}, {
+	"label": "INTERESTDUE",
+	"insertText": "INTERESTDUE",
+	"description": "This field contains the computed amount of interest due on the loan at the time of the inquiry.",
+	"isSnippet": false
+}, {
+	"label": "LATECHARGEDUE",
+	"insertText": "LATECHARGEDUE",
+	"description": "This field contains the computed amount of late charges due on the loan at the time of the inquiry.",
+	"isSnippet": false
+}, {
+	"label": "PAYMENTDUE",
+	"insertText": "PAYMENTDUE",
+	"description": "This field contains the computed payment due on the loan (including past due amounts) at the time of the inquiry.",
+	"isSnippet": false
+}, {
+	"label": "PASTDUEAMOUNT",
+	"insertText": "PASTDUEAMOUNT",
+	"description": "This field contains the computed amount past due on the loan at the time of the inquiry.",
+	"isSnippet": false
+}, {
+	"label": "PAYOFFAMOUNT",
+	"insertText": "PAYOFFAMOUNT",
+	"description": "This field contains the computed current loan payoff amount at the time of the inquiry for any type of loan, including credit card loans.",
+	"isSnippet": false
+}, {
+	"label": "SALESTAXDUE",
+	"insertText": "SALESTAXDUE",
+	"description": "This field contains the computed current lease loan sales tax amount due at the time of the inquiry.",
+	"isSnippet": false
+}, {
+	"label": "SALESTAXPAYOFF",
+	"insertText": "SALESTAXPAYOFF",
+	"description": "This field contains the computed current lease loan sales tax payoff amount at the time of the inquiry.",
+	"isSnippet": false
+}, {
+	"label": "EFFECTIVEBALANCE",
+	"insertText": "EFFECTIVEBALANCE",
+	"description": "This field contains the computed sum of the principal balance plus the value in the Billed Fee Unpaid field, for non-daily interest loans, or total balance (the sum of principal, interest, late charges and other fees), for credit card loan.",
+	"isSnippet": false
+}, {
+	"label": "LRLNBALANCE",
+	"insertText": "LRLNBALANCE",
+	"description": "This field contains the computed latest balance from when the loan was refinanced.",
+	"isSnippet": false
+}, {
+	"label": "LRLNDATE",
+	"insertText": "LRLNDATE",
+	"description": "This field contains the computed latest date the loan was refinanced.",
+	"isSnippet": false
+}, {
+	"label": "PAYEELINE:1 - PAYEELINE:6",
+	"insertText": "PAYEELINE:1 - PAYEELINE:6",
+	"description": "These fields each contain mailing information derived from other name and address fields in this loan.",
+	"isSnippet": false
+}, {
+	"label": "ALTERNATEADDRESS:1 - ALTERNATEADDRESS:6",
+	"insertText": "ALTERNATEADDRESS:1 - ALTERNATEADDRESS:6",
+	"description": "These fields each contain alternate mailing information derived from other name and address fields in this loan.",
+	"isSnippet": false
+}, {
+	"label": "PAYEEPHONE:1 - PAYEEPHONE:3",
+	"insertText": "PAYEEPHONE:1 - PAYEEPHONE:3",
+	"description": "These fields each contain a member's phone number information derived from other name fields in this loan.",
+	"isSnippet": false
+}, {
+	"label": "ALTERNATEPHONE:1 - ALTERNATEPHONE:3",
+	"insertText": "ALTERNATEPHONE:1 - ALTERNATEPHONE:3",
+	"description": "These fields each contain a member's alternate phone number information derived from other name fields in this loan.",
+	"isSnippet": false
+}, {
+	"label": "ALTERNATENAMETYPE",
+	"insertText": "ALTERNATENAMETYPE",
+	"description": "This field contains the computed alternate name type derived from fields in other Name records.",
+	"isSnippet": false
+}, {
+	"label": "ALTERNATENAMELOCATOR",
+	"insertText": "ALTERNATENAMELOCATOR",
+	"description": "This field contains the locator number of the first Loan-level Name record that it finds that has a Name Type field value of (3) Alternate mailing or a Mail Override field value of (1) Overrides primary mailing address.",
+	"isSnippet": false
+}, {
+	"label": "PAYEENAMETYPE",
+	"insertText": "PAYEENAMETYPE",
+	"description": "This field contains the Name Type field value of the first Loan-level Name record that it finds that has a Mail Override field value of (1) Overrides primary mailing address.",
+	"isSnippet": false
+}, {
+	"label": "PAYEENAMELOCATOR",
+	"insertText": "PAYEENAMELOCATOR",
+	"description": "This field contains the locator number of the first Loan-level Name record that it finds that has a Mail Override field value of (1) Overrides primary mailing address.",
+	"isSnippet": false
+}, {
+	"label": "SEG0PAYMENTDUE",
+	"insertText": "SEG0PAYMENTDUE",
+	"description": "This field contains the computed payment due on Segment 0 (including past due amounts) at the time of the inquiry for non-SymChoice Loans.",
+	"isSnippet": false
+}, {
+	"label": "SEG0PAYOFFAMT",
+	"insertText": "SEG0PAYOFFAMT",
+	"description": "This field contains the computed payoff amount for Segment 0 (including past due amounts) at the time of the inquiry for non-SymChoice Loans.",
+	"isSnippet": false
+}, {
+	"label": "THRESHOLDPMT",
+	"insertText": "THRESHOLDPMT",
+	"description": "This field contains the computed threshold payment amount required to advance the loan due date.",
+	"isSnippet": false
+}, {
+	"label": "UNADJAPAYMENTDUE",
+	"insertText": "UNADJAPAYMENTDUE",
+	"description": "This field contains the computed Payment Due field value excluding the Unapplied Partial Payment field balance.",
+	"isSnippet": false
+}, {
+	"label": "UNADJTHRESHOLDPMT",
+	"insertText": "UNADJTHRESHOLDPMT",
+	"description": "This field contains the computed Threshold Payment field amount excluding the Unapplied Partial Payment field balance in the Loan record.",
+	"isSnippet": false
+}, {
+	"label": "NEXTSTMTDATE",
+	"insertText": "NEXTSTMTDATE",
+	"description": "This field contains the next expected statement date for loans with a value of 10-8999 in the Loan record Interest Type field.",
+	"isSnippet": false
+}]

@@ -33,6 +33,20 @@ import { rateChangeRecordFields } from "../documentation/rateChangeRecordFields"
 import { loanBankruptcyRecordFields } from "../documentation/loanBankruptcyRecordFields"
 import { loanBankruptcyPrepetitionBalanceRecordFields } from "../documentation/loanBankruptcyPrepetitionBalanceRecordFields"
 import { eftRecordFields } from "../documentation/eftRecordFields"
+import { eftAddendaInfoRecordFields } from "../documentation/eftAddendaInfoRecordFields"
+import { externalLoanRecordFields } from "../documentation/externalLoanRecordFields"
+import { cardRecordFields } from "../documentation/cardRecordFields"
+import { loanAppRecordFields } from "../documentation/loanAppRecordFields"
+import { loanAppPersonRecordFields } from "../documentation/loanAppPersonRecordFields"
+import { loanAppFinanceRecordFields } from "../documentation/loanAppFinanceRecordFields"
+import { cpWorkCardRecordFields } from "../documentation/cpWorkCardRecordFields"
+import { creditReportRecordFields } from "../documentation/creditReportRecordFields"
+import { creditReportItemRecordFields } from "../documentation/creditReportItemRecordFields"
+import { portfolioRecordFields } from "../documentation/portfolioRecordFields"
+import { siteRecordFields } from "../documentation/siteRecordFields"
+import { cashOrderTypeRecordFields } from "../documentation/cashOrderTypeRecordFields"
+import { externalAccountRecordFields } from "../documentation/externalAccountRecordFields"
+import { batchACHOriginationRecordFields } from "../documentation/batchACHOriginationRecordFields"
 
 
 export function getHoverHandler(context: Context) {
@@ -130,6 +144,7 @@ function getHoverInfo(fieldName: string, recordType: string, node: SyntaxNode): 
     case 'share tracking':
     case 'loan tracking':
     case 'loanapp tracking':
+    case 'cpworkcard tracking':
       mdContent = trackingRecordFields.get(fieldName)
       break
     case 'note':
@@ -224,6 +239,48 @@ function getHoverInfo(fieldName: string, recordType: string, node: SyntaxNode): 
     case 'bill':
     case 'payroll':
       mdContent = eftRecordFields.get(fieldName)
+      break
+    case 'eft addendainfo':
+      mdContent = eftAddendaInfoRecordFields.get(fieldName)
+      break
+    case 'externalloan':
+      mdContent = externalLoanRecordFields.get(fieldName)
+      break
+    case 'card':
+      mdContent = cardRecordFields.get(fieldName)
+      break
+    case 'loanapp':
+      mdContent = loanAppRecordFields.get(fieldName)
+      break
+    case 'loanapp person':
+      mdContent = loanAppPersonRecordFields.get(fieldName)
+      break
+    case 'loanapp finance':
+      mdContent = loanAppFinanceRecordFields.get(fieldName)
+      break
+    case 'cpworkcard':
+      mdContent = cpWorkCardRecordFields.get(fieldName)
+      break
+    case 'credrep':
+      mdContent = creditReportRecordFields.get(fieldName)
+      break
+    case 'credrep item':
+      mdContent = creditReportItemRecordFields.get(fieldName)
+      break
+    case 'portfolio':
+      mdContent = portfolioRecordFields.get(fieldName)
+      break
+    case 'site':
+      mdContent = siteRecordFields.get(fieldName)
+      break
+    case 'site cashordertype':
+      mdContent = cashOrderTypeRecordFields.get(fieldName)
+      break
+    case 'externalaccount':
+      mdContent = externalAccountRecordFields.get(fieldName)
+      break
+    case 'batchachorig':
+      mdContent = batchACHOriginationRecordFields.get(fieldName)
       break
     default:
       return null
