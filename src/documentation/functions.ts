@@ -931,3 +931,153 @@ NAME:BIRTHDATE<=DATEOFFSET(SYSTEMDATE,-18*12,0) THEN
 `+ CODEEND + `
 Determines if the member is at least 18 years old
 `)
+powerOnFunctions.set("dateread", `
+# DATEREAD
+---
+This function displays a prompt on the user's console and returns the date entered.
+
+### Syntax
+`+ CODESTART + `
+DATEREAD(prompt)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+DESIREDDATE=DATEREAD("Enter Reconciliation Date")
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in DEFINE, SELECT, or SETUP division or in procedures called by those divisions.
+  * Only used in batch specfiles
+  * A colon (:) is automatically included after the last word in the prompt when in text mode. If you type an additional colon after the prompt, it is ignored
+  * User must enter the date with either six (mmddyy) or eight (mmddyyyy) digits
+  * 40 character maximum
+  * Prompt should be a phrase or series of phrases that are meaningful to the computer operator. Each phrase in a prompt must be separated by commas and delineated by quotation marks
+
+***Important:*** The DATEREAD function displays in a batch program regardless of where it is in the specfile, even if it is inside of a comment or in a procedure that is not specifically called. If you want to keep the prompt in a comment, simply add a space between the data type and the word READ to prevent PowerOn from recognizing the function and displaying the prompt to the user.
+When the operator queues the specfile to run, PowerOn looks through the specfile for READ functions. If it finds any, PowerOn displays the prompts on the console so the operator can respond to them before the job runs. When a READ function is used in a specfile, there is no mechanism to skip it using a conditional statement. Each READ function requires a response. A job file may be used to pre-specify responses to READ functions.
+
+### Define Division Example
+`+ CODESTART + `
+  DEFINE
+  STARTDATE=DATEREAD("Enter the starting date for the report.",
+                    "This date should be the first day of a
+                     month.","Starting date")
+  END
+`+ CODEEND + `
+
+When queued for batch processing, the following message and prompt display:
+
+Enter the starting date for the report.
+This date should be the first day of a month.
+Starting date [--/--/--]:
+
+### For Each Loop Example
+`+ CODESTART + `
+  TARGET=SHARE
+ DEFINE
+   DESIREDDATE=DATEREAD("Enter Expiration Date")
+  END
+   etc...
+
+ PRINT TITLE="Share Holds Expiring"+FORMAT("99/99/99",DESIREDDATE)
+  FOR EACH SHARE HOLD 
+   WITH(SHARE HOLD:EXPIRATIONDATE=DESIREDDATE)
+   DO
+    etc...
+`+ CODEEND + `
+
+### Select Open Records Example
+`+ CODESTART + `
+  TARGET=ACCOUNT
+  SELECT
+   ACCOUNT:OPENDATE=DATEREAD("Enter First Day of Month")
+  END
+  etc...
+`+ CODEEND + `
+
+### IF...THEN...ELSE Example
+`+ CODESTART + `
+  IF LOAN:ORIGINALDATE=
+    DATEREAD("Enter Desired Date") THEN
+   DO
+    etc...
+   END
+  ELSE
+   DO
+    etc...
+   END
+`+ CODEEND
+)
+powerOnFunctions.set("datevalue", `
+# DATEVALUE
+---
+This function converts dates stored as character data to the DATE data type.
+
+### Syntax
+`+ CODESTART + `
+DATEVALUE (expression)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+PRINT DATEVALUE ("11/06/12")+1
+`+ CODEEND + `
+Prints
+11/07/12
+
+### Usage Information
+  * A truly blank character string ("") or an invalid or unrecognized format is interpreted as a blank date
+  * Use only in the SETUP, SELECT, PRINT, or TOTAL divisions or in a procedure called by one of these divisions
+  * Automatically strips off leading and trailing blanks before attempting to interpret the text
+  * The resulting value can be a text constant, a text variable, or a text expression
+  * For the month, use a two-digit range of 01–12
+  * For the day, use a two-digit range of 01-31
+  * All dates with a two-digit year field will be interpreted to be between the year 1979 and the year 2078. If the two-digit year field is between 00 and 78, the year is interpreted to be between 2000 and 2078. If the two-digit year field is between 79 and 99, the year is interpreted to be between 1979 and 1999.
+
+  ***Important:*** If the Symitar Quest interpretation of a two-digit year is not correct for an application or integration, the system always supports a four-digit year. For example, if the date should be 1968, but Symitar Quest interprets it as 2068, the solution for this issue is for the application or vendor to send the year as a four-digit year.
+
+  * Accepted date formats:
+    - ("mm/dd/yyyy")
+    - ("mm/d/yy")
+    - ("m/dd/yy")
+    - ("m/d/yy")
+    - ("mm/dd/yy")
+    - ("mm/d/yyyy")
+    - ("m/dd/yyyy")
+    - ("m/d/yyyy")
+    - ("mmddyy")
+    - ("mmddyyyy")
+    - ("yyyymmdd")
+    - ("yyyy/mm/dd")
+    - ("-/-/-")
+    - ("--/--/--")
+    - ("--/--/----")
+
+***Tip:*** Use DATEVALUE when you want to have a specfile read through a system-generated report and manipulate text dates on the report.
+
+### Extended Example
+The following example opens a letter file called TEMP.FILE and reads each line in the file. Each time it reads a new line, it stores the first ten characters of that line into a variable called DATEVAR, which interprets the first ten characters as a date in MM/DD/YYYY format. The DATEVALUE function then converts this text into MM/DD/YY format and the PRINT statement instructs it to print.
+`+ CODESTART + `
+  TARGET=ACCOUNT
+
+  DEFINE   
+   DATEVAR=CHARACTER(10)
+   FNUMBER=NUMBER
+   FERROR=CHARACTER
+   FLINE=CHARACTER
+  END
+
+  PRINT TITLE="Print Dates from file"
+   FILEOPEN("LETTER","TEMP.FILE","READ",FNUMBER,FERROR)
+   WHILE FERROR=""
+    DO
+     FILEREADLINE(FNUMBER,FLINE,FERROR)
+     DATEVAR=SEGMENT(FLINE,1,10)
+     PRINT DATEVALUE(DATEVAR)
+     NEWLINE
+    END
+   FILECLOSE(FNUMBER,FERROR)
+  END
+`+ CODEEND
+)
