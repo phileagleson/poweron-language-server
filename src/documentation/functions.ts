@@ -1081,3 +1081,36 @@ The following example opens a letter file called TEMP.FILE and reads each line i
   END
 `+ CODEEND
 )
+powerOnFunctions.set("day", `
+# DAY
+---
+This function returns the numerical value for the day in a date field or a date variable.
+
+### Syntax
+`+ CODESTART + `
+DAY(DateExpression)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+DAY(CHECK:POSTDATE) DAY(STARTDATE)
+`+ CODEEND + `
+
+### Constraints
+  * Use only in the SETUP, SELECT, or TOTAL divisions or in a procedure called by one of these divisions
+  * Follow the keyword with parentheses that enclose a variable or a field reference with a data type of DATE
+  * Value must be in the range from 0 to 31.
+  * Use this keyword anywhere you use a number value
+  * DAY('--/--/--') returns a value of 0
+
+### Extended Example
+`+ CODESTART + `
+  TARGET=NAME
+  SELECT
+   MONTH(NAME:BIRTHDATE)=3 AND
+   DAY(NAME:BIRTHDATE)=24
+  END
+  SORT
+   etc...
+`+ CODEEND + `
+`)
