@@ -2,7 +2,7 @@ import { CodeAction, CodeActionKind, CodeActionParams, Command, Range, TextDocum
 import { Context } from '../interfaces'
 
 export function getCodeActionHandler(context: Context) {
-  
+
   return function handleCodeAction(params: CodeActionParams): Command[] | CodeAction[] | null {
     const actions: CodeAction[] = []
     const HTMLTITLE = `Wrap selection in HTMLVIEWLINE`
@@ -13,7 +13,7 @@ export function getCodeActionHandler(context: Context) {
         kind: CodeActionKind.RefactorRewrite,
         edit: htmlEdit
       }
-      
+
       actions.push(wrapInHtml)
     }
     return actions
@@ -43,7 +43,7 @@ function wrapInHtmlViewLine(range: Range, uri: URI, context: Context): Workspace
         },
         end: {
           line: x,
-          character: lines[x].length - 1
+          character: lines[x].length
         }
       },
       newText: newLine

@@ -1114,3 +1114,851 @@ DAY(CHECK:POSTDATE) DAY(STARTDATE)
    etc...
 `+ CODEEND + `
 `)
+powerOnFunctions.set("dayofweek", `
+# DAYOFWEEK
+---
+This function returns a numeric value from 0-6 representing the day of the week; 0 = Sunday, 1 = Monday, etc.
+
+### Syntax
+`+ CODESTART + `
+DAYOFWEEK(expression)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+DAYOFWEEK(SHARE TRANSACTION:POSTDATE)
+`+ CODEEND + `
+
+### Constraints
+  * Use only in the SETUP, SELECT, SORT, PRINT, LETTER, or TOTAL divisions or in a procedure called by those divisions
+  * Null value returns 0
+
+### Extended Example
+`+ CODESTART + `
+  TARGET=NAME
+  SELECT
+   DAYOFWEEK(NAME:BIRTHDATE)=2
+  END
+  SORT
+   etc...
+`+ CODEEND
+)
+powerOnFunctions.set("dialogpromptchar", `
+# DIALOGPROMPTCHAR
+---
+This function displays the text for a character data prompt in an interactive window.
+
+### Syntax
+`+ CODESTART + `
+DIALOGPROMPTCHAR (Prompt,MaxLength,Default)
+`+ CODEEND + `
+
+### Arguments
+  * Prompt	
+      * Character line with a maximum of 40 characters
+  * MaxLength	Default
+      * The maximum allowable number of characters for the field	The default value for the field, in the appropriate data type. This value displays in the data entry box.
+
+### Example
+`+ CODESTART + `
+DIALOGPROMPTCHAR("Enter the From address",40,"")
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * Each occurrence of this command must have an associated ENTERCHARACTER statement included, with the prompt for the ENTERCHARACTER command matching the dialog prompt exactly.
+  * If the prompt text in the DIALOGPROMPTCHAR statement or the associated ENTERCHARACTER function is over 40 characters or does not match exactly, Episys displays an error.
+  * Clicking the Cancel button terminates the specfile
+  * Pressing Enter or clicking the OK button continues the specfile
+  * Supports a MaxLength value of 1 thru 78. For a MaxLength value < 1 or > 78 the system defaults to a value of 40
+  * Use only for demand specfiles.
+
+### Extended Example
+`+ CODESTART + `
+SETUP
+  DIALOGSTART("EMAIL",10%,0)
+  DIALOGINTROTEXT("So you want to send an email?")
+  DIALOGPROMPTCHAR("Enter the From address",40,"")
+  DIALOGPROMPTCHAR("Enter the To address",40,NAME:EMAIL)
+  DIALOGPROMPTCHAR("Enter the subject line",40,"")
+  DIALOGPROMPTNUMBER("Enter the number of lines",5)
+  DIALOGDISPLAY
+  FROMADDRESS=ENTERCHARACTER("Enter the From address",40,NAME:EMAIL)
+  TOADDRESS=ENTERCHARACTER("Enter the To address",40,"")
+  SUBJECT=ENTERCHARACTER("Enter the subject line",40,"")
+  NUMLINES=ENTERNUMBER("Enter the number of lines",5)
+  DIALOGCLOSE
+ END
+`+ CODEEND
+)
+powerOnFunctions.set("dialogpromptcode", `
+# DIALOGPROMPTCODE
+---
+This function displays the text for a code data prompt in an interactive window.
+
+### Syntax
+`+ CODESTART + `
+DIALOGPROMPTCODE (Prompt,MaxValue,Default)
+`+ CODEEND + `
+
+### Arguments
+  * Prompt
+    * Character line with a maximum of 40 characters
+  * MaxLength
+    * The maximum allowable number of characters for the field
+  * Default
+    * The default value for the field, in the appropriate data type. This value displays in the data entry box.
+
+### Example
+`+ CODESTART + `
+DIALOGPROMPTCODE("Enter Month 1-12: ",12,MONTH(NAME:BIRTHDATE)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * Each occurrence of this command must have an associated ENTERCODE statement included, with the prompt for the ENTERCODE command matching the dialog prompt exactly.
+  * If the prompt text in the DIALOGPROMPTCODE statement or the associated ENTERCODE function is over 40 characters or does not match exactly, Episys displays an error.
+  * Clicking the Cancel button terminates the specfile
+  * Pressing Enter or clicking the OK button continues the specfile
+  * Use only for demand specfiles.
+
+### Extended Example
+`+ CODESTART + `
+SETUP
+  DIALOGSTART("Birthdate Info",200%,0)
+  DIALOGINTROTEXT("Enter your birthdate, (Month, Day)")
+  DIALOGPROMPTCODE("Enter Month 1-12: ",12,MONTH(NAME:BIRTHDATE))
+  DIALOGPROMPTCODE("Enter Day   1-31: ",31,DAY(NAME:BIRTHDATE))
+  DIALOGDISPLAY
+  M=ENTERCODE("Enter Month 1-12: ",12,MONTH(NAME:BIRTHDATE))
+  D=ENTERCODE("Enter Day   1-31: ",31,DAY(NAME:BIRTHDATE))
+  DIALOGCLOSE
+ END
+`+ CODEEND
+)
+powerOnFunctions.set("dialogpromptcombooption", `
+# DIALOGPROMPTCOMBOOPTION
+---
+This function adds options to a drop-down list of choices in an interactive window.
+
+### Syntax
+`+ CODESTART + `
+DIALOGPROMPTCOMBOOPTION (Value,Text)
+`+ CODEEND + `
+
+### Arguments
+  * Value
+    * Numeric value (>=0) associated with this list box option
+  * Text
+    * Text description displayed in the list box for this option
+
+### Example
+`+ CODESTART + `
+DIALOGPROMPTCOMBOOPTION(00,"Single Payment")
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * The coding to define a combo box must begin with a DIALOGPROMPTCOMBOSTART command and end with a DIALOGPROMPTCOMBOEND command
+  * Clicking the Cancel button terminates the specfile
+  * Pressing Enter or clicking the OK button continues the specfile
+  * The VALUE argument cannot be larger than 32767
+  * Use only for demand specfiles.
+
+### Extended Example
+***Tip:*** To select the desired option, use ENTERCODE.
+`+ CODESTART + `
+DIALOGPROMPTCOMBOOPTION(00,"Single Payment")
+ DIALOGPROMPTCOMBOOPTION(10,"Annual")
+ DIALOGPROMPTCOMBOOPTION(20,"Semi-Annual")
+ DIALOGPROMPTCOMBOOPTION(30,"Quarterly")
+ DIALOGPROMPTCOMBOOPTION(40,"Monthly")
+ DIALOGPROMPTCOMBOOPTION(50,"Semi-Monthly")
+ DIALOGPROMPTCOMBOOPTION(60,"Biweekly Skip First")
+ DIALOGPROMPTCOMBOOPTION(70,"Biweekly Skip Last")
+ DIALOGPROMPTCOMBOOPTION(80,"Biweekly")
+ DIALOGPROMPTCOMBOOPTION(90,"Weekly")
+ DIALOGPROMPTCOMBOOPTION(100,"Immediate")
+ DIALOGPROMPTCOMBOOPTION(110,"Weekly Skip First")
+ DIALOGPROMPTCOMBOOPTION(120,"Weekly Skip Last")
+`+ CODEEND + `
+Selecting Quarterly returns a value of 30 as defined above.
+
+***Important:*** The value of the prompt field in the ENTERCODE statement must match the prompt field in the DIALOGPROMPTCOMBOSTART command exactly. If not, results will be unpredictable.
+### Setup Division Example
+`+ CODESTART + `
+SETUP
+  X=-1
+  FOR EACH SHARE WITH (SHARE:CLOSEDATE='--/--/--' OR
+                      (SHARE:CLOSEDATE<=SYSTEMDATE AND
+                       SHARE:CLOSEDATE>=DATE(1,1,FULLYEAR(SYSTEMDATE))))
+   DO
+    X=X+1
+    ID(X)=SHARE:ID
+    DESCRIPTION(X)=SHARE:DESCRIPTION
+   END
+  DIALOGSTART("Select a Share",100%,1)
+  DIALOGPROMPTCOMBOSTART("Share ID",0)
+  FOR I=0 TO X
+    DO
+     DIALOGPROMPTCOMBOOPTION(I,ID(I)+" "+DESCRIPTION(I))
+    END
+  DIALOGPROMPTCOMBOEND
+  DIALOGDISPLAY
+  IDSUB=ENTERCODE("Share ID",X,0)
+  DIALOGCLOSE
+  SELECTEDID = ID(IDSUB)
+  SELECTEDDESC = DESCRIPTION(IDSUB)
+ END
+`+ CODEEND + `
+Because share IDs are character fields, they are not used for the field value. Instead, the coding places the ordinal value of the option as value and then selects the ID and description using the selected value as the index into arrays.
+`)
+powerOnFunctions.set("dialogpromptcombostart", `
+# DIALOGPROMPTCOMBOSTART
+---
+This function indicates the beginning of a drop-down list of options in an interactive window.
+
+### Syntax
+`+ CODESTART + `
+DIALOGPROMPTCOMBOSTART (Prompt,Default)
+`+ CODEEND + `
+
+### Arguments
+  * Prompt
+    * Character line with a maximum of 40 characters
+  * MaxLength
+    * The maximum allowable number of characters for the field
+  * Default
+    * The default value for the field, in the appropriate data type. This value displays in the data entry box.
+
+### Example
+`+ CODESTART + `
+DIALOGPROMPTCOMBOSTART ("Share ID",0)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * The coding to define a combo box must begin with a DIALOGPROMPTCOMBOSTART command and end with a DIALOGPROMPTCOMBOEND command
+  * If the prompt text in the DIALOGPROMPTCOMBOSTART statement or the associated ENTERCODE function is over 40 characters or does not match exactly, Episys displays an error.
+  * Clicking the Cancel button terminates the specfile
+  * Pressing Enter or clicking the OK button continues the specfile
+  * The value of the prompt field in the ENTERCODE statement must match the prompt field in the DIALOGPROMPTCOMBOSTART command exactly, otherwise the results will be unpredictable
+  * Use only for demand specfiles.
+
+### Extended Example
+`+ CODESTART + `
+SETUP
+  X=-1
+  FOR EACH SHARE WITH (SHARE:CLOSEDATE='--/--/--' OR
+                      (SHARE:CLOSEDATE<=SYSTEMDATE AND
+                       SHARE:CLOSEDATE>=DATE(1,1,FULLYEAR(SYSTEMDATE))))
+   DO
+    X=X+1
+    ID(X)=SHARE:ID
+    DESCRIPTION(X)=SHARE:DESCRIPTION
+   END
+  DIALOGSTART("Select a Share",100%,1)
+  DIALOGPROMPTCOMBOSTART("Share ID",0)
+  FOR I=0 TO X
+    DO
+     DIALOGPROMPTCOMBOOPTION(I,ID(I)+" "+DESCRIPTION(I))
+    END
+  DIALOGPROMPTCOMBOEND
+  DIALOGDISPLAY
+  IDSUB=ENTERCODE("Share ID",X,0)
+  DIALOGCLOSE
+  SELECTEDID = ID(IDSUB)
+  SELECTEDDESC = DESCRIPTION(IDSUB)
+ END
+`+ CODEEND
+)
+powerOnFunctions.set("dialogpromptdate", `
+# DIALOGPROMPTDATE
+---
+This function displays the text for a date prompt in an interactive window.
+
+### Syntax
+`+ CODESTART + `
+DIALOGPROMPTDATE (Prompt,Default)
+`+ CODEEND + `
+
+### Arguments
+  * Prompt
+    * Character line with a maximum of 40 characters
+  * MaxLength
+    * The maximum allowable number of characters for the field
+  * Default
+    * The default value for the field, in the appropriate data type. This value displays in the data entry box.
+
+### Example
+`+ CODESTART + `
+DIALOGPROMPTDATE ("Date Prompt",'06/05/08')
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * If the prompt text in the DIALOGPROMPTDATE statement or the associated ENTERDATE function is over 40 characters or does not match exactly, Episys displays an error.
+  * Clicking the Cancel button terminates the specfile
+  * Pressing Enter or clicking the OK button continues the specfile
+  * Each occurrence must have an associated ENTERDATE matching the dialog prompt
+  * Use only for demand specfiles.
+
+### Extended Example
+`+ CODESTART + `
+SETUP
+  DIALOGSTART("Test Prompts",100%,0)
+  DIALOGINTROTEXT("Test display of various prompts")
+  DIALOGPROMPTMONEY("Money Prompt",$100.00)
+  DIALOGPROMPTRATE("Rate Prompt",8.500%)
+  DIALOGPROMPTDATE("Date Prompt",'06/05/00')
+  DIALOGPROMPTYESNO("Yes/No Prompt",1)
+  DIALOGDISPLAY
+  MONEYFIELD=ENTERMONEY("Money Prompt",$100.00)
+  RATEFIELD=ENTERRATE("Rate Prompt",8.500%)
+  DATEFIELD=ENTERDATE("Date Prompt",'06/05/00')
+  YESNOFIELD=ENTERYESNO("Yes/No Prompt","1")
+  DIALOGCLOSE
+ END
+`+ CODEEND
+)
+powerOnFunctions.set("dialogpromptlistoption", `
+# DIALOGPROMPTLISTOPTION
+---
+This function adds options to a list box in an interactive window.
+
+### Syntax
+`+ CODESTART + `
+DIALOGPROMPTLISTOPTION (Value,Text)
+`+ CODEEND + `
+
+### Arguments
+  * Value
+    * Numeric value (>=0) associated with this list box option
+  * Text
+    * Text description displayed in the list box for this option (up to 40 characters)
+
+### Example
+`+ CODESTART + `
+DIALOGPROMPTLISTOPTION (0,"Dividends for Regular Shares")
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * The coding to define a list box must begin with a DIALOGPROMPTLISTSTART command and finish with DIALOGPROMPTLISTEND command.
+  * Clicking the Cancel button terminates the specfile
+  * Pressing Enter or clicking the OK button continues the specfile
+  * Use only for demand specfiles.
+
+***Note:*** To select the desired option use the ENTERCODE statement to return the entry from the Value argument.
+
+### Extended Example
+`+ CODESTART + `
+SETUP
+  DIALOGSTART("Display YTD Dividend Information",100%,1)
+  DIALOGPROMPTLISTSTART("Type of Calculation",0)
+  DIALOGPROMPTLISTOPTION(0,"Dividends for Regular Shares")
+  DIALOGPROMPTLISTOPTION(1,"Dividends for Tax-Deferred Shares") 
+  DIALOGPROMPTLISTOPTION(2,"Dividends for All Shares")
+  DIALOGPROMPTLISTOPTION(3,"Dividends for Selected Share")
+  DIALOGPROMPTLISTOPTION(7,"Dividends for Special Shares")
+  DIALOGPROMPTLISTOPTION(8,"Dividends for Member Shares")
+  DIALOGPROMPTLISTOPTION(9,"Dividends for Non-Deferred Shares")
+  DIALOGPROMPTLISTEND
+  DIALOGDISPLAY
+  SELECTION=ENTERCODE("Type of Calculation",9,0)
+  DIALOGCLOSE
+ END
+`+ CODEEND
+)
+powerOnFunctions.set("dialogpromptliststart", `
+# DIALOGPROMPTLISTSTART
+---
+This function indicates the beginning of a list box in an interactive window.
+
+### Syntax
+`+ CODESTART + `
+DIALOGPROMPTLISTSTART (Prompt,Default)
+`+ CODEEND + `
+
+### Arguments
+  * Prompt
+    * Character line with a maximum of 40 characters
+  * MaxLength
+    * The maximum allowable number of characters for the field
+  * Default
+    * The default value for the field, in the appropriate data type. This value displays in the data entry box.
+
+### Example
+`+ CODESTART + `
+DIALOGPROMPTLISTSTART ("Type of Calculation",0)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * The coding to define a list box must begin with a DIALOGPROMPTLISTSTART command and finish with DIALOGPROMPTLISTEND command.
+  * The value of the prompt field in the ENTERCODE statement must match the prompt field in the DIALOGPROMPTLISTSTART command exactly. If not, an error message appears.
+  * If the prompt text in the DIALOGPROMPTLISTSTART statement or the associated ENTERCODE function is over 132 characters or does not match exactly, Episys displays an error.
+  * Clicking the Cancel button terminates the specfile
+  * Pressing Enter or clicking the OK button continues the specfile
+  * Use only for demand specfiles.
+
+### Extended Example
+`+ CODESTART + `
+SETUP
+  DIALOGSTART("Display YTD Dividend Information",100%,1)
+  DIALOGPROMPTLISTSTART("Type of Calculation",0)
+  DIALOGPROMPTLISTOPTION(0,"Dividends for Regular Shares")
+  DIALOGPROMPTLISTOPTION(1,"Dividends for Tax-Deferred Shares") 
+  DIALOGPROMPTLISTOPTION(2,"Dividends for All Shares")
+  DIALOGPROMPTLISTOPTION(3,"Dividends for Selected Share")
+  DIALOGPROMPTLISTOPTION(7,"Dividends for Special Shares")
+  DIALOGPROMPTLISTOPTION(8,"Dividends for Member Shares")
+  DIALOGPROMPTLISTOPTION(9,"Dividends for Non-Deferred Shares")
+  DIALOGPROMPTLISTEND
+  DIALOGDISPLAY
+  SELECTION=ENTERCODE("Type of Calculation",9,0)
+  DIALOGCLOSE
+ END
+`+ CODEEND
+)
+powerOnFunctions.set("dialogpromptmoney", `
+# DIALOGPROMPTMONEY
+---
+This function displays a prompt for the user to enter a value.
+
+### Syntax
+`+ CODESTART + `
+DIALOGPROMPTMONEY (Prompt,Default)
+`+ CODEEND + `
+
+### Arguments
+  * Prompt
+    - Character line with a maximum of 40 characters
+  * MaxLength
+    - The maximum allowable number of characters for the field
+  * Default
+    - The default value for the field, in the appropriate data type. This value displays in the data entry box.
+
+### Example
+`+ CODESTART + `
+DIALOGPROMPTMONEY ("Enter the Amount",$100.00)
+`+ CODEEND + `
+
+### Usage Information
+  * Each occurrence of this command must have an associated ENTERMONEY statement included, with the prompt for the ENTERMONEY command matching the dialog prompt exactly.
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * If the prompt text in the DIALOGPROMPTMONEY statement or the associated ENTERMONEY function is over 40 characters or does not match exactly, Episys displays an error.
+  * Clicking the Cancel button terminates the specfile
+  * Pressing Enter or clicking the OK button continues the specfile
+  * Use only for demand specfiles. Use the NUMBERREAD function for batch specfiles.
+
+### Extended Example
+`+ CODESTART + `
+SETUP
+  DIALOGSTART("Test Prompts",100%,0)
+  DIALOGINTROTEXT("Test display of various prompts")
+  DIALOGPROMPTMONEY("Money Prompt",$100.00)
+  DIALOGPROMPTRATE("Rate Prompt",8.500%)
+  DIALOGPROMPTDATE("Date Prompt",'06/05/00')
+  DIALOGPROMPTYESNO("Yes/No Prompt",1)
+  DIALOGDISPLAY
+  MONEYFIELD=ENTERMONEY("Money Prompt",$100.00)
+  RATEFIELD=ENTERRATE("Rate Prompt",8.500%)
+  DATEFIELD=ENTERDATE("Date Prompt",'06/05/00')
+  YESNOFIELD=ENTERYESNO("Yes/No Prompt","1")
+  DIALOGCLOSE
+ END
+`+ CODEEND
+)
+powerOnFunctions.set("dialogpromptnumber", `
+# DIALOGPROMPTNUMBER
+---
+This function displays a user prompt for a number.
+
+### Syntax
+`+ CODESTART + `
+DIALOGPROMPTNUMBER (Prompt,Default)
+`+ CODEEND + `
+
+### Arguments
+  * Prompt
+    - Character line with a maximum of 40 characters
+  * Default
+    - The default value for the field, in the appropriate data type. This value displays in the data entry box.
+
+### Example
+`+ CODESTART + `
+DIALOGPROMPTNUMBER ("Enter the Number of Lines",5)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * Both positive and negative numbers allowed
+  * Each occurrence of this command must have an associated ENTERNUMBER statement included, with the prompt for the ENTERNUMBER command matching the dialog prompt exactly.
+  * If the prompt text in the DIALOGPROMPTNUMBER statement or the associated ENTERNUMBER function is over 40 characters or does not match exactly, Episys displays an error.
+  * Clicking the Cancel button terminates the specfile
+  * Pressing Enter or clicking the OK button continues the specfile
+  * Use only for demand specfiles.
+
+### Extended Example
+`+ CODESTART + `
+SETUP
+  DIALOGSTART("EMAIL",10%,0)
+  DIALOGINTROTEXT("So you want to send an email?")
+  DIALOGPROMPTCHAR("Enter the From address",40,"")
+  DIALOGPROMPTCHAR("Enter the To address",40,NAME:EMAIL)
+  DIALOGPROMPTCHAR("Enter the subject line",40,"")
+  DIALOGPROMPTNUMBER("Enter the number of lines",5)
+  DIALOGDISPLAY
+  FROMADDRESS=ENTERCHARACTER("Enter the From address",40,NAME:EMAIL)
+  TOADDRESS=ENTERCHARACTER("Enter the To address",40,"")
+  SUBJECT=ENTERCHARACTER("Enter the subject line",40,"")
+  NUMLINES=ENTERNUMBER("Enter the number of lines",5)
+  DIALOGCLOSE
+ END
+`+ CODEEND
+)
+powerOnFunctions.set("dialogpromptpassword", `
+# DIALOGPROMPTPASSWORD
+---
+This function displays a prompt for the user to enter a password.
+
+### Syntax
+`+ CODESTART + `
+DIALOGPROMPTPASSWORD (Prompt,MaxLength,Default)
+`+ CODEEND + `
+
+### Arguments
+  * Prompt
+    - Character line with a maximum of 40 characters
+  * MaxLength
+    - The maximum allowable number of characters for the field
+  * Default
+    - The default value for the field, in the appropriate data type. This value displays in the data entry box.
+
+### Example
+`+ CODESTART + `
+DIALOGPROMPTPASSWORD("Password",10,"1234567890")
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * Default and entered text are masked with asterisks
+  * Each occurrence of this command must have an associated ENTERCHARACTER statement included, with the prompt for the ENTERCHARACTER command matching the dialog prompt exactly.
+  * If the prompt text in the DIALOGPROMPTPASSWORD statement or the associated ENTERCHARACTER function is over 40 characters or does not match exactly, Episys displays an error.
+  * Clicking the Cancel button terminates the specfile
+  * Pressing Enter or clicking the OK button continues the specfile
+  * Use only for demand specfiles.
+
+### Extended Example
+`+ CODESTART + `
+SETUP
+DIALOGSTART("User Password",4000%,0)
+DIALOGINTROTEXT("Enter a User Password")
+DIALOGPROMPTPASSWORD("Password",10,"1234567890")
+DIALOGDISPLAY
+USERPASS=ENTERCHARACTER("Password",10,"1234567890")
+DIALOGCLOSE
+END
+`+ CODEEND
+)
+powerOnFunctions.set("dialogpromptrate", `
+# DIALOGPROMPTRATE
+---
+This function displays the text for a rate prompt in an interactive window.
+
+### Syntax
+`+ CODESTART + `
+DIALOGPROMPTRATE (Prompt,Default)
+`+ CODEEND + `
+
+### Arguments
+  * Prompt
+    - Character line with a maximum of 40 characters
+  * MaxLength
+    - The maximum allowable number of characters for the field
+  * Default
+    - The default value for the field, in the appropriate data type. This value displays in the data entry box.
+
+### Example
+`+ CODESTART + `
+DIALOGPROMPTRATE ("Enter a rate",5.00%)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * Each occurrence of this command must have an associated ENTERRATE statement included, with the prompt for the ENTERRATE command matching the dialog prompt exactly.
+  * If the prompt text in the DIALOGPROMPTRATE statement or the associated ENTERRATE function is over 40 characters or does not match exactly, Episys displays an error.
+  * Clicking the Cancel button terminates the specfile
+  * Pressing Enter or clicking the OK button continues the specfile
+  * Use only for demand specfiles.
+
+### Extended Example
+`+ CODESTART + `
+SETUP
+  DIALOGSTART("Test Prompts",100%,0)
+  DIALOGINTROTEXT("Test display of various prompts")
+  DIALOGPROMPTMONEY("Money Prompt",$100.00)
+  DIALOGPROMPTRATE("Rate Prompt",8.500%)
+  DIALOGPROMPTDATE("Date Prompt",'06/05/00')
+  DIALOGPROMPTYESNO("Yes/No Prompt",1)
+  DIALOGDISPLAY
+  MONEYFIELD=ENTERMONEY("Money Prompt",$100.00)
+  RATEFIELD=ENTERRATE("Rate Prompt",8.500%)
+  DATEFIELD=ENTERDATE("Date Prompt",'06/05/00')
+  YESNOFIELD=ENTERYESNO("Yes/No Prompt","1")
+  DIALOGCLOSE
+ END
+`+ CODEEND
+)
+powerOnFunctions.set("dialogpromptyesno", `
+# DIALOGPROMPTYESNO
+---
+This function displays a drop-down list for a yes or no response in an interactive window.
+
+### Syntax
+`+ CODESTART + `
+DIALOGPROMPTYESNO (Prompt,Default)
+`+ CODEEND + `
+
+### Arguments
+  * Prompt
+    - Character line with a maximum of 40 characters
+  * Default
+    - The default value for the field, in the appropriate data type. This value displays in the data entry box.
+
+### Example
+`+ CODESTART + `
+DIALOGSTART ("Sample Dialog",100%,0)
+DIALOGPROMPTYESNO ("Yes or No",1)
+DIALOGDISPLAY
+YESNORESPONSE=ENTERYESNO("Yes or No","1")
+DIALOGCLOSE
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * Each occurrence of this command must have an associated ENTERYESNO statement included, with the prompt for the ENTERYESNO command matching the dialog prompt exactly.
+  * If the prompt text in the DIALOGPROMPTYESNO statement or the associated ENTERYESNO function is over 40 characters or does not match exactly, Episys displays an error.
+  * Clicking the Cancel button terminates the specfile
+  * Pressing Enter or clicking the OK button continues the specfile
+  * The default is assigned a value of 1 for yes and 0 for no. This differs from the default in the ENTERYESNO command, which is enclosed in quotes and can also have values of "Y" or "N."
+  * Use only for demand specfiles.
+
+### Extended Example
+`+ CODESTART + `
+SETUP
+  DIALOGSTART("Test Prompts",100%,0)
+  DIALOGINTROTEXT("Test display of various prompts")
+  DIALOGPROMPTMONEY("Money Prompt",$100.00)
+  DIALOGPROMPTRATE("Rate Prompt",8.500%)
+  DIALOGPROMPTDATE("Date Prompt",'06/05/00')
+  DIALOGPROMPTYESNO("Yes/No Prompt",1)
+  DIALOGDISPLAY
+  MONEYFIELD=ENTERMONEY("Money Prompt",$100.00)
+  RATEFIELD=ENTERRATE("Rate Prompt",8.500%)
+  DATEFIELD=ENTERDATE("Date Prompt",'06/05/00')
+  YESNOFIELD=ENTERYESNO("Yes/No Prompt","1")
+  DIALOGCLOSE
+ END
+`+ CODEEND
+)
+powerOnFunctions.set("dialogstart", `
+# DIALOGSTART
+---
+This function initiates a new prompt and response sequence in an interactive window.
+
+### Syntax
+`+ CODESTART + `
+DIALOGSTART (DialogTitle,WHRatio,Alignment)
+`+ CODEEND + `
+
+### Arguments
+  * Dialog Title
+    - Character title for dynamic dialog window
+  * W/H Ratio
+    - Width/height ratio (as a rate) between 1% and 5000%
+  * Alignment
+    - 0 align to left, 1 align to right
+
+### Example
+`+ CODESTART + `
+DIALOGSTART ("Birth Date Info",200%,0)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP or PRINT divisions or in a procedure called by these divisions
+  * Clicking the Cancel button terminates the specfile
+  * Pressing Enter or clicking the OK button continues the specfile
+  * Use only for demand specfiles.
+
+### Extended Example
+`+ CODESTART + `
+SETUP
+  DIALOGSTART("Birthdate Info",200%,0)
+  DIALOGINTROTEXT("Enter your birthdate, (Month, Day)")
+  DIALOGPROMPTCODE("Enter Month 1-12: ",12,MONTH(NAME:BIRTHDATE))
+  DIALOGPROMPTCODE("Enter Day   1-31: ",31,DAY(NAME:BIRTHDATE))
+  DIALOGDISPLAY
+  M=ENTERCODE("Enter Month 1-12: ",12,MONTH(NAME:BIRTHDATE))
+  D=ENTERCODE("Enter Day   1-31: ",31,DAY(NAME:BIRTHDATE))
+  DIALOGCLOSE
+ END
+`+ CODEEND + `
+
+WHRatio Argument
+The WHRatio argument specified in the DIALOGSTART function is used to affect the layout of control statements inside the dialog box. The WHRatio is the ratio of a dialog box's width to its height. The WHRatio value is not actually used in the algorithm to arrange the dialog controls, but the algorithm arranges the dialog controls in a way that brings the actual aspect ratio as close as possible to the desired WHRatio. For most dialog boxes, the ratio of 100% is a good starting point. For a more complicated dialog box with numerous controls, some trial and error is required. One set of functions that changes the arrangement of dialog controls, and thus influences the WHRatio, is DIALOGSTARTGROUPING and DIALOGENDGROUPING.
+
+The following sample specfile illustrates how the WHRatio affects the shape of a dialog box. In this sample, the WHRatio is 100%.
+
+`+ CODESTART + `
+WINDOWS
+
+TARGET=ACCOUNT
+
+DEFINE
+ LASTN=CHARACTER(40)
+ FIRSTM=CHARACTER(20)
+END
+
+SETUP
+ DIALOGSTART("Ratio set at 100%",100%,0)
+ DIALOGINTROTEXT("Enter the appropriate information.")
+ DIALOGPROMPTCHAR("Enter Last Name",40,NAME:LAST)
+ DIALOGPROMPTCHAR("Enter First Name",20,NAME:FIRST)
+ DIALOGDISPLAY
+ LASTN=ENTERCHARACTER("Enter Last Name",40,NAME:LAST)
+ FIRSTM=ENTERCHARACTER("Enter First Name",20,NAME:FIRST)
+ DIALOGCLOSE
+END 
+
+PRINT TITLE="CPR"
+ POPUPMESSAGE(0,FIRSTM+" "+LASTN)
+END
+
+TOTAL
+END
+`+ CODEEND + `
+
+A dialog box similar to the following is displayed:
+
+Without changing any other code, increase the WHRatio in the above specfile to 400%. Changing the WHRatio to 400% changes the position of the dialog controls, and a dialog box similar to the following is displayed:
+
+The dialog box still works the same way, only now the prompts are arranged side by side. The size and shape of the dialog box can also be manipulated in concert with another set of dialog functions, such as DIALOGSTARTGROUPING and DIALOGENDGROUPING. For example, the code from the previous example has been changed between DIALOGSTARTGROUPING and DIALOGENDGROUPING only:
+
+`+ CODESTART + `
+WINDOWS
+
+TARGET=ACCOUNT
+
+DEFINE
+ LASTN=CHARACTER(40)
+ FIRSTM=CHARACTER(20)
+END
+
+SETUP
+ DIALOGSTART("Ratio set at 400%",400%,0)
+ DIALOGINTROTEXT("Enter the appropriate information.")
+ DIALOGSTARTGROUPING
+  DIALOGPROMPTCHAR("Enter Last Name",40,NAME:LAST)
+  DIALOGPROMPTCHAR("Enter First Name",20,NAME:FIRST)
+ DIALOGENDGROUPING
+ DIALOGDISPLAY
+ LASTN=ENTERCHARACTER("Enter Last Name",40,NAME:LAST)
+ FIRSTM=ENTERCHARACTER("Enter First Name",20,NAME:FIRST)
+ DIALOGCLOSE
+END 
+
+PRINT TITLE="CPR"
+ POPUPMESSAGE(0,FIRSTM+" "+LASTN)
+END
+
+TOTAL
+END
+`+ CODEEND + `
+Here the dialog box presents the controls as before with the addition of the above functions.
+
+Note that the original controls are displayed.
+`)
+powerOnFunctions.set("DIALOGSTARTGROUPBOX", `
+# DIALOGSTARTGROUPBOX
+---
+This function begins a group of prompts and responses in an interactive window.
+
+### Syntax
+`+ CODESTART + `
+DIALOGSTARTGROUPBOX("Text")
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+DIALOGSTARTGROUPBOX("Birthdate Info (M,D)")
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * Clicking the Cancel button terminates the specfile
+  * Pressing Enter or clicking the OK button continues the specfile
+  * Use only for demand specfiles.
+
+### Extended Example
+`+ CODESTART + `
+SETUP
+   DIALOGSTART("Birthdate Info",200%,0)
+     DIALOGSTARTGROUPBOX("Birthdate Info (M,D)")
+       DIALOGPROMPTCODE("Enter Month 1-12: ",12,MONTH(NAME:BIRTHDATE))
+       DIALOGPROMPTCODE("Enter Day   1-31: ",31,DAY(NAME:BIRTHDATE))
+     DIALOGENDGROUPBOX
+ 
+     DIALOGSTARTGROUPBOX("Birthdate Info (YY)")
+        DIALOGPROMPTNUMBER("Enter 4-digit Year: ",FULLYEAR(NAME:BIRTHDATE))
+        DIALOGENDGROUPBOX 
+      DIALOGDISPLAY
+        M=ENTERCODE("Enter Month 1-12: ",12,MONTH(NAME:BIRTHDATE))
+        D=ENTERCODE("Enter Day   1-31: ",31,DAY(NAME:BIRTHDATE))
+        Y=ENTERNUMBER("Enter 4-digit Year: ",FULLYEAR(NAME:BIRTHDATE))
+      DIALOGCLOSE
+END
+`+ CODEEND
+)
+powerOnFunctions.set("dialogtextlistoption", `
+# DIALOGTEXTLISTOPTION
+---
+This function adds options as lines of data in a read-only list box contained in a pop-up window.
+
+### Syntax
+`+ CODESTART + `
+DIALOGTEXTLISTOPTION("Text")
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+DIALOGTEXTLISTOPTION("The following is a list of some of the new commands:")
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * The coding to define a text list box must begin with a DIALOGTEXTLISTSTART command and end with a DIALOGTEXTLISTEND command
+  * Clicking the Cancel button terminates the specfile
+  * Pressing Enter or clicking the OK button continues the specfile
+  * Use only for demand specfiles.
+
+### Extended Example
+`+ CODESTART + `
+SETUP
+  DIALOGSTART("Display Windows Dialog Commands",100%,1)
+  DIALOGTEXTLISTSTART("Text List Display")
+  DIALOGTEXTLISTOPTION("The following is a list of some of the new commands:")
+  DIALOGTEXTLISTOPTION("") 
+  DIALOGTEXTLISTOPTION("DIALOGSTART") 
+  DIALOGTEXTLISTOPTION("DIALOGEND")
+  DIALOGTEXTLISTOPTION("DIALOGINTROTEXT")
+  DIALOGTEXTLISTOPTION("DIALOGNEWCOLUMN")
+  DIALOGTEXTLISTOPTION("DIALOGSTARTGROUPBOX")
+  DIALOGTEXTLISTOPTION("DIALOGENDGROUPBOX")
+  DIALOGTEXTLISTEND
+  DIALOGDISPLAY
+  DIALOGCLOSE
+ END
+`+ CODEEND
+)
