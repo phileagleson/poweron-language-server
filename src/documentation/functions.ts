@@ -1962,3 +1962,171 @@ SETUP
  END
 `+ CODEEND
 )
+powerOnFunctions.set("dialogtextliststart", `
+# DIALOGTEXTLISTSTART
+---
+This function indicates the beginning of a list box of read-only data lines contained in a pop-up window.
+
+### Syntax
+`+ CODESTART + `
+DIALOGTEXTLISTSTART(Title)
+`+ CODEEND + `
+
+### Arguments
+  * Title
+    - Character text, meaningful to the operator, to display.
+
+### Example
+`+ CODESTART + `
+DIALOGTEXTLISTSTART("Text List Display")
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * The coding to define a text list box must begin with a DIALOGTEXTLISTSTART command and end with a DIALOGTEXTLISTEND command
+  * Clicking the Cancel button terminates the specfile
+  * Pressing Enter or clicking the OK button continues the specfile
+  * Use only for demand specfiles.
+
+### Extended Example
+`+ CODESTART + `
+SETUP
+  DIALOGSTART("Display Windows Dialog Commands",100%,1)
+  DIALOGTEXTLISTSTART("Text List Display")
+  DIALOGTEXTLISTOPTION("The following is a list of some of the new commands:")
+  DIALOGTEXTLISTOPTION("") 
+  DIALOGTEXTLISTOPTION("DIALOGSTART") 
+  DIALOGTEXTLISTOPTION("DIALOGEND")
+  DIALOGTEXTLISTOPTION("DIALOGINTROTEXT")
+  DIALOGTEXTLISTOPTION("DIALOGNEWCOLUMN")
+  DIALOGTEXTLISTOPTION("DIALOGSTARTGROUPBOX")
+  DIALOGTEXTLISTOPTION("DIALOGENDGROUPBOX")
+  DIALOGTEXTLISTEND
+  DIALOGDISPLAY
+  DIALOGCLOSE
+ END
+`+ CODEEND
+)
+powerOnFunctions.set("dim", `
+# DIM
+---
+This function returns the screen to normal display after characters are displayed with the BRIGHT command.
+
+### Syntax
+`+ CODESTART + `
+DIM statement
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+DIM COL=20 SHARE:ID
+`+ CODEEND + `
+
+### Constraints
+  * Functions in text mode only
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * Use only for CRT display; function does not affect printed reports
+  * Has no effect in batch mode
+
+***Tip:*** DIM turns off the BRIGHT command and returns to default display mode.
+
+### Extended Example
+`+ CODESTART + `
+  PRINT TITLE="Share Balance Inquiry"
+   HEADERS
+    BRIGHT
+    PRINT "ID Description                    Balance"
+    NEWLINE
+    PRINT "-----------------------------------------"
+    NEWLINE
+   END
+   DIM
+   PRINT SHARE:ID
+   PRINT " "
+   PRINT SHARE:DESCRIPTION
+   PRINT COL=40 SHARE:BALANCE
+   NEWLINE
+  etc...
+`+ CODEEND
+)
+powerOnFunctions.set("divprojectinit", `
+# DIVPROJECTINIT
+---
+This function initializes the setup variables required for performing annual percentage yield (APY) calculations and dividend projections.
+
+### Syntax
+`+ CODESTART + `
+DIVPROJECTINIT(DataSource, ParameterDefaultType)
+`+ CODEEND + `
+
+### Arguments
+The parameter default is only used if the data source is 2; it is ignored otherwise.
+
+  - DataSource
+    * 0 = Blank defaults - all data will be filled in by specfile 
+    * 1 = Use data in the currently read share record
+    * 2 = Use data in a share default record
+  - ParameterDefaultType
+    * 0
+    * 0
+    * Share type associated with the record you are using
+
+### Example
+`+ CODESTART + `
+DIVPROJECTINIT(1,0)
+`+ CODEEND + `
+
+### Constraints
+  * Use only in the SETUP, PRINT, or TOTAL divisions or in a procedure called by one of these divisions
+  * Review Dividend Projection Specfile Variables before using
+  * The dividend projection calculations are not the same as anticipated dividend calculations. The current share transaction history is not taken into account, and therefore does not provide an anticipated dividend.
+
+### Extended Example
+`+ CODESTART + `
+  TARGET=SHARE
+
+  DEFINE
+   TOTALDIVIDEND=MONEY
+  END
+
+  SELECT
+   SHARE:TYPE=42 AND
+   SHARE:MATURITYDATE>='09/01/97' AND
+   SHARE:BALANCE>$0.00
+  END
+
+  PRINT TITLE="Dividend Projections Test"
+   DIVPROJECTINIT(2,42)
+   @DIVPROJECTCALCULATIONTYPE=0
+   @DIVPROJECTMATURITYDATE='08/31/97'
+   @DIVPROJECTOPENDATE=SHARE:OPENDATE
+   @DIVPROJECTOPENBALANCE=SHARE:ORIGINALBALANCE
+
+   DIVPROJECTCALC
+
+   IF @DIVPROJECTERROR="" THEN
+    CALL PRINTRESULT
+   ELSE
+    DO
+     PRINT "  !!!!!!!!!!!!  "
+     PRINT @DIVPROJECTERROR
+     PRINT "   !!!!!!!!!!!"
+     NEWLINE
+    END
+  END
+
+  TOTAL
+   PRINT "TOTAL DIVIDENDS "
+   PRINT TOTALDIVIDEND
+  END
+
+  PROCEDURE PRINTRESULT
+  [Displays Results in a format similar to Projections Menu]
+   PRINT ACCOUNT:NUMBER
+   COL=20 SHARE:BALANCE
+   TOTALDIVIDEND=TOTALDIVIDEND+
+    @DIVPROJECTTOTALDIVIDENDS
+   COL=35 @DIVPROJECTTOTALDIVIDENDS
+  END
+`+ CODEEND
+)
