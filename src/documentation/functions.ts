@@ -2130,3 +2130,536 @@ DIVPROJECTINIT(1,0)
   END
 `+ CODEEND
 )
+powerOnFunctions.set("emailline", `
+# EMAILLINE
+---
+This function sends parameters or adds a line of text in an email message.
+
+### Syntax
+`+ CODESTART + `
+EMAILLINE (EmailLine,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * EmailLine
+    The EMAILLINE command can be used to send a line of text that will be interpreted as any of the following send parameters:
+ 
+      - To: indicates the email address of the recipient (one or more email addresses). Required when sending an email. Separate multiple email address with a comma.
+      - From: indicates the email address of the sender (name and email address). Can be omitted when sending an email.
+      - Cc: indicates where a "carbon" copy of the email is to be sent (one or more email addresses). Can be omitted when sending an email.
+      - Bcc: indicates where a "blind carbon" copy is to be sent (one or more email addresses). The message does not show the addressee as a recipient. Can be omitted when sending an email.
+      - Subject: includes the header or body line to be added to an email.
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+***Important:*** You can specify the EMAILLINE command up to 9,999 times between each EMAILSTART and EMAILSEND command. We recommend that you use this functionality carefully to avoid flooding mail servers.
+
+### Example
+`+ CODESTART + `
+EMAILLINE ("Our records show that your safe-deposit box is up for renewal.",ERRORTEXT)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP, PRINT, or TOTAL divisions or in a procedure called by one of these divisions
+  * The system must be configured for email
+  * Used in both text-based and Windows specfiles
+  * EMAILSTART, EMAILLINE, and EMAILSEND must be called together in the same division
+  * Generates an error if the corresponding commands are used in a different division
+
+### Using EMAILLINE
+  * Set the FromAddress, ToAddress, and Subject parameters in the EMAILSTART to blank (""), similar to the following: EMAILSTART("","","",ERRORTEXT)
+  * Immediately following the EMAILSTART command, use EMAILLINE to specify the "send" parameters in the order listed above.
+  * Any send parameters (except To:) can be omitted so they do not appear in the message. Leave the entire line out and do not use a blank specification, for example: EMAILLINE("Bcc:",ERRORTEXT)
+  * After these send parameter lines, you can use one or more EMAILLINE commands to send lines of text for the body of the email.
+  * End the email with an EMAILSEND command.
+
+### Send Example
+`+ CODESTART + `
+EMAILSTART("","","",ERRORTEXT)
+IF ERRORTEXT="" THEN
+ EMAILLINE("From: John Doe <jdoe@cu.org>",ERRORTEXT)
+IF ERRORTEXT="" THEN
+ EMAILLINE("To: jsmith@aol.com, pfranklin@hotmail.com",ERRORTEXT)
+IF ERRORTEXT="" THEN
+ EMAILLINE("Cc: fsmith@aol.com",ERRORTEXT)
+IF ERRORTEXT="" THEN
+ EMAILLINE("Bcc: jmanager@cu.org",ERRORTEXT)
+IF ERRORTEXT="" THEN
+ EMAILLINE("Subject: In response to your Loan inquiry",ERRORTEXT)
+IF ERRORTEXT="" THEN
+ EMAILLINE("This is the first body line of the email.",ERRORTEXT)
+IF ERRORTEXT="" THEN
+ EMAILSEND(ERRORTEXT)
+...
+`+ CODEEND + `
+
+### Add a Line of Text
+You can use the EMAILLINE command to add a line of text to an email message. To use EMAILLINE in this way, you must do the following:
+
+  * Specify the FromAddress, ToAddress, and Subject parameters in the EMAILSTART command
+  * Use EMAILLINE commands to specify lines of text to be included in the body of the email message
+  * End the email with an EMAILSEND command
+
+#### Add a Line of Text Example
+`+ CODESTART + `
+  WINDOWS
+
+  TARGET=ACCOUNT
+  DEFINE
+   FROMADDRESS=CHARACTER(40)
+   TOADDRESS=CHARACTER(40)
+   SUBJECT=CHARACTER(40)
+   ERROR=CHARACTER
+   TEXT=CHARACTER(75) ARRAY(99)
+  I=NUMBER
+  J=NUMBER
+  DONE=NUMBER
+  NUMLINES=NUMBER
+  TRUE=1
+  FALSE=0
+ END
+
+ SETUP
+  DIALOGSTART("EMAIL INFO",100%,0)
+  DIALOGINTROTEXT("So you want to send an email?")
+  DIALOGPROMPTCHAR("Enter the From address",40,"")
+  DIALOGPROMPTCHAR("Enter the To address",40,"")
+  DIALOGPROMPTCHAR("Enter the subject line",40,"")
+  DIALOGPROMPTNUMBER("Enter the number of lines",5)
+  DIALOGDISPLAY
+  FROMADDRESS=ENTERCHARACTER("Enter the From address",40,"")
+  TOADDRESS=ENTERCHARACTER("Enter the To address",40,"")
+  SUBJECT=ENTERCHARACTER("Enter the subject line",40,"")
+  NUMLINES=ENTERNUMBER("Enter the number of lines",5)
+  DIALOGCLOSE
+  DIALOGSTART("EMAIL TEXT",100%,0)
+  FOR I = 1 TO NUMLINES
+  DO
+    DIALOGPROMPTCHAR("Enter line "+FORMAT("#9",I)+" ",75,"")
+  END
+  DIALOGDISPLAY
+  FOR I=1 TO NUMLINES
+   DO
+    TEXT(I)=ENTERCHARACTER("Enter line "+FORMAT("#9",I)+" ",75,"")   
+   END
+  DIALOGCLOSE
+  EMAILSTART(FROMADDRESS,TOADDRESS,SUBJECT,ERROR)
+  IF ERROR<>"" THEN
+   POPUPMESSAGE(2,"Error starting E-Mail")
+  ELSE
+   DO
+    FOR J=1 TO NUMLINES
+     DO
+      EMAILLINE(TEXT(J),ERROR)
+     END
+    EMAILSEND(ERROR)
+    IF ERROR<>"" THEN
+     POPUPMESSAGE(2,"Error sending E-Mail")
+    ELSE
+     POPUPMESSAGE(0,"Sending E-Mail")
+   END
+ END
+
+ PRINT TITLE="EMAIL"
+  SUPPRESS 1
+ END
+
+
+ TOTAL
+ END
+`+ CODEEND
+)
+powerOnFunctions.set("emailsend", `
+# EMAILSEND
+---
+This function transmits an electronic message from within a specfile if your system is configured for email.
+
+### Syntax
+`+ CODESTART + `
+EMAILSEND (ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+### Example
+`+ CODESTART + `
+EMAILSEND (Error)
+`+ CODEEND + `
+
+### Usage Information
+  * Must be preceded by EMAILSTART
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * EMAILSTART, EMAILLINE, and EMAILSEND must be called together in the same division
+  * Generates an error if the corresponding commands are used in a different division
+
+### Extended Example
+`+ CODESTART + `
+  WINDOWS
+
+  TARGET=ACCOUNT
+  DEFINE
+   FROMADDRESS=CHARACTER(40)
+   TOADDRESS=CHARACTER(40)
+   SUBJECT=CHARACTER(40)
+   ERROR=CHARACTER
+   TEXT=CHARACTER(75) ARRAY(99)
+  I=NUMBER
+  J=NUMBER
+  DONE=NUMBER
+  NUMLINES=NUMBER
+  TRUE=1
+  FALSE=0
+ END
+
+ SETUP
+  DIALOGSTART("EMAIL INFO",100%,0)
+  DIALOGINTROTEXT("So you want to send an email?")
+  DIALOGPROMPTCHAR("Enter the From address",40,"")
+  DIALOGPROMPTCHAR("Enter the To address",40,"")
+  DIALOGPROMPTCHAR("Enter the subject line",40,"")
+  DIALOGPROMPTNUMBER("Enter the number of lines",5)
+  DIALOGDISPLAY
+  FROMADDRESS=ENTERCHARACTER("Enter the From address",40,"")
+  TOADDRESS=ENTERCHARACTER("Enter the To address",40,"")
+  SUBJECT=ENTERCHARACTER("Enter the subject line",40,"")
+  NUMLINES=ENTERNUMBER("Enter the number of lines",5)
+  DIALOGCLOSE
+  DIALOGSTART("EMAIL TEXT",100%,0)
+  FOR I = 1 TO NUMLINES
+  DO
+    DIALOGPROMPTCHAR("Enter line "+FORMAT("#9",I)+" ",75,"")
+  END
+  DIALOGDISPLAY
+  FOR I=1 TO NUMLINES
+   DO
+    TEXT(I)=ENTERCHARACTER("Enter line "+FORMAT("#9",I)+" ",75,"")   
+   END
+  DIALOGCLOSE
+  EMAILSTART(FROMADDRESS,TOADDRESS,SUBJECT,ERROR)
+  IF ERROR<>"" THEN
+   POPUPMESSAGE(2,"Error starting E-Mail")
+  ELSE
+   DO
+    FOR J=1 TO NUMLINES
+     DO
+      EMAILLINE(TEXT(J),ERROR)
+     END
+    EMAILSEND(ERROR)
+    IF ERROR<>"" THEN
+     POPUPMESSAGE(2,"Error sending E-Mail")
+    ELSE
+     POPUPMESSAGE(0,"Sending E-Mail")
+   END
+ END
+
+ PRINT TITLE="EMAIL"
+  SUPPRESS 1
+ END
+
+
+ TOTAL
+ END
+`+ CODEEND
+)
+powerOnFunctions.set("emailstart", `
+# EMAILSTART
+---
+This function initiates an email message if your system is configured for email.
+
+### Syntax
+`+ CODESTART + `
+EMAILSTART (FromAddress,ToAddress,Subject,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * FromAddress
+    - The sender's email address
+  * ToAddress
+    - The recipient's email address
+  * Subject
+    - The text that displays in the subject field of the email message
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+***Tip:*** You can set the From, To, Subject, Cc, and Bcc parameters in the EMAILLINE command. To use EMAILLINE in this way, you must set the FromAddress, ToAddress, and Subject parameters in EMAILSTART to blank (" ").
+
+### Example
+`+ CODESTART + `
+EMAILSTART ("j.doe@yourcu.com","j.smith@aol.com","Auto Rates as low as 3.99% APR",ERROR)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * EMAILSTART, EMAILLINE, and EMAILSEND must be called together in the same division
+  * Generates an error if the corresponding commands are used in a different division
+
+### Extended Example
+`+ CODESTART + `
+The following example prompts for email information and formats and sends an email message. See EMAILSTART on line 36.
+  WINDOWS
+
+  TARGET=ACCOUNT
+
+DEFINE
+ FROMADDRESS=CHARACTER(40)
+ TOADDRESS=CHARACTER(40)
+ CC=CHARACTER(40)
+ BCC=CHARACTER(40)
+ SUBJECT=CHARACTER(80)
+ ERROR=CHARACTER
+ TEXT=CHARACTER(80) ARRAY(99)
+ ERRORTEXT=CHARACTER(40)
+ I=NUMBER
+ J=NUMBER
+ DONE=NUMBER
+ TRUE=1
+ FALSE=0
+END
+
+SETUP
+ IF (DAYOFWEEK(SYSTEMDATE) = 0 OR
+     DAYOFWEEK(SYSTEMDATE) = 1 OR
+     DAYOFWEEK(SYSTEMDATE) = 2 OR
+     DAYOFWEEK(SYSTEMDATE) = 3 OR
+     DAYOFWEEK(SYSTEMDATE) = 4 OR
+     DAYOFWEEK(SYSTEMDATE) = 5 OR
+     DAYOFWEEK(SYSTEMDATE) = 6) THEN
+  DO
+   FROMADDRESS="emailaddress@xxxx.com"
+   TOADDRESS="emailadd2@xxx.com, emailadd3@xx.com"      
+   CC="emailadd4@xxx.com, emailadd5@xxx.com"
+   BCC="emailaddress6@xxx.com"
+   SUBJECT="SCU Online"
+   TEXT(0)="Symitar is online with a system date of "+FORMAT("99/99/9999",SYSTEMDATE)
+   EMAILSTART("","","",ERROR)
+   IF ERROR<>"" THEN
+    DO
+     PRINT "ERROR OPENING EMAIL "+ERROR
+     NEWLINE
+     TERMINATE
+    END
+   ELSE
+    DO
+     IF ERRORTEXT = "" THEN
+      EMAILLINE("From: "+FROMADDRESS,ERRORTEXT)
+     IF ERRORTEXT = "" THEN
+      EMAILLINE("To: "+TOADDRESS,ERRORTEXT)
+     IF ERRORTEXT = "" THEN
+      EMAILLINE("Cc: "+CC,ERRORTEXT)
+     IF ERRORTEXT = "" THEN
+      EMAILLINE("Bcc: "+BCC,ERRORTEXT)
+     IF ERRORTEXT = "" THEN
+      EMAILLINE("Subject: "+SUBJECT,ERRORTEXT)
+     FOR J=0 TO I
+      DO
+       EMAILLINE(TEXT(J),ERROR)
+      END
+     EMAILSEND(ERROR)
+    END
+  END
+END
+
+SELECT
+ NONE
+END
+
+PRINT TITLE="EMAIL"
+ PRINT ""
+ NEWLINE
+END
+`+ CODEEND
+)
+powerOnFunctions.set("entercharacter", `
+# ENTERCHARACTER
+---
+This function displays a prompt on the user's console while running an on-demand specfile and waiting for a character response from the operator.
+
+### Syntax
+`+ CODESTART + `
+ENTERCHARACTER(Prompt,MaximumLength,Default)
+`+ CODEEND + `
+
+### Arguments
+  * Prompt
+    - Character line with maximum of 40 characters
+  * MaximumLength
+    - Maximum number of characters allowed
+  * Default
+    - Default value for the field, in the appropriate data type
+
+***Tip:*** Although it is not common, the prompt, default, and maximum value can also be field references, functions, and expressions that involve variables and other keywords.
+
+### Example
+`+ CODESTART + `
+CATNAMEVAR=ENTERCHARACTER("Enter Category Letter",1,"A")
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in demand specfiles. For batch specfiles, please see CHARACTERREAD.
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * Use in assignment statements to represent a value you want assigned to a variable
+  * Supports a MaxLength value of 1 thru 78. For a MaxLength value < 1 or > 78 the system defaults to a value of 40
+
+### Extended Example
+The following example is from an on-demand report specfile that creates a welcome letter for new members. Symitar designed the letter for the new accounts clerk to display, then print when the member comes in to open an account. In this example, the ENTERCHARACTER command prompts for the new accounts clerk's name so that the signature block on the letter can be personalized.
+`+ CODESTART + `
+TARGET=ACCOUNT 
+
+DEFINE 
+ USERNAME = CHARACTER(20)
+END 
+
+SETUP 
+ USERNAME = ENTERCHARACTER("Enter Your Name",20,"")
+END 
+
+PRINT TITLE="ENTERCHARACTER.TEST"
+ NEWLINE
+ PRINT "Input: "+USERNAME 
+ NEWLINE
+END
+`+ CODEEND
+)
+powerOnFunctions.set("entercode", `
+# ENTERCODE
+---
+This function displays a prompt on the user's console and returns the code entered.
+
+### Syntax
+`+ CODESTART + `
+ENTERCODE(Prompt,MaximumValue,Default)
+`+ CODEEND + `
+
+### Arguments
+  * Prompt
+    - Character line with a maximum of 40 characters
+  * MaximumValue
+    - The maximum value allowed of the entry
+  * Default
+    - Must be a code literal
+
+***Tip:***
+  * To assign the value of ENTERCODE to a variable, define that variable with a NUMBER data type.
+  * Although it is not common, the prompt, default, and maximum length can also be field references, functions, and expressions that involve variables and other keywords.
+
+### Example
+`+ CODESTART + `
+SHARETYPE=ENTERCODE("Enter Desired Share Type",9999,0)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * Use only in on-demand specfiles. See CODEREAD for batch specfiles
+  * The maximum number that can be stored in a code variable is 32767
+
+### Extended Example
+`+ CODESTART + `
+TARGET=LOAN
+ DEFINE
+  BEGINRANGE=NUMBER
+  ENDRANGE=NUMBER
+ END
+ SETUP
+  BEGINRANGE=ENTERCODE("Enter First Code",79,40)
+  ENDRANGE=ENTERCODE("Enter Last Code",79,79)
+ END
+  etc...
+`+ CODEEND
+)
+powerOnFunctions.set("enterdate", `
+# ENTERDATE
+---
+This function displays a prompt on the user's console and returns the date entered.
+
+### Syntax
+`+ CODESTART + `
+variable=ENTERDATE(Prompt,Default)
+`+ CODEEND + `
+
+### Arguments
+  * Prompt
+    - Character line with a maximum of 40 characters
+  * Default
+    - The default value for the field, in the appropriate data type. This value displays in the data entry box.
+
+### Example
+`+ CODESTART + `
+BDAY=ENTERDATE("Enter your birthday",'01/01/09')
+`+ CODEEND + `
+
+##### Valid date formats:
+  * 'mmddyy'
+  * 'mmddyyyy'
+  * 'mm/dd/yy'
+  * 'mm/dd/yyyy'
+
+### Usage Information
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * Use only in on-demand specfiles. Use DATEREAD for batch specfiles.
+  * Use in assignment statements to represent a value you want assigned to a variable
+
+### Extended Example
+The following example is from an on-demand report specfile that summarizes data related to a specified range of transaction dates. Symitar designed the report for the teller to display and print for a member as needed.
+
+This example uses the ENTERDATE command to prompt for a range of posting dates. This allows us to use the range of beginning and ending dates in the SELECT division to choose transactions for the report.
+`+ CODESTART + `
+TARGET=SHARE
+ DEFINE
+  BEGINDATE=DATE
+  ENDDATE=DATE
+ END
+ SETUP
+  BEGINDATE=ENTERDATE("Enter First Date",'--/--/--')
+  ENDDATE=ENTERDATE("Enter Last Date",'--/--/--')
+ END
+  etc...
+`+ CODEEND
+)
+powerOnFunctions.set("entermoney", `
+# ENTERMONEY
+---
+This function displays a prompt on the user's console and returns the money value entered.
+
+### Syntax
+`+ CODESTART + `
+ENTERMONEY(Prompt,Default)
+`+ CODEEND + `
+
+### Arguments
+  * Prompt
+    - Character line with a maximum of 40 characters
+  * Default
+    - The default value for the field, in the appropriate data type. This value displays in the data entry box.
+
+***Tip:***
+  * Use ENTERMONEY only when the response you expect from the operator is a monetary value.
+  * Although it is not common, the prompt, default, and maximum length can also be field references, functions, and expressions that involve variables and other keywords.
+
+### Example
+`+ CODESTART + `
+MAXAMTVAR=ENTERMONEY("Enter the Maximum Amount",$2,000.00)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in on-demand specfiles. Use MONEYREAD for batch specfiles.
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * The prompt must not exceed 40 characters
+  * Default must be a MONEY data type
+  * The ENTERMONEY function must include the prompt and a default value. The default value must contain the dollar sign, decimal point, and any necessary commas.
+  * Enter the response to an ENTERMONEY prompt with or without commas and a decimal point. The response must not contain a dollar sign. For example, you can enter the monetary amount $5,444.77 only as 544477 or 5,444.77.
+
+### Extended Example
+The following example is from an on-demand report specfile that creates an introductory letter for new members. Symitar designed the letter for the new accounts clerk to display and print when the member comes in to open an account. This example uses the ENTERMONEY command to prompt for the cost of new checks ordered for the member. See ENTERMONEY on line 6.
+`+ CODESTART + `
+  TARGET=ACCOUNT
+  DEFINE
+   CHECKCOST=MONEY
+  END
+  SETUP
+   CHECKCOST=ENTERMONEY("Enter Cost of Checks",$3.50)
+  END
+  etc...
+`+ CODEEND + `
+`)
