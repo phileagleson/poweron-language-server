@@ -2663,3 +2663,612 @@ The following example is from an on-demand report specfile that creates an intro
   etc...
 `+ CODEEND + `
 `)
+powerOnFunctions.set("enternumber", `
+# ENTERNUMBER
+---
+This function displays a prompt on the user's console and returns the number entered.
+
+### Syntax
+`+ CODESTART + `
+ENTERNUMBER (Prompt,Default)
+`+ CODEEND + `
+
+### Arguments
+  * Prompt
+    - Character line with a maximum of 40 characters
+  * Default
+    - The default value for the field, in the appropriate data type.
+
+### Example
+`+ CODESTART + `
+SEQNBR=ENTERNUMBER ("Enter the first Sequence Number",300)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in on-demand specfiles. Use NUMBERREAD for batch specfiles.
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * Must include a default value
+
+### Extended Example
+`+ CODESTART + `
+  TARGET=SHARE
+  DEFINE
+   BEGINSEQUENCE=NUMBER
+   ENDSEQUENCE=NUMBER
+  END 
+  SETUP
+   BEGINSEQUENCE=ENTERNUMBER("First Sequence #",1)
+   ENDSEQUENCE=ENTERNUMBER("Last Sequence #",1000)
+  END
+`+ CODEEND
+)
+powerOnFunctions.set("enterrate", `
+# ENTERRATE
+---
+This function displays a prompt on the user's console and returns the rate entered.
+
+### Syntax
+`+ CODESTART + `
+ENTERRATE(Prompt,Default)
+`+ CODEEND + `
+
+### Arguments
+  * Prompt
+    - Character line with a maximum of 40 characters
+  * Default
+    - The default value for the field, in the appropriate data type. This value displays in the data entry box.
+
+### Example
+`+ CODESTART + `
+ENTERRATE("Enter Target Interest Rate",8.500%)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in demand specfiles.
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * Use only in demand specfiles. See CODEREAD for batch specfiles.
+  * The response must not contain the percent (%) sign or decimal point
+  * The prompt must not exceed 40 characters
+  * You must enter the response to an ENTERRATE prompt with all three decimal places.
+
+### Extended Example
+`+ CODESTART + `
+  TARGET=LOAN
+  DEFINE
+   HIGHRATE=RATE
+  END
+  SETUP
+   HIGHRATE=ENTERRATE("Enter Rate Limit",13.000%)
+  END
+  etc..
+`+ CODEEND
+)
+powerOnFunctions.set("enteryesno", `
+# ENTERYESNO
+---
+This function displays a prompt on the user's console and returns a Y (yes) or N (no) response.
+
+### Syntax
+`+ CODESTART + `
+ENTERYESNO(Prompt,Default)
+`+ CODEEND + `
+
+### Arguments
+  * Prompt
+    - Character line with a maximum of 40 characters
+  * Default
+    - The default value for the field, in the appropriate data type. This value displays in the data entry box.
+
+### Example
+`+ CODESTART + `
+ENTERYESNO("Summary (Y) or Detail (N)?","N")
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * Use only in on-demand specfiles. Use YESNOREAD for batch specfiles.
+  * Use ENTERYESNO only when you expect the operator to enter Y or N; a response of 1 instead of Y or 0 instead of N is also acceptable.
+  * The ENTERYESNO function must include a prompt and a default value.
+
+You can assign the value of the ENTERYESNO function to a variable. Enclose the prompt in parentheses after ENTERYESNO.
+
+Although it is not common, the prompt and default can also be field references, functions, and expressions that evaluate to either "Y" or "N". Because the response to the ENTERYESNO function is a character, variables that you assign the value of this function must be character data.
+
+PowerOn automatically puts a space and a colon (:) after the prompt. If you include a colon as part of a prompt, PowerOn displays two colons.
+
+### Extended Example
+`+ CODESTART + `
+TARGET=SHARE
+ DEFINE
+  HOLDOPTION=CHARACTER
+ END
+ SETUP
+  HOLDOPTION=ENTERYESNO("Do You Want Hold Info?","N")
+ END
+`+ CODEEND
+)
+powerOnFunctions.set("execute", `
+# EXECUTE
+---
+This function initiates the running of a subroutine specfile.
+
+### Syntax
+`+ CODESTART + `
+EXECUTE(SubroutineSpecfileName,[OptionToReturnIfCancelled,]ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * SubroutineSpecfileName
+    - Character expression that must resolve to a specfile defined as a "subroutine specfile" installed for demand use.
+  * OptionToReturnIfCancelled
+    - When one of the escape methods is used (clicking the red arrow, clicking Cancel, clicking the red X, or pressing Esc) in a subroutine and an invalid specification is returned, the following occurs:
+      * When the OptionToReturnIfCancelled is 1, the system returns, in ErrorText, Subroutine <subroutine name> Cancelled, and allows the specfile that performed the EXECUTE function to continue.
+      * When the OptionToReturnIfCancelled is missing or has a value other than 1, the system controls the calling specfile when escape is used without dictating the behavior of the calling specfile.
+  * ErrorText
+    - Either a system-level error message or an error detected in a subroutine specfile. The most common system-level error messages are the following:
+      * Max Subroutine Nesting Level Exceeded: A subroutine specfile called from a different subroutine specfile attempted to call a third subroutine specfile.
+      * Subroutine Arguments Not Initialized: INITSUBROUTINE was not used before EXECUTE.
+      * Must Be a Subroutine Specfile: The specfile called was not defined as a subroutine specfile.
+      * Cannot Run Demand Subroutine from Batch: The subroutine specfile was designated for demand use only.
+      * Cannot Run Batch Subroutine from Demand: The subroutine specfile was designated for batch use only.
+      * Subroutine Type Mismatch: The subroutine specfiles with predefined system variables associated with their system keywords (such as AUDIO, SYMCONNECT, or VALIDATION) can only be called from another specialty specfile of the same type.
+      * Blank: The EXECUTE function completed successfully.
+
+The calling specfile resumes running with the next statement after the subroutine call. The state of the calling specfile is not affected by the subroutine specfile, with the possible exception of updated automatic environment argument variables. Automatic global variables may be updated in specialty specfiles that call specialty subroutine specfiles.
+
+### Example
+`+ CODESTART + `
+EXECUTE("GET.SLOPE",1,ERRORTEXT)
+`+ CODEEND + `
+
+The following scenarios are possible, assuming that there are three specfiles.
+
+  - Specfile 1
+    * Not 1 or missing value
+    * Not 1 or missing value
+    * 1
+    * 1
+
+  - Specfile 2
+    * Not 1 or missing value
+    * 1
+    * Not 1 or missing value
+    * 1
+
+  - Specfile 3
+    * Terminated
+    * Terminated
+    * Terminated
+    * Terminated
+
+  - Result
+    * All specfiles are terminated. (This equates to the previous functionality.)
+    * Control is given back to specfile 2. If specfile 2 is canceled, then specfile 1 is terminated.
+    * Specfile 2 is terminated and control is given back to specfile 1.
+    * Control is given back to specfile 2. If specfile 2 is terminated, then control is given back to specfile 1.
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * Must be preceded by INITSUBROUTINE
+  * Can only be used in SUBROUTINE specfiles that target parent record types (ACCOUNT, CHECK, PARTICIPATION, etc.) and not child records (SHARE, GLHISTORY, COLLATERAL DOCUMENT, etc.)
+  * Cannot be used in a FOR EACH...DO...END loop
+  * Batch drivers can only call batch subroutines
+  * Demand drivers can only call demand subroutines
+  * You may only nest up to three subroutines
+
+### Using Environment Argument Variables
+After you successfully run INITSUBROUTINE, the environment argument variables used to pass information to the subroutine must be loaded using assignment statements, before you use EXECUTE to call the subroutine. After you call the subroutine, the returned values in the environment argument variables can be:
+
+  * Saved into other variables using assignment statements
+  * Passed into another subroutine using the EXECUTE function again
+  * Used directly from the environment argument variables
+
+The calling specfile resumes running with the next statement after the subroutine call. The state of the calling specfile is not affected by the subroutine specfile, with the possible exception of updated automatic environment argument variables (automatic global variables may be updated in specialty specfiles that call specialty subroutine specfiles).
+
+### Extended Example
+`+ CODESTART + `
+INITSUBROUTINE(ERRORTEXT)
+ @ENVARGNUMBER1=X1
+ @ENVARGNUMBER2=Y1
+ @ENVARGNUMBER3=X2
+  @ENVARGNUMBER4=Y2
+  EXECUTE("GET.SLOPE",1,ERRORTEXT)
+ SLOPE=@ENVARGRATE1
+  @ENVARGNUMBER3=DISTANCE
+  EXECUTE("EXTRAPOLATE",ERRORTEXT)
+ PRINT "THE SLOPE BETWEEN (" + FORMAT("+###9",X1) + "," +
+      FORMAT("+###9",Y1) + ") AND (" + FORMAT("+###9",X1) +
+       "," + FORMAT("+###9",Y1) + ") IS " +
+       FORMAT("+##9.99999",SLOPE)
+ NEWLINE
+ PRINT "(" + FORMAT("+###9",@ENVARGNUMBER4) + "," +
+       FORMAT("+###9",@ENVARGNUMBER5) + ") IS ON THE LINE " +
+       FORMAT("+###9",DISTANCE) + " UNITS FROM (" +
+       FORMAT("+###9",X1) + "," + FORMAT("+###9",Y1) + ")"
+ NEWLINE
+`+ CODEEND + `
+
+If X1 and Y1 equal 1, X2 and Y2 equal 2, and DISTANCE is 14, then this specfile segment would print the following:
+
+THE SLOPE BETWEEN ( 1, 1) AND ( 2, 2) IS 1.00000 
+( 11, 11) IS ON THE LINE 14 UNITS FROM ( 1, 1)
+`)
+powerOnFunctions.set("exp", `
+# EXP
+---
+This function returns the value of the mathematical constant e raised to a specified power.
+
+### Syntax
+`+ CODESTART + `
+EXP(expression)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+EXP(3)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+`)
+powerOnFunctions.set("filearchiveadd", `
+# FILEARCHIVEADD
+---
+This function adds a file to an archive or creates an archive and adds a file to it.
+
+### Syntax
+`+ CODESTART + `
+FILEARCHIVEADD(ArchiveType,ArchiveName,SourceFileType,SourceFileName,DestinationFileName,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * ArchiveType
+    - ATMLOG
+    - DATA
+    - HELP
+    - LETTER
+    - SPECFILE,REPGEN
+  * ArchiveName
+    - ATM log file name
+    - Data file name
+    - Help file number
+    - Letter file name
+    - Specfile name
+      * ***Tip:*** Although REPGEN is still a valid file type, use SPECFILE when possible. Because we will eventually drop support for REPGEN, we recommend that all users replace REPGEN with SPECFILE.
+  * SourceFileType
+    - The source directory where the archived file will be located.
+  * SourceFileName
+    - Name of the file identified in the source file type
+  * DestinationFileName
+    - When the file goes into the archive, the file name is changed to the destination file name.
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+
+### Example
+`+ CODESTART + `
+FILEARCHIVEADD("LETTER","MyArchive","HELP","file1","file1.txt",ERRORTEXT)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+
+### Extended Example
+`+ CODESTART + `
+TARGET=ACCOUNT
+
+DEFINE
+   ERROR=CHARACTER
+   NOTHING=CHARACTER
+END
+
+SETUP
+
+  FILEARCHIVEADD(
+   "LETTER","tarfile.tar","LETTER","file1","file1.txt",ERROR)
+  IF ERROR="" THEN
+   FILEARCHIVEADD(
+    "LETTER","tarfile.tar","LETTER","file2","file2.txt",ERROR)
+  IF ERROR="" THEN
+   FILEARCHIVEEXTRACT(
+    "LETTER","tarfile.tar","HELP","file1.txt",ERROR)
+  IF ERROR="" THEN
+   FILEARCHIVEEXTRACT(
+    "LETTER","tarfile.tar","HELP","file2.txt",ERROR)
+
+  IF ERROR="" THEN
+   PRINT "Done!"
+  ELSE
+   PRINT "Error: "+ERROR
+  NEWLINE
+  NOTHING=ENTERLINE(0)
+END
+
+PRINT TITLE="Test"
+  SUPPRESSNEWLINE
+END
+`+ CODEEND
+)
+powerOnFunctions.set("filearchiveextract", `
+# FILEARCHIVEEXTRACT
+---
+This function retrieves a file from an archive.
+
+### Syntax
+`+ CODESTART + `
+FILEARCHIVEEXTRACT(ArchiveType,ArchiveName,DestinationFileType,DestinationFileName,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * ArchiveType
+    - ATMLOG
+    - DATA
+    - HELP
+    - LETTER
+    - SPECFILE, REPGEN
+  * ArchiveName
+    - ATM log file name
+    - Data file name
+    - Help file number
+    - Letter file name
+    - Specfile name
+    - ***Tip:*** Although REPGEN is still a valid file type, use SPECFILE when possible. Because we will eventually drop support for REPGEN, we recommend that all users replace REPGEN with SPECFILE.
+  * DestinationFileType
+    - Specifies the file type of the file to use on the local computer
+  * DestinationFileName
+    - When the file goes into the archive, the file name is changed to the destination file name.
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+### Example
+`+ CODESTART + `
+FILEARCHIVEEXTRACT("LETTER","MyArchive","REGPGEN","file1.txt",ERRORTEXT)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+
+### Extended Example
+`+ CODESTART + `
+TARGET=ACCOUNT
+
+DEFINE
+   ERROR=CHARACTER
+   NOTHING=CHARACTER
+END
+
+SETUP
+
+  FILEARCHIVEADD(
+   "LETTER","tarfile.tar","LETTER","file1","file1.txt",ERROR)
+  IF ERROR="" THEN
+   FILEARCHIVEADD(
+    "LETTER","tarfile.tar","LETTER","file2","file2.txt",ERROR)
+  IF ERROR="" THEN
+   FILEARCHIVEEXTRACT(
+    "LETTER","tarfile.tar","HELP","file1.txt",ERROR)
+  IF ERROR="" THEN
+   FILEARCHIVEEXTRACT(
+    "LETTER","tarfile.tar","HELP","file2.txt",ERROR)
+
+  IF ERROR="" THEN
+   PRINT "Done!"
+  ELSE
+   PRINT "Error: "+ERROR
+  NEWLINE
+  NOTHING=ENTERLINE(0)
+END
+
+PRINT TITLE="Test"
+  SUPPRESSNEWLINE
+END
+`+ CODEEND
+)
+powerOnFunctions.set("fileclose", `
+# FILECLOSE
+---
+This function closes file identified in the first argument.
+
+### Syntax
+`+ CODESTART + `
+FILECLOSE(FileNumber,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * FileNumber
+    - File number variable returned from FILEOPEN
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+***Tip:*** Create a standard specfile (for example, FILE.DEF) that defines all the variables required for the file input and output statements. You can #INCLUDE this specfile in any DEFINE division of specfiles that perform file input and output.
+
+### Example
+`+ CODESTART + `
+FILECLOSE(FILENUMBER,FILEERROR)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * The variables in parentheses after FILECLOSE cannot be arrays
+  * Preceded by FILEOPEN
+
+### Extended Example
+`+ CODESTART + `
+TARGET=ACCOUNT
+  
+  DEFINE
+   #INCLUDE "FILE.DEF"
+  END
+  
+  SETUP
+   FILENAME="ACCOUNT.COMMENTS."+ACCOUNT:NUMBER
+   CALL ACCOUNTCOMMENTFILELOCK
+   FILECREATE("LETTER",FILENAME,FILEERROR)
+   FILEOPEN("LETTER",FILENAME,"APPEND",FILENUMBER,FILEERROR)
+   IF FILEERROR<>"" THEN CALL FILEFATAL
+  
+   CALL ACCOUNTCOMMENTHEADER
+   PRINT "Enter account comments (blank line terminates):"
+   NEWLINE
+   FILETEXT="SEED"
+   WHILE (FILETEXT<>"")
+    DO
+     FILETEXT=ENTERCHARACTER("Comment",60,"")
+     IF FILETEXT<> "" THEN
+      DO
+       FILEWRITELINE(FILENUMBER," "+FILETEXT,FILEERROR)
+       IF FILEERROR<>"" THEN CALL FILEFATAL
+      END
+    END
+  
+   FILECLOSE(FILENUMBER,FILEERROR)
+   IF FILEERROR<>"" THEN CALL FILEFATAL
+   CALL ACCOUNTCOMMENTFILEUNLOCK
+  END
+  
+  PRINT TITLE="Account comments"
+   FILENUMBER=-1
+  END
+
+  PROCEDURE ACCOUNTCOMMENTHEADER
+  [Print account and teller info to account comments file]
+
+   FILETEXT="Account "+ACCOUNT:NUMBER+" comments on "+
+    FORMAT("99/99/99",SYSACTUALDATE)+" at "+
+    FORMAT("99/99/99",SYSACTUALTIME)+" recorded by "+
+    SYSUSERNAME(SYSUSERNUMBER)
+   FILEWRITELINE(FILENUMBER,FILETEXT,FILEERROR)
+   IF FILEERROR<>"" THEN CALL FILEFATAL
+  END
+  
+  PROCEDURE ACCOUNTCOMMENTFILELOCK
+  [Lock account comments file]
+  
+   FILECREATE("LETTER",FILENAME+".LOCK",FILEERROR)
+   IF FILEERROR<>"" THEN
+    DO
+     FERROR="Account comments file is in use. Try later"
+     CALL FILEFATAL
+    END
+  END
+
+  PROCEDURE ACCOUNTCOMMENTFILEUNLOCK
+  [Unlock account comments file]
+  
+   FILEDELETE("LETTER",FILENAME+".LOCK",FERROR)
+  END
+  
+  #INCLUDE "FILE.PRO"
+`+ CODEEND
+)
+powerOnFunctions.set("filecreate", `
+# FILECREATE
+---
+This function creates a new letter file, help file, PowerOn specfile, or edit file. Once the file is created, you must use the FILEOPEN function to access it.
+
+### Syntax
+`+ CODESTART + `
+FILECREATE(FileType,FileName,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * FileType
+    - AUTODATA
+    - AUTORESPONSE
+    - AUTOTRIGGER
+    - DATA
+    - EDIT
+    - HELP
+    - LETTER
+    - SPECFILE, REPGEN
+  * FileName
+    - Auto Data file name
+    - Auto Response file name
+    - Auto Trigger file name
+    - Data file name
+    - Blank, there is only one edit file
+    - Help file number
+    - Letter file name
+    - Specfile name
+      ***Tip:*** Although REPGEN is still a valid file type, use SPECFILE when possible. Because we will eventually drop support for REPGEN, we recommend that all users replace REPGEN with SPECFILE.
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+### Example
+`+ CODESTART + `
+FILECREATE("LETTER",ACHGLTABLE,ERROR)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * The variables in parentheses cannot be arrays
+
+### Extended Example
+`+ CODESTART + `
+TARGET=ACCOUNT
+  
+  DEFINE
+   #INCLUDE "FILE.DEF"
+  END
+  
+  SETUP
+   FILENAME="ACCOUNT.COMMENTS."+ACCOUNT:NUMBER
+   CALL ACCOUNTCOMMENTFILELOCK
+   FILECREATE("LETTER",FILENAME,FILEERROR)
+   FILEOPEN("LETTER",FILENAME,"APPEND",FILENUMBER,FILEERROR)
+   IF FILEERROR<>"" THEN CALL FILEFATAL
+  
+   CALL ACCOUNTCOMMENTHEADER
+   PRINT "Enter account comments (blank line terminates):"
+   NEWLINE
+   FILETEXT="SEED"
+   WHILE (FILETEXT<>"")
+    DO
+     FILETEXT=ENTERCHARACTER("Comment",60,"")
+     IF FILETEXT<> "" THEN
+      DO
+       FILEWRITELINE(FILENUMBER," "+FILETEXT,FILEERROR)
+       IF FILEERROR<>"" THEN CALL FILEFATAL
+      END
+    END
+  
+   FILECLOSE(FILENUMBER,FILEERROR)
+   IF FILEERROR<>"" THEN CALL FILEFATAL
+   CALL ACCOUNTCOMMENTFILEUNLOCK
+  END
+  
+  PRINT TITLE="Account comments"
+   FILENUMBER=-1
+  END
+
+  PROCEDURE ACCOUNTCOMMENTHEADER
+  [Print account and teller info to account comments file]
+
+   FILETEXT="Account "+ACCOUNT:NUMBER+" comments on "+
+    FORMAT("99/99/99",SYSACTUALDATE)+" at "+
+    FORMAT("99/99/99",SYSACTUALTIME)+" recorded by "+
+    SYSUSERNAME(SYSUSERNUMBER)
+   FILEWRITELINE(FILENUMBER,FILETEXT,FILEERROR)
+   IF FILEERROR<>"" THEN CALL FILEFATAL
+  END
+  
+  PROCEDURE ACCOUNTCOMMENTFILELOCK
+  [Lock account comments file]
+  
+   FILECREATE("LETTER",FILENAME+".LOCK",FILEERROR)
+   IF FILEERROR<>"" THEN
+    DO
+     FERROR="Account comments file is in use. Try later"
+     CALL FILEFATAL
+    END
+  END
+
+  PROCEDURE ACCOUNTCOMMENTFILEUNLOCK
+  [Unlock account comments file]
+  
+   FILEDELETE("LETTER",FILENAME+".LOCK",FERROR)
+  END
+  
+  #INCLUDE "FILE.PRO"
+`+ CODEEND
+)
