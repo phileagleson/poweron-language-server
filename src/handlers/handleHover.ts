@@ -54,8 +54,24 @@ export function getHoverHandler(context: Context) {
   return function handleHover(params: HoverParams): Hover | null {
     const node = nodeAtPoint(params.position.line, params.position.character, params.textDocument.uri, context)
     if (!node) return null
-
-    if (node.type.toString() === 'poweron_function' || node.parent?.type.toString() === 'poweron_function') {
+    if (node.type.toString() === 'fmperform') {
+      const contents = powerOnFunctions.get(node.type.toString().toLowerCase())
+      if (contents) {
+        return {
+          contents,
+          range: {
+            start: {
+              line: node.startPosition.row,
+              character: node.startPosition.column
+            },
+            end: {
+              line: node.endPosition.row,
+              character: node.endPosition.column
+            }
+          }
+        }
+      }
+    } else if (node.type.toString() === 'poweron_function' || node.parent?.type.toString() === 'poweron_function') {
       let funcName = wordAtPoint(params.position.line, params.position.character, params.textDocument.uri, context)
       if (!funcName) return null
       funcName = funcName.split('(')[0].toLowerCase()

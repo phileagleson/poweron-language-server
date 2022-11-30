@@ -3272,3 +3272,1725 @@ TARGET=ACCOUNT
   #INCLUDE "FILE.PRO"
 `+ CODEEND
 )
+powerOnFunctions.set("filedecrypt", `
+# FILEDECRYPT
+---
+This function decodes or deciphers files protected by encryption.
+
+### Syntax
+`+ CODESTART + `
+FILEDECRYPT(FileType,FileName,DecryptedFileName,KeyFileName,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * FileType
+    - AUTODATA
+    - AUTORESPONSE
+    - AUTOTRIGGER
+    - DATA
+    - EDIT
+    - HELP
+    - LETTER
+    - SPECFILE, REPGEN
+  * FileName
+    - Auto Data file name
+    - Auto Response file name
+    - Auto Trigger file name
+    - Data file name
+    - Blank, there is only one edit file
+    - Help file number
+    - Letter file name
+    - Specfile name
+      * ***Tip:*** Although REPGEN is still a valid file type, use SPECFILE when possible. Because we will eventually drop support for REPGEN, we recommend that all users replace REPGEN with SPECFILE.
+  * DecryptedFileName
+    - The source of decryption This name must be different than the FileName.
+  * KeyFileName
+    - The name of the file that contains the decryption key created using the MAKEKEY operator console command
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+### Example
+`+ CODESTART + `
+FILEDECRYPT("SPECFILE","TESTFILE.ENC,"TESTFILE.DEC","KEYFILE",ERRORDEC)
+`+ CODEEND + `
+
+### Usage Information
+  * The key file name is a character expression. Its value is the name of the file that contains the decryption key created using the MAKEKEY operator console command
+  * Use only in PRINT, TOTAL, SETUP, SPECFILE, and RECEIPTS divisions or in procedures called by those divisions
+
+### Extended Example
+`+ CODESTART + `
+TARGET = ACCOUNT
+  
+DEFINE
+  HANDLE=NUMBER
+  HANDLE2=number
+  ERROR=CHARACTER
+  OPENERROR=CHARACTER
+  NOTHING=CHARACTER
+  P=CHARACTER
+  HOST=CHARACTER
+  USERNAME=CHARACTER
+  PASSWORD=CHARACTER
+  FNUMBER=NUMBER
+  FLINE=CHARACTER 
+  FERROR=CHARACTER
+  ERRORENC=CHARACTER
+  ERRORDEC=CHARACTER
+  ERRORPUT=CHARACTER
+  ERRORPUT2=CHARACTER
+  ERRORGET=CHARACTER
+  CLOSEERROR=CHARACTER
+END
+  
+SETUP
+  FILEENCRYPT("SPECFILE", "TESTFILE", "TESTFILE.ENC","KEYFILE", ERRORENC)
+  FILEDECRYPT("SPECFILE","TESTFILE.ENC", "TESTFILE.DEC", "KEYFILE", ERRORDEC)
+END
+ 
+ PRINT TITLE="FTP.TEST"
+  IF ERRORENC="" THEN
+   DO
+    PRINT "TESTFILE has been successfully encrypted as TESTFILE.ENC"
+    NEWLINE
+   END
+  ELSE
+   DO
+    PRINT ERRORENC
+    NEWLINE
+   END
+  IF ERRORDEC="" THEN   [DECRYPT]
+   DO
+    PRINT "TESTFILE has been successfully decrypted as TESTFILE.DEC"
+    NEWLINE
+   END
+  ELSE
+   DO
+    PRINT "decrypting error: " print ERRORDEC
+    NEWLINE
+   END
+  NEWLINE NEWLINE
+  FILEOPEN("SPECFILE","TESTFILE.ENC","READ",FNUMBER,FERROR)
+  IF FERROR<>"" THEN
+   PRINT "decrypted TESTFILE.ENC not opened/created "
+  ELSE
+   DO
+    PRINT "Here is what the ENCRYPTED file looks like:"
+    NEWLINE NEWLINE
+   END
+  WHILE FERROR=""
+   DO
+    FILEREADLINE(FNUMBER,FLINE,FERROR)
+    IF FERROR="" THEN
+     DO
+      PRINT FLINE
+      NEWLINE
+     END
+   END
+  FILECLOSE(FNUMBER,FERROR)
+  PRINT "-----------------------END OF ENCRYPTED FILE ----------------------"
+  NEWLINE  NEWLINE
+`+ CODEEND
+)
+powerOnFunctions.set("filedelete", `
+# FILEDELETE
+---
+This function removes a specified file from the system but does not delete an instance.
+
+### Syntax
+`+ CODESTART + `
+FILEDELETE(FileType,FileName,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * FileType
+    - AUTODATA
+    - AUTORESPONSE
+    - AUTOTRIGGER
+    - DATA
+    - EDIT
+    - HELP
+    - LETTER
+    - SPECFILE, REPGEN
+    - REPORT
+  * FileName
+    - Auto Data file name
+    - Auto Response file name
+    - Auto Trigger file name
+    - Data file name
+    - Blank, there is only one edit file
+    - Help file number
+    - Letter file name
+    - Specfile name
+      * ***Tip:*** Although REPGEN is still a valid file type, use SPECFILE when possible. Because we will eventually drop support for REPGEN, we recommend that all users replace REPGEN with SPECFILE.
+    - Sequence number
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+### Example
+`+ CODESTART + `
+FILEDELETE("LETTER",FILENAME,FILEERROR)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * The variables in parentheses cannot be arrays
+
+***Tip:*** Create a standard specfile (for example, FILE.DEF) that defines all the variables required for the file input and output statements. You can #INCLUDE this specfile in any DEFINE division of specfiles that perform file input and output.
+
+### Extended Example
+`+ CODESTART + `
+TARGET=ACCOUNT
+  
+  DEFINE
+   #INCLUDE "FILE.DEF"
+  END
+  
+  SETUP
+   FILENAME="ACCOUNT.COMMENTS."+ACCOUNT:NUMBER
+   CALL ACCOUNTCOMMENTFILELOCK
+   FILECREATE("LETTER",FILENAME,FILEERROR)
+   FILEOPEN("LETTER",FILENAME,"APPEND",FILENUMBER,FILEERROR)
+   IF FILEERROR<>"" THEN CALL FILEFATAL
+  
+   CALL ACCOUNTCOMMENTHEADER
+   PRINT "Enter account comments (blank line terminates):"
+   NEWLINE
+   FILETEXT="SEED"
+   WHILE (FILETEXT<>"")
+    DO
+     FILETEXT=ENTERCHARACTER("Comment",60,"")
+     IF FILETEXT<> "" THEN
+      DO
+       FILEWRITELINE(FILENUMBER," "+FILETEXT,FILEERROR)
+       IF FILEERROR<>"" THEN CALL FILEFATAL
+      END
+    END
+  
+   FILECLOSE(FILENUMBER,FILEERROR)
+   IF FILEERROR<>"" THEN CALL FILEFATAL
+   CALL ACCOUNTCOMMENTFILEUNLOCK
+  END
+  
+  PRINT TITLE="Account comments"
+   FILENUMBER=-1
+  END
+
+  PROCEDURE ACCOUNTCOMMENTHEADER
+  [Print account and teller info to account comments file]
+
+   FILETEXT="Account "+ACCOUNT:NUMBER+" comments on "+
+    FORMAT("99/99/99",SYSACTUALDATE)+" at "+
+    FORMAT("99/99/99",SYSACTUALTIME)+" recorded by "+
+    SYSUSERNAME(SYSUSERNUMBER)
+   FILEWRITELINE(FILENUMBER,FILETEXT,FILEERROR)
+   IF FILEERROR<>"" THEN CALL FILEFATAL
+  END
+  
+  PROCEDURE ACCOUNTCOMMENTFILELOCK
+  [Lock account comments file]
+  
+   FILECREATE("LETTER",FILENAME+".LOCK",FILEERROR)
+   IF FILEERROR<>"" THEN
+    DO
+     FERROR="Account comments file is in use. Try later"
+     CALL FILEFATAL
+    END
+  END
+
+  PROCEDURE ACCOUNTCOMMENTFILEUNLOCK
+  [Unlock account comments file]
+  
+   FILEDELETE("LETTER",FILENAME+".LOCK",FERROR)
+  END
+  
+  #INCLUDE "FILE.PRO"
+`+ CODEEND + `
+`)
+powerOnFunctions.set("fileencrypt", `
+# FILEENCRYPT
+---
+This function converts a file to code as a security precaution.
+
+### Syntax
+`+ CODESTART + `
+FILEENCRYPT(FileType,FileName,EncryptedFileName,KeyFileName,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * FileType
+    - AUTODATA
+    - AUTORESPONSE
+    - AUTOTRIGGER
+    - DATA
+    - EDIT
+    - HELP
+    - LETTER
+    - RECEIPT
+    - SPECFILE, REPGEN
+    - REPORT
+  * FileName
+    - Auto Data file name
+    - Auto Response file name
+    - Auto Trigger file name
+    - Data file name
+    - Blank, there is only one edit file
+    - Help file number
+    - Letter file name
+    - Empty character string
+    - Specfile name
+      * ***Tip:*** Although REPGEN is still a valid file type, use SPECFILE when possible. Because we will eventually drop support for REPGEN, we recommend that all users replace REPGEN with SPECFILE.
+    - Report file name
+  * EncryptedFileName
+    - The name of the output file that is generated by the FILEENCRYPT function. This name must be different than the FileName.
+  * KeyFileName
+    - The name of the file that contains the decryption key created using the MAKEKEY operator console command
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+### Example
+`+ CODESTART + `
+FILEENCRYPT("LETTER",FILENAME,FILEERROR)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * The key file name is a character expression. Its value is the name of the file that contains the decryption key created using the MAKEKEY operator console command
+
+### Extended Example
+`+ CODESTART + `
+TARGET = ACCOUNT
+  
+DEFINE
+  HANDLE=NUMBER
+  HANDLE2=number
+  ERROR=CHARACTER
+  OPENERROR=CHARACTER
+  NOTHING=CHARACTER
+  P=CHARACTER
+  HOST=CHARACTER
+  USERNAME=CHARACTER
+  PASSWORD=CHARACTER
+  FNUMBER=NUMBER
+  FLINE=CHARACTER 
+  FERROR=CHARACTER
+  ERRORENC=CHARACTER
+  ERRORDEC=CHARACTER
+  ERRORPUT=CHARACTER
+  ERRORPUT2=CHARACTER
+  ERRORGET=CHARACTER
+  CLOSEERROR=CHARACTER
+END
+  
+SETUP
+  FILEENCRYPT("SPECFILE", "TESTFILE", "TESTFILE.ENC","KEYFILE", ERRORENC)
+  FILEDECRYPT("SPECFILE","TESTFILE.ENC", "TESTFILE.DEC", "KEYFILE", ERRORDEC)
+END
+ 
+ PRINT TITLE="FTP.TEST"
+  IF ERRORENC="" THEN
+   DO
+    PRINT "TESTFILE has been successfully encrypted as TESTFILE.ENC"
+    NEWLINE
+   END
+  ELSE
+   DO
+    PRINT ERRORENC
+    NEWLINE
+   END
+  IF ERRORDEC="" THEN   [DECRYPT]
+   DO
+    PRINT "TESTFILE has been successfully decrypted as TESTFILE.DEC"
+    NEWLINE
+   END
+  ELSE
+   DO
+    PRINT "decrypting error: " print ERRORDEC
+    NEWLINE
+   END
+  NEWLINE NEWLINE
+  FILEOPEN("SPECFILE","TESTFILE.ENC","READ",FNUMBER,FERROR)
+  IF FERROR<>"" THEN
+   PRINT "decrypted TESTFILE.ENC not opened/created "
+  ELSE
+   DO
+    PRINT "Here is what the ENCRYPTED file looks like:"
+    NEWLINE NEWLINE
+   END
+  WHILE FERROR=""
+   DO
+    FILEREADLINE(FNUMBER,FLINE,FERROR)
+    IF FERROR="" THEN
+     DO
+      PRINT FLINE
+      NEWLINE
+     END
+   END
+  FILECLOSE(FNUMBER,FERROR)
+  PRINT "-----------------------END OF ENCRYPTED FILE ----------------------"
+  NEWLINE  NEWLINE
+`+ CODEEND
+)
+powerOnFunctions.set("filegetpos", `
+# FILEGETPOS
+---
+This function retrieves the current byte position in the text file just read from or written to.
+
+### Syntax
+`+ CODESTART + `
+FILEGETPOS(FileNumber,FilePosition,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * FileNumber
+    - File number variable returned from FILEOPEN
+  * FilePosition
+    - Define a number variable for the second argument. PowerOn updates this variable with the current byte position.
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+***Tip:*** Create a standard specfile (for example, FILE.DEF) that defines all the variables required for the file input and output statements. You can #INCLUDE this specfile in any DEFINE division of specfiles that perform file input and output.
+
+### Example
+`+ CODESTART + `
+FILEGETPOS(FILENUMBER,FILEPOSITION,FILEERROR)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * The variables in parentheses cannot be arrays
+  * Use the FILEGETPOS statement to retrieve a position in the file and use the FILESETPOS statement to return to that position.
+
+***Tip:*** Create a standard specfile (for example, FILE.DEF) that defines all the variables required for the file input and output statements. You can #INCLUDE this specfile in any DEFINE division of specfiles that perform file input and output.
+
+### Extended Example
+Updates a list of share certificate rates and creates a log of who made each update.
+
+***Tip:*** If you want to change the value, PowerOn moves back to the rate's starting position with FILESETPOS and overwrites the old rate with FILEWRITE.
+\`\`\`
+                      SHARE CERTIFICATE RATES
+TERM        MIN. DEPOSIT                   RATE   DESCRIPTION
+6 mo.          $2,000.00                 3.250%   The short termer
+12 mo.         $2,000.00                 3.425%   California Dream
+24 mo.         $5,000.00                 4.124%   The real thing
+36 mo.         $5,000.00                 4.333%   Blind faith
+\`\`\`
+
+PowerOn reads each existing rate, records the starting position of that rate, and displays a prompt for the new rate.
+`+ CODESTART + `
+TARGET = ACCOUNT
+
+DEFINE
+   FNUMBER = NUMBER
+   FERROR  = CHARACTER
+   REPTITLE= CHARACTER(80)
+   REPHEAD = CHARACTER(80)
+   TERMANDMIN = CHARACTER(40)
+   SCRATE     = CHARACTER(10)
+   TEMPRATE   = RATE
+   POS        = NUMBER
+   DESC       = CHARACTER(40)
+END
+
+SETUP
+   FILEOPEN("LETTER","SC.RATES","READWRITE",FNUMBER,FERROR)
+   IF FERROR<>"" THEN
+    CALL FILEFATAL
+
+   FILEREADLINE(FNUMBER,REPTITLE,FERROR)
+   FILEREADLINE(FNUMBER,REPHEAD,FERROR)
+   NEWPAGE
+   PRINT REPTITLE
+   NEWLINE
+   PRINT REPHEAD
+   NEWLINE
+
+   FILEREAD(FNUMBER,40,TERMANDMIN,FERROR)
+   WHILE FERROR = "" 
+   DO
+    FILEGETPOS(FNUMBER,POS,FERROR)
+    FILEREAD(FNUMBER,7,CDRATE,FERROR)
+    TEMPRATE = VALUE(CDRATE)/100000
+    PRINT TERMANDMIN
+    TEMPRATE = ENTERRATE("   ENTER CURRENT RATE",TEMPRATE)
+    FILESETPOS(FNUMBER,POS,FERROR)
+    FILEWRITE(FNUMBER,FORMAT("#9.999%",TEMPRATE),FERROR)
+    FILEREADLINE(FNUMBER,DESC,FERROR)
+    FILEREAD(FNUMBER,40,TERMANDMIN,FERROR)
+   END
+   FILECLOSE(FNUMBER,FERROR)
+END
+
+PRINT TITLE = "SHARE CERTIFICATE RATES"
+PRINT ""
+END
+
+PROCEDURE FILEFATAL
+PRINT "*************  ERROR  ***********"
+NEWLINE
+PRINT FERROR
+NEWLINE
+PRINT "*********************************"
+NEWLINE
+TERMINATE
+END
+`+ CODEEND + `
+`)
+powerOnFunctions.set("filelistclose", `
+# FILELISTCLOSE
+---
+This function closes a previously opened list of files.
+
+### Syntax
+`+ CODESTART + `
+FILELISTCLOSE(ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * ErrorText
+    - Define a character variable to be updated during processing. If an error occurs while it attempts to open the file list, that variable will be updated with a short error message. If there are no errors, that variable is blank.
+
+### Example
+`+ CODESTART + `
+FILELISTCLOSE(FILEERROR)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * The variables in parentheses cannot be arrays
+  * Will return an error if a FILELISTOPEN was not previously used
+
+### Extended Example
+`+ CODESTART + `
+TARGET=ACCOUNT
+ 
+DEFINE
+  FILENAME=CHARACTER
+  ERRORTEXT=CHARACTER
+END
+ 
+SETUP
+  FILELISTOPEN("LETTER","MANUAL.+",ERRORTEXT)
+   IF ERRORTEXT="" THEN
+    DO
+     WHILE ERRORTEXT=""
+      DO
+       FILELISTREAD(FILENAME,ERRORTEXT)
+       IF ERRORTEXT="" THEN
+        DO
+         PRINT FILENAME
+         NEWLINE
+        END
+      END
+     FILELISTCLOSE(ERRORTEXT)
+    END
+   IF ERRORTEXT<>"" THEN
+    DO
+     PRINT"Error Listing Files: " + ERRORTEXT
+     NEWLINE
+    END
+END
+...
+`+ CODEEND + `
+`)
+powerOnFunctions.set("filelistopen", `
+# FILELISTOPEN
+---
+This function opens a file list you want to read.
+
+### Syntax
+`+ CODESTART + `
+FILELISTOPEN(FileType,Template,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * FileType
+    - AUTODATA
+    - AUTORESPONSE
+    - AUTOTRIGGER
+    - DATA
+    - HELP
+    - LETTER
+    - REPORT
+    - SPECFILE, REPGEN
+      * ***Tip:*** Although REPGEN is still a valid file type, use SPECFILE when possible. Because we will eventually drop support for REPGEN, we recommend that all users replace REPGEN with SPECFILE.
+  * Template
+    - Word, phrase, or title of the file you are asking to list.
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+***Tip:*** Create a standard specfile (for example, FILE.DEF) that defines all the variables required for the file input and output statements. You can #INCLUDE this specfile in any DEFINE division of specfiles that perform file input and output.
+
+### Example
+`+ CODESTART + `
+FILELISTOPEN("REPORT","+ATM+",FILEERROR)
+`+ CODEEND + `
+
+***Tip:*** Locate the last Notice of Insufficient Funds Report, read the report, change the format or wording of the notice, and create a new notice report.
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * The variables in parentheses cannot be arrays
+  * The case (uppercase or lowercase) of each template character is significant for matching file names
+  * When matching report titles, PowerOn ignores the case
+
+### Standard Template Matching Examples
+Reduce search results and matches to file names or report titles you want to view.
+  * For ATMLOG, DATA, HELP, LETTER, and RECEIPT, use a file name template. To list all the letter files that start with MANUAL and make them available to the specfile through the FILELISTOPEN function. In the file name, specify the following:
+    `+ CODESTART + `
+    FILELISTOPEN("LETTER","MANUAL.+",ERRORTEXT)
+    `+ CODEEND + `
+  * For REPORT file lists, use a report title template. To list all report files with the word ATM somewhere in the title, specify the following:
+    `+ CODESTART + `
+    FILELISTOPEN("REPORT","+ATM+",ERRORTEXT)
+    `+ CODEEND + `
+  * Use backslashes (\\) in the template to specify a template that you do not want to match. To list all file names that start with "MANUAL." but do not end with ".OLD", specify the following:
+    `+ CODESTART + `
+    "MANUAL.+\\+.OLD"
+    `+ CODEEND + `
+  * Use commas to separate multiple templates that you want to match. To list all file names that start with "MANUAL." and all file names that start with "PROC.", specify the following:
+    `+ CODESTART + `
+    "MANUAL.+,PROC.+"
+    `+ CODEEND + `
+
+### Extended Example
+`+ CODESTART + `
+TARGET=ACCOUNT
+ 
+DEFINE
+  FILENAME=CHARACTER
+  ERRORTEXT=CHARACTER
+END
+ 
+SETUP
+  FILELISTOPEN("LETTER","MANUAL.+",ERRORTEXT)
+   IF ERRORTEXT="" THEN
+    DO
+     WHILE ERRORTEXT=""
+      DO
+       FILELISTREAD(FILENAME,ERRORTEXT)
+       IF ERRORTEXT="" THEN
+        DO
+         PRINT FILENAME
+         NEWLINE
+        END
+      END
+     FILELISTCLOSE(ERRORTEXT)
+    END
+   IF ERRORTEXT<>"" THEN
+    DO
+     PRINT"Error Listing Files: " + ERRORTEXT
+     NEWLINE
+    END
+END
+...
+`+ CODEEND
+)
+powerOnFunctions.set("filelistread", `
+# FILELISTREAD
+---
+This function reads lines in the list that are opened or created by FILELISTOPEN.
+
+### Syntax
+`+ CODESTART + `
+FILELISTREAD(FileName,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * FileName
+    - A specific letter, help, specfile, report, ATM log, or receipt. Define only character variables for the two arguments in parentheses. PowerOn updates them during processing and returns the next file name that matches the FILELISTOPEN template into the file name variable. PowerOn returns the matching file names in alphabetical order.
+  * ErrorText
+    - Define a character variable to be updated during processing. If an error occurs while it attempts to open the file list, that variable will be updated with a short error message. If there are no errors, that variable is blank.
+
+***Tip:*** Create a standard specfile (for example, FILE.DEF ) that defines all the variables required for the file input and output statements. You can #INCLUDE this specfile in the DEFINE division of specfiles that perform file input and output.
+
+### Example
+`+ CODESTART + `
+FILELISTREAD(FILENAME,FILEERROR)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * The variables in parentheses cannot be arrays
+  * In REPORT files, the file name variable contains a full line of information in addition to the report title, similar to the data in Print Control.
+  * If an error occurs when PowerOn attempts to open the file list, it updates the error text variable with a short error message. If there are no errors, that variable is blank. When there are no more file names or report titles that match the template, EOF is returned in that variable.
+
+***Tip:*** Along with the other FILE input and output statements, you can process any report in your Print Control list and produce a new report in an altered format. For example, you can find the last Notice of Insufficient Funds, read the notice, change the format or wording of the notice, and create a new notice.
+
+### Report File Data Format
+  * If Report Sequence Number Digits is set to 4, then positions 001-004, contain the report number.
+  * If Report Sequence Number Digits is set to 5 or 6, then positions 001-004 contain four asterisks (****).
+
+Position(s):
+  * 001-004 = File name (for example, 8192 if it is report number 8192)
+  * 005 = Blank
+  * 006-045 = Report title
+  * 046 = Blank
+  * 047-052 = Page count
+  * 053 = Blank
+  * 054-056 = Number of times printed
+  * 057 = Blank
+  * 058-060 = Number of times written to tape (using the TAPEWRITE command)
+  * 061 = Blank
+  * 062-069 = Date sent to Print Control (system actual date)
+  * 070 = Blank
+  * 071-075 = Time sent to Print Control
+  * 076 = Blank
+  * 077-108 = Form name (if not blank)
+  * 109 = Blank
+  * 110-115 = Six-digit report sequence number
+
+### Extended Example
+`+ CODESTART + `
+TARGET=ACCOUNT
+ 
+DEFINE
+  FILENAME=CHARACTER
+  ERRORTEXT=CHARACTER
+END
+ 
+SETUP
+  FILELISTOPEN("LETTER","MANUAL.+",ERRORTEXT)
+   IF ERRORTEXT="" THEN
+    DO
+     WHILE ERRORTEXT=""
+      DO
+       FILELISTREAD(FILENAME,ERRORTEXT)
+       IF ERRORTEXT="" THEN
+        DO
+         PRINT FILENAME
+         NEWLINE
+        END
+      END
+     FILELISTCLOSE(ERRORTEXT)
+    END
+   IF ERRORTEXT<>"" THEN
+    DO
+     PRINT"Error Listing Files: " + ERRORTEXT
+     NEWLINE
+    END
+END
+...
+`+ CODEEND
+)
+powerOnFunctions.set("fileopen", `
+# FILEOPEN
+---
+This function opens a file of the specified file type for processing in the selected open mode.
+
+### Syntax
+`+ CODESTART + `
+FILEOPEN(FileType,FileName,OpenMode,FileNumber,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * FileType
+    - AUTODATA
+    - AUTORESPONSE
+    - AUTOTRIGGER
+    - DATA
+    - EDIT
+    - HELP
+    - LETTER
+    - SPECFILE, REPGEN
+    - ATMLOG ***READ ONLY***
+    - RECEIPT ***READ ONLY***
+    - REPORT ***READ ONLY***
+  * FileName
+    - Auto Data file name	
+    - Auto Response file name
+    - Auto Trigger file name
+    - Data file name
+    - Blank, there is only one edit file (use double quotes " ")
+    - Help file number
+    - Letter file name
+    - Specfile name
+      * ***Tip:*** Although REPGEN is still a valid file type, use SPECFILE when possible. Because we will eventually drop support for REPGEN, we recommend that all users replace REPGEN with SPECFILE.
+    - ATM log file name	
+    - Empty character string
+    - Sequence number
+  * OpenMode
+    - APPEND
+    - READ
+    - READWRITE
+    - WRITE
+  * FileNumber
+    - A defined number variable; contains a temporary file number during processing
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+***Tip:*** Create a standard specfile (for example, FILE.DEF) that defines all the variables required for the file input and output statements. You can #INCLUDE this specfile in any DEFINE division of specfiles that perform file input and output.
+
+### Examples
+Use a static file name in the command:
+`+ CODESTART + `
+FILEOPEN("LETTER","ACCOUNT.COMMENT","READ",FNUMBER,FERROR)
+`+ CODEEND + `
+
+Use a variable file name in the command:
+`+ CODESTART + `
+FILEOPEN("LETTER",ACCTFILENAME,"WRITE",FNUMBER,FERROR)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * The variables in parentheses cannot be arrays
+  * All modes except WRITE assume that the file exists
+  * The maximum number of files a program can have open at one time is 25
+Use FILEOPEN in the following modes:
+  * READ opens an existing file and reads the file information with FILEREAD and FILEREADLINE. For this mode, the file must exist.
+  * WRITE opens a new file to write to. For this mode, the file must not exist.
+  * READWRITE allows you to read data from and write data to an open file. For this mode, the file must exist.
+  * APPEND allows you to open an existing file and add any subsequent FILEWRITE information to the end of the file. For this mode, if the file does not exist, it is automatically created.
+`)
+powerOnFunctions.set("fileread", `
+# FILEREAD
+---
+This function reads an open file and saves the read data in a variable.
+
+### Syntax
+`+ CODESTART + `
+FILEREAD(FileNumber,NumberOfCharacters,CharacterVariable,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * FileNumber
+    - This argument comes from the FileNumber variable updated by the FILEOPEN command.
+  * NumberOfCharacters
+    - The length of data you want to read
+  * CharacterVariable
+    - Define a character variable in which to place the data read from the PowerOn file
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+### Example
+`+ CODESTART + `
+FILEREAD(FILENUMBER,10,FILETEXT,FILERROR)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * The variables in parentheses cannot be arrays
+  * Reads return line terminator characters (carriage returns, line feeds, and form feeds)
+  * Use the FILESETPOS statement before FILEREAD to set the position at the beginning of the data you want to read.
+  * When you read data sequentially and reach the end of a file, the message EOF is returned.
+
+***Tip:*** Create a standard specfile (for example, FILE.DEF) that defines all the variables required for the file input and output statements. You can #INCLUDE this specfile in any DEFINE division of specfiles that perform file input and output.
+
+### Extended Example
+The following specfile uses FILEREAD (line 28) to get to the beginning of a list of share certificate rates and to read each rate (line 31). As it reads each existing rate, PowerOn records the starting position of that rate with FILEGETPOS and displays a prompt for the new rate. If you want to change the value, PowerOn moves back to the rate's starting position with FILESETPOS and overwrites the old rate with FILEWRITE.
+
+The specfile reads this data file:
+
+Tip: If you want to change the value, PowerOn moves back to the rate's starting position with FILESETPOS and overwrites the old rate with FILEWRITE.
+\`\`\`
+                      SHARE CERTIFICATE RATES
+TERM        MIN. DEPOSIT                   RATE   DESCRIPTION
+6 mo.          $2,000.00                 3.250%   The short termer
+12 mo.         $2,000.00                 3.425%   California Dream
+24 mo.         $5,000.00                 4.124%   The real thing
+36 mo.         $5,000.00                 4.333%   Blind faith
+\`\`\`
+The specfile appears as:
+`+ CODESTART + `
+TARGET = ACCOUNT
+
+DEFINE
+   FNUMBER = NUMBER
+   FERROR  = CHARACTER
+   REPTITLE= CHARACTER(80)
+   REPHEAD = CHARACTER(80)
+   TERMANDMIN = CHARACTER(40)
+   SCRATE     = CHARACTER(10)
+   TEMPRATE   = RATE
+   POS        = NUMBER
+   DESC       = CHARACTER(40)
+END
+
+SETUP
+   FILEOPEN("LETTER","SC.RATES","READWRITE",FNUMBER,FERROR)
+   IF FERROR<>"" THEN
+    CALL FILEFATAL
+
+   FILEREADLINE(FNUMBER,REPTITLE,FERROR)
+   FILEREADLINE(FNUMBER,REPHEAD,FERROR)
+   NEWPAGE
+   PRINT REPTITLE
+   NEWLINE
+   PRINT REPHEAD
+   NEWLINE
+
+   FILEREAD(FNUMBER,40,TERMANDMIN,FERROR)
+   WHILE FERROR = "" 
+   DO
+    FILEGETPOS(FNUMBER,POS,FERROR)
+    FILEREAD(FNUMBER,7,CDRATE,FERROR)
+    TEMPRATE = VALUE(CDRATE)/100000
+    PRINT TERMANDMIN
+    TEMPRATE = ENTERRATE("   ENTER CURRENT RATE",TEMPRATE)
+    FILESETPOS(FNUMBER,POS,FERROR)
+    FILEWRITE(FNUMBER,FORMAT("#9.999%",TEMPRATE),FERROR)
+    FILEREADLINE(FNUMBER,DESC,FERROR)
+    FILEREAD(FNUMBER,40,TERMANDMIN,FERROR)
+   END
+   FILECLOSE(FNUMBER,FERROR)
+END
+
+PRINT TITLE = "SHARE CERTIFICATE RATES"
+PRINT ""
+END
+
+PROCEDURE FILEFATAL
+PRINT "*************  ERROR  ***********"
+NEWLINE
+PRINT FERROR
+NEWLINE
+PRINT "*********************************"
+NEWLINE
+TERMINATE
+END
+`+ CODEEND
+)
+powerOnFunctions.set("filereadline", `
+# FILEREADLINE
+---
+This function reads a line of text from a file and then stores that line in the second argument.
+
+### Syntax
+`+ CODESTART + `
+FILEREADLINE(FileNumber,TextLine,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * FileNumber
+    - File number variable returned from FILEOPEN
+  * TextLine
+    - Returns the data of the line you are reading
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+### Example
+`+ CODESTART + `
+FILEREADLINE(FILENUMBER,FILETEXT,FILEERROR)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * The variables in parentheses cannot be arrays
+  * An error occurs if there are more than 132 characters in a single line (the end of a line being denoted by a carriage return, line feed, form feed, or null).
+  * Strips off line terminators (carriage returns, line feeds, form feeds)
+
+***Tip:*** Create a standard specfile (for example, FILE.DEF) that defines all the variables required for the file input and output statements. You can #INCLUDE this specfile in any DEFINE division of specfiles that perform file input and output.
+
+### Extended Example
+`+ CODESTART + `
+TARGET=ACCOUNT
+  
+DEFINE
+   FNUMBER=NUMBER
+   FLINE=CHARACTER
+   FERROR=CHARACTER
+END
+  
+PRINT TITLE="Test File I/O"
+  
+    FILEOPEN("LETTER","PHONELIST","READ",FNUMBER,FERROR)
+    IF FERROR<>"" THEN
+     DO
+      PRINT "Error Opening File: "
+      PRINT FERROR
+      NEWLINE
+     END
+    ELSE
+     DO
+      WHILE FERROR=""
+       DO
+        FILEREADLINE(FNUMBER,FLINE,FERROR)
+        IF FERROR="" THEN
+         DO
+          PRINT FLINE
+          NEWLINE
+         END
+       END
+      FILECLOSE(FNUMBER,FERROR)
+     END
+   END
+...
+`+ CODEEND
+)
+powerOnFunctions.set("filesetpos", `
+# FILESETPOS
+---
+This function sets the current byte position of the specified text file.
+
+### Syntax
+`+ CODESTART + `
+FILESETPOS(FileNumber,FilePosition,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * FileNumber
+    - File number variable returned from FILEOPEN
+  * FilePosition
+    - Define either a numeric variable, number literal, or numeric expression.
+  * ErrorText
+    - Define a character variable to be updated during processing. If an error occurs while it attempts to open the file list, that variable will be updated with a short error message. If there are no errors, that variable is blank.
+
+***Tip:*** Create a standard specfile (for example, FILE.DEF) that defines all the variables required for the file input and output statements. You can #INCLUDE this specfile in any DEFINE division of specfiles that perform file input and output.
+
+### Example
+`+ CODESTART + `
+FILESETPOS(FILENUMBER,FILEPOSITION,FILEERROR)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * The variables in parentheses cannot be arrays
+  * Use FILEGETPOS to remember a position in the file and use FILESETPOS to return to that position when you are ready to read or write at that position.
+  * You must enter the byte position as a number literal in the second argument. A later FILEREAD or FILEREADLINE statement starts reading from that position. A later FILEWRITE or FILEWRITELINE overwrites whatever is at that position. To return to the beginning of the file, set the file position to 0.
+  * Must be a non-negative number
+
+### Extended Example
+The following specfile uses FILEREAD to get to the beginning of a list of share certificate rates. PowerOn reads each existing rate, records the starting position of that rate with FILEGETPOS, and displays a prompt for the new rate. If you want to change the value, PowerOn moves back to the rate's starting position with FILESETPOS (line 35) and overwrites the old rate with FILEWRITE.
+
+The specfile reads this data file:
+
+***Tip:*** If you want to change the value, PowerOn moves back to the rate's starting position with FILESETPOS and overwrites the old rate with FILEWRITE.
+\`\`\`
+                      SHARE CERTIFICATE RATES
+TERM        MIN. DEPOSIT                   RATE   DESCRIPTION
+6 mo.          $2,000.00                 3.250%   The short termer
+12 mo.         $2,000.00                 3.425%   California Dream
+24 mo.         $5,000.00                 4.124%   The real thing
+36 mo.         $5,000.00                 4.333%   Blind faith
+\`\`\`
+The specfile appears as:
+`+ CODESTART + `
+TARGET = ACCOUNT
+
+DEFINE
+   FNUMBER = NUMBER
+   FERROR  = CHARACTER
+   REPTITLE= CHARACTER(80)
+   REPHEAD = CHARACTER(80)
+   TERMANDMIN = CHARACTER(40)
+   SCRATE     = CHARACTER(10)
+   TEMPRATE   = RATE
+   POS        = NUMBER
+   DESC       = CHARACTER(40)
+END
+
+SETUP
+   FILEOPEN("LETTER","SC.RATES","READWRITE",FNUMBER,FERROR)
+   IF FERROR<>"" THEN
+    CALL FILEFATAL
+
+   FILEREADLINE(FNUMBER,REPTITLE,FERROR)
+   FILEREADLINE(FNUMBER,REPHEAD,FERROR)
+   NEWPAGE
+   PRINT REPTITLE
+   NEWLINE
+   PRINT REPHEAD
+   NEWLINE
+
+   FILEREAD(FNUMBER,40,TERMANDMIN,FERROR)
+   WHILE FERROR = "" 
+   DO
+    FILEGETPOS(FNUMBER,POS,FERROR)
+    FILEREAD(FNUMBER,7,CDRATE,FERROR)
+    TEMPRATE = VALUE(CDRATE)/100000
+    PRINT TERMANDMIN
+    TEMPRATE = ENTERRATE("   ENTER CURRENT RATE",TEMPRATE)
+    FILESETPOS(FNUMBER,POS,FERROR)
+    FILEWRITE(FNUMBER,FORMAT("#9.999%",TEMPRATE),FERROR)
+    FILEREADLINE(FNUMBER,DESC,FERROR)
+    FILEREAD(FNUMBER,40,TERMANDMIN,FERROR)
+   END
+   FILECLOSE(FNUMBER,FERROR)
+END
+
+PRINT TITLE = "SHARE CERTIFICATE RATES"
+PRINT ""
+END
+
+PROCEDURE FILEFATAL
+PRINT "*************  ERROR  ***********"
+NEWLINE
+PRINT FERROR
+NEWLINE
+PRINT "*********************************"
+NEWLINE
+TERMINATE
+END
+`+ CODEEND
+)
+powerOnFunctions.set("filewrite", `
+# FILEWRITE
+---
+This function locates the given file number and writes the data you specify, beginning at the current byte position.
+
+### Syntax
+`+ CODESTART + `
+FILEWRITE(FileNumber,CharacterData,ErrorText)
+`+ CODEEND + `
+or
+`+ CODESTART + `
+FILEWRITE(FileNumber,CharacterData,FieldLength,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * FileNumber
+    - File number variable returned from FILEOPEN
+  * CharacterData
+    - Can be a character literal or a character variable
+  * FieldLength
+    - Optional. You can use a variable, literal, or any numeric expression as long as it resolves to an integer from 1 to 132.
+    - If the length of the character information in character data is greater than the field length specified, FILEWRITE outputs only the information truncated to the number of bytes specified by the "fieldlength" expression.
+    - If the length of the character information in character data is less than the field length specified, FILEWRITE outputs all character data plus enough trailing blanks to reach the specified field length. This is useful for writing the precise number of bytes specified in some layouts.
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+### Example
+`+ CODESTART + `
+FILEWRITE(FILENUMBER,"06/15/09",FILEERROR)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * Variables used as arguments inside the parentheses cannot be arrays.
+  * You can only write to a data file, edit file, help file, letter file, or specfile.
+
+Use FILESETPOS before FILEWRITE to position the file where you want to begin writing.
+
+### Extended Example
+Updates a list of share certificate rates and creates a log of who made each update.
+
+The following specfile uses FILEREAD to get to the beginning of a list of share certificate rates. PowerOn reads each existing rate, records the starting position of that rate with FILEGETPOS, and displays a prompt for the new rate. If you want to change the value, PowerOn moves back to the rate's starting position with FILESETPOS and overwrites the old rate with FILEWRITE.See FILEWRITE on line 36.
+
+The specfile reads this data file:
+\`\`\`
+                      SHARE CERTIFICATE RATES
+TERM        MIN. DEPOSIT                   RATE   DESCRIPTION
+6 mo.          $2,000.00                 3.250%   The short termer
+12 mo.         $2,000.00                 3.425%   California Dream
+24 mo.         $5,000.00                 4.124%   The real thing
+36 mo.         $5,000.00                 4.333%   Blind faith
+\`\`\`
+
+PowerOn reads each existing rate, records the starting position of that rate, and displays a prompt for the new rate.
+
+The specfile looks like this:
+`+ CODESTART + `
+TARGET = ACCOUNT
+
+DEFINE
+   FNUMBER = NUMBER
+   FERROR  = CHARACTER
+   REPTITLE= CHARACTER(80)
+   REPHEAD = CHARACTER(80)
+   TERMANDMIN = CHARACTER(40)
+   SCRATE     = CHARACTER(10)
+   TEMPRATE   = RATE
+   POS        = NUMBER
+   DESC       = CHARACTER(40)
+END
+
+SETUP
+   FILEOPEN("LETTER","SC.RATES","READWRITE",FNUMBER,FERROR)
+   IF FERROR<>"" THEN
+    CALL FILEFATAL
+
+   FILEREADLINE(FNUMBER,REPTITLE,FERROR)
+   FILEREADLINE(FNUMBER,REPHEAD,FERROR)
+   NEWPAGE
+   PRINT REPTITLE
+   NEWLINE
+   PRINT REPHEAD
+   NEWLINE
+
+   FILEREAD(FNUMBER,40,TERMANDMIN,FERROR)
+   WHILE FERROR = "" 
+   DO
+    FILEGETPOS(FNUMBER,POS,FERROR)
+    FILEREAD(FNUMBER,7,CDRATE,FERROR)
+    TEMPRATE = VALUE(CDRATE)/100000
+    PRINT TERMANDMIN
+    TEMPRATE = ENTERRATE("   ENTER CURRENT RATE",TEMPRATE)
+    FILESETPOS(FNUMBER,POS,FERROR)
+    FILEWRITE(FNUMBER,FORMAT("#9.999%",TEMPRATE),FERROR)
+    FILEREADLINE(FNUMBER,DESC,FERROR)
+    FILEREAD(FNUMBER,40,TERMANDMIN,FERROR)
+   END
+   FILECLOSE(FNUMBER,FERROR)
+END
+
+PRINT TITLE = "SHARE CERTIFICATE RATES"
+PRINT ""
+END
+
+PROCEDURE FILEFATAL
+PRINT "*************  ERROR  ***********"
+NEWLINE
+PRINT FERROR
+NEWLINE
+PRINT "*********************************"
+NEWLINE
+TERMINATE
+END
+`+ CODEEND
+)
+powerOnFunctions.set("filewriteline", `
+# FILEWRITELINE
+---
+This function locates the file number specified and writes a line of text beginning at the current byte position.
+
+### Syntax
+`+ CODESTART + `
+FILEWRITELINE(FileNumber,CharacterData,ErrorText)
+`+ CODEEND + `
+or
+`+ CODESTART + `
+FILEWRITELINE(FileNumber,CharacterData,FieldLength,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * FileNumber
+    - File number variable returned from FILEOPEN
+  * CharacterData
+    - Can be a character literal or a character variable	
+  * FieldLength
+    - Optional. You can use a variable, literal, or any numeric expression as long as it resolves to an integer from 1 to 132.
+    - If the length of the character information in character data is greater than the field length specified, FILEWRITELINE outputs only the information truncated to the number of bytes specified by the "fieldlength" expression.
+    - If the length of the character information in character data is less than the field length specified, FILEWRITELINE outputs all character data plus enough trailing blanks to reach the specified field length. This is useful for writing the precise number of bytes specified in some layouts.
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+***Tip:*** Create a standard specfile (for example, FILE.DEF) that defines all the variables required for the file input and output statements. You can #INCLUDE this specfile in any DEFINE division of specfiles that perform file input and output.
+
+### Example
+`+ CODESTART + `
+FILEWRITELINE(FILENUMBER,"This account is closed.",FILEERROR)
+`+ CODEEND + `
+
+### Usage Information
+  * You can only write to a letter file, help file, specfile, or edit file
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * Variables used as arguments cannot be arrays
+  * FILEWRITELINE always adds a NEWLINE print control statement to the end of the specified text
+
+***Tip:*** Use the FILESETPOS statement before FILEWRITELINE to position the file where you want to start writing.
+
+### Extended Example
+The following specfile updates a list of share certificate rates and creates a log of who made each update. The specfile uses FILEWRITELINE on line 45 to update the comment at the end of the log and on line 63 to write information on the end of the line.
+`+ CODESTART + `
+TARGET = ACCOUNT
+
+DEFINE
+  FNUMBER    = NUMBER
+  FNUMBER2   = NUMBER
+  FERROR     = CHARACTER
+  FERROR2    = CHARACTER
+  STAMPLINE  = CHARACTER
+  REPTITLE   = CHARACTER(80)
+  REPHEAD    = CHARACTER(80)
+  TERMANDMIN = CHARACTER(40)
+  CDRATE     = CHARACTER(10)
+  TEMPRATE   = RATE
+  POS        = NUMBER
+  POS2       = NUMBER
+  DESC       = CHARACTER(40)
+END
+
+SETUP
+   CALL TIMESTAMP
+   FILEOPEN("LETTER","SC.RATES","READWRITE",FNUMBER,FERROR)
+   IF FERROR<>"" THEN
+   CALL FILEFATAL
+   FILEREADLINE(FNUMBER,REPTITLE,FERROR)
+   FILEREADLINE(FNUMBER,REPHEAD,FERROR)
+   NEWPAGE
+   PRINT REPTITLE
+   NEWLINE
+   PRINT REPHEAD
+   NEWLINE
+   FILEREAD(FNUMBER,40,TERMANDMIN,FERROR)
+   WHILE FERROR = ""
+    DO
+     FILEGETPOS(FNUMBER,POS,FERROR)
+     FILEREAD(FNUMBER,7,CDRATE,FERROR)
+     TEMPRATE = VALUE(CDRATE)/100000
+     PRINT TERMANDMIN
+     TEMPRATE = ENTERRATE("   ENTER CURRENT RATE",TEMPRATE)
+     FILESETPOS(FNUMBER,POS,FERROR)
+     FILEWRITE(FNUMBER,FORMAT("#9.999%",TEMPRATE),FERROR)
+     FILEREADLINE(FNUMBER,DESC,FERROR)
+     FILEREAD(FNUMBER,40,TERMANDMIN,FERROR)
+    END
+   FILESETPOS(FNUMBER2,POS2,FERROR)
+   FILEWRITELINE(FNUMBER2,"  - CLOSED NORMALLY",FERROR2)
+   FILECLOSE(FNUMBER2,FERROR2)
+   FILECLOSE(FNUMBER,FERROR)
+END
+
+PRINT TITLE = "SHARE CERTIFICATE RATES"
+   PRINT ""
+END
+
+PROCEDURE TIMESTAMP
+   FILECREATE("LETTER","RATE.LOG",FERROR)
+   FILEOPEN("LETTER","RATE.LOG","APPEND",FNUMBER2,FERROR2)
+   STAMPLINE = FORMAT("99:99 ",SYSACTUALTIME)+
+    FORMAT("99/99/99 ",SYSACTUALDATE)+
+    FORMAT("999 - ",SYSUSERNUMBER)+
+    SYSUSERNAME(SYSUSERNUMBER)
+   FILEWRITE(FNUMBER2,STAMPLINE,FERROR)
+   FILEGETPOS(FNUMBER2,POS2,FERROR)
+   FILEWRITELINE(FNUMBER2,"  - EXIT BY ESC",FERROR2)
+END
+
+PROCEDURE FILEFATAL
+   NEWLINE
+   PRINT "Error: "+FERROR
+   NEWLINE
+   TERMINATE
+END
+`+ CODEEND
+)
+powerOnFunctions.set("float", `
+# FLOAT
+---
+This function converts a number, money, rate, date, or code value into its equivalent floating point value. It is intended for use on an entire numeric expression. It is useful for assigning a non-floating point value to a float variable. If you use this function on part of a compound expression, it can have unpredictable results.
+
+### Syntax
+`+ CODESTART + `
+FLOAT(Expression)
+`+ CODEEND + `
+
+### Arguments
+Expression = Using NUMBER, MONEY, DATE, RATE, or CODE data type
+
+### Example
+This function converts a number, money, code, date, or rate value into its equivalent floating point value. It is intended for use on an entire numeric expression. If you use this function on part of a compound expression, it can have unpredictable results.
+`+ CODESTART + `
+FLOAT(LOAN:INTERESTRATE)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP, PRINT, or TOTAL divisions or in a procedure called by one of these divisions
+
+### Extended Example
+`+ CODESTART + `
+FLOATVARIABLE= FLOAT(LOAN:INTERESTRATE)
+`+ CODEEND + `
+
+This list illustrates the results of the FLOAT function for each valid data type:
+CODE data type example
+\`\`\`
+03 FLOAT Value: 3.0E+0
+\`\`\`
+
+DATE data type example
+\`\`\`
+'12/31/93' FLOAT Value: +1.567000000000000E+003
+\`\`\`
+
+MONEY data type example
+\`\`\`
+$24.95 FLOAT Value: 2.495E+1
+\`\`\`
+
+NUMBER data type example
+\`\`\`
+-8765 FLOAT Value: -8.765E+3
+\`\`\`
+
+RATE data type example
+\`\`\`
+4.567% FLOAT Value: 4.567E-2
+\`\`\`
+`)
+powerOnFunctions.set("floatvalue", `
+# FLOATVALUE
+---
+This function converts the characters that express a numeric value into a floating point numeric equivalent, and then places that value into a specified floating point variable.
+
+### Syntax
+`+ CODESTART + `
+FLOATVALUE(CharacterString,FLOATVARIABLE,ErrorPosition)
+`+ CODEEND + `
+
+### Arguments
+  * CharacterString
+    - Provides the value and the format for the new floating value
+  * FLOATVARIABLE
+    - The value of the CharacterString
+  * ErrorPosition
+    - The position of the error If there are any errors with the format from the first argument
+
+### Example
+`+ CODESTART + `
+FLOATVALUE("1.2e+2",FLOATVARIABLE,EPOS)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * Cannot express a fractional exponent (such as ½)
+  * Can only use the range between 2.2E-308 to 1.8E+308
+  * Returns an error position which is a number indicating the position in the character string at which a parsing error occurred
+  * Limited to 16 digits; anything over 16 digits will produce unpredictable results
+
+### Extended Example
+575 can be expressed as 5.75 x 102, or as 5.75E+2.
+
+`+ CODESTART + `
+FLOATVALUE("5.75E+2",FLOATVARIABLE,EPOS)
+`+ CODEEND + `
+The decimal is moved two places to the right and 575 is assigned to FLOATVARIABLE; EPOS is 0 because the format is acceptable.
+
+### EPOS Example
+Character string is not in the scientific notation format.
+
+`+ CODESTART + `
+FLOATVALUE("5.75ABC",FLOATVARIABLE,EPOS)
+`+ CODEEND + `
+5.75 is assigned to FLOATVARIABLE and 5 to EPOS. EPOS represents the position of the offending character (the letter A is the fifth character in the string).
+
+### Negative Exponent Example
+.0123 can be expressed as 1.23 x 10-2, or as 1.23E-2.
+
+`+ CODESTART + `
+FLOATVALUE("1.23E-2",FLOATVARIABLE,EPOS)
+`+ CODEEND + `
+The decimal is moved two places to the left and .0123 is assigned to FLOATVARIABLE; EPOS is 0 because the format is acceptable.
+`)
+powerOnFunctions.set("floor", `
+# FLOOR
+---
+This function returns the integer that is less than or equal to a given number, monetary amount, or floating point expression.
+
+### Syntax
+`+ CODESTART + `
+FLOOR(expression)
+`+ CODEEND + `
+
+### Arguments
+  * Enter a number, monetary amount, or floating point expression.
+
+### Example
+`+ CODESTART + `
+FLOOR(3.14159E0)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP, SELECT, SORT, PRINT, LETTER, or TOTAL divisions or in a procedure called by those divisions
+
+### Extended Example
+`+ CODESTART + `
+  IF FLOOR(WEEKSTOBIRTHDAY)= -1 THEN
+    PRINT "Sorry we missed your birthday this week!"
+`+ CODEEND + `
+
+### Various Data Type Example
+  * \`\`\` FLOOR(3.14159E0) \`\`\`=3 
+  * \`\`\` FLOOR(17) \`\`\`=17
+  * \`\`\` FLOOR($1.50) \`\`\`= $1.50 The penny (cents) part of a money value is considered a part of the integer value.
+  * \`\`\` FLOOR(-2.4) \`\`\`= -3
+
+### INT and FLOOR Example
+Except for how they handle negative numbers with a fractional part, INT and FLOOR are similar.
+
+`+ CODESTART + `
+INT(-2.4) = -2
+FLOOR(-2.4) = -3
+`+ CODEEND
+)
+powerOnFunctions.set("fmperform", `
+# FMPERFORM
+--- 
+This function performs file maintenance to the Account, Loan Rate Change, User Tracking, Wire, Member, Member Address, and Non-Account Name records in demand mode.
+
+### Syntax
+`+ CODESTART + `
+FMPERFORM FMType [TARGETFILE] RecordPath(CheckPrivilegesFlag,DefaultType,[NewLoc,][NewID,]ErrorText)
+DO 
+ SET Field_Name TO New_Value 
+ SET Field_Name TO New_Value 
+END
+`+ CODEEND + `
+
+### Arguments
+  * FMType
+    - CREATE
+    - REVISE
+    - DELETE
+  * TARGETFILE
+    - Optionally used when the current file context is not the same as the target file of the FMPERFORM.	
+  * RecordPath
+    - The full record path specification from the top-level record (Account record for the Account file, User record for the User file, etc.) down to the record being file maintained, including IDs and LOC, or ordinal sequence numbers.
+  * CheckPrivilegesFlag
+    - 1 = Check all applicable Field FM Privileges
+    - 0 = Do not check privileges
+  * DefaultType
+    - 0 to the maximum type to use when the specfile creates a record with a TYPE field	
+  * NewLoc
+    - Defines an optional number variable to be updated during processing with the LOCATOR of the record created using FMPERFORM
+  * NewID
+    - Define an optional character variable to be updated during processing with the ID of the record created using FMPERFORM.
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+***Tip:*** When creating a Card record, you can use the NEXT keyword to have the system calculate a card number rather than having the specfile provide a card number. The system uses the Card Creation Wizard Parameters for the card type to format the card number.
+
+  * If the Card Number Format parameter in the Card Creation Wizard Parameters for a card type contains the P placeholder, you can specify a number with the NEXT keyword, separated by a colon. This number sets the value for the portion of the card number the system prompts for.
+  * If you use the optional argument [:<pnumber>] for the NEXT keyword, the following rules apply:
+    - If the format requires more numbers than the specfile provided, the system pads the number with leading zeros.
+    - If the specfile provided more numbers than the format can use, the system cuts off the excess digits at the beginning of the number.
+    - If the specfile provided a number for a card type that does not contain the P placeholder, the system ignores the number.
+    - If the Card Number Format parameter for a card type contains the P placeholder and the specfile does not provide a number with the NEXT keyword, the creation of the card number fails and the system returns the error:
+      \`\`\`Unable to generate new card number.\`\`\`
+  * When generating a new card number, the system checks whether the generated number exists on the Account database. The system always ensures that the new card number does not exist on another account. The system can allow duplicates in the same account, depending on how the Unique Card Number? parameter in Card Creation Wizard Parameters for the card type is set:
+    - If the Unique Card Number? parameter is set to Yes, the system makes up to ten attempts to generate a new number that does not yet exist. If it is not successful, the creation of the card number fails and the system outputs the error:
+      \`\`\`Unable to generate new card number.\`\`\`
+    - If the Unique Card Number? parameter is set to No, the system allows duplicate card numbers on the current account. The only exception is if the Card Number Format parameter in the Card Creation Wizard Parameters contains # placeholders, indicating to include a suffix in the card number. In this case, the system looks for a suffix that has not yet been used and only generates a card number if an unused suffix is available. If none is available, the system outputs the error:
+      \`\`\`Unable to generate new card number\`\`\`
+  * When you use the NEXT keyword, the system only populates the Card Number field in the Card record. Even if you set the Use Card Suffix Field? parameter to Yes, NEXT does not cause the system to populate the Card Suffix field in the Card record.
+  * When you run the specfile, the FMPERFORM command processes your file maintenance specifications.
+    - If the system is off line, the specfile stops and returns this error message:
+      \`\`\`System is Off Line\`\`\`
+    - The specfile verifies security privileges:
+      * If you do not have access privileges and you try to launch the specfile, a security override prompt appears. After you get the override, the specfile launches. You can click Cancel to proceed, but if a demand specfile contains FMPERFORM commands, the FMPERFORM commands are not run and you receive an error message.
+        ***Important:*** You must have the Account File Maintenance privilege (Inquiry and FM Privileges) to perform file maintenance commands.
+      * If the user and console have the appropriate access privileges, when the specfile reaches the FMPERFORM command, the following occurs:
+      * If the ***Check Privileges*** flag is set to 0, the specfile does not check security privileges for the type of file maintenance required on the indicated record.
+      * If the ***Check Privileges*** flag is set to 1, the specfile checks user and console privileges to determine the type of file maintenance required on the indicated record.
+
+### Usage Information
+  * Use only in the SETUP, PRINT, or TOTAL divisions or in a procedure called by one of these divisions
+  * Only used for demand specfiles
+  * Specfile must target the Account record
+  * Used with the ACCOUNT record type only
+  * Cannot use with the VALIDATION keyword
+  * You can use within a PROCEDURE section of your specfile
+  * If you do not specify any field changes for a creation, only the default field values will be used.
+  * You must specify at least one field change for a revision
+  * You should not specify any field changes for a deletion
+  * Cannot use inside a FOR EACH loop because creating or deleting records could potentially wreak havoc with record looping
+  * For specfiles used in SymConnect, perform file maintenance inside a FOR loop. Once FMPERFORM is run, the specfile may need to locate the record before issuing another FMPERFORM statement, especially if the specfile is run on one account but programmed to perform file maintenance on another account.
+  * When using LOC, there are a number of special keywords that designate where to place a record.
+  * When modifying the City, State, and Zip Code fields in the Name record, the total number of characters cannot exceed 38 when formatted together as a address line. A space is automatically inserted between each field, bringing the total address line to 40 characters.
+  * FMPERFORM commands targeting the User record or the User Tracking record cannot occur in the same specfile as an FMPERFORM command targeting an Account record, unless they come after all FMPERFORM commands targeting the Account record.
+  * When creating a record that does not have a default record type, the first SET statement must include the mnemonic TYPE field for that record.
+
+***Tip:*** If you want to perform file maintenance based on information in records on the account, use a FOR EACH loop to go through the records and store the information in arrays. Afterwards, go back through the arrays with a WHILE...DO...END or FOR...DO...END type loop to perform the file maintenance.
+
+### Create Account File Example for Share
+`+ CODESTART + `
+FMPERFORM CREATE SHARE "50" NAME LOC 220 (1,0,NEWLOC,ERRORTEXT)
+DO 
+  SET FIRST TO "PHILLIP"
+  SET LAST TO "JOHNSON"
+  SET HOMEPHONE TO "619-541-1712"
+END
+IF ERRORTEXT<>"" THEN
+ DO
+  PRINT ERRORTEXT
+  NEWLINE
+  TERMINATE
+END
+`+ CODEEND + `
+
+### Delete Account File Example for Loan App
+`+ CODESTART + `
+TARGET=ACCOUNT
+ 
+DEFINE
+ FMCOUNT=NUMBER
+ FMID=CHARACTER(2) ARRAY(100)
+ X=NUMBER
+ ERRORTEXT=CHARACTER
+END
+ 
+SETUP
+[ Gather up the application IDs...]
+ ERRORTEXT=""
+ FMCOUNT=0
+ FOR EACH LOANAPP
+  DO
+   IF FMCOUNT>=100 THEN
+    ERRORTEXT="Too many applications to delete!"
+   ELSE
+    DO
+     FMCOUNT=FMCOUNT+1
+     FMID(FMCOUNT)=LOANAPP:ID
+    END
+  END
+ UNTIL (ERRORTEXT<>"")
+ 
+[ ...then actually perform the FM outside of the record loop ]
+ X=1
+ WHILE (X<=FMCOUNT AND ERRORTEXT="")
+  DO
+   FMPERFORM DELETE LOANAPP FMID(X) (0,0,NEWLOC,ERRORTEXT)
+    DO
+    END
+   X=X+1
+  END
+`+ CODEEND + `
+
+### Create User Record Example
+`+ CODESTART + `
+IF ERROTEXT="" THEN 
+  DO 
+   FMPERFORM CREATE TARGETFILE USER 0
+        TRACKING -1 (1,0,NEWLOC,ERRORTEXT)
+    DO 
+     SET USERNUMBER1 TO 999
+    END 
+  END 
+END
+`+ CODEEND + `
+
+### Read User Record Example
+`+ CODESTART + `
+ERRORTEXT="No such User!"
+ FOR USER WITH NUMBER USERNUM  
+  DO 
+   ERRORTEXT="No Tracking with matching Locator!"
+   FOR EACH USER TRACKING WITH (USER TRACKING:LOCATOR=LOCCODE)
+    DO 
+     ERRORTEXT=""
+    END 
+  END
+`+ CODEEND + `
+
+### Revise User Record Example
+`+ CODESTART + `
+IF ERRORTEXT="" THEN 
+  DO 
+   FMPERFORM REVISE TARGETFILE USER USERNUM 
+             TRACKING LOC USERTRACKINGLOC (1,0,NEWLOC,ERRORTEXT)
+    DO 
+     SET USERNUMBER1 TO NUMVALUE 
+    END 
+  END 
+END
+`+ CODEEND + `
+
+### Delete User Record Example
+`+ CODESTART + `
+IF ERRORTEXT="" THEN 
+  DO 
+   FMPERFORM DELETE TARGETFILE USER USERNUM 
+             USERTRACKING LOC LOCCODE (1,0,NEWLOC,ERRORTEXT)
+    DO 
+    END 
+  END
+`+ CODEEND + `
+
+### Create Member Record Example and Assign to a Name Record
+`+ CODESTART + `
+IF ERRORTEXT="" THEN 
+  DO 
+   FMPERFORM CREATE TARGETFILE MEMBERREC(1,0,NEWIDNUMBER,ERRORTEXT)
+    DO 
+     SET LAST TO LASTNAMEVALUE 
+    END 
+  END 
+
+IF ERRORTEXT="" THEN 
+  DO 
+   FMPERFORM REVISE SHARE "50" NAME LOC 220 (1,0,NEWLOC,ERRORTEXT)
+    DO 
+     SET MEMBERNUMLINK TO NEWIDNUMBER 
+    END 
+  END 
+END
+`+ CODEEND + `
+
+### Create Account File Example for Share
+`+ CODESTART + `
+FMPERFORM CREATE SHARE "50" NAME LOC 220 (1,0,NEWLOC,ERRORTEXT)
+DO
+SET FIRST TO "PHILLIP"
+SET LAST TO "JOHNSON"
+SET HOMEPHONE TO "    541-1712"
+END
+IF ERRORTEXT<>"" THEN
+DO
+PRINT ERRORTEXT
+NEWLINE
+TERMINATE
+END
+`+ CODEEND + `
+
+### Revise Account File Example for Share
+`+ CODESTART + `
+TARGET=ACCOUNT
+
+DEFINE
+I=NUMBER
+SC=NUMBER
+SLID=CHARACTER(4)
+ERRORTEXT=CHARACTER
+END
+
+SETUP
+SC = 0
+FOR EACH SHARE WITH SHARE:ID = SLID
+DO
+   FOR I = 1 TO 8
+    DO
+     IF SC = 0 THEN
+      DO
+       IF SHARE:SERVICE:(I) = 6 THEN
+        DO
+         SC = I
+        END
+      END
+    END
+END UNTIL SHARE:ID = SLID
+
+IF SC <> 0 THEN
+ DO
+   FMPERFORM REVISE SHARE SLID (0, 0, ERRORTEXT)
+    DO
+     SET SERVICE:(SC) TO 0
+    END
+ END
+END
+
+PRINT TITLE="REVISE SHARE"
+SUPPRESSNEWLINE
+END
+`+ CODEEND + `
+
+### Card Creation Wizard using NEXT
+`+ CODESTART + `
+Your parameters control how the next card number is determined. See Card Number Format field in the Card Creation Wizard Parameters.
+FMPERFORM CREATE CARD AFTERLAST (0,40,FMERROR) 
+   DO 
+    SET TYPE TO 40
+    SET NAMETYPE TO 1
+    SET NUMBER TO "NEXT"
+   END 
+FMPERFORM CREATE CARD AFTERLAST (0,40,FMERROR) 
+   DO 
+    SET TYPE TO 40
+    SET NAMETYPE TO 1
+    SET NUMBER TO "NEXT:567"
+   END 
+`+ CODEEND + `
+
+### Create Loan Rate Change Record
+`+ CODESTART + `
+Batch 
+        ACCOUNT <Account#> CREATE LOAN <LoanID> RATECHANGE LOC <Locator#> 
+         SET <FieldMnemonic> TO <NewValue>
+Demand 
+      FMPERFORM CREATE LOAN <LoanID> RATECHANGE LOC <Locator#> (<CheckPrivilegesFlag>,<DefaultType>,[NewLoc,][NewID,]<ErrorText>)
+      DO
+      SET <FieldMnemonic> TO <NewValue>
+      SET <FieldMnemonic> TO <NewValue>
+      END
+`+ CODEEND
+)
