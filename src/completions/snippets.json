@@ -4,5 +4,6 @@
   {"label": "SETUP", "insertText": "SETUP\n\t$0\nEND", "kind": "snippet", "description": "Creates a SETUP..END block", "isSnippet": true},
   {"label": "PRINT", "insertText": "PRINT TITLE=\"${1:TITLE}\"\n\t$0\nEND", "kind": "snippet", "description": "Creates a PRINT TITLE..END block", "isSnippet": true},
   {"label": "IF STATEMENT", "insertText": "IF ${1:Condition} THEN\n\tDO\n\t\t$0\n\tEND", "kind": "snippet", "description": "Creates an if statement with block", "isSnippet": true},
-  {"label": "FOR LOOP", "insertText": "FOR ${1:VAR}=${2:MIN} TO ${3:MAX}\n\tDO\n\t\t$0\n\tEND", "kind": "snippet", "description": "Creates a for x=0 to xx block", "isSnippet": true}
+  {"label": "FOR LOOP", "insertText": "FOR ${1:VAR}=${2:MIN} TO ${3:MAX}\n\tDO\n\t\t$0\n\tEND", "kind": "snippet", "description": "Creates a for x=0 to xx block", "isSnippet": true},
+  {"label": "PROCEDURE", "insertText": "PROCEDURE ${1:PROCEDURENAME}\n\t$0\nEND [$1]", "kind": "snippet", "description": "Creates an empty procedure", "isSnippet": true}
 ]

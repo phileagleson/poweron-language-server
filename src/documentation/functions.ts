@@ -4994,3 +4994,899 @@ Demand
       END
 `+ CODEEND
 )
+powerOnFunctions.set("format", `
+# FORMAT
+---
+This function converts a numeric value to a predefined pattern of characters. It is used for printing or handling numeric data to control the formatting of digits, including the placement of commas and the suppression of leading zeros.
+
+### Syntax
+`+ CODESTART + `
+FORMAT(CharacterExpression,Expression)
+`+ CODEEND + `
+
+### Arguments
+  * CharacterExpression
+    - The desired format of the data. You can use character variables or any character expression
+  * Expression
+    - Value or expression that evaluates to a number
+
+### Usage Information 
+  - Use only in the SETUP, SELECT, SORT, PRINT, LETTER, or TOTAL divisions or in a procedure called by those divisions 
+  - The value of the expression is the numeric value that you want to reformat 
+  - Allow sufficient placeholders in the character expression 
+  - Use anywhere that character data is allowed 
+  - 9 (nine) is a required placeholder for a digit (leading zeros are not suppressed) 
+  - # (number sign) is an optional placeholder for a digit (suppresses leading zeros ) 
+  - + (plus sign) is a placeholder for the negative sign; use as many as you want; blank for positive numbers, preceded by a - (negative sign) for negative numbers 
+  - , (comma) is an optional placeholder for the hundredths, thousands, etc., and they are replaced with a blank when found to the left of the first non-suppressed digit; commas to the right of the first non-suppressed digit are displayed 
+  - Use the slash (/) and any other characters you want to embellish the result 
+  - * (asterisk) results when there are more digits in the expression than placeholders in the character expression 
+  - Cannot print a floating point value in fewer than nine characters or more than 23 characters 
+  - Always displays the date with a two-digit year and forward slashes for dates in or before 1979 or after 2078 
+  - Cannot use Audio Access Code 
+  - You can use character data in quotes for the character expression or you can use character variables
+
+***Tip:*** This function is particularly useful for formatting data you want to download to a PC or write to tape and send to an outside data processor.
+
+#### About Monetary Formats
+All monetary amounts are treated as a generic series of digits; the decimal point, comma, and dollar sign have no special meaning.
+
+For example, if the share balance is $2,572.95, PowerOn treats it as the series of digits: 257295.
+
+`+ CODESTART + `PRINT FORMAT("99999.99",SHARE:BALANCE)` + CODEEND + `    02572.95
+
+`+ CODESTART + `PRINT FORMAT("99.99999",SHARE:BALANCE)` + CODEEND + `   02.57295
+
+`+ CODESTART + `PRINT FORMAT("99999999.99",SHARE:BALANCE)` + CODEEND + ` 00002572.59
+
+#### About Date Formats
+Dates containing four 9s or #s are treated as a series of digits in the form MMDD and then placed in the result.
+
+Dates containing six 9s or #s are treated as a series of digits in the form MMDDYY and will replace any slash (/) characters between the fourth and fifth digits with an asterisk (*) if the date is in the 21st century.
+
+Dates containing seven 9s or #s are treated as a series of digits in the form MMDDXYY, in which X represents 0 for the 20th century and 1 for the 21st century.
+
+Dates containing eight or more 9s or #s are treated as a series of digits in the form MMDDCCYY, in which CC represents 19 for the 20th century and 20 for the 21st century.
+
+This table shows the results of each format statement for the specified date values.
+
+Code                                 Date                       Value Result
+                                     Two examples are given for each format statement:
+                                       * pre-1950
+                                       * After 1979
+
+FORMAT("99/99/9999",NAME:BIRTHDATE)    * 02/03/1935             02/03/1935
+                                       * 02/03/1955             02/03/1955
+
+FORMAT("#9/99/9999",NAME:BIRTHDATE)    * 02/03/1935             2/03/1935
+FORMAT("#9/#9/9999",NAME:BIRTHDATE)    * 02/03/1955             2/03/1955
+You can only suppress the leading zero 
+in the month; the day always prints 
+two digits.
+
+FORMAT("99/99/99",NAME:BIRTHDATE)      * 02/03/1935             02/03/35
+Without a 4-digit year, the end result * 02/03/1955             02/03/55
+could be confusing to a user.
+
+FORMAT("99999999",NAME:BIRTHDATE)      * 02/03/1935             02031935
+                                       * 02/03/1955             02031955
+
+FORMAT("999999",NAME:BIRTHDATE)        * 02/03/1935             020335
+Without a 4-digit year, the end result * 02/03/1955
+could be confusing to a user.
+
+FORMAT("99/99",NAME:BIRTHDATE)         * 02/03/1935             02/03
+Without formatting the year, the end   * 02/03/1955
+result is always month and day.
+
+PRINT FORMAT("#9",(MONTH(NAME:BIRTHDATE)))       * 02/03/1935    2/1935
+PRINT "/"                                        * 02/03/1955    2/1955
+PRINT FORMAT("9999",(FULLYEAR(NAME:BIRTHDATE))) 
+To format the year without a day, you must 
+format the month and year separately. The
+leading zero is suppressed by the # placeholder.
+ 
+FORMAT("9999999",NAME:BIRTHDATE)        * 02/03/1935             0203035
+The century value of 0 represents the   * 02/03/1955             0203055
+20th century, and a value of 1 
+represents the 21st century.
+
+#### Share Balance Examples
+Format examples and results:
+
+Code                                      Share Balance          Prints
+FORMAT("99999999.99",SHARE:BALANCE)       * $ 2,572.59           00002562.59
+
+FORMAT("###,###,##9.99+",SHARE:BALANCE)   * -6.50                6.50-
+                                          * 20000.00             20,000.00
+
+PRINT FORMAT("99999.99",SHARE:BALANCE)    * 257295               02572.95
+
+FORMAT("99.99999",SHARE:BALANCE)          * 257295               02.57295
+
+
+DEFINE                                  * $26,752.95           2.95
+BALANCETEXT=CHARACTER
+END
+PRINT TITLE="Test Format"
+BALANCETEXT=FORMAT("###,##9.99+",SHARE:BALANCE)
+PRINT SEGMENT(BALANCETEXT,7,10)
+END
+
+FORMAT("#,##9.99+",SHARE:BALANCE)         * $26,572.95           *,***.***
+Not enough placeholders to accommodate the amount
+
+#### System Date Example
+Prints the date in MM/DD/YY format without changing the second slash to an asterisk for dates occurring during or after the year 2000. Our example is using a system date of April 5, 2022.
+
+Code                                         	Result
+...
+PRINT TITLE="Settlement Report as of "      Settlement Report as of 04/05/22
+FORMAT("99/99/99",SYSTEMDATE)
+...  
+
+#### Loan Interest Rate Example
+Rates are treated as a series of digits that include thousandths of a percent.
+
+Code	                                   Result
+FORMAT("999.999",LOAN:INTERESTRATE)      012.500
+FORMAT("9.9999",LOAN:INTERESTRATE)       1.2500
+
+#### Extended Loan Interest Rate Example
+`+ CODESTART + `
+TARGET=LOAN
+
+SELECT
+ ACCOUNT:CLOSEDATE='-/-/-' AND
+ LOAN:CLOSEDATE='-/-/-' AND
+ LOAN:INTERESTRATE>0.000% AND
+ LOAN:INTERESTRATE<10.000%
+END [SELECT]
+
+PRINT TITLE="INTERESTRATES.XXX"
+ PRINT ACCOUNT:NUMBER+","
+ PRINT LOAN:ID+","
+ PRINT FORMAT("99.999%",LOAN:INTERESTRATE)
+ NEWLINE
+END [PRINT]
+`+ CODEEND + `
+
+#### Float Variable Example
+Format example and result for a FLOATVARIABLE of FLOATVAL=0.04567:
+
+Code                                          	Result
+FORMAT("#######################",FLOATVAL)      +4.567000000000000E-002
+
+#### Extended Float Example
+`+ CODESTART + `
+TARGET=LOAN
+
+SELECT
+ ACCOUNT:CLOSEDATE='-/-/-' AND
+ LOAN:CLOSEDATE='-/-/-' AND
+ LOAN:INTERESTRATE>0.000% AND
+ LOAN:INTERESTRATE<10.000%
+END [SELECT]
+
+PRINT TITLE="INTERESTRATES.XXX"
+ HEADERS
+  COL=001 "ACCT NUM"
+  COL=012 "LNID"
+  COL=017 "INT RATE"
+  NEWLINE
+  COL=001 REPEATCHR("-",39)
+ END [HEADERS]
+ COL=001 ACCOUNT:NUMBER
+ COL=012 LOAN:ID
+ COL=017 FORMAT("#######################",FLOAT(LOAN:INTERESTRATE))
+ NEWLINE
+END [PRINT]
+`+ CODEEND
+)
+powerOnFunctions.set("ftpclose", `
+# FTPCLOSE
+---
+This function closes an FTP session.
+
+### Syntax
+`+ CODESTART + `
+FTPCLOSE(Handle,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * Handle
+    - GETHANDLE
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+### Example
+`+ CODESTART + `
+FTPCLOSE(GETHANDLE,FERRORTEXT)
+`+ CODEEND + `
+
+### Usage Information
+  * Must be preceded by FTPOPEN
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+`)
+powerOnFunctions.set("ftpcmd", `
+# FTPCMD
+---
+This function sends a command directly to the FTP server and receives the response.
+
+### Syntax
+`+ CODESTART + `
+FTPCMD(Handle,Command,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * Handle
+    - GETHANDLE
+  * Command
+    - Limited to the following:
+      * ascii
+      * passive off
+      * passive on
+      * binary
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+### Example
+`+ CODESTART + `
+FTPCMD(HANDLE,"ascii",FTPERROR)
+`+ CODEEND + `
+
+### Usage Information
+  * Used in conjunction with FTPOPEN and FTPCLOSE
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+`)
+powerOnFunctions.set("ftpget", `
+# FTPGET
+---
+This function retrieves a file from the FTP server.
+
+### Syntax
+`+ CODESTART + `
+FTPGET(Handle,SourceFileName,DestFileType,DestFileName,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * Handle
+    - GETHANDLE
+  * SourceFileName
+    - Specifies the name of file to copy
+  * DestinationFileType
+    - You cannot use wildcard characters.
+  * DestinationFileName
+    - Specifies the file type of the file to use on the local computer
+  * ErrorText
+    - Specifies the name of the file to use on the local computer	Define a character variable to be updated during processing. If an error occurs while it attempts to open the file list, that variable will be updated with a short error message. If there are no errors, that variable is blank.
+
+### Example
+`+ CODESTART + `
+FTPGET (GETHANDLE,"HELLOWORLD.TEST","SPECFILE",NEWFNAME,FERROR)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * Used in conjunction with FTPOPEN and FTPCLOSE
+  * Fails after a 10 minute timeout
+`)
+powerOnFunctions.set("ftplogin", `
+# FTPLOGIN
+---
+This function logs a user into the FTP server.
+
+### Syntax
+`+ CODESTART + `
+FTPLOGIN(Handle,UserName,Password,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * Handle
+    - GETHANDLE
+  * UserName
+    - Specifies a user name to use to log on to the remote computer
+  * Password
+    - Specifies the password for User name
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+### Example
+`+ CODESTART + `
+FTPLOGIN(HANDLE,"jdoe","abc123",FERROR)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * Used in conjunction with FTPOPEN and FTPCLOSE
+`)
+powerOnFunctions.set("ftpopen", `
+# FTPOPEN
+---
+This function opens a connection to a remote FTP server.
+
+### Syntax
+`+ CODESTART + `
+FTPOPEN(RemoteHost,Handle,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * RemoteHost
+    - Specifies the remote computer you want to connect to
+    - ***Important:***
+    - To use secure FTP transfer, use the exact host name as in the /SYM/CONFIGURE/ftpsites.properties file. In addition, when using SFTP, the value entered must include the port number, preceded by a colon (:). The port number can default for FTPS.
+    
+    - If there is an error in your setup to transmit files securely via SFTP or FTPS, or if your transmission does not reference the exact name for REMOTEHOST in the configuration file, the transmission still occurs, but it transmits via a non-secure connection. This allows non-secure transmissions to continue without requiring changes to existing methods.
+    
+    - To ensure that your transmission is sent through a secure connection, check the /SYM/ONHOST/log/TransferFiles.log file. Use the following command and look for the "protocol=" portion to see if the transmission used FTP, SFTP, or FTPS: grep "site info: FtpSiteInfo"/SYM/ONHOST/log/TransferFiles.log. Only SFTP and FTPS are secure.
+  * Handle
+    - GETHANDLE
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+### Example
+`+ CODESTART + `
+FTPOPEN(HOST,HANDLE,OPENERROR)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * Use before FTPCLOSE
+`)
+powerOnFunctions.set("ftpput", `
+# FTPPUT
+---
+This function moves a file to the FTP server.
+
+### Syntax
+`+ CODESTART + `
+FTPPUT(Handle,SourceFileType,SourceFileName,DestFileName,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * Handle
+    - GETHANDLE
+  * SourceFileType
+    - Specifies the file type of the remote file to copy
+  * SourceFileName
+    - Specifies the name of the file you want to move
+  * DestinationFileName
+    - Specifies the name of the file to use on the local computer
+  * ErrorText
+    - Define a character variable to be updated during processing. If an error occurs while it attempts to open the file list, that variable will be updated with a short error message. If there are no errors, that variable is blank.
+
+### Example
+`+ CODESTART + `
+FTPPUT(HANDLE,"LETTER","notepad.txt","/Public/notepad.txt",ERROR)
+`+ CODEEND + `
+
+### Usage Information 
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * Used in conjunction with FTPOPEN and FTPCLOSE
+  * Fails after a 10 minute timeout
+`)
+powerOnFunctions.set("fullyear", `
+# FULLYEAR
+---
+This function returns a numerical value (from 1900-2078) equivalent to the four-digit year in a date expression.
+
+### Syntax
+`+ CODESTART + `
+FULLYEAR(expression)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+FULLYEAR(BEGINDATE)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP, SELECT, SORT, PRINT, LETTER, or TOTAL divisions or in a procedure called by those divisions
+  * Generally used in a field or a date variable
+  * Results in a numeric value from 1900-2078
+
+### Extended Example
+`+ CODESTART + `
+TARGET=NAME
+ 
+SELECT
+   FULLYEAR(NAME:BIRTHDATE)=1950
+END
+ 
+SORT
+...
+`+ CODEEND
+)
+powerOnFunctions.set("getdatachar", `
+# GETDATACHAR
+--- 
+This function instructs PowerOn to retrieve the current value of an accessible character field in the Parameter or Console file. GETDATACHAR and GETDATACHARACTER are equivalent keywords.
+
+### Syntax
+`+ CODESTART + `
+GETDATACHAR(InfoCode,Type1,Type2,Type3,Type4)
+`+ CODEEND + `
+
+### Arguments
+  * InfoCode
+    - Number that identifies the field you want to access
+  * Types 1-4
+    - Specific to the fields you want to access
+
+***Tip:*** RD.GETDATA.DEF redefines the info codes for all accessible fields to mnemonic constants. Include RD.GETDATA.DEF in the DEFINE division of your specfile to use these mnemonics.
+
+### Example
+`+ CODESTART + `
+GETDATACHAR(GETPARAMAPPTRKUSERDEF,12,GETINFOUSERAMOUNT3)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP, LETTER, PRINT, or TOTAL divisions or in a procedure called by one of these divisions
+  * Use to read accessible parameter or console character fields
+
+The first argument in parentheses after GETDATACHAR is the info code. The info code is a number that identifies the field you want to access. The PowerOn library has an include specfile named RD.GETDATA.DEF that redefines the info code numbers for all accessible fields as easy-to-remember constant names. By including this specfile in the DEFINE division of your own specfile, you can use those constants to access the fields.
+
+In the parentheses after the info code, you must include from one to four additional arguments that further define the data you want to access. The additional arguments are very specific to the field you want to access.
+
+The following example shows the specific syntax to use for accessing the GL Translation GL Account in the Parameter file:
+`+ CODESTART + `
+GETDATACHAR(GETPARAMGLTRANSLATEGLACCT,GL
+code,translation type)
+`+ CODEEND + `
+
+This field requires three arguments: the constant name, the GL code, and the translation type. To use this function in a specfile, replace the GL code with a numeric expression with a value in the range 0-99, and replace the translation type with a numeric expression for the appropriate translation.
+
+### Delinquent Notice Example
+The following example prints the text defined for delinquent notice 3. GETPARAMDQNOTICELINEx (where x is the line number 1-4) is the constant name defined in the RD.GETDATA.DEF PowerOn specfile for the parameter that contains the text for a particular line of a particular DQ notice. The second argument specifies the DQ notice type, and the third argument indicates the DQ notice number.
+`+ CODESTART + `
+TARGET=ACCOUNT
+ 
+DEFINE
+   #INCLUDE "RD.GETDATA.DEF"
+   LINENUM=NUMBER
+END
+
+PRINT TITLE="Delinquent Notice 3"
+
+   LINENUM=1
+   WHILE (LINENUM<=4)
+    DO
+     PRINT GETDATACHAR(GETPARAMDQNOTICELINE1,3,NOTICENUM)
+     NEWLINE
+     LINENUM=LINENUM+1
+    END
+END
+`+ CODEEND
+)
+powerOnFunctions.set("getdatadate", `
+# GETDATADATE
+---
+This function retrieves the current value of an accessible date field in the Parameter or Console file.
+
+### Syntax
+`+ CODESTART + `
+GETDATADATE(InfoCode,Type1,Type2,Type3,Type4)
+`+ CODEEND + `
+
+### Arguments
+  * InfoCode
+    - Number that identifies the field you want to access
+  * Types 1-4
+    - Specific to the fields you want to access
+
+***Tip:*** RD.GETDATA.DEF redefines the info codes for all accessible fields to mnemonic constants. Include RD.GETDATA.DEF in the DEFINE division of your specfile to use these mnemonics.
+
+### Example
+`+ CODESTART + `
+GETDATADATE(GETUSERPASSWORDFMDATE,45)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP, LETTER, PRINT, or TOTAL divisions or in a procedure called by one of these divisions
+
+The first argument in parentheses after GETDATADATE is the info code. The info code is a number that identifies the field you want to access. The PowerOn library has an include specfile named RD.GETDATA.DEF that redefines the info code numbers for all accessible fields as easy-to-remember constant names. By including this specfile in the DEFINE division of your own specfile, you can use those constants to access the fields.
+
+In the parentheses after the info code, you must include from one to four additional arguments that further define the data you want to access. The additional arguments are very specific to the field you want to access.
+
+The following example shows the specific syntax to use for accessing the User Last Password FM Date in the User file:
+`+ CODESTART + `
+GETDATADATE(GETUSERPASSWORDFMDATE,User Number)
+`+ CODEEND + `
+This field requires only two arguments: the constant name and the user number. To use this function in a specfile, replace the user number argument with a numeric expression that has a value in the range 0-799.
+
+Last Password Change Example
+The following example displays the date of the last password change for the user running this on-demand specfile:
+`+ CODESTART + `
+TARGET=ACCOUNT
+
+DEFINE
+   #INCLUDE "RD.GETDATA.DEF"
+END
+
+PRINT TITLE="Last Pswd Change Date"
+   PRINT "Welcome to "
+   PRINT GETDATADATE(GETUSERPASSWORDFMDATE,
+                    SYSUSERNUMBER)
+   NEWLINE
+END
+`+ CODEEND
+)
+powerOnFunctions.set("getdatamoney", `
+# GETDATAMONEY
+---
+This function retrieves the current value of an accessible monetary field in the Parameter or Console file.
+
+### Syntax
+`+ CODESTART + `
+GETDATAMONEY(InfoCode,Type1,Type2,Type3,Type4)
+`+ CODEEND + `
+
+### Arguments
+  * InfoCode
+    - Number that identifies the field you want to access
+  * Types 1-4
+    - Specific to the fields you want to access
+
+***Tip:*** RD.GETDATA.DEF redefines the info codes for all accessible fields to mnemonic constants. Include RD.GETDATA.DEF in the DEFINE division of your specfile to use these mnemonics.
+
+### Example
+`+ CODESTART + `
+GETDATAMONEY(GETPARAMLATECHGMIN,4)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP, LETTER, PRINT, or TOTAL divisions or in a procedure called by one of these divisions
+
+PowerOn does not have full access to the Parameter or Console file. However, you can use the GETDATAMONEY function to read the money fields that are accessible.
+
+The first argument in parentheses after GETDATAMONEY is the info code. The info code is a number that identifies the field you want to access. The PowerOn library has an include specfile named RD.GETDATA.DEF that redefines the info code numbers for all accessible fields as easy-to-remember constant names. By including this include specfile in the DEFINE division of your own specfile, you can use those constants to access the fields.
+
+In the parentheses after the info code, you must place from one to four additional arguments that further define the data you want to access. The additional arguments are very specific to the field you want to access.
+
+The following example shows the specific syntax to use for accessing the payment calculation balance cutoff in the Parameter file:
+`+ CODESTART + `
+GETDATAMONEY(GETPARAMPAYCALCCUTOFF,Payment Calculation,Table Entry)
+`+ CODEEND + `
+This field requires three arguments, the constant name, the payment calculation code, and the table entry number.
+
+To use this function in a specfile, replace the payment calculation with a numeric expression in the range 1-9, and replace the table entry with a numeric expression in the range 1-50.
+
+### Extended Example
+The following on-demand specfile displays the items in the payment calculation balance cutoff table for payment calculation 2:
+`+ CODESTART + `
+TARGET=ACCOUNT
+ 
+DEFINE
+   #INCLUDE "RD.GETDATA.DEF"
+   TABLEENTRY=NUMBER
+END
+ 
+PRINT TITLE="Paymt Calc2 Balance Cutoff Table"
+   TABLEENTRY=1
+   WHILE (TABLEENTRY<=50)
+    DO
+     PRINT GETDATAMONEY(GETPARAMPAYCALCCUTOFF,2,TABLEENTRY)
+     NEWLINE
+     TABLEENTRY=TABLEENTRY+1
+    END
+END
+`+ CODEEND + `
+Result displays the items in the payment calculation balance cutoff table for payment calculation 2.
+`)
+powerOnFunctions.set("getdatanumber", `
+# GETDATANUMBER
+---
+This function retrieves the current value of an accessible number field in the Parameter or Console files.
+
+### Syntax
+`+ CODESTART + `
+GETDATANUMBER(InfoCode,Type1,Type2,Type3,Type4)
+`+ CODEEND + `
+
+### Arguments
+  * InfoCode
+    - Number that identifies the field you want to access
+  * Types 1-4
+    - Specific to the fields you want to access
+
+***Tip:*** RD.GETDATA.DEF redefines the info codes for all accessible fields to mnemonic constants. Include RD.GETDATA.DEF in the DEFINE division of your specfile to use these mnemonics.
+
+### Example
+`+ CODESTART + `
+GETDATANUMBER(GETPARAMDIVIDEFGRACEDAYS,2,10)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP, LETTER, PRINT, or TOTAL divisions or in a procedure called by one of these divisions
+
+PowerOn does not have full access to the Parameter or Console files. However, you can read those number and code fields that are accessible using the GETDATANUMBER function.
+
+The first argument in parentheses after GETDATANUMBER is the info code. The info code is a number that identifies the field you want to access. The PowerOn library has an include specfile named RD.GETDATA.DEF that redefines the info code numbers for all accessible fields as easy-to-remember constant names. By including this include specfile in the DEFINE division of your own specfile, you can use those constants to access the fields.
+
+In the parentheses after the info code, you must place from one to four additional arguments that further define the data you want to access. The additional arguments are very specific to the field you want to access.
+
+The following example shows the specific syntax to use for accessing the user security privileges in the User file:
+`+ CODESTART + `
+GETDATANUMBER(GETUSERPRIVILEGE,User Number,Privilege Number)
+`+ CODEEND + `
+This field requires three arguments: the constant name, the user number, and the privilege number. To use this function in a specfile, replace the user number with a numeric expression in the range 1-4999, and replace the privilege number with a numeric expression in the range 1-1800. GETDATANUMBER returns 1 if the user has the specified security privilege; it returns 0 if the user does not have the specified security privilege.
+
+### Verify Security Privilege Example
+In the following example, the user running this on-demand PowerOn specfile can check on a specific security privilege for a specific user:
+`+ CODESTART + `
+TARGET=ACCOUNT
+
+DEFINE
+   #INCLUDE "RD.GETDATA.DEF"
+   USERNUM=NUMBER
+   PRIV=NUMBER
+END
+
+SETUP
+   USERNUM=ENTERNUMBER("Enter User Number:",799)
+   PRIV=ENTERNUMBER("Enter Privilege Number:",1)
+END
+
+PRINT TITLE="User Privilege"
+   PRINT "User #:"
+   PRINT USERNUM
+   PRINT "     Privilege:"
+   PRINT PRIV
+   PRINT "     Allowed:"
+   PRINT GETDATANUMBER(GETUSERPRIVILEGE,USERNUM,PRIV)
+   NEWLINE
+END
+`+ CODEEND
+)
+powerOnFunctions.set("getdatarate", `
+# GETDATARATE
+---
+This function retrieves the current value of an accessible rate field in the Parameter or Console file.
+
+### Syntax
+`+ CODESTART + `
+GETDATARATE(InfoCode,Type1,Type2,Type3,Type4)
+`+ CODEEND + `
+
+### Arguments
+  * InfoCode
+    - Number that identifies the field you want to access
+  * Types 1-4
+    - Specific to the fields you want to access
+
+***Tip:*** RD.GETDATA.DEF redefines the info codes for all accessible fields to mnemonic constants. Include RD.GETDATA.DEF in the DEFINE division of your specfile to use these mnemonics.
+
+### Example
+`+ CODESTART + `
+GETDATARATE(GETPARAMDISCINSRATE,2)
+`+ CODEEND + `
+
+### Usage Information
+  * Use in the SETUP, LETTER, or PRINT divisions or in procedures called from those divisions
+
+PowerOn does not have full access to the Parameter or Console file. However, you can read those rate fields that are accessible using the GETDATARATE function.
+
+The first argument in parentheses after GETDATARATE is the info code. The info code is a number that identifies the field you want to access. The PowerOn library has an include specfile named RD.GETDATA.DEF that redefines the info code numbers for all accessible fields as easy-to-remember constant names. By including this specfile in the DEFINE division of your own specfile, you can use those constants to access the fields.
+
+In the parentheses after the info code, you must place from one to four additional arguments that further define the data you want to access. The additional arguments are very specific to the field you want to access.
+
+The following example shows the specific syntax to use for accessing the payment calculation interest rate cutoff in the Parameter file:
+`+ CODESTART + `
+GETDATARATE(GETPARAMPAYCALCINTRATECUT,Payment Calculation,Table Entry)
+`+ CODEEND + `
+This field requires three arguments: the constant name, the payment calculation code, and the table entry number. To use this function in a specfile, replace the payment calculation with a numeric expression in the range 1-9, and replace the table entry with a numeric expression in the range 1-50.
+
+### Extended Example
+The following on-demand PowerOn specfile displays the items in the payment calculation interest cutoff table for payment calculation 2:
+`+ CODESTART + `
+TARGET=ACCOUNT
+
+DEFINE
+   #INCLUDE "RD.GETDATA.DEF"
+   TABLEENTRY=NUMBER
+END
+
+PRINT TITLE="Paymt Calc2 IntRate Cutoff Table"
+   TABLEENTRY=1
+   WHILE (TABLEENTRY<=50)
+    DO
+     PRINT GETDATARATE(GETPARAMPAYCALCINTRATECUT,2,TABLEENTRY)
+     NEWLINE
+     TABLEENTRY=TABLEENTRY+1
+    END
+END
+`+ CODEEND
+)
+powerOnFunctions.set("header", `
+# HEADER
+---
+This function defines a single line of column headings and their horizontal placement for PowerOn.
+
+### Syntax
+`+ CODESTART + `
+HEADER="expression"
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+HEADER="Account #     Loan ID    Balance      Interest Due"
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the PRINT or TOTAL division or in a procedure called by those divisions
+  * The maximum value is 132 characters
+  * Use spaces, not tabs, to align columns
+  * Cannot be used with the FOR EACH, ANY, or TOTAL= statements
+  * Do not use the FOR … DO … END statement to repeat letters, numbers or special characters. The loop variable cannot be reused consistently since the loop variable is still specific to the HEADERS subsection. We recommend that you use the REPEATCHR() function to avoid unexpected output.
+  * Cannot be used with LABELS print option
+  * Cannot be used with HEADERS or TRAILERS
+  * Cannot use field references as part of the expression
+  * When using IF...THEN... must also use ELSE; results must be a CHARACTER data type.
+  * Specfiles without HEADER= line or a HEADERS section in the PRINT division will not have any of the following output elements:
+    - A title line at the top
+    - A column heading line
+    - A form feed at the end of the report
+    - Page breaks
+
+***Tip:***
+  * Use multiple HEADER statements to create a stacked heading. Use HEADER after each subtotal as a trailer, and after the last HEADER listed at the end of the report.
+  * Use HEADER= to suppress the headings from the TOTAL division by using HEADER= lines instead of a HEADER division.
+
+### Character Literal Example
+`+ CODESTART + `
+PRINT  TITLE="Overdraw Transfers"
+   HEADER="Acct #               Share ID     Share Type
+     Xfer Type      Xfer ID Type     Xfer ID"
+   HEADER="-------------------------------------------
+  ------------------------------------------"
+...
+`+ CODEEND + `
+This specification results in the column headings and underline in the following example:
+\`\`\`
+XYZ Credit Union                  Overdraw Transfers                09/05/96 10:40 Seq 5643 Page 1
+ 
+Acct #               Share ID     Share Type     Xfer Type      Xfer ID Type     Xfer ID
+----------------------------------------------------------------------------------------
+\`\`\`
+
+***Tip:*** Instead of letting the text wrap, break the line after the word nearest to column 80, and continue the text on the next line. The text editor cuts off all trailing spaces at the end of a line. To accommodate any blank spaces you want place between two words near column 80, put the blank spaces on the next line of text so that they become leading spaces. Remember to place the end quote at the end of the continuation. Only indent the continuation line if you want spaces to appear; literal text prints exactly as it appears in the specfile.
+In the sample specfile above, notice that the text of the header breaks at the end of Share Type on line 11. Place the spaces that you need between Share Type and Xfer Type as leading spaces on line 12 in front of Xfer Type. If you leave those spaces on line 11 (after Share Type) the text editor will eliminate them, and Xfer Type will print immediately following Share Type.
+
+### IF...THEN...ELSE Example
+The following example shows how to use IF...THEN...ELSE with HEADER= to vary the heading based on the month:
+`+ CODESTART + `
+HEADER=IF MONTH(SYSTEMDATE)<=3 THEN
+    "First Quarter Jan-Mar"
+   ELSE IF MONTH(SYSTEMDATE)<=6 THEN
+    "Second Quarter Apr-Jun"
+   ELSE IF MONTH(SYSTEMDATE)<=9 THEN
+    "Third Quarter Jul-Sep"
+   ELSE
+    "Fourth Quarter Oct-Dec"
+`+ CODEEND + `
+
+### Different Total Header Example
+The next example changes the column headings before printing the totals:
+`+ CODESTART + `
+TARGET=ACCOUNT
+
+PRINT TITLE="Headers Redefinition Example"
+   HEADER="Account          Name          Phone #"
+   HEADER="                 ---------------------"
+  
+    print division statements go here
+   ...
+END
+
+TOTAL
+   HEADER="Account Type          Count"
+   HEADER="                      -----"
+
+    total division statements go here
+   ...
+END
+`+ CODEEND + `
+
+### Extended Example
+The next example demonstrates using HEADER= to eliminate header lines in the TOTAL division and force the Summary Report to the last page. See HEADER on lines 42-45.
+`+ CODESTART + `
+TARGET=LOANS
+
+DEFINE
+    LOWTYPE=NUMBER
+    HIGHTYPE=NUMBER
+    PASTDUEDATE=DATE
+
+    PASTDUETOTOTALRATIO=RATE
+    PASTDUEBAL=MONEY
+    TOTALBAL=MONEY1   TOTALCOUNT=NUMBER
+    DQCOUNT=NUMBER
+    CRCOUNT=NUMBER
+
+    HDG1=CHARACTER(78)
+    HDG2=CHARACTER(78)
+    HDG3=CHARACTER(78)
+    HDG4=CHARACTER(78)
+
+END
+ 
+SETUP
+    LOWTYPE=NUMBERREAD("Enter lowest Loan Type:")
+    HIGHTYPE=NUMBERREAD("Enter highest Loan Type:")
+    PASTDUEDATE=DATEREAD("Enter a past due date") 
+ 
+    HDG1="Loan Types Selected: "+FORMAT("#9",LOWTYPE)+" to "+FORMAT("#9",HIGHTYPE)
+    HDG2=""
+    HDG3="Account # Member's Name   Type  Status   Due Date  Last Paymt   Balance"  
+    HDG4=REPEATCHR("-",78)
+END
+
+SELECT
+    ACCOUNT:CLOSEDATE='--/--/--' AND 
+    LOAN:BALANCE>$0.00 AND 
+   (LOAN:ORIGINALBALANCE>$500.00  OR
+    LOAN:CREDITLIMIT>$500.00) AND
+   (LOAN:TYPE>=LOWTYPE AND 
+    LOAN:TYPE<=HIGHTYPE)
+END
+  
+PRINT TITLE="DQ AS OF "+FORMAT("#9/#9/9999",PASTDUEDATE)
+    HEADER=HDG1
+    HEADER=HDG2
+    HEADER=HDG3
+    HEADER=HDG4
+    COL=001 ACCOUNT:NUMBER
+    COL=012 NAME:SHORTNAME
+    COL=031 LOAN:TYPE
+    IF  PASTDUEDATE>LOAN:DUEDATE    AND 
+        LOAN:DUEDATE<>'--/--/--'    THEN
+      DO
+        COL=035         "Delinquent"
+        PASTDUEBAL=PASTDUEBAL+LOAN:BALANCE 
+        DQCOUNT=DQCOUNT+1
+      END
+    ELSE
+      DO
+        COL=035         "Current   "
+       CRCOUNT=CRCOUNT+1
+      END
+    COL=053  LOAN:DUEDATE 
+    COL=064  LOAN:LASTPAYMENTDATE 
+    COL=078  LOAN:BALANCE  
+    TOTALBAL=TOTALBAL+LOAN:BALANCE 
+    TOTALCOUNT=TOTALCOUNT+1
+    NEWLINE
+END                               [END PRINT SECTION] 
+ 
+TOTAL                             [NO ACCESS TO DATABASE FILES]
+    NEWPAGE                         
+    HDG1=""
+    HDG2=""
+    HDG3=""
+    HDG4=""
+    PRINT "Total Current Loans:"
+    COL=050 CRCOUNT  
+    NEWLINE 
+    PRINT "Total Delinquent Loans:"
+    COL=050 DQCOUNT  
+    NEWLINE                               
+    PRINT "Total Loans:"
+    COL=050 TOTALCOUNT
+    NEWLINE NEWLINE
+  
+    PRINT "Total Loan Balance, Delinquent Loans:"
+   COL=050 PASTDUEBAL
+    NEWLINE NEWLINE
+   
+    PRINT "Total Loan Balance, All Loans:"
+    COL=050 TOTALBAL
+    NEWLINE NEWLINE
+ 
+    PASTDUETOTOTALRATIO=PASTDUEBAL/TOTALBAL 
+    PRINT "DG Loan Ratio:      "
+    COL=050 PASTDUETOTOTALRATIO
+    NEWLINE NEWLINE
+    
+END                               [END TOTAL SECTION]
+`+ CODEEND
+)
