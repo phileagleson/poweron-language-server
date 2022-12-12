@@ -6192,7 +6192,7 @@ PROCEDURE PRINTHEADER
 ...
 `+ CODEEND
 )
-powerOnFunctions.set("hplinedrawe", `
+powerOnFunctions.set("hplinedraw", `
 # HPLINEDRAW
 ---
 This function commands a laser printer to draw a line of specified width between given coordinates.
@@ -6236,5 +6236,928 @@ PROCEDURE PRINTHEADER
     HPXPOS (0)
     HPYPOS (400)
 END
+`+ CODEEND
+)
+powerOnFunctions.set("hplinesperinch", `
+# HPLINESPERINCH
+---
+This function commands a laser printer to change the number of lines of text that can fit into a vertical inch of space on the page.
+
+### Syntax
+`+ CODESTART + `
+HPLINESPERINCH(LinesPerInch)
+`+ CODEEND + `
+
+### Arguments 
+  * LinesPerInch
+    - 1 = 300 units per line
+    - 2 = 150 units per line
+    - 3 = 100 units per line
+    - 4 = 75 units per line
+    - 6 = 50 units per line
+    - 8 = 37.5 units per line
+    - 12 = 25 units per line
+    - 16 = 18.75 units per line
+    - 24 = 12.5 units per line
+    - 48 = 6.24 units per line
+
+### Example
+`+ CODESTART + `
+HPLINESPERINCH(12)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+***Tip:***
+  * Normal type size is 10 or 12 pitch, with a corresponding number of lines per inch of 6 or 8.
+  * Useful if you change the type size dramatically. For example, if you print a line with 12 pitch type and change to 18 pitch type for the next line, you need to change the lines per inch so that the 18 pitch type does not overlap the bottom of the 12 pitch line. When you change the lines per inch to 4, after printing the 12 pitch line and before you move to the next line (NEWLINE), the printer moves down on the page to prevent overprinting. The NEWLINE statement uses HPLINESPERINCH to specify how far down on the page to relocate before performing the next command. SUPPRESSNEWLINE ignores the HPLINESPERINCH specification.
+
+### Extended Example
+In the following example, the procedure named PrintTextPage01 begins by setting the lines per inch to 8, and leaves two blank lines. On line 15, it changes the lines per inch to 4, in preparation for printing 16 point (lines 17 and 22) and 18 point (line 20) type. On line 34, it changes the lines per inch to 6, in preparation for printing 12 point type (lines 35 and 38).
+`+ CODESTART + `
+PROCEDURE PrintTextPage01
+   HPLINESPERINCH(8)
+   NEWLINE
+   NEWLINE
+   HPLINESPERINCH(4)
+   NEWLINE
+   HPFONT(004,16)
+   HPXPOS(350)
+   PRINT "Your Auto Loan Comes With "
+   HPFONT(004,18)
+   PRINT "FREE "
+   HPFONT(004,16)
+   PRINT "Road & Tow Service -"
+   NEWLINE
+   HPXPOS(300)
+   PRINT "Sign Below To Receive An Additional $20 Worth "
+   PRINT "Of FREE Gas!"
+   NEWLINE
+   HPXPOS(200)
+   HPUNDERLINE(1)
+   HPXPOS(2100)
+   HPUNDERLINE(0)
+   NEWLINE
+   HPLINESPERINCH(6)
+   HPFONT(002,12)
+   HPXPOS(200)
+   PRINT "1st City Savings Federal Credit Union "
+   HPFONT(001,12)
+   PRINT "has made special arrangements for you to "
+   NEWLINE
+   HPXPOS(200)
+   PRINT "automatically enjoy a complimentary year-long "
+   PRINT "membership in AutoVantage GOLD when you"
+   NEWLINE
+   HPXPOS(200)
+   PRINT "receive a new or used auto loan from the "
+   PRINT "credit union."
+   ...
+`+ CODEEND
+)
+powerOnFunctions.set("hpreset", `
+# HPRESET
+---
+This function resets the printer page size (letter or legal) and print orientation (portrait or landscape) to the factory defaults for your laser printer.
+
+### Syntax
+`+ CODESTART + `
+HPRESET
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+CALL PRINTFORMPAGE2
+   HPRESET
+  END
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * Use only for specfile output to be printed on a laser printer
+
+***Tip:*** Use HPRESET to change the printer orientation back to the factory default after changing it with HPSETUP.
+
+### Extended Example
+In the following example, line 256 calls the PRINTFORMPAGE1 procedure, which uses HPSETUP (line 581) to set the page size to letter and the orientation to portrait. Line 260 uses HPRESET to ensure that the factory defaults for page size and orientation are reset on the printer.
+`+ CODESTART + `
+          CALL FILEINFO
+
+     CALL PRINTFORMPAGE1
+     NEWPAGE
+
+     CALL PRINTFORMPAGE2
+     HPRESET
+    END
+  END
+
+
+    PROCEDURE FILEINFO
+      etc...
+
+    PROCEDURE PRINTFORMPAGE1
+       NONANSISTANDARD
+       HPSETUP("LETTER","PORTRAIT")
+
+                             [ PAGE 1 ]
+                [************REQUEST INFORMATION**********]
+                 [APP & INFO]
+       HPLINESPERINCH(6)
+       HPFONT(20,12)
+       HPXPOS(1900)
+       PRINT "APPLICATION FOR"
+       NEWLINE
+       HPXPOS(1930)
+`+ CODEEND
+)
+powerOnFunctions.set("hpsetup", `
+# HPSETUP
+---
+This function changes the printer page size (letter or legal) and print orientation (portrait or landscape).
+
+### Syntax
+`+ CODESTART + `
+HPSETUP(PageSize,Orientation)
+`+ CODEEND + `
+
+### Arguments
+  * PageSize
+    - LETTER
+    - LEGAL
+  * Orientation
+    - PORTRAIT
+    - LANDSCAPE
+    - REVPORTRAIT
+    - REVLANDSCAPE
+
+### Example
+`+ CODESTART + `
+HPSETUP("LEGAL","LANDSCAPE")
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * Ability to change size or orientation must be an option available on your printer
+  * Use only for specfile output to be printed on a laser printer
+
+### Extended Example
+`+ CODESTART + `
+          CALL FILEINFO
+
+     CALL PRINTFORMPAGE1
+     NEWPAGE
+
+     CALL PRINTFORMPAGE2
+     HPRESET
+    END
+  END
+
+
+    PROCEDURE FILEINFO
+      etc...
+
+    PROCEDURE PRINTFORMPAGE1
+       NONANSISTANDARD
+       HPSETUP("LETTER","PORTRAIT")
+
+                             [ PAGE 1 ]
+                [************REQUEST INFORMATION**********]
+                 [APP & INFO]
+       HPLINESPERINCH(6)
+       HPFONT(20,12)
+       HPXPOS(1900)
+       PRINT "APPLICATION FOR"
+       NEWLINE
+`+ CODEEND
+)
+powerOnFunctions.set("hpunderline", `
+# HPUNDERLINE
+---
+This function controls the underline function of the laser printer.
+
+### Syntax
+`+ CODESTART + `
+HPUNDERLINE(Mode)
+`+ CODEEND + `
+
+### Arguments
+Mode
+  * 0 (off)
+  * 1 (on)
+
+***Tip:*** Turn the mode on (1) just before the text you want underlined; turn the mode off (0) just after the last character you want underlined.
+
+### Example
+`+ CODESTART + `
+HPUNDERLINE(1)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+
+### Extended Example
+`+ CODESTART + `
+    HPUNDERLINE(1)
+    HPFONT(32,18)
+     HPYPOS(90)
+     COL=20 "X Y Z   F e d e r a l   C r e d i t   U n i o n"
+    SUPPRESSNEWLINE
+    HPUNDERLINE(0)
+    etc...
+`+ CODEEND + `
+`)
+powerOnFunctions.set("hpxpos", `
+# HPXPOS
+---
+This function positions a laser printer at a specific horizontal axis coordinate.
+
+### Syntax
+`+ CODESTART + `
+HPXPOS(Xposition)
+`+ CODEEND + `
+
+### Arguments
+  * Xposition
+    - X coordinates must be from 0-2400 in portrait mode or 0-3000 (3900 for legal size paper) in landscape mode
+
+***Tip:*** There are 300 units per inch, so the range of X (horizontal) positions for letter or legal size in portrait orientation is 8 x 300, or 2400 units. The range of X positions for letter size in landscape orientation is 10 x 300, or 3000 units. The range of X positions for legal size in landscape orientation is 13 x 300, or 3900 units.
+
+### Example
+`+ CODESTART + `
+HPXPOS(153)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+
+### Extended Example
+In the following example, the specfile draws a line of width 6 above and below a header. 
+`+ CODESTART + `
+   PROCEDURE PRINTHEADER
+   
+    HPLINEDRAW(150,3,2250,3,6)
+    HPFONT(32,18)
+     HPYPOS(90)
+     COL=20 "X Y Z  F e d e r a l  C r e d i t   U n i o n"
+    SUPPRESSNEWLINE
+    HPLINEDRAW(150,120,2250,120,6)
+    HPXPOS (0)
+    HPYPOS (400)
+   END
+`+ CODEEND
+)
+powerOnFunctions.set("hpypos", `
+# HPYPOS
+---
+This function positions a laser printer at a specific vertical axis coordinate.
+
+### Syntax
+`+ CODESTART + `
+HPYPOS(Yposition)
+`+ CODEEND + `
+
+### Arguments
+  * Yposition
+    - Y coordinates must be from 0-3000 (3900 for legal size paper) in portrait mode or 0-2400 in landscape mode
+
+### Example
+`+ CODESTART + `
+HYPOS(2350)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+
+***Tip:*** There are 300 units per inch, so the range of Y (vertical) positions for letter size in portrait orientation is 10 x 300, or 3000 units. The range of Y positions for legal size in portrait orientation is 13 x 300, or 3900 units. The range of Y positions for letter or legal size in landscape orientation is 8 x 300, or 2400 units.
+
+### Extended Example
+In this example, the specfile draws a line of width 6 above and below a header. 
+`+ CODESTART + `
+   PROCEDURE PRINTHEADER
+   
+    HPLINEDRAW(150,3,2250,3,6)
+    HPFONT(32,18)
+     HPYPOS(90)
+     COL=20 "X Y Z  F e d e r a l  C r e d i t   U n i o n"
+    SUPPRESSNEWLINE
+    HPLINEDRAW(150,120,2250,120,6)
+    HPXPOS (0)
+    HPYPOS (400)
+   END
+`+ CODEEND
+)
+powerOnFunctions.set("htmlviewdisplay", `
+# HTMLVIEWDISPLAY
+---
+This function displays information in a view window using HTML commands.
+
+### Syntax
+`+ CODESTART + `
+HTMLVIEWDISPLAY
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+HTMLVIEWOPEN
+ TARGETBDATE=FORMAT("99",M)+"/"+FORMAT("99",D)
+ HTMLVIEWLINE("<h3 align=" + QUOTE + "center" + QUOTE +
+              "> You entered a birth date of " + TARGETBDATE+"</h3>")
+ HTMLVIEWDISPLAY
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * Must be preceded by HTMLVIEWOPEN and one or more HTMLVIEWLINE commands
+  * HTML programming language knowledge is required
+
+### Extended Example
+`+ CODESTART + `
+[TEST.DIALOG.WIN--Sample Dialog Box specfile.]
+   
+WINDOWS
+   
+TARGET=ACCOUNT
+   
+DEFINE
+   FNAME=CHARACTER
+   FNUM=NUMBER
+   FLINE=CHARACTER
+   FERROR=CHARACTER
+   TARGETBDATE=CHARACTER(5)
+   BDATECHAR=CHARACTER(10)
+   M=NUMBER
+  D=NUMBER
+   PERSONNAME=CHARACTER
+   QUOTE=CHARACTER(1)
+   MONTHS="JanFebMarAprMayJunJulAugSepOctNovDec"
+END
+  
+SETUP
+   DIALOGSTART("Birthdate Info",200%,0)
+   DIALOGINTROTEXT("Enter your birthdate, (Month, Day)")
+  DIALOGPROMPTCODE("Enter Month 1-12: ",12,MONTH(NAME:BIRTHDATE))
+   DIALOGPROMPTCODE("Enter Day   1-31: ",31,DAY(NAME:BIRTHDATE))
+   DIALOGDISPLAY
+   M=ENTERCODE("Enter Month 1-12: ",12,MONTH(NAME:BIRTHDATE))
+   D=ENTERCODE("Enter Day   1-31: ",31,DAY(NAME:BIRTHDATE))
+   DIALOGCLOSE
+END
+   
+PRINT TITLE="Birthdate Info"
+   HEADER=""
+   
+   HTMLVIEWOPEN
+   
+   HTMLVIEWLINE("<style>")
+   HTMLVIEWLINE("body    {font: 13Px Arial, sans-serif;}")
+   HTMLVIEWLINE("table    {font: 13Px Arial, sans-serif;}")
+   HTMLVIEWLINE("</style>")
+    
+   HTMLVIEWLINE("<body bgcolor=WHITE>")
+   
+   TARGETBDATE=FORMAT("99",M)+"/"+FORMAT("99",D)
+   HTMLVIEWLINE("<h3 align=" + QUOTE + "center" + QUOTE +
+                "> You entered a birthdate of " + TARGETBDATE+"</h3>")
+   HTMLVIEWDISPLAY
+   END
+   
+  TOTAL
+END
+`+ CODEEND
+)
+powerOnFunctions.set("htmlviewline", `
+# HTMLVIEWLINE
+---
+This function allows you to enter a line of HTML code to create information in a view window.
+
+### Syntax
+`+ CODESTART + `
+HTMLVIEWLINE("HTMLline")
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+HTMLVIEWOPEN
+  HTMLVIEWLINE("<h3 align=" + QUOTE + "center" + QUOTE +
+              "> You entered a birth date of " + TARGETBDATE+"</h3>")
+ HTMLVIEWDISPLAY
+ END
+`+ CODEEND + `
+
+### User Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * HTML programming language knowledge is required
+  * You must write your specfile so that the silent post occurs in the SETUP division.
+  * You must have ENTERLINE(0) commands that follow the HTMLVIEWDISPLAY, and you can only use ENTERLINE(0) in the SETUP division in a procedure called from the SETUP division.
+  * You must limit the HTMLVIEWLINE() to 132 characters. We recommend that no raw HTML code exceeds 80 characters when using the RD.CONVERT.HTML specfile because the program adds tagging, which may exceed the 132 character limit. For example: HTMLVIEWLINE("<td>Share 0000</td>").
+  * Each HTMLVIEWLINE must:
+    - Be preceded by HTMLVIEWOPEN and followed by HTMLVIEWDISPLAY
+    - Follow one of these directives as specifications when you use HTMLVIEWOPEN to post or get data either online or from a network resource:
+
+\`\`\`
+DIRECTIVE           R/O      Default     Description
+URL                 Required 80(http)    Protocol://server:port/object *
+                             443(https)  Protocol = HTTP, HTTPS, or Port (optional)
+
+VERB                Optional GET         POST or GET
+
+FORMFIELD           Optional             Name=Value a URL-encoded separate directive for each form field or query
+
+HEADER              Optional             A string sent as a header to the server
+
+WANTRESPONSEHEADERS Optional No          Yes or No specifies if the response headers are sent back to the specfile
+
+FILENAME            Optional             The name of the file that is used to upload the response data in the host's letter file directory. If this is not provided, the response data will not upload to the host.
+\`\`\`
+
+***Important:*** Windows sends headers, errors, and EOD indicators to the first available prompt it sees; specfiles not written to handle these items properly will fall out of sync with Windows.
+
+### Extended Example
+The following example is a specfile to display a dynamic dialog window to prompt a user for a date of birth and then display an HTML view window showing the results of your selection. See HTMLVIEWLINE on lines 38-43, and line 47.
+`+ CODESTART + `
+[TEST.DIALOG.WIN--Sample Dialog Box specfile.]
+ 
+WINDOWS
+ 
+TARGET=ACCOUNT
+ 
+DEFINE
+ FNAME=CHARACTER
+ FNUM=NUMBER
+ FLINE=CHARACTER
+ FERROR=CHARACTER
+ TARGETBDATE=CHARACTER(5)
+ BDATECHAR=CHARACTER(10)
+ M=NUMBER
+ D=NUMBER
+ PERSONNAME=CHARACTER
+ QUOTE=CHARACTER(1)
+ MONTHS="JanFebMarAprMayJunJulAugSepOctNovDec"
+END
+ 
+SETUP
+ DIALOGSTART("Birthdate Info",200%,0)
+ DIALOGINTROTEXT("Enter your birthdate, (Month, Day)")
+ DIALOGPROMPTCODE("Enter Month 1-12: ",12,MONTH(NAME:BIRTHDATE))
+ DIALOGPROMPTCODE("Enter Day   1-31: ",31,DAY(NAME:BIRTHDATE))
+ DIALOGDISPLAY
+ M=ENTERCODE("Enter Month 1-12: ",12,MONTH(NAME:BIRTHDATE))
+ D=ENTERCODE("Enter Day   1-31: ",31,DAY(NAME:BIRTHDATE))
+ DIALOGCLOSE
+END
+ 
+PRINT TITLE="Birthdate Info"
+ HEADER=""
+ 
+ HTMLVIEWOPEN
+ 
+ HTMLVIEWLINE("<style>")
+ HTMLVIEWLINE("body    {font: 13Px Arial, sans-serif;}")
+ HTMLVIEWLINE("table    {font: 13Px Arial, sans-serif;}")
+ HTMLVIEWLINE("</style>")
+ 
+ HTMLVIEWLINE("<body bgcolor=WHITE>")
+ 
+ TARGETBDATE=FORMAT("99",M)+"/"+FORMAT("99",D)
+ 
+ HTMLVIEWLINE("<h3 align=" + QUOTE + "center" + QUOTE +
+              "> You entered a birthdate of " + TARGETBDATE+"</h3>")
+ HTMLVIEWDISPLAY
+ END
+ 
+TOTAL
+END
+`+ CODEEND
+)
+powerOnFunctions.set("htmlviewopen", `
+# HTMLVIEWOPEN
+---
+This function opens an HTML view window.
+
+### Syntax
+`+ CODESTART + `
+HTMLVIEWOPEN
+`+ CODEEND + `
+
+### Arguments
+An optional argument for HTMLVIEWOPEN lets you indicate a "silent" HTTP get or post request. During a "silent" request, the get or post takes place without additional user input. For example:
+  * 0 - Windows (not a silent post) HTMLVIEWOPEN or HTMLVIEWOPEN(0)
+  * 1 - WinInet (silent post) HTMLVIEWOPEN (1)
+
+### Example
+`+ CODESTART + `
+HTMLVIEWOPEN
+  HTMLVIEWLINE("<h3 align=" + QUOTE + "center" + QUOTE +
+              "> You entered a birth date of " + TARGETBDATE+"</h3>")
+ HTMLVIEWDISPLAY
+ END
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP or PRINT divisions or in a procedure called by these divisions
+  * Must be followed by HTMLVIEWLINE and HTMLVIEWDISPLAY
+  * HTML programming language knowledge is required
+
+### Extended Example
+`+ CODESTART + `
+[TEST.DIALOG.WIN--Sample Dialog Box specfile.]
+ 
+WINDOWS
+ 
+TARGET=ACCOUNT
+ 
+DEFINE
+ FNAME=CHARACTER
+ FNUM=NUMBER
+ FLINE=CHARACTER
+ FERROR=CHARACTER
+ TARGETBDATE=CHARACTER(5)
+ BDATECHAR=CHARACTER(10)
+ M=NUMBER
+ D=NUMBER
+ PERSONNAME=CHARACTER
+ QUOTE=CHARACTER(1)
+ MONTHS="JanFebMarAprMayJunJulAugSepOctNovDec"
+END
+ 
+SETUP
+ DIALOGSTART("Birthdate Info",200%,0)
+ DIALOGINTROTEXT("Enter your birthdate, (Month, Day)")
+ DIALOGPROMPTCODE("Enter Month 1-12: ",12,MONTH(NAME:BIRTHDATE))
+ DIALOGPROMPTCODE("Enter Day   1-31: ",31,DAY(NAME:BIRTHDATE))
+ DIALOGDISPLAY
+ M=ENTERCODE("Enter Month 1-12: ",12,MONTH(NAME:BIRTHDATE))
+ D=ENTERCODE("Enter Day   1-31: ",31,DAY(NAME:BIRTHDATE))
+ DIALOGCLOSE
+END
+ 
+PRINT TITLE="Birthdate Info"
+ HEADER=""
+ 
+ HTMLVIEWOPEN
+ 
+ HTMLVIEWLINE("<style>")
+ HTMLVIEWLINE("body    {font: 13Px Arial, sans-serif;}")
+ HTMLVIEWLINE("table    {font: 13Px Arial, sans-serif;}")
+ HTMLVIEWLINE("</style>")
+ 
+ HTMLVIEWLINE("<body bgcolor=WHITE>")
+ 
+ TARGETBDATE=FORMAT("99",M)+"/"+FORMAT("99",D)
+ HTMLVIEWLINE("<h3 align=" + QUOTE + "center" + QUOTE +
+              "> You entered a birthdate of " + TARGETBDATE+"</h3>")
+ HTMLVIEWDISPLAY
+ END
+ 
+TOTAL
+END
+`+ CODEEND
+)
+powerOnFunctions.set("initcreditreport", `
+# INITCREDITREPORT
+---
+This function initializes the Credit Retrieval System setup variables that are required for pulling reports from Equifax, Experian, TransUnion, and the ChexSystems suite.
+
+### Syntax
+`+ CODESTART + `
+INITCREDITREPORT(SourceType)
+`+ CODEEND + `
+
+### Arguments
+  1. SourceType
+    * 0 = Do not use any record; all data will be filled in by the specfile
+    * 1 = Use data in the currently read Credit Report record
+    * 2 = Use data in the currently read Name record
+    * 3 = Use data in the currently read Application Person record
+
+### Example
+`+ CODESTART + `
+INITCREDITREPORT(1)
+`+ CODEEND + `
+
+### Usage Information
+  * The INITCREDITREPORT function must precede the PULLCREDITREPORT function
+  * The INITCREDITREPORT and PULLCREDITREPORT functions work together to queue custom requests when pulling credit reports from a credit bureau
+  * You can look up a value in the Credit Report Item records of a prior Consumer Address Analysis Report and store that value in the @CREDITREPORTADDRANALYSISOID variable. This variable may be blank if you specify at least one of the following:
+    - \`\`\`@CREDITREPORTADDRESSANALYSISOID\`\`\`
+    - \`\`\`@CREDITREPORTIDVOID\`\`\`
+    - \`\`\`@CREDITREPORTEXTRANSACTIONID\`\`\`
+    - \`\`\`@CREDITREPORTREDFLAGALERTOID\`\`\`
+  * When you use the @CREDITREPORTVERIFICATIONOID variable for a Consumer Red Flag Checklist request, you must specify one of the following setup variables:
+    - \`\`\`@CREDITREPORTIDVERIFICATIONOID\`\`\`
+    - \`\`\`@CREDITREPORTADDRESSANALYSISOID\`\`\`
+    - \`\`\`@CREDITREPORTCHESXTRANSACTIONOID\`\`\`
+    - \`\`\`@CREDITREPORTREDFLAGALERTOID\`\`\`
+  * When you use the @CREDITREPORTINCLUDEIDV, CREDITREPORTINCLUDENEWACCTCHEX, or @CREDITREPORTINCLUDEOFAC variables, setting any of these variables to 1 is optional for consumer and business ChexSystems suite requests on the condition that at least one of the following setup variables is set to 1 (Yes):
+    - \`\`\`@CREDITRELUDENEWACCTCHEX\`\`\`
+    - \`\`\`@CREDITREPORTINCLUDEQUALIFILE\`\`\`
+    - \`\`\`@CREDITREPORTINCLUDEIDV\`\`\`
+    - \`\`\`@CREDITREPORTINCLUDEOFAC\`\`\`
+  * You can look up a value in the Credit Report Item record Red Flag Alert OID field of a prior Red Flag Checklist or Red Flag Update response, and then store that value in the @CREDITREPORTREDFLAGALERTOID variable. This variable may be blank if you specify at least one of the following:
+    - \`\`\`@CREDITREPORTADDRESSANALYSISOID\`\`\`
+    - \`\`\`@CREDITREPORTIDVOID\`\`\`
+    - \`\`\`@CREDITREPORTCHEXTRANSACTIONID\`\`\`
+
+### Variables
+Most of the Credit Report record variables are automatically defined. First, INITCREDITREPORT initializes some of the variables with default values based on the source used. The specfile can either use these default values or change them. The PULLCREDITREPORT function then pulls the credit report and updates the value of the @CREDITREPORTERROR field with the result.
+
+  * Setup variables: INITCREDITREPORT populates the default values for its variables. The specfile can change or use all of the defaults, as necessary. PULLCREDITREPORT then uses these values to pull the credit report.
+  * Result variables: Populated with the results of queuing a credit report.
+
+***Tip:*** Refer to variables in your print statements to display or print an informational message regarding the pulling of a credit report.
+
+### Extended Example
+See the sample specfile RD.CREDITREPORT for an example that uses this procedure to pull a credit report.
+`)
+powerOnFunctions.set("initsubroutine", `
+# INITSUBROUTINE
+---
+This function initializes the variables that you can use to pass information to a PowerOn subroutine specfile.
+
+### Syntax
+`+ CODESTART + `
+INITSUBROUTINE (ErrorText)
+`+ CODEEND + `
+
+  * ErrorText can indicate a system-level error message or an error detected in the subroutine specfile.
+
+### Example
+`+ CODESTART + `
+INITSUBROUTINE (ERRORTEXT)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP or PRINT divisions or in a procedure called by these divisions
+  * Use only with specfiles that target parent record types (ACCOUNT, CHECK, PARTICIPATION, etc.) not child record types (SHARE, GLHISTORY, COLLATERAL DOCUMENT, etc.)
+  * When using INITSUBROUTINE in the SETUP division to prepare for calling a subroutine during setup, you must use INITSUBROUTINE again in the PRINT division before you call a subroutine specfile in the PRINT division.
+  * Must be used before the EXECUTE function within a division
+  * Cannot be used in a FOR EACH...DO...END loop
+  * Batch drivers can only call batch subroutines
+  * Demand drivers can only call demand subroutines
+  * You may only nest up to three subroutines
+  * Must install a subroutine, including batch subroutines
+
+***Tip:*** "Max Subroutine Nesting Level Exceeded" is the most common error returned due to a subroutine specfile calling a second subroutine specfile, then the second specfile attempting to call a third subroutine specfile. If INITSUBROUTINE does not complete successfully, you cannot call subroutine specfiles.
+
+### Using Environment Argument Variables
+After you successfully run INITSUBROUTINE, the environment argument variables used to pass information to the subroutine must be loaded using assignment statements, before you use EXECUTE to call the subroutine. After you call the subroutine, the returned values in the environment argument variables can be:
+  * Saved into other variables using assignment statements
+  * Passed into another subroutine using the EXECUTE function again
+  * Used directly from the environment argument variables
+
+The calling specfile resumes running with the next statement after the subroutine call. The state of the calling specfile is not affected by the subroutine specfile, with the possible exception of updated automatic environment argument variables (automatic global variables may be updated in specialty specfiles that call specialty subroutine specfiles).
+
+### Extended Example
+`+ CODESTART + `
+INITSUBROUTINE(ERRORTEXT)
+  @ENVARGNUMBER1=X1
+  @ENVARGNUMBER2=Y1
+  @ENVARGNUMBER3=X2
+  @ENVARGNUMBER4=Y2
+  EXECUTE("GET.SLOPE",ERRORTEXT)
+  SLOPE=@ENVARGRATE1
+  @ENVARGNUMBER3=DISTANCE
+  EXECUTE("EXTRAPOLATE",ERRORTEXT)
+  PRINT "THE SLOPE BETWEEN (" + FORMAT("+###9",X1) + "," +
+       FORMAT("+###9",Y1) + ") AND (" + FORMAT("+###9",X1) +
+        "," + FORMAT("+###9",Y1) + ") IS " +
+        FORMAT("+##9.99999",SLOPE) 4 NEWLINE
+  PRINT "(" + FORMAT("+###9",@ENVARGNUMBER4) + "," +
+        FORMAT("+###9",@ENVARGNUMBER5) + ") IS ON THE LINE " +
+        FORMAT("+###9",DISTANCE) + " UNITS FROM (" +
+        FORMAT("+###9",X1) + "," + FORMAT("+###9",Y1) + ")"
+  NEWLINE
+`+ CODEEND
+)
+powerOnFunctions.set("int", `
+# INT
+---
+This function returns the integer part of a given number, monetary amount, or floating point expression.
+
+### Syntax
+`+ CODESTART + `
+INT(expression)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+INT(3.14159E0)
+`+ CODEEND + `
+
+Enter a number, money, or floating point expression in parentheses (after INT) to get the integer part of that expression.
+
+For example, INT(3.14159E0) evaluates to 3. The penny (cents) part of a money value is considered part of the integer value. For example, INT($1.50) evaluates to 1.50, not 1.00.
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * Requires a data type of NUMBER, MONEY, or FLOAT
+
+### Extended Example
+This function is useful for rounding or calculating modulo, as in the following example:
+`+ CODESTART + `
+  IF INT(NUMBERVARIABLE/2)*2=NUMBERVARIABLE THEN
+   PRINT "Even"
+  ELSE
+   PRINT "Odd"
+`+ CODEEND + `
+
+### INT and FLOOR Example
+Except for how they handle negative numbers with a fractional part, INT and FLOOR are similar.
+
+  * \`\`\`INT(-2.4)\`\`\` = -2
+  * \`\`\`FLOOR(-2.4)\`\`\` = -3
+`)
+powerOnFunctions.set("length", `
+# LENGTH
+---
+This function returns the number of characters in a character string.
+
+### Syntax
+`+ CODESTART + `
+LENGTH(expression)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+LENGTH(GLACCOUNT:NAME)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP, SELECT, SORT, PRINT, LETTER, or TOTAL divisions or in a procedure called by those divisions
+  * Counts leading, not trailing, spaces in the length
+
+#### ZIP Codes Longer then Five Characters Example
+**Zip Code** (from the Name record) is placed in the ZIPCODE character field. See LENGTH on line 3.
+
+`+ CODESTART + `
+TARGET=ACCOUNT
+
+SELECT
+   LENGTH(NAME:ZIPCODE)>5
+END
+
+PRINT TITLE="Accounts with Zipcodes > 5 Digits"
+   COL=0  ACCOUNT:NUMBER
+   COL=15 NAME:ZIPCODE
+END
+`+ CODEEND + `
+
+#### Example
+`+ CODESTART + `
+COL=45 LENGTH(ACCOUNT:REFERENCE)
+`+ CODEEND
+)
+powerOnFunctions.set("loanprojectinit", `
+# LOANPROJECTINIT
+---
+This function initializes the special setup variables required to perform loan projection calculations.
+
+### Syntax
+`+ CODESTART + `
+LOANPROJECTINIT(DataSource,ParameterDefaultType)
+`+ CODEEND + `
+
+### Arguments
+  * DataSource 
+    * 0 = Do not use any record. The specfile fills in all data.
+    * 1 = Use data in the currently read Loan record.
+    * 2 = Use data in the currently read Application record.
+    * 3 = Use data in a Loan Default record. (You must identify which Loan or Application Default record to use.)
+    * 4 = Use data in an Application Default record. (You must identify which Loan or Application Default record to use.)
+    * 5 = Use data in the currently read Loan Segment record.
+    * 6 = Use data in the currently read Application Segment record.
+    * 7 = Use data in the currently read Loan LOC Segment 0 record.
+    * 8 = Use data in the currently read Application LOC Segment 0 record.
+  * ParameterDefaultType
+    * 0 = Data source 1, 2, 5-6
+    * 3 or 4 = Identify which Loan or Application Default record to use
+    * ***Important:*** If you select (3) Calculate Loan Payoff for the setup variable @LOANPROJECTCALCULATIONTYPE, you must use (1) Use data in currently read Loan record.
+
+### Example
+`+ CODESTART + `
+LOANPROJECTINIT(2,0)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * Precedes LOANPROJECTCALC
+  * This function only provides summary loan projection information. To display detail information, you must use the loan projection screen.
+  * LOANPROJECTINIT (0,0) is not supported for SymChoice loans. Loan projections will not project a loan payment for the entire loan, only per segment (excluding daily billed interest-only segments). The only sources that are supported for SymChoice loans are data source 5 through 8.
+
+***Tip:*** To change the initial value of a setup variable, place an assignment statement in the specfile after LOANPROJECTINIT and before LOANPROJECTCALC to reset the value.
+
+### Common Scenarios
+Set the value of the @LOANPROJECTCALCULATIONTYPE variable to select the calculation type.
+  * 0 = Calculate Payment Amount (similar to Loan Projections)
+  * 1 = Calculate Loan Amount (similar to Loan Projections)
+  * 2 = Calculate Loan Term (similar to Loan Projections)
+  * 3 = Calculate Loan Payoff (similar to Loan Payoff Inquiry from Account Manager)
+  * 4 = Calculate Loan Payoff with Int Date
+  * 5 = Calculate Credit Card Interest and Balances
+  * 6 = Calculate Credit Card Average Daily Balances
+
+***Tip:*** To change the default value, place an assignment statement in the specfile after LOANPROJECTINIT and before LOANPROJECTCALC to reset the value.
+
+Complete the following when you select (3) Calculate Loan Payoff:
+  * Set the data source parameter of LOANPROJECTINIT to (1) Use data in currently read Loan record.
+  * Assign the loan payoff date to @LOANPROJECTPAYOFFDATE, otherwise the current system date is used.
+
+***Tip:*** If there is an error during the calculation, the @LOANPROJECTERROR variable contains the error text. Always check this variable in your specfile immediately following the calculation. If this variable is populated, the other result variables do not contain valid calculation results.
+
+### Extended Example
+`+ CODESTART + `
+TARGET=ACCOUNT
+ 
+PRINT TITLE="Loan Projections Loan Term"
+ 
+   LOANPROJECTINIT(3,10)
+   @LOANPROJECTLOANDATE='07/01/03'
+   @LOANPROJECTPAYMENTFREQUENCY=4
+   @LOANPROJECTFIRSTDUEDATE='08/01/03'
+   @LOANPROJECTINTERESTRATE=10.000%
+   @LOANPROJECTLOANAMOUNT=$100,000.00
+   @LOANPROJECTPAYMENT=$1,322.08
+   LOANPROJECTCALC
+
+   IF @LOANPROJECTERROR<>"" THEN
+    DO
+     BELL
+     PRINT "Error - " + @LOANPROJECTERROR
+     NEWLINE
+    END
+   ELSE
+    DO
+     PRINT "Loan Projections Loan Term"
+     NEWLINE
+     NEWLINE
+     ...
+`+ CODEEND + `
+See RD.LOANPROJECT for an example of a complete loan projections specfile.
+`)
+powerOnFunctions.set("log", `
+# LOG
+---
+This function returns the natural logarithm of a specified number, code, or floating point value.
+
+### Syntax
+`+ CODESTART + `
+LOG(expression)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+LOG(3.14159E+2)
+`+ CODEEND + `
+
+The value of "e" is approximately 2.7183
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * Use only NUMBER, CODE, or FLOAT data type; the result is a floating point value.
+
+***Tip:*** The natural logarithm of a numeric value is the value to which the mathematical constant "e" must be raised to produce the numeric value.
+
+### Extended Example
+The result of \`\`\`LOG(EXP(X))\`\`\` is X. \`\`\`EXP(X)\`\`\` returns "e" raised to the X power. If LOG finds the power to which "e" must be raised to get EXP(X), the answer is X.
+
+The result of \`\`\`LOG(e)\`\`\` is 1. The power to which "e" must be raised to get "e" is 1.
+`)
+powerOnFunctions.set("lowercase", `
+# LOWERCASE
+---
+This function converts the alphabetic characters of a character expression to lowercase letters.
+
+### Syntax
+`+ CODESTART + `
+LOWERCASE(expression)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+LOWERCASE(NAME:EXTRAADDRESS)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP, SELECT, SORT, PRINT, LETTER, or TOTAL divisions or in a procedure called by those divisions
+  * May require an additional adjustment to convert a rate to a monetary value
+  * Use only with character field, character function, character variable, or other character expression
+  * Does not affect non-alphabetic characters in the character string
+
+***Tip:*** You can use CAPITALIZE to achieve similar results.
+
+### Print Division Example
+`+ CODESTART + `
+PRINT TITLE="Names with Cards"
+   COL=0 LOWERCASE(NAME:FIRST)
+   ...
+`+ CODEEND + `
+
+### Mixed Case Example
+Prints the first character of the first name as an uppercase letter, and prints the other characters of the first name as lowercase letters
+`+ CODESTART + `
+  COL=0 SEGMENT(NAME:FIRST,1,1)
+  COL=0 LOWERCASE
+       (SEGMENT(NAME:FIRST,2,LENGTH(NAME:FIRST)))
+  ...
 `+ CODEEND
 )

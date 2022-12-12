@@ -76,7 +76,6 @@ export function getHoverHandler(context: Context) {
       if (!funcName) return null
       funcName = funcName.split('(')[0].toLowerCase()
       funcName = funcName.split('=')[0].toLowerCase()
-      context.connection.console.log(`funcName: ${funcName}`)
       const contents = powerOnFunctions.get(funcName)
       if (contents) {
         return {
