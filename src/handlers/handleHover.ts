@@ -75,6 +75,8 @@ export function getHoverHandler(context: Context) {
       let funcName = wordAtPoint(params.position.line, params.position.character, params.textDocument.uri, context)
       if (!funcName) return null
       funcName = funcName.split('(')[0].toLowerCase()
+      funcName = funcName.split('=')[0].toLowerCase()
+      context.connection.console.log(`funcName: ${funcName}`)
       const contents = powerOnFunctions.get(funcName)
       if (contents) {
         return {

@@ -5016,11 +5016,11 @@ FORMAT(CharacterExpression,Expression)
   - Allow sufficient placeholders in the character expression 
   - Use anywhere that character data is allowed 
   - 9 (nine) is a required placeholder for a digit (leading zeros are not suppressed) 
-  - # (number sign) is an optional placeholder for a digit (suppresses leading zeros ) 
-  - + (plus sign) is a placeholder for the negative sign; use as many as you want; blank for positive numbers, preceded by a - (negative sign) for negative numbers 
-  - , (comma) is an optional placeholder for the hundredths, thousands, etc., and they are replaced with a blank when found to the left of the first non-suppressed digit; commas to the right of the first non-suppressed digit are displayed 
+  - \`\`\`#\`\`\` (number sign) is an optional placeholder for a digit (suppresses leading zeros ) 
+  - \`\`\`+\`\`\` (plus sign) is a placeholder for the negative sign; use as many as you want; blank for positive numbers, preceded by a - (negative sign) for negative numbers 
+  - \`\`\`,\`\`\` (comma) is an optional placeholder for the hundredths, thousands, etc., and they are replaced with a blank when found to the left of the first non-suppressed digit; commas to the right of the first non-suppressed digit are displayed 
   - Use the slash (/) and any other characters you want to embellish the result 
-  - * (asterisk) results when there are more digits in the expression than placeholders in the character expression 
+  - \`\`\`*\`\`\` (asterisk) results when there are more digits in the expression than placeholders in the character expression 
   - Cannot print a floating point value in fewer than nine characters or more than 23 characters 
   - Always displays the date with a two-digit year and forward slashes for dates in or before 1979 or after 2078 
   - Cannot use Audio Access Code 
@@ -5888,5 +5888,353 @@ TOTAL                             [NO ACCESS TO DATABASE FILES]
     NEWLINE NEWLINE
     
 END                               [END TOTAL SECTION]
+`+ CODEEND
+)
+powerOnFunctions.set("headers", `
+# HEADERS
+---
+This function marks the beginning of a subsection of output and precedes print statements that create column headings for that subsection.
+
+### Syntax
+`+ CODESTART + `
+HEADERS
+ statements
+END
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+HEADERS
+  PRINT "Account Number"
+  NEWLINE
+END
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the PRINT or TOTAL division
+  * Separate each set of statements that creates a line of column headings using NEWLINE
+  * The printed heading cannot be longer than 132 characters
+  * Do not use the FOR EACH statement, ANY, or TOTAL= with HEADERS
+  * Do not use the FOR … DO … END statement to repeat letters, numbers or special characters. The loop variable cannot be reused consistently since the loop variable is still specific to the HEADERS subsection. We recommend that you use the REPEATCHR() function to avoid unexpected output.
+  * Do not use HEADERS with LABELS
+  * You can use statements in the HEADERS subsection
+  * The statements appearing between HEADERS and END create column headings to print on each page. Use any statement to create the column headings in the HEADERS subsection.
+  * Use HEADERS at the beginning of the PRINT division to set up the initial column headings. You can change the column headings by inserting another HEADERS section in another part of the PRINT division, the TOTAL division, or in a procedure. The new headings take effect on the next page of the report. If you want the new headings to take effect immediately, use the NEWPAGE statement to force PowerOn to go to the next page of the report.
+  * You can use an optional TRAILERS subsection with HEADERS to create a line of characters that the system prints at the bottom of the last page and after each subtotal. See the TRAILERS keyword for more information.
+  * The first two lines of the output are always the title line and a blank line. The title line has the credit union name, the TITLE of the report, the sequence number of the job, the date the report prints, and the page number. The second line is blank to separate the title line from the column headings as shown in he following example:
+\`\`\`
+XYZ CREDIT UNION             NEW LOAN REPORT       09/05/96 13:24  Seq 5967 Page 1
+ 
+TYPE  | NO.    REFINANCES | NO.        ADDONS | NO.     NEW LOANS
+-----------------------------------------------
+0     |   1     25,000.00 |  11      1,726.27 |  11    184,875.00
+1     |   1      7,867.52 |   2     10,000.00 |   3     10,500.00
+2     |                   |                   |   1     10,000.00
+5     |                   |                   |   1      5,000.00
+67    |                   |                   |   3     15,000.00
+-----------------------------------------------
+TOTALS    2     32,867.52    13     11,726.27    19    225,375.00
+\`\`\`
+***Tip:*** Do not use a HEADER line or HEADERS section in the PRINT division when making tapes to send to outside processors. Header line and Headers sections include the following, which outside processors do not want:
+  * A title line at the top
+  * A column heading line
+  * A form feed at the end of the report
+  * Page breaks
+
+### Four Header Lines Example
+`+ CODESTART + `
+PRINT TITLE="Test List"
+   HEADERS
+    PRINT "Date Range Entered: from "
+    PRINT BEGDATE
+    PRINT " to "
+    PRINT ENDDATE
+    NEWLINE
+    NEWLINE
+    PRINT "Account     Name        S ID TP       Balance
+    Original Balance    Opn Date"
+    NEWLINE
+    PRINT "---------------------------------------------
+  ------------------------------"
+    NEWLINE
+END
+...
+`+ CODEEND + `
+The resulting header lines look like this:
+\`\`\`
+XYZ Credit Union        Title Line                 Seq 9999 10/31/96 Page 1
+ 
+Date Range Entered: from --/--/-- to --/--/--
+ 
+Account     Name        S ID TP       Balance  Original Balance    Opn Date
+---------------------------------------------------------------------------
+\`\`\`
+
+### Two-line Column Heading Example
+The following example has a two-line column heading and a one-line trailer. Notice how we place a NEWLINE statement after each line of the heading.
+`+ CODESTART + `
+PRINT TITLE="Test Columns"
+  HEADERS
+   PRINT "Account     Name     Open Date     Balance"
+   NEWLINE
+   PRINT "-----------------------------------------"
+   NEWLINE
+  END
+  TRAILERS
+   PRINT "-----------------------------------------"
+   NEWLINE
+  END
+...
+`+ CODEEND
+)
+powerOnFunctions.set("hour", `
+# HOUR
+---
+This function returns the numerical value (from 00-23) equivalent to the hour stored in HHMM format.
+
+### Syntax
+`+ CODESTART + `
+HOUR(expression)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+HOUR(SYSACTUALTIME)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP, LETTER, PRINT, or TOTAL divisions or in a procedure called by one of these divisions
+  * Must use NUMBER or CODE data type
+
+### Extended Example
+The following example uses the HOUR and MINUTE functions to display a greeting that includes the current time:
+`+ CODESTART + `
+TARGET=ACCOUNT
+ 
+PRINT TITLE="Time of Day"
+  NEWLINE
+  NEWLINE
+  IF HOUR(SYSACTUALTIME)<12 THEN PRINT "Good Morning!"
+   ELSE IF HOUR(SYSACTUALTIME)<18 THEN PRINT "Good Afternoon!"
+       ELSE PRINT "Good Evening!"
+  NEWLINE
+  NEWLINE
+  PRINT "The current time is "
+  IF MINUTE(SYSACTUALTIME)=0 THEN
+  DO
+     PRINT "Exactly "
+     CALL PRINTHOUR
+     PRINT " o'clock"
+   END
+  ELSE IF MINUTE(SYSACTUALTIME)<30 OR MINUTE(SYSACTUALTIME)>30 THEN
+   DO
+     PRINT MINUTE(SYSACTUALTIME)
+     IF MINUTE(SYSACTUALTIME)=1 THEN PRINT " minute past "
+                              ELSE PRINT " minutes past "
+     CALL PRINTHOUR
+   END
+  ELSE IF MINUTE(SYSACTUALTIME)=30 THEN
+   DO
+     PRINT "half past "
+     CALL PRINTHOUR
+   END
+END
+  
+PROCEDURE PRINTHOUR
+  IF HOUR(SYSACTUALTIME)<13 THEN PRINT HOUR(SYSACTUALTIME)
+                          ELSE PRINT HOUR(SYSACTUALTIME)-12
+  IF HOUR(SYSACTUALTIME)<12 THEN PRINT " AM"
+                          ELSE PRINT " PM"
+END
+`+ CODEEND
+)
+powerOnFunctions.set("hpboxdraw", `
+# HPBOXDRAW
+---
+This function commands a laser printer to draw a box between specified coordinates with an outline of a specified width and with shading of a specified amount.
+
+### Syntax
+`+ CODESTART + `
+HPBOXDRAW(X1,Y1,X2,Y2,Width,FillLevel)
+`+ CODEEND + `
+
+### Arguments
+  * X1 & X2
+    - X coordinates must be from 0-2400 in portrait mode or 0-3000 (3900 for legal size paper) in landscape mode
+  * Y1 & Y2
+    - Y coordinates must be from 0-3000 (3900 for legal size paper) in portrait mode or 0-2400 in landscape mode	
+  * Width
+    - Between 1 and 750
+    - Draws the thickness of the box's outline
+    - 300 units per inch
+    - Maximum width is 750 units (line is 2.5 inches wide)
+  * FillLevel
+    - Between 0 and 100
+    - Produces various levels of shading (grayscale) inside the box
+
+### Example
+`+ CODESTART + `
+HPBOXDRAW(50,50,2350,2950,100,12)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * Usable only with laser printers that accept GL2 printer commands
+
+### Extended Example
+In the following example, the specfile draws a box with a border width of 100 units (one-third of an inch) and a fill level of 12%. The printer locates the upper left corner of the box at coordinates 50,50 and locates the lower right corner at coordinates 2350,2950.
+`+ CODESTART + `
+PRINT TITLE="HP LaserJet Font List" 13
+ HPBOXDRAW(50,50,2350,2950,100,12) 14 
+ ...
+`+ CODEEND
+)
+powerOnFunctions.set("hpesc", `
+# HPESC
+---
+This function sends an escape sequence (a specific group of control characters that begins with the ESCAPE control character) to a laser printer.
+
+### Syntax
+`+ CODESTART + `
+HPESC "escape sequence"
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+HPESC "&dD"
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+
+An escape sequence is a specific group of control characters that begins with the ESCAPE control character. Control characters are nonprinting characters that the laser printer interprets as commands. The most common control character used by laser printers is ESCAPE (control character 27).
+
+***Tip:*** Equivalent to using the PRINTCONTROL and CTRLCHR statements:
+`+ CODESTART + `
+PRINTCONTROL CTRLCHR(27)+escape sequence
+`+ CODEEND + `
+
+### Extended Example
+In the following example, the specfile instructs the laser printer to underline the word "help". The escape sequence &dD turns underlining on, and &d@ turns underlining off.
+`+ CODESTART + `
+  PRINT "Your "
+  HPESC "&dD"
+  PRINT "help"
+  HPESC "&d@"
+  PRINT " is needed"
+`+ CODEEND
+)
+powerOnFunctions.set("hpfont", `
+# HPFONT
+---
+This function changes the type font and point size on a laser printer.
+
+### Syntax
+`+ CODESTART + `
+HPFONT(FontNumber,PointSize)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+HPFONT(34,12)
+`+ CODEEND + `
+
+### Arguments
+  * FontNumber
+    - A number in the range 0-44
+    - ***Tip:*** Print a list of fonts by font number from RD.HPLASERFONTS.
+  * PointSize
+    - A number in the range 4-127
+    - ***Tip:*** Twelve (12) produces normal-sized text for most fonts.
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * Requires the RD.HPLASER.DEF and RD.HPLASER.SET #INCLUDE files
+
+### Pitch and Point Size
+The size of a font is specified as either a pitch or point size, depending on whether the font is fixed-space or proportional.
+
+In fixed-space fonts, each character has the same width. Pitch is used to specify the size of fixed space fonts. It is a measure of the number of characters that will print in one horizontal inch of type. For example, all 10-pitch fonts print 10 characters per inch (cpi) and all 12-pitch fonts print 12 cpi.
+
+In proportional (or typographic) fonts, every character can have a different width. Since proportional fonts have characters with different widths, the font size is specified in point size, not pitch.
+
+The point size of a font is defined as the distance from the top of the tallest character in the font to the bottom of the lowest character in the font. Due to the definition of point size, different fonts printed at the same point size may appear quite different in size. For example, the characters in a font printed at 24 point will be twice as large as the characters in the same font printed at 12 point. However, the point size of a font is an excellent specification of the relative size of a font.
+
+### Print Orientation
+Depending on the orientation you select to print your report, we make the following additional recommendations:
+  * In portrait mode, use Courier, 12 pitch type, 6 lines per inch. This allows 80 characters per line and 66 lines per page.
+  * In landscape mode, use Courier, 17 pitch type, 8 lines per inch. This allows 132 characters per line and 66 lines per page.
+
+### Extended Example
+In the following example, the file RD.HPLASER.DEF is included in the DEFINE division. The PRINT division prints the header in Arial Bold Italic 18 point when it calls the procedure PRINTHEADER on line 9. On line 10 it changes the font to CG Times 12 point to print the body of the letter. (The full text of this specfile is in the PowerOn library as RD.HPLASERLETTER.)
+`+ CODESTART + `
+TARGET=ACCOUNT
+  
+DEFINE
+   #INCLUDE "RD.HPLASER.DEF"
+END
+
+PRINT TITLE="Business Letter"
+
+   CALL PRINTHEADER
+   HPFONT(33,12)
+   COL=12 LEFT SYSTEMDATE
+   NEWLINE NEWLINE NEWLINE
+   etc...
+END
+  
+PROCEDURE PRINTHEADER
+
+   HPLINEDRAW(150,3,2250,3,6)
+   HPFONT(32,18)
+   HPYPOS(90)
+   COL=20 "X Y Z   F e d e r a l   C r e d I t   U n I o n"
+...
+`+ CODEEND
+)
+powerOnFunctions.set("hplinedrawe", `
+# HPLINEDRAW
+---
+This function commands a laser printer to draw a line of specified width between given coordinates.
+
+### Syntax
+`+ CODESTART + `
+HPLINEDRAW(X1,Y1,X2,Y2,Width)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+HPLINEDRAW(50,50,2350,2950,100)
+`+ CODEEND + `
+
+### Arguments
+  * X1 & X2
+    - X coordinates must be from 0-2400 in portrait mode or 0-3000 (3900 for legal size paper) in landscape mode
+  * Y1 & Y2
+    - Y coordinates must be from 0-3000 (3900 for legal size paper) in portrait mode or 0-2400 in landscape mode
+  * Width
+    - Between 1 and 750
+    - Draws the thickness of the box's outline
+    - 300 units per inch
+    - The maximum width is 750 (line is 2.5 inches wide)
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * Usable only with laser printers that accept GL2 printer commands
+
+### Extended Example
+In the following example, the specfile draws a line 6 units wide above and below the header. The printer draws the top line from coordinates 150,3 to coordinates 2250,3. The printer draws the bottom line from coordinates 150,120 to coordinates 2250,120.
+`+ CODESTART + `
+PROCEDURE PRINTHEADER
+   
+    HPLINEDRAW(150,3,2250,3,6)
+    HPFONT(32,18)
+    HPYPOS(90)
+    COL=20 "X Y Z  F e d e r a l  C r e d i t   U n i o n"
+    SUPPRESSNEWLINE
+    HPLINEDRAW(150,120,2250,120,6)
+    HPXPOS (0)
+    HPYPOS (400)
+END
 `+ CODEEND
 )
