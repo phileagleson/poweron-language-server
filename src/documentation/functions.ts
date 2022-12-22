@@ -7386,3 +7386,1182 @@ If NUMSHARES is a number and TOTALWITHHELD is money, the result of (NUMSHARES/TO
 
 If you do not do the additional multiplication, PowerOn converts the rate .35912 to $0.00. Again, the purpose of this function is to allow you flexibility.
 `)
+powerOnFunctions.set("moneyread", `
+# MONEYREAD
+---
+This function displays a prompt on the user's console and returns the money response.
+
+### Syntax
+`+ CODESTART + `
+MONEYREAD(Prompt)
+`+ CODEEND + `
+
+### Arguments
+  * Prompt
+    - Character line with maximum of 132 characters
+
+### Example
+`+ CODESTART + `
+MONEYREAD("Enter Maximum Amount")
+`+ CODEEND + `
+
+### Usage Information
+  * Only used in batch specfiles
+  * Use only in SETUP or DEFINE divisions
+  * Prompt should be a phrase or series of phrases that are meaningful to the computer operator. Each phrase in a prompt must be separated by commas and delineated by quotation marks
+  * A colon (:) is automatically included after the last word in the prompt. If you include a colon in your prompt, two colons will display.
+
+***Important:*** The MONEYREAD function displays in a batch program regardless of where it is in the specfile, even if it is inside of inside of a comment or in a procedure that is not specifically called. If you want to keep the prompt in a comment, simply add a space between the data type and the word READ to prevent PowerOn from recognizing the function and displaying the prompt to the user.
+When the operator queues the specfile to run, PowerOn looks through the specfile for READ functions. If it finds any, PowerOn displays the prompts on the console so the operator can respond to them before the job runs. When a READ function is used in a specfile, there is no mechanism to skip it using a conditional statement. Each READ function requires a response. A job file may be used to pre-specify responses to READ functions.
+
+### Defining a Money Constant Example
+Uses the DEFINE division to define a money constant assigned the value of MONEYREAD. The PRINT division uses that constant in a FOR EACH loop. See MONEYREAD on line 3.
+`+ CODESTART + `
+TARGET=SHARE
+
+DEFINE
+   DESIREDAMT=MONEYREAD("Enter Hold Amount Threshold")
+END
+   ...
+ 
+PRINT TITLE="Share Holds Within Range"
+  FOR EACH SHARE HOLD 
+   WITH(SHARE HOLD:AMOUNT=DESIREDAMT)
+   DO
+    ...
+`+ CODEEND + `
+
+### Selecting Target Records Example
+Selects target records with a SHARE:BALANCE equal to the monetary amount the operator entered in reply to the Enter Balance to Find prompt displayed by the MONEYREAD function. See MONEYREAD on line 3.
+`+ CODESTART + `
+TARGET=SHARE
+
+SELECT
+  SHARE:BALANCE=MONEYREAD("Enter Balance to Find")
+END
+
+### If...Then...Else Example
+ IF LOAN:PAYMENT=
+   MONEYREAD("Enter Standard Payment") THEN
+  DO
+   ...
+  END
+ ELSE
+  DO
+   ...
+  END
+`+ CODEEND
+)
+powerOnFunctions.set("month", `
+# MONTH
+---
+This function returns a numeric value from 01 through 12 (January through December).
+
+### Syntax
+`+ CODESTART + `
+MONTH(expression)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+MONTH(SHARE TRANSACTION:POSTDATE)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP, SELECT, SORT, PRINT, LETTER, or TOTAL divisions or in a procedure called by those divisions
+  * Uses DATE data type
+  * Uses a date field or variable
+  * MONTH('--/--/--') returns 0
+
+### March Birthday Example
+`+ CODESTART + `
+TARGET=NAME
+
+SELECT
+   MONTH(NAME:BIRTHDATE)=3
+END
+
+SORT
+   ...
+`+ CODEEND + `
+
+### March 24th Birthday Example
+`+ CODESTART + `
+TARGET=NAME
+
+SELECT
+   MONTH(NAME:BIRTHDATE)=3 AND
+   DAY(NAME:BIRTHDATE)=24
+END
+
+SORT
+   ...
+`+ CODEEND
+)
+powerOnFunctions.set("number", `
+# NUMBER
+---
+This function converts a monetary, code, float, date, or rate value into a number value that can be assigned to a variable type number or can be printed. It is intended for use on an entire numeric expression. If you use this function on part of a compound expression, it can have unpredictable results.
+
+### Syntax
+`+ CODESTART + `
+NUMBER(expression)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+NUMBER(LOAN:INTERESTRATE+2.000%)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP, SELECT, PRINT, or TOTAL divisions or in a procedure called by one of these divisions
+  * Converting a rate value to a number may require an additional adjustment
+
+***Tip:*** Useful when using two different data types. The normal outcome of dividing a number value by a money value is a rate value. If you want to print the outcome as a number value, use the NUMBER function to convert the data type of the result.
+
+#### Money to a Number Data Type Example
+The conversion to a number moves the decimal point two spaces to the right.
+
+`+ CODESTART + `
+PRINT NUMBER($3.00)
+`+ CODEEND + `
+Result: 300
+
+#### Subtract Number from Money Data Type Example
+`+ CODESTART + `
+PRINT $5.00-10
+`+ CODEEND + `
+Result: $4.90
+
+`+ CODESTART + `
+PRINT NUMBER($5.00-10)
+`+ CODEEND + `
+Result: 490 because the conversion moves the decimal point two spaces to the right.
+
+#### Date to a Number Type Example
+Assume the value of DATE1 is 06/18/14. Number values over 999 display with commas.
+
+`+ CODESTART + `
+PRINT NUMBER(DATE1)
+`+ CODEEND + `
+Result: 9,041
+
+#### Rate to Number Data Type Example
+Assume LOAN:INTERESTRATE is 7.385%.
+
+`+ CODESTART + `
+COL=25 NUMBER(LOAN:INTERESTRATE)
+`+ CODEEND + `
+Result: 0 (Because 7.385% is actually stored as a value of .07385)
+
+By multiplying the rate by 100,000 before you invoke the NUMBER function, you move the decimal to the end of the rate.
+
+`+ CODESTART + `
+COL=25 NUMBER(LOAN:INTERESTRATE * 100000)
+`+ CODEEND + `
+Result: 7385
+
+***Tip:*** Multiply the rate by some power of ten to obtain the conversion you want.
+
+#### Float to Number Data Type Example
+Assume the value of VAL1 is 3.1415.
+
+`+ CODESTART + `
+COL=25 NUMBER(VAL1)
+`+ CODEEND + `
+Result: 3
+
+By multiplying the floating point value by 1,000 before you invoke the NUMBER function, you move the decimal three positions to the right.
+
+`+ CODESTART + `
+COL=25 NUMBER(VAL1 * 1000)
+`+ CODEEND + `
+Result: 3141
+
+***Tip:*** Multiply the rate by some power of ten to obtain the conversion you want. Values to the right of the decimal place are truncated.
+
+#### Number to Money Data Type Example
+Assume the value of the expression (NUMSHARES/TOTALWITHHELD) is 35.912%.
+
+`+ CODESTART + `
+COL=25 NUMBER((NUMSHARES/TOTALWITHHELD) * 100000)
+`+ CODEEND + `
+Result: 35912
+`)
+powerOnFunctions.set("numberread", `
+# NUMBERREAD
+---
+This function displays a prompt on the user's console and returns the number response.
+
+When the operator queues the specfile to run, PowerOn looks through the specfile for all READ functions (NUMBERREAD, CODEREAD, CHARACTERREAD, etc.). All READ statements appear to the console operator as prompts that need a response before the job runs.
+
+### Syntax
+`+ CODESTART + `
+NUMBERREAD("PromptText")
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+NUMBERREAD("How Many Items Per Page?")
+`+ CODEEND + `
+
+### Arguments
+The text within the quotes is what the console operator sees when the specfile is queued up to run. For example:
+
+`+ CODESTART + `
+LOOPNUMBER=NUMBERREAD("Enter the desired number of loops.",
+                      "This number cannot exceed 2500.",
+                      "# Loops")
+`+ CODEEND + `
+
+displays to the operator as:
+
+Enter the desired number of loops.
+This number cannot exceed 2500.
+# Loops:
+
+Prompt Text
+  * Character line with maximum of 132 characters per line. Prompt response expected is a number value.
+    - The prompt text should be a phrase, or series of phrases meaningful to the console operator, placed in parentheses after the keyword.
+    - Each phrase of the prompt text must be enclosed within quotes and separated by commas between phrases.
+    - PowerOn automatically ends the complete prompt phrase with a colon (:). If you type an additional colon, it is ignored.
+    - If you end your prompt text with a question mark (?), PowerOn automatically replaces the colon with your question mark.
+
+### Usage Information
+  * Only used in batch specfiles
+  * Use only in DEFINE, SELECT, and SETUP divisions
+  * If the first character in the prompt text is an open parenthesis, the parenthesis is ignored.
+    - As an example, this phrase:
+    ("(0) None or (1) All") 
+    drops the first open parenthesis and displays a prompt of
+    0) None or (1) All
+    - Begin the prompt with a word instead, similar to the following:
+     ("Select (0) None or (1) All")
+
+***Important:*** The NUMBERREAD function displays in a batch program regardless of where it is in the specfile, even if it is inside of a comment or in a procedure that is not specifically called. If you want to keep the prompt in a comment, simply add a space between the data type and the word READ to prevent PowerOn from recognizing the function and displaying the prompt to the user.
+
+### Define Division Example
+The following example uses the DEFINE division to define a constant and assign it the value of NUMBERREAD. The PRINT division uses that constant in a FOR EACH loop.
+`+ CODESTART + `
+TARGET=ACCOUNT
+
+DEFINE
+   SHARECOUNT=NUMBERREAD("Enter Maximum to List")
+   COUNT=NUMBER
+END
+
+   ...
+PRINT TITLE="Share Sample for Accounts"
+  FOR EACH SHARE
+  DO
+    COUNT=COUNT+1
+  END
+   WHILE COUNT<=SHARECOUNT
+    DO
+     ...
+`+ CODEEND + `
+
+### Select Division Example
+In this example, PowerOn selects target records with a region equal to the response entered at the Region Desired prompt:
+`+ CODESTART + `
+TARGET=SHARE
+
+DEFINE
+   REGION=NUMBER
+END
+
+SELECT
+  REGION=NUMBERREAD("Region Desired")
+END
+   ...
+`+ CODEEND + `
+
+### If...Then...Else Example
+This is an example of how you can use NUMBERREAD with an IF...THEN...ELSE statement:
+`+ CODESTART + `
+IF SHARE TRANSACTION:SEQUENCENUMBER=
+    NUMBERREAD("Enter Sequence Number") THEN
+   DO
+    ...
+   END
+  ELSE
+   DO
+    ...
+   END
+`+ CODEEND
+)
+powerOnFunctions.set("outputclose", `
+# OUTPUTCLOSE
+---
+This function closes any additional output destinations you have opened.
+
+### Syntax
+`+ CODESTART + `
+OUTPUTCLOSE(OutputChannel,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * OutputChannel
+    - The value returned from OUTPUTOPEN, or the value OUTPUTCHANNELDEFAULT to switch back to the specfile's default output.
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+### Example
+`+ CODESTART + `
+OUTPUTCLOSE(OUTPUTCHANNELPTR,ERRORTEXT)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * Must be preceded by OUTPUTOPEN
+
+### Extended Example
+The following batch specfile example shows one of the best uses for this functionality: splitting information into separate reports. This specfile produces three separate reports that break down shares by balance. Note that the TITLE attribute at the start of the PRINT division sets the title for the default output report.
+`+ CODESTART + `
+TARGET=SHARE
+
+DEFINE
+   #INCLUDE "RD.OUTPUT.DEF"
+   OUTPUTCHANNEL1=NUMBER
+   OUTPUTCHANNEL2=NUMBER
+   ERRORTEXT=CHARACTER
+   ERRORTEXTIGNORE=CHARACTER
+END
+   
+SETUP
+  OUTPUTOPEN(OUTPUTDEVREPORT,0,"Shares >=$50,000 <$100,000",
+             "SHAREREPOR", OUTPUTCHANNEL1,ERRORTEXT)
+  IF ERRORTEXT<>"" THEN CALL ERRORHANDLER
+  OUTPUTOPEN(OUTPUTDEVREPORT,0,"Shares >=$100,000",
+             "SHAREREPOR", OUTPUTCHANNEL2,ERRORTEXT)
+  IF ERRORTEXT<>"" THEN CALL ERRORHANDLER
+END
+ 
+PRINT TITLE="Shares <$50,000"
+  HEADER="Account     ID           Balance"
+  HEADER="--------------------------------"
+  IF SHARE:BALANCE<$50,000.00 THEN
+   OUTPUTSWITCH(OUTPUTCHANNELDEFAULT,ERRORTEXT) 
+  ELSE IF SHARE:BALANCE<$100,000.00 THEN
+   OUTPUTSWITCH(OUTPUTCHANNEL1,ERRORTEXT) 
+  ELSE
+   OUTPUTSWITCH(OUTPUTCHANNEL2,ERRORTEXT) 
+  IF ERRORTEXT<>"" THEN CALL ERRORHANDLER
+  COL=1  ACCOUNT:NUMBER
+  COL=13 SHARE:ID
+  COL=32 SHARE:BALANCE
+  NEWLINE
+END
+  
+TOTAL
+  OUTPUTCLOSE(OUTPUTCHANNEL1,ERRORTEXT)
+  OUTPUTCLOSE(OUTPUTCHANNEL2,ERRORTEXT)
+END
+
+PROCEDURE ERRORHANDLER
+  OUTPUTSWITCH(OUTPUTCHANNELDEFAULT,ERRORTEXTIGNORE)
+  PRINT "Error: "+ERRORTEXT
+  NEWLINE
+  TERMINATE
+END
+`+ CODEEND
+)
+powerOnFunctions.set("outputopen", `
+# OUTPUTOPEN
+---
+This function opens the specified output destination, and then all subsequent output is sent to that destination.
+
+### Syntax
+`+ CODESTART + `
+OUTPUTOPEN(DeviceType,PrinterNumber,Title,ReportCategory,OutputChannel,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * DeviceType
+    - OUTPUTDEVREPORT = report
+    - OUTPUTDEVCONSOLE = console
+    - OUTPUTDEVSLAVE = subordinate printer (sometimes called a "slave printer")
+    - OUTPUTDEVINQPRINTER = inquiry printer
+    - OUTPUTDEVTPTPRINTER = TPT printer
+    - OUTPUTDEVLINEPRINTER = line printer
+    - ***Tip:*** The RD.OUTPUT.DEF #INCLUDE file contains definitions for all six device types.
+  * PrinterNumber
+    - (required) Printer to use if the device type is a line printer or TPT printer (ignored for all other device types)
+  * Title
+    - 40-character title that appears in Print Control if the device type is a report (ignored for all other device types)
+  * ReportCategory
+    - 10-character identifier which serves classification and grouping purposes (such as those used by the Synergy imaging system)
+  * OutputChannel
+    - Returned to a number variable used in subsequent calls to OUTPUTSWITCH and OUTPUTCLOSE to indicate which particular output destination to switch to or close
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+### Example
+`+ CODESTART + `
+OUTPUTOPEN(OutputDevReport,0,"SpecfileOutput","ATMReports",OutputChannelRep,ErrorText)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * Each specfile may include up to 99 different output locations
+  * Must be followed by OUTPUTCLOSE
+  * Reports created by OUTPUTOPEN have six-digit report sequence numbers
+  * If you include both DATAFILE and REPORTCATEGORY on the TITLE statement, the report category in OUTPUTOPEN is overridden by REPORTCATEGORY.
+
+### Extended Example
+This specfile produces separate reports that break down shares by balance. The TITLE attribute at the start of the PRINT division sets the title for the default output report. The reports specified with OUTPUTOPEN each have a custom REPORTCATEGORY. See OUTPUTOPEN on lines 11 and 14.
+`+ CODESTART + `
+TARGET=SHARE
+
+DEFINE
+   #INCLUDE "RD.OUTPUT.DEF"
+   OUTPUTCHANNEL1=NUMBER
+   OUTPUTCHANNEL2=NUMBER
+   ERRORTEXT=CHARACTER
+   ERRORTEXTIGNORE=CHARACTER
+END
+
+SETUP
+  OUTPUTOPEN(OUTPUTDEVREPORT,0,"Shares >=$50,000 <$100,000",
+             "SHAREREPOR", OUTPUTCHANNEL1,ERRORTEXT)
+IF ERRORTEXT<>"" THEN CALL ERRORHANDLER
+OUTPUTOPEN(OUTPUTDEVREPORT,0,"Shares >=$100,000",
+             "SHAREREPOR", OUTPUTCHANNEL2,ERRORTEXT)
+IF ERRORTEXT<>"" THEN CALL ERRORHANDLER
+END
+
+PRINT TITLE="Shares <$50,000"
+HEADER="Account     ID           Balance"
+HEADER="--------------------------------"
+IF SHARE:BALANCE<$50,000.00 THEN
+  OUTPUTSWITCH(OUTPUTCHANNELDEFAULT,ERRORTEXT) 
+ ELSE IF SHARE:BALANCE<$100,000.00 THEN
+  OUTPUTSWITCH(OUTPUTCHANNEL1,ERRORTEXT) 
+ ELSE
+   OUTPUTSWITCH(OUTPUTCHANNEL2,ERRORTEXT) 
+  IF ERRORTEXT<>"" THEN CALL ERRORHANDLER
+  COL=1  ACCOUNT:NUMBER
+  COL=13 SHARE:ID
+  COL=32 SHARE:BALANCE
+  NEWLINE
+END
+
+PROCEDURE ERRORHANDLER
+  OUTPUTSWITCH(OUTPUTCHANNELDEFAULT,ERRORTEXTIGNORE)
+  PRINT "Error: "+ERRORTEXT
+  NEWLINE
+  TERMINATE
+END
+`+ CODEEND
+)
+powerOnFunctions.set("outputswitch", `
+# OUTPUTSWITCH
+---
+This function changes all subsequent output to a different output destination.
+
+### Syntax
+`+ CODESTART + `
+OUTPUTSWITCH(OutputChannel,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * OutputChannel
+    - The value returned from OUTPUTOPEN, or the value OUTPUTCHANNELDEFAULT to switch back to the specfile's default output.
+  * ErrorText
+    - A defined character variable; if an error occurs while processing the command, the variable is updated with a short error message; If there are no errors, the variable is blank
+
+### Example
+`+ CODESTART + `
+OUTPUTSWITCH(OUTPUTCHANNELDEFAULT,ERRORTEXT)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * Must be preceded by OUTPUTOPEN
+  * Must be followed by OUTPUTCLOSE
+
+### Extended Example
+The following batch specfile example shows one of the best uses for this functionality: splitting information into separate reports. This specfile produces three separate reports that break down shares by balance. Note that the TITLE attribute at the start of the PRINT division sets the title for the default output report.
+
+***Tip:*** The RD.OUTPUT.DEF #INCLUDE file contains the definition of OUTPUTCHANNELDEFAULT that can be used to switch back to the specfile's default output.
+`+ CODESTART + `
+TARGET=SHARE
+
+DEFINE
+   #INCLUDE "RD.OUTPUT.DEF"
+   OUTPUTCHANNEL1=NUMBER
+   OUTPUTCHANNEL2=NUMBER
+   ERRORTEXT=CHARACTER
+   ERRORTEXTIGNORE=CHARACTER
+END
+
+SETUP
+  OUTPUTOPEN(OUTPUTDEVREPORT,0,"Shares >=$50,000 <$100,000",
+             "SHAREREPOR", OUTPUTCHANNEL1,ERRORTEXT)
+  IF ERRORTEXT<>"" THEN CALL ERRORHANDLER
+  OUTPUTOPEN(OUTPUTDEVREPORT,0,"Shares >=$100,000",
+             "SHAREREPOR", OUTPUTCHANNEL2,ERRORTEXT)
+  IF ERRORTEXT<>"" THEN CALL ERRORHANDLER
+END
+ 
+PRINT TITLE="Shares <$50,000"
+ HEADER="Account     ID           Balance"
+ HEADER="--------------------------------"
+ IF SHARE:BALANCE<$50,000.00 THEN
+  OUTPUTSWITCH(OUTPUTCHANNELDEFAULT,ERRORTEXT) 
+ ELSE IF SHARE:BALANCE<$100,000.00 THEN
+  OUTPUTSWITCH(OUTPUTCHANNEL1,ERRORTEXT) 
+ ELSE
+   OUTPUTSWITCH(OUTPUTCHANNEL2,ERRORTEXT) 
+  IF ERRORTEXT<>"" THEN CALL ERRORHANDLER
+  COL=1  ACCOUNT:NUMBER
+  COL=13 SHARE:ID
+  COL=32 SHARE:BALANCE
+  NEWLINE
+END
+
+PROCEDURE ERRORHANDLER
+  OUTPUTSWITCH(OUTPUTCHANNELDEFAULT,ERRORTEXTIGNORE)
+  PRINT "Error: "+ERRORTEXT
+  NEWLINE
+  TERMINATE
+END
+`+ CODEEND
+)
+powerOnFunctions.set("passwordhash", `
+# PASSWORDHASH
+---
+This function encrypts access codes and home banking passwords.
+
+### Syntax
+`+ CODESTART + `
+PASSWORDHASH(expression)
+`+ CODEEND + `
+
+### Arguments
+  * Expression
+    - Produces either the original string or a 16-hexidecimal character string in which the first 64 bits and last 64 bits are XORed. The output is controlled by the HB/Audio Password Hash Code Miscellaneous Parameter.
+    - If the HB/Audio Password Hash Code parameter in Miscellaneous Parameters is set to (0) Do Not Hash Passwords or (2) Use Advance Hash, this function returns the original input string. When the parameter is set to (1) Use Modified MD5 Hash, this function returns an MD5 hash.
+
+### Example
+`+ CODESTART + `
+PASSWORDHASH(ACCESSCODECHR)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP, PRINT, or TOTAL divisions or in a procedure called by one of these divisions
+  * Use with MD5HASH
+
+### Extended Example
+`+ CODESTART + `
+TARGET=ACCOUNT
+
+DEFINE
+     ACCESSCODE=NUMBER
+     ACCESSCODECHR=CHARACTER(4)
+     HASHACCESSCODE=CHARACTER(16)
+     PASSWORD=CHARACTER(20)
+     HASHPASSWORD=CHARACTER(20)
+     ERRORTEXT=CHARACTER
+     ORD=NUMBER
+END
+
+SETUP
+    ACCESSCODE=ENTERCODE("Audio Access Code",9999,0)
+    PASSWORD=ENTERCHARACTER("HB Password",20,"")
+END
+
+PRINT TITLE="Hash Test"
+    ORD=0
+     FOR EACH PREFERENCE WITH ORD=0
+     DO
+    ORD=ORD+1
+ IF ACCESSCODE<>0 AND
+     ACCESSCODE<>1 AND
+     (ACCESSCODE<10 OR
+     ACCESSCODE>9998) THEN
+     HASHACCESSCODE=PREFERENCE:AUDIOACCESS
+     ELSE
+     DO
+     ACCESSCODECHR=FORMAT("9999",ACCESSCODE)
+    IF ACCESSCODE<10 THEN
+     HASHACCESSCODE=ACCESSCODECHR
+    ELSE
+     HASHACCESSCODE=PASSWORDHASH(ACCESSCODECHR)
+     END
+     END
+     UNTIL ORD>0
+ IF PASSWORD="" THEN
+     HASHPASSWORD=PASSWORD
+     ELSE
+     HASHPASSWORD=PASSWORDHASH(PASSWORD)
+ FMPERFORM REVISE PREFERENCE 0 (0,0,ERRORTEXT)
+     DO
+     SET AUDIOACCESS TO HASHACCESSCODE
+     SET HBPASSWORD TO HASHPASSWORD
+    END
+END
+`+ CODEEND
+)
+powerOnFunctions.set("popupmessage", `
+# POPUPMESSAGE
+---
+This function produces a message window over the current display. These windows allow you to display information at any time. You then click the accompanying OK button to proceed.
+
+### Syntax
+`+ CODESTART + `
+POPUPMESSAGE(MessageType,MessageText)
+`+ CODEEND + `
+
+### Arguments
+  * MessageType
+    - 0 = Information message
+    - 1 = Warning message
+    - 2 = Error message
+  * MessageText
+    - A 132-character string expression containing the text to display in a message box
+
+### Examples
+`+ CODESTART + `
+POPUPMESSAGE(0,"We're only working a half day today")
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP or PRINT divisions or in a procedure called by these divisions
+  * Only used in Windows environment after keyword WINDOWS
+  * Only used for demand specfiles
+
+### Extended Example
+The following are examples of the use of this command:
+
+`+ CODESTART + `
+ POPUPMESSAGE(0,"This is an information message")
+ POPUPMESSAGE(1,"This is a warning message") 
+ POPUPMESSAGE(2,"This is an error message!")
+`+ CODEEND
+)
+powerOnFunctions.set("print", `
+# PRINT
+---
+This function, used for displaying information, uses the next available column to print the value of a particular expression.
+
+### Syntax
+`+ CODESTART + `
+PRINT expression
+PRINT expression + expression
+`+ CODEEND + `
+
+### Function Information
+PRINT expression has the same meaning as COL=0; however, PRINT is the preferred usage.
+
+As with COL=0, the data printed in the next available column is always left-justified beginning in that column, regardless of the data type. If you need to override this justification, you must use the COL function.
+
+PRINT prints a floating point value with these elements:
+
+  * A leading plus or minus sign
+  * The first significant digit of the floating point value
+  * The decimal point and the rest of the value
+  * The letter E followed by a plus or minus sign
+  * The three-digit exponent
+
+PowerOn prints the value with a full 23 characters if it can without overlapping another field. For example, assume that you use the following print statement:
+
+`+ CODESTART + `
+PRINT 123.456E0
+`+ CODEEND + `
+
+This print statement produces the following output if space allows:
+
++1.234560000000000E+002
+
+PowerOn moves the decimal point to the right of the first significant digit. To do this, PowerOn moves the decimal two spaces to the left and adjusts the exponent accordingly by increasing it from 0 to +2. PowerOn fills the space between the last significant digit and the letter E with zeros to make 23 characters.
+
+If there is not enough space to print 23 characters, PowerOn truncates the digits from right to left until the value fits in the allotted space. PowerOn cannot print a floating point value unless there are at least nine columns. If there are only nine columns to print FLOATVARIABLE, PowerOn produces the following output:
+
++1.2E+002
+
+If there are not at least nine columns available, PowerOn prints asterisks (*) in the offending columns. This is a signal that you must alter the column spacing.
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * You can only concatenate character data (using the + between character expressions)
+  * With floating point data, you must have at least nine columns available, otherwise asterisks (*) are displayed signaling that you must alter the column spacing.
+  * There is a 132-character limit.
+
+### Examples
+You may want to place the parts of an address in a particular format. By using PRINT, you can position address combinations with a comma and space between the city and state (Line 13), and with spaces between the state and the ZIP Code (Line 15) without knowing the length of each of those character values.
+`+ CODESTART + `
+PRINT TITLE="ZIP LOCATIONS"
+   PRINT NAME:CITY
+   PRINT ", "
+   PRINT NAME:STATE
+   PRINT "    "
+   PRINT NAME:ZIPCODE
+   NEWLINE
+  END
+`+ CODEEND + `
+
+The example below gives the exact same printed result as above, but can be concatenated into a single PRINT statement since it is all character data.
+
+`+ CODESTART + `
+  PRINT TITLE="ZIP LOCATIONS"
+   PRINT NAME:CITY + ", " + NAME:STATE + "    " + NAME:ZIPCODE
+   NEWLINE
+  END
+`+ CODEEND
+)
+powerOnFunctions.set("pullcreditreport", `
+# PULLCREDITREPORT
+---
+This function queues custom requests to pull credit reports from a credit bureau, updates the value of the @CREDITREPORTERROR field with the result, and pulls identity verification information when used with ChexSystems.
+
+### Syntax
+`+ CODESTART + `
+PULLCREDITREPORT
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+ DO
+   INITCREDITREPORT(SOURCETYPE)
+   PRINTDONE=FALSE
+   WHILE PRINTDONE=FALSE
+    DO
+     CALL GETUSERINPUT
+     PULLCREDITREPORT
+     NEWPAGE
+     CALL PRINTRESULT
+`+ CODEEND + `
+
+***Tip:*** Similar to QUEUECREDITREPORT, with many more features.
+
+### Usage Information
+  * Use only in the SETUP or PRINT divisions or in a procedure called by these divisions
+  * Cannot be used in FOR EACH loops and procedures
+  * Cannot be used in memo mode
+  * Must follow INITCREDITREPORT
+  * If you are using the QualiFile feature of ChexSystems, you must set @CREDITREPORTOPFEATURECODE to Q
+
+***Tip:*** Create a Credit Report record from a transferred raw credit report downloaded from a third-party credit retrieval system.
+`)
+powerOnFunctions.set("pwr", `
+# PWR
+---
+This function returns the float value of raising one numeric value to the power of a second numeric value.
+
+### Syntax
+`+ CODESTART + `
+PWR(expression1,expression2)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+PWR(2,3)=2*2*2=8
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * Use only with NUMBER, CODE, FLOAT, or MONEY data types and expressions
+  * Handles powers that are not integers
+`)
+powerOnFunctions.set("queuecreditreport", `
+# QUEUECREDITREPORT
+---
+This function places a request online for the retrieval of a credit or ChexSystems report and optionally specifies an application ID from which to get secondary borrower or spouse information.
+
+### Syntax
+`+ CODESTART + `
+QUEUECREDITREPORT(CreditBureau,AppFlag,"AppID",ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * CreditBureau
+    - 1 = Experian
+    - 2 = Equifax
+    - 3 = Transunion
+    - 4 = ChexSystems
+  * AppFlag
+    - 0 = No associated loan application
+    - 1 = Associated loan application, you must specify the existing application ID
+  * AppID
+    - This is the ID of the loan application where the Finance records will be created. This field is a text field and therefore requires that you use quotes around the application ID ( "00" ).
+  * ErrorText
+    - The credit bureau code is required. Valid credit bureau codes are (1) Experian, (2) Equifax, (3) Transunion, and (4) ChexSystems. The application flag is specified as 0 if there is no associated loan application, and 1 if there is an associated loan application. The application ID must specify an existing application ID if the application flag is set to 1; otherwise it can be blank. When any of the passed values are invalid, or when any error condition arises, this function returns an error description.
+
+### Example
+`+ CODESTART + `
+QUEUECREDITREPORT(1,0,"00",ERRORTEXT)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP or PRINT divisions or in a procedure called by these divisions
+  * Uses the primary Name record on the member account for the information for the credit report
+  * Accessible only through MemberConnect Audio, MemberConnect-PC, and MemberConnect Web specfiles.
+  * The credit bureau code is required.
+  * If the application flag is set to 1 and the application ID specifies an existing application in the member account, the system includes in the retrieval request the secondary borrower or spouse information found in the first Application Person record with a person code of 1, 2, 3, or 4.
+  * If the application flag is set to 0 or the application ID does not exist, the system only pulls the credit report based on the primary Name record in the account.
+  * Many more features are available in the INITCREDITREPORT and PULLCREDITREPORT procedures and are most useful for queuing custom requests.
+  * You cannot use the QUEUECREDITREPORT procedure for TransUnion 4.1.
+  * You cannot use QUEUECREDITREPORT in an on-demand specfile when making a request with ChexSystems interface 5.1.
+`)
+powerOnFunctions.set("rate", `
+# RATE
+---
+This function converts a numeric or monetary value into a rate that can be assigned to a NUMBER or MONEY variable or can be printed. It is intended for use on an entire numeric expression. If you use this function on part of a compound expression, it can have unpredictable results.
+
+### Syntax
+`+ CODESTART + `
+RATE(expression)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+RATE(SHARE:BALANCE/5.000%)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP, SELECT, SORT, PRINT, or TOTAL divisions or in a procedure called by one of these divisions
+  * Conversion exceeding 2147.483% results in 0.00% and an out-of-bounds message on the batch output report (batch mode) or on the screen (on-demand)
+  * Results less than 0.001% print as 0.000%
+  * Uses a NUMBER or MONEY data type
+  * Converting a number or money value to a rate requires an additional adjustment to avoid an out-of-bounds result
+
+***Tip:*** Useful when performing an arithmetic operation using two different data types.
+
+### Converting to a Rate Value
+Converting to a rate value may require an additional adjustment. When PowerOn prints a rate, it immediately does the following:
+
+  * Multiplies the stored value by 100,000
+  * Inserts a decimal in front of the third digit from the right
+  * Places a percent sign at the end
+
+This standard procedure can be a problem for the RATE function because a number or money value comes in as an integer (no decimals). When you multiply the value by 100,000 and add the decimal and percent sign, it may be out of range for the rate data type.
+
+To avoid an out-of-bounds result, you may want to counteract the multiplication by 100,000 by dividing the number or money value by 100,000 before the conversion. See the examples below.
+
+#### Out of Bound Example
+`+ CODESTART + `
+RATE(345678)
+`+ CODEEND + `
+Calculation: 345678 * 100,000 = 34567800000
+
+Result: 34567800.000%, which is outside the maximum rate. Rate is Out of Bounds is displayed.
+
+#### Conversion Example
+`+ CODESTART + `
+RATE(345678/100000)
+`+ CODEEND + `
+Result: 345.678%.
+
+#### Money Value to Rate Example
+`+ CODESTART + `
+RATE($3.00/100000)
+`+ CODEEND + `
+Result: 0.300%
+
+#### Field Reference vs. Literal Example
+Assume the SHARE:BALANCE is $45,000.00.
+
+`+ CODESTART + `
+COL= 40 RIGHT RATE((SHARE:BALANCE/1000)/100000)
+`+ CODEEND + `
+Result: 4.500%.
+`)
+powerOnFunctions.set("rateread", `
+# RATEREAD
+---
+This function displays a prompt on the user's console and returns the operator's response as the value.
+
+### Syntax
+`+ CODESTART + `
+RATEREAD(prompt)
+`+ CODEEND + `
+
+### Arguments
+  * prompt
+    - Character line with maximum of 132 characters
+
+### Example
+`+ CODESTART + `
+RATEREAD("Enter Target Rate")
+`+ CODEEND + `
+
+### Usage Information
+  * Cannot be used in the TARGET division
+  * Cannot be used in the SELECT division
+  * A colon (:) is automatically included after the last word in the prompt when in text mode. If you type an additional colon after the prompt, it is ignored
+  * Use when you expect a response from the user
+  * Only used in batch specfiles
+  * Prompt should be a phrase or series of phrases that are meaningful to the computer operator. Each phrase in a prompt must be separated by commas and delineated by quotation marks
+
+***Important:*** The RATEREAD function displays in a batch program regardless of where it is in the specfile, even if it is inside of a comment or in a procedure that is not specifically called. If you want to keep the prompt in a comment, simply add a space between the data type and the word READ to prevent PowerOn from recognizing the function and displaying the prompt to the user.
+
+When the operator queues the specfile to run, PowerOn looks through the specfile for READ functions. If it finds any, PowerOn displays the prompts on the console so the operator can respond to them before the job runs. When a READ function is used in a specfile, there is no mechanism to skip it using a conditional statement. Each READ function requires a response. A job file may be used to pre-specify responses to READ functions.
+
+### Define Division Example
+The following example uses the DEFINE division to declare a rate variable and assign it the value of RATEREAD. The PRINT division uses that variable in a FOR EACH loop.
+`+ CODESTART + `
+TARGET=ACCOUNT
+`+ CODEEND + `
+
+DEFINE
+   YIELD=RATEREAD("Enter Target Yield")
+END
+   ...
+
+PRINT TITLE="Loans Meeting Target Yield"
+   FOR EACH LOAN WITH (YIELD<=LOAN:INTERESTRATE)
+     DO
+      ...
+
+### Selecting Target Record Example
+In this example, PowerOn selects the target record if the loan's interest rate is equal to the rate the operator entered in response to the Enter interest rate prompt:
+`+ CODESTART + `
+TARGET=LOAN
+
+SELECT
+   LOAN:INTERESTRATE=RATEREAD("Enter interest 
+  rate")
+   ...
+`+ CODEEND + `
+
+### If...Then...Else Example
+The following is an example of how you can use RATEREAD with an IF...THEN...ELSE statement:
+`+ CODESTART + `
+  IF GLSUBACCOUNT:RATE=
+    RATEREAD("Enter income rate") THEN
+   DO
+    ...
+   END
+  ELSE
+   DO
+    ...
+   END
+`+ CODEEND
+)
+powerOnFunctions.set("repeatchr", `
+# REPEATCHR
+---
+This function evaluates to a character value repeated a certain number of times.
+
+### Syntax
+`+ CODESTART + `
+REPEATCHR(CharacterValue,RepeatCount)
+`+ CODEEND + `
+
+### Arguments
+  * CharacterValue
+    - The character value to repeat
+  * RepeatCount
+    - The number of times to repeat the character value
+
+### Usage Information
+  * Use only in the SETUP, SELECT, SORT, PRINT, LETTER, or TOTAL divisions or in a procedure called by those divisions
+  * The REPEATCHR function will not print more than 132 characters
+    - A RepeatCount value in excess of 132 will not print at all
+    - A RepeatCount pattern will truncate after position 132
+    - No error message will be shown in the specfile error check because no attempt to calculate the output length is made
+
+### Header Line Example
+To create a header line composed of 80 dashes, use:
+
+`+ CODESTART + `
+HEADER=REPEATCHR("-",80)
+`+ CODEEND + `
+
+### Number Bar Example
+To print a number bar like 123456789012345678901234567890, use:
+
+`+ CODESTART + `
+PRINT REPEATCHR("1234567890",3)
+`+ CODEEND
+)
+powerOnFunctions.set("screenxypos", `
+# SCREENXYPOS
+---
+This function repositions the cursor for demand specfiles that are printed to the screen.
+
+### Syntax
+`+ CODESTART + `
+SCREENXYPOS (Column,Row)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+SCREENXYPOS(3,20)
+`+ CODEEND + `
+
+### Arguments
+  * Column
+    - The new column (x position) 1-80
+  * Row
+    - The new row (y position) 1-24
+
+### Usage Information
+  * Use only in the PRINT or TOTAL division or in a procedure called by those divisions
+  * Only used for demand specfiles
+
+You can combine ENTERLINE and ENTERDELIMITER with each other and the SCREENXYPOS command to implement sophisticated menus. SCREENXYPOS can paint a menu screen, then place the cursor at a specific location on the screen. You can use ENTERLINE to get the user's input and ENTERDELIMITER to implement arrow key support, or allow different actions to be taken based on which delimiter was pressed.
+`)
+powerOnFunctions.set("segment", `
+# SEGMENT
+---
+This function returns all the characters in a character expression from the starting position through the ending position.
+
+### Syntax
+`+ CODESTART + `
+SEGMENT(Expression,StartPosition,EndPosition)
+`+ CODEEND + `
+
+### Arguments
+  * Expression
+    - A character string or a field with a CHARACTER data type
+  * StartPosition
+    - A value (or expressions) that evaluate to a single number value
+  * EndPosition
+    - A value (or expressions) that evaluate to a single number value
+
+### Example
+`+ CODESTART + `
+PRINT SEGMENT(CHECK:REFERENCE,1,25)
+`+ CODEEND + `
+
+Print the first 25 characters of the Check Reference field.
+
+### Usage Information
+  * Use only in the SETUP, SELECT, PRINT, or TOTAL divisions or in a procedure called by one of these divisions
+  * You can segment only character fields
+  * You must designate the starting and ending positions with digits or with an arithmetic expression that evaluates to a numeric value
+  * Starting or ending positions that are out of bounds produce a blank result
+
+### Zip Code Example
+`+ CODESTART + `
+COL=1  SEGMENT(NAME:ZIPCODE,1,5)
+`+ CODEEND + `
+
+### First Initial Example
+`+ CODESTART + `
+COL=51 SEGMENT(NAME:FIRST,1,9)
+COL=61 SEGMENT(NAME:MIDDLE,1,1)
+COL=63 SEGMENT(NAME:LAST,1,15)
+COL=79 SEGMENT(NAME:SUFFIX,1,2)    
+`+ CODEEND + `
+
+### Last Two Letters of the Last Name
+The starting position is the length of the name minus one, giving you the position of the next-to-last character. The ending position is the length of the name, giving you the position of the last character.
+
+`+ CODESTART + `
+PRINT SEGMENT(NAME:LAST,LENGTH(NAME:LAST)-1,LENGTH(NAME:LAST))
+`+ CODEEND
+)
+powerOnFunctions.set("stopblink", `
+# STOPBLINK
+---
+This function cancels the BLINK statement.
+
+### Syntax
+`+ CODESTART + `
+STOPBLINK
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+BLINK
+PRINT "This member's ATM card was stolen!"
+STOPBLINK
+`+ CODEEND + `
+
+### Usage Information
+  * Functions in text mode only
+  * Use only in the SETUP or PRINT divisions or in a procedure called by these divisions
+  * Windows does not support blinking characters; the system displays characters in red when you use BLINK.
+  * For a specfile run in batch mode, does not affect how the report appears on paper
+
+### Extended Example
+`+ CODESTART + `
+  IF SHARE:BALANCE<0 THEN
+   DO
+    BLINK
+    PRINT "Negative Balance!"
+    STOPBLINK
+    BELL
+   END
+  NEWLINE
+`+ CODEEND
+)
+powerOnFunctions.set("suppressnewline", `
+# SUPPRESSNEWLINE
+---
+This function sends a line of print instructions to a laser printer to avoid exceeding the 132 character-per-line limit without moving to the next line.
+
+### Syntax
+`+ CODESTART + `
+SUPPRESSNEWLINE
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+HPYPOS(90)
+COL=20 "X Y Z  F e d e r a l  C r e d i t  U n i o n"
+SUPPRESSNEWLINE
+HPLINEDRAW(150,120,2250,120,6)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the PRINT or TOTAL division or in a procedure called by those divisions
+  * Unnecessary before each ENTER or SCREENXYPOS if you printed information previously without using NEWLINE
+  * If you create a report with lines greater than the 132-character limit, the report may not display properly and you may not receive an error in batch output.
+  * Allows an additional 132 characters by resetting the column counter to 1
+  * Unnecessary when using the following laser print specifications:
+    - HPBOXDRAW
+    - HPESC
+    - HPFONT
+    - HPLINEDRAW
+    - HPLINESPERINCH
+    - HPRESET
+    - HPSETUP
+    - HPUNDERLINE
+    - HPXPOS
+    - HPYPOS
+
+PowerOn can accept only 132 characters (non-printing or printing) before a NEWLINE must be printed. In rare cases, a long series of control characters may require you to exceed the 132-character limit. If necessary, use the SUPPRESSNEWLINE command to allow you to exceed the limit.
+
+***Tip:*** To move to the next line, use NEWLINE after SUPPRESSNEWLINE.
+
+### Characters-per-line Limit Example
+This specfile sends a long series of control character instructions to the printer. To ensure that there is no problem with the characters-per-line limit, the specfile uses SUPPRESSNEWLINE on lines 3 and 19, and on lines 8 and 15 (before and after each set of print instructions).
+`+ CODESTART + `
+PRINT TITLE="Loan Application rev. 11/96"
+   NONANSISTANDARD
+   SUPPRESSNEWLINE
+   PRINTCONTROL CTRLCHR(27)+"(s8T"
+   PRINTCONTROL CTRLCHR(27)+"(s8.1H"
+   PRINTCONTROL CTRLCHR(27)+"(s16.1V"
+   PRINTCONTROL CTRLCHR(27)+"(s3B"
+   SUPPRESSNEWLINE
+   PRINT COL=1 "X Y Z FEDERAL CREDIT UNION"
+   NEWLINE
+   PRINTCONTROL CTRLCHR(27)+"(s5T"
+   PRINTCONTROL CTRLCHR(27)+"(s10V"
+   PRINTCONTROL CTRLCHR(27)+"(s12H"
+   PRINTCONTROL CTRLCHR(27)+"(s3B"
+   SUPPRESSNEWLINE
+   PRINT COL=1 "1234 Random Road P.O. Box 54321 San Diego, CA
+               92123-4321  (619) 555-1212           "
+   PRINT SYSTEMDATE
+   SUPPRESSNEWLINE
+  ...
+`+ CODEEND + `
+
+### HP Print Specifications Example
+`+ CODESTART + `
+PROCEDURE PRINTFOOTER
+  
+   HPLINEDRAW(150,2900,2250,2900,6)
+   HPFONT(HPFONTARIAL,12)
+   HPYPOS(2960)
+   COL=35 "123 Main Street - San Diego, CA 92123 - (619) 123-4567"
+   SUPPRESSNEWLINE
+END
+`+ CODEEND
+)
