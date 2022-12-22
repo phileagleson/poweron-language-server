@@ -7161,3 +7161,228 @@ Prints the first character of the first name as an uppercase letter, and prints 
   ...
 `+ CODEEND
 )
+powerOnFunctions.set("md5hash", `
+MD5HASH
+---
+This function is used with the PASSWORDHASH function to encrypt audio access codes and home banking passwords.
+
+### Syntax
+`+ CODESTART + `
+MD5HASH(StringToHash)
+`+ CODEEND + `
+
+### Arguments
+  * StringToHash
+    - Returns 32 hexadecimal character string.
+
+### Example
+`+ CODESTART + `
+MD5HASH(NAME:SHORTNAME + NAME:SSN)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the PRINT division or in a procedure called by the PRINT division
+  * Bits 0 through 63 are Exclusive-OR (XOR) with bits 64 through 127 to yield a 64-bit string that is represented by a 16 hexadecimal character string
+  * Audio Access Codes are hashed using the number of digits set by the Audio Access Len Miscellaneous Parameter.
+  * Home banking passwords are hashed using a variable-length string without trailing spaces
+
+### Extended Example
+The MD5HASH function has a string expression (the string to hash) as its sole argument. The function returns a 32-character hexadecimal string. For example:
+Code
+`+ CODESTART + `
+TARGET=NAME
+
+DEFINE
+   DIGITALID=CHARACTER(32)
+END
+
+PRINT TITLE=""
+     DIGITALID=MD5HASH(NAME:SHORTNAME + NAME:SSN)
+     PRINT "The digital ID for " + NAME:SHORTNAME + " is " +    DIGITALID
+     NEWLINE
+END
+`+ CODEEND
+)
+powerOnFunctions.set("minute", `
+# MINUTE
+---
+This function returns the minute value (from 0 to 59) of a time expression stored in HHMM format.
+
+### Syntax
+`+ CODESTART + `
+MINUTE(expression)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+MINUTE(SYSACTUALTIME)
+`+ CODEEND + `
+
+### Usage Information
+  * Use in SETUP or SELECT divisions or in procedures called by those divisions
+  * Use only with NUMBER data type or CODE data type expressions
+  * Place a time expression in parentheses after MINUTE to find the minute value. The time expression must be a number or code value expressed in HHMM format. For example, if the current time is 2:40 p.m., the result of the following function is 40:
+
+### Extended Example
+The following example uses the HOUR and MINUTE functions to display a greeting that includes the current time:
+`+ CODESTART + `
+TARGET=ACCOUNT
+ 
+PRINT TITLE="Time of Day"
+  NEWLINE
+  NEWLINE
+  IF HOUR(SYSACTUALTIME)<12 THEN PRINT "Good Morning!"
+   ELSE IF HOUR(SYSACTUALTIME)<18 THEN PRINT "Good Afternoon!"
+       ELSE PRINT "Good Evening!"
+  NEWLINE
+  NEWLINE
+  PRINT "The current time is "
+  IF MINUTE(SYSACTUALTIME)=0 THEN
+  DO
+     PRINT "Exactly "
+     CALL PRINTHOUR
+     PRINT " o'clock"
+   END
+  ELSE IF MINUTE(SYSACTUALTIME)<30 OR MINUTE(SYSACTUALTIME)>30 THEN
+   DO
+     PRINT MINUTE(SYSACTUALTIME)
+     IF MINUTE(SYSACTUALTIME)=1 THEN PRINT " minute past "
+                              ELSE PRINT " minutes past "
+     CALL PRINTHOUR
+   END
+  ELSE IF MINUTE(SYSACTUALTIME)=30 THEN
+   DO
+     PRINT "half past "
+     CALL PRINTHOUR
+   END
+END
+  
+PROCEDURE PRINTHOUR
+  IF HOUR(SYSACTUALTIME)<13 THEN PRINT HOUR(SYSACTUALTIME)
+                          ELSE PRINT HOUR(SYSACTUALTIME)-12
+  IF HOUR(SYSACTUALTIME)<12 THEN PRINT " AM"
+                          ELSE PRINT " PM"
+END
+`+ CODEEND
+)
+powerOnFunctions.set("mod", `
+# MOD
+---
+This function returns the remainder after dividing one number by another.
+
+### Syntax
+`+ CODESTART + `
+MOD(expN1,expN2)
+`+ CODEEND + `
+
+***Important:*** This is commonly thought of as the "remainder" when dividing expN1 by expN2.
+
+### Example
+`+ CODESTART + `
+MOD(5,1)=0
+MOD(5,2)=1
+MOD(5,5)=0
+MOD(5,6)=5
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in SETUP, PRINT, and TOTAL divisions or in a procedure called by one of these divisions
+  * You must follow the MOD keyword with parentheses that enclose two expressions with a data type of NUMBER data type, MONEY data type, or FLOAT data type separated by a comma.
+  * Values above the maximum parameters for each variable type used will result in errors.
+
+***Tip:*** The result of a MOD function is a FLOAT data type; convert the result to a monetary value using the MONEY function or to a numeric value using the NUMBER function.
+
+### Extended Example
+Enter two number, money, or floating point expressions, separated by a comma, in parentheses after MOD to get the modulo ("remainder") of the first expression divided by the second.
+`+ CODESTART + `
+  MOD(5,2) = 1.0E+0
+  MOD(2.5,.75) = 2.5E-1
+  MOD(27,3) = 0E+0
+  MOD($25.60,$12.00) = 1.60E+2
+  MOD(($25.60),($12.00)) = 1.60E+2
+`+ CODEEND + `
+
+This function is useful for determining the remainder of amounts not equally divisible by a given amount, as in the following example:
+
+`+ CODESTART + `
+AVAILAMOUNT=$25.60
+GIFTCERT=$12.00
+PRINT "You can purchase "
+NUMGIFTS = NUMBER(AVAILAMOUNT / GIFTCERT)
+PRINT NUMGIFTS
+PRINT " "
+PRINT GIFTCERT
+PRINT " gift certificates with "
+REMAINDER=MOD(AVAILAMOUNT,GIFTCERT)
+PRINT MONEY(REMAINDER)
+PRINT " left over." 
+NEWLINE
+`+ CODEEND + `
+This would produce the following:
+\`\`\`
+You can purchase 2 12.00 gift certificates with 1.60 left over.
+\`\`\`
+`)
+powerOnFunctions.set("money", `
+# MONEY
+---
+This function converts a number, code, float, or rate value into a monetary value that can be assigned to a variable type number or can be printed. It is intended for use on an entire numeric expression. If you use it on part of a compound expression, it can have unpredictable results.
+
+### Syntax
+`+ CODESTART + `
+MONEY(expression)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+MONEY(LOAN:INTERESTRATE)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP, SELECT, SORT, PRINT, LETTER, or TOTAL divisions or in a procedure called by those divisions
+  * Uses only NUMBER, CODE, FLOAT, or RATE data types
+*
+The expression you want to convert must have a NUMBER data type, CODE data type, FLOAT data type, or RATE data type, and you must enclose it in parentheses after the keyword MONEY. The purpose of this function is to give PowerOn user as much flexibility as possible.
+
+This function can be helpful when performing an arithmetic operation with two different data types. For example, the normal result of dividing a number value by a money value is a rate value. If you want to print the result as a monetary value, use the MONEY function to convert the data type of the result.
+
+#### Numeric Value to Money Example
+The result of the following conversion of a numeric value to money is $3.00:
+
+`+ CODESTART + `
+19  COL=25 MONEY(300)
+`+ CODEEND + `
+
+The conversion to money assumes that the last two digits are cents.
+
+#### Rate to Monetary Value Example
+Converting a rate to a monetary value may require an additional adjustment. If the rate value of LOAN:INTERESTRATE is 7.385%, PowerOn recognizes the value you want to convert with the MONEY function as 0.07385, and the result prints as $0.00.
+
+`+ CODESTART + `
+19  COL=25 MONEY(LOAN:INTERESTRATE)
+`+ CODEEND + `
+
+Because PowerOn stores money data as an integer value of cents (with no decimals), when we give the MONEY function a value such as 0.07385, it cuts off the decimal value. As a result, the MONEY function is now working with a value of 0. It then converts 0 cents to dollars and gets $0.00.
+
+If you multiply a rate by a power of 10 before you invoke the MONEY function, you can move the decimal and get a more meaningful monetary value. However, if you multiply a rate by 100,000 before you invoke the MONEY function, you move the decimal to the end of the rate:
+
+`+ CODESTART + `
+19  COL=25 MONEY(LOAN:INTERESTRATE * 100000)
+`+ CODEEND + `
+This time the specfile gives the MONEY function the value of 7385 instead of .07385. There is no decimal to cut off, and PowerOn converts the 7385 cents to $73.85. You may need to multiply the rate by some power of 10 to obtain the conversion you want. You can obtain other results as listed here:
+
+`+ CODESTART + `
+MONEY(INTERESTRATE * 100) results in $0.07
+MONEY(INTERESTRATE * 1000) results in $0.73
+MONEY(INTERESTRATE * 10000) results in $7.38
+`+ CODEEND + `
+
+#### Number and Money Data Types to Rate Data Type Example
+If NUMSHARES is a number and TOTALWITHHELD is money, the result of (NUMSHARES/TOTALWITHHELD) is normally a rate. If the value of the expression (NUMSHARES/TOTALWITHHELD) is 35.912%, the result of the following conversion is $359.12:
+
+`+ CODESTART + `
+19 COL=25 MONEY((NUMSHARES/TOTALWITHHELD)*100000)
+`+ CODEEND + `
+
+If you do not do the additional multiplication, PowerOn converts the rate .35912 to $0.00. Again, the purpose of this function is to allow you flexibility.
+`)

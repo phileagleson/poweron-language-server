@@ -51,7 +51,7 @@ import loanRecordFieldsJson = require('../completions/loanRecordFields.json')
 
 import snippetJson = require('../completions/snippets.json')
 import { nodeAtPoint, wordAtPoint } from "../analyze"
-import { loanRecordFields } from "../documentation/loanRecordFields"
+//import { loanRecordFields } from "../documentation/loanRecordFields"
 
 interface JSONData {
   label: string
@@ -117,6 +117,7 @@ export function getCompletionHandler(context: Context) {
     const triggerCharacter = params.context?.triggerCharacter
     if (!triggerCharacter) {
       const word = wordAtPoint(params.position.line, params.position.character, params.textDocument.uri, context)
+      context.connection.console.log(`word: ${word}`)
       if (word) {
         switch (word) {
           case 'each':
