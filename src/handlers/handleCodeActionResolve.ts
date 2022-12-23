@@ -1,6 +1,5 @@
-import { MessageActionItem, MessageType, RequestHandler, ResponseError, ShowMessageRequestParams, TextDocumentEdit, URI, WorkspaceEdit } from 'vscode-languageserver'
+import { MessageActionItem, MessageType, RequestHandler, ShowMessageRequestParams, TextDocumentEdit, URI, WorkspaceEdit } from 'vscode-languageserver'
 import { CodeAction } from 'vscode-languageserver-types'
-import { SyntaxNode } from 'web-tree-sitter'
 import { Context } from '../interfaces'
 import { DEFINETITLE } from './handleCodeAction'
 
@@ -20,18 +19,16 @@ export function getCodeActionResolveHandler(context: Context): RequestHandler<Co
     const poweron = tree.getLanguage()
     let queryString = `(define_division) @div`
     let query = poweron.query(queryString)
-    let defineDiv = null
     let line = -1
     let character = -1
     let defineDivFound = false
     query.captures(tree.rootNode).forEach(cap => {
-     defineDiv = cap
      defineDivFound = true
      line = cap.node.endPosition.row
      character = cap.node.endPosition.column
     })
 
-    if (!defineDiv) {
+    if (!defineDivFound) {
      alertUser(context, "Define Division NOT Found", MessageType.Error)
      return {
       title: params.title
@@ -51,29 +48,30 @@ export function getCodeActionResolveHandler(context: Context): RequestHandler<Co
       }
      }
     })
-    const newLine = ` ${data.varName}=${res.title}\nEND`
-    const result: WorkspaceEdit = {}
-    const edit: TextDocumentEdit = {
-     textDocument: {
-      uri: data.uri,
-      version: null
-     },
-     edits: [{
-      range: {
-       start: {
-        line,
-        character: 0
-       },
-       end: {
-        line,
-        character
-       }
-      },
-      newText: newLine
-     }]
-    }
-    result.documentChanges = [edit]
+
     if (!varFound && defineDivFound) {
+     const newLine = ` ${data.varName}=${res.title}\nEND`
+     const result: WorkspaceEdit = {}
+     const edit: TextDocumentEdit = {
+      textDocument: {
+       uri: data.uri,
+       version: null
+      },
+      edits: [{
+       range: {
+        start: {
+         line,
+         character: 0
+        },
+        end: {
+         line,
+         character
+        }
+       },
+       newText: newLine
+      }]
+     }
+     result.documentChanges = [edit]
      return {
       title: params.title,
       edit: result

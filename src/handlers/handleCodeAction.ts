@@ -21,7 +21,7 @@ export function getCodeActionHandler(context: Context) {
   }
 
   const node = nodeAtPoint(params.range.start.line, params.range.start.character, params.textDocument.uri, context)
-  if (node && node.type.toString() === `identifier` && node.parent && node.parent.type.toString() === 'assignment_expression') {
+  if (node && node.type.toString() === `identifier`) {
    const addToDefineAction: CodeAction = {
     title: DEFINETITLE,
     kind: CodeActionKind.RefactorRewrite,
