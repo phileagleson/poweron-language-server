@@ -4,69 +4,71 @@ import { Context } from "../interfaces";
 import { initializeParser } from "../parser";
 
 const fileOperationFilter: FileOperationFilter = {
-  pattern: {
-    glob: '**/*.{git}',
-    options: { ignoreCase: true },
-  }
+ pattern: {
+  glob: '**/*.{git}',
+  options: { ignoreCase: true },
+ }
 }
 
 const folderOperationFilter: FileOperationFilter = {
-  pattern: {
-    glob: '**/*'
-  }
+ pattern: {
+  glob: '**/*'
+ }
 }
 
 export function getInitializeHandler(context: Context) {
 
-  return async function handleInitialize(
-    params: InitializeParams,
-    _cancel: CancellationToken,
-    progressReporter: WorkDoneProgressReporter,
-  ): Promise<InitializeResult> {
-    progressReporter.begin('Initializing')
+ return async function handleInitialize(
+  params: InitializeParams,
+  _cancel: CancellationToken,
+  progressReporter: WorkDoneProgressReporter,
+ ): Promise<InitializeResult> {
+  progressReporter.begin('Initializing')
 
-    const parser = await initializeParser()
+  const parser = await initializeParser()
 
-    context.capabilities = params.capabilities
-    context.parser = parser
+  context.capabilities = params.capabilities
+  context.parser = parser
 
-    const result: InitializeResult = {
-      capabilities: {
-        textDocumentSync: TextDocumentSyncKind.Full,
-        completionProvider: {
-          resolveProvider: false,
-          triggerCharacters: [':', '='],
-        },
-        definitionProvider: true,
-        codeActionProvider: true,
-        documentHighlightProvider: false,
-        documentSymbolProvider: false,
-        workspaceSymbolProvider: false,
-        referencesProvider: true,
-        hoverProvider: true,
-        renameProvider: { prepareProvider: false },
-        documentFormattingProvider: false,
-        workspace: {
-          fileOperations: {
-            willDelete: {
-              filters: [fileOperationFilter, folderOperationFilter]
-            },
-            didDelete: {
-              filters: [fileOperationFilter, folderOperationFilter]
-            },
-            didCreate: {
-              filters: [fileOperationFilter]
-            },
-            didRename: {
-              filters: [fileOperationFilter, folderOperationFilter]
-            },
-          }
-        }
-      }
+  const result: InitializeResult = {
+   capabilities: {
+    textDocumentSync: TextDocumentSyncKind.Full,
+    completionProvider: {
+     resolveProvider: false,
+     triggerCharacters: [':', '='],
+    },
+    definitionProvider: true,
+    codeActionProvider: {
+     resolveProvider: true
+    },
+    documentHighlightProvider: false,
+    documentSymbolProvider: false,
+    workspaceSymbolProvider: false,
+    referencesProvider: true,
+    hoverProvider: true,
+    renameProvider: { prepareProvider: false },
+    documentFormattingProvider: false,
+    workspace: {
+     fileOperations: {
+      willDelete: {
+       filters: [fileOperationFilter, folderOperationFilter]
+      },
+      didDelete: {
+       filters: [fileOperationFilter, folderOperationFilter]
+      },
+      didCreate: {
+       filters: [fileOperationFilter]
+      },
+      didRename: {
+       filters: [fileOperationFilter, folderOperationFilter]
+      },
+     }
     }
-
-    progressReporter.done()
-    return result
+   }
   }
+
+  progressReporter.done()
+  return result
+ }
 }
 

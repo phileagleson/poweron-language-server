@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
 import {
-  createConnection,
-  TextDocuments,
-  ProposedFeatures,
+ createConnection,
+ TextDocuments,
+ ProposedFeatures,
 } from 'vscode-languageserver/node'
 
 import {
-  TextDocument
+ TextDocument
 } from 'vscode-languageserver-textdocument'
 
 import { getInitializeHandler } from './handlers/handleInitialize'
@@ -25,64 +25,69 @@ import { getChangeConfigurationHandler } from './handlers/handleChangeConfigurat
 import { getCreateFliesHandler } from './handlers/handleCreateFiles'
 import { getWillDeleteFilesHandler, getDidDeletFilesHandler } from './handlers/handleDeleteFiles'
 import { getRenameFilesHandler } from './handlers/handleRenameFiles'
+import { getCodeActionResolveHandler } from './handlers/handleCodeActionResolve'
 
 
 const context = {
-  connection:
-    require.main === module
-      ? createConnection(ProposedFeatures.all)
-      : createConnection(process.stdin, process.stdout),
-  documents: new TextDocuments(TextDocument),
-  capabilities: {},
-  parser: {},
-  trees: {},
-  symbols: {},
+ connection:
+  require.main === module
+   ? createConnection(ProposedFeatures.all)
+   : createConnection(process.stdin, process.stdout),
+ documents: new TextDocuments(TextDocument),
+ capabilities: {},
+ parser: {},
+ trees: {},
+ symbols: {},
 
 } as Context
 
 function registerHandlers() {
-  const { connection, documents } = context
+ const { connection, documents } = context
 
-  const handleInitialize = getInitializeHandler(context)
-  const handleInitialized = getInitializedHandler(context)
-  const handleCreateFiles = getCreateFliesHandler(context)
-  const handleDidChangeContent = getDidChangeContentHandler(context)
-  const handleCompletion = getCompletionHandler(context)
-  const handleDefinition = getDefinitionHandler(context)
-  const handleReferences = getReferenceHandler(context)
-  const handleHover = getHoverHandler(context)
-  const handleCodeAction = getCodeActionHandler(context)
-  const handlePrepareRename = getPrepareRenameHandler(context)
-  const handleRename = getRenameHandler(context)
-  const handleChangeConfiguration = getChangeConfigurationHandler(context)
-  const handleWillDeleteFiles = getWillDeleteFilesHandler(context)
-  const handleDidDeleteFiles = getDidDeletFilesHandler(context)
-  const handleRenameFiles = getRenameFilesHandler(context)
+ const handleInitialize = getInitializeHandler(context)
+ const handleInitialized = getInitializedHandler(context)
+ const handleCreateFiles = getCreateFliesHandler(context)
+ const handleDidChangeContent = getDidChangeContentHandler(context)
+ const handleCompletion = getCompletionHandler(context)
+ const handleDefinition = getDefinitionHandler(context)
+ const handleReferences = getReferenceHandler(context)
+ const handleHover = getHoverHandler(context)
+ const handleCodeAction = getCodeActionHandler(context)
+ const handleCodeActionResolve = getCodeActionResolveHandler(context)
+ const handlePrepareRename = getPrepareRenameHandler(context)
+ const handleRename = getRenameHandler(context)
+ const handleChangeConfiguration = getChangeConfigurationHandler(context)
+ const handleWillDeleteFiles = getWillDeleteFilesHandler(context)
+ const handleDidDeleteFiles = getDidDeletFilesHandler(context)
+ const handleRenameFiles = getRenameFilesHandler(context)
 
-  connection.onInitialize(handleInitialize)
-  connection.onInitialized(handleInitialized)
-  documents.onDidChangeContent(handleDidChangeContent)
-  connection.onCompletion(handleCompletion)
-  connection.onDefinition(handleDefinition)
-  connection.onReferences(handleReferences)
-  connection.onHover(handleHover)
-  connection.onCodeAction(handleCodeAction)
-  connection.onPrepareRename(handlePrepareRename)
-  connection.onRenameRequest(handleRename)
-  connection.onDidChangeConfiguration(handleChangeConfiguration)
+ connection.onInitialize(handleInitialize)
+ connection.onInitialized(handleInitialized)
+ documents.onDidChangeContent(handleDidChangeContent)
+ connection.onCompletion(handleCompletion)
+ connection.onDefinition(handleDefinition)
+ connection.onReferences(handleReferences)
+ connection.onHover(handleHover)
+ connection.onCodeAction(handleCodeAction)
+ //connection.onCodeActionResolve(handleCodeActionResolve)
+ connection.onPrepareRename(handlePrepareRename)
+ connection.onRenameRequest(handleRename)
+ connection.onDidChangeConfiguration(handleChangeConfiguration)
+ connection.onRequest('codeAction/resolve', handleCodeActionResolve)
 
-  connection.workspace.onDidCreateFiles(handleCreateFiles)
-  connection.workspace.onWillDeleteFiles(handleWillDeleteFiles)
-  connection.workspace.onDidDeleteFiles(handleDidDeleteFiles)
-  connection.workspace.onDidRenameFiles(handleRenameFiles)
+
+ connection.workspace.onDidCreateFiles(handleCreateFiles)
+ connection.workspace.onWillDeleteFiles(handleWillDeleteFiles)
+ connection.workspace.onDidDeleteFiles(handleDidDeleteFiles)
+ connection.workspace.onDidRenameFiles(handleRenameFiles)
 }
 
 export function main() {
-  const { documents, connection } = context
+ const { documents, connection } = context
 
-  registerHandlers()
-  documents.listen(connection)
-  connection.listen()
+ registerHandlers()
+ documents.listen(connection)
+ connection.listen()
 }
 
 if (require.main === module) main()

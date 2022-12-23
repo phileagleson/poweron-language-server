@@ -47,14 +47,37 @@ import { siteRecordFields } from "../documentation/siteRecordFields"
 import { cashOrderTypeRecordFields } from "../documentation/cashOrderTypeRecordFields"
 import { externalAccountRecordFields } from "../documentation/externalAccountRecordFields"
 import { batchACHOriginationRecordFields } from "../documentation/batchACHOriginationRecordFields"
-
+import { recordTypes } from "../documentation/recordTypes"
 
 export function getHoverHandler(context: Context) {
 
  return function handleHover(params: HoverParams): Hover | null {
   const node = nodeAtPoint(params.position.line, params.position.character, params.textDocument.uri, context)
   if (!node) return null
-  if (node.type.toString() === 'poweron_function' || node.parent?.type.toString() === 'poweron_function') {
+  if (node.type.toString() === 'record_type') {
+   const mdContent = recordTypes.get(node.text.trim().toLowerCase())
+
+   if (!mdContent) return null
+   const contents: MarkupContent = {
+    kind: MarkupKind.Markdown,
+    value: mdContent
+   }
+
+   return {
+    contents,
+    range: {
+     start: {
+      line: node.startPosition.row,
+      character: node.startPosition.column
+     },
+     end: {
+      line: node.endPosition.row,
+      character: node.endPosition.column
+     }
+    }
+
+   }
+  } else if (node.type.toString() === 'poweron_function' || node.parent?.type.toString() === 'poweron_function') {
    let funcName = wordAtPoint(params.position.line, params.position.character, params.textDocument.uri, context)
    if (node && (node.type.toString() === 'fmperform' ||
     node.type.toString() === 'tranperform' ||
