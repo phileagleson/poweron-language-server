@@ -6929,6 +6929,38 @@ INITSUBROUTINE(ERRORTEXT)
   NEWLINE
 `+ CODEEND
 )
+powerOnFunctions.set("insertqueue", `
+# INSERT [INTO] QUEUE
+---
+This function adds a loan application to the list of applications awaiting processing in specfiles that use FMPERFORM.
+
+### Syntax
+`+ CODESTART + `
+INSERT QUEUE <n> PRIORITY <m>
+`+ CODEEND + `
+
+or
+
+`+ CODESTART + `
+INSERT INTO QUEUE <n> PRIORITY <m>
+`+ CODEEND + `
+
+Where n is an expression that evaluates to the queue number between 0 and 799 (inclusive), and m is an expression that evaluates to the priority from 0 through 1 (lowest to highest).
+
+### Example
+`+ CODESTART + `
+FMPERFORM REVISE LOANAPP LOC AFTERLAST (0, 0, Error_Text)
+DO
+ INSERT [INTO] QUEUE 100 PRIORITY 1
+END
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the PRINT or TOTAL division or in a procedure called by those divisions
+  * Use only when an Application record is revised using FMPERFORM
+
+When the FM record type is LOANAPP, the first statement in the FMPERFORM block after the word DO can be a directive to insert the application into a queue. When inserting a loan application into a loan officer's queue, no other field revisions are required in the FMPERFORM block. When an Application record is deleted using FMPERFORM, the record is automatically removed from the queue.
+`)
 powerOnFunctions.set("int", `
 # INT
 ---
@@ -8562,6 +8594,1057 @@ PROCEDURE PRINTFOOTER
    HPYPOS(2960)
    COL=35 "123 Main Street - San Diego, CA 92123 - (619) 123-4567"
    SUPPRESSNEWLINE
+END
+`+ CODEEND
+)
+powerOnFunctions.set("sysusername", `
+# SYSUSERNAME
+---
+This function returns the user name associated with a given user number.
+
+If no user name is defined for the specified user number, a blank value is returned. When used in demand mode with SYSUSERNUMBER as its argument, the name of the user running the demand specfile is returned.
+
+### Syntax
+`+ CODESTART + `
+SYSUSERNAME(arithmetic expression)
+`+ CODEEND + `
+
+#### Example
+`+ CODESTART + `
+SYSUSERNAME(33)
+`+ CODEEND + `
+
+#### Extended Example
+The following specfile line prints the name of the user currently running PowerOn in demand mode:
+
+`+ CODESTART + `
+PRINT SYSUSERNAME(SYSUSERNUMBER)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP, SELECT, PRINT, or TOTAL divisions or in a procedure called by one of these divisions
+`)
+powerOnFunctions.set("total", `
+# TOTAL
+---
+This function identifies and labels a monetary or numeric expression that you want to total in the standard subtotals or standard grand totals.
+
+### Syntax
+`+ CODESTART + `
+TOTAL=literal
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+PRINT LOAN:BALANCE TOTAL="Total Loan Balance:"
+PRINT COL=15 LOAN:BALANCE TOTAL="Total Loan Balance:"
+COL=15 LOAN:BALANCE TOTAL="Total Loan Balance:"
+SUPPRESS LOAN:BALANCE TOTAL="Total Loan Balance:"
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the PRINT division or in a procedure called by the PRINT division
+  * Do not confuse the TOTAL= statement with the keyword TOTAL used as a division title
+  * Place after the numeric or monetary expression that you want to total, but before the next print statement.
+  * Use no more than 50 times in one specfile
+  * Expressions must use Money or Number data types
+  * Cannot use in the HEADERS or TRAILERS subsections
+  * Place a colon after the literal
+
+***Tip:*** If you use the SUBTOTAL sort key option in the SORT division, use TOTAL= at each subtotal break. These totals are not available for printing in the TOTAL division: you must accumulate these totals in a variable.
+
+#### Summary Report without Detail Example
+Sorts the selected Loan records by approval code. The SUBTOTAL sort key option (lines 6 and 12) creates subtotal breaks for each approval code and for the "Charged Off" and "Not Charged Off" categories. Note that the use of TOTAL= on line 16 forces PowerOn to print subtotals and grand totals for the Loan Balance field.
+`+ CODESTART + `
+TARGET=LOAN
+
+SELECT
+   LOAN:CLOSEDATE='--/--/--'
+END
+
+SORT
+   LOAN:APPROVALCODE SUBTOTAL="All Loans for
+     Approval Code:"
+   IF LOAN:CHARGEOFFDATE<>'--/--/--' THEN
+    "Charged Off"
+   ELSE
+    "Not Charged Off"
+   SUBTOTAL="Loans That Are:"
+END
+
+PRINT TITLE="Charge Off Loans by Approval Code"
+   HEADER=" "
+   COL=20 LOAN:BALANCE TOTAL="Total Loan Balance:"
+END
+`+ CODEEND + `
+
+**Result:**
+\`\`\`
+XYZFCU  Charge Off Loans by Approval Code    Seq 9999 12/31/95 Page 1
+ 
+Loans That Are:                                           Charged Off
+Count:                                                              1
+Total Loan Balance:                                          2,343.80
+ 
+Loans That Are:                                       Not Charged Off
+Count:                                                             20
+Total Loan Balance:                                         35,000.00
+ 
+All Loans for Approval Code:                                      077
+Count:                                                             21
+Total Loan Balance:                                         37,343.80
+ 
+Totals for Entire Report
+Selected Record Count:                                            100
+Total Loan Balance:                                        753,728.70
+\`\`\`
+
+### Detail, Subtotals, and Grand Total Example
+`+ CODESTART + `
+  TARGET=CHECK
+ 
+  SELECT
+   CHECK:STATUS=1 OR
+   (CHECK:STATUS=3 AND
+    MONTH(CHECK:RECONCILIATIONDATE)=
+     NUMBERREAD("Reconciliation Month") AND
+    YEAR(CHECK:RECONCILIATIONDATE)=
+     NUMBERREAD("Reconciliation Year"))
+  END
+
+  SORT
+   CHECK:ACCOUNTCODE SUBTOTAL="Checking Account:"
+  END
+
+  PRINT TITLE="Checks Reconciled and Outstanding"
+   HEADER="Number     Issue DT Recon DT  Amount
+        Payee"
+   HEADER="-----------------------------------------------
+  -----------"
+   COL=1  LEFT  CHECK:NUMBER
+   COL=17 RIGHT CHECK:POSTDATE
+   COL=26 RIGHT CHECK:RECONCILIATIONDATE
+   COL=40 RIGHT CHECK:AMOUNT
+   COL=43 LEFT  CHECK:PAYEE:1
+   SUPPRESS IF CHECK:STATUS=1 THEN CHECK:AMOUNT 
+    TOTAL="Issued:"
+   SUPPRESS IF CHECK:STATUS=3 THEN CHECK:AMOUNT
+    TOTAL="Reconciled:"
+  END
+`+ CODEEND + `
+
+**Result:**
+\'\'\'
+XYZFCU         Checks Reconciled and Outstanding       Seq 9999 12/31/95 Page 4
+ 
+Number     Issue Dt Recon DT  Amount      Payee
+-----------------------------------------------
+0000012345 09/01/95 --/--/--        45.89 Robert Jones
+0000023456 09/14/95 --/--/--        15.00 Mike Stone
+0000072736 08/01/95 09/20/95       110.25 Boyd Properties
+-----------------------------------------------
+Checking Account:	                                                           15
+Count:		                                                            3
+Issued:		                                                        61.04
+Reconciled:                                                             110.25
+-----------------------------------------------
+0000022345 09/01/95 --/--/--        45.00 Michelle James
+0000043456 09/14/95 09/29/95       115.00 Stone Printing
+0000092736 07/01/95 09/20/95        10.25 Bond Paper Co
+-----------------------------------------------
+Checking Account:	                                                          16
+Count:	 	                                                            3
+Issued:		                                                        45.00
+Reconciled:                                                             125.25
+-----------------------------------------------
+-----------------------------------------------
+Totals for Entire Report
+Selected Record Count:                                                     101
+Issued:		                                                     3,461.04
+Reconciled:                                                           5,340.25
+\`\`\`
+
+### Special Uses Example
+If you want to total a value that you do not want to print, use SUPPRESS with TOTAL:
+
+`+ CODESTART + `
+ SUPPRESS LOAN:BALANCE TOTAL="Total Loan Balance:"
+`+ CODEEND + `
+
+**Result:** The system totals the loan balance for all selected records, without displaying any record's detail, and then displays the total at the end of the report as Total Loan Balance .
+
+If you want to count the number of times a statement is run, use SUPPRESS 1 for the expression value, along with the TOTAL statement.
+
+`+ CODESTART + `
+ SUPPRESS IF DDATE>=STARTDATE AND DDATE<=ENDDATE THEN 1 TOTAL="Number within the date range:"
+`+ CODEEND + `
+
+**Result:** The number of times this statement is run is counted (once for each time the DDATE variable is within the STARTDATE and ENDDATE variables) and then the total at the end of the report as Number within the date range is displayed.
+
+### The Standard Subtotals Format Example
+\`\`\`
+Loans That Are1:                             Charged Off2
+Count3:                                               14
+Total Loan Balance5:                           2,343.806
+\`\`\`
+1. The character literal you identify as the label for the subtotals with the SUBTOTAL= sort key option
+2. The value of the sort key at this break in the report
+3. A standard label to identify where the item count prints
+4. The number of records that qualified in this category
+5. The character literal you identify as the label for a monetary or numeric total
+6. The subtotal amount of the monetary or numeric item that corresponds to the label on the left
+
+If you do not identify any monetary or numeric totals with the TOTAL= print statement option, this item will not appear in the subtotal format.
+`)
+powerOnFunctions.set("trailers", `
+# TRAILERS
+---
+This function prints the statement at the bottom of the last page before the grand totals, and before each subtotal break (if you set up subtotals in the SORT division).
+
+### Syntax
+`+ CODESTART + `
+TRAILERS
+ statements
+END
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+TRAILERS
+  PRINT "= = = = = = = = = = = = = = = = = = = = = = = ="
+END
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the PRINT or TOTAL division or in a procedure called by those divisions
+  * Must be used in conjunction with the HEADERS subsection
+  * Trailer is limited to 132 characters per line
+  * Can include FOR EACH, ANY, or TOTAL=
+  * Use NEWLINE after each line of print statements to accommodate more than one trailer line
+
+***Tip:*** Use at the beginning of the PRINT division to set up the initial trailer line. You can change the trailer by inserting another HEADERS/TRAILERS section in another part of the PRINT division, in the TOTAL division, or in a procedure. Use NEWPAGE to force a new trailer to the next page of a report.
+
+### Extended Example
+`+ CODESTART + `
+PRINT TITLE="VISA CARDHOLDERS - ALPHABETICAL"
+   HEADERS
+    PRINT "Account          Name            "
+    NEWLINE
+    PRINT "---------------------------------"
+    NEWLINE
+   END
+   TRAILERS
+    PRINT "================================="
+   END
+   ...
+`+ CODEEND + `
+
+**Result:**
+
+\`\`\`
+XYZFCU         VISA CARDHOLDERS - ALPHABETICAL        Seq 9999 10/31/96 Page 4
+ 
+Account           Name
+---------------------------------
+0000012345        Robert Farmes
+0000023456        Mike Farnold
+0000072736        Boyd Fazuolo
+=================================
+Letter:                                                                      F
+Count:                                                                       6
+000012343        Robert George
+0000023458        Matilda Gills
+0000072700        Gerald Guida
+=================================
+Letter:                                                                      G
+Count:                                                                       3
+================================
+Totals for Entire Rept
+Selected Record Count:                                             
+\`\`\`
+`)
+powerOnFunctions.set("tranperform", `
+# TRANPERFORM
+---
+This function lets you script and post transactions from any specfile run in demand mode, with functionality similar to that provided by SymConnect and the Miscellaneous Posting batch program.
+
+### Syntax
+`+ CODESTART + `
+TRANPERFORM TranCode(CheckPrivilegesFlag,Sequence1,Sequence2,CheckingAcctCode,CheckNumber,ErrorText)
+ DO
+  SET Token TO Value
+  SET Token TO Value
+ END
+`+ CODEEND + `
+
+### Arguments
+  * CheckPrivilegesFlag
+    - 0 = Do not check privileges
+    - 1 = Check all applicable user and console privileges for the type of transaction requested when run by a non-batch or online user
+  * Sequence1
+    - Data type=NUMBER
+      * The primary transaction sequence number only, not associated comment transactions
+      * For transfers (transaction code = XF), Sequence_1 is one of the following:
+        - The transaction sequence number for the "from side" of the transaction if it successfully posts
+        - 0 if it does not post or if there is not an associated transaction (for example, when using the KS transaction code)
+  * Sequence2
+    - Data type=NUMBER
+      * The "to side" transaction sequence number of the transaction if it successfully posts
+      * 0 if the transaction is not a transfer
+  * CheckingAcctCode
+    - Data type=CHARACTER
+    - The checking account code for the disbursed check if CALCULATECHECK is used; blank If there is no disbursed check.	
+  * CheckNumber
+    - Data type=CHARACTER
+    - The checking account number for the disbursed check if CALCULATECHECK is used; blank If there is no disbursed check.	
+  * ErrorText
+    - Data type=CHARACTER
+    - Blank if the posting was error-free or a description of the error.
+
+The specfile verifies security privileges under the following circumstances:
+
+  * If a user who does not have access privileges tries to launch the specfile, a security override prompt appears. After the user gets the override, the specfile launches. The user can click Cancel to proceed, but if a demand specfile contains TRANPERFORM commands, the TRANPERFORM commands are not run and the user receives an error message.
+  * If the user and console have the appropriate access privileges, when the specfile reaches the TRANPERFORM command, the following occurs:
+    - If the Check Privileges flag is set to 0, the specfile does not check security privileges to determine the type of transaction requested.
+    - If the Check Privileges flag is set to 1, the specfile checks user and console privileges to determine the type of transaction requested.
+
+### Required Tokens by Transaction
+  * A (Loan Advance)
+    - AMOUNT
+    - GLCODE
+    - FMTYPE
+    - FMID
+  * C (Share or Loan Comment)
+    - COMMENT:1-4 or COMMENTCODE
+    - TOID
+    - TOTYPE
+  * D (Share Deposit)
+    - AMOUNT
+    - GLCODE
+    - TOID
+    - TOTYPE
+  * N (New Loan)
+    - AMOUNT
+    - FMID
+    - FMTYPE
+    - GLCODE
+  * P (Loan Payment)
+    - AMOUNT
+    - GLCODE
+    - TOID
+    - TOTYPE
+  * W (Share Withdrawal)
+    - AMOUNT
+    - FMID
+    - FMTYPE
+    - GLCODE
+  * GL (GL to GL Transfer)
+    - AMOUNT
+    - FMACCT
+    - TOACCT
+  * KS (Check Stop Payment)
+    - CHECK
+    - FMID
+    - FMTYPE
+  * XF (Transfer)
+    - AMOUNT
+    - FMID
+    - FMTYPE
+    - TOID
+    - TOTYPE
+  * WB (Withdrawal Bill Payment)
+    - AMOUNT
+    - FMID
+    - FMTYPE
+    - TOID
+    - TOTYPE
+
+For the bill payment source code, you must use both FM and TO account tokens.
+
+### Features and Benefits
+  * Robust stop payment support, including all types of stops (not just draft stops)
+  * Posts to the system clearing GL codes and posts GL-to-GL transfers
+  * Specifies a withdrawal as a draft, including checking for stop payments and overdraw protection support, similar to that provided by the On Us Draft (ON) transaction
+  * Supports checks disbursed (primary and secondary checks, both issued and suppressed)
+  * Uses information in the Miscellaneous Parameters to determine whether or not to post a draft transaction
+  * When a loan payment posts through TRANPERFORM, Symitar Quest updates the respective Escrow YTD field in the Share record with any escrow amount that posts.
+  * When a share deposit posts to an escrow share through TRANPERFORM, Symitar Quest updates the respective Escrow YTD field in the Share record with any escrow amount that posts.
+
+### Usage Information
+  * Use only in the SETUP or PRINT divisions or in a procedure called by these divisions
+  * Only used for demand specfiles
+  * You must specify a valid transaction code in your specfile
+  * Will not generate a standard receipt or check; the specfile must handle printing separately
+  * Only accepts partial payments on loans when the Loan record indicates the system should allow unapplied partial payments for loans using Monthly 360 day or Scheduled/364 interest types
+  * Transactions posted by TRANPERFORM may result in changes to fields in associated records, but the type of file maintenance may not be exactly the same as the file maintenance that occurs if you post similar transactions via Teller Transactions or through the various posting programs (for example, a loan payment by check performed via TRANPERFORM may result in changes to various fields in the loan record, including but not limited to the Due Date field and Partial Payment field, but may not result in the creation of any check hold records)
+  * Uses information from parameters and security privileges, based on the user number running the specfile, to process a Stop Payment (SP) transaction. If a SymConnect user is running the specfile, the SymConnect parameter applies, but if a non-batch or online user is running the specfile, the user security privilege applies
+  * You cannot use TRANPERFORM for any of the following:
+    - Inventory handling (as represented by the Money Order (MO) , Travelers Checks (TC) , Miscellaneous Sale (MS) , or Rental (RN) teller transactions)
+    - Posting loan payments with other than the standard payment breakdown
+    - Check cashing
+    - Loan and share disputes
+    - Interest refunds
+    - Loan refinancing
+    - Loan tax (as represented by the Loan Tax (LT) teller transaction)
+    - Payments to some externally-held loans (TRANPERFORM, SymConnect, and Teller Transactions) may be used if the externally-held loan is represented by a Tracking record directly under the Account record whose tracking type is one of the designated tracking types in Miscellaneous Payment Parameters. These tracking records will be included in the list of eligible externally-held loans presented as part of processing the Miscellaneous Payment (MP) teller transaction.
+    - Cash dispense machines, cash recyclers (that receive and dispense cash), magnetic swipe readers, PIN pads, MICR readers, or any other such interfaces
+    - To generate or handle receipts, certificate notices, or loan disclosures
+    - ***Tip:*** Receipts, notices, and disclosures can be handled within the same specfile with other specfile commands.
+    - Posting transactions to shared branch accounts through the shared branch software
+    - Loan Disclosure (LD) teller transaction
+    - Loan Advance (LA) transaction: on loans that do not have the Loan Code field set to (2) Line of Credit or (3) Credit Card
+    - Any of the following monetary teller transactions:
+      * Bulk Deposit (BK)
+      * Bulk Reconciliation (BZ)
+      * CDM Adjustment (CM)
+      * CDM Vault Buy (VB)
+      * Loan Disclosure (LD)
+      * Principal Only (PP)
+      * Recast Loan (RL)
+      * Recast Share (RS)
+      * Shared Branching (SB)
+    - Any of the following non-monetary teller transactions:
+      * Banking Day (BD)
+      * Change Account (CA)
+      * Correction Wizard (CW)
+      * Cross Sell (CS)
+      * Demand PowerOn (RG)
+      * Document Number (DN)
+      * File Maintenance (FM)
+      * Inquiry (IQ)
+      * Item Control (IC)
+    - Check handling limitations:
+      * Checks received are limited to the specification of the total check amount received and do not include individual check amounts.
+      * Checks disbursed, including both primary and secondary check functionality and both issued and suppressed check functionality, are limited to the specification of a single check disbursed.
+      * A check will not automatically print. The specfile or interface calling the specfile must handle check printing as a separate function for any transaction involving disbursing a check, or creating an issued check. See the documentation on the CHECKTYPE keyword for more information.
+      * Checks disbursed can support secondary check functionality by specifying a GL code in the specfile.
+    - If the TRANPERFORM function is used for a Loan Payment (P) that makes a payment to a loan on which the FMACCT is different than the current account, the new account replaces the current specfile TARGET account.
+
+### Processing Post Specifications
+When you run the specfile, TRANPERFORM processes your file posting specifications.
+
+  1. If the system is offline, the specfile stops and returns the error message System is Offline. If the transaction is done by a non-batch or online user, the specfile verifies security privileges.
+  2. If the Check_Privileges_Flag flag is 0, the specfile does not check security privileges. If the Check_Privileges_Flag flag is 1, the specfile checks user and console privileges for the type of transaction requested.
+  3. The specfile tries to post the specified transaction to a record. If the transaction share is not found or is closed, an error, such as Share 50: Not Found or Share 50 Closed is displayed, and the transaction is not posted.
+    - ***Important:*** We recommend that you never write specfiles that assume an exact wording for error messages returned by TRANPERFORM. We reserve the right to change the error messages with each release.
+  4. If the field or record changes are problem-free, the specfile does the following:
+    - Posts the changes to the account
+    - Places the changes on the logging tape
+    - Posts file maintenance history
+    - Resets the error text variable to blank
+`)
+powerOnFunctions.set("uppercase", `
+# UPPERCASE
+---
+This function converts the alphabetic characters of a character expression to uppercase letters.
+
+### Syntax
+`+ CODESTART + `
+UPPERCASE(expression)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+UPPERCASE(NAME:LAST)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP, SELECT, SORT, PRINT, LETTER, or TOTAL divisions or in a procedure called by those divisions
+  * Becomes a constant when used in the DEFINE section
+  * Use only with a character expression
+
+***Tip:*** UPPERCASE is not the same as CAPITALIZE. CAPITALIZE affects only the first letter of each word.
+
+### Extended Example
+`+ CODESTART + `
+TARGET=NAME
+
+DEFINE
+   SELECTSTATE=CHARACTER(2)
+END
+
+SETUP
+   SELECTSTATE=CHARACTERREAD("Enter State desired:"
+END
+
+SELECT
+   NAME:TYPE=0 AND NAME:STATE=UPPERCASE(SELECTSTATE)
+END
+  ...
+`+ CODEEND
+)
+powerOnFunctions.set("validatefieldset", `
+# VALIDATEFIELDSET
+---
+This function sets the values in up to 30 fields within the same record, when there is a validation specfile that is triggered when a particular field is updated.
+
+### Syntax
+`+ CODESTART + `
+VALIDATEFIELDSET(RecordType,FieldMnemonic,Value)
+`+ CODEEND + `
+
+### Arguments
+  * RecordType
+    - Any record
+  * FieldMnemonic
+    - The mnemonic associated with the field
+  * Value
+    - Information stored in that field
+
+### Example
+`+ CODESTART + `
+VALIDATEFIELDSET(ACCOUNT,CORRESPONDDATE,SYSTEMDATE)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP or PRINT divisions or in a procedure called by these divisions
+  * Cannot use at the end of a validation specfile (@VALIDATEFIELDNUMBER=999)
+  * Use to set the values of fields regardless of whether or not they appear on the file maintenance screen
+  * When using for LOAN:DUEDATE, upon loan creation the system calculated date overrides the VALIDATEFIELDSET date the user is trying to set
+  * Use when a validation specfile runs before the file maintenance screen displays (@VALIDATEFIELDNUMBER=0 )
+  * ***Tip:*** When a new record is created, the initial values for that new record are set before displaying the file maintenance screen. These initial values are either hard coded or are passed from the values stored in the Default Manager for Account, Share, Loan, Application, Check Order, Preference, Card, and Inventory records. You can override the initial values of up to 30 fields in the new record based on your custom criteria.
+  * You can perform validation on the following files:
+    - Account
+    - General Ledger
+    - Accounts Payable
+    - Payee
+    - Check
+    - Inventory
+    - Remittance
+
+***Important:*** If you perform file maintenance on a Share ID 10 record, the validation specfile can only affect fields in the Share ID 10 record; it cannot affect fields in any other Share record, and it cannot affect fields in any other Account file record.
+
+### Extended Example
+`+ CODESTART + `
+VALIDATION
+ 
+TARGET=ACCOUNT
+
+DEFINE
+   FMTYPECREATE=1
+END
+   
+SETUP
+   
+   [first section]
+   
+   IF @VALIDATEFIELDNUMBER=0 AND                           [Init]
+      @VALIDATEFMTYPE=FMTYPECREATE THEN
+    DO
+    VALIDATEFIELDSET(ACCOUNT,CORRESPONDDATE,SYSTEMDATE)        
+END
+  
+  [second section]
+  
+  ELSE IF @VALIDATEFIELDNUMBER=7 THEN                    [Branch]
+   DO
+    IF @VALIDATECODEINPUT<0 OR @VALIDATECODEINPUT>2 THEN
+     @VALIDATEERROR="Invalid Account Branch"
+    ELSE IF @VALIDATECODEINPUT=2 THEN
+     DO
+      VALIDATEFIELDSET(ACCOUNT,REFERENCE,"BRANCH 2")
+      VALIDATEFIELDSET(ACCOUNT,WARNINGCODE:1,2)
+     END
+   END
+END
+`+ CODEEND
+)
+powerOnFunctions.set("value", `
+# VALUE
+---
+This function returns the numeric value of the digits of a character expression, ignoring characters other than digits, and translates the digits in the character string into a numeric value.
+
+### Syntax
+`+ CODESTART + `
+VALUE(expression)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+VALUE("AB123")=123
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP, SELECT, SORT, PRINT, or TOTAL divisions or in a procedure called by one of these divisions
+  * The result of the VALUE can never be negative because it ignores non-digits (for example, the minus sign).
+  * Handles up to 16 digits. If there are more than 16 digits, the result prints as 0 (zero) and an out-of-bounds error message prints on the batch output report (batch mode) or on the screen (on demand).
+  * The result of the VALUE cannot be more than 2,147,483,647.
+
+### Employee Group Number Example
+Because the ACCOUNT:REFERENCE field is a character field used to hold the employee group number, it can hold values of 009 or 9, depending on how you enter the value. If you want to use the employee group number as a sort criterion, you must standardize the way the numbers are read.
+
+The SORT function properly sorts group numbers 009, 09, and 9 as if they were all entered as 9.
+`+ CODESTART + `
+SORT
+   VALUE(ACCOUNT:REFERENCE)
+END
+`+ CODEEND + `
+
+### Approved Line of Credit Amount Example
+Because the SHARE:REFERENCE field is a character field used to hold the member's approved VISA line of credit amount, it can hold a value of $5,000.00, 5,000.00, or 5000.00, depending on how you enter the value. If you want to select members for a report based on this field, you must ensure that the value in each member's field is in the same format for comparison (for example, 500000).
+
+You can use the selection criteria below to select members that have a VISA line of credit value over $5,000.00:
+
+`+ CODESTART + `
+SELECT
+   VALUE(SHARE:REFERENCE)>500000
+END
+`+ CODEEND + `
+
+### Printing Example
+Assume the value of SHARE:REFERENCE is 750.00.
+
+`+ CODESTART + `
+COL=40 MONEY(VALUE(SHARE:REFERENCE))
+`+ CODEEND + `
+**Result:** 75000.
+
+***Tip:*** Use MONEY to translate the value back to $750.00.
+`)
+powerOnFunctions.set("whilelimit", `
+# WHILELIMIT
+---
+This function sets a limit to the number of WHILE loops run for any WHILE statement or FOR...DO...END statement that follows it.
+
+### Syntax
+`+ CODESTART + `
+WHILELIMIT=expression
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+WHILELIMIT=5000
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP, PRINT, or TOTAL divisions or in a procedure called by one of these divisions
+  * The number following WHILELIMIT = must not contain commas.
+  * Do not use this command to increase the limit unless you are sure that it is necessary to run your specfile.
+  * Resets the counter for the number of WHILE loops to 0 and sets the limit to the value of WHILELIMIT. Normally you reset the counter to 0 and reset the limit to the default at the beginning of the SETUP, PRINT, and TOTAL divisions.
+  * PowerOn defaults to 1,000,000 for batch mode and 10,000 for demand mode when you do not use WHILELIMIT.
+  * Instances when WHILELIMIT may be required:
+    - When processing large arrays or multiple arrays
+    - When working with large files or multiple files
+    - Anytime a large number of loops is required
+
+***Tip:*** If your specfile terminates and you receive the "while limit exceeded" message, verify that this is not due to an infinite loop (where the WHILE condition will always be true). If it is not an infinite loop, try setting WHILELIMIT to a higher value.
+
+### Evaluates to Numeric Value Example
+`+ CODESTART + `
+ WHILELIMIT=ACCOUNT:BRANCH*100+500
+`+ CODEEND + `
+
+### Error Message Example
+If the WHILELIMIT maximum is reached, the specfile terminates and displays the following message on the batch output report and at the end of the report or screen display:
+\`\`\`
+Error - While Limit Exceeded
+Report Terminated Due to Error (batch)
+PowerOn Error - Invalid
+Specification (demand)
+\`\`\`
+`)
+powerOnFunctions.set("width", `
+# WIDTH
+---
+This function designates how many characters to print across each label.
+
+### Syntax
+`+ CODESTART + `
+WIDTH=literal
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+WIDTH=30
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the PRINT division
+  * Optional print specification used in conjunction with the LABELS keyword
+  * Numeric value must be between 1-132
+  * The product of multiplying ACROSS times WIDTH cannot be more than 132.
+  * You can include ACROSS or FORMLENGTH in any order as long as they all follow LABELS. If you use both, the product of multiplying ACROSS times WIDTH cannot be more than 132.
+
+### Printing Labels Example
+The specfile creates three labels across the page. Each label is 30 characters wide and 12 lines long. See WIDTH on line 2.
+`+ CODESTART + `
+PRINT TITLE="Special Labels" LABELS
+   ACROSS=3 WIDTH=30
+   FORMLENGTH=12
+   ...
+`+ CODEEND + `
+
+***Tip:*** If you use LABELS without WIDTH, the default specification is 33 characters across a label.
+`)
+powerOnFunctions.set("winddeconnect", `
+# WINDDECONNECT
+---
+This function connects with another Windows application using dynamic data exchange (DDE) under a specified topic to return a number variable for the conversation number and a character variable for the error text.
+
+### Syntax
+`+ CODESTART + `
+WINDDECONNECT(ApplicationName,Topic,ConversationNumber,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * ApplicationName
+    - The DDE server program documentation will tell you the application name to use (character variable, maximum length 50 characters).
+  * Topic
+    - The DDE server program documentation will tell you the topic to use (character variable, maximum length 80 characters).
+  * ConversationNumber
+    - Define A number variable. The system updates the variable with a number identifying the connected conversation.
+  * ErrorText
+    - Define A character variable. If an error occurs while the system is attempting to establish a DDE connection, the system updates the variable with a short error message. If there are no errors, that variable is blank.
+
+### Example
+`+ CODESTART + `
+WINDDECONNECT(APPLICATION,TOPIC,CONVERSATION,ERRORTEXT)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP or PRINT divisions or in a procedure called by these divisions
+  * Application name may be up to 50 characters
+  * Topic may be up to 80 characters
+  * Use before WINDDEEXECUTE and WINDDEDISCONNECT
+`)
+powerOnFunctions.set("winddedisconnect", `
+# WINDDEDISCONNECT
+---
+This function disconnects a previously connected dynamic data exchange (DDE) conversation.
+
+### Syntax
+`+ CODESTART + `
+WINDDEDISCONNECT (ConversationNumber,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * ConversationNumber
+    - Define A number variable. The system updates the variable with a number identifying the connected conversation.
+  * ErrorText
+    - Define A character variable. If an error occurs while the system is attempting to establish a DDE connection, the system updates the variable with a short error message. If there are no errors, that variable is blank.
+
+### Example
+`+ CODESTART + `
+WINDDEDISCONNECT(CONVERSATION,ERRORTEXT)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP or PRINT divisions or in a procedure called by these divisions
+  * Use after WINDDECONNECT
+`)
+powerOnFunctions.set("winddeexecute", `
+# WINDDEEXECUTE
+---
+This function runs a dynamic data exchange (DDE) macro.
+
+### Syntax
+`+ CODESTART + `
+WINDDEEXECUTE (ConversationNumber,MacroString,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * ConversationNumber
+    - Define A number variable. The system updates the variable with a number identifying the connected conversation.
+  * MacroString
+    - Define a character variable (maximum length 80 characters). The macro string varies depending on the Windows application. You must refer to your particular Windows application documentation for appropriate use.
+  * ErrorText
+    - Define A character variable. If an error occurs while the system is attempting to establish a DDE connection, the system updates the variable with a short error message. If there are no errors, that variable is blank.
+
+### Example
+`+ CODESTART + `
+WINDDEEXECUTE(CONVERSATION,OTGCOMMANDNAME(OPTION)+" "+
+                                OTGAPPNAME(OPTION)+" "+
+                                OTGFIELDINFO(OPTION),ERRORTEXT)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the PRINT division or in a procedure called by the PRINT division
+  * Use after WINDDECONNECT and before WINDDEDISCONNECT
+`)
+powerOnFunctions.set("winddepokedata", `
+# WINDDEPOKEDATA
+---
+This function inserts dynamic data exchange (DDE) data into a connected DDE conversation, such as posting a value into a cell of a spreadsheet.
+
+### Syntax
+`+ CODESTART + `
+WINDDEPOKEDATA (ConversationNumber,DDEText1,DDEText2,ErrorText)
+`+ CODEEND + `
+
+### Arguments
+  * ConversationNumber
+    - Define A number variable. The system updates the variable with a number identifying the connected conversation.
+  * DDEText1
+    - Define character variables (maximum length 80 characters). The DDE text varies depending on the Windows application. You must refer to your particular Windows application documentation for appropriate use.
+  * DDEText2
+    - Define character variables (maximum length 80 characters). The DDE text varies depending on the Windows application. You must refer to your particular Windows application documentation for appropriate use.
+  * ErrorText
+    - Define A character variable. If an error occurs while the system is attempting to establish a DDE connection, the system updates the variable with a short error message. If there are no errors, that variable is blank.
+
+### Example
+`+ CODESTART + `
+WINDDEPOKEDATA(CONVERSATION,"LOOK",WINCHARTTYPEBAR,ERRORTEXT)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP or PRINT divisions or in a procedure called by these divisions
+  * Use after WINDDECONNECT and before WINDDEDISCONNECT
+`)
+powerOnFunctions.set("windowssend", `
+# WINDOWSSEND
+---
+This function allows interaction between your specfile and the Windows® environment using additional dialog boxes, message boxes, and windows.
+
+### Syntax
+`+ CODESTART + `
+WINDOWSSEND (WinCode,WinText)
+`+ CODEEND + `
+
+### Arguments
+  * WinCode
+    - Specified in RD.WINDOWS.DEF
+  * WinText
+    - Character literal
+
+***Important:*** Do not use random WinCodes. Use only those specified in RD.WINDOWS.DEF, and in the order specified. Using other WinCodes usually causes the program to attempt to de-reference unallocated storage and crash. Certain WinCodes send a variable back to the calling specfile indicating the success or failure of the operation. We have designated these "synchronization variables," which are one-byte character fields that indicate to the specfile whether the WINDOWSSEND command was successful. It is the responsibility of the person writing the specfile to retrieve this variable and check the contents of it. A good method of accomplishing this is to use ENTERLINE.
+
+### Example
+`+ CODESTART + `
+WINDOWSSEND(WINCODEVIEWLINE,"Share "+SHARE:ID)
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * Several of the Windows commands send back synchronization codes that must be received with an input command (for example, ENTERLINE) within the specfile; therefore, all Windows commands should be limited to the SETUP division for your specfiles to work properly
+  * The RD.WINDOWS.DEF #INCLUDE file contains the valid entries for WinCode. This file should be placed in the DEFINE division of your specfile.
+
+### Extended Example
+`+ CODESTART + `
+SETUP
+   SHARECOUNT=0
+   WINDOWSSEND(WINCODEVIEWINIT,"Sample Information")
+   IF ENTERLINE(0)="1" THEN   [Successful View window initialization]
+    DO
+     FOR EACH SHARE
+      DO
+       WINDOWSSEND(WINCODEVIEWLINE,"Share "+SHARE:ID)
+       SHARECOUNT=SHARECOUNT+1
+     END
+    IF SHARECOUNT<1 THEN
+     WINDOWSSEND(WINCODEVIEWCANCEL,"")
+    ELSE
+     DO
+      WINDOWSSEND(WINCODEVIEWDISPLAY,"")
+      SUPPRESS ENTERLINE(0)   [Capture the synch variable]
+     END
+   END
+END
+`+ CODEEND
+)
+powerOnFunctions.set("winmessagefield", `
+# WINMESSAGEFIELD
+---
+This function adds field information to your Windows® message.
+
+### Syntax
+`+ CODESTART + `
+WINMESSAGEFIELD(FieldName,FieldData)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+WINMESSAGESTART("ACS")
+   WINMESSAGEFIELD("Action","CurrentServicesAddCat")
+   WINMESSAGEFIELD("Title","Loan Services")
+   WINMESSAGESEND
+ 
+   WINMESSAGESTART("ACS")
+   WINMESSAGEFIELD("Action","CurrentServicesAddItem")
+   WINMESSAGEFIELD("Description","Loan Service 1")
+   WINMESSAGEFIELD("Points","55")
+   WINMESSAGESEND
+ 
+   WINMESSAGESTART("ACS")
+   WINMESSAGEFIELD("Action","CurrentServicesAddItem")
+   WINMESSAGEFIELD("Description","Loan Service 2")
+   WINMESSAGEFIELD("Points","77")
+   WINMESSAGESEND
+
+END
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * Several of the Windows commands send back synchronization codes that must be received with an input command (for example, ENTERLINE) within the specfile; therefore, all Windows commands should be limited to the SETUP division for your specfiles to work properly
+`)
+powerOnFunctions.set("winmessagestart", `
+# WINMESSAGESTART
+---
+This function begins the building of the information for a Windows® message.
+
+### Syntax
+`+ CODESTART + `
+WINMESSAGESTART(<message tag>)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+WINMESSAGESTART("ACS")
+   WINMESSAGEFIELD("Action","CurrentServicesAddCat")
+   WINMESSAGEFIELD("Title","Loan Services")
+   WINMESSAGESEND
+ 
+   WINMESSAGESTART("ACS")
+   WINMESSAGEFIELD("Action","CurrentServicesAddItem")
+   WINMESSAGEFIELD("Description","Loan Service 1")
+   WINMESSAGEFIELD("Points","55")
+   WINMESSAGESEND
+ 
+   WINMESSAGESTART("ACS")
+   WINMESSAGEFIELD("Action","CurrentServicesAddItem")
+   WINMESSAGEFIELD("Description","Loan Service 2")
+   WINMESSAGEFIELD("Points","77")
+   WINMESSAGESEND
+
+END
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * Several of the Windows commands send back synchronization codes that must be received with an input command (for example, ENTERLINE) within the specfile; therefore, all Windows commands should be limited to the SETUP division for your specfiles to work properly
+  * Use before WINMESSAGESEND
+`)
+powerOnFunctions.set("year", `
+# YEAR
+---
+This function returns a numerical value (from 0-178) equivalent to the two-digit year in a date expression. All dates with a two-digit year field will be interpreted to be between the year 1979 and the year 2078. If the two-digit year field is between 00 and 78, the year is interpreted to be between 2000 and 2078. If the two-digit year field is between 79 and 99, the year is interpreted to be between 1979 and 1999.
+
+***Important:*** If the Symitar Quest interpretation of a two-digit year is not correct for an application or integration, the system always supports a four-digit year. For example, if the date should be 1968, but Symitar Quest interprets it as 2068, the solution for this issue is for the application or vendor to send the year as a four-digit year.
+
+### Syntax
+`+ CODESTART + `
+YEAR(expression)
+`+ CODEEND + `
+
+### Example
+`+ CODESTART + `
+YEAR(BEGINDATE)
+`+ CODEEND + `
+
+### Usage Information
+  * Use in SETUP, SELECT, or PRINT only or in procedures called by those divisions
+  * Must use DATE data type
+
+### Extended Example
+`+ CODESTART + `
+TARGET=NAME
+
+SELECT
+   YEAR(NAME:BIRTHDATE)=50
+END
+
+SORT
+   ...
+`+ CODEEND
+)
+powerOnFunctions.set("yesnoprompt", `
+# YESNOPROMPT
+---
+This function displays a Yes or No question and evaluates to a Boolean true or false.
+
+### Syntax
+`+ CODESTART + `
+IF YESNOPROMPT (Prompt) THEN
+  <PowerOn statement>
+`+ CODEEND + `
+
+### Arguments
+  * Prompt
+    - Character line of text up to 132 characters, enclosed in double quotes (" ")
+
+### Example
+`+ CODESTART + `
+SETUP
+ IF YESNOPROMPT("To be or not to be?") THEN
+  POPUPMESSAGE(0,"Be")
+ ELSE
+  POPUPMESSAGE(0,"Not!") 
+END
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * Use only with the IF statement
+  * Prompt should be a phrase or series of phrases that are meaningful to the computer operator. Each phrase in a prompt must be separated by commas and delineated by quotation marks
+  * Use only when you expect a Y or 1 (true), or N or 0 (false) response from the operator.
+  * A colon (:) is automatically included after the last word in the prompt when in text mode. If you type an additional colon after the prompt, it is ignored
+`)
+powerOnFunctions.set("yesnoread", `
+# YESNOREAD
+---
+This function displays a prompt on the user's console and uses the operator's yes or no response to return a Boolean value (true or false) that can be used in any Boolean expression.
+
+### Syntax
+`+ CODESTART + `
+IF YESNOREAD(prompt) THEN statement ELSE statement
+`+ CODEEND + `
+
+### Arguments
+  * Prompt
+    - Character line of text up to 40 characters, enclosed in double quotes (" ")
+  * Default
+    - The default value for the field, in the appropriate data type. This value displays in the data entry box.
+
+### Example
+`+ CODESTART + `
+IF YESNOREAD("Compare to Budget (Y)
+                 or Prior Month (N)") THEN
+ REPORTTITLE="Monthly Figures Compared to Budget"
+ELSE
+  REPORTTITLE="Monthly Figures Compared to Prior Month"
+`+ CODEEND + `
+
+### Usage Information
+  * Use only in the SETUP division or in a procedure called by the SETUP division
+  * Use only with the IF statement
+  * Only used in batch specfiles
+  * Use only when you expect a Y or 1 (true), or N or 0 (false) response from the operator. If the response to the prompt is Y, the specfile follows the THEN clause. If the response to the prompt is N, the specfile follows the ELSE clause.
+  * Prompt should be a phrase or series of phrases that are meaningful to the computer operator. Each phrase in a prompt must be separated by commas and delineated by quotation marks
+  * A colon (:) is automatically included after the last word in the prompt when in text mode. If you type an additional colon after the prompt, it is ignored
+  * Used to obtain a value for comparing to a field or assigning to a constant, you cannot compare YESNOREAD to a field or assign it to a constant.
+
+When the operator queues the specfile to run, PowerOn looks through the specfile for READ functions. If it finds any, PowerOn displays the prompts on the console so the operator can respond to them before the job runs. When a READ function is used in a specfile, there is no mechanism to skip it using a conditional statement. Each READ function requires a response. A job file may be used to pre-specify responses to READ functions.
+
+### Type of Report Example
+In the following example, the specfile prompts the operator to choose to run either a detail report or a summary report. Based on the Y or N answer to the prompt, the specfile calls the appropriate procedure to generate the output report. See YESNOREAD on line 10.
+`+ CODESTART + `
+SETUP
+  IF YESNOREAD("Detail Report(Y) or
+                  Summary Report(N)") THEN
+   CALL DETAIL
+  ELSE
+   CALL SUMMARY
+`+ CODEEND + `
+
+If the response to the YESNOREAD prompt is set to Y, PowerOn calls the procedure that generates the detail report (the THEN statement). If the response is N, PowerOn calls the procedure that generates the summary report (the ELSE statement).
+
+This is a very good way to eliminate the need for several specfiles that do almost the same thing. By using READ commands along with procedures, you can use a single specfile to create several reports.
+
+### Report Title Example
+In the following example, the SETUP division includes an IF...THEN...ELSE statement. The specfile assigns REPTITLE one of two possibilities, depending on the result of the YESNOREAD: See YESNOREAD on line 7.
+`+ CODESTART + `
+TARGET=ACCOUNT
+
+DEFINE
+   COUNT=NUMBER
+   REPTITLE=CHARACTER(40)
+END
+
+SETUP
+   IF YESNOREAD("Draft(Y) or Final(N)") THEN
+    REPTITLE="Draft Listing of Overdue Accounts"
+   ELSE
+    REPTITLE="Final Listing of Overdue Accounts"
 END
 `+ CODEEND
 )

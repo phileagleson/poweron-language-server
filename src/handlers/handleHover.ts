@@ -51,276 +51,265 @@ import { batchACHOriginationRecordFields } from "../documentation/batchACHOrigin
 
 export function getHoverHandler(context: Context) {
 
-  return function handleHover(params: HoverParams): Hover | null {
-    const node = nodeAtPoint(params.position.line, params.position.character, params.textDocument.uri, context)
-    if (!node) return null
-    if (node.type.toString() === 'fmperform') {
-      const contents = powerOnFunctions.get(node.type.toString().toLowerCase())
-      if (contents) {
-        return {
-          contents,
-          range: {
-            start: {
-              line: node.startPosition.row,
-              character: node.startPosition.column
-            },
-            end: {
-              line: node.endPosition.row,
-              character: node.endPosition.column
-            }
-          }
-        }
-      }
-    } else if (node.type.toString() === 'poweron_function' || node.parent?.type.toString() === 'poweron_function') {
-      let funcName = wordAtPoint(params.position.line, params.position.character, params.textDocument.uri, context)
-      if (!funcName) return null
-      funcName = funcName.split('(')[0].toLowerCase()
-      funcName = funcName.split('=')[0].toLowerCase()
-      const contents = powerOnFunctions.get(funcName)
-      if (contents) {
-        return {
-          contents,
-          range: {
-            start: {
-              line: node.startPosition.row,
-              character: node.startPosition.column
-            },
-            end: {
-              line: node.endPosition.row,
-              character: node.endPosition.column
-            }
-          }
-        }
-      }
-    } else if (node.type.toString() === 'field_name' ||
-      node.type.toString() === 'record_type') {
-      let recordType = ''
-      let fieldName = ''
-      let targetNode = node
-      if (node.type.toString() === 'record_type') {
-        recordType = node.text
-        if (node.nextSibling?.type.toString() === 'field_name') {
-          fieldName = node.nextSibling.text
-          targetNode = node.nextSibling
-        }
-      } else if (node.type.toString() === 'field_name') {
-        fieldName = node.text
-        if (node.previousSibling?.type.toString() === 'record_type') {
-          recordType = node.previousSibling.text
-        } else if (node.parent?.previousSibling?.type.toString() == 'record_type') {
-          recordType = node.parent.previousSibling.text
-        }
-      }
+ return function handleHover(params: HoverParams): Hover | null {
+  const node = nodeAtPoint(params.position.line, params.position.character, params.textDocument.uri, context)
+  if (!node) return null
+  if (node.type.toString() === 'poweron_function' || node.parent?.type.toString() === 'poweron_function') {
+   let funcName = wordAtPoint(params.position.line, params.position.character, params.textDocument.uri, context)
+   if (node && (node.type.toString() === 'fmperform' ||
+    node.type.toString() === 'tranperform' ||
+    node.type.toString() === 'insertqueue')) {
+    funcName = node.type.toString()
+   }
 
-      if (!fieldName && !recordType) return null
-
-      return getHoverInfo(fieldName.toLowerCase(), recordType.toLowerCase(), targetNode)
+   if (!funcName) return null
+   funcName = funcName.split('(')[0].toLowerCase()
+   funcName = funcName.split('=')[0].toLowerCase()
+   const contents = powerOnFunctions.get(funcName)
+   if (contents) {
+    return {
+     contents,
+     range: {
+      start: {
+       line: node.startPosition.row,
+       character: node.startPosition.column
+      },
+      end: {
+       line: node.endPosition.row,
+       character: node.endPosition.column
+      }
+     }
     }
+   }
+  } else if (node.type.toString() === 'field_name' ||
+   node.type.toString() === 'record_type') {
+   let recordType = ''
+   let fieldName = ''
+   let targetNode = node
+   if (node.type.toString() === 'record_type') {
+    recordType = node.text
+    if (node.nextSibling?.type.toString() === 'field_name') {
+     fieldName = node.nextSibling.text
+     targetNode = node.nextSibling
+    }
+   } else if (node.type.toString() === 'field_name') {
+    fieldName = node.text
+    if (node.previousSibling?.type.toString() === 'record_type') {
+     recordType = node.previousSibling.text
+    } else if (node.parent?.previousSibling?.type.toString() == 'record_type') {
+     recordType = node.parent.previousSibling.text
+    }
+   }
 
-    return null
+   if (!fieldName && !recordType) return null
+
+   return getHoverInfo(fieldName.toLowerCase(), recordType.toLowerCase(), targetNode)
   }
+
+  return null
+ }
 }
 
 function getHoverInfo(fieldName: string, recordType: string, node: SyntaxNode): Hover | null {
-  let mdContent: string | undefined = ''
-  switch (recordType) {
-    case 'account':
-      mdContent = acctRecordFields.get(fieldName)
-      break
-    case 'fmhistory':
-      mdContent = fmHistoryRecordFields.get(fieldName)
-      break
-    case 'name':
-    case 'share name':
-    case 'irs name':
-    case 'loan name':
-    case 'loan pledge name':
-    case 'eft name':
-    case 'card name':
-    case 'externalloan name':
-      mdContent = nameRecordFields.get(fieldName)
-      break
-    case 'lookup':
-      mdContent = lookupRecordFields.get(fieldName)
-      break
-    case 'comment':
-      mdContent = commentRecordFields.get(fieldName)
-      break
-    case 'household':
-      mdContent = householdRecordFields.get(fieldName)
-      break
-    case 'preference':
-      mdContent = preferenceRecordFields.get(fieldName)
-      break
-    case 'card access':
-    case 'preference access':
-      mdContent = preferenceAccessRecordFields.get(fieldName)
-      break
-    case 'tracking':
-    case 'externalloan tracking':
-    case 'share tracking':
-    case 'loan tracking':
-    case 'loanapp tracking':
-    case 'cpworkcard tracking':
-      mdContent = trackingRecordFields.get(fieldName)
-      break
-    case 'note':
-    case 'card note':
-    case 'cpworkcard note':
-    case 'loan note':
-    case 'loanapp note':
-    case 'portfolio note':
-    case 'share note':
-    case 'externalloan note':
-    case 'invoice note':
-    case 'ctr note':
-    case 'dealer note':
-    case 'participant note':
-    case 'participation note':
-    case 'participationloan note':
-    case 'agreement note':
-      mdContent = noteRecordFields.get(fieldName)
-      break
-    case 'share':
-      mdContent = shareRecordFields.get(fieldName)
-      break
-    case 'share hold':
-    case 'loan hold':
-    case 'portfolio hold':
-      mdContent = holdRecordFields.get(fieldName)
-      break
-    case 'share transfer':
-    case 'eft transfer':
-    case 'loan transfer':
-    case 'externalloan transfer':
-      mdContent = transferRecordFields.get(fieldName)
-      break
-    case 'loan checkorder':
-    case 'share checkorder':
-      mdContent = checkOrderRecordFields.get(fieldName)
-      break
-    case 'loan transaction':
-    case 'share transaction':
-      mdContent = transactionRecordFields.get(fieldName)
-      break
-    case 'share analysisgroup':
-      mdContent = shareAnalysisGroupRecordFields.get(fieldName)
-      break
-    case 'share analysisplan':
-      mdContent = shareAnalysisPlanRecordFields.get(fieldName)
-      break
-    case 'share analysis':
-      mdContent = shareAnalysisFields.get(fieldName)
-      break
-    case 'irs':
-    case 'ira':
-      mdContent = irsRecordFields.get(fieldName)
-      break
-    case 'irs distribution':
-      mdContent = irsDistributionRecordFields.get(fieldName)
-      break
-    case 'loan':
-      mdContent = loanRecordFields.get(fieldName)
-      break
-    case 'pledge':
-    case 'loan pledge':
-    case 'loanapp pledge':
-      mdContent = pledgeRecordFields.get(fieldName)
-      break
-    case 'loan escrowanalysis':
-    case 'loanapp escrowanalysis':
-      mdContent = escrowAnalysisRecordFields.get(fieldName)
-      break
-    case 'loan escrow':
-    case 'loanapp escrow':
-      mdContent = escrowRecordFields.get(fieldName)
-      break
-    case 'loan schedule':
-    case 'loanapp schedule':
-      mdContent = scheduleRecordFields.get(fieldName)
-      break
-    case 'loan lnsegment':
-    case 'loanapp lnsegment':
-      mdContent = segmentRecordFields.get(fieldName)
-      break
-    case 'loan ratechange':
-      mdContent = rateChangeRecordFields.get(fieldName)
-      break
-    case 'loan bankruptcy':
-      mdContent = loanBankruptcyRecordFields.get(fieldName)
-      break
-    case 'loan bankruptcy prepetitionbal':
-      mdContent = loanBankruptcyPrepetitionBalanceRecordFields.get(fieldName)
-      break
-    case 'eft':
-    case 'bill':
-    case 'payroll':
-      mdContent = eftRecordFields.get(fieldName)
-      break
-    case 'eft addendainfo':
-      mdContent = eftAddendaInfoRecordFields.get(fieldName)
-      break
-    case 'externalloan':
-      mdContent = externalLoanRecordFields.get(fieldName)
-      break
-    case 'card':
-      mdContent = cardRecordFields.get(fieldName)
-      break
-    case 'loanapp':
-      mdContent = loanAppRecordFields.get(fieldName)
-      break
-    case 'loanapp person':
-      mdContent = loanAppPersonRecordFields.get(fieldName)
-      break
-    case 'loanapp finance':
-      mdContent = loanAppFinanceRecordFields.get(fieldName)
-      break
-    case 'cpworkcard':
-      mdContent = cpWorkCardRecordFields.get(fieldName)
-      break
-    case 'credrep':
-      mdContent = creditReportRecordFields.get(fieldName)
-      break
-    case 'credrep item':
-      mdContent = creditReportItemRecordFields.get(fieldName)
-      break
-    case 'portfolio':
-      mdContent = portfolioRecordFields.get(fieldName)
-      break
-    case 'site':
-      mdContent = siteRecordFields.get(fieldName)
-      break
-    case 'site cashordertype':
-      mdContent = cashOrderTypeRecordFields.get(fieldName)
-      break
-    case 'externalaccount':
-      mdContent = externalAccountRecordFields.get(fieldName)
-      break
-    case 'batchachorig':
-      mdContent = batchACHOriginationRecordFields.get(fieldName)
-      break
-    default:
-      return null
+ let mdContent: string | undefined = ''
+ switch (recordType) {
+  case 'account':
+   mdContent = acctRecordFields.get(fieldName)
+   break
+  case 'fmhistory':
+   mdContent = fmHistoryRecordFields.get(fieldName)
+   break
+  case 'name':
+  case 'share name':
+  case 'irs name':
+  case 'loan name':
+  case 'loan pledge name':
+  case 'eft name':
+  case 'card name':
+  case 'externalloan name':
+   mdContent = nameRecordFields.get(fieldName)
+   break
+  case 'lookup':
+   mdContent = lookupRecordFields.get(fieldName)
+   break
+  case 'comment':
+   mdContent = commentRecordFields.get(fieldName)
+   break
+  case 'household':
+   mdContent = householdRecordFields.get(fieldName)
+   break
+  case 'preference':
+   mdContent = preferenceRecordFields.get(fieldName)
+   break
+  case 'card access':
+  case 'preference access':
+   mdContent = preferenceAccessRecordFields.get(fieldName)
+   break
+  case 'tracking':
+  case 'externalloan tracking':
+  case 'share tracking':
+  case 'loan tracking':
+  case 'loanapp tracking':
+  case 'cpworkcard tracking':
+   mdContent = trackingRecordFields.get(fieldName)
+   break
+  case 'note':
+  case 'card note':
+  case 'cpworkcard note':
+  case 'loan note':
+  case 'loanapp note':
+  case 'portfolio note':
+  case 'share note':
+  case 'externalloan note':
+  case 'invoice note':
+  case 'ctr note':
+  case 'dealer note':
+  case 'participant note':
+  case 'participation note':
+  case 'participationloan note':
+  case 'agreement note':
+   mdContent = noteRecordFields.get(fieldName)
+   break
+  case 'share':
+   mdContent = shareRecordFields.get(fieldName)
+   break
+  case 'share hold':
+  case 'loan hold':
+  case 'portfolio hold':
+   mdContent = holdRecordFields.get(fieldName)
+   break
+  case 'share transfer':
+  case 'eft transfer':
+  case 'loan transfer':
+  case 'externalloan transfer':
+   mdContent = transferRecordFields.get(fieldName)
+   break
+  case 'loan checkorder':
+  case 'share checkorder':
+   mdContent = checkOrderRecordFields.get(fieldName)
+   break
+  case 'loan transaction':
+  case 'share transaction':
+   mdContent = transactionRecordFields.get(fieldName)
+   break
+  case 'share analysisgroup':
+   mdContent = shareAnalysisGroupRecordFields.get(fieldName)
+   break
+  case 'share analysisplan':
+   mdContent = shareAnalysisPlanRecordFields.get(fieldName)
+   break
+  case 'share analysis':
+   mdContent = shareAnalysisFields.get(fieldName)
+   break
+  case 'irs':
+  case 'ira':
+   mdContent = irsRecordFields.get(fieldName)
+   break
+  case 'irs distribution':
+   mdContent = irsDistributionRecordFields.get(fieldName)
+   break
+  case 'loan':
+   mdContent = loanRecordFields.get(fieldName)
+   break
+  case 'pledge':
+  case 'loan pledge':
+  case 'loanapp pledge':
+   mdContent = pledgeRecordFields.get(fieldName)
+   break
+  case 'loan escrowanalysis':
+  case 'loanapp escrowanalysis':
+   mdContent = escrowAnalysisRecordFields.get(fieldName)
+   break
+  case 'loan escrow':
+  case 'loanapp escrow':
+   mdContent = escrowRecordFields.get(fieldName)
+   break
+  case 'loan schedule':
+  case 'loanapp schedule':
+   mdContent = scheduleRecordFields.get(fieldName)
+   break
+  case 'loan lnsegment':
+  case 'loanapp lnsegment':
+   mdContent = segmentRecordFields.get(fieldName)
+   break
+  case 'loan ratechange':
+   mdContent = rateChangeRecordFields.get(fieldName)
+   break
+  case 'loan bankruptcy':
+   mdContent = loanBankruptcyRecordFields.get(fieldName)
+   break
+  case 'loan bankruptcy prepetitionbal':
+   mdContent = loanBankruptcyPrepetitionBalanceRecordFields.get(fieldName)
+   break
+  case 'eft':
+  case 'bill':
+  case 'payroll':
+   mdContent = eftRecordFields.get(fieldName)
+   break
+  case 'eft addendainfo':
+   mdContent = eftAddendaInfoRecordFields.get(fieldName)
+   break
+  case 'externalloan':
+   mdContent = externalLoanRecordFields.get(fieldName)
+   break
+  case 'card':
+   mdContent = cardRecordFields.get(fieldName)
+   break
+  case 'loanapp':
+   mdContent = loanAppRecordFields.get(fieldName)
+   break
+  case 'loanapp person':
+   mdContent = loanAppPersonRecordFields.get(fieldName)
+   break
+  case 'loanapp finance':
+   mdContent = loanAppFinanceRecordFields.get(fieldName)
+   break
+  case 'cpworkcard':
+   mdContent = cpWorkCardRecordFields.get(fieldName)
+   break
+  case 'credrep':
+   mdContent = creditReportRecordFields.get(fieldName)
+   break
+  case 'credrep item':
+   mdContent = creditReportItemRecordFields.get(fieldName)
+   break
+  case 'portfolio':
+   mdContent = portfolioRecordFields.get(fieldName)
+   break
+  case 'site':
+   mdContent = siteRecordFields.get(fieldName)
+   break
+  case 'site cashordertype':
+   mdContent = cashOrderTypeRecordFields.get(fieldName)
+   break
+  case 'externalaccount':
+   mdContent = externalAccountRecordFields.get(fieldName)
+   break
+  case 'batchachorig':
+   mdContent = batchACHOriginationRecordFields.get(fieldName)
+   break
+  default:
+   return null
+ }
+
+ if (!mdContent) return null
+ const contents: MarkupContent = {
+  kind: MarkupKind.Markdown,
+  value: mdContent
+ }
+
+ return {
+  contents,
+  range: {
+   start: {
+    line: node.startPosition.row,
+    character: node.startPosition.column
+   },
+   end: {
+    line: node.endPosition.row,
+    character: node.endPosition.column
+   }
   }
 
-  if (!mdContent) return null
-  const contents: MarkupContent = {
-    kind: MarkupKind.Markdown,
-    value: mdContent
-  }
-
-  return {
-    contents,
-    range: {
-      start: {
-        line: node.startPosition.row,
-        character: node.startPosition.column
-      },
-      end: {
-        line: node.endPosition.row,
-        character: node.endPosition.column
-      }
-    }
-
-  }
+ }
 }
