@@ -25,7 +25,7 @@ import { getChangeConfigurationHandler } from './handlers/handleChangeConfigurat
 import { getCreateFliesHandler } from './handlers/handleCreateFiles'
 import { getWillDeleteFilesHandler, getDidDeletFilesHandler } from './handlers/handleDeleteFiles'
 import { getRenameFilesHandler } from './handlers/handleRenameFiles'
-import { getCodeActionResolveHandler } from './handlers/handleCodeActionResolve'
+import { getExecuteCommandHandler } from './handlers/handleExecuteCommand'
 
 
 const context = {
@@ -53,13 +53,13 @@ function registerHandlers() {
  const handleReferences = getReferenceHandler(context)
  const handleHover = getHoverHandler(context)
  const handleCodeAction = getCodeActionHandler(context)
- const handleCodeActionResolve = getCodeActionResolveHandler(context)
  const handlePrepareRename = getPrepareRenameHandler(context)
  const handleRename = getRenameHandler(context)
  const handleChangeConfiguration = getChangeConfigurationHandler(context)
  const handleWillDeleteFiles = getWillDeleteFilesHandler(context)
  const handleDidDeleteFiles = getDidDeletFilesHandler(context)
  const handleRenameFiles = getRenameFilesHandler(context)
+ const handleExecuteCommand = getExecuteCommandHandler(context)
 
  connection.onInitialize(handleInitialize)
  connection.onInitialized(handleInitialized)
@@ -69,17 +69,16 @@ function registerHandlers() {
  connection.onReferences(handleReferences)
  connection.onHover(handleHover)
  connection.onCodeAction(handleCodeAction)
- //connection.onCodeActionResolve(handleCodeActionResolve)
  connection.onPrepareRename(handlePrepareRename)
  connection.onRenameRequest(handleRename)
  connection.onDidChangeConfiguration(handleChangeConfiguration)
- connection.onRequest('codeAction/resolve', handleCodeActionResolve)
 
 
  connection.workspace.onDidCreateFiles(handleCreateFiles)
  connection.workspace.onWillDeleteFiles(handleWillDeleteFiles)
  connection.workspace.onDidDeleteFiles(handleDidDeleteFiles)
  connection.workspace.onDidRenameFiles(handleRenameFiles)
+ connection.onExecuteCommand(handleExecuteCommand)
 }
 
 export function main() {

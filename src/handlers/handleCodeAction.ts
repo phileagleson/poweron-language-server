@@ -21,10 +21,18 @@ export function getCodeActionHandler(context: Context) {
   }
 
   const node = nodeAtPoint(params.range.start.line, params.range.start.character, params.textDocument.uri, context)
-  if (node && node.type.toString() === `identifier`) {
+  if (node && node.type.toString() === `identifier` && node.parent?.type.toString() !== 'variable_declaration') {
    const addToDefineAction: CodeAction = {
     title: DEFINETITLE,
     kind: CodeActionKind.RefactorRewrite,
+    command: {
+     command: 'poweronlsp.showDataTypeNotification',
+     title: 'Choose DataType',
+     arguments: [{
+      uri: params.textDocument.uri,
+      varName: node.text
+     }]
+    },
     data: {
      uri: params.textDocument.uri,
      varName: node.text

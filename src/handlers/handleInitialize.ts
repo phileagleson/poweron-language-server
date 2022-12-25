@@ -39,7 +39,7 @@ export function getInitializeHandler(context: Context) {
     },
     definitionProvider: true,
     codeActionProvider: {
-     resolveProvider: true
+     resolveProvider: false
     },
     documentHighlightProvider: false,
     documentSymbolProvider: false,
