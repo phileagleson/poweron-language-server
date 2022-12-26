@@ -26,6 +26,7 @@ import { getCreateFliesHandler } from './handlers/handleCreateFiles'
 import { getWillDeleteFilesHandler, getDidDeletFilesHandler } from './handlers/handleDeleteFiles'
 import { getRenameFilesHandler } from './handlers/handleRenameFiles'
 import { getExecuteCommandHandler } from './handlers/handleExecuteCommand'
+import { getDocumentSymbolHandler } from './handlers/handleDocumentSymbols'
 
 
 const context = {
@@ -60,6 +61,7 @@ function registerHandlers() {
  const handleDidDeleteFiles = getDidDeletFilesHandler(context)
  const handleRenameFiles = getRenameFilesHandler(context)
  const handleExecuteCommand = getExecuteCommandHandler(context)
+ const handleDocumentSymbols = getDocumentSymbolHandler(context)
 
  connection.onInitialize(handleInitialize)
  connection.onInitialized(handleInitialized)
@@ -72,6 +74,7 @@ function registerHandlers() {
  connection.onPrepareRename(handlePrepareRename)
  connection.onRenameRequest(handleRename)
  connection.onDidChangeConfiguration(handleChangeConfiguration)
+ connection.onDocumentSymbol(handleDocumentSymbols)
 
 
  connection.workspace.onDidCreateFiles(handleCreateFiles)

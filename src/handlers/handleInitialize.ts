@@ -42,7 +42,7 @@ export function getInitializeHandler(context: Context) {
      resolveProvider: false
     },
     documentHighlightProvider: false,
-    documentSymbolProvider: false,
+    documentSymbolProvider: true,
     workspaceSymbolProvider: false,
     executeCommandProvider: {
      commands: ["lsp.addVarToDefine"]
