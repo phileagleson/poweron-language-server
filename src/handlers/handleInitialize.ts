@@ -44,6 +44,9 @@ export function getInitializeHandler(context: Context) {
     documentHighlightProvider: false,
     documentSymbolProvider: false,
     workspaceSymbolProvider: false,
+    executeCommandProvider: {
+     commands: ["lsp.addVarToDefine"]
+    },
     referencesProvider: true,
     hoverProvider: true,
     renameProvider: { prepareProvider: false },
