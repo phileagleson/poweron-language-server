@@ -113,18 +113,50 @@ export function getCompletionHandler(context: Context) {
  return function handleCompletion(params: CompletionParams): CompletionItem[] {
   const defaultCompletions = [...poweronFunctions, ...snippets, ...acctFileRecords]
 
-  const triggerCharacter = params.context?.triggerCharacter
+  let triggerCharacter = params.context?.triggerCharacter
+  let recordType = ''
+
   if (!triggerCharacter) {
-   const word = wordAtPoint(params.position.line, params.position.character, params.textDocument.uri, context)
+   let word = wordAtPoint(params.position.line, params.position.character, params.textDocument.uri, context)
    const node = nodeAtPoint(params.position.line, params.position.character - 1, params.textDocument.uri, context)
    if (node && node.type.toString() === 'identifier' && node.parent && node.parent.type === 'variable_declaration') {
     return dataTypes
+   } else if (node && node.parent && (node.parent.type.toString() === `fmperform` ||
+    node.parent.type.toString() === 'setexp' ||
+    node.parent.parent?.type.toString() === 'setexp')) {
+    const tree = context.trees[params.textDocument.uri]
+    const poweron = tree.getLanguage()
+    const queryString = '(record_type)@type'
+    const query = poweron.query(queryString)
+    let nodeToQuery = node
+    /* 
+      After typing 'SET' treeitter will be in an error state. We need to get the last record_type in the 
+      fmperform statement to see which fields to return
+     */
+    if (node.parent.type.toString() === 'fmperform') {
+     nodeToQuery = node.parent
+    } else if (node.parent.parent?.type.toString() === 'fmperform') {
+     nodeToQuery = node.parent.parent
+    } else if (node.parent.parent?.parent?.type.toString() === 'fmperform') {
+     nodeToQuery = node.parent.parent.parent
+    }
+    query.captures(nodeToQuery).forEach(cap => {
+     recordType = cap.node.text.toLowerCase()
+    })
+    // clear out word so the for each block isn't triggered and 
+    // set the trigger char to : so we can return the propper record type info without duplicating code
+    if (recordType) {
+     triggerCharacter = ':'
+     word = ''
+    }
    }
 
    if (word) {
     switch (word) {
      case 'each':
       return acctFileRecords
+     default:
+      break
     }
    }
   }
@@ -140,7 +172,8 @@ export function getCompletionHandler(context: Context) {
    } else {
     word = wordAtPoint(params.position.line, params.position.character, params.textDocument.uri, context)
    }
-
+   // if we set the recordType as part of the fmperform logic, update 'word' here to the correct value
+   if (recordType) word = recordType
    if (word) {
     word = word.split(':')[0]
     switch (word.toLowerCase()) {
@@ -193,6 +226,7 @@ export function getCompletionHandler(context: Context) {
      case 'loan hold':
      case 'portfolio hold':
       return holdRecordFields
+     case 'transfer':
      case 'share transfer':
      case 'loan transfer':
      case 'eft transfer':
