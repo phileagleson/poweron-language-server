@@ -11,6 +11,9 @@ export function getExecuteCommandHandler(context: Context) {
  return function handleExecuteCommand(params: ExecuteCommandParams): null {
   if (params.command === 'lsp.addVarToDefine' && params.arguments && params.arguments.length > 0) {
    const { uri, varName, dataType } = params.arguments[0] as DefineDataType
+   context.connection.console.log(`uri: ${uri}`)
+   context.connection.console.log(`varName: ${varName}`)
+   context.connection.console.log(`dataType: ${dataType}`)
 
    // Check for Define Division
    const tree = context.trees[uri]
@@ -21,11 +24,13 @@ export function getExecuteCommandHandler(context: Context) {
    let character = -1
    let defineDivFound = false
    query.captures(tree.rootNode).forEach(cap => {
+    context.connection.console.log(`found define div`)
     defineDivFound = true
     line = cap.node.endPosition.row
     character = cap.node.endPosition.column
    })
 
+   context.connection.console.log(`defineDivFound: ${defineDivFound}`)
    if (!defineDivFound) {
     alertUser(context, `Define Division not found in this specfile`, MessageType.Warning)
     return null
