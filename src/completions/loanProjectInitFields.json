@@ -1,0 +1,422 @@
+[
+  {
+    "label": "@LOANPROJECTINTERESTTYPE",
+    "insertText": "LOANPROJECTINTERESTTYPE",
+    "description": "Data source 1, 3 = Loan record Interest Type\nData source 2, 4 = Initialized from the loan type defaults specified by the Loan Type field in the application when you initialize from an existing application or from an application default.\nData source 5, 7 = Loan (LOC) Segment record Interest Type\nData source 6, 8 = Application (LOC) Segment record Interest Type\nOtherwise = 0",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTLOANDATE",
+    "insertText": "LOANPROJECTLOANDATE",
+    "description": "Data source 1 = Loan record Interest Date\nData source 5, 7 = Loan (LOC) Segment record Interest Date\nOtherwise = System date",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTPAYMENTTYPE",
+    "insertText": "LOANPROJECTPAYMENTTYPE",
+    "description": "Data source 1, 3 = Loan record Payment Type\nData source 2, 4 = Initialized from the loan type defaults specified by the Loan Type field in the application when you initialize from an existing application or from an application default.\nData source 5, 7 = Loan (LOC) Segment record Payment Type\nData source 6, 8 = Application (LOC) Segment record Payment Type\nOtherwise = 0",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTAMORTIZESCHEDULE",
+    "insertText": "LOANPROJECTAMORTIZESCHEDULE",
+    "description": "Data source 1, 3 = Loan record Amortize Schedule\nData source 2, 4 = Initialized from the loan type defaults specified by the Amortize Schedule field in the application when you initialize from an existing application or from an application default.\nData source 5, 7 = Loan (LOC) Segment record Amortize Schedule",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTAMORTIZESCHDTYPE",
+    "insertText": "LOANPROJECTAMORTIZESCHDTYPE",
+    "description": "Data source 1, 3 = Loan record Amortize Schedule Type\nData source 2, 4 = Initialized from the loan type defaults specified by the Amortize Schedule Type field in the application when you initialize from an existing application or from an application default.\nData source 5, 7 = Loan (LOC) Segment record Amortize Schedule Type\nData source 6, 8 = Application (LOC) Segment record Amortize Schedule Type\nOtherwise = 0",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTPAYMENTFREQUENCY",
+    "insertText": "LOANPROJECTPAYMENTFREQUENCY",
+    "description": "Data source 0 = 0\nData source 1, 3 = Loan record Payment Frequency\nData source 2, 4 = Application record Payment Frequency\nData source 5, 7 = Loan (LOC) Segment record Payment Frequency\nData source 6, 8 = Application (LOC) Segment record Payment Frequency",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTPAYMENTSKIPS",
+    "insertText": "LOANPROJECTPAYMENTSKIPS",
+    "description": "Data source 1, 3, 5, 7 = Loan record Payment Skips\nData source 2, 4 = Initialized from the loan type defaults specified by the Loan Type field in the application when you initialize from an existing application or from an application default.\nData source 6, 8 = Application record Payment Skips\nOtherwise = 0",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTPAYMENTSKIPSTARTDAY",
+    "insertText": "LOANPROJECTPAYMENTSKIPSTARTDAY",
+    "description": "Data source 1, 3 = Loan record payment Skip Start Day\nData source 2, 4 = Initialized from the loan type defaults specified by the Loan Type field in the application when you initialize from an existing application or from an application default.\nData source 5, 7 = Loan (LOC) Segment record Skip Start Day\nData source 6, 8 = Application (LOC) Segment record Skip Start Day\nOtherwise = 0",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTDUEDAY1",
+    "insertText": "LOANPROJECTDUEDAY1",
+    "description": "Data source 0 = 0\nData source 1, 3 = Loan record Due Day 1\nData source 2, 4 = Application record Due Day 1\nData source 5, 7 = Loan (LOC) Segment record Due Day 1\nData source 6, 8 = Application (LOC) Segment record Due Day 1",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTDUEDAY2",
+    "insertText": "LOANPROJECTDUEDAY2",
+    "description": "Data source 0 = 0\nData source 1, 3 = Loan record Due Day 2\nData source 2, 4 = Application record Due Day 2\nData source 5, 7 = Loan (LOC) Segment record Due Day 2\nData source 6, 8 = Application (LOC) Segment record Due Day 2",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTFIRSTDUEDATE",
+    "insertText": "LOANPROJECTFIRSTDUEDATE",
+    "description": "Data source 0 = --/--/--\nData source 1 = Calculate next due date on or after Interest Date and system date\nData source 3 = Loan record (default) Due Date\nData source 2, 4 = Application record first Due Date\nData source 5, 7 = Calculate first due date on or after Loan (LOC) Segment record Interest Date and system date\nData source 6, 8 = Calculate next due date on or after system date",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTBALLOONDATE",
+    "insertText": "LOANPROJECTBALLOONDATE",
+    "description": "Data source 0 = --/--/--\nData source 1, 3 = Loan record Balloon Date\nData source 2, 4 = Application record Balloon Date\nData source 5, 7 = Loan (LOC) Segment record Balloon Date\nData source 6, 8 = Application (LOC) Segment record Balloon Date",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTBALLOONAMOUNT",
+    "insertText": "LOANPROJECTBALLOONAMOUNT",
+    "description": "Data source 0 = $0.00\nData source 1, 3 = Loan record Balloon Amount\nData source 2, 4 = Application record Balloon Amount\nData source 5, 7 = Loan (LOC) Segment record Balloon Amount\nData source 6, 8 = Application (LOC) Segment record Balloon Amount",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTUNPAIDINTEREST",
+    "insertText": "LOANPROJECTUNPAIDINTEREST",
+    "description": "Data source 1, 5, 7 = Loan, Loan Segment 0 or Segment record Interest Unpaid\nOtherwise = $0.00\n\nThe unpaid interest variable does not have a corresponding projection screen field, but is necessary for calculations involving existing loans.",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTINTERESTRATE",
+    "insertText": "LOANPROJECTINTERESTRATE",
+    "description": "Data source 0 = 0.000%\nData source 1, 3 = Loan record Interest Rate\nData source 2, 4 = Application record Interest Rate\nData source 5, 7 = Loan (LOC) Segment record Interest Rate\nData source 6, 8 = Application (LOC) Segment record Interest Rate",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTFIRSTINSBIRTHDATE",
+    "insertText": "LOANPROJECTFIRSTINSBIRTHDATE",
+    "description": "Data source 1, 3 = Loan record First Insured Birth Date\nData source 2, 4 = Application record First Insured Birth Date\nData source 7 = Loan (LOC) Segment record First Insured Birth Date\nData source 8 = Application (LOC) Segment record First Insured Birth Date\nOtherwise = --/--/--",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTSECONDINSBIRTHDATE",
+    "insertText": "LOANPROJECTSECONDINSBIRTHDATE",
+    "description": "Data source 1, 3 = Loan record Second Insured Birth Date\nData source 2, 4 = Application record Second Insured Birth Date\nData source 7 = Loan (LOC) Segment record Second Insured Birth Date\nData source 8 = Application (LOC) Segment record Second Insured Birth Date\nOtherwise = --/--/--",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTINSURANCETYPE",
+    "insertText": "LOANPROJECTINSURANCETYPE",
+    "description": "Data source 1, 3 = Loan record Insurance Type\nData source 2, 4 = Application record Insurance Type\nData source 7 = Loan (LOC) Segment record Insurance Type\nData source 8 = Application (LOC) Segment record Insurance Type\nOtherwise = 0",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTSINGLEPREMIUM",
+    "insertText": "LOANPROJECTSINGLEPREMIUM",
+    "description": "Data source 0 = 1\nOtherwise = 0\n\nPass this premium to LOANPROJECTCALC. In general, you use 2 when printing disclosures, in which case you fill in the @LOANPROJECTLIFE and the @LOANPROJECTDISABILITY from the single premium insurance fields in the loan or application. The single premium insurance amounts have been calculated previously and stored so that they are not recalculated when the loan is disbursed.\n\nYou use 0 when calculating a payoff where no new single premium insurance is added.\n\nYou use 1 when you are calculating a brand new loan and need to calculate the single premium amounts.\n\nThe system ignores this field if the @LOANPROJECTINSURANCETYPE does not reference a single premium calculation.",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTESCROWAMOUNT",
+    "insertText": "LOANPROJECTESCROWAMOUNT",
+    "description": "Data source 1, 3 = Loan record Escrow Amount\nData source 2, 4 = Application record Escrow Amount\nData source 7 = Loan (LOC) Segment record Escrow Amount\nData source 8 = Application (LOC) Segment record Escrow Amount\nOtherwise = $0.00",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTPREPAIDFINANCECHG",
+    "insertText": "LOANPROJECTPREPAIDFINANCECHG",
+    "description": "Data source 1, 3 = Loan record Prepaid Finance Chg\nData source 2, 4 = Application record Prepaid Finance Chg\nData source 7 = Loan (LOC) Segment record Prepaid Finance Chg\nData source 8 = Application (LOC) Segment record Prepaid Finance Chg\nOtherwise = $0.00",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTCALCULATIONTYPE",
+    "insertText": "LOANPROJECTCALCULATIONTYPE",
+    "description": "The default is (2) Calculate Loan Term since the loan amount and payment have already been calculated in most cases.",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTPAYMENT",
+    "insertText": "LOANPROJECTPAYMENT",
+    "description": "Data source 0 = $0.00\nData source 1 = Loan Payment (or from appropriate Pmt Bucket Amt)\nData source 3 = Loan record (default) Payment\nData source 2, 4 = Application record Payment\nData source 5, 7 = Loan (LOC) Segment record Payment (or from appropriate Pmt Bucket Amt)\nData source 6, 8 = Application (LOC) Segment record Payment (or from appropriate Pmt Bucket Amt)",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTLOANAMOUNT",
+    "insertText": "LOANPROJECTLOANAMOUNT",
+    "description": "Data source 0 = $0.00\nData source 1 = Loan record Balance\nData source 2 = Application record Loan Amount\nData source 3 = Loan record (default) Original Balance\nData source 4 = Application record (default) Loan Amount\nData source 5, 7 = Loan (LOC) Segment record Balance\nData source 6, 8 = Application (LOC) Segment record Loan Amount",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTMATURITYDATE",
+    "insertText": "LOANPROJECTMATURITYDATE",
+    "description": "Data source 0 = --/--/--\nData source 1, 3 = Loan record Maturity Date\nData source 2, 4 = Application record Maturity Date\nData source 5, 7 = Loan (LOC) Segment record Maturity Date\nData source 6, 8 = Application (LOC) Segment record Maturity Date\n\nInsert in this variable the term date for the calculation, rather than the number of loan months, as for interactive loan projections. The system ignores this value if you choose to calculate the Term Date.",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTPAYOFFDATE",
+    "insertText": "LOANPROJECTPAYOFFDATE",
+    "description": "Data source 0-4 = Current system date\n\nIf you select (3) Calculate Loan Payoff for @LOANPROJECTCALCULATIONTYPE, enter the expected loan payoff date here. If you do not provide a date, The system assumes the current system date.",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTPAYOFFINTDATE",
+    "insertText": "LOANPROJECTPAYOFFINTDATE",
+    "description": "Sets the day that interest begins to accrue",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTPROMO1RATE",
+    "insertText": "LOANPROJECTPROMO1RATE",
+    "description": "Data source 1 = Loan record Promo 1 Rate\nData source 3 = Loan default Promo 1 Rate\nOtherwise = 0.000%",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTPROMO2RATE",
+    "insertText": "LOANPROJECTPROMO2RATE",
+    "description": "Data source 1 = Loan record Promo 2 Rate\nData source 3 = Loan default Promo 2 Rate\nOtherwise = 0.000%",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTPROMO1BALANCE",
+    "insertText": "LOANPROJECTPROMO1BALANCE",
+    "description": "Data source 1 = Loan record Promo 1 Balance\nOtherwise= $0.00",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTPROMO2BALANCE",
+    "insertText": "LOANPROJECTPROMO2BALANCE",
+    "description": "Data source 1 = Loan record Promo 2 Balance\nOtherwise = $0.00",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTMILITARYAPRLOAN",
+    "insertText": "LOANPROJECTMILITARYAPRLOAN",
+    "description": "Data Source: Supplied by the calling specfile; if you do not use this variable, Projections uses the value in the Military APR Loan field in the related Loan or Application record",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTMAPRPREPAIDFINCHG",
+    "insertText": "LOANPROJECTMAPRPREPAIDFINCHG",
+    "description": "Data Source: Supplied by the calling specfile; the amount is used in the calculation",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTMILITARYAPR",
+    "insertText": "LOANPROJECTMILITARYAPR",
+    "description": "Calculated military APR for close-end loans; the specfile receives this rate as a result of the calculation",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTMAPRTOTALFEES",
+    "insertText": "LOANPROJECTMAPRTOTALFEES",
+    "description": "Total fees used in calculating military APR for closed-end loans; the specfile receives this amount to use in the calculation",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTPAYMENT",
+    "insertText": "LOANPROJECTPAYMENT",
+    "description": "Calculated payment if @LOANPROJECTCALCULATIONTYPE = (0) Calculate Payment Amount",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTLOANAMOUNT",
+    "insertText": "LOANPROJECTLOANAMOUNT",
+    "description": "Calculated payment if @LOANPROJECTCALCULATIONTYPE = (1) Calculate Loan Amount\nImportant: The default for @LOANPROJECTCALCULATIONTYPE = (2) Calculate Loan Term since the loan amount and payment have usually been calculated.",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTPAYMENTCOUNT",
+    "insertText": "LOANPROJECTPAYMENTCOUNT",
+    "description": "Total number of payments",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTFINALPAYMENT",
+    "insertText": "LOANPROJECTFINALPAYMENT",
+    "description": "Amount of final payment",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTFINALDUEDATE",
+    "insertText": "LOANPROJECTFINALDUEDATE",
+    "description": "Due date of final payment",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTTOTALINTEREST",
+    "insertText": "LOANPROJECTTOTALINTEREST",
+    "description": "Total interest paid",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTTOTALPAYMENTS",
+    "insertText": "LOANPROJECTTOTALPAYMENTS",
+    "description": "Total of all payments",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTTOTALESCROW",
+    "insertText": "LOANPROJECTTOTALESCROW",
+    "description": "Total escrow amount paid",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTLIFE",
+    "insertText": "LOANPROJECTLIFE",
+    "description": "Life insurance total premiums returned from LOANPROJECTCALC. Also, if you set @LOANPROJECTSINGLEPREMIUM to 2, you pass the precalculated single premium amount that pulls from the loan or application field.",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTDISABILITY",
+    "insertText": "LOANPROJECTDISABILITY",
+    "description": "Disability total premiums returned from LOANPROJECTCALC. Also, if you set @LOANPROJECTSINGLEPREMIUM to 2, you pass the precalculated single premium amount that pulls from the loan or application field.",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTLIFEERROR",
+    "insertText": "LOANPROJECTLIFEERROR",
+    "description": "Returned from LOANPROJECTCALC as blank, or as an exception description if there is a problem calculating life insurance",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTDISABILITYERROR",
+    "insertText": "LOANPROJECTDISABILITYERROR",
+    "description": "Returned from LOANPROJECTCALC as blank, or as an exception description if there is a problem calculating disability",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTAPR",
+    "insertText": "LOANPROJECTAPR",
+    "description": "Annual percentage rate if @LOANPROJECTPREPAIDFINANCECHG is non-zero",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTERROR",
+    "insertText": "LOANPROJECTERROR",
+    "description": "If an error occurs during the calculation, this variable contains the error text.",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTAMOUNTPAYOFF",
+    "insertText": "LOANPROJECTAMOUNTPAYOFF",
+    "description": "The amount required to pay off the loan on the payoff date",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTINTERESTPAYOFF",
+    "insertText": "LOANPROJECTINTERESTPAYOFF",
+    "description": "The amount of the loan balance due to accrued interest",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTAMOUNTPASTDUE",
+    "insertText": "LOANPROJECTAMOUNTPASTDUE",
+    "description": "The amount the system considers to be past due by the specified payoff date",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTCOUNTPASTDUE",
+    "insertText": "LOANPROJECTCOUNTPASTDUE",
+    "description": "The number of payments the system considers to be past due by the specified payoff date",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTLATECHGDUE",
+    "insertText": "LOANPROJECTLATECHGDUE",
+    "description": "The total amount of any late charges due on the loan",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTBILLEDFEEPAYOFF",
+    "insertText": "LOANPROJECTBILLEDFEEPAYOFF",
+    "description": "The amount due on a non-interest-accruing periodic fee a member must pay for having available certain types of credit",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTSALESTAXPAYOFF",
+    "insertText": "LOANPROJECTSALESTAXPAYOFF",
+    "description": "The amount of remaining sales tax the member must pay to the state at the time of payoff",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTINSURANCEPAYOFF",
+    "insertText": "LOANPROJECTINSURANCEPAYOFF",
+    "description": "The amount of remaining insurance the member must pay at the time of payoff",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTTERMINATEFEEPAYOFF",
+    "insertText": "LOANPROJECTTERMINATEFEEPAYOFF",
+    "description": "The optional fee charged for a lease loan payoff before the Balloon Date",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTPURCHASEPRINCIPAL",
+    "insertText": "LOANPROJECTPURCHASEPRINCIPAL",
+    "description": "The purchase principal balance at the time of the payoff calculation. Unpaid insurance premiums are included in this amount",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTCASHADVPRINCIPAL",
+    "insertText": "LOANPROJECTCASHADVPRINCIPAL",
+    "description": "The cash advance principal balance at the time of the payoff calculation",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTFEEPRINCIPAL",
+    "insertText": "LOANPROJECTFEEPRINCIPAL",
+    "description": "The fee balance at the time of the payoff calculation",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTUNPAIDPURCHASEINT",
+    "insertText": "LOANPROJECTUNPAIDPURCHASEINT",
+    "description": "The unpaid finance charge on purchases from previous statement cycles. This amount does not include finance charges due for the current statement cycle",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTUNPAIDCASHADVINT",
+    "insertText": "LOANPROJECTUNPAIDCASHADVINT",
+    "description": "The unpaid finance charge due on cash advances from previous statement cycles. This amount does not include finance charges due for the current statement cycle",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTCUTOFFPURCHASEINT",
+    "insertText": "LOANPROJECTCUTOFFPURCHASEINT",
+    "description": "The finance charge due on purchases from the day after the last Statement Date through the specified Payoff Date. The system uses the same grace period analysis used during statement cutoff to compute this amount. This amount does not include finance charges due from previous statement cycles",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTCUTOFFCASHADVINT",
+    "insertText": "LOANPROJECTCUTOFFCASHADVINT",
+    "description": "The finance charge due on cash advances from the day after the last Statement Date through the specified Payoff Date. This amount includes cash advance transaction finance charges for the current statement cycle, but does not include finance charges due from previous statement cycles",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTCUTOFFCATRANSINT",
+    "insertText": "LOANPROJECTCUTOFFCATRANSINT",
+    "description": "The total cash advance transaction finance charge due on cash advances from the day after the last Statement Date through the specified Payoff Date. This amount is included in the Cutoff Cash Adv Interest amount",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTCUTOFFBTTRANSINT",
+    "insertText": "LOANPROJECTCUTOFFBTTRANSINT",
+    "description": "The total balance transfer transaction finance charge due on balance transfers from the day after the last Statement Date through the specified Payoff Date",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTCUTOFFBALXFRINT",
+    "insertText": "LOANPROJECTCUTOFFBALXFRINT",
+    "description": "The finance charge due on balance transfers from the day after the last Statement Date through the specified Payoff Date",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTUNPAIDBALXFRINT",
+    "insertText": "LOANPROJECTUNPAIDBALXFRINT",
+    "description": "The unpaid finance charges on balance transfers from previous statement cycles",
+    "isSnippet": false
+  },
+  {
+    "label": "@LOANPROJECTBALXFRPRINCIPAL",
+    "insertText": "LOANPROJECTBALXFRPRINCIPAL",
+    "description": "The balance transfer principal balance at the time of the payoff calculation",
+    "isSnippet": false
+  }
+]

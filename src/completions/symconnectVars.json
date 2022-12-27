@@ -1,0 +1,182 @@
+[
+  {
+    "label": "@CARDORDINAL",
+    "insertText": "CARDORDINAL",
+    "description": "When a card number is used to identify an account and the Card record is verified while looking up the account, the Card ordinal is passed to this variable. When the account is identified using an account number or lookup, @CARDORDINAL is set to negative one (-1).",
+    "isSnippet": false
+  },
+  {
+    "label": "@CLIENTNUMBER",
+    "insertText": "CLIENTNUMBER",
+    "description": "This variable returns the SymConnect client number that the device type and device number map to. The PowerOn specfile run is initiated through a SymConnect request from this client number.",
+    "isSnippet": false
+  },
+  {
+    "label": "@PREFORDINAL",
+    "insertText": "PREFORDINAL",
+    "description": "This variable passes the zero-based ordinal of the Preference record through which access to the member's account data was authorized. If the member used a card to access the account, @PREFORDINAL is set to negative one (-1).",
+    "isSnippet": false
+  },
+  {
+    "label": "@PREFLOCATOR",
+    "insertText": "PREFLOCATOR",
+    "description": "This variable lets you access items in the Preference record, such as a member's preferred language, allowing a script author to match the language used elsewhere in home banking. This enables you to determine language preferences and access rights in custom scripts.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGANSAMOUNT",
+    "insertText": "RGANSAMOUNT",
+    "description": "This variable passes the answer from the member before the next step of the specfile is run.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGANSDATE",
+    "insertText": "RGANSDATE",
+    "description": "This variable passes the answer from the member before the next step of the specfile is run.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGANSNUM",
+    "insertText": "RGANSNUM",
+    "description": "This variable passes the answer from the member before the next step of the specfile is run.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGANSRATE",
+    "insertText": "RGANSRATE",
+    "description": "This variable passes the answer from the member before the next step of the specfile is run.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGANSTEXT",
+    "insertText": "RGANSTEXT",
+    "description": "This variable passes the answer from the member before the next step of the specfile is run.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGDATATYPE",
+    "insertText": "RGDATATYPE",
+    "description": "This variable specifies the data type requested or the completion of the last step of the specfile:",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGDEFAMOUNT",
+    "insertText": "RGDEFAMOUNT",
+    "description": "Lines printed from this variable are used to pass information, a prompt, and a default value to the member.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGDEFDATE",
+    "insertText": "RGDEFDATE",
+    "description": "Lines printed from this variable are used to pass information, a prompt, and a default value to the member.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGDEFNUM",
+    "insertText": "RGDEFNUM",
+    "description": "Lines printed from this variable are used to pass information, a prompt, and a default value to the member.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGDEFRATE",
+    "insertText": "RGDEFRATE",
+    "description": "Lines printed from this variable are used to pass information, a prompt, and a default value to the member.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGDEFTEXT",
+    "insertText": "RGDEFTEXT",
+    "description": "Lines printed from this variable are used to pass information, a prompt, and a default value to the member.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGMAXCODEWIDTH",
+    "insertText": "RGMAXCODEWIDTH",
+    "description": "This variable defines the maximum value of a requested code, or the maximum number of characters that can be returned in a response.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGPROMPT",
+    "insertText": "RGPROMPT",
+    "description": "Lines printed from this variable are used to pass information, a prompt, and a default value to the member.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGSCREENCLEAR",
+    "insertText": "RGSCREENCLEAR",
+    "description": "This variable recommends that the screen is cleared before displaying information to the member from this step of the specfile.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGSESSION",
+    "insertText": "RGSESSION",
+    "description": "SymConnect specfiles can be run in several steps. @RGSESSION can be used as an index location to store data needed in more than one step.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGSTATE",
+    "insertText": "RGSTATE",
+    "description": "This variable identifies the point at which the specfile starts or continues running at each step.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGUSERCHR1",
+    "insertText": "RGUSERCHR1",
+    "description": "These variables pass character data to and from the specfile at each step of running.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGUSERCHR2",
+    "insertText": "RGUSERCHR2",
+    "description": "These variables pass character data to and from the specfile at each step of running.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGUSERCHR3",
+    "insertText": "RGUSERCHR3",
+    "description": "These variables pass character data to and from the specfile at each step of running.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGUSERCHR4",
+    "insertText": "RGUSERCHR4",
+    "description": "These variables pass character data to and from the specfile at each step of running.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGUSERCHR5",
+    "insertText": "RGUSERCHR5",
+    "description": "These variables pass character data to and from the specfile at each step of running.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGUSERNUM1",
+    "insertText": "RGUSERNUM1",
+    "description": "These variables pass numeric data to and from the specfile at each step of running.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGUSERNUM2",
+    "insertText": "RGUSERNUM2",
+    "description": "These variables pass numeric data to and from the specfile at each step of running.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGUSERNUM3",
+    "insertText": "RGUSERNUM3",
+    "description": "These variables pass numeric data to and from the specfile at each step of running.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGUSERNUM4",
+    "insertText": "RGUSERNUM4",
+    "description": "These variables pass numeric data to and from the specfile at each step of running.",
+    "isSnippet": false
+  },
+  {
+    "label": "@RGUSERNUM5",
+    "insertText": "RGUSERNUM5",
+    "description": "These variables pass numeric data to and from the specfile at each step of running.",
+    "isSnippet": false
+  }
+]

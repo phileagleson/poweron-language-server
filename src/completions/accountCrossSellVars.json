@@ -1,0 +1,548 @@
+[
+  {
+    "label": "@ACSACTIONID1",
+    "insertText": "ACSACTIONID1",
+    "description": "When your action is to create a record that requires an ID, these variables contain the required ID.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSACTIONID2",
+    "insertText": "ACSACTIONID2",
+    "description": "When your action is to create a record that requires an ID, these variables contain the required ID.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSACTIONID3",
+    "insertText": "ACSACTIONID3",
+    "description": "When your action is to create a record that requires an ID, these variables contain the required ID.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSACTIONID4",
+    "insertText": "ACSACTIONID4",
+    "description": "When your action is to create a record that requires an ID, these variables contain the required ID.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSACTIONID5",
+    "insertText": "ACSACTIONID5",
+    "description": "When your action is to create a record that requires an ID, these variables contain the required ID.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSACTIONORDINAL1",
+    "insertText": "ACSACTIONORDINAL1",
+    "description": "When your action is to create a record that requires an ordinal number, these variables contain the required ordinal number.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSACTIONORDINAL2",
+    "insertText": "ACSACTIONORDINAL2",
+    "description": "When your action is to create a record that requires an ordinal number, these variables contain the required ordinal number.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSACTIONORDINAL3",
+    "insertText": "ACSACTIONORDINAL3",
+    "description": "When your action is to create a record that requires an ordinal number, these variables contain the required ordinal number.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSACTIONORDINAL4",
+    "insertText": "ACSACTIONORDINAL4",
+    "description": "When your action is to create a record that requires an ordinal number, these variables contain the required ordinal number.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSACTIONORDINAL5",
+    "insertText": "ACSACTIONORDINAL5",
+    "description": "When your action is to create a record that requires an ordinal number, these variables contain the required ordinal number.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCONSOLIDATEMAX",
+    "insertText": "ACSCONSOLIDATEMAX",
+    "description": "This variable contains the maximum loan amount the member is allowed to consolidate.\n\nReference this variable in either the APPROVE or the FINISH states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCRITERIARESULT1",
+    "insertText": "ACSCRITERIARESULT1",
+    "description": "These variables are true/false flags that return 1 for each entry of the Criteria # criterion that is determined to be true and 0 for unused or non-matching criteria.\n\nReference these variables in the APPROVE state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCRITERIARESULT2",
+    "insertText": "ACSCRITERIARESULT2",
+    "description": "These variables are true/false flags that return 1 for each entry of the Criteria # criterion that is determined to be true and 0 for unused or non-matching criteria.\n\nReference these variables in the APPROVE state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCRITERIARESULT3",
+    "insertText": "ACSCRITERIARESULT3",
+    "description": "These variables are true/false flags that return 1 for each entry of the Criteria # criterion that is determined to be true and 0 for unused or non-matching criteria.\n\nReference these variables in the APPROVE state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCRITERIARESULT4",
+    "insertText": "ACSCRITERIARESULT4",
+    "description": "These variables are true/false flags that return 1 for each entry of the Criteria # criterion that is determined to be true and 0 for unused or non-matching criteria.\n\nReference these variables in the APPROVE state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCRITERIARESULT5",
+    "insertText": "ACSCRITERIARESULT5",
+    "description": "These variables are true/false flags that return 1 for each entry of the Criteria # criterion that is determined to be true and 0 for unused or non-matching criteria.\n\nReference these variables in the APPROVE state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCRITERIARESULT6",
+    "insertText": "ACSCRITERIARESULT6",
+    "description": "These variables are true/false flags that return 1 for each entry of the Criteria # criterion that is determined to be true and 0 for unused or non-matching criteria.\n\nReference these variables in the APPROVE state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCRITERIARESULT7",
+    "insertText": "ACSCRITERIARESULT7",
+    "description": "These variables are true/false flags that return 1 for each entry of the Criteria # criterion that is determined to be true and 0 for unused or non-matching criteria.\n\nReference these variables in the APPROVE state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCRITERIARESULT8",
+    "insertText": "ACSCRITERIARESULT8",
+    "description": "These variables are true/false flags that return 1 for each entry of the Criteria # criterion that is determined to be true and 0 for unused or non-matching criteria.\n\nReference these variables in the APPROVE state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCRITERIARESULT9",
+    "insertText": "ACSCRITERIARESULT9",
+    "description": "These variables are true/false flags that return 1 for each entry of the Criteria # criterion that is determined to be true and 0 for unused or non-matching criteria.\n\nReference these variables in the APPROVE state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCRITERIARESULT10",
+    "insertText": "ACSCRITERIARESULT10",
+    "description": "These variables are true/false flags that return 1 for each entry of the Criteria # criterion that is determined to be true and 0 for unused or non-matching criteria.\n\nReference these variables in the APPROVE state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCRITERIARESULT11",
+    "insertText": "ACSCRITERIARESULT11",
+    "description": "These variables are true/false flags that return 1 for each entry of the Criteria # criterion that is determined to be true and 0 for unused or non-matching criteria.\n\nReference these variables in the APPROVE state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCRITERIARESULT12",
+    "insertText": "ACSCRITERIARESULT12",
+    "description": "These variables are true/false flags that return 1 for each entry of the Criteria # criterion that is determined to be true and 0 for unused or non-matching criteria.\n\nReference these variables in the APPROVE state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCUSTOMACTION31",
+    "insertText": "ACSCUSTOMACTION31",
+    "description": "These variables are true/false flags that return 1 when a chosen menu item has an action code specified from 31 through 50. Use these variables to trigger custom PowerOn specfile code.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCUSTOMACTION32",
+    "insertText": "ACSCUSTOMACTION32",
+    "description": "These variables are true/false flags that return 1 when a chosen menu item has an action code specified from 31 through 50. Use these variables to trigger custom PowerOn specfile code.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCUSTOMACTION33",
+    "insertText": "ACSCUSTOMACTION33",
+    "description": "These variables are true/false flags that return 1 when a chosen menu item has an action code specified from 31 through 50. Use these variables to trigger custom PowerOn specfile code.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCUSTOMACTION34",
+    "insertText": "ACSCUSTOMACTION34",
+    "description": "These variables are true/false flags that return 1 when a chosen menu item has an action code specified from 31 through 50. Use these variables to trigger custom PowerOn specfile code.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCUSTOMACTION35",
+    "insertText": "ACSCUSTOMACTION35",
+    "description": "These variables are true/false flags that return 1 when a chosen menu item has an action code specified from 31 through 50. Use these variables to trigger custom PowerOn specfile code.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCUSTOMACTION36",
+    "insertText": "ACSCUSTOMACTION36",
+    "description": "These variables are true/false flags that return 1 when a chosen menu item has an action code specified from 31 through 50. Use these variables to trigger custom PowerOn specfile code.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCUSTOMACTION37",
+    "insertText": "ACSCUSTOMACTION37",
+    "description": "These variables are true/false flags that return 1 when a chosen menu item has an action code specified from 31 through 50. Use these variables to trigger custom PowerOn specfile code.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCUSTOMACTION38",
+    "insertText": "ACSCUSTOMACTION38",
+    "description": "These variables are true/false flags that return 1 when a chosen menu item has an action code specified from 31 through 50. Use these variables to trigger custom PowerOn specfile code.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCUSTOMACTION39",
+    "insertText": "ACSCUSTOMACTION39",
+    "description": "These variables are true/false flags that return 1 when a chosen menu item has an action code specified from 31 through 50. Use these variables to trigger custom PowerOn specfile code.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCUSTOMACTION40",
+    "insertText": "ACSCUSTOMACTION40",
+    "description": "These variables are true/false flags that return 1 when a chosen menu item has an action code specified from 31 through 50. Use these variables to trigger custom PowerOn specfile code.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCUSTOMACTION41",
+    "insertText": "ACSCUSTOMACTION41",
+    "description": "These variables are true/false flags that return 1 when a chosen menu item has an action code specified from 31 through 50. Use these variables to trigger custom PowerOn specfile code.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCUSTOMACTION42",
+    "insertText": "ACSCUSTOMACTION42",
+    "description": "These variables are true/false flags that return 1 when a chosen menu item has an action code specified from 31 through 50. Use these variables to trigger custom PowerOn specfile code.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCUSTOMACTION43",
+    "insertText": "ACSCUSTOMACTION43",
+    "description": "These variables are true/false flags that return 1 when a chosen menu item has an action code specified from 31 through 50. Use these variables to trigger custom PowerOn specfile code.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCUSTOMACTION44",
+    "insertText": "ACSCUSTOMACTION44",
+    "description": "These variables are true/false flags that return 1 when a chosen menu item has an action code specified from 31 through 50. Use these variables to trigger custom PowerOn specfile code.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCUSTOMACTION45",
+    "insertText": "ACSCUSTOMACTION45",
+    "description": "These variables are true/false flags that return 1 when a chosen menu item has an action code specified from 31 through 50. Use these variables to trigger custom PowerOn specfile code.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCUSTOMACTION46",
+    "insertText": "ACSCUSTOMACTION46",
+    "description": "These variables are true/false flags that return 1 when a chosen menu item has an action code specified from 31 through 50. Use these variables to trigger custom PowerOn specfile code.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCUSTOMACTION47",
+    "insertText": "ACSCUSTOMACTION47",
+    "description": "These variables are true/false flags that return 1 when a chosen menu item has an action code specified from 31 through 50. Use these variables to trigger custom PowerOn specfile code.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCUSTOMACTION48",
+    "insertText": "ACSCUSTOMACTION48",
+    "description": "These variables are true/false flags that return 1 when a chosen menu item has an action code specified from 31 through 50. Use these variables to trigger custom PowerOn specfile code.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCUSTOMACTION49",
+    "insertText": "ACSCUSTOMACTION49",
+    "description": "These variables are true/false flags that return 1 when a chosen menu item has an action code specified from 31 through 50. Use these variables to trigger custom PowerOn specfile code.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSCUSTOMACTION50",
+    "insertText": "ACSCUSTOMACTION50",
+    "description": "These variables are true/false flags that return 1 when a chosen menu item has an action code specified from 31 through 50. Use these variables to trigger custom PowerOn specfile code.\n\nReference these variables in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSDECISION",
+    "insertText": "ACSDECISION",
+    "description": "This variable is a true/false flag to determine if a member qualifies for a specific service.\n\nReference this variable in the APPROVE state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSDESCRIPTION",
+    "insertText": "ACSDESCRIPTION",
+    "description": "This variable returns the value of the Description field from a specific service parameter.\n\nReference this variable in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSLOANAMOUNT",
+    "insertText": "ACSLOANAMOUNT",
+    "description": "This variable contains the loan balance of an item acquired from the credit report.\n\nReference this variable in either the APPROVE or the FINISH states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSLOANPAYMENT",
+    "insertText": "ACSLOANPAYMENT",
+    "description": "This variable contains the loan payment amount of an item acquired from the credit report.\n\nReference this variable in either the APPROVE or the FINISH states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSLOANRATE",
+    "insertText": "ACSLOANRATE",
+    "description": "This variable contains the rate of a loan acquired from the credit report.\n\nReference this variable in either the APPROVE or the FINISH states.\n\nThis information is not always available.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSLOANTERM",
+    "insertText": "ACSLOANTERM",
+    "description": "This variable contains the term of an item acquired from the credit report.\n\nReference this variable in either the APPROVE or the FINISH states.\n\nThis information is not always available.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSMATCHREASON1",
+    "insertText": "ACSMATCHREASON1",
+    "description": "With these variables, you enter a text description of why an ACS Services Parameters Service Match # field criterion succeeded or failed.\n\nReference these variables in the APPROVE state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSMATCHREASON2",
+    "insertText": "ACSMATCHREASON2",
+    "description": "With these variables, you enter a text description of why an ACS Services Parameters Service Match # field criterion succeeded or failed.\n\nReference these variables in the APPROVE state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSMATCHREASON3",
+    "insertText": "ACSMATCHREASON3",
+    "description": "With these variables, you enter a text description of why an ACS Services Parameters Service Match # field criterion succeeded or failed.\n\nReference these variables in the APPROVE state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSMENUCHOSEN",
+    "insertText": "ACSMENUCHOSEN",
+    "description": "This variable returns the number of the user's Menu Option # selection, which is used to determine other file maintenance to be performed.\n\nReference this variable in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSPOINTS",
+    "insertText": "ACSPOINTS",
+    "description": "This variable contains the number of points a specific service is worth when determining relationship codes for relationship pricing.\n\nReference this variable in any state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSPROJECTPAYMENT",
+    "insertText": "ACSPROJECTPAYMENT",
+    "description": "If you decide to accept a loan service with the payment agreed upon while performing loan projections, this variable contains the specified payment amount.\n\nReference this variable in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSPROJECTRATE",
+    "insertText": "ACSPROJECTRATE",
+    "description": "If you decide to accept a loan service at the rate agreed upon while performing loan projections, this variable contains the specified rate.\n\nReference this variable in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSPROJECTTERM",
+    "insertText": "ACSPROJECTTERM",
+    "description": "If you decide to accept a loan service for the term agreed upon while performing loan projections, this variable contains the specified term.\n\nReference this variable in the FINISH state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREASON1",
+    "insertText": "ACSREASON1",
+    "description": "With these variables, you enter a text description of why an ACS Services Parameters Criteria # field criterion succeeded or failed.\n\nReference these variables in the APPROVE state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREASON2",
+    "insertText": "ACSREASON2",
+    "description": "With these variables, you enter a text description of why an ACS Services Parameters Criteria # field criterion succeeded or failed.\n\nReference these variables in the APPROVE state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE1",
+    "insertText": "ACSREFERENCE1",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE2",
+    "insertText": "ACSREFERENCE2",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE3",
+    "insertText": "ACSREFERENCE3",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE4",
+    "insertText": "ACSREFERENCE4",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE5",
+    "insertText": "ACSREFERENCE5",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE6",
+    "insertText": "ACSREFERENCE6",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE7",
+    "insertText": "ACSREFERENCE7",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE8",
+    "insertText": "ACSREFERENCE8",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE9",
+    "insertText": "ACSREFERENCE9",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE10",
+    "insertText": "ACSREFERENCE10",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE11",
+    "insertText": "ACSREFERENCE11",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE12",
+    "insertText": "ACSREFERENCE12",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE13",
+    "insertText": "ACSREFERENCE13",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE14",
+    "insertText": "ACSREFERENCE14",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE15",
+    "insertText": "ACSREFERENCE15",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE16",
+    "insertText": "ACSREFERENCE16",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE17",
+    "insertText": "ACSREFERENCE17",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE18",
+    "insertText": "ACSREFERENCE18",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE19",
+    "insertText": "ACSREFERENCE19",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE20",
+    "insertText": "ACSREFERENCE20",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE21",
+    "insertText": "ACSREFERENCE21",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE22",
+    "insertText": "ACSREFERENCE22",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE23",
+    "insertText": "ACSREFERENCE23",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE24",
+    "insertText": "ACSREFERENCE24",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSREFERENCE25",
+    "insertText": "ACSREFERENCE25",
+    "description": "When acquiring a loan or loans from the credit report, these variables store the name of the financial institution for a specific item.\n\nReference these variables in either the SFW or the SALESHISTORY states.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSSERVICE",
+    "insertText": "ACSSERVICE",
+    "description": "This variable contains the number of the service defined in ACS Service Parameters.\n\nReference this variable in the APPROVE state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSSERVICEMATCH1",
+    "insertText": "ACSSERVICEMATCH1",
+    "description": "These variables are true/false flags that return 1 for each entry of the ACS Services Parameters Service Match # field criteria that is determined to be true and 0 for unused or non-matching criteria.\n\nReference these variables in the APPROVE state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSSERVICEMATCH2",
+    "insertText": "ACSSERVICEMATCH2",
+    "description": "These variables are true/false flags that return 1 for each entry of the ACS Services Parameters Service Match # field criteria that is determined to be true and 0 for unused or non-matching criteria.\n\nReference these variables in the APPROVE state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSSERVICEMATCH3",
+    "insertText": "ACSSERVICEMATCH3",
+    "description": "These variables are true/false flags that return 1 for each entry of the ACS Services Parameters Service Match # field criteria that is determined to be true and 0 for unused or non-matching criteria.\n\nReference these variables in the APPROVE state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSSTATE",
+    "insertText": "ACSSTATE",
+    "description": "This variable stores the current run state of the ACS specfile.\n\nReference this variable in any state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSTHEIRRATE",
+    "insertText": "ACSTHEIRRATE",
+    "description": "The ACS program passes the interest rate of a loan you acquired from a credit report to the ACS specfile, assuming the reporting institution supplies it.\n\nReference this variable in either the APPROVE or the FINISH states.\n\nThis information is not always available.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACSWINDOWSFLAG",
+    "insertText": "ACSWINDOWSFLAG",
+    "description": "This variable is a true/false flag to specify if ACS is being run in Windows® and could be used to determine whether to run the SFW state or the SALESHISTORY state.\n\nReference this variable in any state.",
+    "isSnippet": false
+  }
+]

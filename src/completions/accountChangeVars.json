@@ -1,0 +1,20 @@
+[
+  {
+    "label": "@ACCTCHGNEWACCOUNTNUMBER",
+    "insertText": "ACCTCHGNEWACCOUNTNUMBER",
+    "description": "This variable contains the new account number to which the account is being changed",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACCTCHGOLDACCOUNTNUMBER",
+    "insertText": "ACCTCHGOLDACCOUNTNUMBER",
+    "description": "This variable contains the old account number from which the account was changed",
+    "isSnippet": false
+  },
+  {
+    "label": "@ACCTCHGDOCUMENTNUMBER",
+    "insertText": "ACCTCHGDOCUMENTNUMBER",
+    "description": "This variable contains the unique form identification number for the change",
+    "isSnippet": false
+  }
+]

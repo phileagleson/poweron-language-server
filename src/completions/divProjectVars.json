@@ -1,0 +1,158 @@
+[
+  {
+    "label": "@DIVPROJECTCALCULATIONTYPE",
+    "insertText": "DIVPROJECTCALCULATIONTYPE",
+    "description": "The default is (0) Calculate a dividend projection",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTOPENDATE",
+    "insertText": "DIVPROJECTOPENDATE",
+    "description": "The default is --/--/--, which stands for today's system date if this is a dividend projection, or for the first day of the current year if this is an APY calculation. Generally, leave this variable as --/--/-- unless you are certain that you want to start the calculation from a specific date.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTOPENBALANCE",
+    "insertText": "DIVPROJECTOPENBALANCE",
+    "description": "The default is $0.00, unless the data source is (1) Use data in the currently read share record, in which case the default is the current share balance. Fill this variable with the amount you want to use to calculate dividends or the APY.\n\nFor multiple dividend rate tiers, calculate a separate APY for each tier by running the DIVPROJECTCALC function once for each tier, after filling this variable with the appropriate high or low end of each tier. For a single dividend rate, fill this variable with a reasonably large amount (for example $10,000.00) to minimize rounding errors when calculating the APY.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTDEPAMOUNT",
+    "insertText": "DIVPROJECTDEPAMOUNT",
+    "description": "The default is $0.00. When you are performing a dividend calculation, fill this variable with any recurring deposit amount. When you are performing an APY calculation, this variable must be $0.00.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTDEPFREQUENCY",
+    "insertText": "DIVPROJECTDEPFREQUENCY",
+    "description": "The default is (4) Monthly. PowerOn ignores this variable if @DIVPROJECTDEPAMOUNT is $0.00. Otherwise, this variable represents the frequency of any recurring deposit.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTDEPSTARTDATE",
+    "insertText": "DIVPROJECTDEPSTARTDATE",
+    "description": "The default is --/--/--, which stands for the @DIVPROJECTOPENDATE variable. This variable is the date of the first recurring deposit. PowerOn ignores this variable if @DIVPROJECTDEPAMOUNT is $0.00.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTDEPDAY1",
+    "insertText": "DIVPROJECTDEPDAY1",
+    "description": "The default is 0, which stands for the day of the month specified in @DIVPROJECTDEPSTARTDATE. PowerOn ignores this variable if @DIVPROJECTDEPAMOUNT is $0.00, or if @DIVPROJECTDEPFREQUENCY is greater than 5.\n\nIf @DIVPROJECTDEPFREQUENCY is 5, fill in this variable. This variable represents the day of the month for any recurring deposit.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTDEPDAY2",
+    "insertText": "DIVPROJECTDEPDAY2",
+    "description": "The default is 0. PowerOn uses this variable only if @DIVPROJECTDEPAMOUNT is not $0.00 and @DIVPROJECTDEPFREQUENCY is 5. Fill in the @DIVPROJECTDEPDAY2 variable for this case. This variable represents the second day of the month for semimonthly recurring deposits.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTTERMFREQUENCY",
+    "insertText": "DIVPROJECTTERMFREQUENCY",
+    "description": "The default is (0) Months if the data source is (0) Blank defaults - all data will be filled in by specfile. Otherwise, this variable is the value in the Term Frequency field of the Share record or the share defaults. PowerOn ignores this variable if @DIVPROJECTTERMPERIOD variable is 0. This variable represents the units of the term period for certificate maturities.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTTERMPERIOD",
+    "insertText": "DIVPROJECTTERMPERIOD",
+    "description": "The default is 0 if the data source is (0) Blank defaults - all data will be filled in by specfile. Otherwise, this variable is the value in the Term Period field of the Share record or the share defaults.\n\nIf this variable is set to 0, the projection is not for a certificate.\nIf this variable is set to any value other than 0, PowerOn calculates a certificate maturity dividend at each maturity date throughout the calculation.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTMATURITYDATE",
+    "insertText": "DIVPROJECTMATURITYDATE",
+    "description": "The default is --/--/--, which means that the system calculates the first maturity date based on the Share record Open Date, the Term Frequency, and the Term Period fields. Leave this variable blank for APY calculations. Otherwise, you can set this variable to the first maturity date that you want used in the calculation.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTDIVTYPE",
+    "insertText": "DIVPROJECTDIVTYPE",
+    "description": "The default is 0000 if the data source is (0) Blank defaults - all data will be filled in by specfile. Otherwise, this variable is the value in the Dividend Type field of the Share record or the share defaults. Fill in this variable with the correct dividend type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTDIVRATE",
+    "insertText": "DIVPROJECTDIVRATE",
+    "description": "The default is 0.000% if the data source is (0) Blank defaults - all data will be filled in by specfile. Otherwise, this variable is the fill-in Dividend Rate from the Share record or the share defaults. PowerOn ignores this variable unless @DIVPROJECTDIVTYPE references a dividend type based on a fill-in rate. In that case, populate this variable with the appropriate fill-in dividend rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTDIVPOSTCODE",
+    "insertText": "DIVPROJECTDIVPOSTCODE",
+    "description": "The default is 0 if the data source is (0) Blank defaults - all data will be filled in by specfile. Otherwise, this variable is the value in the Dividend Post Code field of the Share record or the share defaults. Set this variable to (1) Withdraw by Check or Transfer if dividend calculation, Dividends Required to be Withdrawn or Transferred if APY when calculating an APY if you require dividends to be removed from the share rather than compounding.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTENDDATE",
+    "insertText": "DIVPROJECTENDDATE",
+    "description": "The default is --/--/--. Leave this variable blank for APY calculations. The system calculates one year's worth of dividends if it is not a certificate, or up to the first maturity date if it is a certificate.\n\nIf you fill in this variable with a date, the system calculates dividends up to the specified date.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTDIVRATEMARGIN",
+    "insertText": "DIVPROJECTDIVRATEMARGIN",
+    "description": "The default is 00 if the data source is (0) Blank defaults - all data will be filled in by specfile. Otherwise, this variable is the value in the Dividend Rate Margin field of the Share record or the share defaults.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTDIVRATEMARGINSIGN",
+    "insertText": "DIVPROJECTDIVRATEMARGINSIGN",
+    "description": "This variable is 00, indicating a positive (+) margin if the data source is (0) Blank defaults - all data will be filled in by specfile. Otherwise, this variable is the value in the Dividend Rate Margin field of the Share record or the share defaults.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTTOTALDEPOSITS",
+    "insertText": "DIVPROJECTTOTALDEPOSITS",
+    "description": "This variable contains the total of the recurring deposits. The value of this variable is $0.00 if @DIVPROJECTDEPAMOUNT is $0.00.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTTOTALDIVIDENDS",
+    "insertText": "DIVPROJECTTOTALDIVIDENDS",
+    "description": "This variable contains the total amount of the calculated dividends.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTTOTALWITHDRAWALS",
+    "insertText": "DIVPROJECTTOTALWITHDRAWALS",
+    "description": "This variable contains the total amount of the calculated dividend withdrawals. The value of this variable is $0.00 if @DIVPROJECTDIVPOSTCODE is 0.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTTOTALMATURITYCOUNT",
+    "insertText": "DIVPROJECTTOTALMATURITYCOUNT",
+    "description": "This variable contains the total number of certificate maturities calculated. The value of this variable is 0 if @DIVPROJECTTERMPERIOD is 0.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTTOTALBALANCE",
+    "insertText": "DIVPROJECTTOTALBALANCE",
+    "description": "This variable contains the final total balance after dividend deposits and dividend withdrawals.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTTOTALAPYDAYCOUNT",
+    "insertText": "DIVPROJECTTOTALAPYDAYCOUNT",
+    "description": "This variable contains the number of days in the APY calculation. The value of this variable is 0 if @DIVPROJECTCALCULATIONTYPE is 0.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTAPY",
+    "insertText": "DIVPROJECTAPY",
+    "description": "This variable contains the calculated APY. The value of this variable is 0.000% if @DIVPROJECTCALCULATIONTYPE is 0.\n\nThis variable is a rate value that PowerOn prints with three digits after the decimal point if you use simple PowerOn PRINT statements. TISA requires that you report this value with only two digits after the decimal point. The system has already rounded the value to the nearest 100th of a percent, so you do not have to worry about rounding. However, to print the value properly, perform an action similar to the following:\n\nCOL=40 RIGHT SEGMENT(FORMAT(\"##9.999\",@DIVPROJECTAPY),1,6)+\"%\"\n\nThis statement prints the APY right-justified in column 40, with only two digits after the decimal point.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTTOTALENDDATE",
+    "insertText": "DIVPROJECTTOTALENDDATE",
+    "description": "This variable contains the final date for the calculations.",
+    "isSnippet": false
+  },
+  {
+    "label": "@DIVPROJECTERROR",
+    "insertText": "DIVPROJECTERROR",
+    "description": "This variable is blank if no errors occurred during the calculation. Otherwise, this variable contains a description of the error. If the value of this variable is not blank, none of the resulting values are correct and the system does not print the projection. Check the value of this variable first, directly after DIVPROJECTCALC and before disclosing any of the results.",
+    "isSnippet": false
+  }
+]

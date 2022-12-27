@@ -1,0 +1,650 @@
+[
+  {
+    "label": "@ENVARGNUMBER1",
+    "insertText": "ENVARGNUMBER1",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGNUMBER2",
+    "insertText": "ENVARGNUMBER2",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGNUMBER3",
+    "insertText": "ENVARGNUMBER3",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGNUMBER4",
+    "insertText": "ENVARGNUMBER4",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGNUMBER5",
+    "insertText": "ENVARGNUMBER5",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGNUMBER6",
+    "insertText": "ENVARGNUMBER6",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGNUMBER7",
+    "insertText": "ENVARGNUMBER7",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGNUMBER9",
+    "insertText": "ENVARGNUMBER9",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGNUMBER10",
+    "insertText": "ENVARGNUMBER10",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGCHAR1",
+    "insertText": "ENVARGCHAR1",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGCHAR2",
+    "insertText": "ENVARGCHAR2",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGCHAR3",
+    "insertText": "ENVARGCHAR3",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGCHAR4",
+    "insertText": "ENVARGCHAR4",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGCHAR5",
+    "insertText": "ENVARGCHAR5",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGCHAR6",
+    "insertText": "ENVARGCHAR6",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGCHAR7",
+    "insertText": "ENVARGCHAR7",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGCHAR9",
+    "insertText": "ENVARGCHAR9",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGCHAR10",
+    "insertText": "ENVARGCHAR10",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGMONEY1",
+    "insertText": "ENVARGMONEY1",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGMONEY2",
+    "insertText": "ENVARGMONEY2",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGMONEY3",
+    "insertText": "ENVARGMONEY3",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGMONEY4",
+    "insertText": "ENVARGMONEY4",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGMONEY5",
+    "insertText": "ENVARGMONEY5",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGMONEY6",
+    "insertText": "ENVARGMONEY6",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGMONEY7",
+    "insertText": "ENVARGMONEY7",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGMONEY9",
+    "insertText": "ENVARGMONEY9",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGMONEY10",
+    "insertText": "ENVARGMONEY10",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGCODE1",
+    "insertText": "ENVARGCODE1",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGCODE2",
+    "insertText": "ENVARGCODE2",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGCODE3",
+    "insertText": "ENVARGCODE3",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGCODE4",
+    "insertText": "ENVARGCODE4",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGCODE5",
+    "insertText": "ENVARGCODE5",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGCODE6",
+    "insertText": "ENVARGCODE6",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGCODE7",
+    "insertText": "ENVARGCODE7",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGCODE9",
+    "insertText": "ENVARGCODE9",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGCODE10",
+    "insertText": "ENVARGCODE10",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGDATE1",
+    "insertText": "ENVARGDATE1",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGDATE2",
+    "insertText": "ENVARGDATE2",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGDATE3",
+    "insertText": "ENVARGDATE3",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGDATE4",
+    "insertText": "ENVARGDATE4",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGDATE5",
+    "insertText": "ENVARGDATE5",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGDATE6",
+    "insertText": "ENVARGDATE6",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGDATE7",
+    "insertText": "ENVARGDATE7",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGDATE9",
+    "insertText": "ENVARGDATE9",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGDATE10",
+    "insertText": "ENVARGDATE10",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGRATE1",
+    "insertText": "ENVARGRATE1",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGRATE2",
+    "insertText": "ENVARGRATE2",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGRATE3",
+    "insertText": "ENVARGRATE3",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGRATE4",
+    "insertText": "ENVARGRATE4",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGRATE5",
+    "insertText": "ENVARGRATE5",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGRATE6",
+    "insertText": "ENVARGRATE6",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGRATE7",
+    "insertText": "ENVARGRATE7",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGRATE9",
+    "insertText": "ENVARGRATE9",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVARGRATE10",
+    "insertText": "ENVARGRATE10",
+    "description": "These environment argument variables can be used to pass information to (and receive results from) a corresponding parameter variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMNUMBER1",
+    "insertText": "ENVPARAMNUMBER1",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMNUMBER2",
+    "insertText": "ENVPARAMNUMBER2",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMNUMBER3",
+    "insertText": "ENVPARAMNUMBER3",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMNUMBER4",
+    "insertText": "ENVPARAMNUMBER4",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMNUMBER5",
+    "insertText": "ENVPARAMNUMBER5",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMNUMBER6",
+    "insertText": "ENVPARAMNUMBER6",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMNUMBER7",
+    "insertText": "ENVPARAMNUMBER7",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMNUMBER9",
+    "insertText": "ENVPARAMNUMBER9",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMNUMBER10",
+    "insertText": "ENVPARAMNUMBER10",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMCHAR1",
+    "insertText": "ENVPARAMCHAR1",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMCHAR2",
+    "insertText": "ENVPARAMCHAR2",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMCHAR3",
+    "insertText": "ENVPARAMCHAR3",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMCHAR4",
+    "insertText": "ENVPARAMCHAR4",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMCHAR5",
+    "insertText": "ENVPARAMCHAR5",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMCHAR6",
+    "insertText": "ENVPARAMCHAR6",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMCHAR7",
+    "insertText": "ENVPARAMCHAR7",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMCHAR9",
+    "insertText": "ENVPARAMCHAR9",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMCHAR10",
+    "insertText": "ENVPARAMCHAR10",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMMONEY1",
+    "insertText": "ENVPARAMMONEY1",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMMONEY2",
+    "insertText": "ENVPARAMMONEY2",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMMONEY3",
+    "insertText": "ENVPARAMMONEY3",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMMONEY4",
+    "insertText": "ENVPARAMMONEY4",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMMONEY5",
+    "insertText": "ENVPARAMMONEY5",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMMONEY6",
+    "insertText": "ENVPARAMMONEY6",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMMONEY7",
+    "insertText": "ENVPARAMMONEY7",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMMONEY9",
+    "insertText": "ENVPARAMMONEY9",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMMONEY10",
+    "insertText": "ENVPARAMMONEY10",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMCODE1",
+    "insertText": "ENVPARAMCODE1",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMCODE2",
+    "insertText": "ENVPARAMCODE2",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMCODE3",
+    "insertText": "ENVPARAMCODE3",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMCODE4",
+    "insertText": "ENVPARAMCODE4",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMCODE5",
+    "insertText": "ENVPARAMCODE5",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMCODE6",
+    "insertText": "ENVPARAMCODE6",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMCODE7",
+    "insertText": "ENVPARAMCODE7",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMCODE9",
+    "insertText": "ENVPARAMCODE9",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMCODE10",
+    "insertText": "ENVPARAMCODE10",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMDATE1",
+    "insertText": "ENVPARAMDATE1",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMDATE2",
+    "insertText": "ENVPARAMDATE2",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMDATE3",
+    "insertText": "ENVPARAMDATE3",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMDATE4",
+    "insertText": "ENVPARAMDATE4",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMDATE5",
+    "insertText": "ENVPARAMDATE5",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMDATE6",
+    "insertText": "ENVPARAMDATE6",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMDATE7",
+    "insertText": "ENVPARAMDATE7",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMDATE9",
+    "insertText": "ENVPARAMDATE9",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMDATE10",
+    "insertText": "ENVPARAMDATE10",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMRATE1",
+    "insertText": "ENVPARAMRATE1",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMRATE2",
+    "insertText": "ENVPARAMRATE2",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMRATE3",
+    "insertText": "ENVPARAMRATE3",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMRATE4",
+    "insertText": "ENVPARAMRATE4",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMRATE5",
+    "insertText": "ENVPARAMRATE5",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMRATE6",
+    "insertText": "ENVPARAMRATE6",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMRATE7",
+    "insertText": "ENVPARAMRATE7",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMRATE9",
+    "insertText": "ENVPARAMRATE9",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@ENVPARAMRATE10",
+    "insertText": "ENVPARAMRATE10",
+    "description": "These environment parameter variables can be used to pass information to (and receive results from) a corresponding argument variable in a subroutine specfile",
+    "isSnippet": false
+  }
+]

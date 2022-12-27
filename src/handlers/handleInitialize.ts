@@ -35,7 +35,7 @@ export function getInitializeHandler(context: Context) {
     textDocumentSync: TextDocumentSyncKind.Full,
     completionProvider: {
      resolveProvider: false,
-     triggerCharacters: [':', '='],
+     triggerCharacters: [':', '=', '@'],
     },
     definitionProvider: true,
     codeActionProvider: {
@@ -44,6 +44,8 @@ export function getInitializeHandler(context: Context) {
     documentHighlightProvider: false,
     documentSymbolProvider: true,
     workspaceSymbolProvider: false,
+    foldingRangeProvider: true,
+    selectionRangeProvider: true,
     executeCommandProvider: {
      commands: ["lsp.addVarToDefine"]
     },

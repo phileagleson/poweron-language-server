@@ -1,0 +1,20 @@
+[
+  {
+    "label": "@CERTIFICATERENEWAL",
+    "insertText": "CERTIFICATERENEWAL",
+    "description": "The system sets this variable:\n\nTo 0 if the specfile is printing a new certificate agreement during teller transactions.\nTo 1 if the specfile is printing a renewing certificate during the Daily Posting batch process.",
+    "isSnippet": false
+  },
+  {
+    "label": "@CERTIFICATEEFFECTIVEDATE",
+    "insertText": "CERTIFICATEEFFECTIVEDATE",
+    "description": "Effective date of the certificate agreement",
+    "isSnippet": false
+  },
+  {
+    "label": "@CERTIFICATEID",
+    "insertText": "CERTIFICATEID",
+    "description": "Share ID of the certificate; this information is also available by referencing SHARE:ID",
+    "isSnippet": false
+  }
+]

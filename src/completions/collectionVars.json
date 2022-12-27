@@ -1,0 +1,32 @@
+[
+  {
+    "label": "@CPWORKCARDLOC",
+    "insertText": "CPWORKCARDLOC",
+    "description": "This variable provides the Locator of the associated work card",
+    "isSnippet": false
+  },
+  {
+    "label": "@CPPRIORITY",
+    "insertText": "CPPRIORITY",
+    "description": "This variable contains the value from the Priority field on the work card that is associated with the Collector ID displayed in the collection queue. (One work card can be assigned to more than one collector.)",
+    "isSnippet": false
+  },
+  {
+    "label": "@CPADDITIONALINFO1",
+    "insertText": "CPADDITIONALINFO1",
+    "description": "This variable looks at the field and record specified in the custom specfile for the first custom column. The system displays the field returned from the specfile with the rest of the collection queue information.",
+    "isSnippet": false
+  },
+  {
+    "label": "@CPADDITIONALINFO2",
+    "insertText": "CPADDITIONALINFO2",
+    "description": "This variable looks at the field and record specified in the custom specfile for the second custom column. The system displays the field returned from the specfile with the rest of the collection queue information.",
+    "isSnippet": false
+  },
+  {
+    "label": "@CPADDITIONALINFO3",
+    "insertText": "CPADDITIONALINFO3",
+    "description": "This variable looks at the field and record specified in the custom specfile for the third custom column. The system displays the field returned from the specfile with the rest of the collection queue information.",
+    "isSnippet": false
+  }
+]

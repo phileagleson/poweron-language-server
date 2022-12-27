@@ -1,0 +1,26 @@
+[
+  {
+    "label": "@APPID",
+    "insertText": "APPID",
+    "description": "This variable identifies the Application record on which the specfile is running",
+    "isSnippet": false
+  },
+  {
+    "label": "@APPQADDINFO1",
+    "insertText": "APPQADDINFO1",
+    "description": "These variables add up to three custom columns in the start box when in the application queue by assigning the desired fields to the variables",
+    "isSnippet": false
+  },
+  {
+    "label": "@APPQADDINFO2",
+    "insertText": "APPQADDINFO2",
+    "description": "These variables add up to three custom columns in the start box when in the application queue by assigning the desired fields to the variables",
+    "isSnippet": false
+  },
+  {
+    "label": "@APPQADDINFO3",
+    "insertText": "APPQADDINFO3",
+    "description": "These variables add up to three custom columns in the start box when in the application queue by assigning the desired fields to the variables",
+    "isSnippet": false
+  }
+]

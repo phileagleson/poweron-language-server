@@ -1,0 +1,224 @@
+[
+  {
+    "label": "@VALIDATEFIELDNUMBER",
+    "insertText": "VALIDATEFIELDNUMBER",
+    "description": "The number of the field you are currently performing file maintenance on.\nThe value 0 for validation specfiles to run before file maintenance begins, and before the file maintenance screen even appears. This validation is useful to restrict which users can create, revise, or delete a record based on more than just the record type and the user number.\n\nFor example, if you want to only restrict which users can perform file maintenance of EFT records, you set up the security privileges for creation, revision, or deletion of EFT records appropriately. But if you want to restrict which users can perform file maintenance on a particular payroll group (such as an employee payroll) the security privilege is not specific enough. This type of specific restriction is where the validation specfile comes in handy.\n\nTo allow this type of validation, Symitar Quest runs the validation specfile before the file maintenance screen appears, with @VALIDATEFIELDNUMBER set to 0. If the specfile assigns an error message to @VALIDATEERROR, Symitar Quest displays this error message and does not allow the user to perform the file maintenance.\n\nThis validation occurs before the file maintenance screen appears, which prevents the user from seeing any of the fields in the record. If the specfile assigns a file maintenance security level to @VALIDATESECURITYCODE, Symitar Quest requires the user either to have the privilege for this file maintenance security level or to obtain an override. For the validation specfile to run, at least one field in the record must have its Require parameter (in the Field Control Parameters) set to 2, which tells Symitar Quest that the field should be validated with a validation specfile. After the user chooses the record type and the file maintenance type (create, revise, or delete), and at least one field in the record has the Require parameter set to 2, Symitar Quest runs the validation specfile.\n\nWhen validating individual fields, you can only validate based on that specific field. After all fields are individually validated, and just before the Okay prompt. The 999 value performs final validations based on compatibility between multiple field values the user has entered.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATESUBFIELD",
+    "insertText": "VALIDATESUBFIELD",
+    "description": "Symitar Quest inserts the subfield number of the field you are currently performing file maintenance on into this variable.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATEFMTYPE",
+    "insertText": "VALIDATEFMTYPE",
+    "description": "Symitar Quest inserts an indicator of the type of file maintenance you are performing into this variable.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATEMENUCHOSEN",
+    "insertText": "VALIDATEMENUCHOSEN",
+    "description": "Symitar Quest inserts a value that indicates whether the user has requested a menu of valid field values into this variable.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATECHARACTERINPUT",
+    "insertText": "VALIDATECHARACTERINPUT",
+    "description": "Symitar Quest inserts the value the user enters when performing file maintenance of a character field into this variable. If the user chooses a value from a menu, the specfile inserts the specified value into this variable.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATENUMBERINPUT",
+    "insertText": "VALIDATENUMBERINPUT",
+    "description": "Symitar Quest inserts the value the user enters when performing file maintenance of a number field into this variable. If the user chooses a value from a menu, the specfile inserts the specified value into this variable.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATEMONEYINPUT",
+    "insertText": "VALIDATEMONEYINPUT",
+    "description": "Symitar Quest inserts the value the user enters when performing file maintenance of a monetary field into this variable. If the user chooses a value from a menu, the specfile inserts the specified value into this variable.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATEDATEINPUT",
+    "insertText": "VALIDATEDATEINPUT",
+    "description": "Symitar Quest inserts the value the user enters when performing file maintenance of a date field into this variable. If the user chooses a value from a menu, the specfile inserts the specified value into this variable.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATERATEINPUT",
+    "insertText": "VALIDATERATEINPUT",
+    "description": "Symitar Quest inserts the value the user enters when performing file maintenance of a rate field into this variable. If the user chooses a value from a menu, the specfile inserts the specified value into this variable.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATECODEINPUT",
+    "insertText": "VALIDATECODEINPUT",
+    "description": "Symitar Quest inserts the value the user enters when performing file maintenance of a code field. If the user chooses a value from a menu, the specfile inserts the specified value into this variable.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATEERROR",
+    "insertText": "VALIDATEERROR",
+    "description": "If the user enters an invalid value in a field, the specfile inserts a specific error message into this variable. Symitar Quest displays the error message on the user's console. For each field the specfile validates, specify a meaningful error message to place into this variable and to display for users. After displaying the error message, Symitar Quest allows the user to continue performing file maintenance in the field that has the invalid value, without storing the invalid value in the field.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATESECURITYCODE",
+    "insertText": "VALIDATESECURITYCODE",
+    "description": "If certain values are valid in a field that the user has a specified field file maintenance security privilege (or obtains a security override) for, the specfile inserts that field file maintenance security privilege into this variable when a user enters one of those values.\n\nFor example, to restrict file maintenance of checks over $5000.00 to staff with a field file maintenance security privilege of 10, assign a value of 10 to the @VALIDATESECURITYCODE variable if the user enters a value greater than $5000.00 in a Check record amount field. Symitar Quest then checks to ensure that the user has a field file maintenance security privilege of 10. If the user has that field FM security privilege, Symitar Quest allows the entry. If the user does not have the appropriate field file maintenance security privilege, Symitar Quest prompts for an override. The user must obtain an override to have Symitar Quest accept the entry.\n\nIf you insert a value in the @VALIDATESECURITYCODE variable for a field under some conditions, always insert a value in this variable for that field. For example, if you insert 10 in this variable when a user enters an amount over $5000.00, insert 0 (or some other value) when a user enters an amount up to or including $5000.00.\n\nIf you sometimes insert a value in this variable and leave it blank in other cases, the results are unpredictable. This warning applies only to the same field. If you insert a value in this variable for field 5, you do not have to insert a value for field 6.\n\nIf the validation specfile does not insert an error message in the @VALIDATEERROR variable and does not insert a security code in the @VALIDATESECURITYCODE variable, Symitar Quest assumes that the entry is valid, and file maintenance continues. Do not assign values to both the @VALIDATEERROR and @VALIDATESECURITYCODE variables. In this case, Symitar Quest displays the error message and ignores the security code.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATEEFFECTIVEDATE",
+    "insertText": "VALIDATEEFFECTIVEDATE",
+    "description": "Symitar Quest sets this variable to the effective date of the transaction.\n\nThis variable is used only for the VALIDATE.CDPENALTY specfile.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATEWDAMOUNT",
+    "insertText": "VALIDATEWDAMOUNT",
+    "description": "Symitar Quest sets this variable to the withdrawal amount requested.\n\nThis variable is used only for the VALIDATE.CDPENALTY specfile.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATERELATIONSHIPCODE",
+    "insertText": "VALIDATERELATIONSHIPCODE",
+    "description": "This variable passes the value in the Current Relationship Code field from a member's Account record to a validation specfile. This validation is useful for the Inventory Manager and the VALIDATE.INVENTORY specfile because the target record is the Inventory record, and there is no other access to the information in the member's Account record. This variable allows relationship pricing considerations to be added to validation specfiles used with the Inventory Manager for the Travelers Checks (TC), Money Orders (MO), Misc Sale (MS), and Rental (RN) transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATETCPRODUCT",
+    "insertText": "VALIDATETCPRODUCT",
+    "description": "This variable passes the travelers check product selected during a Travelers Checks (TC) transaction to a validation specfile if your credit union is not using the Inventory Manager. Otherwise, Symitar Quest passes 0 in this variable. Specifically, this variable can be used in the VALIDATE.TC specfile.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATEMOPRODUCT",
+    "insertText": "VALIDATEMOPRODUCT",
+    "description": "This variable passes the money order product selected during a Money Order (MO) transaction to a validation specfile if your credit union is not using the Inventory Manager. Otherwise, Symitar Quest passes 0 in this variable. Specifically, this variable can be used in the VALIDATE.MO specfile.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATESPHOLDTYPE",
+    "insertText": "VALIDATESPHOLDTYPE",
+    "description": "This variable passes the stop pay hold type selected during a Stop Payment (SP) transaction to a validation specfile. Specifically, this variable can be used in the VALIDATE.SP specfile.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATEKRCOUNT",
+    "insertText": "VALIDATEKRCOUNT",
+    "description": "This variable passes the total count of checks received within the Checks Cashing (KC) transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATESDCOUNT",
+    "insertText": "VALIDATESDCOUNT",
+    "description": "This variable passes the total count of share deposits within the transaction string.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATESDAMOUNT",
+    "insertText": "VALIDATESDAMOUNT",
+    "description": "This variable passes the total dollar amount of share deposits within the transaction string.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATEKRAMOUNT",
+    "insertText": "VALIDATEKRAMOUNT",
+    "description": "This variable passes the total dollar amount of checks received during the Checks Cashing (KC) transaction string.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATECDAMOUNT",
+    "insertText": "VALIDATECDAMOUNT",
+    "description": "This variable passes the Cash Disbursed (CD) transaction amount entry.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATEFEEAMOUNT",
+    "insertText": "VALIDATEFEEAMOUNT",
+    "description": "This variable returns the default fee amount from a validation specfile for the Check Disbursed (KD), Check Other (KO), Checks Suppressed (KS), Cash Disbursed (CD), Stop Payment (SP), and Checks Cashing (KC) transactions if:\nYour credit union is not using the Inventory Manager for travelers checks, for the Travelers Checks (TC) transaction.\nYour credit union is not using the Inventory Manager for money orders, for the Money Orders (MO) transaction.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATECOMMENTTEXT",
+    "insertText": "VALIDATECOMMENTTEXT",
+    "description": "Symitar Quest uses this variable as the default comment text for the Share Comment (SC), Loan Comment (LC), and General Ledger (GL) transactions.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATESLID",
+    "insertText": "VALIDATESLID",
+    "description": "Symitar Quest fills this variable with the share or loan ID for share comment or loan comment specfiles. You can use this information to determine the text of the comment.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATESLIDTYPE",
+    "insertText": "VALIDATESLIDTYPE",
+    "description": "Symitar Quest inserts a value that indicates the share, loan, or general ledger type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATEONACCOUNT",
+    "insertText": "VALIDATEONACCOUNT",
+    "description": "Since a general ledger transaction does not require you to access an account, this variable indicates whether you are in a valid account.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATEGLNUMBER",
+    "insertText": "VALIDATEGLNUMBER",
+    "description": "For a General Ledger (GL) transaction, this field contains the GL Account record GL Account Number field value.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATEGLSUFFIX",
+    "insertText": "VALIDATEGLSUFFIX",
+    "description": "For a General Ledger (GL) transaction, this field contains the GL Account record GL Account Suffix field value.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATEGLBRANCH",
+    "insertText": "VALIDATEGLBRANCH",
+    "description": "For a General Ledger (GL) transaction, this field contains the GL Account record GL Account Branch field value.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATEGLDESC",
+    "insertText": "VALIDATEGLDESC",
+    "description": "For a General Ledger (GL) transaction, this field contains the GL description.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATEGLDRCR",
+    "insertText": "VALIDATEGLDRCR",
+    "description": "For a General Ledger (GL) transaction, this field specifies if the amount is a debit (DR) or a credit (CR).",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATEGLAMOUNT",
+    "insertText": "VALIDATEGLAMOUNT",
+    "description": "For a General Ledger (GL) transaction, this field contains the general ledger amount.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATEHELPCODE",
+    "insertText": "VALIDATEHELPCODE",
+    "description": "Symitar Quest inserts the help code number associated with prompt currently being addressed into this variable.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATETRANCODESTATE",
+    "insertText": "VALIDATETRANCODESTATE",
+    "description": "Symitar Quest inserts one of the values for the validation state of the prompt into this variable, depending on the option selected in the Teller Transaction Validation Parameters.\n\nThe validation specfile can also input the following values in this variable to provide special handling:\n\nIf in the (0) Before state, the specfile can preload default values for a prompt by inputting the (non-case-sensitive) USEASDEFAULT value after inputting a default value in the appropriate variable. For example:\nIF @VALIDATETRANCODESTATE=\"BEFORE\" THEN \n DO \n  @VALIDATEMONEYINPUT=$100.55\n  @VALIDATETRANCODESTATE=\"USEASDEFAULT\"\n END\n\nUSEASDEFAULT remains in the variable until the related validation is complete. Then Symitar Quest resets the system value for @VALIDATETRANCODESTATE.\n\nThe user can accept the preloaded value or overwrite it.\n\nIf in the (1) At state, the specfile can cause the prompt to be repeated when invalid entries are made by inputting the (non-case-sensitive) REPEAT value.\n\nThe specfile can also cause the prompt to be escaped from (validation terminated) when invalid entries are made by inputting the (non-case-sensitive) ESC value.\n\nWe recommend that you include a pop-up message stating why the prompt is redisplayed or terminated. For example:\n\nIF @VALIDATETRANCODESTATE=\"AT\" THEN\n DO\n  IF @VALIDATEMONEYINPUT>$1,000.00 THEN\n   DO\n    POPUPMESSAGE(1,\"Cannot Disburse more than $1000. Reenter or Cancel\")\n    @VALIDATETRANCODESTATE=\"REPEAT\"\n   END\n END\n\nREPEAT remains in the variable until the related validation is complete. Then, or when ESC terminates the prompt, Symitar Quest resets the system value for @VALIDATETRANCODESTATE.\n\nThe associated validation specfile runs only if the transaction associated with the help code is initiated and one of the validation parameters is set.",
+    "isSnippet": false
+  },
+  {
+    "label": "@VALIDATEONACCOUNT",
+    "insertText": "VALIDATEONACCOUNT",
+    "description": "This variable indicates whether you are in a valid account.\n\nYou can use this variable in a custom VALIDATE.TELLERTRAN specfile to ensure that you are in a valid account when your validation specfile accesses account information:\n\nIF @VALIDATEONACCOUNT THEN \n    DO \n    <original checkinfo procedure>\n    END\n\nIf your specfile accesses account information when not in a valid account, the effects are unpredictable.",
+    "isSnippet": false
+  }
+]

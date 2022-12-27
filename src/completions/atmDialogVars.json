@@ -1,0 +1,14 @@
+[
+  {
+    "label": "@ATMDIALOGFROMDATE",
+    "insertText": "ATMDIALOGFROMDATE",
+    "description": "This variable prompts you for the oldest date of the ATM Dialog files that your specfile reads. If you set it to --/--/-- (Date Null), your specfile starts with the oldest ATM Dialog file available. The default value of this variable is --/--/--.",
+    "isSnippet": false
+  },
+  {
+    "label": "@ATMDIALOGTODATE",
+    "insertText": "ATMDIALOGTODATE",
+    "description": "This variable prompts you for the newest date of the ATM Dialog files that your specfile reads. If you set it to --/--/-- (Date Null), your specfile ends with the newest ATM Dialog file available. The default value of this variable is --/--/--.",
+    "isSnippet": false
+  }
+]

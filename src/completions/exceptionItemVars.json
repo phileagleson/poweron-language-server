@@ -1,0 +1,80 @@
+[
+  {
+    "label": "@EXCPITEMSLID",
+    "insertText": "EXCPITEMSLID",
+    "description": "This variable corresponds to the EXCPITEM:ID field in the current exception item",
+    "isSnippet": false
+  },
+  {
+    "label": "@EXCPITEMSLIDTYPE",
+    "insertText": "EXCPITEMSLIDTYPE",
+    "description": "This variable corresponds to the EXCPITEM:IDTYPE field in the current exception item",
+    "isSnippet": false
+  },
+  {
+    "label": "@EXCPITEMBATCHID",
+    "insertText": "EXCPITEMBATCHID",
+    "description": "This variable corresponds to the EXCPITEM:BATCHID field in the current exception item",
+    "isSnippet": false
+  },
+  {
+    "label": "@EXCPITEMBRANCH",
+    "insertText": "EXCPITEMBRANCH",
+    "description": "This variable corresponds to the EXCPITEM:BRANCH field in the current exception item",
+    "isSnippet": false
+  },
+  {
+    "label": "@EXCPITEMNUMBER",
+    "insertText": "EXCPITEMNUMBER",
+    "description": "This variable corresponds to the EXCPITEM:CH6:1 field in the current exception item",
+    "isSnippet": false
+  },
+  {
+    "label": "@EXCPITEMAMOUNT",
+    "insertText": "EXCPITEMAMOUNT",
+    "description": "This variable corresponds to the EXCPITEM:AMOUNT:1 field in the current exception item",
+    "isSnippet": false
+  },
+  {
+    "label": "@EXCPITEMPROCESSORACCOUNT",
+    "insertText": "EXCPITEMPROCESSORACCOUNT",
+    "description": "This variable corresponds to the EXCPITEM:PROCESSORACCOUNT field in the current exception item",
+    "isSnippet": false
+  },
+  {
+    "label": "@EXCPITEMACCOUNT",
+    "insertText": "EXCPITEMACCOUNT",
+    "description": "This variable corresponds to the EXCPITEM:EXCPITEMACCOUNT field in the current exception item",
+    "isSnippet": false
+  },
+  {
+    "label": "@EXCPITEMCOMPANYNAME",
+    "insertText": "EXCPITEMCOMPANYNAME",
+    "description": "This variable corresponds to the EXCPITEM:CH16 field in the current exception item",
+    "isSnippet": false
+  },
+  {
+    "label": "@EXCPITEMREASONCODE",
+    "insertText": "EXCPITEMREASONCODE",
+    "description": "This variable corresponds to the EXCPITEM:REASONCODE field in the current exception item",
+    "isSnippet": false
+  },
+  {
+    "label": "@EXCPITEMACHEXCPREASON",
+    "insertText": "EXCPITEMACHEXCPREASON",
+    "description": "This variable corresponds to the EXCPITEM:ACHEXCPREASON field in the current exception item",
+    "isSnippet": false
+  },
+  {
+    "label": "@EXCPITEMTYPE",
+    "insertText": "EXCPITEMTYPE",
+    "description": "This field can have the following values, based on the type of exception:\n0 - Draft Exception\n1 - ACH Exception\n2 - ATM Exception\n3 - Credit/Debit Card Exception\n4 - Fee Exception\n5 - Insurance Exception\n6 - Misc Post Exception\n7 - Payroll Exception\n8 - Distribution Exception\n9 - Memo Exception",
+    "isSnippet": false
+  },
+  {
+    "label": "@EXCPITEMTOTALNSF",
+    "insertText": "EXCPITEMTOTALNSF",
+    "description": "This is a special variable that indicates the total of the @EXCPITEMAMOUNT for each exception item processed thus far (in the current Exception Item Repeat FM session) that has the same @EXCPITEMACCOUNT, @EXCPITEMSLIDTYPE, and @EXCPITEMSLID as the current exception item and has been coded as a force pay item. A force pay item is any item whose @EXCPITEMREASONCODE is equal to either 41 or 42 and @EXCPITEMTYPE equal to 0, or any item whose @EXCPITEMACHEXCPREASON is equal to either S41 or S42 and @EXCPITEMTYPE is equal to 1.",
+    "isSnippet": false
+  }
+]

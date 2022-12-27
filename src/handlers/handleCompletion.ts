@@ -1,4 +1,4 @@
-import { CompletionItem, CompletionItemKind, CompletionParams, InsertTextFormat } from "vscode-languageserver"
+import { CompletionItem, CompletionItemKind, CompletionParams, InsertTextFormat, URI } from "vscode-languageserver"
 import { Context } from "../interfaces"
 
 import dataTypesJson = require('../completions/dataTypes.json')
@@ -48,6 +48,25 @@ import siteCashOrderTypeRecordFieldsJson = require('../completions/siteCashOrder
 import externalAccountRecordFieldsJson = require('../completions/externalAccountRecordFields.json')
 import batchACHOriginationRecordFieldsJson = require('../completions/batchACHOriginationRecordFields.json')
 import loanRecordFieldsJson = require('../completions/loanRecordFields.json')
+import subroutineVarsJson = require('../completions/subroutineVars.json')
+import loanProjectInitJson = require('../completions/loanProjectInitFields.json')
+import validationVarsJson = require('../completions/validationVars.json')
+import accountCrossSellVarsJson = require('../completions/accountCrossSellVars.json')
+import atmDialogVarsJson = require('../completions/atmDialogVars.json')
+import audioResponseVarsJson = require('../completions/audioResponseVars.json')
+import applicationVarsJson = require('../completions/applicationVars.json')
+import cardCreationVarsJson = require('../completions/cardCreationVars.json')
+import certificateVarsJson = require('../completions/certificateVars.json')
+import accountChangeVarsJson = require('../completions/accountChangeVars.json')
+import collectionVarsJson = require('../completions/collectionVars.json')
+import corpCheckWizardVarsJson = require('../completions/corpCheckWizVars.json')
+import creditReportVarsJson = require('../completions/creditReportVars.json')
+import divProjectVarsJson = require('../completions/divProjectVars.json')
+import exceptionItemVarsJson = require('../completions/exceptionItemVars.json')
+import homeBankingVarsJson = require('../completions/homeBankingVars.json')
+import memberConnectVarsJson = require('../completions/memberConnectVars.json')
+import overdrawProtectionVarsJson = require('../completions/overdrawProtectionVars.json')
+import symconnectVarsJson = require('../completions/symconnectVars.json')
 
 import snippetJson = require('../completions/snippets.json')
 import { nodeAtPoint, wordAtPoint } from "../analyze"
@@ -107,6 +126,25 @@ export function getCompletionHandler(context: Context) {
  const externalAccountRecordFields = loadCompletionItems(externalAccountRecordFieldsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
  const batchACHOriginationRecordFields = loadCompletionItems(batchACHOriginationRecordFieldsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
  const loanRecordFields = loadCompletionItems(loanRecordFieldsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
+ const subroutineVars = loadCompletionItems(subroutineVarsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
+ const loanProjectInit = loadCompletionItems(loanProjectInitJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
+ const validationVars = loadCompletionItems(validationVarsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
+ const accountCrossSellVars = loadCompletionItems(accountCrossSellVarsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
+ const atmDialogVars = loadCompletionItems(atmDialogVarsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
+ const audioResponseVars = loadCompletionItems(audioResponseVarsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
+ const applicationVars = loadCompletionItems(applicationVarsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
+ const cardCreationVars = loadCompletionItems(cardCreationVarsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
+ const certificateVars = loadCompletionItems(certificateVarsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
+ const accountChangeVars = loadCompletionItems(accountChangeVarsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
+ const collectionVars = loadCompletionItems(collectionVarsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
+ const corpCheckWizVars = loadCompletionItems(corpCheckWizardVarsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
+ const creditReportVars = loadCompletionItems(creditReportVarsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
+ const divProjectVars = loadCompletionItems(divProjectVarsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
+ const exceptionItemVars = loadCompletionItems(exceptionItemVarsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
+ const homeBankingVars = loadCompletionItems(homeBankingVarsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
+ const memberConnectVars = loadCompletionItems(memberConnectVarsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
+ const overdrawProtectionVars = loadCompletionItems(overdrawProtectionVarsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
+ const symconnectVars = loadCompletionItems(symconnectVarsJson, CompletionItemKind.Field, InsertTextFormat.PlainText)
 
  const snippets = loadCompletionItems(snippetJson, CompletionItemKind.Snippet, InsertTextFormat.Snippet)
 
@@ -120,7 +158,7 @@ export function getCompletionHandler(context: Context) {
    let word = wordAtPoint(params.position.line, params.position.character, params.textDocument.uri, context)
    const node = nodeAtPoint(params.position.line, params.position.character - 1, params.textDocument.uri, context)
    if (node && node.type.toString() === 'identifier' && node.parent && node.parent.type === 'variable_declaration') {
-    return dataTypes
+    return [...dataTypes, ...poweronFunctions.filter(item => item.label === 'ctrlchr')]
    } else if (node && node.parent && (node.parent.type.toString() === `fmperform` ||
     node.parent.type.toString() === 'setexp' ||
     node.parent.parent?.type.toString() === 'setexp')) {
@@ -149,12 +187,22 @@ export function getCompletionHandler(context: Context) {
      triggerCharacter = ':'
      word = ''
     }
+   } else if (node && node.type.toString() === 'identifier') {
+    const uri = params.textDocument.uri
+    const tree = context.trees[uri]
+    const text = tree.rootNode.text.split('\n')
+    const curLine = text[params.position.line]
+    const lineToCursor = curLine.substring(0, params.position.character)
+    const words = lineToCursor.split(/\s/)
+    word = words[words.length - 2].toLowerCase()
    }
 
    if (word) {
     switch (word) {
      case 'each':
       return acctFileRecords
+     case 'call':
+      return getDocumentProcedures(context, params.textDocument.uri)
      default:
       break
     }
@@ -323,7 +371,7 @@ export function getCompletionHandler(context: Context) {
    const inDefFile = params.textDocument.uri.toLowerCase().includes('.def')
    if (node?.type.toString() === 'variable_declaration' || inDefFile ||
     node?.type.toString() === 'define_division') {
-    return [...dataTypes]
+    return [...dataTypes, ...poweronFunctions.filter(item => item.label === 'ctrlchr')]
    }
    let word = wordAtPoint(params.position.line, params.position.character, params.textDocument.uri, context)
    if (word) {
@@ -336,6 +384,187 @@ export function getCompletionHandler(context: Context) {
     }
    }
 
+  } else if (triggerCharacter === '@') {
+   // Check for subroutine
+   let result: CompletionItem[] = []
+   const tree = context.trees[params.textDocument.uri]
+   const poweron = tree.getLanguage()
+   let queryString = '(special_keywords) @spec'
+   let query = poweron.query(queryString)
+   let isSubroutine = false
+   let isValidationSpecfile = false
+   let isACSSpecfile = false
+   let isATMDialogSpecfile = false
+   let isAudioSpecfile = false
+   let isApplicationSpecifile = false
+   let isCardCreationWizSpecfile = false
+   let isCertificateSpecfile = false
+   let isAccountChangeSpecfile = false
+   let isCollectionSpecfile = false
+   let isCorpCheckWizSpecfile = false
+   let isExceptionItemSpecfile = false
+   let isHomeBankingSpecfile = false
+   let isMemberConnectSpecfile = false
+   let isOverdrawProtectionSpecfile = false
+   let isSymconnectSpecfile = false
+   query.captures(tree.rootNode).forEach(cap => {
+    if (cap.node.text.toLowerCase() === 'subroutine') {
+     isSubroutine = true
+    }
+    if (cap.node.text.toLowerCase() === 'validation') {
+     isValidationSpecfile = true
+    }
+    if (cap.node.text.toLowerCase() === 'acs') {
+     isACSSpecfile = true
+    }
+    if (cap.node.text.toLowerCase() === 'atmdialog') {
+     isATMDialogSpecfile = true
+    }
+
+    if (cap.node.text.toLowerCase() === 'audio') {
+     isAudioSpecfile = true
+    }
+
+    if (cap.node.text.toLowerCase() === 'application') {
+     isApplicationSpecifile = true
+    }
+
+    if (cap.node.text.toLowerCase() === 'certificate') {
+     isCertificateSpecfile = true
+    }
+
+    if (cap.node.text.toLowerCase() === 'accountchange') {
+     isAccountChangeSpecfile = true
+    }
+
+    if (cap.node.text.toLowerCase() === 'collection') {
+     isCollectionSpecfile = true
+    }
+
+    if (cap.node.text.toLowerCase() === 'symconnect') {
+     isSymconnectSpecfile = true
+    }
+
+    if (cap.node.text.toLowerCase() === 'homebanking') {
+     isHomeBankingSpecfile = true
+    }
+
+    if (cap.node.text.toLowerCase() === 'overdrawavailableinit') {
+     isOverdrawProtectionSpecfile = true
+    }
+
+    if (cap.node.text.toLowerCase() === 'excpitem') {
+     isExceptionItemSpecfile = true
+    }
+
+    if (cap.node.text.toLowerCase() === 'mcw' || cap.node.text.toLowerCase() === 'mcwinteractive') {
+     isMemberConnectSpecfile = true
+    }
+
+    if (cap.node.text.toLowerCase() === 'checkdisbursedwizard') {
+     isCorpCheckWizSpecfile = true
+    }
+
+    if (cap.node.text.toLowerCase() === 'cardcreationwizard') {
+     isCardCreationWizSpecfile = true
+    }
+   })
+
+   if (isSubroutine) {
+    result = [...result, ...subroutineVars]
+   }
+
+   if (isValidationSpecfile) {
+    result = [...result, ...validationVars]
+   }
+
+   if (isACSSpecfile) {
+    result = [...result, ...accountCrossSellVars]
+   }
+
+   if (isHomeBankingSpecfile) {
+    result = [...result, ...homeBankingVars]
+   }
+
+   if (isOverdrawProtectionSpecfile) {
+    result = [...result, ...overdrawProtectionVars]
+   }
+
+   if (isATMDialogSpecfile) {
+    result = [...result, ...atmDialogVars]
+   }
+
+   if (isAudioSpecfile) {
+    result = [...result, ...audioResponseVars]
+   }
+
+   if (isApplicationSpecifile) {
+    result = [...result, ...applicationVars]
+   }
+
+   if (isMemberConnectSpecfile) {
+    result = [...result, ...memberConnectVars]
+   }
+
+   if (isSymconnectSpecfile) {
+    result = [...result, ...symconnectVars]
+   }
+
+   if (isCardCreationWizSpecfile) {
+    result = [...result, ...cardCreationVars]
+   }
+
+   if (isAccountChangeSpecfile) {
+    result = [...result, ...accountChangeVars]
+   }
+
+   if (isCollectionSpecfile) {
+    result = [...result, ...collectionVars]
+   }
+
+   if (isCertificateSpecfile) {
+    result = [...result, ...certificateVars]
+   }
+
+   if (isExceptionItemSpecfile) {
+    result = [...result, ...exceptionItemVars]
+   }
+
+   if (isCorpCheckWizSpecfile) {
+    result = [...result, ...corpCheckWizVars]
+   }
+
+   queryString = '(loanprojectinit) @loanprojectinit'
+   query = poweron.query(queryString)
+   let isLoanProjectSpecfile = false
+   query.captures(tree.rootNode).forEach(() => {
+    isLoanProjectSpecfile = true
+   })
+   if (isLoanProjectSpecfile) {
+    result = [...result, ...loanProjectInit]
+   }
+
+   queryString = '(initcreditreport) @initcreditreport'
+   query = poweron.query(queryString)
+   let isCreditReportSpecfile = false
+   query.captures(tree.rootNode).forEach(() => {
+    isCreditReportSpecfile = true
+   })
+   if (isCreditReportSpecfile) {
+    result = [...result, ...creditReportVars]
+   }
+
+   queryString = '(divprojectinit) @divprojectinit'
+   query = poweron.query(queryString)
+   let isDivProjectSpecfile = false
+   query.captures(tree.rootNode).forEach(() => {
+    isDivProjectSpecfile = true
+   })
+   if (isDivProjectSpecfile) {
+    result = [...result, ...divProjectVars]
+   }
+
+   return result
   }
   return defaultCompletions
  }
@@ -362,4 +591,21 @@ function loadCompletionItems(jsonData: JSONData[], kind: CompletionItemKind, ins
 
  return fields
 
+}
+
+function getDocumentProcedures(context: Context, uri: URI): CompletionItem[] {
+ const items: CompletionItem[] = []
+ const tree = context.trees[uri]
+ const poweron = tree.getLanguage()
+ const queryString = '(procedure_definition (identifier) @proc)'
+ const query = poweron.query(queryString)
+ query.captures(tree.rootNode).forEach(cap => {
+  const ci: CompletionItem = {
+   label: cap.node.text,
+   insertText: cap.node.text,
+   detail: cap.node.parent?.text
+  }
+  items.push(ci)
+ })
+ return items
 }

@@ -1,0 +1,14 @@
+[
+  {
+    "label": "@CARDLOC1",
+    "insertText": "CARDLOC1",
+    "description": "This variable provides the card locator for the first Card record created by the Card Creation Wizard",
+    "isSnippet": false
+  },
+  {
+    "label": "@CARDLOC2",
+    "insertText": "CARDLOC2",
+    "description": "This variable provides the card locator for the second Card record (if applicable) created by the Card Creation Wizard",
+    "isSnippet": false
+  }
+]

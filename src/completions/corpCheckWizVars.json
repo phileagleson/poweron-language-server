@@ -1,0 +1,56 @@
+[
+  {
+    "label": "@CHECKACCOUNTCODE",
+    "insertText": "CHECKACCOUNTCODE",
+    "description": "This variable provides the checking account code of the current disbursed check in the Corporate Check Wizard.",
+    "isSnippet": false
+  },
+  {
+    "label": "@CHECKAMOUNT",
+    "insertText": "CHECKAMOUNT",
+    "description": "This variable provides the amount of the current disbursed check in the Corporate Check Wizard.",
+    "isSnippet": false
+  },
+  {
+    "label": "@CHECKMATCHCATEGORY",
+    "insertText": "CHECKMATCHCATEGORY",
+    "description": "This variable provides the category of the match of the current disbursed check in the Corporate Check Wizard.",
+    "isSnippet": false
+  },
+  {
+    "label": "@CHECKPAYEELINE1",
+    "insertText": "CHECKPAYEELINE1",
+    "description": "This variable provides the Payee Line 1 field value of the current disbursed check",
+    "isSnippet": false
+  },
+  {
+    "label": "@CHECKPAYEELINE2",
+    "insertText": "CHECKPAYEELINE2",
+    "description": "This variable provides the Payee Line 2 field value of the current disbursed check",
+    "isSnippet": false
+  },
+  {
+    "label": "@CHECKPAYEELINE3",
+    "insertText": "CHECKPAYEELINE3",
+    "description": "This variable provides the Payee Line 3 field value of the current disbursed check",
+    "isSnippet": false
+  },
+  {
+    "label": "@CHECKPAYEELINE4",
+    "insertText": "CHECKPAYEELINE4",
+    "description": "This variable provides the Payee Line 4 field value of the current disbursed check",
+    "isSnippet": false
+  },
+  {
+    "label": "@CHECKPAYEELINE5",
+    "insertText": "CHECKPAYEELINE5",
+    "description": "This variable provides the Payee Line 5 field value of the current disbursed check",
+    "isSnippet": false
+  },
+  {
+    "label": "@CHECKTRANCODE",
+    "insertText": "CHECKTRANCODE",
+    "description": "This variable provides the current transaction code responsible for initiating the Corporate Check Wizard. It allows the specfile to use different logic for different check transaction codes.\n\nFor example, in the case of performing a Checks Suppressed (KS) transaction, the check has already been disbursed to the member. An OFAC verification may have been performed at the time of the original disbursal.",
+    "isSnippet": false
+  }
+]

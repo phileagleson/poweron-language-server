@@ -27,6 +27,8 @@ import { getWillDeleteFilesHandler, getDidDeletFilesHandler } from './handlers/h
 import { getRenameFilesHandler } from './handlers/handleRenameFiles'
 import { getExecuteCommandHandler } from './handlers/handleExecuteCommand'
 import { getDocumentSymbolHandler } from './handlers/handleDocumentSymbols'
+import { getFoldingRangeHandler } from './handlers/handleFoldingRange'
+import { getSelectionRangeHandler } from './handlers/handleSelectionRange'
 
 
 const context = {
@@ -62,6 +64,8 @@ function registerHandlers() {
  const handleRenameFiles = getRenameFilesHandler(context)
  const handleExecuteCommand = getExecuteCommandHandler(context)
  const handleDocumentSymbols = getDocumentSymbolHandler(context)
+ const handleFoldingRange = getFoldingRangeHandler(context)
+ const handleSelectionRange = getSelectionRangeHandler(context)
 
  connection.onInitialize(handleInitialize)
  connection.onInitialized(handleInitialized)
@@ -75,6 +79,8 @@ function registerHandlers() {
  connection.onRenameRequest(handleRename)
  connection.onDidChangeConfiguration(handleChangeConfiguration)
  connection.onDocumentSymbol(handleDocumentSymbols)
+ connection.onFoldingRanges(handleFoldingRange)
+ connection.onSelectionRanges(handleSelectionRange)
 
 
  connection.workspace.onDidCreateFiles(handleCreateFiles)

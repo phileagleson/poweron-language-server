@@ -1,0 +1,302 @@
+[
+  {
+    "label": "@OVERDRAWPROTECTION",
+    "insertText": "OVERDRAWPROTECTION",
+    "description": "Indicates the source of overdraw protection and tolerance allowed",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWREGDLIMITING",
+    "insertText": "OVERDRAWREGDLIMITING",
+    "description": "Indicates if Reg D limiting applies",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWWITHDRAWALINCREMENT",
+    "insertText": "OVERDRAWWITHDRAWALINCREMENT",
+    "description": "Withdrawal increment amount",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWADDONINCREMENT",
+    "insertText": "OVERDRAWADDONINCREMENT",
+    "description": "Add-on increment amount",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWADDONMAXOVERLOC",
+    "insertText": "OVERDRAWADDONMAXOVERLOC",
+    "description": "Add-on maximum increment amount",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWADDONPCTOVERLOC",
+    "insertText": "OVERDRAWADDONPCTOVERLOC",
+    "description": "Add-on percentage increment",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWADDONDQGRACEDAYS",
+    "insertText": "OVERDRAWADDONDQGRACEDAYS",
+    "description": "Add-on delinquency grace days",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWINCREMENTOVERRIDE",
+    "insertText": "OVERDRAWINCREMENTOVERRIDE",
+    "description": "Specifies the overdraw increment override method the system uses",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWUSETOLERANCE",
+    "insertText": "OVERDRAWUSETOLERANCE",
+    "description": "Indicates if overdraw tolerance applies",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEACCOUNT01",
+    "insertText": "OVERDRAWSOURCEACCOUNT01",
+    "description": "Returns ODP source account number",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEACCOUNT02",
+    "insertText": "OVERDRAWSOURCEACCOUNT02",
+    "description": "Returns ODP source account number",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEACCOUNT03",
+    "insertText": "OVERDRAWSOURCEACCOUNT03",
+    "description": "Returns ODP source account number",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEACCOUNT04",
+    "insertText": "OVERDRAWSOURCEACCOUNT04",
+    "description": "Returns ODP source account number",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEACCOUNT05",
+    "insertText": "OVERDRAWSOURCEACCOUNT05",
+    "description": "Returns ODP source account number",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEACCOUNT06",
+    "insertText": "OVERDRAWSOURCEACCOUNT06",
+    "description": "Returns ODP source account number",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEACCOUNT07",
+    "insertText": "OVERDRAWSOURCEACCOUNT07",
+    "description": "Returns ODP source account number",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEACCOUNT08",
+    "insertText": "OVERDRAWSOURCEACCOUNT08",
+    "description": "Returns ODP source account number",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEACCOUNT09",
+    "insertText": "OVERDRAWSOURCEACCOUNT09",
+    "description": "Returns ODP source account number",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEACCOUNT10",
+    "insertText": "OVERDRAWSOURCEACCOUNT10",
+    "description": "Returns ODP source account number",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEID01",
+    "insertText": "OVERDRAWSOURCEID01",
+    "description": "Returns ODP source ID (0000-9999)",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEID02",
+    "insertText": "OVERDRAWSOURCEID02",
+    "description": "Returns ODP source ID (0000-9999)",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEID03",
+    "insertText": "OVERDRAWSOURCEID03",
+    "description": "Returns ODP source ID (0000-9999)",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEID04",
+    "insertText": "OVERDRAWSOURCEID04",
+    "description": "Returns ODP source ID (0000-9999)",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEID05",
+    "insertText": "OVERDRAWSOURCEID05",
+    "description": "Returns ODP source ID (0000-9999)",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEID06",
+    "insertText": "OVERDRAWSOURCEID06",
+    "description": "Returns ODP source ID (0000-9999)",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEID07",
+    "insertText": "OVERDRAWSOURCEID07",
+    "description": "Returns ODP source ID (0000-9999)",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEID08",
+    "insertText": "OVERDRAWSOURCEID08",
+    "description": "Returns ODP source ID (0000-9999)",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEID09",
+    "insertText": "OVERDRAWSOURCEID09",
+    "description": "Returns ODP source ID (0000-9999)",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEID10",
+    "insertText": "OVERDRAWSOURCEID10",
+    "description": "Returns ODP source ID (0000-9999)",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCETYPE01",
+    "insertText": "OVERDRAWSOURCETYPE01",
+    "description": "Returns ODP source type (0=S or 1=L)",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCETYPE02",
+    "insertText": "OVERDRAWSOURCETYPE02",
+    "description": "Returns ODP source type (0=S or 1=L)",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCETYPE03",
+    "insertText": "OVERDRAWSOURCETYPE03",
+    "description": "Returns ODP source type (0=S or 1=L)",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCETYPE04",
+    "insertText": "OVERDRAWSOURCETYPE04",
+    "description": "Returns ODP source type (0=S or 1=L)",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCETYPE05",
+    "insertText": "OVERDRAWSOURCETYPE05",
+    "description": "Returns ODP source type (0=S or 1=L)",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCETYPE06",
+    "insertText": "OVERDRAWSOURCETYPE06",
+    "description": "Returns ODP source type (0=S or 1=L)",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCETYPE07",
+    "insertText": "OVERDRAWSOURCETYPE07",
+    "description": "Returns ODP source type (0=S or 1=L)",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCETYPE08",
+    "insertText": "OVERDRAWSOURCETYPE08",
+    "description": "Returns ODP source type (0=S or 1=L)",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCETYPE09",
+    "insertText": "OVERDRAWSOURCETYPE09",
+    "description": "Returns ODP source type (0=S or 1=L)",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCETYPE10",
+    "insertText": "OVERDRAWSOURCETYPE10",
+    "description": "Returns ODP source type (0=S or 1=L)",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEAMOUNTAVAILABLE01",
+    "insertText": "OVERDRAWSOURCEAMOUNTAVAILABLE01",
+    "description": "Returns ODP available balance amount",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEAMOUNTAVAILABLE02",
+    "insertText": "OVERDRAWSOURCEAMOUNTAVAILABLE02",
+    "description": "Returns ODP available balance amount",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEAMOUNTAVAILABLE03",
+    "insertText": "OVERDRAWSOURCEAMOUNTAVAILABLE03",
+    "description": "Returns ODP available balance amount",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEAMOUNTAVAILABLE04",
+    "insertText": "OVERDRAWSOURCEAMOUNTAVAILABLE04",
+    "description": "Returns ODP available balance amount",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEAMOUNTAVAILABLE05",
+    "insertText": "OVERDRAWSOURCEAMOUNTAVAILABLE05",
+    "description": "Returns ODP available balance amount",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEAMOUNTAVAILABLE06",
+    "insertText": "OVERDRAWSOURCEAMOUNTAVAILABLE06",
+    "description": "Returns ODP available balance amount",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEAMOUNTAVAILABLE07",
+    "insertText": "OVERDRAWSOURCEAMOUNTAVAILABLE07",
+    "description": "Returns ODP available balance amount",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEAMOUNTAVAILABLE08",
+    "insertText": "OVERDRAWSOURCEAMOUNTAVAILABLE08",
+    "description": "Returns ODP available balance amount",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEAMOUNTAVAILABLE09",
+    "insertText": "OVERDRAWSOURCEAMOUNTAVAILABLE09",
+    "description": "Returns ODP available balance amount",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWSOURCEAMOUNTAVAILABLE10",
+    "insertText": "OVERDRAWSOURCEAMOUNTAVAILABLE10",
+    "description": "Returns ODP available balance amount",
+    "isSnippet": false
+  },
+  {
+    "label": "@OVERDRAWTOLERANCEAMOUNT",
+    "insertText": "OVERDRAWTOLERANCEAMOUNT",
+    "description": "Returns ODT amount used",
+    "isSnippet": false
+  }
+]

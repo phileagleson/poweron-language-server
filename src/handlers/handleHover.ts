@@ -48,6 +48,7 @@ import { cashOrderTypeRecordFields } from "../documentation/cashOrderTypeRecordF
 import { externalAccountRecordFields } from "../documentation/externalAccountRecordFields"
 import { batchACHOriginationRecordFields } from "../documentation/batchACHOriginationRecordFields"
 import { recordTypes } from "../documentation/recordTypes"
+import { CODEEND, CODESTART } from "../utils"
 
 export function getHoverHandler(context: Context) {
 
@@ -127,6 +128,32 @@ export function getHoverHandler(context: Context) {
    if (!fieldName && !recordType) return null
 
    return getHoverInfo(fieldName.toLowerCase(), recordType.toLowerCase(), targetNode)
+  } else if (node.type === 'identifier') {
+
+   const tree = context.trees[params.textDocument.uri]
+   const poweron = tree.getLanguage()
+   let queryString = '(variable_declaration (identifier) @var)'
+   const query = poweron.query(queryString)
+   let hover: Hover | null = null
+
+   query.captures(tree.rootNode).forEach(cap => {
+    if (cap.node.text.toLowerCase() === node.text.toLowerCase() && cap.node.parent) {
+     hover = {
+      contents: cap.node.parent.text,
+      range: {
+       start: {
+        line: node.startPosition.row,
+        character: node.startPosition.column
+       },
+       end: {
+        line: node.endPosition.row,
+        character: node.endPosition.column
+       }
+      }
+     }
+    }
+   })
+   return hover
   }
 
   return null

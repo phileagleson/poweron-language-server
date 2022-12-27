@@ -1,0 +1,1112 @@
+[
+  {
+    "label": "@MCWPREFLOCATOR",
+    "insertText": "MCWPREFLOCATOR",
+    "description": "This variable lets you access items in the Preference record, such as a member's preferred language, allowing a script author to match the language used elsewhere in home banking. This variable enables you to determine language preferences and access rights in custom scripts.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWSTATE",
+    "insertText": "MCWSTATE",
+    "description": "This variable is an alphanumeric variable used to control program flow within the PowerOn PRINT section.\n\nIn a MemberConnect interactive specfile, the PRINT section loops whenever the @MCWSTATE is modified and continues to loop until the @MCWSTATE equals END; whereas in standard specfiles, the PRINT section loops only one time for each selected TARGET record.\n\n@MCWSTATE must be set within each MemberConnect state to identify the next state to be processed within the PRINT section. Valid values are any alphanumeric text string up to 20 characters in length. The initial state passed into the PRINT section when the specfile is invoked through MemberConnect must be START.\n\nThe final @MCWSTATE must be set to END to enable the specfile to terminate properly. Any intermediary state can be defined by the programmer and used as a condition to specify blocks of PRINT section code to be processed. It is passed into the specfile from the previous state, then set to identify the next state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWSESSIONNUMBER",
+    "insertText": "MCWSESSIONNUMBER",
+    "description": "This variable is a numeric variable passed into the specfile each time the specfile is invoked through the MemberConnect program. The variable contains a number from 1 to 100. This variable allows up to 100 concurrent users to run an interactive specfile. The specfile can store any calculated data or user input fields in array variables indexed by the session number so that the data can be referenced in other states. Assign this value to a variable in the SETUP division. The primary benefit of the session number is to store information in arrays indexed by the session number, as follows:\nIF SEGMENT(LINEREAD,1,12)=\"MCWFIELD001=\" THEN\n    DO\n\t IF SEGMENT(LINEREAD,13,LENGTH(LINEREAD))=\"New Auto\" THEN\n\t\tLNTYPE(SESSIONNUMBER)=1\n    ELSE IF SEGMENT(LINEREAD,13(LENGTH(LINEREAD))=\"Visa\" THEN\n     LNTYPE(SESSIONNUMBER)=60\n    END",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWDATATYPE",
+    "insertText": "MCWDATATYPE",
+    "description": "A value of 0 indicates that the specfile has only one state. The specfile runs once, produces output, and is done. This is the default.\nA value of 1 indicates that the specfile has multiple states, and that the current state requires some user input to advance to the next state.\nA value of 2 indicates that the specfile has multiple states, and this is the final state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWINPUTLETTERFILE",
+    "insertText": "MCWINPUTLETTERFILE",
+    "description": "This variable is an alphanumeric variable passed into the specfile. It contains the name of a letter file containing user input entered in the previous state. This letter file is opened in each MemberConnect state with the FILEOPEN statement, and the contents must be read with the FILEREADLINE statement. Each line of the letter file contains a character string made up of the input variable name, an equals sign (=), and the user's entry. The input variable name is MCWFIELD001 for the first entry requested in a state, MCWFIELD002 for the second, and so on. As a result, the letter file line for the first entry in a state looks similar to the following:\n\nMCWFIELD001=New Auto\n\nBecause all MemberConnect data input by users is passed into @MCWINPUTLETTERFILE as text, the input variables such as MCWFIELD001 must be defined as CHARACTER. To evaluate entries, check the value of the first 12 characters in the line to determine which field the entry corresponds to, as follows:\n\nIF SEGMENT(LINEREAD,1,12)=\"MCWFIELD001=\" THEN\n\t IF SEGMENT(LINEREAD,13,LENGTH(LINEREAD))=\"New Auto\" THEN\n\t\t[and so on]\n\nYou can prompt for responses that are more than one line in length. When a response is more than one line in length, the letter file contains multiple lines with the same input variable name, as follows:\n\nMCWFIELD001=This is the first line\nMCWFIELD001=This is the second line\nMCWFIELD002=[Next input field]\n\nOnce you finish reading the letter file, close it using a FILECLOSE procedure. The letter file is then deleted before the next state begins.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWNUMDATA1",
+    "insertText": "MCWNUMDATA1",
+    "description": "These variables are for internal Jack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWNUMDATA2",
+    "insertText": "MCWNUMDATA2",
+    "description": "These variables are for internal Jack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWNUMDATA3",
+    "insertText": "MCWNUMDATA3",
+    "description": "These variables are for internal Jack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWNUMDATA4",
+    "insertText": "MCWNUMDATA4",
+    "description": "These variables are for internal Jack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWNUMDATA5",
+    "insertText": "MCWNUMDATA5",
+    "description": "These variables are for internal Jack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWNUMDATA6",
+    "insertText": "MCWNUMDATA6",
+    "description": "These variables are for internal Jack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWNUMDATA7",
+    "insertText": "MCWNUMDATA7",
+    "description": "These variables are for internal Jack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWNUMDATA8",
+    "insertText": "MCWNUMDATA8",
+    "description": "These variables are for internal Jack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWNUMDATA9",
+    "insertText": "MCWNUMDATA9",
+    "description": "These variables are for internal Jack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWNUMDATA10",
+    "insertText": "MCWNUMDATA10",
+    "description": "These variables are for internal Jack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWMONEYDATA1",
+    "insertText": "MCWMONEYDATA1",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWMONEYDATA2",
+    "insertText": "MCWMONEYDATA2",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWMONEYDATA3",
+    "insertText": "MCWMONEYDATA3",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWMONEYDATA4",
+    "insertText": "MCWMONEYDATA4",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWMONEYDATA5",
+    "insertText": "MCWMONEYDATA5",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWMONEYDATA6",
+    "insertText": "MCWMONEYDATA6",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWMONEYDATA7",
+    "insertText": "MCWMONEYDATA7",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWMONEYDATA8",
+    "insertText": "MCWMONEYDATA8",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWMONEYDATA9",
+    "insertText": "MCWMONEYDATA9",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWMONEYDATA10",
+    "insertText": "MCWMONEYDATA10",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWCHRDATA1",
+    "insertText": "MCWCHRDATA1",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWCHRDATA2",
+    "insertText": "MCWCHRDATA2",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWCHRDATA3",
+    "insertText": "MCWCHRDATA3",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWCHRDATA4",
+    "insertText": "MCWCHRDATA4",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWCHRDATA5",
+    "insertText": "MCWCHRDATA5",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWCHRDATA6",
+    "insertText": "MCWCHRDATA6",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWCHRDATA7",
+    "insertText": "MCWCHRDATA7",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWCHRDATA8",
+    "insertText": "MCWCHRDATA8",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWCHRDATA9",
+    "insertText": "MCWCHRDATA9",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWCHRDATA10",
+    "insertText": "MCWCHRDATA10",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWDATEDATA1",
+    "insertText": "MCWDATEDATA1",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWDATEDATA2",
+    "insertText": "MCWDATEDATA2",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWDATEDATA3",
+    "insertText": "MCWDATEDATA3",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWDATEDATA4",
+    "insertText": "MCWDATEDATA4",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWDATEDATA5",
+    "insertText": "MCWDATEDATA5",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWRATEDATA1",
+    "insertText": "MCWRATEDATA1",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWRATEDATA2",
+    "insertText": "MCWRATEDATA2",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWRATEDATA3",
+    "insertText": "MCWRATEDATA3",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWRATEDATA4",
+    "insertText": "MCWRATEDATA4",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWRATEDATA5",
+    "insertText": "MCWRATEDATA5",
+    "description": "These variables are for internal ack Henry use and should not be referenced in user-generated specfiles.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERNUMBER1",
+    "insertText": "MCWUSERNUMBER1",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as number data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERNUMBER2",
+    "insertText": "MCWUSERNUMBER2",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as number data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERNUMBER3",
+    "insertText": "MCWUSERNUMBER3",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as number data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERNUMBER4",
+    "insertText": "MCWUSERNUMBER4",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as number data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERNUMBER5",
+    "insertText": "MCWUSERNUMBER5",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as number data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERNUMBER6",
+    "insertText": "MCWUSERNUMBER6",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as number data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERNUMBER7",
+    "insertText": "MCWUSERNUMBER7",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as number data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERNUMBER8",
+    "insertText": "MCWUSERNUMBER8",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as number data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERNUMBER9",
+    "insertText": "MCWUSERNUMBER9",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as number data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERNUMBER10",
+    "insertText": "MCWUSERNUMBER10",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as number data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERNUMBER11",
+    "insertText": "MCWUSERNUMBER11",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as number data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERNUMBER12",
+    "insertText": "MCWUSERNUMBER12",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as number data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERNUMBER13",
+    "insertText": "MCWUSERNUMBER13",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as number data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERNUMBER14",
+    "insertText": "MCWUSERNUMBER14",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as number data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERNUMBER15",
+    "insertText": "MCWUSERNUMBER15",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as number data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR1",
+    "insertText": "MCWUSERCHAR1",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR2",
+    "insertText": "MCWUSERCHAR2",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR3",
+    "insertText": "MCWUSERCHAR3",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR4",
+    "insertText": "MCWUSERCHAR4",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR5",
+    "insertText": "MCWUSERCHAR5",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR6",
+    "insertText": "MCWUSERCHAR6",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR7",
+    "insertText": "MCWUSERCHAR7",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR8",
+    "insertText": "MCWUSERCHAR8",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR9",
+    "insertText": "MCWUSERCHAR9",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR10",
+    "insertText": "MCWUSERCHAR10",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR11",
+    "insertText": "MCWUSERCHAR11",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR12",
+    "insertText": "MCWUSERCHAR12",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR13",
+    "insertText": "MCWUSERCHAR13",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR14",
+    "insertText": "MCWUSERCHAR14",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR15",
+    "insertText": "MCWUSERCHAR15",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR16",
+    "insertText": "MCWUSERCHAR16",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR17",
+    "insertText": "MCWUSERCHAR17",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR18",
+    "insertText": "MCWUSERCHAR18",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR19",
+    "insertText": "MCWUSERCHAR19",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR20",
+    "insertText": "MCWUSERCHAR20",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR21",
+    "insertText": "MCWUSERCHAR21",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR22",
+    "insertText": "MCWUSERCHAR22",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR23",
+    "insertText": "MCWUSERCHAR23",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR24",
+    "insertText": "MCWUSERCHAR24",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR25",
+    "insertText": "MCWUSERCHAR25",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR26",
+    "insertText": "MCWUSERCHAR26",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR27",
+    "insertText": "MCWUSERCHAR27",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR28",
+    "insertText": "MCWUSERCHAR28",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR29",
+    "insertText": "MCWUSERCHAR29",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR30",
+    "insertText": "MCWUSERCHAR30",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR31",
+    "insertText": "MCWUSERCHAR31",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR32",
+    "insertText": "MCWUSERCHAR32",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR33",
+    "insertText": "MCWUSERCHAR33",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR34",
+    "insertText": "MCWUSERCHAR34",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR35",
+    "insertText": "MCWUSERCHAR35",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR36",
+    "insertText": "MCWUSERCHAR36",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR37",
+    "insertText": "MCWUSERCHAR37",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR38",
+    "insertText": "MCWUSERCHAR38",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR39",
+    "insertText": "MCWUSERCHAR39",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR40",
+    "insertText": "MCWUSERCHAR40",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR41",
+    "insertText": "MCWUSERCHAR41",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR42",
+    "insertText": "MCWUSERCHAR42",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR43",
+    "insertText": "MCWUSERCHAR43",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR44",
+    "insertText": "MCWUSERCHAR44",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR45",
+    "insertText": "MCWUSERCHAR45",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR46",
+    "insertText": "MCWUSERCHAR46",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR47",
+    "insertText": "MCWUSERCHAR47",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR48",
+    "insertText": "MCWUSERCHAR48",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR49",
+    "insertText": "MCWUSERCHAR49",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCHAR50",
+    "insertText": "MCWUSERCHAR50",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as character data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERAMOUNT1",
+    "insertText": "MCWUSERAMOUNT1",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as money data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERAMOUNT2",
+    "insertText": "MCWUSERAMOUNT2",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as money data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERAMOUNT3",
+    "insertText": "MCWUSERAMOUNT3",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as money data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERAMOUNT4",
+    "insertText": "MCWUSERAMOUNT4",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as money data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERAMOUNT5",
+    "insertText": "MCWUSERAMOUNT5",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as money data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERAMOUNT6",
+    "insertText": "MCWUSERAMOUNT6",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as money data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERAMOUNT7",
+    "insertText": "MCWUSERAMOUNT7",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as money data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERAMOUNT8",
+    "insertText": "MCWUSERAMOUNT8",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as money data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERAMOUNT9",
+    "insertText": "MCWUSERAMOUNT9",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as money data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERAMOUNT10",
+    "insertText": "MCWUSERAMOUNT10",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as money data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERAMOUNT11",
+    "insertText": "MCWUSERAMOUNT11",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as money data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERAMOUNT12",
+    "insertText": "MCWUSERAMOUNT12",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as money data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERAMOUNT13",
+    "insertText": "MCWUSERAMOUNT13",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as money data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERAMOUNT14",
+    "insertText": "MCWUSERAMOUNT14",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as money data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERAMOUNT15",
+    "insertText": "MCWUSERAMOUNT15",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as money data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERDATE1",
+    "insertText": "MCWUSERDATE1",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as date data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERDATE2",
+    "insertText": "MCWUSERDATE2",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as date data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERDATE3",
+    "insertText": "MCWUSERDATE3",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as date data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERDATE4",
+    "insertText": "MCWUSERDATE4",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as date data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERDATE5",
+    "insertText": "MCWUSERDATE5",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as date data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERDATE6",
+    "insertText": "MCWUSERDATE6",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as date data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERDATE7",
+    "insertText": "MCWUSERDATE7",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as date data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERDATE8",
+    "insertText": "MCWUSERDATE8",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as date data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERDATE9",
+    "insertText": "MCWUSERDATE9",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as date data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERDATE10",
+    "insertText": "MCWUSERDATE10",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as date data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERDATE11",
+    "insertText": "MCWUSERDATE11",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as date data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERDATE12",
+    "insertText": "MCWUSERDATE12",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as date data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERDATE13",
+    "insertText": "MCWUSERDATE13",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as date data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERDATE14",
+    "insertText": "MCWUSERDATE14",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as date data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERDATE15",
+    "insertText": "MCWUSERDATE15",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as date data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERRATE1",
+    "insertText": "MCWUSERRATE1",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as rate data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERRATE2",
+    "insertText": "MCWUSERRATE2",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as rate data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERRATE3",
+    "insertText": "MCWUSERRATE3",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as rate data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERRATE4",
+    "insertText": "MCWUSERRATE4",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as rate data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERRATE5",
+    "insertText": "MCWUSERRATE5",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as rate data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERRATE6",
+    "insertText": "MCWUSERRATE6",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as rate data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERRATE7",
+    "insertText": "MCWUSERRATE7",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as rate data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERRATE8",
+    "insertText": "MCWUSERRATE8",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as rate data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERRATE9",
+    "insertText": "MCWUSERRATE9",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as rate data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERRATE10",
+    "insertText": "MCWUSERRATE10",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as rate data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERRATE11",
+    "insertText": "MCWUSERRATE11",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as rate data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERRATE12",
+    "insertText": "MCWUSERRATE12",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as rate data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERRATE13",
+    "insertText": "MCWUSERRATE13",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as rate data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERRATE14",
+    "insertText": "MCWUSERRATE14",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as rate data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERRATE15",
+    "insertText": "MCWUSERRATE15",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as rate data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCODE1",
+    "insertText": "MCWUSERCODE1",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as code data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCODE2",
+    "insertText": "MCWUSERCODE2",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as code data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCODE3",
+    "insertText": "MCWUSERCODE3",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as code data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCODE4",
+    "insertText": "MCWUSERCODE4",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as code data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCODE5",
+    "insertText": "MCWUSERCODE5",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as code data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCODE6",
+    "insertText": "MCWUSERCODE6",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as code data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCODE7",
+    "insertText": "MCWUSERCODE7",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as code data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCODE8",
+    "insertText": "MCWUSERCODE8",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as code data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCODE9",
+    "insertText": "MCWUSERCODE9",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as code data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCODE10",
+    "insertText": "MCWUSERCODE10",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as code data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCODE11",
+    "insertText": "MCWUSERCODE11",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as code data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCODE12",
+    "insertText": "MCWUSERCODE12",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as code data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCODE13",
+    "insertText": "MCWUSERCODE13",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as code data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCODE14",
+    "insertText": "MCWUSERCODE14",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as code data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERCODE15",
+    "insertText": "MCWUSERCODE15",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as code data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERFLOAT1",
+    "insertText": "MCWUSERFLOAT1",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as float data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERFLOAT2",
+    "insertText": "MCWUSERFLOAT2",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as float data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERFLOAT3",
+    "insertText": "MCWUSERFLOAT3",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as float data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERFLOAT4",
+    "insertText": "MCWUSERFLOAT4",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as float data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERFLOAT5",
+    "insertText": "MCWUSERFLOAT5",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as float data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERFLOAT6",
+    "insertText": "MCWUSERFLOAT6",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as float data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERFLOAT7",
+    "insertText": "MCWUSERFLOAT7",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as float data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERFLOAT8",
+    "insertText": "MCWUSERFLOAT8",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as float data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERFLOAT9",
+    "insertText": "MCWUSERFLOAT9",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as float data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERFLOAT10",
+    "insertText": "MCWUSERFLOAT10",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as float data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERFLOAT11",
+    "insertText": "MCWUSERFLOAT11",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as float data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERFLOAT12",
+    "insertText": "MCWUSERFLOAT12",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as float data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERFLOAT13",
+    "insertText": "MCWUSERFLOAT13",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as float data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERFLOAT14",
+    "insertText": "MCWUSERFLOAT14",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as float data type.",
+    "isSnippet": false
+  },
+  {
+    "label": "@MCWUSERFLOAT15",
+    "insertText": "MCWUSERFLOAT15",
+    "description": "User-generated specfiles can pass session data from state to state using variables defined as float data type.",
+    "isSnippet": false
+  }
+]

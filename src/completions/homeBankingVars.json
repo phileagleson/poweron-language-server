@@ -1,0 +1,104 @@
+[
+  {
+    "label": "@HBANSWERAMOUNT",
+    "insertText": "HBANSWERAMOUNT",
+    "description": "This variable is the answer to a request from the interactive PowerOn specfile for monetary input. This variable is required to continue running the specfile after prompting the member for monetary input.",
+    "isSnippet": false
+  },
+  {
+    "label": "@HBANSWERDATE",
+    "insertText": "HBANSWERDATE",
+    "description": "This variable is the answer to a request from the interactive PowerOn specfile for date input. This variable is required to continue running the specfile after prompting the member for a date.",
+    "isSnippet": false
+  },
+  {
+    "label": "@HBANSWERNUM",
+    "insertText": "HBANSWERNUM",
+    "description": "This variable is the answer to a request from the interactive PowerOn specfile for numeric input. This variable is required to continue running the specfile after prompting the member for numeric input.",
+    "isSnippet": false
+  },
+  {
+    "label": "@HBANSWERRATE",
+    "insertText": "HBANSWERRATE",
+    "description": "This variable is the answer to a request from the interactive PowerOn specfile for rate input. This variable is required to continue running the specfile after prompting the member for a rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "@HBANSWERTEXT",
+    "insertText": "HBANSWERTEXT",
+    "description": "This variable is the answer to a request from the interactive PowerOn specfile for text input. This variable is required to continue running the specfile after prompting the member for text input.",
+    "isSnippet": false
+  },
+  {
+    "label": "@HBDATATYPE",
+    "insertText": "HBDATATYPE",
+    "description": "The type of data requested:\n0 = No input required\n1 = Character\n2 = Rate\n3 = Date\n4 = Number\n5 = Code\n6 = Money to $999,999,999,999.99\nThe system supports monetary amounts to:\nA maximum of $9,999,999,999,999.99 (one cent less than ten trillion dollars) for general ledger amounts, including fields in the General Ledger file and entries during GL Posting\nA maximum of $999,999,999,999.99 (one cent less than one trillion dollars) for all other amount fields in the system, including share and loan balances and transactions, with the following exceptions\n\nThese exceptions support the maximum of $21,474,836.47:\n\nThe Credit Retrieval System, including the Credit Report record and Credit Report Item record fields\nCash Dispense Machine dispense amounts and fields in the CDM Dialog file\nFields in the ATM Dialog file\n7 = Money to 16 digits\n8 = Yes/No\n9 = End specfile",
+    "isSnippet": false
+  },
+  {
+    "label": "@HBDEFAULTAMOUNT",
+    "insertText": "HBDEFAULTAMOUNT",
+    "description": "The default amount in a prompt for monetary input.",
+    "isSnippet": false
+  },
+  {
+    "label": "@HBDEFAULTDATE",
+    "insertText": "HBDEFAULTDATE",
+    "description": "The default value in a prompt for a date.",
+    "isSnippet": false
+  },
+  {
+    "label": "@HBDEFAULTNUM",
+    "insertText": "HBDEFAULTNUM",
+    "description": "The default value in a prompt for numeric input.",
+    "isSnippet": false
+  },
+  {
+    "label": "@HBDEFAULTRATE",
+    "insertText": "HBDEFAULTRATE",
+    "description": "The default value in a prompt for a rate.",
+    "isSnippet": false
+  },
+  {
+    "label": "@HBDEFAULTTEXT",
+    "insertText": "HBDEFAULTTEXT",
+    "description": "The default value in a prompt for text input.",
+    "isSnippet": false
+  },
+  {
+    "label": "@HBHELPCODE",
+    "insertText": "HBHELPCODE",
+    "description": "The system inserts in this variable the help code number associated with prompt currently being addressed.",
+    "isSnippet": false
+  },
+  {
+    "label": "@HBLINENUMBER",
+    "insertText": "HBLINENUMBER",
+    "description": "This variable contains the line number within home banking where the current session is running.",
+    "isSnippet": false
+  },
+  {
+    "label": "@HBMAXCODEWIDTH",
+    "insertText": "HBMAXCODEWIDTH",
+    "description": "This variable contains the maximum code value when a code is requested from the member, or the maximum number of characters a member can enter in response to a prompt for text input.",
+    "isSnippet": false
+  },
+  {
+    "label": "@HBPROMPT",
+    "insertText": "HBPROMPT",
+    "description": "This variable is a request for input from the member.",
+    "isSnippet": false
+  },
+  {
+    "label": "@HBSCREENCLEAR",
+    "insertText": "HBSCREENCLEAR",
+    "description": "This variable is a flag indicating whether to clear the screen or scroll before displaying the data in this message. The default is do not clear the screen before displaying the data.\n0 = do not clear the screen (scroll)\n1 = clear the screen",
+    "isSnippet": false
+  },
+  {
+    "label": "@HBSTATE",
+    "insertText": "HBSTATE",
+    "description": "The default state is START, which signifies the initial state of an interactive PowerOn specfile.\n\nWhen a specfile requires input, the specfile assigns the next state and sends the state to the client system. The specfile request must show the state that continues running the PowerOn specfile.",
+    "isSnippet": false
+  }
+]

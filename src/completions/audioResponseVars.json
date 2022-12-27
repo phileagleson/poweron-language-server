@@ -1,0 +1,86 @@
+[
+  {
+    "label": "@AUDIOLINENUMBER",
+    "insertText": "AUDIOLINENUMBER",
+    "description": "This variable contains the line number within the audio poster where the current session is running. The audio poster supports up to 128 lines.",
+    "isSnippet": false
+  },
+  {
+    "label": "@AUDIOSTATE",
+    "insertText": "AUDIOSTATE",
+    "description": "This variable identifies the state the specfile is in at this point in the procedure. @AUDIOSTATE always begins with the character value START as the first state.",
+    "isSnippet": false
+  },
+  {
+    "label": "@AUDIOMESSAGEINFO1",
+    "insertText": "AUDIOMESSAGEINFO1",
+    "description": "This variable contains the information for the audio response unit to play to the caller.",
+    "isSnippet": false
+  },
+  {
+    "label": "@AUDIOMESSAGEINFO2",
+    "insertText": "AUDIOMESSAGEINFO2",
+    "description": "This variable contains the information for the audio response unit to play to the caller.",
+    "isSnippet": false
+  },
+  {
+    "label": "@AUDIOMESSAGEINFO3",
+    "insertText": "AUDIOMESSAGEINFO3",
+    "description": "This variable contains the information for the audio response unit to play to the caller.",
+    "isSnippet": false
+  },
+  {
+    "label": "@AUDIOMESSAGEINFO4",
+    "insertText": "AUDIOMESSAGEINFO4",
+    "description": "This variable contains the information for the audio response unit to play to the caller.",
+    "isSnippet": false
+  },
+  {
+    "label": "@AUDIOMESSAGEINFO5",
+    "insertText": "AUDIOMESSAGEINFO5",
+    "description": "This variable contains the information for the audio response unit to play to the caller.",
+    "isSnippet": false
+  },
+  {
+    "label": "@AUDIOMESSAGEINFO6",
+    "insertText": "AUDIOMESSAGEINFO6",
+    "description": "This variable contains the information for the audio response unit to play to the caller.",
+    "isSnippet": false
+  },
+  {
+    "label": "@AUDIOMESSAGEINFO7",
+    "insertText": "AUDIOMESSAGEINFO7",
+    "description": "This variable contains the information for the audio response unit to play to the caller.",
+    "isSnippet": false
+  },
+  {
+    "label": "@AUDIOMESSAGEINFO8",
+    "insertText": "AUDIOMESSAGEINFO8",
+    "description": "This variable contains the information for the audio response unit to play to the caller.",
+    "isSnippet": false
+  },
+  {
+    "label": "@AUDIOMESSAGEINFO9",
+    "insertText": "AUDIOMESSAGEINFO9",
+    "description": "This variable contains the information for the audio response unit to play to the caller.",
+    "isSnippet": false
+  },
+  {
+    "label": "@AUDIOMESSAGEINFO10",
+    "insertText": "AUDIOMESSAGEINFO10",
+    "description": "This variable contains the information for the audio response unit to play to the caller.",
+    "isSnippet": false
+  },
+  {
+    "label": "@AUDIODATATYPE",
+    "insertText": "AUDIODATATYPE",
+    "description": "This variable determines the type of data to be input.\n\nInclude the file RD.AUDIO.DEF to use pre-defined data type variable names.\n\nAUDIODATATYPENONE=0\n\nTells the audio response unit to terminate the specfile and return control to the audio response system\n\nAUDIODATATYPEMONEY=1\n\nAudio data types 1, 2, 3, 4, and 6 allow the caller to type a series of digits, using the pound sign (#) to indicate when finished. For these input types, the asterisk (*) causes the system to repeat the prompt and start the input again.\n\nAUDIODATATYPEDATE=2\nAUDIODATATYPENUMBER=3\nAUDIODATATYPEYESNO=4\nAUDIODATATYPEMENU=5\n\nAccepts a single key as input. The caller can press any of the 12 keys.\n\nAUDIODATATYPECHARACTER=6\nAUDIODATATYPEENDCALL=7\n\nCauses the system to disconnect the call after the messages have played.",
+    "isSnippet": false
+  },
+  {
+    "label": "@AUDIOUSERINPUT",
+    "insertText": "AUDIOUSERINPUT",
+    "description": "At the beginning of each state, this variable contains the caller's input from the previous prompt.",
+    "isSnippet": false
+  }
+]

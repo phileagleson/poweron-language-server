@@ -1,0 +1,1358 @@
+[
+  {
+    "label": "@CREDITREPORTACCESSPIN",
+    "insertText": "CREDITREPORTACCESSPIN",
+    "description": "This variable cannot be blank or set to 0.\n0,2,3: <Blank>\n1: CREDREP:ACCESSPIN",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTACTIONTEXT",
+    "insertText": "CREDITREPORTACTIONTEXT",
+    "description": "0,2,3: <Blank>\n1: CREDREP:ACTIONTEXT",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTADDRANALYSISOID",
+    "insertText": "CREDITREPORTADDRANALYSISOID",
+    "description": "0,2,3: <Blank>\n1: CREDREP:ADDRANALYSISOID",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTADDRVERIFYACCT",
+    "insertText": "CREDITREPORTADDRVERIFYACCT",
+    "description": "0,2,3: <Blank>\n1: CREDREP:ADDRVERIFYACCT",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTALIAS1",
+    "insertText": "CREDITREPORTALIAS1",
+    "description": "0,2,3: <Blank>\n1: CREDREP:ALIAS:1",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTALIAS2",
+    "insertText": "CREDITREPORTALIAS2",
+    "description": "0,2,3: <Blank>\n1: CREDREP:ALIAS:2",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTALIAS3",
+    "insertText": "CREDITREPORTALIAS3",
+    "description": "0,2,3: <Blank>\n1: CREDREP:ALIAS:3",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTAPPALTEREDFORGED",
+    "insertText": "CREDITREPORTAPPALTEREDFORGED",
+    "description": "0,2,3: 0\n1: CREDREP:REDFLAGALERT.APPALTEREDFORGED",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTAPPEARINCONSISTENT",
+    "insertText": "CREDITREPORTAPPEARINCONSISTENT",
+    "description": "0,2,3: 0\n1: CREDREP:REDFLAGALERT.APPEARINCONSIST",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTARMALERT",
+    "insertText": "CREDITREPORTARMALERT",
+    "description": "0,2,3: <Blank>\n1: CREDREP:ARMALERT",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTASSOCIATIONCODE",
+    "insertText": "CREDITREPORTASSOCIATIONCODE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:ASSOCIATIONCODE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTBIRTHDATE",
+    "insertText": "CREDITREPORTBIRTHDATE",
+    "description": "0: --/--/--\n1: CREDREP:BIRTHDATE\n2: NAME:BIRTHDATE\n3: LOANAPP PERSON:BIRTHDATE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTBULLSEYEACCT",
+    "insertText": "CREDITREPORTBULLSEYEACCT",
+    "description": "0,2,3: <Blank>\n1: CREDREP:BULLSEYEACCT",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTBUREAU",
+    "insertText": "CREDITREPORTBUREAU",
+    "description": "0,2,3: 0\n1: CREDREP:BUREAU",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTBUREAUINFO",
+    "insertText": "CREDITREPORTBUREAUINFO",
+    "description": "0,2,3: <Blank>\n1: CREDREP:BUREAUINFO",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTBUSINESSCITY",
+    "insertText": "CREDITREPORTBUSINESSCITY",
+    "description": "0,2,3: <Blank>\n1: CREDREP:BUSINESS.CURRADDRESS.CITY",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTBUSINESSNAME",
+    "insertText": "CREDITREPORTBUSINESSNAME",
+    "description": "The system returns an error in @CREDITREPORTERROR if PULLCREDITREPORT runs when this variable is blank.\n\n0,2,3: <Blank>\n1: CREDREP:BUSINESS.BUSINESSNAME",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTBUSINESSPHONE",
+    "insertText": "CREDITREPORTBUSINESSPHONE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:BUSINESS.PHONENUMBER",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTBUSINESSPREVCITY",
+    "insertText": "CREDITREPORTBUSINESSPREVCITY",
+    "description": "0,2,3: <Blank>\n1: CREDREP:BUSINESS.PREVADDRESS.CITY",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTBUSINESSPREVSTATE",
+    "insertText": "CREDITREPORTBUSINESSPREVSTATE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:BUSINESS.PREVADDRESS.STATE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTBUSINESSPREVSTREET",
+    "insertText": "CREDITREPORTBUSINESSPREVSTREET",
+    "description": "0,2,3: <Blank>\n1: CREDREP:BUSINESS.PREVADDRESS.STREET",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTBUSINESSPREVZIPCODE",
+    "insertText": "CREDITREPORTBUSINESSPREVZIPCODE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:BUSINESS.PREVADDRESS.ZIPCODE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTBUSINESSSTATE",
+    "insertText": "CREDITREPORTBUSINESSSTATE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:BUSINESS.CURRADDRESS.STATE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTBUSINESSSTREET",
+    "insertText": "CREDITREPORTBUSINESSSTREET",
+    "description": "0,2,3: <Blank>\n1: CREDREP:BUSINESS.CURRADDRESS.STREET",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTBUSINESSTYPECODE",
+    "insertText": "CREDITREPORTBUSINESSTYPECODE",
+    "description": "0,2,3: 0\n1: CREDREP:BUSINESS.TYPECODE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTBUSINESSZIPCODE",
+    "insertText": "CREDITREPORTBUSINESSZIPCODE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:BUSINESS.CURRADDRESS.ZIPCODE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTBUSMONTHSCURRADDR",
+    "insertText": "CREDITREPORTBUSMONTHSCURRADDR",
+    "description": "0,2,3: 0\n1: CREDREP:BUSINESS.MONTHSATADDRESS",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTBUSYEARSCURRADDR",
+    "insertText": "CREDITREPORTBUSYEARSCURRADDR",
+    "description": "0,2,3: 0\n1: CREDREP:BUSINESS.YEARSATADDRESS",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTCHEXACCTNUMBER",
+    "insertText": "CREDITREPORTCHEXACCTNUMBER",
+    "description": "0,2,3: <Blank>\n1: CREDREP:ACCTNUMBER",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTCHEXTRANSACTIONID1",
+    "insertText": "CREDITREPORTCHEXTRANSACTIONID1",
+    "description": "0,2,3: <Blank>\n1: CREDREP:CHEXTRANSID1",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTCHEXTRANSACTIONID2",
+    "insertText": "CREDITREPORTCHEXTRANSACTIONID2",
+    "description": "0,2,3: <Blank>\n1: CREDREP:CHEXTRANSID2",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTCHEXTRANSACTIONID3",
+    "insertText": "CREDITREPORTCHEXTRANSACTIONID3",
+    "description": "0,2,3: <Blank>\n1: CREDREP:CHEXTRANSID3",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTCOMMERCIALCODE",
+    "insertText": "CREDITREPORTCOMMERCIALCODE",
+    "description": "0,2,3: 0\n1: CREDREP:COMMERCIALCODE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTCURRADDRCITY",
+    "insertText": "CREDITREPORTCURRADDRCITY",
+    "description": "0: <Blank>\n1: CREDREP:CURRADDRCITY\n2: NAME:CITY\n3: LOANAPP PERSON:CITY",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTCURRADDRDIRECTIONAL",
+    "insertText": "CREDITREPORTCURRADDRDIRECTIONAL",
+    "description": "0: <Blank>\n1: CREDREP:CURRADDRDIRECTIONAL\n2: NAME:STREET\n3: LOANAPP PERSON:STREET",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTCURRADDRHOMEPHONE",
+    "insertText": "CREDITREPORTCURRADDRHOMEPHONE",
+    "description": "0: <Blank>\n1: CREDREP:CURRADDRHOMEPHONE\n2: NAME:HOMEPHONE\n3: LOANAPP PERSON:HOMEPHONE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTCURRADDRHOUSENUMBER",
+    "insertText": "CREDITREPORTCURRADDRHOUSENUMBER",
+    "description": "0: <Blank>\n1: CREDREP:CURRADDRHOUSENUMBER\n2: NAME:STREET\n3: LOANAPP PERSON:STREET",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTCURRADDRQUADRANT",
+    "insertText": "CREDITREPORTCURRADDRQUADRANT",
+    "description": "0: <Blank>\n1: CREDREP:CURRADDRQUADRANT\n2: NAME:STREET\n3: LOANAPP PERSON:STREET",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTCURRADDRSTATE",
+    "insertText": "CREDITREPORTCURRADDRSTATE",
+    "description": "0: <Blank>\n1: CREDREP:CURRADDRSTATE\n2: NAME:STATE\n3: LOANAPP PERSON:STATE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTCURRADDRSTREETNAME",
+    "insertText": "CREDITREPORTCURRADDRSTREETNAME",
+    "description": "0: <Blank>\n1: CREDREP:CURRADDRSTREETNAME\n2: NAME:STREET\n3: LOANAPP PERSON:STREET",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTCURRADDRSTREETTYPE",
+    "insertText": "CREDITREPORTCURRADDRSTREETTYPE",
+    "description": "0: <Blank>\n1: CREDREP:CURRADDRSTREETTYPE\n2: NAME:STREET\n3: LOANAPP PERSON:STREET",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTCURRADDRUNITNUMBER",
+    "insertText": "CREDITREPORTCURRADDRUNITNUMBER",
+    "description": "0: <Blank>\n1: CREDREP:CURRADDRUNITNUMBER\n2: NAME:STREET\n3: LOANAPP PERSON:STREET",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTCURRADDRUNITTYPE",
+    "insertText": "CREDITREPORTCURRADDRUNITTYPE",
+    "description": "0: <Blank>\n1: CREDREP:CURRADDRUNITTYPE\n2: NAME:STREET\n3: LOANAPP PERSON:STREET",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTCURRADDRZIPCODE",
+    "insertText": "CREDITREPORTCURRADDRZIPCODE",
+    "description": "0: <Blank>\n1: CREDREP:CURRADDRZIPCODE\n2: NAME:ZIPCODE\n3: LOANAPP PERSON:ZIPCODE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDATEHIRED",
+    "insertText": "CREDITREPORTDATEHIRED",
+    "description": "0,2: <Blank>\n1: CREDREP:DATEHIRED\n3: LOANAPP PERSON:CURREMPSTARTDATE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDATEOCCURRENCE",
+    "insertText": "CREDITREPORTDATEOCCURRENCE",
+    "description": "0,2,3: --/--/--\n1: CREDREP:DATEOCCURRENCE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDATEOPENED",
+    "insertText": "CREDITREPORTDATEOPENED",
+    "description": "0,2,3: --/--/--\n1: CREDREP:DATEOPENED",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDATESEPARATED",
+    "insertText": "CREDITREPORTDATESEPARATED",
+    "description": "0,2,3: --/--/--\n1: CREDREP:DATESEPARATED",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDECODE01",
+    "insertText": "CREDITREPORTDECODE01",
+    "description": "0,2,3: <Blank>\n1: CREDREP:DECODE:1",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDECODE02",
+    "insertText": "CREDITREPORTDECODE02",
+    "description": "0,2,3: <Blank>\n1: CREDREP:DECODE:2",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDECODE03",
+    "insertText": "CREDITREPORTDECODE03",
+    "description": "0,2,3: <Blank>\n1: CREDREP:DECODE:3",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDECODE04",
+    "insertText": "CREDITREPORTDECODE04",
+    "description": "0,2,3: <Blank>\n1: CREDREP:DECODE:4",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDECODE05",
+    "insertText": "CREDITREPORTDECODE05",
+    "description": "0,2,3: <Blank>\n1: CREDREP:DECODE:5",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDECODE06",
+    "insertText": "CREDITREPORTDECODE06",
+    "description": "0,2,3: <Blank>\n1: CREDREP:DECODE:6",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDECODE07",
+    "insertText": "CREDITREPORTDECODE07",
+    "description": "0,2,3: <Blank>\n1: CREDREP:DECODE:7",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDECODE08",
+    "insertText": "CREDITREPORTDECODE08",
+    "description": "0,2,3: <Blank>\n1: CREDREP:DECODE:8",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDECODE09",
+    "insertText": "CREDITREPORTDECODE09",
+    "description": "0,2,3: <Blank>\n1: CREDREP:DECODE:9",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDECODE10",
+    "insertText": "CREDITREPORTDECODE10",
+    "description": "0,2,3: <Blank>\n1: CREDREP:DECODE:10",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDECODE11",
+    "insertText": "CREDITREPORTDECODE11",
+    "description": "0,2,3: <Blank>\n1: CREDREP:DECODE:11",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDECODE12",
+    "insertText": "CREDITREPORTDECODE12",
+    "description": "0,2,3: <Blank>\n1: CREDREP:DECODE:12",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDECODE13",
+    "insertText": "CREDITREPORTDECODE13",
+    "description": "0,2,3: <Blank>\n1: CREDREP:DECODE:13",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDECODE14",
+    "insertText": "CREDITREPORTDECODE14",
+    "description": "0,2,3: <Blank>\n1: CREDREP:DECODE:14",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDECODE15",
+    "insertText": "CREDITREPORTDECODE15",
+    "description": "0,2,3: <Blank>\n1: CREDREP:DECODE:15",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDECODE16",
+    "insertText": "CREDITREPORTDECODE16",
+    "description": "0,2,3: <Blank>\n1: CREDREP:DECODE:16",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDEPOSITAMNT",
+    "insertText": "CREDITREPORTDEPOSITAMNT",
+    "description": "0,2,3: $0.00\n1: CREDREP:DEPOSITAMT",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDEPOSITAMT",
+    "insertText": "CREDITREPORTDEPOSITAMT",
+    "description": "0,2,3: $0.00\n1: CREDREP:BUREAU.CBIBUREAUCHEX.REPWREXPTYPEMONEY",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDOCALTEREDFORGED",
+    "insertText": "CREDITREPORTDOCALTEREDFORGED",
+    "description": "0,2,3: <Blank>\n1: CREDREP:REDFLAGALERT.DOCALTEREDFORGED",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDPOWER1",
+    "insertText": "CREDITREPORTDPOWER1",
+    "description": "0,2,3: <Blank>\n1: CREDREP:DPOWER1",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDPOWER2",
+    "insertText": "CREDITREPORTDPOWER2",
+    "description": "0,2,3: <Blank>\n1: CREDREP:DPOWER2",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTDPOWER3",
+    "insertText": "CREDITREPORTDPOWER3",
+    "description": "0,2,3: <Blank>\n1: CREDREP:DPOWER3",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTECOAINQTYPE",
+    "insertText": "CREDITREPORTECOAINQTYPE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:ECOAINQTYPE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTEMPCITY",
+    "insertText": "CREDITREPORTEMPCITY",
+    "description": "Data Type:\n0,2: <Blank>\n1: CREDREP:EMPCITY\n3: LOANAPP PERSON:CURREMPADDRESS",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTEMPCOPY",
+    "insertText": "CREDITREPORTEMPCOPY",
+    "description": "0,2,3: <Blank>\n1: CREDREP:EMPCOPY",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTEMPHOUSENUMBER",
+    "insertText": "CREDITREPORTEMPHOUSENUMBER",
+    "description": "0,2: <Blank>\n1: CREDREP:EMPHOUSENUMBER\n3: LOANAPP PERSON:CURREMPADDRESS",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTEMPNAME",
+    "insertText": "CREDITREPORTEMPNAME",
+    "description": "0,2: <Blank>\n1: CREDREP:EMPNAME\n3: LOANAPP PERSON:CURREMPNAME",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTEMPSTATE",
+    "insertText": "CREDITREPORTEMPSTATE",
+    "description": "0,2: <Blank>\n1: CREDREP:EMPSTATE\n3: LOANAPP PERSON:CURREMPADDRESS",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTEMPSTREET",
+    "insertText": "CREDITREPORTEMPSTREET",
+    "description": "0,2: <Blank>\n1: CREDREP:EMPSTREET\n3: LOANAPP PERSON:CURREMPADDRESS",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTEMPZIPCODE",
+    "insertText": "CREDITREPORTEMPZIPCODE",
+    "description": "0,2: <Blank>\n1: CREDREP:EMPZIPCODE\n3: LOANAPP PERSON:CURREMPADDRESS",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTENDEMPDATE",
+    "insertText": "CREDITREPORTENDEMPDATE",
+    "description": "0,2: --/--/--\n1:CREDREP:STARTEMPDATE\n3:LOANAPP PERSON:CURREMPSTARTDATE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTEQDECODE1",
+    "insertText": "CREDITREPORTEQDECODE1",
+    "description": "0,2,3: <Blank>\n1: CREDREP:EQDECODE:1",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTEQDECODE2",
+    "insertText": "CREDITREPORTEQDECODE2",
+    "description": "0,2,3: <Blank>\n1: CREDREP:EQDECODE:2",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTEQDECODE3",
+    "insertText": "CREDITREPORTEQDECODE3",
+    "description": "0,2,3: <Blank>\n1: CREDREP:EQDECODE:3",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTEQDECODE4",
+    "insertText": "CREDITREPORTEQDECODE4",
+    "description": "0,2,3: <Blank>\n1: CREDREP:EQDECODE:4",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTEQDECODE5",
+    "insertText": "CREDITREPORTEQDECODE5",
+    "description": "0,2,3: <Blank>\n1: CREDREP:EQDECODE:5",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTERROR",
+    "insertText": "CREDITREPORTERROR",
+    "description": "Do not use any record; all data are filled in by the specfile.",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTEXTRANSACTIONID",
+    "insertText": "CREDITREPORTEXTRANSACTIONID",
+    "description": "0,2,3: <Blank>\n1: Values of CHEXTRANSACTIONID1-CHEXTRANSACTIONID3, all three appended one after the other with trailing spaces removed",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTFILEDIRECTORY",
+    "insertText": "CREDITREPORTFILEDIRECTORY",
+    "description": "0–3: <Blank>",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTFILENAME",
+    "insertText": "CREDITREPORTFILENAME",
+    "description": "0–3: <Blank>",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTFIRSTNAME",
+    "insertText": "CREDITREPORTFIRSTNAME",
+    "description": "0: <Blank>\n1: CREDREP:FIRSTNAME\n2: NAME:FIRST\n3: LOANAPP PERSON:FIRST",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTHAWKINDICATOR",
+    "insertText": "CREDITREPORTHAWKINDICATOR",
+    "description": "0,2,3: <Blank>\n1: CREDREP:HAWKINDICATOR",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTIDNUMBER",
+    "insertText": "CREDITREPORTIDNUMBER",
+    "description": "0: <Blank>\n1: CREDREP:IDNUMBER\n2,3: NAME:IDENTIDNUMBER: The subfield of the first NAME:IDENTIDNUMBER that has a corresponding ID Type of 2 (Driver's License), 3 (State ID), or 6 (Military ID).",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTIDNUMBER2",
+    "insertText": "CREDITREPORTIDNUMBER2",
+    "description": "0: <Blank>\n1: CREDREP:IDNUMBER2\n2,3: NAME:IDENTIDNUMBER: The subfield of the first NAME:IDENTIDNUMBER that has a corresponding ID Type of 2 (Driver's License), 3 (State ID), or 6 (Military ID).",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTIDSTATE",
+    "insertText": "CREDITREPORTIDSTATE",
+    "description": "0: <Blank>\n1: CREDREP:IDSTATE\n2,3: NAME:IDENTIDNUMBER: The subfield of the first NAME:IDENTIDNUMBER that has a corresponding ID Type of 2 (Driver's License), 3 (State ID), or 6 (Military ID). If IDENTIDDESCRIPTION is not exactly two characters, this variable is set to blank for 2 and 3.",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTIDSTATE2",
+    "insertText": "CREDITREPORTIDSTATE2",
+    "description": "0: <Blank>\n1: CREDREP:IDSTATE2\n2,3: NAME:IDENTIDNUMBER2: The subfield of the first NAME:IDENTIDNUMBER that has a corresponding ID Type of 2 (Driver's License), 3 (State ID), or 6 (Military ID). If IDENTIDDESCRIPTION is not exactly two characters, this variable is set to blank for 2 and 3.",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTIDVERIFICATIONOID",
+    "insertText": "CREDITREPORTIDVERIFICATIONOID",
+    "description": "0,2,3: <Blank>\n1: CREDREP:IDVERIFICATIONID",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTINCLUDEIDV",
+    "insertText": "CREDITREPORTINCLUDEIDV",
+    "description": "0,2,3: <Blank>\n1: CREDREP:INCIDVERIFY",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTINCLUDENEWACCTCHEX",
+    "insertText": "CREDITREPORTINCLUDENEWACCTCHEX",
+    "description": "0,2,3: <Blank>\n1: CREDREP:INCNEWACCTCHEX",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTINCLUDEOFAC",
+    "insertText": "CREDITREPORTINCLUDEOFAC",
+    "description": "0,2,3: <Blank>\n1: CREDREP:INCOFACWATCH",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTINCLUDEQUALIFILE",
+    "insertText": "CREDITREPORTINCLUDEQUALIFILE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:INCQUALIFILE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTINCOME",
+    "insertText": "CREDITREPORTINCOME",
+    "description": "0,2,3: $0.00\n1: CREDREP:INCOME",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTINFOINCONSISTENT",
+    "insertText": "CREDITREPORTINFOINCONSISTENT",
+    "description": "0,2,3: <Blank>\n1: CREDREP:REDFLAGALERT.INFOINCONSISTENT",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTINQUIRYID",
+    "insertText": "CREDITREPORTINQUIRYID",
+    "description": "0,2,3: <Blank>\n1: CREDREP:INQUIRYIDENTIFIER",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTINQUIRYTYPE",
+    "insertText": "CREDITREPORTINQUIRYTYPE",
+    "description": "When you use PULLCREDITREPORT, the system accepts the default of 0 for the Credit Report record Inquiry Type field and translates it to a value of 1.\n\n0,2,3: 0\n1: CREDREP:INQUIRYTYPE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTOPTFEATURECODE",
+    "insertText": "CREDITREPORTOPTFEATURECODE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:OPTFEATURECODE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTINSTANTUPDATEACCT",
+    "insertText": "CREDITREPORTINSTANTUPDATEACCT",
+    "description": "0,2,3: <Blank>\n1: CREDREP:INSTANTUPDATEACCT",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTINTERNETID",
+    "insertText": "CREDITREPORTINTERNETID",
+    "description": "Do not use any record; all data are filled in by the specfile.",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTINTERNETPASSWD",
+    "insertText": "CREDITREPORTINTERNETPASSWD",
+    "description": "0,2,3: <Blank>\n1: CREDREP:CREDREPINTERNETPASSWD",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTINTERNETUSERID",
+    "insertText": "CREDITREPORTINTERNETUSERID",
+    "description": "Do not use any record; all data are filled in by the specfile.",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTIPADDRESS",
+    "insertText": "CREDITREPORTIPADDRESS",
+    "description": "0,2,3: <Blank>\n1: CREDREP:IPADDRESS",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTJOINTFILEACCESS",
+    "insertText": "CREDITREPORTJOINTFILEACCESS",
+    "description": "0,2,3: <Blank>\n1: CREDREP:JOINTFILEACCESS",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTLASTNAME",
+    "insertText": "CREDITREPORTLASTNAME",
+    "description": "0: <Blank>\n1: CREDREP:LASTNAME\n2: NAME:LAST\n3: LOANAPP PERSON:LAST",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTLOANAMOUNT",
+    "insertText": "CREDITREPORTLOANAMOUNT",
+    "description": "0,2,3: $0.00\n1: CREDREP:LOANAMOUNT",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTLOANTERMS",
+    "insertText": "CREDITREPORTLOANTERMS",
+    "description": "0,2,3: 0\n1: CREDREP:LOANTERMS",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTLOANTYPECHR",
+    "insertText": "CREDITREPORTLOANTYPECHR",
+    "description": "0,2,3: <Blank>\n1: CREDREP:LOANTYPECHR",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTLOOKTYPE",
+    "insertText": "CREDITREPORTLOOKTYPE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:LOOKTYPE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTLOOKUPBM",
+    "insertText": "CREDITREPORTLOOKUPBM",
+    "description": "0,2,3: <Blank>\n1: CREDREP:LOOKUPBM",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTLOOKUPBSM",
+    "insertText": "CREDITREPORTLOOKUPBSM",
+    "description": "0,2,3: <Blank>\n1: CREDREP:LOOKUPBSM",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTLOOKUPINDCODE",
+    "insertText": "CREDITREPORTLOOKUPINDCODE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:LOOKUPINDCODE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTLOOKUPMEMBERCODE",
+    "insertText": "CREDITREPORTLOOKUPMEMBERCODE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:LOOKUPMEMBERCODE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTLOOKUPSEGMENTIND",
+    "insertText": "CREDITREPORTLOOKUPSEGMENTIND",
+    "description": "0,2,3: <Blank>\n1: CREDREP:LOOKUPSEGMENTIND",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTMEMNUMPLAINDESC",
+    "insertText": "CREDITREPORTMEMNUMPLAINDESC",
+    "description": "0,2,3: <Blank>\n1: CREDREP:MEMNUMPLAINDESC",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTMIDDLENAME",
+    "insertText": "CREDITREPORTMIDDLENAME",
+    "description": "0: <Blank>\n1: CREDREP:MIDDLENAME\n2: NAME:MIDDLE\n3: LOANAPP PERSON:MIDDLE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTMONTHSCOUNTINQ",
+    "insertText": "CREDITREPORTMONTHSCOUNTINQ",
+    "description": "0,2,3: <Blank>\n1: CREDREP:MONTHSCOUNTINQ",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTMONTHSCOUNTMAXDQ",
+    "insertText": "CREDITREPORTMONTHSCOUNTMAXDQ",
+    "description": "0,2,3: <Blank>\n1: CREDREP:MONTHSCOUNTMAXDQ",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTMULTIPLEFILE",
+    "insertText": "CREDITREPORTMULTIPLEFILE",
+    "description": "0,2,3: 0\n1: CREDREP:MULTIPLEFILE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTNAMESUFFIX",
+    "insertText": "CREDITREPORTNAMESUFFIX",
+    "description": "0: <Blank>\n1: CREDREP:NAMESUFFIX\n2: NAME:SUFFIX\n3: LOANAPP PERSON:SUFFIX",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTOCCUPATION",
+    "insertText": "CREDITREPORTOCCUPATION",
+    "description": "0,2: <Blank>\n1: CREDREP:OCCUPATION\n3: LOANAPP PERSON:CURREMPOCCUPATION",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTOFACINQUIRY",
+    "insertText": "CREDITREPORTOFACINQUIRY",
+    "description": "CREDREP:OFACINQUIRY\nImportant: This variable is set to the value in the OFAC Inquiry field 0 (no), 1 (yes) of the Credit Report record for Experian and enables the Experian OFAC Name Matching product. You can query the OFAC OID Credit Report record field from Credit Report Item records of a previously pulled ChexSystems report, but you need a specfile to perform the appropriate lookup.",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTOFACOID",
+    "insertText": "CREDITREPORTOFACOID",
+    "description": "From the Credit Report Item records of a previously pulled ChexSystems report, you can query the Credit Report record OFAC OID field; however, you need a specfile to perform the appropriate lookup.\n\n0,2,3: <Blank>\n1: CREDREP:OFACOID",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTOPERATORCODE",
+    "insertText": "CREDITREPORTOPERATORCODE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:OPERATORCODE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTORIGINALCREDITOR",
+    "insertText": "CREDITREPORTORIGINALCREDITOR",
+    "description": "0,2,3: <Blank>\n1: CREDREP:ORIGINALCREDITOR",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTOVERRIDETEXT",
+    "insertText": "CREDITREPORTOVERRIDETEXT",
+    "description": "0,2,3: <Blank>\n1: CREDREP:OVERRIDETEXT",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTPASSWORD",
+    "insertText": "CREDITREPORTPASSWORD",
+    "description": "0,2,3: <Blank>\n1: CREDREP:PASSWORD",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTPAYBASIS",
+    "insertText": "CREDITREPORTPAYBASIS",
+    "description": "0,2,3: <Blank>\n1: CREDREP:PAYBASIS",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTPREVADDR1CITY",
+    "insertText": "CREDITREPORTPREVADDR1CITY",
+    "description": "0,2,3: <Blank>\n1: CREDREP:PREVADDR1CITY",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTPREVADDR1DIRECTION",
+    "insertText": "CREDITREPORTPREVADDR1DIRECTION",
+    "description": "0,2,3: <Blank>\n1: CREDREP:PREVADDR1DIRECTIONAL",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTPREVADDR1HOUSENUM",
+    "insertText": "CREDITREPORTPREVADDR1HOUSENUM",
+    "description": "0,2,3: <Blank>\n1: CREDREP:PREVADDR1HOUSENUMBER",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTPREVADDR1QUADRANT",
+    "insertText": "CREDITREPORTPREVADDR1QUADRANT",
+    "description": "0,2,3: <Blank>\n1: CREDREP:PREVADDR1QUADRANT",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTPREVADDR1STATE",
+    "insertText": "CREDITREPORTPREVADDR1STATE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:PREVADDR1STATE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTPREVADDR1STREETNAME",
+    "insertText": "CREDITREPORTPREVADDR1STREETNAME",
+    "description": "0,2,3: <Blank>\n1: CREDREP:PREVADDR1STREETNAME",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTPREVADDR1STREETTYPE",
+    "insertText": "CREDITREPORTPREVADDR1STREETTYPE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:PREVADDR1STREETTYPE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTPREVADDR1UNITNUMBER",
+    "insertText": "CREDITREPORTPREVADDR1UNITNUMBER",
+    "description": "0,2,3: <Blank>\n1: CREDREP:PREVADDR1UNITNUMBER",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTPREVADDR1UNITTYPE",
+    "insertText": "CREDITREPORTPREVADDR1UNITTYPE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:PREVADDR1UNITTYPE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTPREVADDR1ZIPCODE",
+    "insertText": "CREDITREPORTPREVADDR1ZIPCODE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:PREVADDR1ZIPCODE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTPREVADDR2CITY",
+    "insertText": "CREDITREPORTPREVADDR2CITY",
+    "description": "0,2,3: <Blank>\n1: CREDREP:PREVADDR2CITY",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTPREVADDR2DIRECTION",
+    "insertText": "CREDITREPORTPREVADDR2DIRECTION",
+    "description": "0,2,3: <Blank>\n1: CREDREP:PREVADDR2DIRECTIONAL",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTPREVADDR2HOUSENUM",
+    "insertText": "CREDITREPORTPREVADDR2HOUSENUM",
+    "description": "0,2,3: <Blank>\n1: CREDREP:PREVADDR2HOUSENUMBER",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTPREVADDR2QUADRANT",
+    "insertText": "CREDITREPORTPREVADDR2QUADRANT",
+    "description": "0,2,3: <Blank>\n1: CREDREP:PREVADDR2QUADRANT",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTPREVADDR2STATE",
+    "insertText": "CREDITREPORTPREVADDR2STATE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:PREVADDR2STATE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTPREVADDR2STREETNAME",
+    "insertText": "CREDITREPORTPREVADDR2STREETNAME",
+    "description": "0,2,3: <Blank>\n1: CREDREP:PREVADDR2STREETNAME",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTPREVADDR2STREETTYPE",
+    "insertText": "CREDITREPORTPREVADDR2STREETTYPE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:PREVADDR2STREETTYPE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTPREVADDR2UNITNUMBER",
+    "insertText": "CREDITREPORTPREVADDR2UNITNUMBER",
+    "description": "0,2,3: <Blank>\n1: CREDREP:PREVADDR2UNITNUMBER",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTPREVADDR2UNITTYPE",
+    "insertText": "CREDITREPORTPREVADDR2UNITTYPE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:PREVADDR2UNITTYPE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTPREVADDR2ZIPCODE",
+    "insertText": "CREDITREPORTPREVADDR2ZIPCODE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:PREVADDR2ZIPCODE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTQUEUEAFTERDATE",
+    "insertText": "CREDITREPORTQUEUEAFTERDATE",
+    "description": "0,2,3: --/--/--\n1: CREDREP:QUEUEAFTERDATE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTQUEUEAFTERTIME",
+    "insertText": "CREDITREPORTQUEUEAFTERTIME",
+    "description": "0–3: 0",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTQUEUECODE",
+    "insertText": "CREDITREPORTQUEUECODE",
+    "description": "0–3: 0",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTRECORDTEXT",
+    "insertText": "CREDITREPORTRECORDTEXT",
+    "description": "0,2,3: <Blank>\n1: CREDREP:RECORDTEXT",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTREDFLAGACTIONTYPEID",
+    "insertText": "CREDITREPORTREDFLAGACTIONTYPEID",
+    "description": "0,2,3: <Blank>\n1: CREDREP:REDFLAGALERT.ACTIONTYPEID",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTREDFLAGALERTLOGID",
+    "insertText": "CREDITREPORTREDFLAGALERTLOGID",
+    "description": "0,2,3: <Blank>\n1: CREDREP:REDFLAGALERT.LOGID",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTREDFLAGCOMMENTS01",
+    "insertText": "CREDITREPORTREDFLAGCOMMENTS01",
+    "description": "0,2,3: <Blank>\n1: CREDREP:REDFLAGALERT.COMMENTS1",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTREDFLAGCOMMENTS02",
+    "insertText": "CREDITREPORTREDFLAGCOMMENTS02",
+    "description": "0,2,3: <Blank>\n1: CREDREP:REDFLAGALERT.COMMENTS2",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTREDFLAGCOMMENTS03",
+    "insertText": "CREDITREPORTREDFLAGCOMMENTS03",
+    "description": "0,2,3: <Blank>\n1: CREDREP:REDFLAGALERT.COMMENTS3",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTREDFLAGCOMMENTS04",
+    "insertText": "CREDITREPORTREDFLAGCOMMENTS04",
+    "description": "0,2,3: <Blank>\n1: CREDREP:REDFLAGALERT.COMMENTS4",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTREDFLAGCOMMENTS05",
+    "insertText": "CREDITREPORTREDFLAGCOMMENTS05",
+    "description": "0,2,3: <Blank>\n1: CREDREP:REDFLAGALERT.COMMENTS5",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTREDFLAGCOMMENTS06",
+    "insertText": "CREDITREPORTREDFLAGCOMMENTS06",
+    "description": "0,2,3: <Blank>\n1: CREDREP:REDFLAGALERT.COMMENTS6",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTREDFLAGCOMMENTS07",
+    "insertText": "CREDITREPORTREDFLAGCOMMENTS07",
+    "description": "0,2,3: <Blank>\n1: CREDREP:REDFLAGALERT.COMMENTS7",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTREDFLAGCOMMENTS08",
+    "insertText": "CREDITREPORTREDFLAGCOMMENTS08",
+    "description": "0,2,3: <Blank>\n1: CREDREP:REDFLAGALERT.COMMENTS8",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTREDFLAGCOMMENTS09",
+    "insertText": "CREDITREPORTREDFLAGCOMMENTS09",
+    "description": "0,2,3: <Blank>\n1: CREDREP:REDFLAGALERT.COMMENTS9",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTREDFLAGFACTID",
+    "insertText": "CREDITREPORTREDFLAGFACTID",
+    "description": "0,2,3: <Blank>\n1: CREDREP:REDFLAGALERT.FACTID",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTREDFLAGRECACTIONID",
+    "insertText": "CREDITREPORTREDFLAGRECACTIONID",
+    "description": "0,2,3: <Blank>\n1: CREDREP:REDFLAGALERT.RECACTIONTYPEID",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTREDFLAGSTATUS",
+    "insertText": "CREDITREPORTREDFLAGSTATUS",
+    "description": "0,2,3: <Blank>\n1: CREDREP:REDFLAGALERT.STATUS",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTRISKMODEL1",
+    "insertText": "CREDITREPORTRISKMODEL1",
+    "description": "0,2,3: <Blank>\n1: CREDREP:RISKMODEL:1",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTRISKMODEL2",
+    "insertText": "CREDITREPORTRISKMODEL2",
+    "description": "0,2,3: <Blank>\n1: CREDREP:RISKMODEL:2",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTRISKMODEL3",
+    "insertText": "CREDITREPORTRISKMODEL3",
+    "description": "0,2,3: <Blank>\n1: CREDREP:RISKMODEL:3",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTRISKMODEL4",
+    "insertText": "CREDITREPORTRISKMODEL4",
+    "description": "0,2,3: <Blank>\n1: CREDREP:RISKMODEL:4",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTRISKMODEL5",
+    "insertText": "CREDITREPORTRISKMODEL5",
+    "description": "0,2,3: <Blank>\n1: CREDREP:RISKMODEL:5",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTRTNUMBER",
+    "insertText": "CREDITREPORTRTNUMBER",
+    "description": "0,2,3: <Blank>\n1: CREDREP:RTNUMBER",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSCOREMODEL01",
+    "insertText": "CREDITREPORTSCOREMODEL01",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SCOREMODEL:1",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSCOREMODEL02",
+    "insertText": "CREDITREPORTSCOREMODEL02",
+    "description": "0,2,3: <Blank>\n1:CREDREP:SCOREMODEL:2",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSCOREMODEL03",
+    "insertText": "CREDITREPORTSCOREMODEL03",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SCOREMODEL:3",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSCOREMODEL04",
+    "insertText": "CREDITREPORTSCOREMODEL04",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SCOREMODEL:4",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSCOREMODEL05",
+    "insertText": "CREDITREPORTSCOREMODEL05",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SCOREMODEL:5",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSCOREMODEL06",
+    "insertText": "CREDITREPORTSCOREMODEL06",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SCOREMODEL:6",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSCOREMODEL07",
+    "insertText": "CREDITREPORTSCOREMODEL07",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SCOREMODEL:7",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSCOREMODEL08",
+    "insertText": "CREDITREPORTSCOREMODEL08",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SCOREMODEL:8",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSCOREMODEL09",
+    "insertText": "CREDITREPORTSCOREMODEL09",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SCOREMODEL:9",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSCOREMODEL10",
+    "insertText": "CREDITREPORTSCOREMODEL10",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SCOREMODEL:10",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSCOREMODEL11",
+    "insertText": "CREDITREPORTSCOREMODEL11",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SCOREMODEL:11",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSCOREMODEL12",
+    "insertText": "CREDITREPORTSCOREMODEL12",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SCOREMODEL:12",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSECONDARYNAME",
+    "insertText": "CREDITREPORTSECONDARYNAME",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SECONDARYNAME",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSELECTCHECKCODE",
+    "insertText": "CREDITREPORTSELECTCHECKCODE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SELECTCHECKCODE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSERVICEBUREAU",
+    "insertText": "CREDITREPORTSERVICEBUREAU",
+    "description": "0,2,3: <Blank>, Custom-Coded Default or CRS Parameter\n1: CREDREP:SERVICEBUREAU",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSIGINCONSISTENT",
+    "insertText": "CREDITREPORTSIGINCONSISTENT",
+    "description": "0,2,3: <Blank>\n1: CREDREP:REDFLAGALERT.SIGINCONSISTENT",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSOURCE",
+    "insertText": "CREDITREPORTSOURCE",
+    "description": "0,2,3: 0\n1: CREDREP:SOURCE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSPECIALCOMMENT",
+    "insertText": "CREDITREPORTSPECIALCOMMENT",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SPECIALCOMMENT",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSPOUSEACCESSPIN",
+    "insertText": "CREDITREPORTSPOUSEACCESSPIN",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SPOUSEACCESSPIN",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSPOUSEBIRTHDATE",
+    "insertText": "CREDITREPORTSPOUSEBIRTHDATE",
+    "description": "0,2,3: --/--/--\n1: CREDREP:SPOUSEBIRTHDATE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSPOUSEEMPCITY",
+    "insertText": "CREDITREPORTSPOUSEEMPCITY",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SPOUSEEMPCITY",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSPOUSEEMPNAME",
+    "insertText": "CREDITREPORTSPOUSEEMPNAME",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SPOUSEEMPNAME",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSPOUSEEMPSTATE",
+    "insertText": "CREDITREPORTSPOUSEEMPSTATE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SPOUSEEMPSTATE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSPOUSEEMPSTREET",
+    "insertText": "CREDITREPORTSPOUSEEMPSTREET",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SPOUSEEMPSTREET",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSPOUSEEMPZIPCODE",
+    "insertText": "CREDITREPORTSPOUSEEMPZIPCODE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SPOUSEEMPZIPCODE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSPOUSEENDEMPDATE",
+    "insertText": "CREDITREPORTSPOUSEENDEMPDATE",
+    "description": "0,2,3: --/--/--\n1: CREDREP:SPOUSEENDEMPDATE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSPOUSEFIRST",
+    "insertText": "CREDITREPORTSPOUSEFIRST",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SPOUSEFIRST",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSPOUSEINCOME",
+    "insertText": "CREDITREPORTSPOUSEINCOME",
+    "description": "0,2,3: 0\n1: CREDREP:SPOUSEINCOME",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSPOUSELAST",
+    "insertText": "CREDITREPORTSPOUSELAST",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SPOUSELAST",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSPOUSEMIDDLE",
+    "insertText": "CREDITREPORTSPOUSEMIDDLE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SPOUSEMIDDLE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSPOUSEOCCUPATION",
+    "insertText": "CREDITREPORTSPOUSEOCCUPATION",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SPOUSEOCCUPATION",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSPOUSEPAYBASIS",
+    "insertText": "CREDITREPORTSPOUSEPAYBASIS",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SPOUSEPAYBASIS",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSPOUSESECONDARYNM",
+    "insertText": "CREDITREPORTSPOUSESECONDARYNM",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SPOUSESECONDARYNM",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSPOUSESSN",
+    "insertText": "CREDITREPORTSPOUSESSN",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SPOUSESSN",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSPOUSESTARTEMPDATE",
+    "insertText": "CREDITREPORTSPOUSESTARTEMPDATE",
+    "description": "0,2,3: --/--/--\n1: CREDREP:SPOUSESTARTEMPDATE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSPOUSESUFFIX",
+    "insertText": "CREDITREPORTSPOUSESUFFIX",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SPOUSESUFFIX",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSSN",
+    "insertText": "CREDITREPORTSSN",
+    "description": "0: <Blank>\n1: CREDREP:SSN\n2: NAME:SSN\n3: LOANAPP PERSON:SSN",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSSNSEARCH1",
+    "insertText": "CREDITREPORTSSNSEARCH1",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SSNSEARCH:1",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSSNSEARCH2",
+    "insertText": "CREDITREPORTSSNSEARCH2",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SSNSEARCH:2",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSSNSEARCH3",
+    "insertText": "CREDITREPORTSSNSEARCH3",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SSNSEARCH:3",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSSNSEARCHFACS",
+    "insertText": "CREDITREPORTSSNSEARCHFACS",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SSNSEARCHFACS",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSTARTEMPDATE",
+    "insertText": "CREDITREPORTSTARTEMPDATE",
+    "description": "0,2: --/--/--\n1: CREDREP:STARTEMPDATE\n3:LOANAPP PERSON:CURREMPSTARTDATE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSTATUSCODE",
+    "insertText": "CREDITREPORTSTATUSCODE",
+    "description": "0,2,3: 0\n1: CREDREP:STATUSCODE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSTRATEGYTYPE",
+    "insertText": "CREDITREPORTSTRATEGYTYPE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:STRATEGYTYPE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTSUBSCRIBERCODE",
+    "insertText": "CREDITREPORTSUBSCRIBERCODE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:SUBSCRIBERCODE",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTTESTENVIRONMENT",
+    "insertText": "CREDITREPORTTESTENVIRONMENT",
+    "description": "0,2,3: <Blank>, custom-coded default or CRS parameter\n1: CREDREP:TESTENVIRONMENT",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTUSERID",
+    "insertText": "CREDITREPORTUSERID",
+    "description": "0,2,3: <Blank>, custom-coded default or CRS parameter\n1: CREDREP:USERID",
+    "isSnippet": false
+  },
+  {
+    "label": "@CREDITREPORTUSETYPE",
+    "insertText": "CREDITREPORTUSETYPE",
+    "description": "0,2,3: <Blank>\n1: CREDREP:USERTYPE",
+    "isSnippet": false
+  }
+]
