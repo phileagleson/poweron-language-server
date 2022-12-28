@@ -25,7 +25,6 @@ export function getExecuteCommandHandler(context: Context) {
     character = cap.node.endPosition.column
    })
 
-   context.connection.console.log(`defineDivFound: ${defineDivFound}`)
    if (!defineDivFound) {
     alertUser(context, `Define Division not found in this specfile`, MessageType.Warning)
     return null

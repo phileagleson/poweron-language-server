@@ -21,24 +21,37 @@ export function getCodeActionHandler(context: Context) {
   }
 
   const node = nodeAtPoint(params.range.start.line, params.range.start.character, params.textDocument.uri, context)
-  if (node && node.type.toString() === `identifier` && node.parent?.type.toString() !== 'variable_declaration') {
-   const addToDefineAction: CodeAction = {
-    title: DEFINETITLE,
-    kind: CodeActionKind.RefactorRewrite,
-    command: {
-     command: 'poweronlsp.showDataTypeNotification',
-     title: 'Choose DataType',
-     arguments: [{
+  if (node && node.type.toString() === `identifier` && node.parent?.type.toString() !== 'variable_declaration' &&
+   node.parent?.type.toString() !== 'procedure_call') {
+   const tree = context.trees[params.textDocument.uri]
+   const poweron = tree.getLanguage()
+   const queryString = '(variable_declaration (identifier) @var)'
+   const query = poweron.query(queryString)
+   let varFoundinDefineDiv = false
+   query.captures(tree.rootNode).forEach(cap => {
+    if (cap.node.text.toLowerCase() === node.text.toLowerCase()) {
+     varFoundinDefineDiv = true
+    }
+   })
+   if (!varFoundinDefineDiv) {
+    const addToDefineAction: CodeAction = {
+     title: DEFINETITLE,
+     kind: CodeActionKind.RefactorRewrite,
+     command: {
+      command: 'poweronlsp.showDataTypeNotification',
+      title: 'Choose DataType',
+      arguments: [{
+       uri: params.textDocument.uri,
+       varName: node.text
+      }]
+     },
+     data: {
       uri: params.textDocument.uri,
       varName: node.text
-     }]
-    },
-    data: {
-     uri: params.textDocument.uri,
-     varName: node.text
+     }
     }
+    actions.push(addToDefineAction)
    }
-   actions.push(addToDefineAction)
   }
   return actions
  }
