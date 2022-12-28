@@ -40,11 +40,5 @@
     "insertText": "RATE",
     "description": "The RATE data type represents a percentage.",
     "isSnippet": false
-  },
-  {
-    "label": "ARRAY",
-    "insertText": "ARRAY(${1:99})$0",
-    "description": "The keyword ARRAY creates an array of the size indicated in parentheses",
-    "isSnippet": true
   }
 ]
